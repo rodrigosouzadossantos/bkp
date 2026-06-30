@@ -1,0 +1,144 @@
+[
+  {
+    "objectID": "02_initiating_pmbok/business_case.html",
+    "href": "02_initiating_pmbok/business_case.html",
+    "title": "Business Case",
+    "section": "",
+    "text": "Business Case\n\nStrategic Alignment\nCurrent systems suffer from data leakage and high latency. This package utilizes Natural Language Processing for data validation and optimized Computer Vision pipelines to mitigate these risks.\n\n\nROI Estimate\nExpected 25% reduction in compute costs through optimized ETL pipelines using Redis Streams.",
+    "crumbs": [
+      "Initiating (PMBOK)",
+      "Business Case"
+    ]
+  },
+  {
+    "objectID": "02_initiating_pmbok/stakeholder_reg.html",
+    "href": "02_initiating_pmbok/stakeholder_reg.html",
+    "title": "Stakeholder Register",
+    "section": "",
+    "text": "Stakeholder Register\n\n\n\nName\nRole\nInfluence\nInterest\n\n\n\n\nTech Lead\nConsultant\nHigh\nHigh\n\n\nDevOps Team\nSupporting\nMed\nHigh\n\n\nEnd Client\nBeneficiary\nHigh\nHigh",
+    "crumbs": [
+      "Initiating (PMBOK)",
+      "Stakeholder Register"
+    ]
+  },
+  {
+    "objectID": "05_monitoring_control/change_log.html",
+    "href": "05_monitoring_control/change_log.html",
+    "title": "Change Log",
+    "section": "",
+    "text": "Change Log\n\n\n\nDate\nChange\nApproved By\nStatus\n\n\n\n\n2026-03-23\nInitial Baseline\nRodrigo\nApproved",
+    "crumbs": [
+      "Control",
+      "Change Log"
+    ]
+  },
+  {
+    "objectID": "03_planning_scope/requirements.html",
+    "href": "03_planning_scope/requirements.html",
+    "title": "Requirements Documentation",
+    "section": "",
+    "text": "Requirements Documentation\n\nFunctional Requirements\n\nThe system shall support asynchronous inference.\nThe system shall integrate with Redis Streams for real-time ETL.\n\n\n\nNon-Functional Requirements\n\nLatency must be deterministic.\nModel weight loading must happen in &lt; 5 seconds.",
+    "crumbs": [
+      "Planning & Scope",
+      "Requirements Documentation"
+    ]
+  },
+  {
+    "objectID": "03_planning_scope/wbs.html",
+    "href": "03_planning_scope/wbs.html",
+    "title": "Work Breakdown Structure (WBS)",
+    "section": "",
+    "text": "Work Breakdown Structure (WBS)\n\n\n\n\n\ngraph TD\n    Root[CV Engine] --&gt; Ingest[Data Ingestion]\n    Root --&gt; Core[Model Core]\n    Root --&gt; Ops[Deployment/Mlopps]\n    \n    Ingest --&gt; Kafka[Kafka Connect]\n    Ingest --&gt; Redis[Redis Streams]\n    \n    Core --&gt; Optim[Quantization]\n    Core --&gt; Viz[Grad-CAM Module]",
+    "crumbs": [
+      "Planning & Scope",
+      "Work Breakdown Structure (WBS)"
+    ]
+  },
+  {
+    "objectID": "01_strategy_okrs/value_stream.html",
+    "href": "01_strategy_okrs/value_stream.html",
+    "title": "Value Stream Mapping",
+    "section": "",
+    "text": "Value Stream Mapping\nThis document maps our technical tasks to business value.\n\nIngestion (Kafka/Redis): Enables real-time responsiveness.\nPreprocessing: Reduces noise, increasing safety accuracy.\nInference (PyTorch/TF): The core value-add.",
+    "crumbs": [
+      "Strategy & OKRs",
+      "Value Stream Mapping"
+    ]
+  },
+  {
+    "objectID": "04_agile_execution/product_backlog.html",
+    "href": "04_agile_execution/product_backlog.html",
+    "title": "Product Backlog",
+    "section": "",
+    "text": "Product Backlog\n\nEpic: Real-time Pipeline Stabilization\n\nStory: As a dev, I need a Redis sink for processed metadata.\n\nEpic: Explainability Features\n\nStory: As a user, I want heatmaps on detection failures.",
+    "crumbs": [
+      "Agile Execution",
+      "Product Backlog"
+    ]
+  },
+  {
+    "objectID": "04_agile_execution/roadmap.html",
+    "href": "04_agile_execution/roadmap.html",
+    "title": "Product Roadmap",
+    "section": "",
+    "text": "Product Roadmap\n\nQ1: Core Engine & Kafka Integration.\nQ2: Optimization for Edge Devices (Quantization).\nQ3: Advanced Visualization and NLP-based filtering.",
+    "crumbs": [
+      "Agile Execution",
+      "Product Roadmap"
+    ]
+  },
+  {
+    "objectID": "01_strategy_okrs/okr_dashboard.html",
+    "href": "01_strategy_okrs/okr_dashboard.html",
+    "title": "OKR Dashboard",
+    "section": "",
+    "text": "OKR Dashboard\nObjective: Establish the industry-leading CV engine for industrial safety.\n\n\n\nKey Result\nTarget\nCurrent\nStatus\n\n\n\n\nKR1: Latency per frame\n&lt; 30ms\n45ms\n🟡\n\n\nKR2: Test Coverage\n&gt; 90%\n82%\n🟢\n\n\nKR3: Model Accuracy (mAP)\n&gt; 0.95\n0.89\n🟡\n\n\n\nLast updated: $(date +%Y-%m-%d)",
+    "crumbs": [
+      "Strategy & OKRs",
+      "OKR Dashboard"
+    ]
+  },
+  {
+    "objectID": "03_planning_scope/wbs_dictionary.html",
+    "href": "03_planning_scope/wbs_dictionary.html",
+    "title": "WBS Dictionary",
+    "section": "",
+    "text": "WBS Dictionary\n\nWP 1.1: Kafka Connect\n\nOwner: Data Engineer\nDescription: Implement the consumer group logic for raw image ingestion.\nAcceptance Criteria: Successfully consume 500 images/sec.",
+    "crumbs": [
+      "Planning & Scope",
+      "WBS Dictionary"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Project Master Dashboard",
+    "section": "",
+    "text": "Project Master Dashboard\nWelcome to the governance portal for NOAA. This site serves as the “Single Source of Truth” for PMBOK artifacts and Agile execution.\n\nProject Identity\n\n\n\n\n\n\n\nAttribute\nValue\n\n\n\n\nProject Name\nNOAA\n\n\nLead Specialist\nRodrigo Souza dos Santos\n\n\nCurrent Phase\nPlanning\n\n\nLast Audit\n\n\n\n\n\n\n\nArtifact Status\nNavigate through the sidebar to access the required PMBOK and Agile documents.\n\nThe Project Charter has been formally authorized. We are currently decomposing the WBS into the Product Backlog for Sprint 01.",
+    "crumbs": [
+      "Dashboard"
+    ]
+  },
+  {
+    "objectID": "05_monitoring_control/risk_register.html",
+    "href": "05_monitoring_control/risk_register.html",
+    "title": "Risk Register",
+    "section": "",
+    "text": "Risk Register\n\n\n\nRisk ID\nDescription\nProbability\nImpact\nMitigation\n\n\n\n\nR-001\nData Leakage\nLow\nCritical\nNLP-based PII filtering\n\n\nR-002\nInference Lag\nMed\nHigh\nTensorRT optimization",
+    "crumbs": [
+      "Control",
+      "Risk Register"
+    ]
+  },
+  {
+    "objectID": "02_initiating_pmbok/project_charter.html",
+    "href": "02_initiating_pmbok/project_charter.html",
+    "title": "Project Charter",
+    "section": "",
+    "text": "Project Charter\nProject Name: CV-Engine-Alpha\nProject Manager: Rodrigo Souza dos Santos\nSponsor: Tech Operations Dept.\n\nHigh-Level Requirements\n\nReal-time processing via Kafka.\nSupport for Grad-CAM visualizations.\nModular architecture (PyTorch and TensorFlow).\n\n\n\nAuthority\nThe PM is authorized to allocate resources from the AI Research squad.",
+    "crumbs": [
+      "Initiating (PMBOK)",
+      "Project Charter"
+    ]
+  }
+]

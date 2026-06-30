@@ -1,0 +1,207 @@
+---
+title: "Dashboard Visual de OKRs Multi-Repositório"
+author: "Time IA Submarina"
+format:
+  html:
+    toc: true
+    theme: cosmo
+    code-fold: true
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+```{r}
+suppressPackageStartupMessages({
+  library(jsonlite)
+  library(dplyr)
+  library(tidyr)
+  library(stringr)
+  library(ggplot2)
+  library(plotly)
+  library(reactable)
+  library(crosstalk)
+  library(lubridate)
+})
+
+json_path <- normalizePath("../data/dashboard-02.json", mustWork = TRUE)
+okr_json <- fromJSON(json_path)
+
+issues <- as_tibble(okr_json$issues)
+
+issues <- issues %>%
+  mutate(
+    labels = sapply(labels, paste, collapse=","),
+    assignees = sapply(assignees, paste, collapse=","),
+    created_at = as.Date(created_at),
+    closed_at = as.Date(closed_at)
+  )
+
+krs <- issues %>%
+  filter(grepl("okr", labels, ignore.case = TRUE))
+```
+
+# 🔎 Filtros Globais
+
+```{r}
+shared <- SharedData$new(krs)
+
+filter_select(
+  id = "repo",
+  label = "Repositório",
+  shared,
+  ~repo
+)
+
+filter_select(
+  id = "assignee",
+  label = "Responsável",
+  shared,
+  ~assignees
+)
+```
+
+# 📊 Métricas principais
+
+```{r}
+total <- nrow(krs)
+open <- sum(krs$state=="OPEN")
+closed <- sum(krs$state=="CLOSED")
+
+data.frame(
+  Métrica=c("Total KRs","Abertas","Fechadas"),
+  Valor=c(total,open,closed)
+) %>%
+reactable()
+```
+
+---
+
+# 📈 Timeline de OKRs
+
+```{r}
+timeline <- krs %>%
+  mutate(end = ifelse(is.na(closed_at), Sys.Date(), closed_at))
+
+p <- ggplot(timeline,
+aes(
+y=reorder(title,created_at),
+x=created_at,
+xend=end,
+yend=title,
+color=state
+)) +
+geom_segment(size=4) +
+theme_minimal() +
+labs(
+title="Timeline de KRs",
+x="Tempo",
+y=""
+)
+
+ggplotly(p)
+```
+
+---
+
+# 🔥 Heatmap de produtividade
+
+```{r}
+heat <- krs %>%
+  mutate(
+    week=week(created_at),
+    year=year(created_at)
+  ) %>%
+  count(year,week)
+
+p <- ggplot(heat,aes(week,year,fill=n))+
+geom_tile()+
+scale_fill_viridis_c()+
+theme_minimal()+
+labs(
+title="Heatmap de produtividade",
+x="Semana",
+y="Ano"
+)
+
+ggplotly(p)
+```
+
+---
+
+# 🚀 Progresso por Repositório
+
+```{r}
+progress <- krs %>%
+group_by(repo) %>%
+summarise(
+total=n(),
+closed=sum(state=="CLOSED"),
+progress=closed/total*100
+)
+
+p <- ggplot(progress,
+aes(
+reorder(repo,progress),
+progress,
+fill=repo
+))+
+geom_col()+
+coord_flip()+
+theme_minimal()+
+labs(
+title="Progresso por Repositório",
+x="Repo",
+y="%"
+)
+
+ggplotly(p)
+```
+
+---
+
+# 🏃 Progresso por Sprint
+
+```{r}
+sprint <- krs %>%
+mutate(
+  sprint = floor_date(created_at, "week"),
+  sprint = sprint - (as.integer(format(sprint, "%U")) %% 2) * 7
+) %>%
+group_by(sprint) %>%
+summarise(
+created=n(),
+closed=sum(!is.na(closed_at))
+)
+
+p <- ggplot(sprint,aes(sprint,created))+
+geom_line(size=1.2,color="orange")+
+geom_line(aes(y=closed),color="green")+
+theme_minimal()+
+labs(
+title="Progresso por Sprint",
+y="KRs"
+)
+
+ggplotly(p)
+```
+
+---
+
+# 📋 Tabela interativa de KRs
+
+```{r}
+reactable(
+shared,
+searchable=TRUE,
+filterable=TRUE,
+columns=list(
+repo=colDef(name="Repo"),
+title=colDef(name="KR"),
+state=colDef(name="Status"),
+assignees=colDef(name="Responsável")
+)
+)
+```
+

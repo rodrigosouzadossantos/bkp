@@ -1,0 +1,24 @@
+# Project Master Dashboard
+
+Welcome to the governance portal for **{{< meta project-name >}}**. This site
+serves as the "Single Source of Truth" for PMBOK artifacts and Agile execution.
+
+### Project Identity
+| Attribute | Value |
+| :--- | :--- |
+| **Project Name** | {{< meta project-name >}} |
+| **Lead Specialist** | {{< meta author-name >}} |
+| **Current Phase** | [Planning]{.status-badge} |
+| **Last Audit** |  |
+
+---
+
+### Artifact Status
+Navigate through the sidebar to access the required PMBOK and Agile documents.
+
+::: {.ProjectBox title="Latest Milestone"}
+The **Project Charter** has been formally authorized. We are currently
+decomposing the **WBS** into the **Product Backlog** for Sprint 01.
+:::
+
+

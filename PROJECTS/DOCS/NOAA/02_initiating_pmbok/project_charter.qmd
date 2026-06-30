@@ -1,0 +1,179 @@
+# {{< i18n project_charter >}} {}
+
+# Project Charter  
+
+## Subsea Benthic Analysis AI – Multi-Modal Environmental Intelligence Pipeline
+
+---
+
+## Project Identification
+
+**Project Name**  
+{{< meta project-name >}}
+
+**Sponsor**  
+{{< meta project-sponsor >}}
+
+**Product Owner (PO)**  
+{{< meta project-po >}}
+
+**Project Manager**  
+Designated by SUB
+
+**Date**  
+[To be filled]
+
+---
+
+## Purpose and Justification
+
+The purpose of this project is to establish an **AI-enabled environmental
+intelligence capability** to support **ecological analysis of subsea
+environments**, with initial focus on **automated screening of AUV imagery**.
+
+The project addresses a critical scalability challenge: the exponential growth
+of subsea inspection data has exceeded the capacity of manual ecological
+analysis, increasing risks related to:
+
+- Delayed environmental assessments  
+- Specialist overload  
+- Potential loss or late identification of ecologically relevant benthic
+  information  
+
+Automation is introduced **as an enabler**, not as an end in itself, to preserve
+and strengthen ecological rigor at scale.
+
+The strategic justification for this initiative is detailed in the **Business
+Case** (@sec-business-case).
+
+---
+
+## Strategic Alignment
+
+This project is aligned with Petrobras Subsea (SUB) strategic drivers:
+
+- **Environmental stewardship and ecological responsibility**
+- **Digitalization of subsea inspection and monitoring**
+- **Reduction of human exposure and specialist overload**
+- **Creation of reusable digital environmental assets**
+- **Long-term sustainability of environmental analysis capabilities**
+
+The project is executed in partnership with **NOAA (internal SUB unit)**, which
+provides environmental validation authority.
+
+---
+
+## Objectives
+
+### Primary Objective (MVP)
+
+Develop and validate a **binary AI-based screening capability** capable of
+distinguishing:
+
+- Subsea imagery containing **benthic-relevant ecological features**
+- Subsea imagery that is **non-ecologically relevant** for benthic analysis
+
+The MVP prioritizes **precision and ecological protection** over aggressive
+automation.
+
+---
+
+### Secondary Objectives
+
+- Reduce manual ecological screening effort while preserving expert authority  
+- Shorten environmental analysis cycles for AUV campaigns  
+- Establish a scalable, offline-first AI pipeline  
+- Create reusable, auditable environmental digital assets  
+- Prepare technical foundations for future detection, segmentation, and
+  ecological intelligence use cases  
+
+---
+
+## High-Level Scope
+
+### In Scope (MVP)
+
+- Automated screening of AUV still images  
+- Batch and offline-first processing  
+- AI-assisted annotation with human-in-the-loop validation  
+- Environmental SME oversight and validation  
+- Dataset and model versioning  
+
+### Out of Scope (MVP)
+
+- Real-time or streaming deployment  
+- Full taxonomic classification  
+- Autonomous decision-making without human validation  
+- Advanced multimodal fusion beyond still imagery  
+
+---
+
+## Definition of Success (High-Level)
+
+Project success is defined by **ecological value delivery**, supported by
+operational and economic benefits.
+
+High-level success indicators include:
+
+- Demonstrated protection of benthic-relevant data  
+- Measurable reduction in manual screening effort  
+- Reduction in time to environmental insight  
+- Positive validation by NOAA / SUB environmental specialists  
+- Creation of reusable environmental data assets  
+
+Detailed success metrics are defined in the **OKRs → KPIs Executive Tracking**
+document.
+
+---
+
+## Key Risks (High-Level)
+
+- Risk of ecological data loss due to model error  
+- Annotation subjectivity and inconsistency  
+- Class imbalance in subsea imagery  
+- Adoption resistance if ecological confidence is not preserved  
+
+Mitigation strategies are defined in the **Risk Register** (@sec-risk-register)
+and governed through KPI-based Stage-Gates (@sec-stage-gates).
+
+---
+
+## Governance and Decision Framework
+
+This project follows a **Stage-Gate governance model** (@sec-stage-gates), where
+progression is authorized only if **ecological protection KPIs meet minimum
+thresholds**.
+
+Key governance principles:
+
+- Environmental protection KPIs take precedence over efficiency KPIs  
+- Human-in-the-loop validation is mandatory  
+- No scaling decision may be taken without ecological validation  
+
+The detailed governance model is defined in:
+- Strategy & Governance – Value Stream & OKRs  
+- OKRs → KPIs Executive Tracking  
+- Stage-Gates KPI-Based Governance  
+
+---
+
+## Authorization
+
+This Project Charter formally authorizes:
+
+- Allocation of resources for Planning and MVP Execution  
+- Engagement of NOAA / SUB environmental specialists  
+- Initiation of AI-assisted ecological screening activities  
+
+Approval of this Charter authorizes the project to proceed according to the
+defined governance framework.
+
+---
+
+## Approvals
+
+| Role | Name | Signature | Date |
+|-------|-------------|--------------------|----|
+| Sponsor (NOAA / SUB) | {{< meta executive-sponsor >}} | | |
+| Environmental SME Lead | {{< meta sme-lead >}}| | |
+| Project Owner | {{< meta project-po >}} | | |

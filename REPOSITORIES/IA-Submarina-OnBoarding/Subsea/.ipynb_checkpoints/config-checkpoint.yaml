@@ -1,0 +1,17 @@
+core :
+  ensure_directories : true
+
+paths :
+  work : work
+  data : data
+  checkpoint : checkpoint
+  logs : logs
+
+logging :
+  file : subsea.log
+
+storage :
+  type : s3
+
+runtime :
+  enable_gpu : true

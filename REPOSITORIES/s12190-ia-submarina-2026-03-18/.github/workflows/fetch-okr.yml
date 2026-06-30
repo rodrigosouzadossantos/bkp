@@ -1,0 +1,27 @@
+name: Atualiza Dashboard OKR
+
+on:
+  workflow_dispatch: # permite disparar manualmente
+  schedule:
+    - cron: '0 8 * * 1' # toda segunda-feira às 08:00 UTC
+
+jobs:
+  fetch-okrs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Configura Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Instala dependências
+        run: npm install
+
+      - name: Executa fetch-okr
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        run:
+          node .github/scripts/fetch-okr.js

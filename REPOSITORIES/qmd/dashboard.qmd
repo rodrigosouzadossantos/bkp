@@ -1,0 +1,108 @@
+---
+title: "Dashboard Visual de OKRs Multi-Repositório"
+author: "Time IA Submarina"
+format:
+  html:
+    toc: true
+    theme: cosmo
+    code-fold: true
+execute:
+  echo: false
+---
+
+```{r}
+library(jsonlite)
+library(dplyr)
+library(ggplot2)
+library(gridExtra)
+
+# Carrega JSON gerado pelo GitHub Actions
+json_path <- normalizePath("../data/okr-dashboard.json", mustWork = TRUE)
+okr_data <- fromJSON(json_path)
+
+# Filtra KRs
+krs <- okr_data %>%
+  filter(sapply(labels, function(x) "okr" %in% x))
+
+# Colunas principais
+krs_table <- krs %>%
+  select(repo, number, title, state, assignees, body)
+```
+
+## ✅ Tabela de KRs e Entregáveis
+
+```{r}
+# Tabela colorida simples com estado
+krs_table$state_color <- ifelse(krs_table$state=="CLOSED","green","orange")
+
+# Função para gerar tabela SVG-like
+table_svg <- function(df){
+  grid.table(df)
+}
+table_svg(krs_table)
+```
+
+---
+
+## 📊 Status Geral das KRs
+
+```{r}
+status_summary <- krs %>%
+  group_by(state) %>%
+  summarise(qtd = n())
+
+ggplot(status_summary, aes(x=state, y=qtd, fill=state)) +
+  geom_bar(stat="identity") +
+  theme_minimal() +
+  scale_fill_manual(values=c("OPEN"="orange","CLOSED"="green")) +
+  labs(title="Status das KRs", x="Estado", y="Quantidade")
+```
+
+---
+
+## 🚀 Progresso por Repositório
+
+```{r}
+progress_repo <- krs %>%
+  group_by(repo) %>%
+  summarise(total=n(),
+            fechadas=sum(state=="CLOSED"),
+            progresso=fechadas/total*100)
+
+ggplot(progress_repo, aes(x=repo, y=progresso, fill=repo)) +
+  geom_col() +
+  theme_minimal() +
+  labs(title="% de KRs Atingidas por Repositório", x="Repositório", y="% Concluído") +
+  geom_text(aes(label=paste0(round(progresso), "%")), vjust=-0.5) +
+  theme(legend.position="none")
+```
+
+---
+
+## 🔹 Entregáveis por KR (Resumo Visual)
+
+```{r}
+# Extraindo entregáveis do body da Issue
+krs$entregaveis <- sapply(krs$body, function(b){
+  lines <- unlist(strsplit(b,"\n"))
+  entreg <- lines[grep("Entregável|Deliverable", lines, ignore.case = TRUE)]
+  if(length(entreg)==0) return("Não especificado") else return(paste(entreg, collapse=", "))
+})
+
+# Tabela resumida
+entreg_table <- krs %>%
+  select(number, title, repo, entregaveis, state)
+
+grid.table(entreg_table)
+```
+
+---
+
+### ✅ Observações
+
+1. Cada KR vem de Issues com label **okr**.
+2. Status colorido facilita visualização rápida (OPEN/Fechado).
+3. Progresso por repositório permite **medir impacto multi-projetos**.
+4. Entregáveis são extraídos automaticamente do corpo da Issue (`Entregável:`).
+5. Pode ser expandido com filtros por responsável, tipo ou prioridade.
+

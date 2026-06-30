@@ -1,0 +1,88 @@
+    1  2026-02-07 02:36:35 pwd
+    2  2026-02-07 02:36:52 grep PATH bash_history-2026-01-*
+    3  2026-02-07 02:37:21 MF_HOME="/projetos/$(whoami)" && export PATH="$MF_HOME/.miniforge3/bin:$PATH"
+    4  2026-02-07 02:37:37 conda activate OnBoarding
+    5  2026-02-07 02:37:54 conda init
+    6  2026-02-07 02:38:04 conda activate OnBoarding
+    7  2026-02-07 02:38:09 cd IMAGE-ANALYZER/
+    8  2026-02-07 02:38:14 python image-analyzer.py 
+    9  2026-02-07 02:39:02 ls
+   10  2026-02-07 02:39:08 ls work/
+   11  2026-02-07 02:39:10 ls work/checkpoints/
+   12  2026-02-07 02:39:24 wc -l work/checkpoints/s3_keys.json 
+   13  2026-02-07 02:39:30 cat work/checkpoints/s3_keys.json 
+   14  2026-02-07 02:39:56 cat work/checkpoints/s3_keys.json | jq
+   15  2026-02-07 02:40:06 rm -rf work/
+   16  2026-02-07 02:40:21 python image-analyzer.py 
+   17  2026-02-07 02:40:37 rm -rf work/
+   18  2026-02-07 02:40:53 time python image-analyzer.py & 
+   19  2026-02-07 02:41:30 ps axuf
+   20  2026-02-07 02:41:42 kill -9 1621790
+   21  2026-02-07 02:41:45 ps axuf
+   22  2026-02-07 02:41:48 rm -rf work/
+   23  2026-02-07 02:41:55 time python image-analyzer.py 
+   24  2026-02-07 02:42:03 fg
+   25  2026-02-07 02:43:50 bg
+   26  2026-02-07 02:44:12 disown 
+   27  2026-02-07 02:44:16 ps axuf
+   28  2026-02-07 02:44:59 screen
+   29  2026-02-07 02:45:55 kill -9 1621872
+   30  2026-02-07 02:45:58 ps axuf
+   31  2026-02-07 02:46:08 time python image-analyzer.py 2>&1 | tee output.log &
+   32  2026-02-07 02:46:14 ls -l
+   33  2026-02-07 02:46:32 ls
+   34  2026-02-07 02:46:35 ls work/
+   35  2026-02-07 02:46:38 ls work/checkpoints/
+   36  2026-02-07 02:46:42 ls work/output/
+   37  2026-02-07 02:46:46 ls work/tmp/
+   38  2026-02-07 02:46:58 tail -f output.log 
+   39  2026-02-07 03:32:30 ps axuf
+   40  2026-02-07 03:32:46 ]ps axuf
+   41  2026-02-07 03:44:19 nvidia-smi
+   42  2026-02-07 03:46:12 conda activate OnBoarding
+   43  2026-02-07 03:46:13 conda install -c pytorch -c nvidia faiss-gpu
+   44  2026-02-07 03:50:14 conda install faiss-gpu
+   45  2026-02-07 03:51:42 nvidia-smi
+   46  2026-02-07 11:39:06 ps axuf
+   47  2026-02-07 11:39:14 pwd
+   48  2026-02-07 11:39:20 cd IMAGE-ANALYZER/
+   49  2026-02-07 11:39:20 ls
+   50  2026-02-07 11:39:26 tail output.log 
+   51  2026-02-07 11:39:53 ls work/
+   52  2026-02-07 11:39:55 ls work/tmp/
+   53  2026-02-07 11:40:00 ls work/output/
+   54  2026-02-07 11:40:07 ls work/checkpoints/
+   55  2026-02-07 11:40:17 ls -l work/checkpoints/
+   56  2026-02-07 11:40:57 pip install faiss-gpu-cu12
+   57  2026-02-07 11:41:21 cd ..
+   58  2026-02-07 11:41:23 pwd
+   59  2026-02-07 11:41:32 grpe PIP bash_history-2026-01-*
+   60  2026-02-07 11:41:37 grep PIP bash_history-2026-01-*
+   61  2026-02-07 11:41:45 export PIP_REQUIRE_VIRTUALENV=false
+   62  2026-02-07 11:41:55 pip install faiss-gpu-cu12
+   63  2026-02-07 11:42:07 conda activate OnBoarding
+   64  2026-02-07 11:42:13 pip install faiss-gpu-cu12
+   65  2026-02-07 11:42:45 cd IMAGE-ANALYZER/
+   66  2026-02-07 11:42:46 ls
+   67  2026-02-07 11:43:22 cp output.log output-$(date +"%F").log 
+   68  2026-02-07 11:43:25 ls -l
+   69  2026-02-07 11:43:43 time python image-analyzer.py 2>&1 | tee output.log &
+   70  2026-02-07 12:43:39 time python image-analyzer-v02.py 2>&1 | tee output-$(date +"%F").log &
+   71  2026-02-07 12:43:46 ]
+   72  2026-02-07 12:43:53 time python image-analyzer-v02.py 
+   73  2026-02-07 12:46:14 fg
+   74  2026-02-07 12:46:26 vim image-analyzer-v02.py 
+   75  2026-02-07 12:47:37 ]cat output-2026-02-07.log 
+   76  2026-02-07 12:47:42 cat output-2026-02-07.log 
+   77  2026-02-07 12:47:47 rm output-2026-02-07.log 
+   78  2026-02-07 12:47:52 time python image-analyzer-v02.py 2>&1 | tee output-$(date +"%F").log &
+   79  2026-02-07 12:48:13 ls work
+   80  2026-02-07 12:49:20 tail -f {output-2026-02-07,work/{processing,warning}}.log 
+   81  2026-02-07 14:12:06 vim image-analyzer-v02.py 
+   82  2026-02-07 14:18:02 time python image-analyzer-v02.py 2>&1 | tee output-$(date +"%F").log &
+   83  2026-02-07 14:18:17 tail -f {output-2026-02-07,work/{processing,warning}}.log 
+   84  2026-02-07 14:22:58 ps axuf
+   85  2026-02-07 14:23:09 tail -f {output-2026-02-07,work/{processing,warning}}.log 
+   86  2026-02-07 14:23:56 cd
+   87  2026-02-07 14:24:06 cd /projetos/ghva/
+   88  2026-02-07 14:24:38 history > bash_history-$(date +'%F')

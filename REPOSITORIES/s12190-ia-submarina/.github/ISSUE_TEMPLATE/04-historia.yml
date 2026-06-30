@@ -1,0 +1,41 @@
+name: "História"
+description: "História de usuário do backlog"
+title: "[STORY] "
+labels:
+  - type:story
+
+body:
+  - type: input
+    id: epic
+    attributes:
+      label: Épico Relacionado
+      placeholder: "#789"
+    validations:
+      required: true
+
+  - type: textarea
+    id: historia
+    attributes:
+      label: História
+      placeholder: |
+        Como engenheiro de inspeção submarina,
+        quero detectar automaticamente corrosão em dutos
+        para reduzir o tempo de análise manual de vídeos.
+
+  - type: textarea
+    id: criterios
+    attributes:
+      label: Critérios de Aceitação
+      placeholder: |
+        - O modelo detecta corrosão em frames de vídeo
+        - A precisão mínima deve ser 85%
+        - O sistema gera bounding boxes para as áreas detectadas
+
+  - type: textarea
+    id: tarefas
+    attributes:
+      label: Tarefas Técnicas
+      placeholder: |
+        - Preparar dataset de treinamento
+        - Treinar modelo YOLO ou similar
+        - Avaliar desempenho em dataset de validação

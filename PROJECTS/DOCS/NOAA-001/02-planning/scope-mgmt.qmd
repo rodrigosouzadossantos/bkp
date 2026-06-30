@@ -1,0 +1,35 @@
+# Scope Management Plan
+
+## Product Scope Description
+An AI pipeline that classifies subsea imagery based on benthic relevance,
+prioritizing precision and environmental confidence.
+
+## Definition of Benthic-Relevant Data
+Includes visible seabed, benthic organisms, and ecological structures (reefs,
+sediment patterns, bioturbation).
+
+## Explicit Exclusions
+- Open water column
+- Purely anthropogenic structures without biology
+- Unusable data (severe turbidity, blur, extreme lighting)
+
+## MVP Strategy
+Filter Noise, Preserve Confidence.
+Precision prioritized over recall; false negatives monitored as environmental
+risk.
+
+## Deliverables
+- Binary classification model
+- Preprocessing pipeline
+- Annotation workflow
+- Validation reports
+- Versioned datasets
+
+## Constraints
+- No labeled dataset
+- Class imbalance
+- Environmental variability
+- Offline-first requirement
+
+## Assumptions
+See Assumption Log.

@@ -1,0 +1,34 @@
+[
+  {
+    "objectID": "example.html",
+    "href": "example.html",
+    "title": "2  Painel Mestre do Projeto",
+    "section": "",
+    "text": "2.1 Mapeamento do Fluxo de Valor\nLipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue.\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas",
+    "crumbs": [
+      "{{< meta section_strategy >}}",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>{{< i18n dashboard_title >}}</span>"
+    ]
+  },
+  {
+    "objectID": "example.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206931386e20627573696e6573735f63617365203e7d7d",
+    "href": "example.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206931386e20627573696e6573735f63617365203e7d7d",
+    "title": "2  Painel Mestre do Projeto",
+    "section": "2.2 Caso de Negócio",
+    "text": "2.2 Caso de Negócio\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus.",
+    "crumbs": [
+      "{{< meta section_strategy >}}",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>{{< i18n dashboard_title >}}</span>"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "NOAA",
+    "section": "",
+    "text": "Rodrigo Souza dos Santos\n\n2026-03-25",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>index.html</span>"
+    ]
+  }
+]

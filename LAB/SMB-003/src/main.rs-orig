@@ -1,0 +1,386 @@
+use std::ffi::CString;
+use std::os::raw::c_char;
+use std::io::{self, Write};
+use std::fs;
+use serde::{Deserialize, Serialize};
+
+#[repr(C)]
+#[derive(Clone, Copy)]
+struct SmbEntry {
+    name: [c_char; 512],
+    entry_type: u32,
+}
+
+unsafe extern "C" {
+    fn smb_set_credentials(username: *const c_char, password: *const c_char);
+    fn smb_count_entries(url: *const c_char) -> i32;
+    fn smb_list_directory(url: *const c_char, entries: *mut SmbEntry, max_entries: i32) -> i32;
+}
+
+#[derive(Debug, Deserialize, Serialize)]
+struct ServerConfig {
+    host: String,
+    share: String,
+    #[serde(default)]
+    directories: Option<Vec<String>>,
+    use_kerberos: bool,
+    description: Option<String>,
+}
+
+#[derive(Debug, Deserialize, Serialize)]
+struct GlobalConfig {
+    workgroup: String,
+    realm: String,
+    default_user: Option<String>,
+    default_password: Option<String>,
+}
+
+#[derive(Debug, Deserialize, Serialize)]
+struct Config {
+    servers: std::collections::HashMap<String, ServerConfig>,
+    global: GlobalConfig,
+}
+
+impl Config {
+    fn load(path: &str) -> Result<Self, Box<dyn std::error::Error>> {
+        let content = fs::read_to_string(path)?;
+        let config: Config = serde_yaml::from_str(&content)?;
+        Ok(config)
+    }
+}
+
+fn get_password(prompt: &str) -> String {
+    print!("{}", prompt);
+    io::stdout().flush().unwrap();
+    rpassword::read_password().unwrap_or_default()
+}
+
+fn count_directory(url: &str) -> Result<i32, String> {
+    let url_c = CString::new(url).map_err(|e| e.to_string())?;
+    
+    let count = unsafe {
+        smb_count_entries(url_c.as_ptr())
+    };
+    
+    if count < 0 {
+        return Err("Falha ao contar itens".to_string());
+    }
+    
+    Ok(count)
+}
+
+fn list_directory(url: &str, max_to_show: usize) -> Result<Vec<(String, u32)>, String> {
+    let url_c = CString::new(url).map_err(|e| e.to_string())?;
+    
+    let max_entries = 200_000;
+    let mut entries = vec![SmbEntry { name: [0; 512], entry_type: 0 }; max_entries];
+    
+    let count = unsafe {
+        smb_list_directory(url_c.as_ptr(), entries.as_mut_ptr(), max_entries as i32)
+    };
+    
+    if count < 0 {
+        return Err("Falha ao listar diretório".to_string());
+    }
+    
+    let mut result = Vec::new();
+    let limit = (count as usize).min(max_to_show);
+    
+    for i in 0..limit {
+        let name = unsafe {
+            std::ffi::CStr::from_ptr(entries[i].name.as_ptr())
+                .to_string_lossy()
+                .to_string()
+        };
+        result.push((name, entries[i].entry_type));
+    }
+    
+    Ok(result)
+}
+
+fn setup_authentication(
+    use_kerberos: bool, 
+    username: Option<String>, 
+    password: Option<String>,
+    realm: &str
+) {
+    if use_kerberos {
+        println!("🎫 Usando Kerberos");
+        unsafe {
+            smb_set_credentials(std::ptr::null(), std::ptr::null());
+        }
+    } else {
+        let user = username.unwrap_or_else(|| {
+            print!("Username: ");
+            io::stdout().flush().unwrap();
+            let mut u = String::new();
+            io::stdin().read_line(&mut u).unwrap();
+            u.trim().to_string()
+        });
+        
+        let pass = if let Some(p) = password {
+            if !p.is_empty() {
+                println!("🔑 Usando senha do config.yaml");
+                p
+            } else {
+                get_password(&format!("Password for {}@{}: ", user, realm))
+            }
+        } else {
+            get_password(&format!("Password for {}@{}: ", user, realm))
+        };
+        
+        let user_c = CString::new(user.as_str()).unwrap();
+        let pass_c = CString::new(pass.as_str()).unwrap();
+        
+        unsafe {
+            smb_set_credentials(user_c.as_ptr(), pass_c.as_ptr());
+        }
+        
+        println!("\n🔑 Autenticando como: {}", user);
+    }
+}
+
+fn show_results(url: &str, total: i32) {
+    let show_limit = if total > 1000 { 50 } else { total as usize };
+    
+    println!("📥 Carregando primeiros {} itens...\n", show_limit);
+    
+    match list_directory(url, show_limit) {
+        Ok(entries) => {
+            let mut dirs = 0;
+            let mut files = 0;
+            
+            println!("{:-<80}", "");
+            for (name, entry_type) in &entries {
+                let (icon, label) = match entry_type {
+                    1 => { dirs += 1; ("📁", "DIR ") },
+                    2 => { files += 1; ("📄", "FILE") },
+                    3 => ("🔗", "LINK"),
+                    _ => ("❓", "????"),
+                };
+                println!("  {} [{}] {}", icon, label, name);
+            }
+            println!("{:-<80}", "");
+            
+            if total > show_limit as i32 {
+                println!("\n... e mais {} itens não exibidos", total - show_limit as i32);
+            }
+            
+            println!("\n📊 Estatísticas:");
+            println!("   Exibidos: {}", entries.len());
+            println!("   📁 Diretórios (amostra): {}", dirs);
+            println!("   📄 Arquivos (amostra): {}", files);
+            println!("   📦 Total no diretório: {}", total);
+        },
+        Err(e) => {
+            eprintln!("❌ Erro ao listar: {}", e);
+        }
+    }
+}
+
+fn main() {
+    let args: Vec<String> = std::env::args().collect();
+    
+    let config_path = "config.yaml";
+    let config = match Config::load(config_path) {
+        Ok(c) => c,
+        Err(e) => {
+            eprintln!("❌ Erro ao carregar {}: {}", config_path, e);
+            return;
+        }
+    };
+    
+    if args.len() < 2 {
+        eprintln!("Uso: {} <servidor|url> [diretório|caminho] [-u username] [-p password]", args[0]);
+        eprintln!("\nServidores disponíveis:");
+        for (name, server) in &config.servers {
+            let desc = server.description.as_deref().unwrap_or("");
+            let auth = if server.use_kerberos { "Kerberos" } else { "NTLM" };
+            println!("  • {} - {} ({})", name, desc, auth);
+            if let Some(dirs) = &server.directories {
+                println!("      Diretórios: {} itens", dirs.len());
+            }
+        }
+        return;
+    }
+    
+    let server_or_url = &args[1];
+    let mut path = String::new();
+    let mut username = config.global.default_user.clone();
+    let mut password = config.global.default_password.clone();
+    
+    let mut i = 2;
+    while i < args.len() {
+        match args[i].as_str() {
+            "-u" | "--user" => {
+                if i + 1 < args.len() {
+                    username = Some(args[i + 1].clone());
+                    i += 2;
+                } else {
+                    eprintln!("Erro: -u requer um argumento");
+                    return;
+                }
+            },
+            "-p" | "--password" => {
+                if i + 1 < args.len() {
+                    password = Some(args[i + 1].clone());
+                    i += 2;
+                } else {
+                    eprintln!("Erro: -p requer um argumento");
+                    return;
+                }
+            },
+            _ => {
+                if !args[i].starts_with('-') && path.is_empty() {
+                    path = args[i].clone();
+                }
+                i += 1;
+            }
+        }
+    }
+    
+    // Processar servidor
+    if server_or_url.starts_with("smb://") {
+        let needs_auth = server_or_url.contains("dfs.petrobras.biz");
+        let url = server_or_url.to_string();
+        let use_kerberos = !needs_auth;
+        
+        setup_authentication(use_kerberos, username, password, &config.global.realm);
+        process_single_directory(&url, use_kerberos);
+    } else if let Some(server_config) = config.servers.get(server_or_url) {
+        if let Some(desc) = &server_config.description {
+            println!("📋 Servidor: {}", desc);
+        }
+        
+        setup_authentication(server_config.use_kerberos, username, password, &config.global.realm);
+        
+        // Se tem lista de diretórios
+        if let Some(directories) = &server_config.directories {
+            if path.is_empty() {
+                // PROCESSAR TODOS OS DIRETÓRIOS
+                println!("\n📁 Processando {} diretórios...\n", directories.len());
+                
+                let mut total_items = 0;
+                let mut total_dirs = 0;
+                let mut total_files = 0;
+                
+                for (idx, dir) in directories.iter().enumerate() {
+                    let mut url = format!("smb://{}/{}", server_config.host, server_config.share);
+                    if !url.ends_with('/') {
+                        url.push('/');
+                    }
+                    url.push_str(dir);
+                    if !url.ends_with('/') {
+                        url.push('/');
+                    }
+                    
+                    println!("{:-<80}", "");
+                    println!("📂 [{}/{}] {}", idx + 1, directories.len(), dir);
+                    println!("{:-<80}", "");
+                    
+                    match count_directory(&url) {
+                        Ok(count) => {
+                            println!("✅ Total de itens: {}", count);
+                            total_items += count;
+                            
+                            // Mostrar apenas 10 primeiros de cada
+                            if let Ok(entries) = list_directory(&url, 10) {
+                                let mut dirs = 0;
+                                let mut files = 0;
+                                
+                                for (name, entry_type) in &entries {
+                                    let (icon, label) = match entry_type {
+                                        1 => { dirs += 1; ("📁", "DIR ") },
+                                        2 => { files += 1; ("📄", "FILE") },
+                                        3 => ("🔗", "LINK"),
+                                        _ => ("❓", "????"),
+                                    };
+                                    println!("  {} [{}] {}", icon, label, name);
+                                }
+                                
+                                if count > 10 {
+                                    println!("  ... e mais {} itens", count - 10);
+                                }
+                                
+                                total_dirs += dirs;
+                                total_files += files;
+                            }
+                        },
+                        Err(e) => {
+                            eprintln!("❌ Erro: {}", e);
+                        }
+                    }
+                    println!();
+                }
+                
+                println!("{:=<80}", "");
+                println!("📊 RESUMO GERAL");
+                println!("{:=<80}", "");
+                println!("   Diretórios processados: {}", directories.len());
+                println!("   Total de itens: {}", total_items);
+                println!("   📁 Diretórios (amostra): {}", total_dirs);
+                println!("   📄 Arquivos (amostra): {}", total_files);
+                println!("{:=<80}", "");
+            } else {
+                // PROCESSAR DIRETÓRIO ESPECÍFICO
+                if directories.contains(&path) {
+                    let mut url = format!("smb://{}/{}", server_config.host, server_config.share);
+                    if !url.ends_with('/') {
+                        url.push('/');
+                    }
+                    url.push_str(&path);
+                    if !url.ends_with('/') {
+                        url.push('/');
+                    }
+                    
+                    println!("📂 Diretório: {}\n", path);
+                    process_single_directory(&url, server_config.use_kerberos);
+                } else {
+                    eprintln!("❌ Diretório '{}' não encontrado na configuração", path);
+                    eprintln!("\nDiretórios disponíveis:");
+                    for dir in directories {
+                        println!("  • {}", dir);
+                    }
+                }
+            }
+        } else if !path.is_empty() {
+            // Sem lista de diretórios - caminho livre
+            let mut url = format!("smb://{}/{}", server_config.host, server_config.share);
+            if !url.ends_with('/') && !path.starts_with('/') {
+                url.push('/');
+            }
+            url.push_str(&path);
+            if !url.ends_with('/') {
+                url.push('/');
+            }
+            
+            process_single_directory(&url, server_config.use_kerberos);
+        } else {
+            // Share raiz sem path
+            let url = format!("smb://{}/{}", server_config.host, server_config.share);
+            process_single_directory(&url, server_config.use_kerberos);
+        }
+    } else {
+        eprintln!("❌ Servidor '{}' não encontrado", server_or_url);
+    }
+}
+
+fn process_single_directory(url: &str, use_kerberos: bool) {
+    println!("📂 URL: {}\n", url);
+    
+    println!("📊 Contando itens no diretório...");
+    match count_directory(url) {
+        Ok(total) => {
+            println!("✅ Total de itens: {}\n", total);
+            show_results(url, total);
+        },
+        Err(e) => {
+            eprintln!("❌ Erro ao contar: {}", e);
+            if !use_kerberos {
+                eprintln!("💡 Verifique usuário e senha");
+            } else {
+                eprintln!("💡 Verifique seu ticket Kerberos: klist");
+            }
+        }
+    }
+}

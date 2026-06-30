@@ -1,0 +1,9 @@
+# Schedule Baseline
+
+| Milestone | Description |
+|----------|-------------|
+| M1 | Charter Approved |
+| M2 | PMP Approved |
+| M3 | MVP Model Ready |
+| M4 | Environmental Validation |
+| M5 | Planning Close |

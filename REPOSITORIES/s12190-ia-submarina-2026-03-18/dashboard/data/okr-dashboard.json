@@ -1,0 +1,22 @@
+[
+  {
+    "repo": "subsea-ia",
+    "number": 2,
+    "title": "Painel do GitHub Project configurado",
+    "labels": ["tático","okr"],
+    "state": "OPEN",
+    "assignees": ["walace"],
+    "body": "Entregável: Colunas Backlog, Ready, In Progress, Review, Done\nEntregável: Campo customizado para OKR\nEntregável: Campo tipo (Bug, Feature, Experimento, Infra)",
+    "url": "https://github.com/minha-org/subsea-ia/issues/2"
+  },
+  {
+    "repo": "subsea-ia",
+    "number": 3,
+    "title": "Relatório mensal extraído do GitHub",
+    "labels": ["tático","okr"],
+    "state": "CLOSED",
+    "assignees": ["francisco"],
+    "body": "Entregável: % de KRs atingidos\nEntregável: tempo médio de ciclo\nEntregável: volume de demandas por tipo",
+    "url": "https://github.com/minha-org/subsea-ia/issues/3"
+  }
+]

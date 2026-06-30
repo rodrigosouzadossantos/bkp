@@ -1,0 +1,42 @@
+{
+  "index.qmd": {
+    "index.html": "a418b7bf"
+  },
+  "01_strategy_okrs/okr_dashboard.qmd": {
+    "okr_dashboard.html": "ae392d60"
+  },
+  "01_strategy_okrs/value_stream.qmd": {
+    "value_stream.html": "60f3abe9"
+  },
+  "02_initiating_pmbok/business_case.qmd": {
+    "business_case.html": "d76be824"
+  },
+  "02_initiating_pmbok/project_charter.qmd": {
+    "project_charter.html": "c83e32d1"
+  },
+  "02_initiating_pmbok/stakeholder_reg.qmd": {
+    "stakeholder_reg.html": "1326f977"
+  },
+  "03_planning_scope/requirements.qmd": {
+    "requirements.html": "eb61d680"
+  },
+  "03_planning_scope/wbs.qmd": {
+    "wbs.html": "14aa548c"
+  },
+  "03_planning_scope/wbs_dictionary.qmd": {
+    "wbs_dictionary.html": "561da961"
+  },
+  "04_agile_execution/product_backlog.qmd": {
+    "product_backlog.html": "24a3cc57",
+    "product_backlog.tex": "0e3a4f7a"
+  },
+  "04_agile_execution/roadmap.qmd": {
+    "roadmap.html": "380fc252"
+  },
+  "05_monitoring_control/risk_register.qmd": {
+    "risk_register.html": "07fdd04f"
+  },
+  "05_monitoring_control/change_log.qmd": {
+    "change_log.html": "d3d3aeeb"
+  }
+}

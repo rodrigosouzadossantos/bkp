@@ -1,0 +1,44 @@
+# KR4 – Gerar relatório mensal com métricas de execução
+
+## Descrição
+
+Produzir relatório mensal consolidando métricas de execução
+extraídas do GitHub Project, permitindo avaliar desempenho
+e progresso dos KRs.
+
+## Entregáveis
+
+- Relatório mensal consolidado
+- Métricas de execução do fluxo
+- Registro histórico de resultados
+
+## Checklist de execução
+
+- [ ] Extrair dados do GitHub Project
+- [ ] Calcular métricas operacionais
+- [ ] Consolidar relatório
+- [ ] Publicar relatório no repositório
+
+## Métricas incluídas
+
+- Percentual de KRs atingidos
+- Cycle time médio
+- Volume de demandas por tipo
+
+## Critérios de aceite
+
+Relatório gerado contendo:
+
+- Métricas operacionais
+- Evolução mensal
+- Registro no repositório
+
+## Local de armazenamento
+
+docs/relatorios/
+
+## Rastreamento
+
+OKR relacionado: Governança GitHub  
+Project: GitHub Project da área  
+Responsável: (definir)

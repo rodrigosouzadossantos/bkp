@@ -1,0 +1,54 @@
+{
+  "04_agile_execution/product_backlog.qmd": {
+    "product_backlog.html": "9685faf0",
+    "product_backlog.tex": "648a9293"
+  },
+  "04_agile_execution/roadmap.qmd": {
+    "roadmap.html": "8c8cae0f",
+    "roadmap.tex": "411b31e5"
+  },
+  "01_strategy_okrs/value_stream.qmd": {
+    "value_stream.html": "244a80b2",
+    "value_stream.tex": "ce425036"
+  },
+  "01_strategy_okrs/okr_dashboard.qmd": {
+    "okr_dashboard.html": "b672cb47",
+    "okr_dashboard.tex": "49d62fa1"
+  },
+  "03_planning_scope/wbs.qmd": {
+    "wbs.html": "28f42161",
+    "wbs.tex": "e79fe4a3"
+  },
+  "03_planning_scope/wbs_dictionary.qmd": {
+    "wbs_dictionary.html": "20140257",
+    "wbs_dictionary.tex": "17256418"
+  },
+  "03_planning_scope/requirements.qmd": {
+    "requirements.html": "8eb59ec9",
+    "requirements.tex": "ba164603"
+  },
+  "index.qmd": {
+    "index.html": "9a32668d",
+    "index.tex": "f7ac2603"
+  },
+  "05_monitoring_control/change_log.qmd": {
+    "change_log.html": "a23dfc56",
+    "change_log.tex": "71bd35fc"
+  },
+  "05_monitoring_control/risk_register.qmd": {
+    "risk_register.html": "4ef09ae3",
+    "risk_register.tex": "2a635c76"
+  },
+  "02_initiating_pmbok/stakeholder_reg.qmd": {
+    "stakeholder_reg.html": "45398262",
+    "stakeholder_reg.tex": "4ab99729"
+  },
+  "02_initiating_pmbok/project_charter.qmd": {
+    "project_charter.html": "7860eb87",
+    "project_charter.tex": "ad0ba729"
+  },
+  "02_initiating_pmbok/business_case.qmd": {
+    "business_case.html": "a247a72e",
+    "business_case.tex": "fe73c4bd"
+  }
+}

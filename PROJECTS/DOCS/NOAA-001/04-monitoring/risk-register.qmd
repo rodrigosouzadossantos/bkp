@@ -1,0 +1,7 @@
+# Risk Register
+
+
+| ID | Risk Description | Probability | Impact | Mitigation Strategy |
+|----|------------------|-------------|--------|----------------------|
+| R1 | Resource turnover | Medium | High | Cross-train team members |
+| R2 | Scope creep | High | Medium | Strict change control |

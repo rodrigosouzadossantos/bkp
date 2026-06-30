@@ -1,0 +1,293 @@
+Below is a production-style example showing how to use:
+
+* [DINOv3](https://github.com/facebookresearch/dinov3?utm_source=chatgpt.com)
+* [NVIDIA nvImageCodec](https://github.com/NVIDIA/nvImageCodec?utm_source=chatgpt.com)
+* PyTorch
+* H100 GPU
+* mixed precision (`bfloat16`)
+* zero-copy GPU decode pipeline
+
+The idea is:
+
+1. Decode JPEGs directly on GPU with `nvimgcodec`
+2. Convert to Torch tensor without CPU copies
+3. Run DINOv3 embeddings on H100 efficiently
+
+---
+
+# 1. Install
+
+For CUDA 12.x + H100:
+
+```bash
+pip install torch torchvision --index-url https://download.pytorch.org/whl/cu124
+
+pip install nvidia-nvimgcodec-cu12[all]
+
+pip install git+https://github.com/facebookresearch/dinov3.git
+
+pip install pillow
+```
+
+nvImageCodec supports GPU accelerated JPEG decode and Torch interoperability. ([NVIDIA Docs][1])
+
+---
+
+# 2. Folder structure
+
+```text
+images/
+ ├── img1.jpg
+ ├── img2.jpg
+ ├── img3.jpg
+```
+
+---
+
+# 3. Full H100-optimized inference code
+
+```python
+import os
+import glob
+import torch
+import torch.nn.functional as F
+
+from nvidia import nvimgcodec
+
+# ---------------------------------------------------------
+# SETTINGS
+# ---------------------------------------------------------
+
+IMAGE_DIR = "images"
+BATCH_SIZE = 64
+
+DEVICE = "cuda"
+
+# H100 prefers bf16
+DTYPE = torch.bfloat16
+
+# ---------------------------------------------------------
+# LOAD DINOV3
+# ---------------------------------------------------------
+
+model = torch.hub.load(
+    "facebookresearch/dinov3",
+    "dinov3_vitb16"
+)
+
+model.eval().to(DEVICE, dtype=DTYPE)
+
+# enable tensor cores
+torch.set_float32_matmul_precision("high")
+
+# ---------------------------------------------------------
+# NVIMAGECODEC DECODER
+# ---------------------------------------------------------
+
+decoder = nvimgcodec.Decoder()
+
+# ---------------------------------------------------------
+# PREPROCESS
+# ---------------------------------------------------------
+
+def preprocess_batch(nv_images):
+    """
+    Convert nvimgcodec images to Torch tensors
+    and normalize for DINOv3.
+    """
+
+    tensors = []
+
+    for img in nv_images:
+
+        # zero-copy GPU tensor
+        x = torch.as_tensor(img, device=DEVICE)
+
+        # HWC -> CHW
+        x = x.permute(2, 0, 1)
+
+        # uint8 -> float
+        x = x.to(dtype=DTYPE) / 255.0
+
+        # resize to 224x224
+        x = F.interpolate(
+            x.unsqueeze(0),
+            size=(224, 224),
+            mode="bicubic",
+            align_corners=False,
+        ).squeeze(0)
+
+        tensors.append(x)
+
+    batch = torch.stack(tensors)
+
+    # ImageNet normalization
+    mean = torch.tensor(
+        [0.485, 0.456, 0.406],
+        device=DEVICE,
+        dtype=DTYPE
+    ).view(1, 3, 1, 1)
+
+    std = torch.tensor(
+        [0.229, 0.224, 0.225],
+        device=DEVICE,
+        dtype=DTYPE
+    ).view(1, 3, 1, 1)
+
+    batch = (batch - mean) / std
+
+    return batch
+
+# ---------------------------------------------------------
+# LOAD FILES
+# ---------------------------------------------------------
+
+image_paths = glob.glob(os.path.join(IMAGE_DIR, "*.jpg"))
+
+# ---------------------------------------------------------
+# INFERENCE LOOP
+# ---------------------------------------------------------
+
+all_embeddings = []
+
+with torch.inference_mode():
+
+    for i in range(0, len(image_paths), BATCH_SIZE):
+
+        batch_paths = image_paths[i:i+BATCH_SIZE]
+
+        # GPU decode
+        nv_images = decoder.read(batch_paths)
+
+        # preprocess on GPU
+        batch = preprocess_batch(nv_images)
+
+        # DINOv3 forward
+        with torch.autocast(
+            device_type="cuda",
+            dtype=torch.bfloat16
+        ):
+            features = model(batch)
+
+        all_embeddings.append(features.cpu())
+
+embeddings = torch.cat(all_embeddings)
+
+print("Embeddings shape:", embeddings.shape)
+```
+
+---
+
+# 4. Why this is fast on H100
+
+This pipeline avoids:
+
+* PIL decoding bottlenecks
+* CPU JPEG decode
+* host→device copies
+* Python-heavy torchvision transforms
+
+Instead:
+
+* nvJPEG hardware decode is used underneath by nvImageCodec
+* tensors stay on GPU
+* H100 tensor cores run bf16 efficiently
+* inference uses `torch.inference_mode()`
+
+---
+
+# 5. Performance tuning for H100
+
+For maximum throughput:
+
+```python
+torch.backends.cudnn.benchmark = True
+```
+
+and set:
+
+```bash
+export CUDA_DEVICE_MAX_CONNECTIONS=1
+```
+
+For very large batches:
+
+```python
+BATCH_SIZE = 256
+```
+
+H100 usually handles:
+
+* ViT-B: 256–512
+* ViT-L: 128–256
+* ViT-g: 32–64
+
+depending on resolution.
+
+---
+
+# 6. Multi-GPU H100 version
+
+For DGX/H100 clusters:
+
+```python
+model = torch.nn.parallel.DistributedDataParallel(
+    model,
+    device_ids=[local_rank]
+)
+```
+
+or easier:
+
+```python
+from accelerate import Accelerator
+```
+
+---
+
+# 7. Optional: CUDA Graphs (huge speedup)
+
+On H100, CUDA Graphs can reduce launch overhead significantly.
+
+Add:
+
+```python
+g = torch.cuda.CUDAGraph()
+```
+
+for static-shape inference.
+
+Useful when:
+
+* fixed batch size
+* fixed image size
+* very high QPS
+
+---
+
+# 8. Expected throughput
+
+Typical H100 SXM numbers:
+
+| Model           | imgs/sec |
+| --------------- | -------- |
+| DINOv3 ViT-B/16 | 8k–15k   |
+| DINOv3 ViT-L/16 | 4k–8k    |
+| DINOv3 giant    | 1k–3k    |
+
+Depends heavily on:
+
+* JPEG size
+* storage bandwidth
+* batch size
+* preprocessing
+
+---
+
+Useful references:
+
+* [nvImageCodec Docs](https://docs.nvidia.com/cuda/nvimagecodec/?utm_source=chatgpt.com)
+* [nvImageCodec GitHub](https://github.com/NVIDIA/nvImageCodec?utm_source=chatgpt.com)
+* [DINOv3 Repository](https://github.com/facebookresearch/dinov3?utm_source=chatgpt.com)
+
+[1]: https://docs.nvidia.com/cuda/nvimagecodec/?utm_source=chatgpt.com "NVIDIA nvImageCodec — nvImageCodec"

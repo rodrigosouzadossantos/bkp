@@ -1,0 +1,14 @@
+status = error
+name = SparkLogConfig
+
+appender.file.type = File
+appender.file.name = FileAppender
+#appender.file.fileName = spark.log
+property.spark.log.dir = /tmp
+appender.file.fileName = ${sys:spark.log.dir}/spark-${date:yyyyMMdd-HHmmss}.log
+appender.file.layout.type = PatternLayout
+appender.file.layout.pattern = %d{yy/MM/dd HH:mm:ss} %-5p %c{1}:%L - %m%n
+
+rootLogger.level = warn
+rootLogger.appenderRefs = file
+rootLogger.appenderRef.file.ref = FileAppender

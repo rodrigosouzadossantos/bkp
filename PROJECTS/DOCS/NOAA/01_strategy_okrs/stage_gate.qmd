@@ -1,0 +1,349 @@
+# KPI Baseline and Measurement Framework {#sec-stage-gates}
+
+## Purpose of This Document
+
+This document defines, for each executive KPI associated with **[OKR at section
+@sec-okr]**, the following elements:
+
+- Baseline definition (As‑Is)
+- Measurement method (How it is calculated)
+- Data sources
+- Measurement cadence
+- Accountability
+
+Its objective is to ensure **objective, repeatable, and auditable tracking**,
+supporting governance, stage‑gates, and executive decision‑making.
+
+---
+
+## Measurement Principles
+
+1. **Ecological protection KPIs have priority** over efficiency KPIs  
+2. Baselines must reflect **current manual processes**
+3. Measurements must be:
+   - Reproducible
+   - Transparent
+   - Independent of model optimism
+4. All KPIs must be traceable to:
+   - [OKR at section @sec-okr]
+   - Environmental risk management
+
+---
+
+## KPI-1 — Ecologically Relevant Focus Ratio
+
+### Definition
+
+Percentage of expert-reviewed images that are classified as benthic-relevant
+after AI screening.
+
+### Baseline (As‑Is)
+
+- Manual process:  
+  Typically **< 15–30%** of reviewed images are ecologically relevant  
+  (remaining images are water column, transit, noise, or non-benthic)
+
+> Baseline established via historical AUV campaigns (manual screening logs).
+
+### Target (MVP)
+
+≥ 70%
+
+### Measurement Method
+
+```
+(Number of benthic-relevant images reviewed by experts)
+-------------------------------------------------------
+(Total number of images reviewed by experts)
+```
+
+### Data Sources
+
+- Annotation logs
+- Expert validation records
+- Dataset metadata
+
+### Measurement Cadence
+
+- Per campaign
+- Reviewed at Stage-Gates G2 and G3
+
+### Accountability
+
+- Environmental SME Lead
+- Project Manager (reporting)
+
+---
+
+## KPI-2 — Environmental Screening Lead Time
+
+### Definition
+
+Elapsed time between AUV image acquisition and availability of ecologically
+relevant screening results.
+
+### Baseline (As‑Is)
+
+- Manual process:  
+  Typically **weeks to months**, depending on campaign size and expert availability
+
+> Baseline measured as historical average elapsed time per campaign.
+
+### Target (MVP)
+
+≥ 25% reduction compared to baseline
+
+### Measurement Method
+
+```
+Timestamp (screening results available) − Timestamp (AUV image acquisition)
+```
+
+### Data Sources
+
+- AUV acquisition timestamps
+- Screening delivery logs
+- NOAA/SUB reporting records
+
+### Measurement Cadence
+
+- Per campaign
+- Reviewed at Stage-Gates G2 and G3
+
+### Accountability
+
+- Project Manager
+- NOAA/SUB Product Owner
+
+---
+
+## KPI-3 — Ecological Data Protection Index  
+
+*(Critical Risk-Control KPI)*
+
+### Definition
+
+Retention rate of true benthic-relevant images after automated screening.
+
+### Baseline (As‑Is)
+
+- Manual process baseline: **~100% retention**, but at high cost and low scalability
+
+> Baseline represents ecological gold standard, not operational efficiency.
+
+### Target (MVP)
+
+≥ 85–90%
+
+### Measurement Method
+
+```
+(True benthic-relevant images retained after screening)
+-------------------------------------------------------
+(Total true benthic-relevant images identified by experts)
+```
+
+### Data Sources
+
+- Gold-standard expert-reviewed subsets
+- Validation datasets
+- Error analysis reports
+
+### Measurement Cadence
+
+- Per validation cycle
+- Mandatory review at every Stage-Gate
+
+### Accountability
+
+- Environmental SME Lead (approval authority)
+- Data Science Lead (analysis)
+
+---
+
+## KPI-4 — Cross-Field Ecological Consistency
+
+### Definition
+
+Stability of ecological screening performance across different fields.
+
+### Baseline (As‑Is)
+
+- Manual process:  
+  High variability due to:
+  - Different experts
+  - Different campaign conditions
+  - Non-standardized workflows
+
+### Target (MVP)
+
+Performance variation within agreed tolerance (defined by SMEs)
+
+### Measurement Method
+
+- Compare KPI-3 and KPI-1 values between fields (e.g., Viola vs Espadarte)
+- Calculate relative deviation
+
+### Data Sources
+
+- Field-specific validation reports
+- Comparative performance summaries
+
+### Measurement Cadence
+
+- At completion of second field
+- Reviewed at Stage-Gate G3
+
+### Accountability
+
+- Environmental SME Lead
+- Sponsor (interpretation)
+
+---
+
+## KPI-5 — Reusable Environmental Asset Coverage
+
+### Definition
+
+Percentage of processed data consolidated into versioned, auditable corporate repositories.
+
+### Baseline (As‑Is)
+
+- Fragmented datasets
+- Limited traceability
+- Low reuse potential
+
+### Target (MVP)
+
+≥ 90% of processed assets versioned and auditable
+
+### Measurement Method
+
+```
+(Number of assets properly versioned and documented)
+-----------------------------------------------------
+(Total number of processed assets)
+```
+
+### Data Sources
+
+- Data catalog
+- Version control systems
+- Metadata repositories
+
+### Measurement Cadence
+
+- Monthly
+- Mandatory review at Stage-Gate G4
+
+### Accountability
+
+- Data Engineering Lead
+- SUB Data Governance
+
+---
+
+## KPI-6 — Expert Effort Reduction  
+
+*(Secondary, Enabling KPI)*
+
+### Definition
+
+Reduction in total specialist hours required for initial screening.
+
+### Baseline (As‑Is)
+
+- Historical average expert hours per campaign
+
+### Target (MVP)
+
+≥ 30% reduction
+
+### Measurement Method
+
+```
+(Baseline expert hours − Current expert hours)
+----------------------------------------------
+Baseline expert hours
+```
+
+### Data Sources
+
+- Timesheets
+- Project effort tracking
+- Campaign reports
+
+### Measurement Cadence
+
+- Per campaign
+- Reviewed at Stage-Gate G3
+
+### Accountability
+
+- Project Manager
+- Functional Manager
+
+---
+
+## KPI-7 — Analysis Cost per Campaign  
+
+*(Secondary, Enabling KPI)*
+
+### Definition
+
+Average cost of image screening per AUV campaign.
+
+### Baseline (As‑Is)
+
+- Manual screening cost per campaign (historical)
+
+### Target (MVP)
+
+Demonstrated downward trend
+
+### Measurement Method
+
+```
+(Total screening-related cost)
+------------------------------
+(Number of campaigns)
+```
+
+### Data Sources
+
+- Cost reports
+- Resource allocation records
+
+### Measurement Cadence
+
+- Quarterly
+- Reviewed at Stage-Gate G3 and G4
+
+### Accountability
+
+- Project Manager
+- Sponsor (financial oversight)
+
+---
+
+## Governance Rule (Binding)
+
+> **KPI-3 (Ecological Data Protection Index) must always be reviewed before any
+> efficiency or cost KPI.**  Failure to meet KPI-3 automatically blocks
+> progression, regardless of other KPI performance.
+
+---
+
+## Summary for Governance
+
+This framework ensures that:
+
+- Baselines are explicit and defensible
+- Measurements are objective and auditable
+- Ecological protection remains the primary decision criterion
+- Executive decisions are grounded in evidence, not perception
+
+This document is the **authoritative reference** for KPI measurement under [OKR
+at section @sec-okr] and must be adhered to for all reporting, stage-gate
+reviews, and executive communications.
+

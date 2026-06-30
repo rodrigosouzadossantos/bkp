@@ -1,0 +1,75 @@
+# Requirements Traceability Matrix (RTM)  
+
+## Purpose of the RTM
+
+This RTM ensures that **all requirements are traceable** to:
+
+- Business objectives (OKR 2.1)
+- Ecological value
+- WBS work packages
+- Executive KPIs
+- Acceptance authorities
+
+No requirement may be implemented or changed without traceability.
+
+---
+
+## RTM Table
+
+| Req ID | Requirement Summary | Type | OKR / KR | KPI | WBS ID | Validation Authority |
+|---------|-----------------|---|:----------:|:-------:|:--------:|:---------------------|
+| BR-01 | Reduce manual screening | Business | KR1 | KPI-1 | 1.4 | Sponsor |
+| BR-02 | Reduce analysis time | Business | KR2 | KPI-2 | 1.4 | Sponsor |
+| BR-03 | Protect benthic data | Environmental | KR3 | KPI-3 | 1.5 | SME Lead |
+| BR-04 | Enable reuse | Business | KR4 | KPI-4 | 1.6 | Sponsor |
+| BR-05 | Create digital assets | Strategic | KR5 | KPI-5 | 1.6 | Data Gov |
+| ER-01 | Benthic relevance protection | Ecological | KR3 | KPI-3 | 1.5 | SME Lead |
+| ER-02 | Human ecological authority | Ecological | KR3 | KPI-3 | 1.5 | SME Lead |
+| ER-03 | Transparency of limits | Ecological | KR3 | KPI-3 | 1.4 | SME Lead |
+| ER-04 | Cross-field consistency | Ecological | KR4 | KPI-4 | 1.5 | SME Lead |
+| FR-01 | AUV image ingestion | Functional | KR1 | KPI-1 | 1.3 | Eng Lead |
+| FR-06 | AI-assisted annotation | Functional | KR1 | KPI-1 | 1.4 | SME Lead |
+| FR-09 | Binary classification | Functional | KR1/KR3 | KPI-3 | 1.4 | SME Lead |
+| FR-12 | Dataset versioning | Functional | KR5 | KPI-5 | 1.6 | Data Gov |
+| NFR-01 | Scalability | Non-Functional | KR2 | KPI-2 | 1.4 | PM |
+| NFR-02 | Offline-first | Non-Functional | KR2 | KPI-2 | 1.4 | PM |
+| NFR-05 | Security | Non-Functional | KR5 | KPI-5 | 1.6 | IT |
+
+---
+
+## Traceability Rules
+
+- Every requirement must map to at least:
+  - One KR
+  - One KPI
+  - One WBS element
+- Any unmapped requirement is invalid
+- Changes require RTM update and approval
+
+---
+
+## Governance Usage
+
+The RTM is used for:
+
+- Scope control
+- Impact analysis of changes
+- Stage-Gate reviews
+- Audit and compliance evidence
+
+---
+
+## Baseline and Control
+
+This RTM is baselined with the PMP.  
+Any change requires formal change control.
+
+---
+
+## Approval
+
+| Role | Name | Signature | Date |
+|-----|---------|------------------|------|
+| Sponsor (NOAA / SUB) | {{< meta executive-sponsor >}} | | |
+| Environmental SME Lead | {{< meta sme-lead >}} | | |
+| Project Owner | {{< meta project-po >}} | | |

@@ -1,0 +1,18 @@
+Baixar o tar.xz:
+    https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-static.tar.xz
+
+Descompactar o tar.xz:
+    sudo tar -xf ffmpeg-release-amd64-static.tar.xz
+
+Criar alias:
+    sudo ln -s $(pwd)/ffmpeg-*/ffmpeg /usr/bin/ffmpeg
+    sudo ln -s $(pwd)/ffmpeg-*/ffprobe /usr/bin/ffprobe
+
+Verificar se ta ok o FFMPEG:
+    ffmpeg -version
+
+Executar para achar o FFPROBE:
+    find / -name "ffprobe" 2>/dev/null
+
+Vai retornar o caminho, que você pode usar no código!
+Exemplo do path: ffmpeg-7.0.2-amd64-static/ffprobe

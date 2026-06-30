@@ -1,0 +1,16 @@
+[package]
+name = "nautilus-core"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+name = "nautilus"
+crate-type = ["cdylib"]
+
+[features]
+s3 = ["storage/s3"]
+
+[dependencies]
+pyo3.workspace = true
+storage = { path = "../storage"  }
+dataset = { path = "../dataset"  }

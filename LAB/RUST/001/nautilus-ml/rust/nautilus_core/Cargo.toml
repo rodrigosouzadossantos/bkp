@@ -1,0 +1,10 @@
+[package]
+name = "nautilus_core"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+anyhow = "1.0.102"
+num_cpus = "1.17.0"
+pyo3 = { version = "0.28.2", features = ["extension-module"] }
+serde = "1.0.228"

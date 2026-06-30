@@ -1,0 +1,83 @@
+project:
+  type: book
+
+book:
+  page-navigation: true
+  title: "{{< meta project-name >}}<br>"
+  site-url: "https://github.com/orgs/petrobrasbr/projects/293"
+  repo-url: "https://github.com/orgs/petrobrasbr/projects/293"
+  repo-actions: [edit, source, issue]
+  favicon: assets/favicon.ico
+  downloads: [pdf, docx]
+  search: true
+
+  author: "Rodrigo Souza dos Santos"
+  date: "2026-03-25"
+
+  page-footer: 
+    left: "Copyright 2026, Petrobras - Submarina" 
+    right: 
+      - icon: github
+        href: https://github.com/orgs/petrobrasbr/projects/293
+
+  navbar:
+    #background: primary
+    background: "#008542"
+    foreground: "#FDC82F"
+    search: true
+    left:
+      - text: "OKR"
+        href: 01_strategy_okrs/okr_dashboard.qmd
+      - text: "Scope"
+        href: 03_planning_scope/scope_stmt.qmd
+      - text: "Charter"
+        href: 02_initiating_pmbok/project_charter.qmd
+      - text: "Roadmap"
+        href: 04_agile_execution/roadmap.qmd
+
+  sidebar:
+    #background: "#D9E3E4"
+    logo: "https://petrobras.com.br/documents/2677942/2678045/logo.svg/64b59d8a-d175-c374-189d-af798dea2241?version=1.0&t=1686665076000"
+    favicon: images/favicon.ico
+    pinned: true
+    align: center
+    tools: 
+      - icon: globe
+        href: https://github.com/orgs/petrobrasbr/projects/293
+        text: "NOAA-IM - IA Submarina"
+    style: "docked"
+    search: true
+    collapse-level: 1
+
+  chapters:
+    - index.qmd
+    - part: "{{< meta section_strategy >}}"
+      chapters:
+        - 01_strategy_okrs/okr_dashboard.qmd
+        - 01_strategy_okrs/value_stream.qmd
+        - 01_strategy_okrs/okr_kpi.qmd
+        - 01_strategy_okrs/stage_gate.qmd
+    - part: "{{< meta section_initiating >}}"
+      chapters:
+        - 02_initiating_pmbok/business_case.qmd
+        - 02_initiating_pmbok/project_charter.qmd
+        - 02_initiating_pmbok/stakeholder_reg.qmd
+    - part: "{{< meta section_planning >}}"
+      chapters:
+        - 03_planning_scope/scope_stmt.qmd
+        - 03_planning_scope/requirements.qmd
+        - 03_planning_scope/wbs.qmd
+        - 03_planning_scope/wbs_dictionary.qmd
+        - 03_planning_scope/pmp.qmd
+        - 03_planning_scope/rtm.qmd
+        - 03_planning_scope/risk_plan.qmd
+    - part: "{{< meta section_execution >}}"
+      chapters:
+        - 04_agile_execution/schedule_mgmt.qmd
+        - 04_agile_execution/roadmap.qmd
+        - 04_agile_execution/product_backlog.qmd
+    - part: "{{< meta section_control >}}"
+      chapters:
+        - 05_monitoring_control/risk_register.qmd
+        - 05_monitoring_control/change_log.qmd
+

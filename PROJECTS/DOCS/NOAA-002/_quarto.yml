@@ -1,0 +1,51 @@
+project:
+  type: website
+  title: "NOAA"
+
+metadata:
+  project-name: "NOAA"
+  author-name: "Rodrigo Souza dos Santos"
+
+website:
+  sidebar:
+    style: "floating"
+    contents:
+      - href: index.qmd
+        text: Dashboard
+      - section: "Strategy & OKRs"
+        contents:
+          - 01_strategy_okrs/okr_dashboard.qmd
+          - 01_strategy_okrs/value_stream.qmd
+      - section: "Initiating (PMBOK)"
+        contents:
+          - 02_initiating_pmbok/business_case.qmd
+          - 02_initiating_pmbok/project_charter.qmd
+          - 02_initiating_pmbok/stakeholder_reg.qmd
+      - section: "Planning & Scope"
+        contents:
+          - 03_planning_scope/requirements.qmd
+          - 03_planning_scope/wbs.qmd
+          - 03_planning_scope/wbs_dictionary.qmd
+      - section: "Agile Execution"
+        contents:
+          - 04_agile_execution/product_backlog.qmd
+          - 04_agile_execution/roadmap.qmd
+      - section: "Control"
+        contents:
+          - 05_monitoring_control/risk_register.qmd
+          - 05_monitoring_control/change_log.qmd
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    code-fold: true
+    css: styles.css
+    html-math-method: mathjax
+  pdf:
+    documentclass: report
+    keep-tex: true
+    include-in-header:
+      - templates/header.tex
+    template-partials:
+      - templates/before-body.tex

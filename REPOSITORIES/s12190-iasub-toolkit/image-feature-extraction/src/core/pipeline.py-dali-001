@@ -1,0 +1,267 @@
+#from core.context import build_context
+from core.metrics import Metrics
+from core.logging import get_logger
+
+import time
+from pyspark.sql import Row
+
+logger = get_logger()
+
+
+def process_partition(features, max_retries=2, batch_size=128):
+  """
+  Process image partition with NVIDIA DALI GPU decoding.
+
+  Args:
+      features: List of feature extractors
+      max_retries: Number of retries per row on failure
+      batch_size: Batch size for DALI pipeline
+
+  Returns:
+      Inner function that processes iterator of Spark rows
+  """
+
+  def _inner(iterator):
+    import time
+    import numpy as np
+    import cv2
+    from pyspark.sql import Row
+    import nvidia.dali.fn as fn
+    import nvidia.dali.types as types
+    from nvidia.dali.pipeline import Pipeline
+    from core.profiler_instance import PROFILER
+    from core.metrics import Metrics
+    import logging
+
+    logger = logging.getLogger(__name__)
+    metrics = Metrics()
+
+    # -------------------------
+    # DALI Pipeline Definition
+    # -------------------------
+    class DecodePipeline(Pipeline):
+      """NVIDIA DALI pipeline for GPU-accelerated image decoding"""
+
+      def __init__(self, batch_size):
+        super().__init__(
+          batch_size=batch_size,
+          num_threads=24,
+          device_id=0,
+          exec_async=True,
+          exec_pipelined=True
+        )
+
+        self.input = fn.external_source(
+          name="input_bytes",
+          dtype=types.UINT8
+        )
+
+      def define_graph(self):
+        """Define the DALI processing graph"""
+        jpegs = self.input
+
+        # Decode image on GPU (mixed mode)
+        images = fn.decoders.image(
+            jpegs,
+            device="mixed",
+            output_type=types.RGB
+        )
+
+        # Resize for shape consistency
+        #images = fn.resize(
+        #    images,
+        #    resize_x=224,
+        #    resize_y=224,
+        #    interp_type=types.INTERP_LINEAR
+        #)
+
+        return images
+
+    # -------------------------
+    # Helper Functions
+    # -------------------------
+    def chunks(lst, size):
+      """Yield successive chunks of list"""
+      for i in range(0, len(lst), size):
+        yield lst[i:i + size]
+
+    def build_context(row, img_bgr):
+      """
+      Build context dictionary from row and decoded image.
+
+      Args:
+          row: Spark row with path
+          img_bgr: Decoded image in BGR format (from DALI via cv2.cvtColor)
+
+      Returns:
+          Dictionary with image data for feature extraction
+      """
+      return {
+        "path": row.path,
+        "img": img_bgr,
+        "gray": cv2.cvtColor(img_bgr, cv2.COLOR_BGR2GRAY),
+        "_cache": {}
+      }
+
+    # -------------------------
+    # Main Processing Logic
+    # -------------------------
+    rows = list(iterator)
+    if not rows:
+      return
+
+    # Process rows in batches
+    for batch_rows in chunks(rows, batch_size):
+
+      # Prepare byte buffers for DALI
+      contents = []
+      valid_rows = []
+
+      for r in batch_rows:
+        try:
+          if r.content is None:
+            metrics.inc("row_content_none")
+            continue
+
+          # Convert byte content to numpy array for DALI
+          nparr = np.frombuffer(r.content, dtype=np.uint8)
+          contents.append(nparr)
+          valid_rows.append(r)
+
+        except Exception as e:
+          logger.warning(f"Failed to prepare row for DALI: {e}")
+          metrics.inc("row_prep_fail")
+          continue
+
+      if not contents:
+        logger.debug("No valid rows in batch")
+        continue
+
+      # -------------------------
+      # DALI GPU Decoding
+      # -------------------------
+      try:
+          pipe = DecodePipeline(batch_size=len(contents))
+          pipe.build()
+          pipe.feed_input("input_bytes", contents)
+
+          # Run pipeline and extract decoded images
+          dali_out = pipe.run()
+          images_tensorlist = dali_out[0]
+
+          # Convert DALI tensors to numpy arrays (CPU)
+          imgs = []
+          #for i in range(len(valid_rows)):
+          #    #img_array = images_tensorlist[i].as_cpu().as_array()
+          #    img_array = np.asarray(images_tensorlist[i])
+          #    imgs.append(img_array)
+          for i in range(len(valid_rows)):
+            try:
+              tensor_cpu = images_tensorlist[i].as_cpu()
+              img_array = np.array(tensor_cpu)
+
+              if img_array.dtype != np.uint8:
+                img_array = img_array.astype(np.uint8)
+
+              img_array = np.ascontiguousarray(img_array)
+              imgs.append(img_array)
+
+            except Exception as e:
+              logger.error(f"Failed to convert DALI tensor {i}: {e}")
+              raise
+
+          metrics.inc("dali_decode_success")
+
+      except Exception as e:
+        logger.error(f"DALI pipeline failed: {e}")
+        metrics.inc("dali_decode_fail")
+
+        # Fallback: yield None rows for failed batch
+        for r in valid_rows:
+          try:
+            result = {"path": r.path}
+            for f in features:
+              result[f.name] = None
+            yield Row(**result)
+            metrics.inc("rows_fail")
+          except Exception as inner_e:
+            logger.error(f"Fallback yield failed: {inner_e}")
+
+        continue
+
+      # -------------------------
+      # Feature Extraction
+      # -------------------------
+      for i, row in enumerate(valid_rows):
+        for attempt in range(max_retries + 1):
+          try:
+            # Get decoded image (RGB from DALI)
+            img_rgb = imgs[i]
+
+            if img_rgb.dtype != np.uint8:
+              img_rgb = (img_rgb * 255).astype(np.uint8)
+            else:
+              img_rgb = img_rgb.astype(np.uint8)
+
+            img_rgb = np.ascontiguousarray(img_rgb)
+
+            # Convert RGB to BGR (OpenCV standard)
+            img_bgr = cv2.cvtColor(img_rgb, cv2.COLOR_RGB2BGR)
+
+            # Build context for feature extraction
+            ctx = build_context(row, img_bgr)
+
+            # Initialize result with path
+            result = {"path": ctx["path"]}
+
+            # Extract all features
+            for f in features:
+              start = time.time()
+              try:
+                feature_result = f.extract(ctx)
+                result.update(feature_result)
+                metrics.inc(f"{f.name}_ok")
+
+              except Exception as e:
+                logger.warning(f"{f.name} extraction failed: {e}")
+                metrics.inc(f"{f.name}_fail")
+                result[f.name] = None
+
+              finally:
+                PROFILER.record(
+                  f.name,
+                  time.time() - start
+                )
+
+            # Yield result row
+            yield Row(**result)
+            metrics.inc("rows_ok")
+            break  # Success - move to next row
+
+          except Exception as e:
+            if attempt == max_retries:
+              logger.error(f"Row processing failed after {max_retries} retries: {e}")
+              metrics.inc("rows_fail")
+
+              # Yield row with None values
+              result = {"path": row.path}
+              for f in features:
+                  result[f.name] = None
+              yield Row(**result)
+            else:
+              metrics.inc("retries")
+              logger.debug(f"Retry attempt {attempt + 1}/{max_retries}")
+
+    # -------------------------
+    # Log Final Metrics
+    # -------------------------
+    logger.info({
+      "feature_profile": PROFILER.snapshot()
+    })
+
+    logger.info(
+      f"Partition metrics: {metrics.report()}"
+    )
+
+  return _inner
+

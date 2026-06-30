@@ -1,0 +1,13 @@
+# {{< meta i18n.project_charter >}}
+
+**Project Name:** CV-Engine-Alpha  
+**Project Manager:** Rodrigo Souza dos Santos  
+**Sponsor:** Tech Operations Dept.
+
+### High-Level Requirements
+- Real-time processing via Kafka.
+- Support for Grad-CAM visualizations.
+- Modular architecture (PyTorch and TensorFlow).
+
+### Authority
+The PM is authorized to allocate resources from the AI Research squad.

@@ -1,0 +1,192 @@
+# {{< i18n product_backlog >}} {}
+
+
+## Purpose of This Document
+
+This Backlog translates the **approved scope and roadmap** into a **prioritized,
+executable list of work items**, ensuring that:
+
+- Every backlog item supports ecological value
+- All work is traceable to OKR 2.1 and WBS elements
+- Execution can follow an agile or hybrid delivery model
+- Stage‑Gates and KPIs remain enforceable
+
+This document complements the **WBS** and is used during **Execution and
+Monitoring**, while remaining governed by PMBOK baselines.
+
+---
+
+## Backlog Principles
+
+1. **Ecology first** — items that protect ecological confidence have highest
+   priority  
+2. No backlog item exists without:
+   - WBS linkage
+   - OKR/KR linkage
+3. Items are sized to be:
+   - Estimable
+   - Testable
+   - Reviewable by SMEs
+4. Backlog refinement does **not** change scope without formal change control
+
+---
+
+## Backlog Structure
+
+Each backlog item includes:
+
+- Backlog ID
+- Title
+- Description
+- Priority
+- WBS Reference
+- OKR / KR Reference
+- Acceptance Criteria
+- Owner
+
+---
+
+## Backlog — Phase 0 & 1 (Strategic Foundation + Ecological MVP)
+
+### Epic E0 — Strategic & Governance Foundation
+
+| ID | Title | Priority | WBS | OKR / KR | Owner |
+|----|---------------------|------|------|------|-------|
+| BL-01 | Finalize Strategy & Governance docs | High | 1.1 / 1.2 | OKR 2.1 | PM |
+| BL-02 | Baseline KPIs and measurement methods | High | 1.2 | KR1–KR5 | PO |
+| BL-03 | Approve Stage‑Gate framework | High | 1.2 | OKR 2.1 | Sponsor |
+
+**Acceptance Criteria**
+
+- Documents approved
+- Governance baselined
+
+---
+
+### Epic E1 — Environmental Data Preparation
+
+| ID | Title | Priority | WBS | OKR / KR | Owner |
+|----|---------------------|------|------|------|-------|
+| BL-04 | Ingest AUV images (Field 1) | High | 1.3 | KR3 | Data Eng |
+| BL-05 | Prepare metadata and spatial context | High | 1.3 | KR3 | Data Eng |
+| BL-06 | Define environmental annotation guidelines | High | 1.3 | KR3 | SME Lead |
+| BL-07 | Image quality assessment & filtering | High | 1.3 | KR3 | Data Eng |
+
+**Acceptance Criteria**
+
+- Data completeness verified
+- Annotation guidelines approved by SMEs
+
+---
+
+### Epic E2 — Annotation & Labeling (HITL)
+
+| ID | Title | Priority | WBS | OKR / KR | Owner |
+|----|---------------------|------|------|------|-------|
+| BL-08 | Set up AI‑assisted annotation workflow | High | 1.4 | KR1 | DS Lead |
+| BL-09 | Pilot labeling with SMEs (Field 1) | High | 1.4 | KR3 | SME Lead |
+| BL-10 | Review inter‑annotator consistency | Medium | 1.4 | KR4 | SME Lead |
+
+**Acceptance Criteria**
+
+- SME sign‑off on labels
+- Documented labeling consistency
+
+---
+
+### Epic E3 — AI Model Development (Ecological MVP)
+
+| ID | Title | Priority | WBS | OKR / KR | Owner |
+|----|---------------------|------|------|------|-------|
+| BL-11 | Train baseline binary screening model | High | 1.4 | KR3 | DS Lead |
+| BL-12 | Implement precision‑oriented inference | High | 1.4 | KR3 | DS Lead |
+| BL-13 | Generate explainability artifacts | Medium | 1.4 | KR3 | DS Lead |
+
+**Acceptance Criteria**
+
+- Model meets minimum ecological thresholds
+- Explainability reviewed by SMEs
+
+---
+
+### Epic E4 — Ecological Validation (Field 1)
+
+| ID | Title | Priority | WBS | OKR / KR | Owner |
+|----|---------------------|------|------|------|-------|
+| BL-14 | Validate screening results with SMEs | High | 1.5 | KR3 | SME Lead |
+| BL-15 | Compute KPI‑3 (Data Protection Index) | High | 1.5 | KR3 | PM |
+| BL-16 | Prepare G2 Stage‑Gate package | High | 1.5 | OKR 2.1 | PM |
+
+**Acceptance Criteria**
+
+- KPI‑3 ≥ threshold
+- G2 decision recorded
+
+---
+
+## 5. Backlog — Phase 2 & 3 (Generalization + Assetization)
+
+### Epic E5 — Generalization (Second Field)
+
+| ID | Title | Priority | WBS | OKR / KR | Owner |
+|----|---------------------|------|------|------|-------|
+| BL-17 | Ingest AUV images (Field 2) | Medium | 1.3 | KR4 | Data Eng |
+| BL-18 | Validate model on second field | Medium | 1.5 | KR4 | SME Lead |
+| BL-19 | Analyze cross‑field consistency | Medium | 1.5 | KR4 | DS Lead |
+
+---
+
+### Epic E6 — Digital Asset Consolidation
+
+| ID | Title | Priority | WBS | OKR / KR | Owner |
+|----|---------------------|------|------|------|-------|
+| BL-20 | Version datasets and metadata | Medium | 1.6 | KR5 | Data Eng |
+| BL-21 | Version model artifacts | Medium | 1.6 | KR5 | DS Lead |
+| BL-22 | Prepare reuse readiness report | Medium | 1.6 | KR5 | PM |
+
+---
+
+### Epic E7 — Closure & Knowledge Transfer
+
+| ID | Title | Priority | WBS | OKR / KR | Owner |
+|----|---------------------|------|------|------|-------|
+| BL-23 | Final documentation & lessons learned | Low | 1.7 | OKR 2.1 | PM |
+| BL-24 | Final G3/G4 Stage‑Gate review | Low | 1.7 | OKR 2.1 | Sponsor |
+
+---
+
+## Backlog Prioritization Logic
+
+Priority order is determined by:
+
+1. Ecological risk mitigation
+2. Dependency on Stage‑Gates
+3. Contribution to KR3 (ecological protection)
+4. Enablement of reuse (KR4, KR5)
+
+---
+
+## Backlog Governance Rules
+
+- Backlog refinement may:
+  - Reorder items
+  - Split items
+- Backlog refinement may NOT:
+  - Add new scope
+  - Remove ecological safeguards
+  - Bypass Stage‑Gates
+
+All scope changes require formal change control.
+
+---
+
+## Relationship to Other Artifacts
+
+| Artifact | Relationship |
+|--------|-------------|
+| WBS | Structural backbone |
+| Roadmap | Temporal prioritization |
+| OKRs / KPIs | Value measurement |
+| PMP | Execution governance |
+| Risk Register | Risk‑aware prioritization |
+

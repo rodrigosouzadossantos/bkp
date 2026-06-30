@@ -1,0 +1,128 @@
+{
+  "version": "1",
+  "metadata": {
+    "marimo_version": "0.21.1",
+    "script_metadata_hash": null
+  },
+  "cells": [
+    {
+      "id": "Hbol",
+      "code_hash": "ee5ffa1ac34439d318a71abb5ff468e6",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "All columns in dataset:\n- brightness_mean\n- brightness_std\n- saturation_mean\n- saturation_std\n- laplacian_var\n- edge_density\n- entropy\n- image_width\n- image_height\n- megapixels\n- datetime\n- camera_model\n- image_id\n- preprocessing\n- feature_version\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    },
+    {
+      "id": "qVmx",
+      "code_hash": null,
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "ZDLf",
+      "code_hash": "2fe511e8f56d73d48875e10b0f6ecd74",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='ZDLf-0' random-id='e959f4a4-e4c8-dfd2-abf4-e3fc119565b2'><marimo-table data-initial-value='[]' data-label='null' data-data='&quot;[{&#92;&quot;brightness_mean&#92;&quot;:1230,&#92;&quot;brightness_std&#92;&quot;:1230,&#92;&quot;saturation_mean&#92;&quot;:1230,&#92;&quot;saturation_std&#92;&quot;:1230,&#92;&quot;laplacian_var&#92;&quot;:1230,&#92;&quot;edge_density&#92;&quot;:1230,&#92;&quot;entropy&#92;&quot;:1230,&#92;&quot;image_width&#92;&quot;:1230,&#92;&quot;image_height&#92;&quot;:1230,&#92;&quot;megapixels&#92;&quot;:1230,&#92;&quot;datetime&#92;&quot;:1230,&#92;&quot;camera_model&#92;&quot;:1230,&#92;&quot;image_id&#92;&quot;:1230,&#92;&quot;preprocessing&#92;&quot;:1230,&#92;&quot;feature_version&#92;&quot;:1230}]&quot;' data-total-rows='1' data-total-columns='15' data-max-columns='50' data-banner-text='&quot;&quot;' data-pagination='true' data-page-size='10' data-field-types='[[&quot;brightness_mean&quot;,[&quot;integer&quot;,&quot;u32&quot;]],[&quot;brightness_std&quot;,[&quot;integer&quot;,&quot;u32&quot;]],[&quot;saturation_mean&quot;,[&quot;integer&quot;,&quot;u32&quot;]],[&quot;saturation_std&quot;,[&quot;integer&quot;,&quot;u32&quot;]],[&quot;laplacian_var&quot;,[&quot;integer&quot;,&quot;u32&quot;]],[&quot;edge_density&quot;,[&quot;integer&quot;,&quot;u32&quot;]],[&quot;entropy&quot;,[&quot;integer&quot;,&quot;u32&quot;]],[&quot;image_width&quot;,[&quot;integer&quot;,&quot;u32&quot;]],[&quot;image_height&quot;,[&quot;integer&quot;,&quot;u32&quot;]],[&quot;megapixels&quot;,[&quot;integer&quot;,&quot;u32&quot;]],[&quot;datetime&quot;,[&quot;integer&quot;,&quot;u32&quot;]],[&quot;camera_model&quot;,[&quot;integer&quot;,&quot;u32&quot;]],[&quot;image_id&quot;,[&quot;integer&quot;,&quot;u32&quot;]],[&quot;preprocessing&quot;,[&quot;integer&quot;,&quot;u32&quot;]],[&quot;feature_version&quot;,[&quot;integer&quot;,&quot;u32&quot;]]]' data-show-filters='true' data-show-download='true' data-show-column-summaries='false' data-show-data-types='true' data-show-page-size-selector='false' data-show-column-explorer='true' data-show-chart-builder='true' data-row-headers='[]' data-has-stable-row-id='false' data-lazy='false' data-preload='false' data-download-file-name='&quot;df&quot;'></marimo-table></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "AmJo",
+      "code_hash": "1b25fb020764f8351483195f41aae2cd",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "shape: (9, 11)\n\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502 statistic \u2506 brightnes \u2506 brightnes \u2506 saturatio \u2506 \u2026 \u2506 entropy  \u2506 image_wid \u2506 image_hei \u2506 megapixel \u2502\n\u2502 ---       \u2506 s_mean    \u2506 s_std     \u2506 n_mean    \u2506   \u2506 ---      \u2506 th        \u2506 ght       \u2506 s         \u2502\n\u2502 str       \u2506 ---       \u2506 ---       \u2506 ---       \u2506   \u2506 f64      \u2506 ---       \u2506 ---       \u2506 ---       \u2502\n\u2502           \u2506 f64       \u2506 f64       \u2506 f64       \u2506   \u2506          \u2506 f64       \u2506 f64       \u2506 f64       \u2502\n\u255e\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u256a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u256a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u256a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u256a\u2550\u2550\u2550\u256a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u256a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u256a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u256a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2561\n\u2502 count     \u2506 1230.0    \u2506 1230.0    \u2506 1230.0    \u2506 \u2026 \u2506 1230.0   \u2506 1230.0    \u2506 1230.0    \u2506 1230.0    \u2502\n\u2502 null_coun \u2506 0.0       \u2506 0.0       \u2506 0.0       \u2506 \u2026 \u2506 0.0      \u2506 0.0       \u2506 0.0       \u2506 0.0       \u2502\n\u2502 t         \u2506           \u2506           \u2506           \u2506   \u2506          \u2506           \u2506           \u2506           \u2502\n\u2502 mean      \u2506 125.11952 \u2506 7.588393  \u2506 39.566833 \u2506 \u2026 \u2506 4.714172 \u2506 3696.3902 \u2506 2077.2195 \u2506 7.67953   \u2502\n\u2502           \u2506 1         \u2506           \u2506           \u2506   \u2506          \u2506 44        \u2506 12        \u2506           \u2502\n\u2502 std       \u2506 28.42328  \u2506 3.835491  \u2506 24.189864 \u2506 \u2026 \u2506 0.834218 \u2506 48.380953 \u2506 27.214286 \u2506 0.198998  \u2502\n\u2502 min       \u2506 83.147241 \u2506 2.387205  \u2506 1.554981  \u2506 \u2026 \u2506 3.27256  \u2506 3360.0    \u2506 1888.0    \u2506 6.34368   \u2502\n\u2502 25%       \u2506 94.001692 \u2506 3.066551  \u2506 8.717323  \u2506 \u2026 \u2506 3.655621 \u2506 3680.0    \u2506 2068.0    \u2506 7.61024   \u2502\n\u2502 50%       \u2506 126.93327 \u2506 8.526996  \u2506 51.042954 \u2506 \u2026 \u2506 5.098618 \u2506 3712.0    \u2506 2086.0    \u2506 7.743232  \u2502\n\u2502           \u2506 5         \u2506           \u2506           \u2506   \u2506          \u2506           \u2506           \u2506           \u2502\n\u2502 75%       \u2506 142.66075 \u2506 9.821719  \u2506 60.456379 \u2506 \u2026 \u2506 5.307676 \u2506 3744.0    \u2506 2104.0    \u2506 7.877376  \u2502\n\u2502           \u2506 9         \u2506           \u2506           \u2506   \u2506          \u2506           \u2506           \u2506           \u2502\n\u2502 max       \u2506 218.14901 \u2506 27.85069  \u2506 94.653366 \u2506 \u2026 \u2506 6.832813 \u2506 3744.0    \u2506 2104.0    \u2506 7.877376  \u2502\n\u2502           \u2506 8         \u2506           \u2506           \u2506   \u2506          \u2506           \u2506           \u2506           \u2502\n\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    },
+    {
+      "id": "uFWA",
+      "code_hash": "85010f58574df58ceffafbc660c761da",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Missing values per feature:\nshape: (1, 15)\n\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502 brightnes \u2506 brightnes \u2506 saturatio \u2506 saturatio \u2506 \u2026 \u2506 camera_mo \u2506 image_id \u2506 preproces \u2506 feature_v \u2502\n\u2502 s_mean    \u2506 s_std     \u2506 n_mean    \u2506 n_std     \u2506   \u2506 del       \u2506 ---      \u2506 sing      \u2506 ersion    \u2502\n\u2502 ---       \u2506 ---       \u2506 ---       \u2506 ---       \u2506   \u2506 ---       \u2506 u32      \u2506 ---       \u2506 ---       \u2502\n\u2502 u32       \u2506 u32       \u2506 u32       \u2506 u32       \u2506   \u2506 u32       \u2506          \u2506 u32       \u2506 u32       \u2502\n\u255e\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u256a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u256a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u256a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u256a\u2550\u2550\u2550\u256a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u256a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u256a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u256a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2561\n\u2502 0         \u2506 0         \u2506 0         \u2506 0         \u2506 \u2026 \u2506 0         \u2506 0        \u2506 0         \u2506 0         \u2502\n\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    },
+    {
+      "id": "elot",
+      "code_hash": "700d73bb5eab68634f5ff9d77318f9dc",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Correlation matrix shape: (10, 10)\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    },
+    {
+      "id": "fFpg",
+      "code_hash": "b27132bdb85bf8a396a83b27340a4f53",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "shape: (5, 11)\n\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502 brightness \u2506 brightnes \u2506 saturatio \u2506 saturatio \u2506 \u2026 \u2506 image_wid \u2506 image_hei \u2506 megapixel \u2506 cluster \u2502\n\u2502 _mean      \u2506 s_std     \u2506 n_mean    \u2506 n_std     \u2506   \u2506 th        \u2506 ght       \u2506 s         \u2506 ---     \u2502\n\u2502 ---        \u2506 ---       \u2506 ---       \u2506 ---       \u2506   \u2506 ---       \u2506 ---       \u2506 ---       \u2506 i32     \u2502\n\u2502 f64        \u2506 f64       \u2506 f64       \u2506 f64       \u2506   \u2506 i64       \u2506 i64       \u2506 f64       \u2506         \u2502\n\u255e\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u256a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u256a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u256a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u256a\u2550\u2550\u2550\u256a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u256a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u256a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u256a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2561\n\u2502 90.807111  \u2506 9.67886   \u2506 42.295678 \u2506 6.005885  \u2506 \u2026 \u2506 3648      \u2506 2050      \u2506 7.4784    \u2506 0       \u2502\n\u2502 125.411205 \u2506 2.995689  \u2506 62.768166 \u2506 31.16905  \u2506 \u2026 \u2506 3648      \u2506 2050      \u2506 7.4784    \u2506 0       \u2502\n\u2502 147.958098 \u2506 10.843832 \u2506 6.647505  \u2506 4.5387    \u2506 \u2026 \u2506 3648      \u2506 2050      \u2506 7.4784    \u2506 0       \u2502\n\u2502 91.098363  \u2506 8.057727  \u2506 48.900483 \u2506 6.990234  \u2506 \u2026 \u2506 3680      \u2506 2068      \u2506 7.61024   \u2506 0       \u2502\n\u2502 126.585167 \u2506 2.688564  \u2506 62.912197 \u2506 28.575623 \u2506 \u2026 \u2506 3680      \u2506 2068      \u2506 7.61024   \u2506 0       \u2502\n\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    }
+  ]
+}

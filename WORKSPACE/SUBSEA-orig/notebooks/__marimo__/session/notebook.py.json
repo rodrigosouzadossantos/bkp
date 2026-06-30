@@ -1,0 +1,74 @@
+{
+  "version": "1",
+  "metadata": {
+    "marimo_version": "0.19.11"
+  },
+  "cells": [
+    {
+      "id": "Hbol",
+      "code_hash": "1d0db38904205bec4d6f6f6a1f6cec3e",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "\u001b[34m[D 260220 23:10:38 cell_runner:742]\u001b[m\u000f Running post_execution hooks in context\n\u001b[34m[D 260220 23:10:38 hooks_post_execution:65]\u001b[m\u000f Acquiring graph lock to update cell import workspace\n\u001b[34m[D 260220 23:10:38 hooks_post_execution:67]\u001b[m\u000f Acquired graph lock to update import workspace.\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    },
+    {
+      "id": "MJUe",
+      "code_hash": "4cd82ef42e07585ce3f0574c48bb3f0b",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-mermaid data-diagram='&quot;&#92;ngraph LR&#92;n    A[Square Rect] -- Link text --&gt; B((Circle))&#92;n    A --&gt; C(Round Rect)&#92;n    B --&gt; D{Rhombus}&#92;n    C --&gt; D&#92;n&quot;'></marimo-mermaid>"
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "\u001b[34m[D 260220 23:10:38 cell_runner:742]\u001b[m\u000f Running post_execution hooks in context\n\u001b[34m[D 260220 23:10:38 hooks_post_execution:65]\u001b[m\u000f Acquiring graph lock to update cell import workspace\n\u001b[34m[D 260220 23:10:38 hooks_post_execution:67]\u001b[m\u000f Acquired graph lock to update import workspace.\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    },
+    {
+      "id": "ZdCL",
+      "code_hash": "210a88441fc69d405a6946275b62388a",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "OpenCV: 4.13.0\nPillow: 12.1.1\nTorch: 2.10.0+cu128\nTorchvision: 0.25.0+cu128\nUltralytics (YOLO): 8.4.14\nNumpy: 2.4.2\n",
+          "mimetype": "text/plain"
+        },
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "\u001b[34m[D 260220 23:09:41 cell_runner:742]\u001b[m\u000f Running post_execution hooks in context\n\u001b[34m[D 260220 23:09:41 hooks_post_execution:65]\u001b[m\u000f Acquiring graph lock to update cell import workspace\n\u001b[34m[D 260220 23:09:41 hooks_post_execution:67]\u001b[m\u000f Acquired graph lock to update import workspace.\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    }
+  ]
+}

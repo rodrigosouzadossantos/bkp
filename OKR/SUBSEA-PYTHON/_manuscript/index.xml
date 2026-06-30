@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving
+and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
+
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" dtd-version="1.2" article-type="other">
+
+<front>
+
+
+<article-meta>
+
+
+<title-group>
+<article-title>Scalable Unified Python Package for Subsea CV at
+Petrobras</article-title>
+</title-group>
+
+<contrib-group>
+<contrib contrib-type="author" corresp="yes">
+<name>
+<surname>Santos</surname>
+<given-names>Rodrigo Souza</given-names>
+</name>
+<string-name>Rodrigo Souza dos Santos</string-name>
+
+<role vocab="https://credit.niso.org" vocab-term="writing – original
+draft" vocab-term-identifier="https://credit.niso.org/contributor-roles/writing-original-draft/">writing</role>
+<xref ref-type="aff" rid="aff-1">a</xref>
+<xref ref-type="corresp" rid="cor-1">&#x002A;</xref>
+</contrib>
+</contrib-group>
+<aff id="aff-1">
+<institution-wrap>
+<institution>AIR/Compass</institution>
+</institution-wrap>
+
+
+
+
+
+
+
+</aff>
+<author-notes>
+<corresp id="cor-1"></corresp>
+</author-notes>
+
+
+
+
+
+
+
+
+
+<history></history>
+
+
+
+
+
+
+</article-meta>
+
+</front>
+
+<body>
+<sec id="title">
+  <title>title</title>
+  <p>test</p>
+</sec>
+<sec id="explanation-for-stakeholders">
+  <title>Explanation for Stakeholders</title>
+  <disp-quote>
+    <p>This initiative aims to create a robust, scalable Python package
+    that will serve as a unified interface for all AI/ML and computer
+    vision activities in the Subsea division. The package will abstract
+    the complexity of accessing and managing large volumes of subsea
+    media data (images, videos, reports) across multiple cloud and
+    on-premises platforms. By enabling distributed processing and
+    standardized workflows, the package will:</p>
+    <list list-type="bullet">
+      <list-item>
+        <p><bold>Accelerate project delivery</bold> by simplifying data
+        access and experiment management.</p>
+      </list-item>
+      <list-item>
+        <p><bold>Improve efficiency and reproducibility</bold> in
+        handling massive, continuously growing datasets.</p>
+      </list-item>
+      <list-item>
+        <p><bold>Foster collaboration</bold> through shared tools,
+        documentation, and best practices.</p>
+      </list-item>
+      <list-item>
+        <p><bold>Ensure compliance</bold> with Petrobras’ security and
+        governance standards.</p>
+      </list-item>
+      <list-item>
+        <p><bold>Lay the foundation for expansion</bold> to other
+        divisions, multiplying the impact across the company.</p>
+      </list-item>
+    </list>
+    <p>The project will be piloted with four current subsea CV projects,
+    with clear metrics for adoption, usability, and technical success.
+    Lessons learned will guide future scaling and adoption.</p>
+  </disp-quote>
+</sec>
+</body>
+
+<back>
+</back>
+
+<sub-article article-type="notebook" id="nb-3-nb-1">
+<front-stub>
+<title-group>
+<article-title>OKR: Scalable Unified Python Package for Subsea CV at
+Petrobras</article-title>
+</title-group>
+</front-stub>
+
+<body>
+<sec id="objective-nb-1">
+  <title>Objective</title>
+  <p>Develop and launch a scalable, unified Python package that
+  abstracts access to AI/ML resources and tools for computer vision
+  projects in the Subsea division, enabling efficient, distributed
+  processing, experimentation, and management of large and continuously
+  growing subsea media datasets (images, videos, reports). Success in
+  these projects will serve as a model for broader adoption across
+  Petrobras.</p>
+</sec>
+<sec id="key-results-nb-1">
+  <title>Key Results</title>
+  <sec id="design-architecture-nb-1">
+    <title>1. Design &amp; Architecture</title>
+    <list list-type="bullet">
+      <list-item>
+        <p>Deliver an architectural blueprint detailing integration
+        points for AWS, Azure, GCP, Databricks, and Petrobras-specific
+        tools, optimized for distributed CV workflows and large-scale
+        data.</p>
+      </list-item>
+      <list-item>
+        <p>Define and document standard APIs for:</p>
+        <list list-type="bullet">
+          <list-item>
+            <p>Secure, scalable data ingestion and access (video, image,
+            report formats)</p>
+          </list-item>
+          <list-item>
+            <p>Experiment management (classification, segmentation,
+            multi-task workflows)</p>
+          </list-item>
+          <list-item>
+            <p>Feature engineering and storage, designed for
+            high-volume, high-throughput operations</p>
+          </list-item>
+        </list>
+      </list-item>
+    </list>
+  </sec>
+  <sec id="development-integration-nb-1">
+    <title>2. Development &amp; Integration</title>
+    <list list-type="bullet">
+      <list-item>
+        <p>Implement core modules and processing pipelines capable of
+        distributed, parallel processing, demonstrated by successful
+        handling of large, diverse subsea media datasets.</p>
+      </list-item>
+      <list-item>
+        <p>Achieve at least 80% code coverage in unit tests for all
+        modules.</p>
+      </list-item>
+      <list-item>
+        <p>Integrate experiment tracking and comparison functionalities
+        for CV models, supporting:</p>
+        <list list-type="bullet">
+          <list-item>
+            <p>Versioning of datasets, models, and results</p>
+          </list-item>
+          <list-item>
+            <p>Automated logging of metrics and artifacts</p>
+          </list-item>
+        </list>
+      </list-item>
+      <list-item>
+        <p>Develop feature engineering and storage modules with:</p>
+        <list list-type="bullet">
+          <list-item>
+            <p>Efficient storage, retrieval, and indexing of large-scale
+            media and metadata</p>
+          </list-item>
+          <list-item>
+            <p>Metadata management for traceability, searchability, and
+            auditability</p>
+          </list-item>
+        </list>
+      </list-item>
+    </list>
+  </sec>
+  <sec id="usability-adoption-nb-1">
+    <title>3. Usability &amp; Adoption</title>
+    <list list-type="bullet">
+      <list-item>
+        <p>Release a beta version to all 4 current subsea CV projects
+        for pilot testing and feedback.</p>
+      </list-item>
+      <list-item>
+        <p>Achieve a minimum satisfaction score of 8/10 from pilot users
+        regarding usability, integration, and performance in large-scale
+        subsea workflows.</p>
+      </list-item>
+      <list-item>
+        <p>Publish comprehensive documentation and example notebooks
+        covering:</p>
+        <list list-type="bullet">
+          <list-item>
+            <p>End-to-end subsea CV workflows (from data ingestion to
+            model deployment)</p>
+          </list-item>
+          <list-item>
+            <p>Best practices for handling massive media datasets and
+            experiment management</p>
+          </list-item>
+        </list>
+      </list-item>
+    </list>
+  </sec>
+  <sec id="governance-sustainability-nb-1">
+    <title>4. Governance &amp; Sustainability</title>
+    <list list-type="bullet">
+      <list-item>
+        <p>Establish a governance model for package maintenance,
+        including:</p>
+        <list list-type="bullet">
+          <list-item>
+            <p>Contribution guidelines and code review process</p>
+          </list-item>
+          <list-item>
+            <p>Release management and versioning strategy</p>
+          </list-item>
+        </list>
+      </list-item>
+      <list-item>
+        <p>Ensure compliance with Petrobras’ security, privacy, and data
+        governance standards for all integrated resources and media.</p>
+      </list-item>
+    </list>
+  </sec>
+  <sec id="impact-expansion-nb-1">
+    <title>5. Impact &amp; Expansion</title>
+    <list list-type="bullet">
+      <list-item>
+        <p>Demonstrate at least 2 successful end-to-end subsea CV
+        projects using the package, showcasing improved efficiency,
+        scalability, and project outcomes with large-scale data.</p>
+      </list-item>
+      <list-item>
+        <p>Plan and initiate onboarding for additional subsea projects,
+        aiming for at least 6 projects using the package within 6 months
+        of launch.</p>
+      </list-item>
+      <list-item>
+        <p>Document lessons learned, technical challenges, and success
+        stories to support expansion to other Petrobras divisions.</p>
+      </list-item>
+    </list>
+  </sec>
+</sec>
+</body>
+
+
+
+<back>
+</back>
+
+
+</sub-article>
+<sub-article article-type="notebook" id="nb-6-nb-2">
+<front-stub>
+</front-stub>
+
+<body>
+<sec id="how-each-key-result-will-be-measured-nb-2">
+  <title>How Each Key Result Will Be Measured</title>
+  <list list-type="bullet">
+    <list-item>
+      <p><bold>Design &amp; Architecture:</bold>
+      Delivery and approval of architectural blueprint and API
+      documentation, validated by technical leads and sample
+      implementations.</p>
+    </list-item>
+    <list-item>
+      <p><bold>Development &amp; Integration:</bold>
+      Successful processing and analysis of large, diverse subsea media
+      datasets; automated test reports showing ≥80% code coverage;
+      integration and performance benchmarks.</p>
+    </list-item>
+    <list-item>
+      <p><bold>Usability &amp; Adoption:</bold>
+      Beta deployed to all 4 projects; user feedback surveys/interviews
+      with ≥8/10 satisfaction; documentation and notebooks published and
+      accessed.</p>
+    </list-item>
+    <list-item>
+      <p><bold>Governance &amp; Sustainability:</bold>
+      Published governance model and guidelines; security/compliance
+      audit reports; audit logs for traceability.</p>
+    </list-item>
+    <list-item>
+      <p><bold>Impact &amp; Expansion:</bold>
+      Completion of 2+ end-to-end projects with before/after metrics;
+      onboarding records for 6+ projects; documented lessons learned and
+      success stories.</p>
+    </list-item>
+  </list>
+</sec>
+</body>
+
+
+
+<back>
+</back>
+
+
+</sub-article>
+
+</article>

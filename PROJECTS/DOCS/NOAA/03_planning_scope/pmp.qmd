@@ -1,0 +1,166 @@
+# Project Management Plan (PMP)  
+
+
+## Purpose of the PMP
+
+This Project Management Plan (PMP) defines **how the project will be executed,
+monitored, controlled, and closed**, in alignment with:
+
+- Approved Project Charter
+- Strategy & Governance (Value Stream, OKRs, KPIs)
+- Business Case
+- Scope Baseline (Scope Statement, WBS, WBS Dictionary)
+- Stakeholder Register
+- Requirements Specification
+
+The PMP is the **authoritative execution reference** for the project.
+
+---
+
+## Project Governance Overview
+
+### Governance Model
+
+- **Ecology-first governance**: ecological KPIs take precedence
+- **Stage-Gate decision model** based on KPI thresholds
+- **Human-in-the-loop** mandatory for all ecological decisions
+
+### Decision Authorities
+
+| Decision Type | Authority |
+|--------------|-----------|
+| Strategic Direction | Sponsor (NOAA / SUB) |
+| Ecological Acceptance | Environmental SME Lead |
+| Technical Decisions | Data Science Lead |
+| Delivery & Control | Project Manager |
+
+---
+
+## Scope Management Plan
+
+- Scope is defined by the **Scope Baseline**
+- No work outside approved WBS is permitted
+- Scope changes require:
+  - Formal Change Request
+  - Impact analysis (ecological, schedule, cost)
+  - Sponsor approval
+
+---
+
+## Schedule Management Plan
+
+- Schedule derived directly from WBS
+- Milestone-driven planning
+- Stage-Gates act as **hard control points**
+- Ecological validation tasks are non-compressible
+
+---
+
+## Cost Management Plan
+
+- Cost categories:
+  - Personnel (Data Science, Engineering, SMEs)
+  - Compute & storage
+  - Governance & validation effort
+- Contingency reserves maintained for annotation uncertainty
+- Cost performance reviewed at Stage-Gates
+
+---
+
+## Quality Management Plan (Integrated)
+
+### Quality Objectives
+- Protect benthic-relevant data
+- Maintain ecological confidence
+- Ensure reproducibility and auditability
+
+### Quality Control
+- KPI-3 (Ecological Data Protection Index) is mandatory
+- SME validation is required for acceptance
+- Documentation of limitations is compulsory
+
+---
+
+## Resource Management Plan
+
+| Role | Responsibility |
+|-----|----------------|
+| Project Manager | Coordination and control |
+| Product Owner | OKR ownership |
+| Environmental SMEs | Ecological validation |
+| Data Science Team | Model development |
+| Data Engineering Team | Pipeline & assets |
+
+---
+
+## Communication Management Plan
+
+| Stakeholder | Information | Frequency |
+|------------|-------------|-----------|
+| Sponsor | Status & risks | Monthly / Gates |
+| SMEs | Validation results | Weekly |
+| PO & PM | Delivery alignment | ≥ 2× per week |
+| Team | Execution updates | Weekly |
+
+---
+
+## Risk Management Plan
+
+- Risk Register maintained and reviewed continuously
+- Ecological risks prioritized
+- Any degradation of KPI-3 triggers escalation
+
+---
+
+## Change Management Plan
+
+- Formal Change Control Log maintained
+- All changes assessed for ecological impact
+- Unauthorized scope changes prohibited
+
+---
+
+## Procurement Management Plan
+
+- Only license-compliant AI frameworks
+- Internal infrastructure preferred
+- External procurement subject to Petrobras rules
+
+---
+
+## Stakeholder Engagement Plan
+
+- Engagement strategies derived from Stakeholder Register
+- Environmental SMEs engaged continuously
+- Sponsor involved at all Stage-Gates
+
+---
+
+## Integration with OKRs, KPIs and Stage-Gates
+
+- OKR 2.1 defines value
+- KPIs define measurement
+- Stage-Gates define control
+- PMP defines execution
+
+---
+
+## Baseline Management
+
+Baselines maintained:
+- Scope Baseline
+- Schedule Baseline (to be approved)
+- Cost Baseline (to be approved)
+
+Changes to baselines require Sponsor approval.
+
+---
+
+## Project Closure Criteria
+
+- MVP ecological acceptance achieved
+- KPIs validated
+- Assets versioned and stored
+- Lessons learned documented
+- Sponsor sign-off
+

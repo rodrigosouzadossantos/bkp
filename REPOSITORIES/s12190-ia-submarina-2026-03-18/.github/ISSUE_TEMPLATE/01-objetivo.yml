@@ -1,0 +1,54 @@
+name: "Objetivo Estratégico"
+description: "Definir um Objetivo de OKR"
+title: "[O] "
+labels:
+  - okr
+  - type:objective
+
+body:
+  - type: textarea
+    id: objetivo
+    attributes:
+      label: Objetivo
+      description: Resultado estratégico que queremos alcançar.
+      placeholder: |
+        Melhorar a eficiência das inspeções submarinas usando visão
+        computacional.
+    validations:
+      required: true
+
+  - type: textarea
+    id: contexto
+    attributes:
+      label: Contexto
+      description: Por que este objetivo é importante?
+      placeholder: |
+        Inspeções de dutos e estruturas submarinas usando ROVs geram grandes
+        volumes de vídeo.  Automatizar a detecção de corrosão e bioincrustação
+        pode reduzir custos operacionais e aumentar a segurança.
+
+  - type: dropdown
+    id: ciclo
+    attributes:
+      label: Ciclo OKR
+      options:
+        - 2026 Q1
+        - 2026 Q2
+        - 2026 Q3
+        - 2026 Q4
+    validations:
+      required: true
+
+  - type: input
+    id: responsavel
+    attributes:
+      label: Responsável
+      placeholder: "@usuario"
+
+  - type: textarea
+    id: impacto
+    attributes:
+      label: Impacto Esperado
+      placeholder: |
+        - Redução do tempo de análise de inspeções em 40%
+        - Aumento da precisão na detecção de defeitos estruturais

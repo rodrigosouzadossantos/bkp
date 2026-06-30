@@ -1,0 +1,59 @@
+[build-system]
+requires = [ ]
+
+[project]
+name = "subsea-easy-search"
+version = "2026-0.1.0"
+description = "Subsea Easy Search"
+license = {text = "Petrobras"}
+
+readme = { file = "README.md", content-type = "text/markdown" }
+
+requires-python = ">=3.8"
+
+authors = [
+    {name = "Rodrigo Souza dos Santos", email = "rodrigo.santos35.prestserv@petrobras.com.br"},
+]
+maintainers  = [
+    {name = "Rodrigo Souza dos Santos", email = "rodrigo.sa@compass.uol"},
+]
+
+keywords = ["packaging", "python", "subsea", "easy", "search"]
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: Copyright (C) 2026 by Petrobras",
+    "Operating System :: OS Independent",
+]
+
+dependencies = [
+]
+
+[project.optional-dependencies]
+lint = [
+    # checks for spelling mistakes
+    "codespell>=2.2.4",
+
+    # yapf linter checks for issues and potential bugs
+
+    # automatic code formatting to follow a consistent style
+    "yapf",
+
+    # checks for unused code
+    "vulture",
+
+    # required for codespell to parse pyproject.toml
+    "tomli",
+
+    # validation of pyproject.toml
+    "validate-pyproject[all]",
+
+    # automatic sorting of imports
+    "isort",
+]
+
+dev = [
+]
+
+[project.scripts]
+

@@ -1,0 +1,20 @@
+[package]
+name = "storage"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+crate-type = ["rlib"] # This allows it to be linked by your 'core' crate
+
+[dependencies]
+aws-config = "1.8.15"
+aws-sdk-s3 = "1.126.0"
+bytes = "1.11.1"
+futures = "0.3.32"
+pyo3.workspace = true
+tokio = { version = "1.50.0", features = ["rt-multi-thread"] }
+#tokio = { version = "1", features = ["rt", "rt-multi-thread"] }
+
+# JSON/YAML config strings directly
+# serde = { version = "1.0", features = ["derive"] }
+# serde_json = "1.0"

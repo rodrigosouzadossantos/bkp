@@ -1,0 +1,6 @@
+# Risk Register
+
+| Risk ID | Description | Probability | Impact | Mitigation |
+| :--- | :--- | :--- | :--- | :--- |
+| R-001 | Data Leakage | Low | Critical | NLP-based PII filtering |
+| R-002 | Inference Lag | Med | High | TensorRT optimization |

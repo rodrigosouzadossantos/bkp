@@ -1,0 +1,12 @@
+.tag-blue {
+  color: white;
+  background-color: blue;
+  padding: 2px 5px;
+  border-radius: 4px;
+}
+.tag-red {
+  color: white;
+  background-color: red;
+  padding: 2px 5px;
+  border-radius: 4px;
+}

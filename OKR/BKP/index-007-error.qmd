@@ -1,0 +1,123 @@
+---
+title: "Introdução a OKR e Suas Variantes para Projetos de IA Subsea"
+author: "Time de IA Submarina"
+bibliography: references.bib
+link-citations: true
+execute:
+  echo: true
+---
+
+# 1. Introdução
+
+Este manuscrito apresenta os **OKRs (Objectives & Key Results)** e suas variantes, com ênfase na conexão com **gestão de projetos** e **mentalidade Agile**.  
+
+Não se trata de revisão crítica de práticas anteriores, mas de um **alinhamento metodológico baseado em referências consolidadas**.
+
+O objetivo é fornecer **clareza sobre o que OKR é e não é**, como pode ser aplicado em projetos de IA/ML submarina, e como se integra naturalmente a processos ágeis.
+
+---
+
+# 2. O que é OKR
+
+OKR é um **sistema de gestão por objetivos** que conecta metas estratégicas a resultados mensuráveis:
+
+- **Objective (Objetivo):** Descrição qualitativa de uma mudança desejada.  
+- **Key Result (Resultado-chave):** Métrica quantitativa que indica se o objetivo foi atingido.  
+- **Initiatives (Iniciativas):** Ações ou projetos que tentam gerar os KRs.
+
+> Como enfatiza Doerr [@doerr2018]: "Os Key Results devem medir resultado, não esforço."
+
+---
+
+# 3. OKR e Gestão de Projetos
+
+Em gestão de projetos, OKRs:
+
+1. Alinham **objetivos estratégicos** a tarefas técnicas  
+2. Criam **prioridade de impacto** sobre esforço  
+3. Permitem **rastreabilidade entre metas e entregas**
+
+No contexto Agile:
+
+- OKRs definem **o que mudar**  
+- Scrum/Kanban definem **como executar**
+
+> Wodtke [@wodtke2016] ressalta que OKRs e Agile são complementares: OKRs fornecem foco, Agile fornece ritmo e adaptabilidade.
+
+---
+
+# 4. Variantes de OKR
+
+OKRs podem ter **diferentes horizontes temporais**, dependendo do foco do projeto.
+
+## 4.1 OKR Estratégico (Trimestral)
+
+- Foco: impacto operacional e alinhamento estratégico  
+- Mantém a **visão de longo prazo** do projeto  
+- Exemplo: aumentar confiabilidade de detecção automática em inspeções submarinas
+
+**Conexão com gestão de projeto:** ligado ao **roadmap estratégico** ou macro-épicos  
+> Referência: Doerr [@doerr2018]
+
+---
+
+## 4.2 OKR Tático / Mensal
+
+- Foco: melhoria de capacidades e execução intermediária  
+- Alinha iniciativas técnicas a OKRs estratégicos  
+- Exemplo: melhorar cobertura e consistência de dataset
+
+**Conexão com gestão de projeto:** ligado a **épicos ou entregas mensais**, priorizando impacto  
+> Referências: Doerr [@doerr2018], Wodtke [@wodtke2016]  
+
+---
+
+## 4.3 OKR Experimental / Curto (1–2 semanas)
+
+- Foco: aprendizado rápido e testes controlados  
+- Ideal para experimentação em IA/ML (ajustes de modelo, pipelines, filtros)  
+- Exemplo: validar efeito de filtro espacial na redução de falsos positivos
+
+**Conexão com gestão de projeto:** se encaixa em **Sprint Goals** ou mini-experimentos ágeis  
+> Referências: Wodtke [@wodtke2016], Grove [@grove1983]
+
+---
+
+# 5. OKR e Mentalidade Agile
+
+Para equipes ágeis, é importante manter:
+
+1. **Transparência:** todos entendem objetivo e métrica de sucesso  
+2. **Iteração curta:** ciclos de aprendizado rápidos (1–2 semanas)  
+3. **Adaptabilidade:** ajustar iniciativas conforme resultados intermediários  
+4. **Foco em valor:** priorizando impacto real sobre esforço
+
+> Grove [@grove1983] enfatiza que metas claras e mensuráveis aumentam a eficácia de equipes técnicas.
+
+---
+
+# 6. Resumo de Hierarquia e Ciclos
+
+| Nível | Horizonte | Exemplo | Ligação Agile |
+|-------|-----------|---------|---------------|
+| Estratégico | Trimestral | Confiabilidade de detecção automática | Roadmap / Macro-épico |
+| Tático | Mensal | Cobertura e consistência de dataset | Épico / Entrega mensal |
+| Experimental | 1–2 semanas | Filtro espacial de pontos | Sprint Goal / Experimento |
+| Execução | Dias | Ajustes de código e PRs | Backlog / Task |
+
+---
+
+# 7. Observações Finais
+
+- OKR **não é lista de tarefas**  
+- OKR **não substitui planejamento detalhado**  
+- Serve para **alinhamento estratégico, foco e medição de impacto**  
+- Sempre vincular OKR ao Agile para **ritmo e adaptabilidade**
+
+> Não se trata de revisão crítica de práticas anteriores, mas de um alinhamento metodológico baseado em referências consolidadas.
+
+---
+
+# 8. Referências
+
+```{bibliography} id="refs-okr-manuscript"

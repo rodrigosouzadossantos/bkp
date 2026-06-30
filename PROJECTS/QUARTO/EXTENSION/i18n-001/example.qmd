@@ -1,0 +1,18 @@
+---
+title: "I18n Example"
+
+metadata-files:
+  - i18n/en.yml
+---
+
+## Heading
+
+{{< i18n greeting >}}
+
+{{< i18n welcome name="Maria" >}}
+
+{{< i18n home.title >}}
+
+{{< i18n missing_key >}}Default text{{< /i18n >}}
+
+

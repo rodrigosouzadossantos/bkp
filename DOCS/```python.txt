@@ -1,0 +1,74 @@
+```python
+import matplotlib.pyplot as plt
+from matplotlib.offsetbox import OffsetImage, AnnotationBbox
+import numpy as np
+
+# ------------------------------------------------------------
+# X_umap : shape (N, 2)
+# labels : cluster labels from HDBSCAN
+# images : list[PIL.Image]
+# valid_keys : image paths / S3 keys
+# ------------------------------------------------------------
+
+fig, ax = plt.subplots(figsize=(18, 18))
+
+# ------------------------------------------------------------
+# scatter background
+# ------------------------------------------------------------
+scatter = ax.scatter(
+    X_umap[:, 0],
+    X_umap[:, 1],
+    c=labels,
+    cmap="tab20",
+    s=10,
+    alpha=0.4
+)
+
+# ------------------------------------------------------------
+# add image thumbnails
+# ------------------------------------------------------------
+for (x, y, img, key) in zip(
+    X_umap[:, 0],
+    X_umap[:, 1],
+    images,
+    valid_keys
+):
+
+    try:
+        # copy image to avoid mutating original
+        thumb = img.copy()
+
+        # smaller thumbnails = faster rendering
+        thumb.thumbnail((48, 48))
+
+        imagebox = OffsetImage(
+            np.asarray(thumb),
+            zoom=0.7
+        )
+
+        ab = AnnotationBbox(
+            imagebox,
+            (x, y),
+            frameon=False,
+            pad=0.0
+        )
+
+        ax.add_artist(ab)
+
+    except Exception as e:
+        print("Thumbnail error:", key, e)
+
+# ------------------------------------------------------------
+# cosmetics
+# ------------------------------------------------------------
+ax.set_title(
+    "ViT Embeddings → UMAP → HDBSCAN",
+    fontsize=18
+)
+
+ax.set_xlabel("UMAP-1")
+ax.set_ylabel("UMAP-2")
+
+plt.tight_layout()
+plt.show()
+```

@@ -1,0 +1,106 @@
+# {{< i18n stakeholder_register >}} {}
+
+## Purpose of This Document
+
+This Stakeholder Register identifies and classifies all key stakeholders
+involved in, or impacted by, the **Subsea Benthic Analysis AI project**,
+defining:
+
+- Roles and responsibilities
+- Level of interest and influence
+- Engagement strategy
+- Decision authority
+
+This document is a **mandatory PMBOK artifact** and must be approved **before
+finalization of the Project Management Plan (PMP)**.
+
+---
+
+## Stakeholder Classification Principles
+
+Stakeholders are classified according to:
+
+- **Influence**: ability to affect decisions or outcomes  
+- **Interest**: level of concern with project results  
+- **Authority**: decision or validation power  
+
+Environmental and ecological stakeholders are treated as **primary
+stakeholders**, regardless of organizational hierarchy.
+
+---
+
+## Stakeholder Register
+
+| ID | Stakeholder | Organization / Unit | Role in Project | Interest | Influence | Primary Responsibility | Engagement Strategy |
+|----|------------|---------------------|-----------------|----------|-----------|------------------------|--------------------|
+| S1 | Project Sponsor | NOAA / SUB / Petrobras | Strategic Sponsor | High | High | Strategic direction, funding, final approvals | Executive reviews, Stage‑Gates |
+| S2 | Environmental SMEs | NOAA / SUB | Scientific Authority | High | High | Ecological validation, acceptance authority | Continuous validation, reviews |
+| S3 | Product Owner (PO) | NOAA / SUB | Business & Value Owner | High | High | OKR alignment, prioritization, value tracking | Weekly checkpoints |
+| S4 | Project Manager | SUB | Delivery Authority | High | Medium | Planning, execution, reporting | Daily coordination |
+| S5 | Data Science Lead | SUB / TIC | Technical Authority | Medium | Medium | Model design, performance decisions | Technical reviews |
+| S6 | Data Engineering Lead | SUB / TIC | Pipeline & Data Authority | Medium | Medium | Data ingestion, versioning, infrastructure | Sprint alignment |
+| S7 | IT / Infrastructure | Petrobras IT | Platform Support | Low | Medium | Compute, storage, security | Resource planning |
+| S8 | Environmental Governance | SUB / Compliance | Oversight & Audit | Medium | High | Environmental compliance, auditability | Formal checkpoints |
+| S9 | Operations / AUV Teams | SUB / Operations | Data Providers | Medium | Low | Image acquisition, metadata accuracy | On-demand alignment |
+| S10 | Executive Management | Petrobras | Oversight | Low | High | Strategic visibility, escalation | Executive briefings |
+
+---
+
+## Stakeholder Influence vs Interest Matrix (Summary)
+
+| Category | Stakeholders |
+|--------|--------------|
+| High Influence / High Interest | Sponsor, Environmental SMEs, PO |
+| High Influence / Low Interest | Executive Management, Compliance |
+| Low Influence / High Interest | Data Science, Data Engineering |
+| Low Influence / Low Interest | Operations (AUV Teams) |
+
+---
+
+## Key Stakeholder Roles and Decision Rights
+
+### Environmental SMEs (NOAA / SUB)
+- Final authority on ecological validity
+- Approval power at ecological Stage‑Gates (G1, G2)
+- Veto right if ecological risk is identified
+
+### Project Sponsor (NOAA / SUB)
+- Go / No‑Go authority at all Stage‑Gates
+- Final approval of scope, budget, and scaling
+
+### Product Owner (PO)
+- Owns [OKR at section @sec-okr]
+- Validates business and environmental value delivery
+- Prioritizes backlog based on ecological impact
+
+---
+
+## Stakeholder Risks and Mitigation
+
+| Risk | Stakeholder | Mitigation |
+|----|------------|------------|
+| Ecological trust erosion | Environmental SMEs | Early and continuous involvement |
+| Misalignment on value | Sponsor / PO | OKR and KPI transparency |
+| Technical over-optimization | Data Science | Stage‑Gates with ecological KPIs |
+| Adoption resistance | Operations | Early communication |
+
+---
+
+## Stakeholder Engagement Cadence (High-Level)
+
+| Stakeholder Group | Engagement Type | Frequency |
+|------------------|-----------------|-----------|
+| Sponsor | Executive review | Monthly / Gates |
+| Environmental SMEs | Validation workshops | Weekly / Bi-weekly |
+| PO & PM | Alignment checkpoints | ≥ 2× per week |
+| Technical Team | Delivery sync | Weekly |
+| Compliance / Governance | Audit checkpoints | As required |
+
+---
+
+## Approval and Baseline
+
+This Stakeholder Register is considered **baselined** upon approval and must be
+updated via formal change control if stakeholder roles, influence, or authority
+change.
+

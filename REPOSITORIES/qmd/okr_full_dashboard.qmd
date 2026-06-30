@@ -1,0 +1,106 @@
+---
+title: "Dashboard Interativo de OKRs e Entregáveis"
+author: "Time IA Submarina"
+format:
+  html:
+    toc: true
+    theme: cosmo
+    code-fold: true
+execute:
+  echo: false
+---
+
+```{r}
+library(jsonlite)
+library(dplyr)
+library(plotly)
+library(DiagrammeR)
+
+# Carrega JSON gerado automaticamente pelo GitHub Actions
+# Deve conter: repo, issue number, title, labels (okr, tipo), state, assignees, body, pr_status
+okr_data <- fromJSON("okr-dashboard.json")
+
+# Define tipo de OKR
+okr_data$okr_type <- sapply(okr_data$labels, function(l){
+  if("estratégico" %in% l) return("Estratégico")
+  if("tático" %in% l) return("Tático")
+  if("experimental" %in% l) return("Experimental")
+  return("Outro")
+})
+
+# % de progresso: fechado=100, aberto=0
+okr_data$progresso <- ifelse(okr_data$state=="CLOSED",100,0)
+
+# Extração de entregáveis
+okr_data$entregaveis <- sapply(okr_data$body, function(b){
+  lines <- unlist(strsplit(b,"\n"))
+  entreg <- lines[grep("Entregável|Deliverable", lines, ignore.case=TRUE)]
+  if(length(entreg)==0) return("Não especificado") else return(paste(entreg, collapse=", "))
+})
+
+# Resumo de progresso por KR/Issue
+okr_summary <- okr_data %>%
+  group_by(okr_type, entregaveis) %>%
+  summarise(total=n(),
+            fechadas=sum(state=="CLOSED"),
+            progresso=fechadas/total*100)
+```
+
+---
+
+## 🔹 Roadmap Interativo (OKR → KR → Issue → PR)
+
+```{r}
+# Nós coloridos por progresso
+okr_data$color <- sapply(okr_data$progresso, function(p){
+  if(p==100) return("green")
+  if(p>=50) return("orange")
+  return("red")
+})
+
+# Criar gráfico interativo
+fig <- plot_ly(
+  okr_data,
+  x = ~okr_type,
+  y = ~entregaveis,
+  text = ~paste0("Issue: #", number, "<br>Progresso: ", progresso, "%"),
+  type = 'scatter',
+  mode = 'markers',
+  color = ~color,
+  colors = c("red","orange","green"),
+  size = ~progresso,
+  hoverinfo = 'text'
+) %>%
+layout(
+  title = "Fluxo de OKRs e Entregáveis - Interativo",
+  xaxis = list(title="Tipo de OKR"),
+  yaxis = list(title="Entregável"),
+  showlegend = FALSE
+)
+
+fig
+```
+
+---
+
+## 🔹 Observações Executivas
+
+1. **Progressão automática**:
+
+   * Pull Requests fechados atualizam o progresso das Issues → KR → OKR.
+
+2. **Visualização clara por PO/PM**:
+
+   * Cada nó mostra **status**, **progresso** e **responsável**
+   * Hover detalha título da Issue e percentual de conclusão
+
+3. **Integração completa GitHub Actions + GraphQL**:
+
+   * GitHub Actions coleta Issues/PRs de múltiplos repositórios semanalmente
+   * Atualiza `okr-dashboard.json`
+   * Dashboard HTML é regenerado automaticamente
+
+4. **Escalável**:
+
+   * Permite adicionar OKR Experimental e novos repositórios sem alteração de código
+

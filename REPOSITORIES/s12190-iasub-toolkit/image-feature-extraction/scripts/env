@@ -1,0 +1,38 @@
+USER_PROJECT=/projetos/$(whoami)
+
+export AWS_CONFIG_FILE=${USER_PROJECT}/.aws/config
+export AWS_SHARED_CREDENTIALS_FILE=${USER_PROJECT}/.aws/credentials
+
+export PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+export PROJECT_SPARK="${PROJECT_ROOT}/SPARK"
+
+export SPARK_CONF_DIR=
+export SPARK_LOCAL_IP=127.0.0.1
+
+mkdir -p ${PROJECT_SPARK}/{events,logs}
+
+###
+
+# 1. Capture the allowed CPU list for the current process.
+# taskset -cp $$ returns something like "pid 123's current affinity list: 0-15,64-79"
+# awk extracts the part after the colon: "0-15,64-79"
+RAW_LIST=$(taskset -cp $$ | awk -F': ' '{print $2}')
+
+# 2. Expand ranges into a full comma-separated list.
+# DALI requires a 1-to-1 mapping (e.g., 0,1,2,3...15,64...79) rather than range notation.
+DALI_MASK=$(echo $RAW_LIST | tr ',' '\n' | while read range; do
+    if [[ $range == *"-"* ]]; then
+        # Use seq to turn "0-3" into "0,1,2,3"
+        seq -s, ${range%-*} ${range#*-}
+    else
+        # If it's a single core, just pass it through
+        echo $range
+    fi
+done | tr '\n' ',' | sed 's/,,*/,/g; s/,$//')
+
+# 3. Export the variable so DALI uses these cores instead of trying (and failing)
+# to jump to the GPU's optimal NUMA node.
+export DALI_AFFINITY_MASK=$DALI_MASK
+
+###
+

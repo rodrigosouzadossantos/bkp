@@ -1,0 +1,24 @@
+{
+  "docs/index.qmd": {
+    "index.embed.ipynb": "39236dfd",
+    "index.out.ipynb": "81543016",
+    "index-preview.html": "d8dd698a",
+    "index.html": "c1b1bb2b"
+  },
+  "index.qmd": {
+    "index.embed.ipynb": "def80197",
+    "index.out.ipynb": "828d27a1",
+    "index-preview.html": "973c02e6",
+    "index.html": "4fdafb62"
+  },
+  "docs/okr.qmd": {
+    "okr.embed.ipynb": "0dca244e",
+    "okr.out.ipynb": "df219add",
+    "okr-preview.html": "6d84ecfc"
+  },
+  "docs/empty.qmd": {
+    "empty.embed.ipynb": "f0b07805",
+    "empty.out.ipynb": "923bf1d9",
+    "empty-preview.html": "1e13a391"
+  }
+}

@@ -1,0 +1,13 @@
+https://blog.dataengineerthings.org/the-hidden-optimization-behind-sparks-mappartitions-28983541df18
+https://github.com/facebookresearch/dinov3/issues/11
+https://umap-learn.readthedocs.io/en/latest/composing_models.html#mnist-digits-example
+https://dsp.stackexchange.com/questions/80767/unsupervised-clustering-of-images-which-algorithms
+https://dsp.stackexchange.com/questions/80949/image-clustering-using-linear-discriminant-analysis-lda-compared-to-t-sne-um
+https://medium.com/@alanmossinger/understanding-unsupervised-learning-with-a-focus-on-kmeans-clustering-with-real-data-application-5c90f03e2ef0
+https://towardsdatascience.com/image-clustering-implementation-with-pytorch-587af1d14123/
+
+https://www.towardsdeeplearning.com/dinov3-segmentation-for-custom-dataset-tips-traps-and-working-code-7f9e6041f784
+
+https://docs.voxel51.com/tutorials/clustering.html
+https://towardsdev.com/mastering-data-clustering-with-embedding-models-87a228d67405
+https://github.com/keplergl/kepler.gl/tree/master/examples

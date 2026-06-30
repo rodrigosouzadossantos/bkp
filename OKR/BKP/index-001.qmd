@@ -1,0 +1,279 @@
+---
+title: "Governança de OKR + Agile + GitHub para IA Subsea"
+author: "Time de IA Submarina"
+format:
+  html:
+    theme: cosmo
+    toc: true
+    toc-depth: 3
+execute:
+  echo: true
+---
+
+# 1. Alinhamento Inicial: O que OKR É (e Não É)
+
+Antes de avançarmos para estrutura e ferramentas, é importante alinhar conceitos de forma técnica e neutra, com base na literatura consolidada sobre OKR.
+
+A definição moderna de OKR foi amplamente difundida por :contentReference[oaicite:0]{index=0}, de :contentReference[oaicite:1]{index=1}, a partir da prática originalmente desenvolvida por :contentReference[oaicite:2]{index=2} na :contentReference[oaicite:3]{index=3}.
+
+Segundo essa abordagem:
+
+## OKR NÃO É
+
+- Lista de tarefas
+- Backlog técnico
+- Plano de projeto detalhado
+- Cronograma operacional
+
+Conforme descrito por Doerr, Key Results devem ser mensuráveis e orientados a resultado, não a atividade.
+
+## OKR É
+
+- Um sistema para medir mudança de estado
+- Um mecanismo de alinhamento estratégico
+- Um modelo orientado a impacto mensurável
+
+A distinção entre **resultado** e **atividade** também é reforçada por :contentReference[oaicite:4]{index=4} em :contentReference[oaicite:5]{index=5}:
+
+> Se você consegue concluir 100% do que escreveu mesmo sem mudar o resultado final, então você escreveu tarefas, não Key Results.
+
+Essa referência é importante para evitar qualquer interpretação pessoal: trata-se de aderência metodológica.
+
+---
+
+# 2. Aplicação no Contexto de IA Subsea
+
+Nosso contexto envolve:
+
+- Visão computacional submarina
+- Inspeção de infraestrutura
+- Monitoramento ecológico
+- Alta criticidade operacional
+- Necessidade de rastreabilidade
+
+Em ambientes técnicos complexos (como IA aplicada à indústria), é comum que planos de execução sejam muito bem detalhados — o que é positivo. No entanto, a literatura de OKR recomenda separar:
+
+- Sucesso técnico (entregas realizadas)
+- Sucesso operacional (impacto mensurável no sistema real)
+
+Essa separação não é crítica ao trabalho existente, mas sim uma prática de governança recomendada.
+
+---
+
+# 3. Estrutura em Camadas
+
+A combinação de OKR com ciclos curtos não contradiz a literatura, desde que mantenha coerência estratégica.
+
+## Camada 1 – OKR Estratégico (Trimestral)
+
+Recomendação clássica segundo Doerr: ciclo trimestral.
+
+### Exemplo
+
+**Objective**
+
+Aumentar a confiabilidade da detecção automática em inspeções submarinas.
+
+**Key Results**
+
+- F1-score: 0.72 → 0.85  
+- Redução de falso negativo classe crítica em 50%  
+- Redução do tempo de revisão manual em 30%  
+- 100% das inferências com rastreabilidade ao dado bruto  
+
+Aqui seguimos a recomendação de que Key Results sejam:
+
+- Específicos
+- Mensuráveis
+- Com critério objetivo de sucesso
+
+---
+
+## Camada 2 – OKR Tático (Mensal)
+
+Algumas organizações utilizam desdobramento mensal para garantir foco técnico, mantendo alinhamento com o OKR trimestral.
+
+Isso não substitui o estratégico, mas o operacionaliza.
+
+---
+
+## Camada 3 – OKR de Aprendizado (1–2 semanas)
+
+Em ambientes de IA/ML, especialmente em pesquisa aplicada, é comum utilizar ciclos curtos de validação.
+
+Isso é compatível com OKR desde que:
+
+- Continue orientado a métrica
+- Continue vinculado a um objetivo maior
+
+Exemplo:
+
+**Objective**
+
+Validar impacto de filtro espacial na redução de falso positivo.
+
+**Key Results**
+
+- Redução de falso positivo de 28% → <18%  
+- Impacto na latência <10%  
+- Identificação documentada de cenários de falha  
+
+Essa prática é consistente com abordagens modernas de experimentação ágil, desde que não substitua o OKR estratégico.
+
+---
+
+# 4. Integração com Agile
+
+OKR define **o que mudar**.  
+Agile organiza **como executar**.
+
+Essa distinção evita conflitos conceituais.
+
+| Nível | OKR | Agile |
+|-------|------|--------|
+| Estratégico | Trimestral | Roadmap |
+| Tático | Mensal | Epic |
+| Aprendizado | 1–2 semanas | Sprint Goal |
+| Execução | Não é OKR | Backlog |
+
+---
+
+```{mermaid}
+graph TD
+    O[Objective]
+    KR[Key Results]
+    I[Initiatives]
+    T[Tarefas]
+    PR[Pull Request]
+
+    O --> KR
+    KR --> I
+    I --> T
+    T --> PR
+```
+
+---
+
+# 5. GitHub como Ferramenta Central
+
+A literatura de OKR não prescreve ferramenta específica. Portanto, utilizar GitHub como núcleo é totalmente válido.
+
+A recomendação estrutural é apenas manter a separação conceitual:
+
+* OKR → mede impacto
+* Issues → organizam trabalho
+* PR → implementam código
+
+---
+
+# 6. Onde Cada Elemento Vive no GitHub
+
+## OKR Estratégico
+
+📍 GitHub Project (um por trimestre)
+
+* Objective = Item principal
+* Key Results = Issues vinculadas com label `KR`
+* Campo customizado: Tipo (Objective / KR / Initiative)
+
+O GitHub Project torna-se o painel estratégico.
+
+---
+
+## Key Results
+
+Criar como Issues estruturadas.
+
+Descrição deve conter:
+
+* Métrica base
+* Meta
+* Método de medição
+* Fonte de dados
+* Frequência de atualização
+
+Isso mantém aderência ao princípio de mensurabilidade descrito por Doerr.
+
+---
+
+## Initiatives
+
+Issues com label `Initiative`.
+
+Representam meios, não fins.
+
+---
+
+## Tarefas Técnicas
+
+Issues operacionais, fechadas por PR.
+
+Fluxo:
+
+Issue → Branch → PR → Review → Merge → Fecha Issue
+
+---
+
+# 7. Estrutura Recomendada do GitHub Project
+
+Colunas ou campo customizado:
+
+* Objective
+* Key Result
+* Initiative
+* Em Sprint
+* Done
+
+---
+
+```{mermaid}
+flowchart LR
+    OKR[OKR Trimestral]
+    KR[Key Result]
+    SG[Sprint Goal]
+    Sprint[Sprint]
+    Metric[Atualização Métrica]
+
+    OKR --> KR
+    KR --> SG
+    SG --> Sprint
+    Sprint --> Metric
+    Metric --> KR
+```
+
+---
+
+# 8. Benefícios da Estrutura
+
+## Clareza Metodológica
+
+Alinhamento com literatura reconhecida.
+
+## Redução de Conflito Conceitual
+
+Separação entre impacto e execução evita interpretação de crítica pessoal.
+
+## Governança Técnica
+
+Fundamental em IA aplicada a ambiente industrial e ecológico.
+
+## Rastreabilidade
+
+Cada PR contribui para um KR mensurável.
+
+---
+
+# 9. Conclusão
+
+Esta proposta não substitui o trabalho já realizado.
+Ela apenas organiza segundo boas práticas consolidadas:
+
+* Measure What Matters
+* Radical Focus
+* Princípios originais de gestão por objetivos de Andy Grove
+
+O objetivo é fortalecer governança, clareza e alinhamento — especialmente em um contexto técnico crítico como IA submarina.
+
+```
+```
+

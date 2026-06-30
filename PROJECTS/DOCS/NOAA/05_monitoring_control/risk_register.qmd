@@ -1,0 +1,122 @@
+# {{< i18n risk_register >}} {#sec-risk-register}
+
+
+## Purpose of This Document
+
+This Risk Register provides the **complete and authoritative list of project
+risks**, including:
+
+- Risk identification and categorization
+- Probability and impact assessment
+- Risk exposure level
+- Ownership
+- Associated KPIs and Stage‑Gates
+
+This document is a **mandatory PMBOK artifact** and is the primary input to the
+**Risk Response Plan**.
+
+---
+
+## Risk Scoring Methodology
+
+### Probability Scale
+
+- Low (L)
+- Medium (M)
+- High (H)
+
+### Impact Scale
+
+- Low (L)
+- Medium (M)
+- High (H)
+- Very High (VH) — reserved for ecological risk
+
+### Risk Exposure
+
+Derived qualitatively from Probability × Impact and used for prioritization:
+
+- Low
+- Medium
+- High
+- **Critical** (ecological priority)
+
+---
+
+## Detailed Risk Register (Full Table)
+
+| ID | Description | Cat. | Prob. | Impact | Exposure | Primary KPI | Stage-Gate | Risk Owner | Notes |
+|----|-------------------------------|-----|:---:|:---:|:---:|:---:|------------|------------|------|
+| R1 | Automated screening incorrectly excludes benthic‑relevant imagery (false negatives) | Environmental / Ecological | M | **VH** | **Critical** | KPI‑3 | G1, G2, G3, G4 | Environmental SME Lead | Primary ecological risk |
+| R2 | Annotation subjectivity leads to inconsistent ecological labeling | Environmental / Data | H | H | High | KPI‑4 | G1, G2 | Environmental SME Lead | Requires consensus process |
+| R3 | Model fails to meet minimum ecological performance thresholds | Technical | M | H | High | KPI‑3 | G2 | Data Science Lead | MVP risk accepted within limits |
+| R4 | Severe class imbalance biases model behavior | Data | H | M | High | KPI‑3 | G2 | Data Science Lead | Expected, mitigable |
+| R5 | Poor image quality (turbidity, lighting, backscatter) reduces screening reliability | Data / Operational | H | M | High | KPI‑3 | G2, G3 | Data Engineering Lead | Environmental conditions driven |
+| R6 | Delays in environmental SME availability | Operational | M | H | High | KPI‑2 | G1, G2 | Project Manager | Direct schedule risk |
+| R7 | Misalignment between technical and ecological expectations | Governance | M | H | High | KPI‑3 | G1, G2 | Project Manager | Requires frequent checkpoints |
+| R8 | Over‑automation reduces expert trust in outputs | Operational / Adoption | M | M | Medium | KPI‑1 | G3 | Product Owner | Human‑in‑the‑loop critical |
+| R9 | Stakeholder resistance to adopting AI‑assisted workflows | Organizational | M | M | Medium | KPI‑6 | G3 | Product Owner | Change management risk |
+| R10 | Licensing or framework compliance issues | Compliance | L | H | Medium | — | G1 | IT / Legal | Preventive control |
+| R11 | Insufficient compute or storage resources | Technical / Infra | L | M | Low | KPI‑2 | G1 | IT / Infra | Mitigable |
+| R12 | Loss of traceability or auditability of datasets | Governance / Data | L | H | Medium | KPI‑5 | G3, G4 | Data Governance | Impacts reuse |
+| R13 | Inability to generalize across fields | Technical / Ecological | M | H | High | KPI‑4 | G3 | Data Science Lead | Blocks scaling |
+| R14 | Scope creep toward non‑MVP objectives | Governance | M | M | Medium | — | All | Project Manager | Controlled by WBS |
+| R15 | Environmental credibility questioned due to undocumented limitations | Ecological / Governance | L | **VH** | **Critical** | KPI‑3 | G2, G3 | Environmental SME Lead | Documentation mandatory |
+
+---
+
+## Risk Prioritization Summary
+
+### Critical Risks (Must Never Be Accepted)
+
+- R1 — Ecological data loss (false negatives)
+- R15 — Environmental credibility loss
+
+### High Risks (Must Be Mitigated)
+
+- R2, R3, R4, R5, R6, R7, R13
+
+### Medium Risks (Managed / Monitored)
+
+- R8, R9, R10, R12, R14
+
+### Low Risks
+
+- R11
+
+---
+
+## Governance Rules
+
+- **Any Critical risk automatically blocks Stage‑Gate progression**
+- Ecological risks override schedule and cost considerations
+- Risk ownership is mandatory and non‑delegable
+- All risk status changes must be logged
+
+---
+
+## Relationship to Other Risk Artifacts
+
+| Artifact | Purpose |
+|--------|---------|
+| Risk Register | Risk identification & prioritization |
+| Risk Response Plan | Actions and contingencies |
+| Stage‑Gates | Decision enforcement |
+| KPI Framework | Continuous risk monitoring |
+
+---
+
+## Review Cadence
+
+- Weekly review by Project Manager
+- Mandatory review at every Stage‑Gate
+- Immediate escalation if KPI‑3 degrades
+
+---
+
+## Baseline and Change Control
+
+This Risk Register is **baselined** upon approval.  
+Any addition, removal, or reclassification of risks requires formal change
+control.
+

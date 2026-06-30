@@ -1,0 +1,156 @@
+#!/usr/bin/env bash
+set -e
+
+PROJECT=${1:-nautilus-ml}
+echo "Creating Nautilus ML visualization crate in $PROJECT/rust/visualization ..."
+
+# create directories
+mkdir -p $PROJECT/rust/visualization/src
+mkdir -p $PROJECT/tests
+
+# helper functions
+create_header() {
+  LANG=$1
+  MODULE=$2
+  COMPONENT=$3
+  if [ "$LANG" = "rust" ]; then COMMENT="//"; else COMMENT="#"; fi
+  cat <<EOF
+$COMMENT vim: set ts=2 sw=2 et:
+$COMMENT --------------------------------------------------
+$COMMENT Project: Nautilus ML Platform
+$COMMENT Module: $MODULE
+$COMMENT Component: $COMPONENT
+$COMMENT Inspired by Jules Verne's "Twenty Thousand Leagues Under the Sea"
+$COMMENT License: Apache-2.0
+$COMMENT --------------------------------------------------
+EOF
+}
+
+create_file() {
+  FILE=$1
+  LANG=$2
+  MODULE=$3
+  COMPONENT=$4
+  mkdir -p "$(dirname "$FILE")"
+  create_header "$LANG" "$MODULE" "$COMPONENT" > "$FILE"
+}
+
+########################################
+# Cargo.toml for visualization crate
+########################################
+cat > $PROJECT/rust/visualization/Cargo.toml <<EOF
+[package]
+name = "visualization"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+rayon = "1"
+pyo3 = { version = "0.19", features = ["extension-module"] }
+numpy = "0.18"
+serde = { version = "1.0", features = ["derive"] }
+anyhow = "1.0"
+EOF
+
+########################################
+# metrics.rs: prepare metrics for plotting
+########################################
+create_file $PROJECT/rust/visualization/src/metrics.rs rust visualization metrics
+
+cat >> $PROJECT/rust/visualization/src/metrics.rs <<'EOF'
+use rayon::prelude::*;
+use anyhow::Result;
+use std::collections::HashMap;
+
+/// Aggregate metrics in parallel
+pub fn aggregate_metrics_parallel(metrics_list: Vec<HashMap<String,f64>>) -> HashMap<String,f64> {
+    let mut combined: HashMap<String,f64> = HashMap::new();
+    metrics_list.into_par_iter().for_each(|m| {
+        for (k,v) in m {
+            combined.entry(k).and_modify(|e| *e += v).or_insert(v);
+        }
+    });
+    combined
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use std::collections::HashMap;
+    #[test]
+    fn test_aggregate_metrics_parallel() {
+        let mut m1 = HashMap::new();
+        m1.insert("loss".to_string(), 0.1);
+        let mut m2 = HashMap::new();
+        m2.insert("loss".to_string(), 0.2);
+        let combined = aggregate_metrics_parallel(vec![m1,m2]);
+        assert_eq!(combined.get("loss").unwrap(), &0.3);
+        println!("Aggregated metrics: {:?}", combined);
+    }
+}
+EOF
+
+########################################
+# arrow_bridge.rs: zero-copy to Python/NumPy
+########################################
+create_file $PROJECT/rust/visualization/src/arrow_bridge.rs rust visualization arrow_bridge
+
+cat >> $PROJECT/rust/visualization/src/arrow_bridge.rs <<'EOF'
+use pyo3::prelude::*;
+use numpy::{IntoPyArray, PyArray1};
+
+#[pyfunction]
+pub fn metrics_to_numpy<'py>(py: Python<'py>, metrics: Vec<f64>) -> &'py PyArray1<f64> {
+    metrics.into_pyarray(py)
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use pyo3::prelude::*;
+    #[test]
+    fn test_metrics_to_numpy() {
+        Python::with_gil(|py| {
+            let arr = metrics_to_numpy(py, vec![1.0,2.0,3.0]);
+            assert_eq!(arr.len(), 3);
+            println!("Zero-copy metrics array length: {}", arr.len());
+        });
+    }
+}
+EOF
+
+########################################
+# batch_processing.rs: HPC-ready batch operations
+########################################
+create_file $PROJECT/rust/visualization/src/batch_processing.rs rust visualization batch_processing
+
+cat >> $PROJECT/rust/visualization/src/batch_processing.rs <<'EOF'
+use rayon::prelude::*;
+use anyhow::Result;
+
+/// Normalize a batch of metric vectors in parallel
+pub fn normalize_metrics_batch(batch: Vec<Vec<f64>>) -> Vec<Vec<f64>> {
+    batch.into_par_iter().map(|mut v| {
+        let sum: f64 = v.iter().sum();
+        if sum > 0.0 {
+            v.iter_mut().for_each(|x| *x /= sum);
+        }
+        v
+    }).collect()
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    #[test]
+    fn test_normalize_metrics_batch() {
+        let batch = vec![vec![1.0,2.0], vec![2.0,2.0]];
+        let normalized = normalize_metrics_batch(batch);
+        println!("Normalized batch: {:?}", normalized);
+    }
+}
+EOF
+
+echo "Visualization crate bootstrap complete. Navigate to $PROJECT/rust/visualization and run:"
+echo "cargo build"
+echo "cargo test"

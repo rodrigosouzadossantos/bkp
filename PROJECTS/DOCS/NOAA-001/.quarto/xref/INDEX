@@ -1,0 +1,50 @@
+{
+  "index.qmd": {
+    "index.html": "b7106b41"
+  },
+  "01-initiation/charter.qmd": {
+    "charter.html": "cb26cb70"
+  },
+  "01-initiation/stakeholder-register.qmd": {
+    "stakeholder-register.html": "42189e79"
+  },
+  "02-planning/scope-mgmt.qmd": {
+    "scope-mgmt.html": "bbfb39da"
+  },
+  "02-planning/wbs.qmd": {
+    "wbs.html": "e9167f3d"
+  },
+  "02-planning/schedule.qmd": {
+    "schedule.html": "6e6bc907"
+  },
+  "02-planning/comm-plan.qmd": {
+    "comm-plan.html": "d11e67cf"
+  },
+  "03-execution/status-report.qmd": {
+    "status-report.html": "d84a182b"
+  },
+  "04-monitoring/risk-register.qmd": {
+    "risk-register.html": "00067131"
+  },
+  "04-monitoring/change-log.qmd": {
+    "change-log.html": "b2c7eaf9"
+  },
+  "05-closing/lessons-learned.qmd": {
+    "lessons-learned.html": "ff29ec35"
+  },
+  "02-planning/risk-mgmt.qmd": {
+    "risk-mgmt.html": "837d5b8d"
+  },
+  "02-planning/aspt-log.qmd": {
+    "aspt-log.html": "53891a44"
+  },
+  "02-planning/rqmt-gathering.qmd": {
+    "rqmt-gathering.html": "45a7b8f0"
+  },
+  "02-planning/pmp.qmd": {
+    "pmp.html": "3f4d985c"
+  },
+  "02-planning/qlty-mgmt.qmd": {
+    "qlty-mgmt.html": "2f70fab2"
+  }
+}

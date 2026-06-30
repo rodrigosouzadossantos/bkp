@@ -1,0 +1,8 @@
+# Lessons Learned
+
+## What Went Well
+- Use of Quarto for documentation.
+- Early stakeholder engagement.
+
+## Areas for Improvement
+- Initial budget estimation was too optimistic.

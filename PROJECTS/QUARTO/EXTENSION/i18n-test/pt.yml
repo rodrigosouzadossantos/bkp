@@ -1,0 +1,41 @@
+# General Headers
+nav_dashboard: "Painel"
+
+section_strategy: "Estratégia & Governança"
+section_initiating: "Iniciação (PMBOK)"
+section_planning: "Planejamento & Escopo"
+section_execution: "Execução"
+section_control: "Controle"
+
+i18n:
+  pt:
+
+    dashboard_title: "Painel Mestre do Projeto"
+
+    # Strategy & Governance
+    okr_label: "OKR"
+    vsm_label: "Mapeamento do Fluxo de Valor"
+
+    # Initiating
+    business_case: "Caso de Negócio"
+    project_charter: "Termo de Abertura do Projeto (TAP)"
+    stakeholder_register: "Registro de Partes Interessadas"
+
+    # Planning & Scope
+    requirements_doc: "Documentação de Requisitos"
+    wbs_label: "Estrutura Analítica do Projeto (EAP)"
+    wbs_dictionary: "Dicionário da EAP"
+
+    # Execution
+    product_backlog: "Backlog do Produto"
+    product_roadmap: "Roadmap do Produto"
+
+    # Control
+    risk_register: "Registro de Riscos"
+    change_log: "Registro de Mudanças"
+
+
+    charter_title: "Termo de Abertura (TAP)"
+    wbs_title: "Estrutura Analítica do Projeto (EAP)"
+    risk_label: "Nível de Risco"
+    author_label: "Especialista Responsável"

@@ -1,0 +1,125 @@
+from re import I
+from ingestion.spark_session import create_spark
+#from ingestion.ingest import run_ingestion
+
+from pyspark.sql.window import Window
+from pyspark.sql import functions as F
+
+import math
+from PIL import Image, ImageOps
+from io import BytesIO
+
+import cv2
+import numpy as np
+
+
+PATH = 's3a://noaa-auv/main/NOAA-AUV/VIOLA/6000713538/'
+
+N = 50
+N_COLS = 5
+THUMB_SIZE = (200, 200)  # size of each tile
+BORDER_SIZE = 0          # thickness of border
+SPACING = 3              # gap between images
+BORDER_COLOR = (0, 0, 0) # black border
+
+
+import nvidia.dali.fn as fn
+import nvidia.dali.types as types
+from nvidia.dali.pipeline import Pipeline
+
+import cupy as cp
+import numpy as np
+
+
+from pyspark.sql.functions import pandas_udf
+from pyspark.sql.types import StructType, StructField, StringType, BinaryType
+import pandas as pd
+import cupy as cp
+from nvidia.dali import pipeline_def, fn, types
+
+@pipeline_def(device_id=0)
+def decode_pipe():
+    jpegs = fn.external_source(name="images", device="cpu")
+    images = fn.decoders.image(jpegs, device="mixed", output_type=types.RGB)
+    return images
+
+
+from pyspark.sql.types import StructType, StructField, StringType, DoubleType
+
+schema = StructType([
+    StructField("path", StringType()),
+    StructField("brightness", DoubleType()),
+    StructField("contrast", DoubleType()),
+    StructField("mean_r", DoubleType()),
+    StructField("mean_g", DoubleType()),
+    StructField("mean_b", DoubleType()),
+])
+
+
+import pandas as pd
+import cupy as cp
+import numpy as np
+from pyspark.sql.functions import pandas_udf
+from nvidia import nvimgcodec
+
+
+_decoder = nvimgcodec.Decoder()
+
+@pandas_udf(schema)
+def gpu_image_features(paths: pd.Series, contents: pd.Series) -> pd.DataFrame:
+
+    # -------------------------
+    # GPU decode (batch)
+    # -------------------------
+    images = _decoder.decode(contents.tolist())
+
+    # Stack images into a single GPU tensor (CRITICAL for H100 efficiency)
+    gpu_batch = cp.stack([cp.asarray(img, dtype=cp.float32) for img in images])
+
+    # -------------------------
+    # FULL BATCH GPU COMPUTE
+    # -------------------------
+
+    # channel extraction (vectorized)
+    brightness = cp.mean(gpu_batch[:, :, :, 2], axis=(1, 2))
+    contrast = cp.std(gpu_batch, axis=(1, 2, 3))
+
+    mean_rgb = cp.mean(gpu_batch, axis=(1, 2))
+
+    # -------------------------
+    # BACK TO CPU ONCE
+    # -------------------------
+    brightness = brightness.get()
+    contrast = contrast.get()
+    mean_rgb = mean_rgb.get()
+
+    return pd.DataFrame({
+        "path": paths,
+        "brightness": brightness,
+        "contrast": contrast,
+        "mean_r": mean_rgb[:, 0],
+        "mean_g": mean_rgb[:, 1],
+        "mean_b": mean_rgb[:, 2],
+    })
+
+
+def main():
+  spark = create_spark()
+
+  spark.conf.set("spark.rapids.sql.enabled", "false")
+  spark.conf.set("spark.rapids.sql.explain", "ALL")
+
+  df = (
+    spark.read
+    .format("binaryFile")
+    .load(PATH)
+  )
+  result_df = (
+    df.repartition(512)
+      .select("path", "content")
+      .mapInPandas(gpu_image_features, schema=schema)
+  )
+  result_df.show()
+
+if __name__ == "__main__":
+  main()

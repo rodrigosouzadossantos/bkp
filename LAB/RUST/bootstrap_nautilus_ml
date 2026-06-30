@@ -1,0 +1,500 @@
+#!/usr/bin/env bash
+set -e
+set -o pipefail
+
+PROJECT=${1:-nautilus-ml}
+echo "Bootstrapping Nautilus ML platform in $PROJECT ..."
+
+########################################
+# Helper functions for headers
+########################################
+
+create_header() {
+  LANG=$1
+  MODULE=$2
+  COMPONENT=$3
+  if [ "$LANG" = "rust" ]; then COMMENT="//"; else COMMENT="#"; fi
+  cat <<EOF
+$COMMENT vim: set ts=2 sw=2 et:
+$COMMENT --------------------------------------------------
+$COMMENT Project: Nautilus ML Platform
+$COMMENT Module: $MODULE
+$COMMENT Component: $COMPONENT
+$COMMENT Inspired by Jules Verne's "Twenty Thousand Leagues Under the Sea"
+$COMMENT License: Apache-2.0
+$COMMENT --------------------------------------------------
+EOF
+}
+
+create_file() {
+  FILE=$1
+  LANG=$2
+  MODULE=$3
+  COMPONENT=$4
+  mkdir -p "$(dirname "$FILE")"
+  create_header "$LANG" "$MODULE" "$COMPONENT" > "$FILE"
+}
+
+########################################
+# Directory structure
+########################################
+
+mkdir -p $PROJECT/rust/{core,storage,dataset,cv,experiment,visualization,python-bindings}
+mkdir -p $PROJECT/python/nautilus_ml
+mkdir -p $PROJECT/tests
+mkdir -p $PROJECT/scripts
+mkdir -p $PROJECT/configs
+mkdir -p $PROJECT/templates
+mkdir -p $PROJECT/.github/workflows
+
+########################################
+# Header template
+########################################
+
+cat > $PROJECT/templates/header.template <<EOF
+Project: Nautilus ML Platform
+Inspired by Jules Verne's "Twenty Thousand Leagues Under the Sea"
+Module: <MODULE>
+Component: <COMPONENT>
+Description:
+High-performance Rust core for deep-sea computer vision pipelines.
+Data Lineage: Arrow columnar datasets, zero-copy NumPy/Torch bridge
+Experiment Tracking: MLFlow / W&B / DVC / LakeFS
+Author: Nautilus AI Platform Engineering
+License: Apache-2.0
+EOF
+
+########################################
+# Rust workspace
+########################################
+
+cd $PROJECT/rust
+cat > Cargo.toml <<EOF
+[workspace]
+members = [
+ "core",
+ "storage",
+ "dataset",
+ "cv",
+ "experiment",
+ "visualization",
+ "python-bindings"
+]
+EOF
+
+for crate in core storage dataset cv experiment visualization python-bindings; do
+  cargo new $crate --lib
+done
+
+########################################
+# Rust dependencies
+########################################
+
+# core
+cd core
+cargo add rayon tokio num_cpus serde serde_json anyhow thiserror log env_logger arrow numpy
+cd ..
+
+# storage
+cd storage
+cargo add aws-config aws-sdk-s3 azure_storage azure_storage_blobs tokio rayon
+cd ..
+
+# dataset
+cd dataset
+cargo add arrow polars numpy rayon tokio
+cd ..
+
+# cv
+cd cv
+cargo add opencv ndarray rayon tokio
+cd ..
+
+# experiment
+cd experiment
+cargo add reqwest serde_json tokio
+cd ..
+
+# visualization
+cd visualization
+cargo add pyo3 --features extension-module numpy arrow
+cd ..
+
+# python bindings
+cd python-bindings
+cargo add pyo3 --features extension-module numpy
+cd ../..
+
+########################################
+# Python environment
+########################################
+
+uv venv
+source .venv/bin/activate
+uv init --name nautilus-ml --python 3.11
+
+uv add numpy pandas pyarrow torch torchvision torchaudio tensorflow keras scikit-learn
+uv add altair plotly mlflow wandb dvc[s3] dvc[azure] lakefs-client boto3 azure-storage-blob
+uv add pytest ruff mypy maturin
+
+########################################
+# -------------------
+# CORE: runtime.rs
+########################################
+create_file rust/core/src/runtime.rs rust core runtime
+
+cat >> rust/core/src/runtime.rs <<'EOF'
+use rayon::ThreadPoolBuilder;
+use num_cpus;
+
+pub fn init_runtime() {
+  ThreadPoolBuilder::new()
+    .num_threads(num_cpus::get())
+    .build_global()
+    .unwrap();
+}
+
+pub fn cpu_count() -> usize {
+  num_cpus::get()
+}
+
+#[cfg(test)]
+mod tests {
+  use super::*;
+  #[test]
+  fn test_cpu_count() {
+    let cpus = cpu_count();
+    println!("CPUs detected: {}", cpus);
+    assert!(cpus > 0);
+  }
+}
+EOF
+
+########################################
+# -------------------
+# STORAGE: S3
+########################################
+create_file rust/storage/src/s3.rs rust storage s3
+
+cat >> rust/storage/src/s3.rs <<'EOF'
+use aws_sdk_s3::{Client, Config, Region};
+use aws_config::meta::region::RegionProviderChain;
+use tokio_stream::StreamExt;
+use rayon::prelude::*;
+
+pub async fn list_buckets() -> Vec<String> {
+    let region_provider = RegionProviderChain::default_provider().or_else("us-east-1");
+    let config = aws_config::from_env().region(region_provider).load().await;
+    let client = Client::new(&config);
+
+    let resp = client.list_buckets().send().await.unwrap();
+    let names = resp.buckets().unwrap_or(&[]).iter()
+        .filter_map(|b| b.name.clone())
+        .collect::<Vec<_>>();
+    names
+}
+
+pub async fn list_objects(bucket: &str) -> Vec<String> {
+    let region_provider = RegionProviderChain::default_provider().or_else("us-east-1");
+    let config = aws_config::from_env().region(region_provider).load().await;
+    let client = Client::new(&config);
+
+    let resp = client.list_objects_v2().bucket(bucket).send().await.unwrap();
+    let keys = resp.contents().unwrap_or(&[]).iter()
+        .filter_map(|obj| obj.key.clone())
+        .collect::<Vec<_>>();
+    keys
+}
+
+pub fn parallel_download(keys: Vec<String>) {
+    keys.par_iter().for_each(|k| {
+        println!("Downloading: {}", k);
+        // Insert actual S3 download code here
+    });
+}
+
+#[cfg(test)]
+mod tests {
+  use super::*;
+  #[tokio::test]
+  async fn test_list_buckets() {
+    let buckets = list_buckets().await;
+    println!("Buckets: {:?}", buckets);
+  }
+}
+EOF
+
+########################################
+# -------------------
+# STORAGE: Azure
+########################################
+create_file rust/storage/src/azure.rs rust storage azure
+
+cat >> rust/storage/src/azure.rs <<'EOF'
+use azure_storage::prelude::*;
+use azure_storage_blobs::prelude::*;
+use tokio;
+use rayon::prelude::*;
+
+pub async fn list_containers(account: &str, key: &str) -> Vec<String> {
+    let storage = StorageAccountClient::new_access_key(account, key)
+        .as_storage_client();
+    let resp = storage.list_containers().execute().await.unwrap();
+    resp.incomplete_vector.iter().map(|c| c.name.clone()).collect()
+}
+
+pub fn parallel_blob_download(blobs: Vec<String>) {
+    blobs.par_iter().for_each(|b| {
+        println!("Downloading blob: {}", b);
+    });
+}
+
+#[cfg(test)]
+mod tests {
+  use super::*;
+  #[tokio::test]
+  async fn test_list_containers() {
+    let containers = list_containers("dummy", "dummy").await;
+    println!("Containers: {:?}", containers);
+  }
+}
+EOF
+
+########################################
+# -------------------
+# DATASET: ingestion + Arrow -> NumPy
+########################################
+create_file rust/dataset/src/ingestion.rs rust dataset ingestion
+
+cat >> rust/dataset/src/ingestion.rs <<'EOF'
+use rayon::prelude::*;
+use std::fs;
+
+pub fn ingest_dataset(paths: Vec<String>) {
+    paths.par_iter().for_each(|p| {
+        println!("Ingesting dataset file: {}", p);
+        // Placeholder: read file, parse metadata
+        let _content = fs::read(p).unwrap_or_default();
+    });
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    #[test]
+    fn test_ingest_dataset() {
+        ingest_dataset(vec!["./Cargo.toml".to_string()]);
+    }
+}
+EOF
+
+create_file rust/dataset/src/arrow_bridge.rs rust dataset arrow_bridge
+
+cat >> rust/dataset/src/arrow_bridge.rs <<'EOF'
+use numpy::{IntoPyArray, PyArray1};
+use pyo3::prelude::*;
+
+#[pyfunction]
+pub fn arrow_to_numpy<'py>(py: Python<'py>) -> &'py PyArray1<f64> {
+    let data = vec![0.0,1.0,2.0,3.0,4.0];
+    data.into_pyarray(py)
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use pyo3::prelude::*;
+    #[test]
+    fn test_zero_copy() {
+        Python::with_gil(|py| {
+            let arr = arrow_to_numpy(py);
+            assert_eq!(arr.len(), 5);
+        });
+    }
+}
+EOF
+
+########################################
+# -------------------
+# CV: image/video
+########################################
+create_file rust/cv/src/image.rs rust cv image
+
+cat >> rust/cv/src/image.rs <<'EOF'
+use opencv::imgcodecs;
+use opencv::prelude::*;
+
+pub fn load_image(path: &str) -> opencv::Result<opencv::core::Mat> {
+    imgcodecs::imread(path, imgcodecs::IMREAD_COLOR)
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    #[test]
+    fn test_load_image() {
+        let mat = load_image("./Cargo.toml");
+        assert!(mat.is_ok());
+    }
+}
+EOF
+
+create_file rust/cv/src/video.rs rust cv video
+
+cat >> rust/cv/src/video.rs <<'EOF'
+use opencv::videoio;
+use opencv::prelude::*;
+
+pub fn read_video_frames(path: &str) -> opencv::Result<Vec<opencv::core::Mat>> {
+    let mut cap = videoio::VideoCapture::from_file(path, videoio::CAP_ANY)?;
+    let mut frames = vec![];
+    let mut frame = opencv::core::Mat::default();
+    while cap.read(&mut frame)? {
+        frames.push(frame.clone());
+    }
+    Ok(frames)
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    #[test]
+    fn test_video_read() {
+        let res = read_video_frames("./Cargo.toml");
+        assert!(res.is_ok());
+    }
+}
+EOF
+
+########################################
+# -------------------
+# EXPERIMENT: MLFlow/W&B/DVC/LakeFS
+########################################
+create_file rust/experiment/src/mlflow.rs rust experiment mlflow
+
+cat >> rust/experiment/src/mlflow.rs <<'EOF'
+pub fn log_metric(name: &str, value: f64) {
+    println!("MLFlow metric {}={}", name, value);
+}
+
+pub fn log_param(name: &str, value: &str) {
+    println!("MLFlow param {}={}", name, value);
+}
+EOF
+
+create_file rust/experiment/src/wandb.rs rust experiment wandb
+
+cat >> rust/experiment/src/wandb.rs <<'EOF'
+pub fn log_metrics(name: &str, value: f64) {
+    println!("W&B metric {}={}", name, value);
+}
+
+pub fn init_run(run_name: &str) {
+    println!("Initializing W&B run: {}", run_name);
+}
+EOF
+
+create_file rust/experiment/src/dvc.rs rust experiment dvc
+
+cat >> rust/experiment/src/dvc.rs <<'EOF'
+pub fn track_dataset(path: &str) {
+    println!("DVC tracking dataset: {}", path);
+}
+EOF
+
+create_file rust/experiment/src/lakefs.rs rust experiment lakefs
+
+cat >> rust/experiment/src/lakefs.rs <<'EOF'
+pub fn create_branch(name: &str) {
+    println!("LakeFS create branch: {}", name);
+}
+EOF
+
+########################################
+# -------------------
+# VISUALIZATION: data preparation
+########################################
+create_file rust/visualization/src/plotting.rs rust visualization plotting
+
+cat >> rust/visualization/src/plotting.rs <<'EOF'
+use pyo3::prelude::*;
+use numpy::{IntoPyArray, PyArray1};
+
+#[pyfunction]
+pub fn prepare_metrics<'py>(py: Python<'py>, data: Vec<f64>) -> &'py PyArray1<f64> {
+    data.into_pyarray(py)
+}
+EOF
+
+########################################
+# -------------------
+# PYTHON: orchestration + plotting
+########################################
+create_file python/nautilus_ml/orchestration.py python orchestration orchestration
+
+cat >> python/nautilus_ml/orchestration.py <<'EOF'
+from nautilus_ml import plotting
+from nautilus_ml.bindings import arrow_to_numpy
+
+def run_pipeline():
+    arr = arrow_to_numpy()
+    print("Zero-copy data:", arr)
+EOF
+
+create_file python/nautilus_ml/plotting.py python visualization plotting
+
+cat >> python/nautilus_ml/plotting.py <<'EOF'
+import altair as alt
+import pandas as pd
+
+def plot_metrics(df: pd.DataFrame):
+    chart = alt.Chart(df).mark_line().encode(
+        x='step',
+        y='value'
+    )
+    return chart
+EOF
+
+create_file python/nautilus_ml/__init__.py python init init
+
+cat >> python/nautilus_ml/__init__.py <<'EOF'
+from .orchestration import run_pipeline
+from .plotting import plot_metrics
+EOF
+
+########################################
+# -------------------
+# TESTS
+########################################
+create_file tests/test_runtime.py python tests runtime
+
+cat >> tests/test_runtime.py <<'EOF'
+def test_pipeline():
+    from nautilus_ml import run_pipeline
+    run_pipeline()
+EOF
+
+########################################
+# -------------------
+# GITHUB CI
+########################################
+mkdir -p .github/workflows
+cat > .github/workflows/ci.yml <<EOF
+name: CI
+on: [push]
+jobs:
+ build:
+  runs-on: ubuntu-latest
+  steps:
+   - uses: actions/checkout@v4
+   - uses: dtolnay/rust-toolchain@stable
+   - uses: actions/setup-python@v5
+     with:
+       python-version: "3.11"
+   - run: pip install uv maturin
+   - run: uv sync
+   - run: maturin develop
+   - run: pytest
+EOF
+
+echo "Nautilus ML platform bootstrap complete! Navigate to $PROJECT."

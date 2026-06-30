@@ -1,0 +1,123 @@
+---
+title: "Introdução a OKR e Suas Variantes para Projetos de IA Subsea"
+author: "Time de IA Submarina"
+format:
+  html:
+    theme: cosmo
+    toc: true
+    toc-depth: 3
+bibliography: references.bib
+link-citations: true
+execute:
+  echo: true
+---
+
+# 1. Introdução
+
+Neste manuscrito apresentamos os **OKRs (Objectives & Key Results)** e suas variantes, sempre conectando com **gestão de projetos** e **mentalidade Agile**.  
+
+O objetivo é fornecer **clareza sobre o que OKR é e não é**, como pode ser aplicado em projetos de IA/ML submarina, e como se integra naturalmente a processos ágeis.
+
+---
+
+# 2. O que é OKR
+
+OKR é um **sistema de gestão por objetivos** que conecta metas estratégicas a resultados mensuráveis.
+
+- **Objective (Objetivo):** Descrição qualitativa de uma mudança desejada.  
+- **Key Result (Resultado-chave):** Métrica quantitativa que indica se o objetivo foi atingido.  
+- **Initiatives (Iniciativas):** Ações ou projetos que tentam gerar os KRs.
+
+> Como enfatiza Doerr [@doerr2018]: "Os Key Results devem medir resultado, não esforço."
+
+---
+
+# 3. OKR e Gestão de Projetos
+
+Em gestão de projetos, OKRs **não substituem backlog ou cronograma**, mas ajudam a:
+
+1. Alinhar **objetivos estratégicos** a tarefas técnicas  
+2. Criar **prioridade de impacto** sobre esforço  
+3. Permitir **rastreabilidade entre metas e entregas**
+
+No contexto Agile:
+
+- OKRs definem **o que mudar**  
+- Scrum/Kanban definem **como executar**
+
+> Wodtke [@wodtke2016] destaca que OKRs e Agile são complementares: OKRs fornecem foco, Agile fornece ritmo e adaptabilidade.
+
+---
+
+# 4. Variantes de OKR
+
+OKRs podem ter **diferentes horizontes temporais**, dependendo do foco:
+
+## 4.1 OKR Estratégico (Trimestral ou Quadrimestral)
+
+- Foco: impacto operacional e alinhamento estratégico  
+- Mantém a **visão de longo prazo** do projeto  
+- Exemplo: aumentar confiabilidade de detecção automática em inspeções submarinas
+
+**Conexão com gestão de projeto:** ligado ao **roadmap estratégico** ou macro-épicos
+
+---
+
+## 4.2 OKR Tático / Mensal
+
+- Foco: melhoria de capacidades e execução intermediária  
+- Alinha iniciativas técnicas a OKRs estratégicos  
+- Exemplo: melhorar cobertura e consistência de dataset
+
+**Conexão com gestão de projeto:** ligado a **épicos ou entregas mensais**, priorizando o impacto
+
+---
+
+## 4.3 OKR Experimental / Curto (1–2 semanas)
+
+- Foco: aprendizado rápido, testes controlados  
+- Ideal para experimentação em IA/ML (filtros, ajustes de modelo, pipelines de dados)  
+- Exemplo: validar efeito de filtro espacial na redução de falsos positivos
+
+**Conexão com gestão de projeto:** se encaixa em **Sprint Goals** ou mini-experimentos ágeis
+
+---
+
+# 5. OKR e Mentalidade Agile
+
+Em Agile, é fundamental manter:
+
+1. **Transparência:** todos sabem o objetivo e métrica de sucesso  
+2. **Iteração curta:** ciclos de aprendizado rápidos (1–2 semanas)  
+3. **Adaptabilidade:** ajustar iniciativas conforme os resultados intermediários  
+4. **Foco em valor:** sempre priorizando impacto real sobre esforço
+
+> Segundo Grove [@grove1983], metas claras e mensuráveis reduzem desperdício e aumentam eficácia de equipe.
+
+---
+
+# 6. Resumo de Hierarquia e Ciclos
+
+| Nível | Horizonte | Exemplo | Ligação Agile |
+|-------|-----------|---------|---------------|
+| Estratégico | Trimestral | Confiabilidade de detecção automática | Roadmap / Macro-épico |
+| Tático | Mensal | Cobertura de dataset | Épico / Entrega mensal |
+| Experimental | 1–2 semanas | Filtro espacial de pontos | Sprint Goal / Experimento |
+| Execução | Dias | Ajustes de código e PRs | Backlog / Task |
+
+---
+
+# 7. Observações Diplomáticas
+
+- OKR **não é lista de tarefas**  
+- OKR **não substitui planejamento detalhado**  
+- Serve para **alinhamento estratégico, foco e medição de impacto**  
+- Sempre vincular OKR ao Agile para **ritmo e adaptabilidade**
+
+> Essa abordagem permite respeitar experiência prévia da equipe e introduzir metodologia de forma construtiva.
+
+---
+
+# 8. Referências
+
+```{bibliography} id="refs-okr-agile"

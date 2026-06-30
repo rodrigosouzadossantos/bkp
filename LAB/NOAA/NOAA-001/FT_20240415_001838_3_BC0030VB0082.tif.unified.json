@@ -1,0 +1,281 @@
+{
+  "file": {
+    "path": "/root/LAB/NOAA/FT_20240415_001838_3_BC0030VB0082.tif",
+    "filename": "FT_20240415_001838_3_BC0030VB0082.tif",
+    "extension": ".tif",
+    "size_bytes": 2552872,
+    "size_mb": 2.435
+  },
+  "tiff": {
+    "byte_order": "little-endian",
+    "bigtiff": false,
+    "pages": 1,
+    "dtype": "uint8",
+    "shape": [
+      3,
+      1217,
+      699
+    ],
+    "compression": "Uncompressed",
+    "photometric": "RGB",
+    "planar_configuration": "Planar",
+    "orientation": "TopLeft",
+    "bits_per_sample": [
+      8,
+      8,
+      8
+    ],
+    "samples_per_pixel": 3,
+    "rows_per_strip": 83,
+    "strips": 45
+  },
+  "geotiff_tags": {
+    "pixel_scale": [
+      0.005,
+      0.005,
+      0.0
+    ],
+    "tie_points": [
+      0.0,
+      0.0,
+      0.0,
+      352593.83646957896,
+      7486211.414689742,
+      0.0
+    ],
+    "ascii_params": "SIRGAS 2000 / UTM zone 24S|SIRGAS 2000|SIRGAS 2000 / UTM zone 24S|",
+    "double_params": [
+      6356752.314140356,
+      298.257222101,
+      6378137.0
+    ],
+    "keys": [
+      {
+        "id": 1024,
+        "name": "GTModelTypeGeoKey",
+        "location": 0,
+        "count": 1,
+        "value": 1
+      },
+      {
+        "id": 1025,
+        "name": "GTRasterTypeGeoKey",
+        "location": 0,
+        "count": 1,
+        "value": 1
+      },
+      {
+        "id": 1026,
+        "name": "GTCitationGeoKey",
+        "location": 34737,
+        "count": 27,
+        "value": 0
+      },
+      {
+        "id": 2048,
+        "name": "GeographicTypeGeoKey",
+        "location": 0,
+        "count": 1,
+        "value": 4674
+      },
+      {
+        "id": 2049,
+        "name": "GeogCitationGeoKey",
+        "location": 34737,
+        "count": 12,
+        "value": 27
+      },
+      {
+        "id": 2050,
+        "name": "GeogGeodeticDatumGeoKey",
+        "location": 0,
+        "count": 1,
+        "value": 6674
+      },
+      {
+        "id": 2052,
+        "name": "GeogLinearUnitsGeoKey",
+        "location": 0,
+        "count": 1,
+        "value": 9001
+      },
+      {
+        "id": 2054,
+        "name": "GeogAngularUnitsGeoKey",
+        "location": 0,
+        "count": 1,
+        "value": 9102
+      },
+      {
+        "id": 2056,
+        "name": "GeogEllipsoidGeoKey",
+        "location": 0,
+        "count": 1,
+        "value": 7019
+      },
+      {
+        "id": 2057,
+        "name": "GeogSemiMajorAxisGeoKey",
+        "location": 34736,
+        "count": 1,
+        "value": 2
+      },
+      {
+        "id": 2058,
+        "name": "GeogSemiMinorAxisGeoKey",
+        "location": 34736,
+        "count": 1,
+        "value": 0
+      },
+      {
+        "id": 2059,
+        "name": "GeogInvFlatteningGeoKey",
+        "location": 34736,
+        "count": 1,
+        "value": 1
+      },
+      {
+        "id": 3072,
+        "name": "ProjectedCSTypeGeoKey",
+        "location": 0,
+        "count": 1,
+        "value": 31984
+      },
+      {
+        "id": 3073,
+        "name": "PCSCitationGeoKey",
+        "location": 34737,
+        "count": 27,
+        "value": 39
+      },
+      {
+        "id": 3074,
+        "name": "ProjectionGeoKey",
+        "location": 0,
+        "count": 1,
+        "value": 16124
+      },
+      {
+        "id": 3076,
+        "name": "ProjLinearUnitsGeoKey",
+        "location": 0,
+        "count": 1,
+        "value": 9001
+      }
+    ]
+  },
+  "image": {
+    "format": "TIFF",
+    "mode": "RGB",
+    "width": 699,
+    "height": 1217,
+    "bands": [
+      "R",
+      "G",
+      "B"
+    ]
+  },
+  "raster": {
+    "driver": "GTiff",
+    "count": 3,
+    "dtypes": [
+      "uint8",
+      "uint8",
+      "uint8"
+    ],
+    "crs": "EPSG:31984",
+    "epsg": 31984,
+    "resolution": [
+      0.005,
+      0.005
+    ],
+    "nodata": 0.0,
+    "bounds": [
+      352593.83646957896,
+      7486205.329689742,
+      352597.33146957896,
+      7486211.414689742
+    ],
+    "transform": {
+      "a": 0.005,
+      "b": 0.0,
+      "c": 352593.83646957896,
+      "d": 0.0,
+      "e": -0.005,
+      "f": 7486211.414689742
+    },
+    "extent_meters": {
+      "width": 3.495,
+      "height": 6.085
+    },
+    "metadata": {
+      "AREA_OR_POINT": "Area"
+    },
+    "statistics": {
+      "band_1": {
+        "min": 0.0,
+        "max": 238.0,
+        "mean": 80.09876181844471,
+        "std": 18.857152740187836,
+        "median": 82.0
+      },
+      "band_2": {
+        "min": 0.0,
+        "max": 217.0,
+        "mean": 79.27577017525917,
+        "std": 18.443121582860375,
+        "median": 82.0
+      },
+      "band_3": {
+        "min": 0.0,
+        "max": 169.0,
+        "mean": 79.41204655553244,
+        "std": 18.105371694500025,
+        "median": 82.0
+      }
+    }
+  },
+  "exif": {
+    "mime_type": "image/tiff",
+    "megapixels": 0.851,
+    "geo_tiff_version": "1.1.0",
+    "projection": "UTM zone 24S",
+    "citation": "SIRGAS 2000 / UTM zone 24S"
+  },
+  "gdal": {
+    "driver": "GTiff",
+    "files": [
+      "FT_20240415_001838_3_BC0030VB0082.tif"
+    ],
+    "corner_coordinates": {
+      "upperLeft": [
+        352593.836,
+        7486211.415
+      ],
+      "lowerLeft": [
+        352593.836,
+        7486205.33
+      ],
+      "lowerRight": [
+        352597.331,
+        7486205.33
+      ],
+      "upperRight": [
+        352597.331,
+        7486211.415
+      ],
+      "center": [
+        352595.584,
+        7486208.372
+      ]
+    },
+    "metadata": {
+      "": {
+        "AREA_OR_POINT": "Area"
+      },
+      "IMAGE_STRUCTURE": {
+        "INTERLEAVE": "BAND"
+      }
+    }
+  }
+}

@@ -1,0 +1,767 @@
+{
+  "file_info": {
+    "path": "/root/LAB/NOAA/FT_20240415_001838_3_BC0030VB0082.tif",
+    "filename": "FT_20240415_001838_3_BC0030VB0082.tif",
+    "size_bytes": 2552872
+  },
+  "tiff": {
+    "is_bigtiff": false,
+    "byteorder": "<",
+    "pages_count": 1,
+    "pages": [
+      {
+        "page_index": 0,
+        "shape": [
+          3,
+          1217,
+          699
+        ],
+        "dtype": "uint8",
+        "photometric": "2",
+        "compression": "1",
+        "tags": {
+          "NewSubfileType": {
+            "code": 254,
+            "dtype": "4",
+            "count": 1,
+            "value": 0
+          },
+          "ImageWidth": {
+            "code": 256,
+            "dtype": "3",
+            "count": 1,
+            "value": 699
+          },
+          "ImageLength": {
+            "code": 257,
+            "dtype": "3",
+            "count": 1,
+            "value": 1217
+          },
+          "BitsPerSample": {
+            "code": 258,
+            "dtype": "3",
+            "count": 3,
+            "value": [
+              8,
+              8,
+              8
+            ]
+          },
+          "Compression": {
+            "code": 259,
+            "dtype": "3",
+            "count": 1,
+            "value": 1
+          },
+          "PhotometricInterpretation": {
+            "code": 262,
+            "dtype": "3",
+            "count": 1,
+            "value": 2
+          },
+          "StripOffsets": {
+            "code": 273,
+            "dtype": "4",
+            "count": 45,
+            "value": [
+              823,
+              58840,
+              116857,
+              174874,
+              232891,
+              290908,
+              348925,
+              406942,
+              464959,
+              522976,
+              580993,
+              639010,
+              697027,
+              755044,
+              813061,
+              851506,
+              909523,
+              967540,
+              1025557,
+              1083574,
+              1141591,
+              1199608,
+              1257625,
+              1315642,
+              1373659,
+              1431676,
+              1489693,
+              1547710,
+              1605727,
+              1663744,
+              1702189,
+              1760206,
+              1818223,
+              1876240,
+              1934257,
+              1992274,
+              2050291,
+              2108308,
+              2166325,
+              2224342,
+              2282359,
+              2340376,
+              2398393,
+              2456410,
+              2514427
+            ]
+          },
+          "Orientation": {
+            "code": 274,
+            "dtype": "3",
+            "count": 1,
+            "value": 1
+          },
+          "SamplesPerPixel": {
+            "code": 277,
+            "dtype": "3",
+            "count": 1,
+            "value": 3
+          },
+          "RowsPerStrip": {
+            "code": 278,
+            "dtype": "3",
+            "count": 1,
+            "value": 83
+          },
+          "StripByteCounts": {
+            "code": 279,
+            "dtype": "3",
+            "count": 45,
+            "value": [
+              58017,
+              58017,
+              58017,
+              58017,
+              58017,
+              58017,
+              58017,
+              58017,
+              58017,
+              58017,
+              58017,
+              58017,
+              58017,
+              58017,
+              38445,
+              58017,
+              58017,
+              58017,
+              58017,
+              58017,
+              58017,
+              58017,
+              58017,
+              58017,
+              58017,
+              58017,
+              58017,
+              58017,
+              58017,
+              38445,
+              58017,
+              58017,
+              58017,
+              58017,
+              58017,
+              58017,
+              58017,
+              58017,
+              58017,
+              58017,
+              58017,
+              58017,
+              58017,
+              58017,
+              38445
+            ]
+          },
+          "PlanarConfiguration": {
+            "code": 284,
+            "dtype": "3",
+            "count": 1,
+            "value": 2
+          },
+          "SampleFormat": {
+            "code": 339,
+            "dtype": "3",
+            "count": 3,
+            "value": [
+              1,
+              1,
+              1
+            ]
+          },
+          "ModelPixelScaleTag": {
+            "code": 33550,
+            "dtype": "12",
+            "count": 3,
+            "value": [
+              0.005,
+              0.005,
+              0.0
+            ]
+          },
+          "ModelTiepointTag": {
+            "code": 33922,
+            "dtype": "12",
+            "count": 6,
+            "value": [
+              0.0,
+              0.0,
+              0.0,
+              352593.83646957896,
+              7486211.414689742,
+              0.0
+            ]
+          },
+          "GeoKeyDirectoryTag": {
+            "code": 34735,
+            "dtype": "3",
+            "count": 68,
+            "value": [
+              1,
+              1,
+              0,
+              16,
+              1024,
+              0,
+              1,
+              1,
+              1025,
+              0,
+              1,
+              1,
+              1026,
+              34737,
+              27,
+              0,
+              2048,
+              0,
+              1,
+              4674,
+              2049,
+              34737,
+              12,
+              27,
+              2050,
+              0,
+              1,
+              6674,
+              2052,
+              0,
+              1,
+              9001,
+              2054,
+              0,
+              1,
+              9102,
+              2056,
+              0,
+              1,
+              7019,
+              2057,
+              34736,
+              1,
+              2,
+              2058,
+              34736,
+              1,
+              0,
+              2059,
+              34736,
+              1,
+              1,
+              3072,
+              0,
+              1,
+              31984,
+              3073,
+              34737,
+              27,
+              39,
+              3074,
+              0,
+              1,
+              16124,
+              3076,
+              0,
+              1,
+              9001
+            ]
+          },
+          "GeoDoubleParamsTag": {
+            "code": 34736,
+            "dtype": "12",
+            "count": 3,
+            "value": [
+              6356752.314140356,
+              298.257222101,
+              6378137.0
+            ]
+          },
+          "GeoAsciiParamsTag": {
+            "code": 34737,
+            "dtype": "2",
+            "count": 67,
+            "value": "SIRGAS 2000 / UTM zone 24S|SIRGAS 2000|SIRGAS 2000 / UTM zone 24S|"
+          },
+          "GDAL_NODATA": {
+            "code": 42113,
+            "dtype": "2",
+            "count": 2,
+            "value": "0"
+          }
+        }
+      }
+    ]
+  },
+  "pillow": {
+    "format": "TIFF",
+    "mode": "RGB",
+    "size": [
+      699,
+      1217
+    ],
+    "width": 699,
+    "height": 1217,
+    "bands": [
+      "R",
+      "G",
+      "B"
+    ],
+    "info": {
+      "compression": "raw",
+      "dpi": [
+        1,
+        1
+      ],
+      "resolution": [
+        1,
+        1
+      ]
+    },
+    "tags": {
+      "ImageWidth": 699,
+      "ImageLength": 1217,
+      "BitsPerSample": [
+        8,
+        8,
+        8
+      ],
+      "Compression": 1,
+      "ModelTiepointTag": [
+        0.0,
+        0.0,
+        0.0,
+        352593.83646957896,
+        7486211.414689742,
+        0.0
+      ],
+      "GDAL_NODATA": "0",
+      "PhotometricInterpretation": 2,
+      "ModelPixelScaleTag": [
+        0.005,
+        0.005,
+        0.0
+      ],
+      "StripOffsets": [
+        823,
+        58840,
+        116857,
+        174874,
+        232891,
+        290908,
+        348925,
+        406942,
+        464959,
+        522976,
+        580993,
+        639010,
+        697027,
+        755044,
+        813061,
+        851506,
+        909523,
+        967540,
+        1025557,
+        1083574,
+        1141591,
+        1199608,
+        1257625,
+        1315642,
+        1373659,
+        1431676,
+        1489693,
+        1547710,
+        1605727,
+        1663744,
+        1702189,
+        1760206,
+        1818223,
+        1876240,
+        1934257,
+        1992274,
+        2050291,
+        2108308,
+        2166325,
+        2224342,
+        2282359,
+        2340376,
+        2398393,
+        2456410,
+        2514427
+      ],
+      "Orientation": 1,
+      "SampleFormat": [
+        1,
+        1,
+        1
+      ],
+      "SamplesPerPixel": 3,
+      "RowsPerStrip": 83,
+      "StripByteCounts": [
+        58017,
+        58017,
+        58017,
+        58017,
+        58017,
+        58017,
+        58017,
+        58017,
+        58017,
+        58017,
+        58017,
+        58017,
+        58017,
+        58017,
+        38445,
+        58017,
+        58017,
+        58017,
+        58017,
+        58017,
+        58017,
+        58017,
+        58017,
+        58017,
+        58017,
+        58017,
+        58017,
+        58017,
+        58017,
+        38445,
+        58017,
+        58017,
+        58017,
+        58017,
+        58017,
+        58017,
+        58017,
+        58017,
+        58017,
+        58017,
+        58017,
+        58017,
+        58017,
+        58017,
+        38445
+      ],
+      "PlanarConfiguration": 2,
+      "GeoKeyDirectoryTag": [
+        1,
+        1,
+        0,
+        16,
+        1024,
+        0,
+        1,
+        1,
+        1025,
+        0,
+        1,
+        1,
+        1026,
+        34737,
+        27,
+        0,
+        2048,
+        0,
+        1,
+        4674,
+        2049,
+        34737,
+        12,
+        27,
+        2050,
+        0,
+        1,
+        6674,
+        2052,
+        0,
+        1,
+        9001,
+        2054,
+        0,
+        1,
+        9102,
+        2056,
+        0,
+        1,
+        7019,
+        2057,
+        34736,
+        1,
+        2,
+        2058,
+        34736,
+        1,
+        0,
+        2059,
+        34736,
+        1,
+        1,
+        3072,
+        0,
+        1,
+        31984,
+        3073,
+        34737,
+        27,
+        39,
+        3074,
+        0,
+        1,
+        16124,
+        3076,
+        0,
+        1,
+        9001
+      ],
+      "GeoDoubleParamsTag": [
+        6356752.314140356,
+        298.257222101,
+        6378137.0
+      ],
+      "GeoAsciiParamsTag": "SIRGAS 2000 / UTM zone 24S|SIRGAS 2000|SIRGAS 2000 / UTM zone 24S|",
+      "NewSubfileType": 0
+    }
+  },
+  "rasterio": {
+    "driver": "GTiff",
+    "width": 699,
+    "height": 1217,
+    "count": 3,
+    "dtypes": [
+      "uint8",
+      "uint8",
+      "uint8"
+    ],
+    "indexes": [
+      1,
+      2,
+      3
+    ],
+    "descriptions": [
+      null,
+      null,
+      null
+    ],
+    "colorinterp": [
+      "3",
+      "4",
+      "5"
+    ],
+    "bounds": [
+      352593.83646957896,
+      7486205.329689742,
+      352597.33146957896,
+      7486211.414689742
+    ],
+    "transform": "| 0.01, 0.00, 352593.84|\n| 0.00,-0.01, 7486211.41|\n| 0.00, 0.00, 1.00|",
+    "crs": "EPSG:31984",
+    "res": [
+      0.005,
+      0.005
+    ],
+    "nodata": 0.0,
+    "meta": {
+      "driver": "GTiff",
+      "dtype": "uint8",
+      "nodata": 0.0,
+      "width": 699,
+      "height": 1217,
+      "count": 3,
+      "crs": "EPSG:31984",
+      "transform": [
+        0.005,
+        0.0,
+        352593.83646957896,
+        0.0,
+        -0.005,
+        7486211.414689742,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    "tags": {
+      "AREA_OR_POINT": "Area"
+    },
+    "band_tags": {
+      "1": {},
+      "2": {},
+      "3": {}
+    },
+    "statistics": {
+      "band_1": {
+        "min": 0.0,
+        "max": 238.0,
+        "mean": 80.09876181844471,
+        "std": 18.857152740187836,
+        "median": 82.0,
+        "shape": [
+          1217,
+          699
+        ]
+      },
+      "band_2": {
+        "min": 0.0,
+        "max": 217.0,
+        "mean": 79.27577017525917,
+        "std": 18.443121582860375,
+        "median": 82.0,
+        "shape": [
+          1217,
+          699
+        ]
+      },
+      "band_3": {
+        "min": 0.0,
+        "max": 169.0,
+        "mean": 79.41204655553244,
+        "std": 18.105371694500025,
+        "median": 82.0,
+        "shape": [
+          1217,
+          699
+        ]
+      }
+    }
+  },
+  "exiftool": {
+    "SourceFile": "FT_20240415_001838_3_BC0030VB0082.tif",
+    "ExifToolVersion": 13.25,
+    "FileName": "FT_20240415_001838_3_BC0030VB0082.tif",
+    "Directory": ".",
+    "FileSize": "2.6 MB",
+    "FileModifyDate": "2026:05:10 18:04:26-03:00",
+    "FileAccessDate": "2026:05:10 18:04:43-03:00",
+    "FileInodeChangeDate": "2026:05:10 18:04:26-03:00",
+    "FilePermissions": "-rwxr-xr-x",
+    "FileType": "TIFF",
+    "FileTypeExtension": "tif",
+    "MIMEType": "image/tiff",
+    "ExifByteOrder": "Little-endian (Intel, II)",
+    "SubfileType": "Full-resolution image",
+    "ImageWidth": 699,
+    "ImageHeight": 1217,
+    "BitsPerSample": "8 8 8",
+    "Compression": "Uncompressed",
+    "PhotometricInterpretation": "RGB",
+    "StripOffsets": "(Binary data 337 bytes, use -b option to extract)",
+    "Orientation": "Horizontal (normal)",
+    "SamplesPerPixel": 3,
+    "RowsPerStrip": 83,
+    "StripByteCounts": "(Binary data 269 bytes, use -b option to extract)",
+    "PlanarConfiguration": "Planar",
+    "SampleFormat": "Unsigned; Unsigned; Unsigned",
+    "PixelScale": "0.005 0.005 0",
+    "ModelTiePoint": "0 0 0 352593.836469579 7486211.41468974 0",
+    "GDALNoData": 0,
+    "GeoTiffVersion": "1.1.0",
+    "GTModelType": "Projected",
+    "GTRasterType": "Pixel Is Area",
+    "GTCitation": "SIRGAS 2000 / UTM zone 24S",
+    "GeographicType": "Unknown (4674)",
+    "GeogCitation": "SIRGAS 2000",
+    "GeogGeodeticDatum": "Unknown (6674)",
+    "GeogLinearUnits": "Linear Meter",
+    "GeogAngularUnits": "Angular Degree",
+    "GeogEllipsoid": "GRS 1980",
+    "GeogSemiMajorAxis": 6378137,
+    "GeogSemiMinorAxis": 6356752.31414036,
+    "GeogInvFlattening": 298.257222101,
+    "ProjectedCSType": "Unknown (31984)",
+    "PCSCitation": "SIRGAS 2000 / UTM zone 24S",
+    "Projection": "UTM zone 24S",
+    "ProjLinearUnits": "Linear Meter",
+    "ImageSize": "699x1217",
+    "Megapixels": 0.851
+  },
+  "gdal": {
+    "description": "FT_20240415_001838_3_BC0030VB0082.tif",
+    "driver": "GTiff",
+    "size": {
+      "width": 699,
+      "height": 1217,
+      "bands": 3
+    },
+    "projection": "PROJCS[\"SIRGAS 2000 / UTM zone 24S\",GEOGCS[\"SIRGAS 2000\",DATUM[\"Sistema_de_Referencia_Geocentrico_para_las_AmericaS_2000\",SPHEROID[\"GRS 1980\",6378137,298.257222101004,AUTHORITY[\"EPSG\",\"7019\"]],AUTHORITY[\"EPSG\",\"6674\"]],PRIMEM[\"Greenwich\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4674\"]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",-39],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",10000000],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"31984\"]]",
+    "geotransform": [
+      352593.83646957896,
+      0.005,
+      0.0,
+      7486211.414689742,
+      0.0,
+      -0.005
+    ],
+    "metadata": {
+      "AREA_OR_POINT": "Area"
+    },
+    "metadata_domains": {
+      "IMAGE_STRUCTURE": {
+        "INTERLEAVE": "BAND"
+      },
+      "": {
+        "AREA_OR_POINT": "Area"
+      },
+      "DERIVED_SUBDATASETS": {
+        "DERIVED_SUBDATASET_1_NAME": "DERIVED_SUBDATASET:LOGAMPLITUDE:FT_20240415_001838_3_BC0030VB0082.tif",
+        "DERIVED_SUBDATASET_1_DESC": "log10 of amplitude of input bands from FT_20240415_001838_3_BC0030VB0082.tif"
+      }
+    },
+    "bands": {
+      "1": {
+        "datatype": "Byte",
+        "nodata": 0.0,
+        "scale": null,
+        "offset": null,
+        "unit_type": "",
+        "metadata": {}
+      },
+      "2": {
+        "datatype": "Byte",
+        "nodata": 0.0,
+        "scale": null,
+        "offset": null,
+        "unit_type": "",
+        "metadata": {}
+      },
+      "3": {
+        "datatype": "Byte",
+        "nodata": 0.0,
+        "scale": null,
+        "offset": null,
+        "unit_type": "",
+        "metadata": {}
+      }
+    }
+  }
+}

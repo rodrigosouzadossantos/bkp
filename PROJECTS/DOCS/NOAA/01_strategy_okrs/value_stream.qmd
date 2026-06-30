@@ -1,0 +1,138 @@
+---
+title: "{{< i18n vsm_label >}}"
+---
+
+## Purpose of This Document
+
+This document maps **technical execution activities** to **business value and
+strategic outcomes**, ensuring alignment between:
+
+- Petrobras Subsea (SUB) strategic objectives
+- NOAA (internal SUB unit) validation and partnership
+- AI / Computer Vision technical implementation
+- PMBOK-governed project execution
+
+This artifact establishes the **strategic contract** between business, science,
+and technology, and is the mandatory reference for Planning and Execution
+phases.
+
+---
+
+# Value Stream — From Technical Capability to Business Value {.unnumbered}
+
+## Value Stream Principle
+
+> **No technical component exists unless it directly supports one or more Key
+> Results of OKR 2.1.**
+
+---
+
+## End-to-End Value Stream Mapping
+
+### Data Ingestion (AUV Images & Metadata)
+
+**Technical Scope**
+
+- Batch ingestion of AUV images
+- Metadata and spatial data capture
+- Dataset versioning
+
+**Value Contribution**
+
+- Enables KR1, KR2, KR5
+- Scalable onboarding of inspection campaigns
+
+---
+
+### Preprocessing & Quality Normalization
+
+**Technical Scope**
+
+- Resolution normalization
+- Lighting and contrast correction
+- Removal of unusable frames
+
+**Value Contribution**
+
+- Supports KR3
+- Reduces noise and increases screening reliability
+
+---
+
+### AI-Assisted Annotation (Human-in-the-Loop)
+
+**Technical Scope**
+
+- Assisted labeling
+- Iterative refinement with SMEs
+
+**Value Contribution**
+
+- Enables KR1 and KR3
+- Reduces expert effort while preserving authority
+
+---
+
+### Model Training & Inference (AI/CV)
+
+**Technical Scope**
+
+- Computer Vision model training
+- Precision-oriented inference
+- Offline batch execution
+
+**Value Contribution**
+
+- Core enabler of KR1, KR2, KR3
+- Primary automation value-add
+
+---
+
+### Validation & Quality Control
+
+**Technical Scope**
+
+- Performance monitoring
+- SME validation loops
+- Error analysis
+
+**Value Contribution**
+
+- Protects KR3
+- Controls operational and environmental risk
+
+---
+
+### Curated Output & Digital Asset Consolidation
+
+**Technical Scope**
+
+- Versioned datasets
+- Model artifacts
+- Traceability metadata
+
+**Value Contribution**
+
+- Directly fulfills KR4 and KR5
+- Converts project output into a corporate asset
+
+---
+
+## Governance Rule (Binding)
+
+> Every WBS element, technical decision, and architectural component **must be
+> traceable to at least one KR of [OKR at section @sec-okr]**.
+
+---
+
+## Strategic Summary
+
+[OKR at section @sec-okr] transforms AI/CV from a technical initiative into a
+**measurable value delivery mechanism** for Petrobras Subsea.
+
+This document is the **authoritative strategic reference** for:
+
+- Planning decisions
+- Scope control
+- Prioritization trade-offs
+- Executive reporting

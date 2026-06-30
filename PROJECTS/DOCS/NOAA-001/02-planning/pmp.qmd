@@ -1,0 +1,25 @@
+# Project Management Plan (PMP)
+
+## Scope Management
+Scope controlled via formal Change Requests approved by Sponsor.
+
+## Schedule Management
+Milestone-based planning with SME buffers.
+
+## Cost Management
+Personnel, compute, and contingency tracked monthly.
+
+## Quality Management
+Precision-first metrics validated by SMEs.
+
+## Resource Management
+Defined RACI under SUB governance.
+
+## Communication Management
+Weekly status, milestone reviews.
+
+## Risk Management
+Continuous monitoring of environmental and data risks.
+
+## Change Management
+Formal Change Control Log maintained.

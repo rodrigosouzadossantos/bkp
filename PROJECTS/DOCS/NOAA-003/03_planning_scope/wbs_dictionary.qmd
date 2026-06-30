@@ -1,0 +1,6 @@
+# WBS Dictionary
+
+### WP 1.1: Kafka Connect
+- **Owner:** Data Engineer
+- **Description:** Implement the consumer group logic for raw image ingestion.
+- **Acceptance Criteria:** Successfully consume 500 images/sec.

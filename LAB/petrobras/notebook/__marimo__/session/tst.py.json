@@ -1,0 +1,48 @@
+{
+  "version": "1",
+  "metadata": {
+    "marimo_version": "0.20.4",
+    "script_metadata_hash": null
+  },
+  "cells": [
+    {
+      "id": "Hbol",
+      "code_hash": "e0e171924d6f283e1610554c401c38ea",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "WIFo",
+      "code_hash": "c210e9906454217e63bcb469b52ae3d3",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "Hello, marimo 1!\nHello, marimo 2!\nHello, marimo 3!\nHello, marimo 4!\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    },
+    {
+      "id": "sKSr",
+      "code_hash": null,
+      "outputs": [],
+      "console": []
+    }
+  ]
+}

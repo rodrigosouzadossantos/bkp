@@ -1,0 +1,58 @@
+name: "Resultado-Chave (KR)"
+description: "Criar um Resultado-Chave mensurável"
+title: "[KR] "
+labels:
+  - okr
+  - type:key-result
+
+body:
+  - type: input
+    id: objetivo
+    attributes:
+      label: Objetivo Relacionado
+      description: Referência ao issue do Objetivo
+      placeholder: "#123"
+    validations:
+      required: true
+
+  - type: textarea
+    id: resultado
+    attributes:
+      label: Resultado-Chave
+      description: Resultado mensurável que indica progresso do objetivo
+      placeholder: |
+        Aumentar a precisão do modelo de detecção de corrosão em dutos
+        submarinos de 72% para 90%.
+    validations:
+      required: true
+
+  - type: input
+    id: baseline
+    attributes:
+      label: Valor Atual (Baseline)
+      placeholder: "72% precisão"
+
+  - type: input
+    id: meta
+    attributes:
+      label: Meta
+      placeholder: "90% precisão"
+
+  - type: textarea
+    id: metrica
+    attributes:
+      label: Métrica
+      description: Como este resultado será medido?
+      placeholder: |
+        Avaliação usando dataset rotulado de inspeções ROV
+        contendo corrosão, fissuras e bioincrustação.
+
+  - type: markdown
+    attributes:
+      value: |
+        ## Marcos do KR
+
+        - [ ] Dataset anotado de inspeções submarinas disponível
+        - [ ] Treinamento inicial do modelo de detecção
+        - [ ] Validação com dados de campo
+        - [ ] Implantação piloto em inspeções reais

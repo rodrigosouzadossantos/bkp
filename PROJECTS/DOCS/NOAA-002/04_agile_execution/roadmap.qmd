@@ -1,0 +1,5 @@
+# Product Roadmap
+
+- **Q1:** Core Engine & Kafka Integration.
+- **Q2:** Optimization for Edge Devices (Quantization).
+- **Q3:** Advanced Visualization and NLP-based filtering.

@@ -1,0 +1,37 @@
+![Image](https://images.openai.com/static-rsc-4/iHu3BHkSwfXBLf5Yq9-4cZhU9exZfG8lU2Habtvy5ApuM5EOxIDBL0cVVQNfDVR1HuEA_RXxORhVVvAz_hSAFKT0SkbGex7s-wLFN6NLFX5c7ZuQHz9gRSu5Jmyru0HJJyvQL9ICg3yg0S8_WOs9TxfpQt749ocYMm_g_qHAGnP015PiSpDyV_oBZGcTU8XQ?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/GmdIkPqGhz4YDidqxTsUs7zV7srWr53DkWfMWPVlhxLRlfskFQbub1FUzfJZDMCq2RYhNivUTDikyikvwTA7l2cuaIirgtkHCht5CqkJnIT8gxRmNY15TNDbqRupCHFjcscPvrQ_D2G_5V96dYC97Xx7pykOo9KiC8VzC91Q-qxNMI3uQx50lSnbHOYkHtV6?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/K9rZ42wf1vRXHFb8wvJZAd0A-OdE4OqqwLcpj7Ne6ELYp9hrPia8T6QCezpNVnfnrQ_dLZDJkMf7EdFewXtyTZmP17TIZB6qHPjxkriIJV8fIdbZbMnc7xQZfsUycAjOW8lzrHg6fdl4nukD_a-1goMA0jipOZJ6pYUjAtshrgFqrKUsgGfiwh9iq98NY2XT?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/uaFInQLAO341nMhtujPJ2LlXBzBstPuwcC03uQ9bGMmdNqcS6OMtXj6TXjj-_IUwpAmwxedW_9KOebObjpAXLJNbh5k6E84vA1T0yeqwaVekdh1mH2VRUGm2BnT9kTSjIOg79HktEyRTnetfI75IT1hUQgpcdhE-ZfX2X0-NZQUZQPeCbTa89zv1DKAe6WUS?purpose=fullsize)
+
+![Image](https://images.openai.com/static-rsc-4/BoTPpKXKBc_YWMY4PEQrijhLYFuD5tD97e8sh9xHLHXKG_RG9H-94DqQSV4bjo1I5mSuN7DpM63R_jI7PiabvPtmR_JYxelClpCLJ2COzmupB5-KBHrt6L_8E5e3q67wDwq22rorH60pr0bC9escir3lbBYrBWhX35Jjr3_9cRB4aNd-7DReIOUums3jnLfA?purpose=fullsize)
+
+## Visual seabed classification using k-means clustering, CIELAB colors and Gabor-filters
+
+This 2021 academic paper presents a computer-vision approach to classify seabed imagery using unsupervised learning and texture-color analysis. It integrates **k-means clustering**, **CIELAB color features**, and **Gabor filters** to automatically segment and identify seabed types in underwater images, supporting marine habitat mapping and ecological monitoring.
+
+### Key facts
+
+* **Publication year:** 2021
+* **Focus:** Unsupervised seabed image classification
+* **Core methods:** k-means clustering, CIELAB color, Gabor filters
+* **Application:** Benthic habitat mapping and sediment differentiation
+* **Outcome:** Automated, scalable seabed-type recognition
+
+### Methodology
+
+The study employs k-means clustering to segment underwater images based on extracted features. Color information is represented in the CIELAB color space, which models human color perception more effectively than RGB. Gabor filters extract multi-scale texture patterns, enabling separation of fine-grained sediment and biological structures. Combined, these features enhance classification robustness across lighting and turbidity variations.
+
+### Data and Processing Pipeline
+
+Underwater imagery—typically collected via remotely operated vehicles or diver-mounted cameras—is preprocessed for color correction and noise reduction. Each image’s pixels are transformed into the CIELAB space, and texture descriptors from Gabor filters at different orientations and scales are computed. The concatenated feature vectors are clustered using k-means, generating distinct seabed-type regions such as sand, gravel, algae, or coral.
+
+### Results and Evaluation
+
+The proposed method demonstrates effective segmentation and classification accuracy compared with traditional RGB-based clustering. It captures both color and textural cues, providing improved boundaries between substrate types. Quantitative evaluations show higher consistency and reduced manual labeling effort in benthic habitat mapping tasks.
+
+### Significance
+
+By merging perceptual color modeling and frequency-based texture analysis, this research offers a practical framework for automated seabed classification. It supports large-scale marine environmental assessment, aiding scientists in monitoring biodiversity and sediment distribution with minimal manual intervention.

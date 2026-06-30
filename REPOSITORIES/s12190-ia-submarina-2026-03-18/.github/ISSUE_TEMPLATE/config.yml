@@ -1,0 +1,6 @@
+blank_issues_enabled: false
+
+contact_links:
+  - name: Documentação de OKRs
+    url: https://github.com/petrobrasbr/s12190-ia-submarina/docs/okr
+    about: Consulte a documentação antes de abrir uma issue

@@ -1,0 +1,33 @@
+project:
+  title: "Subsea Benthic Analysis AI – Multi-Modal Environmental Intelligence Pipeline"
+
+metadata:
+  project-name: "Subsea Benthic Analysis AI"
+  project-desc: "Multi-Modal Environmental Intelligence Pipeline"
+  author-name: "Rodrigo Souza dos Santos"
+  project-po: "Walace Rosa Laurindo de Oliveira"
+  sme-lead: "Thais da Silva Dornelas"
+  project-sponsor: " Núcleo Operacional de Análise Ambiental de Imagens Marinhas - NOAA-IM"
+  executive-sponsor: "Ana Paula da Costa Falcão"
+
+format:
+  html:
+    #theme: cosmo
+    toc: true
+    toc-expand: false
+    code-fold: true
+    css: styles.css
+    html-math-method: mathjax
+    bread-crumbs: false
+    embed-resources: true
+  pdf:
+    documentclass: report
+    #keep-tex: true
+    include-in-header:
+      - templates/header.tex
+    template-partials:
+      - templates/before-body.tex
+
+format-links:
+  - html
+  - pdf

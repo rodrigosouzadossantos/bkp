@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Wed May 13 02:26:25 BRT 2026:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.16.1.1 - (1901046): instance a816c00e-019e-1fcc-f017-00002efce410 
+on database directory /root/LAB/NOAA/metastore_db with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@76ed5528 
+Loaded from file:/opt/spark/jars/derby-10.16.1.1.jar
+java.vendor=Debian
+java.runtime.version=21.0.10+7-Debian-1deb13u1
+user.dir=/root/LAB/NOAA
+os.name=Linux
+os.arch=amd64
+os.version=6.6.87.2-microsoft-standard-WSL2
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''

@@ -1,0 +1,107 @@
+📋 Servidor: NOAA
+🔑 Usando senha do config.yaml
+
+🔑 Autenticando como: ghva
+
+📁 Processando 2 diretórios...
+
+--------------------------------------------------------------------------------
+📂 [1/2] COM20240425/RUN_20240414_0030VB0082
+--------------------------------------------------------------------------------
+✅ Total de itens: 166535
+  ❓ [????] FT_20240415_001838_3_BC0030VB0082.tif
+  ❓ [????] FT_20240415_013754_6_BC0030VB0082.tif
+  ❓ [????] FT_20240415_060407_6_BC0030VB0082.tif
+  ❓ [????] FT_20240415_063754_6_BC0030VB0082.tif
+  ❓ [????] FT_20240415_013011_3_BC0030VB0082.tif
+  ❓ [????] FT_20240415_052400_6_BC0030VB0082.tif
+  ❓ [????] FT_20240415_101812_6_BC0030VB0082.tif
+  ❓ [????] FT_20240415_072332_6_BC0030VB0082.tif
+  ❓ [????] FT_20240415_051201_6_BC0030VB0082.tif
+  ❓ [????] FT_20240415_081009_0_BC0030VB0082.tif
+  ... e mais 166525 itens
+
+--------------------------------------------------------------------------------
+📂 [2/2] COM20240425/RUN_20240415_0030VB0083
+--------------------------------------------------------------------------------
+✅ Total de itens: 144438
+  ❓ [????] FT_20240416_032300_6_BC0030VB0083.tif
+  ❓ [????] FT_20240416_102715_3_BC0030VB0083.tif
+  ❓ [????] FT_20240416_033328_6_BC0030VB0083.tif
+  ❓ [????] FT_20240416_112034_3_BC0030VB0083.tif
+  ❓ [????] FT_20240416_115105_6_BC0030VB0083.tif
+  ❓ [????] FT_20240416_030655_6_BC0030VB0083.tif
+  ❓ [????] FT_20240416_112752_0_BC0030VB0083.tif
+  ❓ [????] FT_20240416_121925_3_BC0030VB0083.tif
+  ❓ [????] FT_20240416_050702_3_BC0030VB0083.tif
+  ❓ [????] FT_20240416_054743_6_BC0030VB0083.tif
+  ... e mais 144428 itens
+
+================================================================================
+📊 RESUMO GERAL
+================================================================================
+   Diretórios processados: 2
+   Total de itens: 310973
+   📁 Diretórios (amostra): 0
+   📄 Arquivos (amostra): 0
+================================================================================
+   ... 10000 itens contados
+   ... 20000 itens contados
+   ... 30000 itens contados
+   ... 40000 itens contados
+   ... 50000 itens contados
+   ... 60000 itens contados
+   ... 70000 itens contados
+   ... 80000 itens contados
+   ... 90000 itens contados
+   ... 100000 itens contados
+   ... 110000 itens contados
+   ... 120000 itens contados
+   ... 130000 itens contados
+   ... 140000 itens contados
+   ... 150000 itens contados
+   ... 160000 itens contados
+   ... 10000 itens lidos
+   ... 20000 itens lidos
+   ... 30000 itens lidos
+   ... 40000 itens lidos
+   ... 50000 itens lidos
+   ... 60000 itens lidos
+   ... 70000 itens lidos
+   ... 80000 itens lidos
+   ... 90000 itens lidos
+   ... 100000 itens lidos
+   ... 110000 itens lidos
+   ... 120000 itens lidos
+   ... 130000 itens lidos
+   ... 140000 itens lidos
+   ... 150000 itens lidos
+   ... 160000 itens lidos
+   ... 10000 itens contados
+   ... 20000 itens contados
+   ... 30000 itens contados
+   ... 40000 itens contados
+   ... 50000 itens contados
+   ... 60000 itens contados
+   ... 70000 itens contados
+   ... 80000 itens contados
+   ... 90000 itens contados
+   ... 100000 itens contados
+   ... 110000 itens contados
+   ... 120000 itens contados
+   ... 130000 itens contados
+   ... 140000 itens contados
+   ... 10000 itens lidos
+   ... 20000 itens lidos
+   ... 30000 itens lidos
+   ... 40000 itens lidos
+   ... 50000 itens lidos
+   ... 60000 itens lidos
+   ... 70000 itens lidos
+   ... 80000 itens lidos
+   ... 90000 itens lidos
+   ... 100000 itens lidos
+   ... 110000 itens lidos
+   ... 120000 itens lidos
+   ... 130000 itens lidos
+   ... 140000 itens lidos

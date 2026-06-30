@@ -1,0 +1,307 @@
+Seabed image clustering is the process of grouping underwater or sonar imagery into regions with similar texture, reflectivity, sediment type, or biological structure — usually without requiring manual labels.
+
+Typical applications include:
+
+* benthic habitat mapping
+* autonomous underwater vehicle (AUV) navigation
+* mine countermeasure surveys
+* coral / sediment classification
+* marine geology
+* acoustic seabed characterization
+
+## Main data types
+
+1. Optical seabed imagery
+
+   * RGB underwater cameras
+   * ROV/AUV imagery
+   * photomosaics
+
+2. Acoustic imagery
+
+   * side-scan sonar (SSS)
+   * synthetic aperture sonar (SAS)
+   * multibeam backscatter
+
+Acoustic imagery is more common in deep water because light attenuation makes optical imaging difficult.
+
+---
+
+# Common clustering methods
+
+## Classical clustering
+
+### K-means
+
+Most widely used baseline.
+
+Typical pipeline:
+
+1. extract texture features
+2. cluster feature vectors
+3. assign seabed classes
+
+Used with:
+
+* Gabor filters
+* Local Binary Patterns (LBP)
+* Haralick texture features
+* CIELAB color spaces
+
+Example:
+Visual seabed classification using k-means clustering, CIELAB colors and Gabor-filters ([Doria][1])
+
+The basic clustering objective is often:
+
+\min_{C}\sum_{i=1}^{k}\sum_{x\in C_i}|x-\mu_i|^2
+
+---
+
+## Density-based clustering
+
+### DBSCAN / HDBSCAN
+
+Useful because seabed textures are:
+
+* irregular
+* non-convex
+* noisy
+
+Advantages:
+
+* automatically detects outliers
+* no need to predefine number of clusters
+* better for heterogeneous seafloor structures
+
+---
+
+## Gaussian Mixture Models (GMM)
+
+Probabilistic clustering:
+
+* each pixel/patch has soft membership
+* useful when sediment transitions are gradual
+
+---
+
+## Spectral clustering
+
+Useful when:
+
+* texture manifolds are nonlinear
+* cluster boundaries are complex
+
+Often computationally expensive for large mosaics.
+
+---
+
+# Texture-based seabed clustering
+
+Texture is usually more important than color underwater.
+
+Common feature extractors:
+
+| Method            | Purpose                     |
+| ----------------- | --------------------------- |
+| Gabor filters     | directional textures        |
+| Wavelets          | multiscale seabed structure |
+| Haralick features | co-occurrence statistics    |
+| LBP               | microtextures               |
+| Textons           | repeating sonar patterns    |
+
+Texton-based co-segmentation has been influential in sonar imagery:
+
+Multi-Image texton selection for sonar image seabed co-segmentation ([Faculty Websites][2])
+
+---
+
+# Deep learning approaches
+
+Modern systems increasingly use:
+
+* CNN feature embeddings
+* self-supervised learning
+* deep clustering
+* transformer encoders
+
+Pipeline:
+
+1. image patches → CNN embeddings
+2. latent feature extraction
+3. clustering in embedding space
+
+Typical methods:
+
+* Deep Embedded Clustering (DEC)
+* contrastive clustering
+* autoencoder clustering
+* iterative pseudo-label refinement
+
+General deep clustering overview:
+Deep Clustering: A Comprehensive Survey ([arXiv][3])
+
+---
+
+# Sonar-specific seabed clustering
+
+Sonar imagery introduces special challenges:
+
+* speckle noise
+* grazing-angle distortion
+* varying insonification
+* geometric artifacts
+
+Many systems compensate sonar intensity before clustering.
+
+Important work:
+Automated acoustic seabed classification of multibeam images of Stanton Banks ([ScienceDirect][4])
+
+They used:
+
+* texture + amplitude features
+* Bayesian clustering
+* simulated annealing
+* unsupervised segmentation
+
+---
+
+# Modern research trends
+
+## 1. Self-supervised clustering
+
+Very important because labeled seabed data is scarce.
+
+Methods learn representations from:
+
+* patch similarity
+* spatial consistency
+* contrastive learning
+
+---
+
+## 2. Online clustering for AUVs
+
+Real-time seabed interpretation during exploration missions.
+
+Recent work:
+Online Clustering of Seafloor Imagery for Interpretation during Long-Term AUV Operations ([arXiv][5])
+
+---
+
+## 3. Deep unsupervised sonar segmentation
+
+Example:
+Iterative, Deep, and Unsupervised Synthetic Aperture Sonar Image Segmentation ([arXiv][6])
+
+Core idea:
+
+* superpixels
+* CNN embeddings
+* iterative clustering
+* pseudo-label training
+
+---
+
+# Typical workflow
+
+A practical seabed clustering pipeline:
+
+```text
+Raw sonar/image
+    ↓
+Preprocessing
+    ↓
+Texture feature extraction
+    ↓
+Dimensionality reduction
+    ↓
+Clustering
+    ↓
+Spatial smoothing
+    ↓
+Seabed map
+```
+
+Common dimensionality reduction:
+
+* PCA
+* t-SNE
+* UMAP
+
+---
+
+# Evaluation metrics
+
+If labels exist:
+
+* Adjusted Rand Index (ARI)
+* IoU
+* F1 score
+* Normalized Mutual Information (NMI)
+
+Without labels:
+
+* Silhouette score
+* Davies–Bouldin index
+
+---
+
+# Challenges
+
+Major open problems:
+
+* domain shift across sonar systems
+* illumination variability
+* water turbidity
+* sparse annotations
+* scale variability
+* class imbalance
+* real-time processing onboard AUVs
+
+---
+
+# Recommended starting point
+
+If you're implementing seabed image clustering today:
+
+## Classical pipeline
+
+* Gabor features
+* PCA
+* HDBSCAN
+
+Good for:
+
+* small datasets
+* interpretable systems
+
+## Modern pipeline
+
+* self-supervised CNN encoder
+* UMAP
+* HDBSCAN or DEC
+
+Good for:
+
+* large sonar datasets
+* adaptive seabed mapping
+* AUV autonomy
+
+---
+
+# Key references
+
+* A Survey of Seafloor Characterization and Mapping Techniques ([MDPI][7])
+* Image-based seabed classification: what can we learn from terrestrial remote sensing? ([OUP Academic][8])
+* Automated acoustic seabed classification of multibeam images of Stanton Banks ([ScienceDirect][4])
+* Iterative, Deep Synthetic Aperture Sonar Image Segmentation ([arXiv][9])
+
+[1]: https://www.doria.fi/handle/10024/186745?utm_source=chatgpt.com "Visual seabed classification using k-means clustering, CIELAB colors and Gabor-filters - Doria"
+[2]: https://faculty.eng.ufl.edu/machine-learning/2013/06/cobb2013multi/?utm_source=chatgpt.com "Multi-Image texton selection for sonar image seabed co-segmentation - Alina Zare – Machine Learning and Sensing Lab"
+[3]: https://arxiv.org/abs/2210.04142?utm_source=chatgpt.com "Deep Clustering: A Comprehensive Survey"
+[4]: https://www.sciencedirect.com/science/article/pii/S0003682X08001801?utm_source=chatgpt.com "Automated acoustic seabed classification of multibeam images of Stanton Banks - ScienceDirect"
+[5]: https://arxiv.org/abs/2509.06678?utm_source=chatgpt.com "Online Clustering of Seafloor Imagery for Interpretation during Long-Term AUV Operations"
+[6]: https://arxiv.org/abs/2107.14563?utm_source=chatgpt.com "Iterative, Deep, and Unsupervised Synthetic Aperture Sonar Image Segmentation"
+[7]: https://www.mdpi.com/2072-4292/16/7/1163?utm_source=chatgpt.com "A Survey of Seafloor Characterization and Mapping Techniques | MDPI"
+[8]: https://academic.oup.com/icesjms/article/73/10/2425/2647114?utm_source=chatgpt.com "Image-based seabed classification: what can we learn from terrestrial remote sensing? | ICES Journal of Marine Science | Oxford Academic"
+[9]: https://arxiv.org/abs/2203.15082?utm_source=chatgpt.com "Iterative, Deep Synthetic Aperture Sonar Image Segmentation"

@@ -1,0 +1,182 @@
+#!/usr/bin/env bash
+set -e
+
+PROJECT=${1:-nautilus-ml}
+echo "Creating Nautilus ML storage crate in $PROJECT/rust/storage ..."
+
+# create directories
+mkdir -p $PROJECT/rust/storage/src
+mkdir -p $PROJECT/tests
+
+# Helper function to create header
+create_header() {
+  LANG=$1
+  MODULE=$2
+  COMPONENT=$3
+  if [ "$LANG" = "rust" ]; then COMMENT="//"; else COMMENT="#"; fi
+  cat <<EOF
+$COMMENT vim: set ts=2 sw=2 et:
+$COMMENT --------------------------------------------------
+$COMMENT Project: Nautilus ML Platform
+$COMMENT Module: $MODULE
+$COMMENT Component: $COMPONENT
+$COMMENT Inspired by Jules Verne's "Twenty Thousand Leagues Under the Sea"
+$COMMENT License: Apache-2.0
+$COMMENT --------------------------------------------------
+EOF
+}
+
+create_file() {
+  FILE=$1
+  LANG=$2
+  MODULE=$3
+  COMPONENT=$4
+  mkdir -p "$(dirname "$FILE")"
+  create_header "$LANG" "$MODULE" "$COMPONENT" > "$FILE"
+}
+
+########################################
+# Cargo.toml for storage crate
+########################################
+cat > $PROJECT/rust/storage/Cargo.toml <<EOF
+[package]
+name = "storage"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+tokio = { version = "1", features = ["full"] }
+rayon = "1"
+aws-config = "0.57.0"
+aws-sdk-s3 = "0.57.0"
+azure_storage = "0.15.0"
+azure_storage_blobs = "0.15.0"
+anyhow = "1.0"
+log = "0.4"
+env_logger = "0.10"
+EOF
+
+########################################
+# Rust S3 storage file
+########################################
+create_file $PROJECT/rust/storage/src/s3.rs rust storage s3
+
+cat >> $PROJECT/rust/storage/src/s3.rs <<'EOF'
+use aws_sdk_s3::{Client, Region};
+use aws_config::meta::region::RegionProviderChain;
+use tokio_stream::StreamExt;
+use rayon::prelude::*;
+use anyhow::Result;
+
+/// List S3 buckets asynchronously
+pub async fn list_buckets() -> Result<Vec<String>> {
+    let region_provider = RegionProviderChain::default_provider().or_else("us-east-1");
+    let config = aws_config::from_env().region(region_provider).load().await;
+    let client = Client::new(&config);
+    let resp = client.list_buckets().send().await?;
+    let names = resp.buckets().unwrap_or(&[]).iter()
+        .filter_map(|b| b.name.clone())
+        .collect::<Vec<_>>();
+    Ok(names)
+}
+
+/// List objects in a bucket asynchronously
+pub async fn list_objects(bucket: &str) -> Result<Vec<String>> {
+    let region_provider = RegionProviderChain::default_provider().or_else("us-east-1");
+    let config = aws_config::from_env().region(region_provider).load().await;
+    let client = Client::new(&config);
+    let resp = client.list_objects_v2().bucket(bucket).send().await?;
+    let keys = resp.contents().unwrap_or(&[]).iter()
+        .filter_map(|obj| obj.key.clone())
+        .collect::<Vec<_>>();
+    Ok(keys)
+}
+
+/// Download objects in parallel (simulate download)
+pub fn parallel_download(keys: Vec<String>) {
+    keys.par_iter().for_each(|k| {
+        println!("Downloading object: {}", k);
+        // insert real S3 download logic here
+    });
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use tokio::runtime::Runtime;
+
+    #[test]
+    fn test_list_buckets() {
+        let rt = Runtime::new().unwrap();
+        let buckets = rt.block_on(list_buckets()).unwrap();
+        println!("Buckets: {:?}", buckets);
+    }
+
+    #[test]
+    fn test_list_objects() {
+        let rt = Runtime::new().unwrap();
+        if let Ok(buckets) = rt.block_on(list_buckets()) {
+            if let Some(bucket) = buckets.get(0) {
+                let keys = rt.block_on(list_objects(bucket)).unwrap();
+                println!("Objects in {}: {:?}", bucket, keys);
+            }
+        }
+    }
+
+    #[test]
+    fn test_parallel_download() {
+        parallel_download(vec!["file1".to_string(), "file2".to_string()]);
+    }
+}
+EOF
+
+########################################
+# Rust Azure storage file
+########################################
+create_file $PROJECT/rust/storage/src/azure.rs rust storage azure
+
+cat >> $PROJECT/rust/storage/src/azure.rs <<'EOF'
+use azure_storage::prelude::*;
+use azure_storage_blobs::prelude::*;
+use rayon::prelude::*;
+use anyhow::Result;
+
+/// List Azure containers asynchronously
+pub async fn list_containers(account: &str, key: &str) -> Result<Vec<String>> {
+    let storage = StorageAccountClient::new_access_key(account, key)
+        .as_storage_client();
+    let resp = storage.list_containers().execute().await?;
+    let names = resp.incomplete_vector.iter().map(|c| c.name.clone()).collect::<Vec<_>>();
+    Ok(names)
+}
+
+/// Download blobs in parallel (simulate)
+pub fn parallel_blob_download(blobs: Vec<String>) {
+    blobs.par_iter().for_each(|b| {
+        println!("Downloading blob: {}", b);
+        // insert real Azure download logic here
+    });
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use tokio::runtime::Runtime;
+
+    #[test]
+    fn test_list_containers() {
+        let rt = Runtime::new().unwrap();
+        let containers = rt.block_on(list_containers("dummy", "dummy"));
+        println!("Containers: {:?}", containers);
+    }
+
+    #[test]
+    fn test_parallel_blob_download() {
+        parallel_blob_download(vec!["blob1".to_string(), "blob2".to_string()]);
+    }
+}
+EOF
+
+echo "Storage crate bootstrap complete. Navigate to $PROJECT/rust/storage and run:"
+echo "cargo build"
+echo "cargo test"

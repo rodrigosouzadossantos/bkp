@@ -1,0 +1,48 @@
+{
+  "contents/okr/okr.qmd": {
+    "okr.embed.ipynb": "47a4414b",
+    "okr.out.ipynb": "884ad20f",
+    "okr-preview.html": "9e47e4df"
+  },
+  "contents/okr/issue.qmd": {
+    "issue.embed.ipynb": "da973221",
+    "issue.out.ipynb": "fade5f84",
+    "issue-preview.html": "393f3c34"
+  },
+  "index.qmd": {
+    "index.html": "b9ba4df0",
+    "index.docx": "86fa384e",
+    "index.tex": "74e24ed0",
+    "document-revealjs.html": "f69952d9"
+  },
+  "contents/okr/issue-kr1.qmd": {
+    "issue-kr1.embed.ipynb": "8e83497e",
+    "issue-kr1.out.ipynb": "fd0b2cd3",
+    "issue-kr1-preview.html": "3c24f519"
+  },
+  "contents/okr/issue-kr2.qmd": {
+    "issue-kr2.embed.ipynb": "e167f755",
+    "issue-kr2.out.ipynb": "bc91f3ca",
+    "issue-kr2-preview.html": "5bb30b9f"
+  },
+  "contents/okr/issue-kr3.qmd": {
+    "issue-kr3.embed.ipynb": "66b60a9e",
+    "issue-kr3.out.ipynb": "f72d92ca",
+    "issue-kr3-preview.html": "c30ca4f3"
+  },
+  "contents/okr/issue-kr4.qmd": {
+    "issue-kr4.embed.ipynb": "92944532",
+    "issue-kr4.out.ipynb": "28dbd11a",
+    "issue-kr4-preview.html": "86410008"
+  },
+  "contents/okr/issue-kr5.qmd": {
+    "issue-kr5.embed.ipynb": "4781ad2e",
+    "issue-kr5.out.ipynb": "b1d16c18",
+    "issue-kr5-preview.html": "1cff42b7"
+  },
+  "contents/okr/issue-kr6.qmd": {
+    "issue-kr6.embed.ipynb": "30599b72",
+    "issue-kr6.out.ipynb": "a818827f",
+    "issue-kr6-preview.html": "e4857ac8"
+  }
+}

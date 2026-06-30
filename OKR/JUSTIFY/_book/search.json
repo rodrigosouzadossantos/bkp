@@ -1,0 +1,202 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Integração do Github Project com OKRs: Personalizações e Justificativas",
+    "section": "",
+    "text": "Preface\nThis is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "1  Uso de GitHub para gestão de OKRs e execução técnica",
+    "section": "",
+    "text": "2 Uso de GitHub Projects para gestão de OKRs\nEsta seção descreve a abordagem adotada para implementar OKRs (Objectives and Key Results) dentro do fluxo de desenvolvimento usando GitHub, combinando:\nEssa integração permite conectar planejamento estratégico, execução técnica e monitoramento de progresso dentro de uma única plataforma.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Uso de GitHub para gestão de OKRs e execução técnica</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#descrição",
+    "href": "intro.html#descrição",
+    "title": "1  Uso de GitHub para gestão de OKRs e execução técnica",
+    "section": "2.1 Descrição",
+    "text": "2.1 Descrição\nGitHub Projects é um sistema integrado ao repositório que permite organizar issues em quadros, tabelas e dashboards, adicionando campos estruturados como status, responsável, prioridade e progresso.\nNo contexto de OKRs, ele funciona como um painel central de acompanhamento estratégico, conectando diretamente os objetivos organizacionais às atividades de engenharia.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Uso de GitHub para gestão de OKRs e execução técnica</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#como-ele-é-usado-no-modelo-okr",
+    "href": "intro.html#como-ele-é-usado-no-modelo-okr",
+    "title": "1  Uso de GitHub para gestão de OKRs e execução técnica",
+    "section": "2.2 Como ele é usado no modelo OKR",
+    "text": "2.2 Como ele é usado no modelo OKR\nA estrutura implementada é baseada na seguinte hierarquia:\nObjective (O)\n   ↓\nKey Result (KR)\n   ↓\nEpic\n   ↓\nStory\n   ↓\nTask\nEssa hierarquia conecta direção estratégica com trabalho técnico executável.\nNo GitHub Projects, isso permite:\n\nvisualizar progresso dos OKRs\nacompanhar execução técnica\nidentificar dependências\nmonitorar evolução das iniciativas\n\nExemplo de organização:\n\n\n\nTipo\nItem\nStatus\n\n\n\n\nObjective\nAutomatizar inspeções submarinas\nEm andamento\n\n\nKey Result\nAumentar precisão do modelo para 90%\nEm andamento\n\n\nEpic\nPipeline de visão computacional\nPlanejado\n\n\nStory\nTreinar modelo de detecção\nEm andamento",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Uso de GitHub para gestão de OKRs e execução técnica</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#justificativa",
+    "href": "intro.html#justificativa",
+    "title": "1  Uso de GitHub para gestão de OKRs e execução técnica",
+    "section": "2.3 Justificativa",
+    "text": "2.3 Justificativa\n\n2.3.1 Integração direta com desenvolvimento\nAo contrário de ferramentas externas de gestão, o Projects está diretamente integrado ao repositório, permitindo:\n\nligação com código\nligação com pull requests\nrastreabilidade completa\n\nIsso reduz desalinhamentos entre planejamento e execução.\n\n\n\n2.3.2 Visibilidade estratégica\nOKRs são instrumentos de direcionamento organizacional.\nGitHub Projects permite visualizar:\n\nobjetivos ativos\nresultados-chave associados\nprogresso de iniciativas\n\nO repositório passa a funcionar como painel de execução estratégica.\n\n\n\n2.3.3 Transparência organizacional\nComo o projeto é visível para toda a equipe:\n\nmelhora comunicação\nreduz dependência de relatórios manuais\naumenta alinhamento entre áreas técnicas e estratégicas.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Uso de GitHub para gestão de OKRs e execução técnica</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#descrição-1",
+    "href": "intro.html#descrição-1",
+    "title": "1  Uso de GitHub para gestão de OKRs e execução técnica",
+    "section": "3.1 Descrição",
+    "text": "3.1 Descrição\nIssue Types permitem classificar issues de forma estruturada, definindo o papel que cada issue desempenha no processo de planejamento e execução.\nNo modelo adotado, os tipos utilizados são:\n\n\n\nTipo\nFunção\n\n\n\n\nObjective\nobjetivo estratégico\n\n\nKey Result\nmétrica mensurável\n\n\nEpic\ngrande iniciativa\n\n\nStory\nfuncionalidade\n\n\nTask\nimplementação técnica\n\n\n\nEsses tipos refletem os diferentes níveis da hierarquia de planejamento.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Uso de GitHub para gestão de OKRs e execução técnica</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#estrutura-organizacional-dos-okrs",
+    "href": "intro.html#estrutura-organizacional-dos-okrs",
+    "title": "1  Uso de GitHub para gestão de OKRs e execução técnica",
+    "section": "3.2 Estrutura organizacional dos OKRs",
+    "text": "3.2 Estrutura organizacional dos OKRs\nA estrutura implementada segue o modelo:\nObjective\n   ↓\nKey Result\n   ↓\nEpic\n   ↓\nStory\n   ↓\nTask\nIsso permite navegar da estratégia até o trabalho de engenharia.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Uso de GitHub para gestão de OKRs e execução técnica</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#objective-o",
+    "href": "intro.html#objective-o",
+    "title": "1  Uso de GitHub para gestão de OKRs e execução técnica",
+    "section": "3.3 Objective (O)",
+    "text": "3.3 Objective (O)\nRepresenta o resultado estratégico desejado.\nCaracterísticas:\n\nqualitativo\norientado a impacto\ndefine direção organizacional\n\nExemplo:\nMelhorar eficiência das inspeções submarinas com AUV",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Uso de GitHub para gestão de OKRs e execução técnica</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#key-result-kr",
+    "href": "intro.html#key-result-kr",
+    "title": "1  Uso de GitHub para gestão de OKRs e execução técnica",
+    "section": "3.4 Key Result (KR)",
+    "text": "3.4 Key Result (KR)\nRepresenta uma métrica que mede progresso do Objective.\nCaracterísticas:\n\nquantitativo\nmensurável\nverificável\n\nExemplo:\nAumentar precisão do modelo de detecção de corrosão de 70% para 90%",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Uso de GitHub para gestão de OKRs e execução técnica</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#epic",
+    "href": "intro.html#epic",
+    "title": "1  Uso de GitHub para gestão de OKRs e execução técnica",
+    "section": "3.5 Epic",
+    "text": "3.5 Epic\nRepresenta uma iniciativa técnica significativa necessária para alcançar um KR.\nExemplo:\nDesenvolver pipeline de processamento de vídeo submarino",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Uso de GitHub para gestão de OKRs e execução técnica</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#story",
+    "href": "intro.html#story",
+    "title": "1  Uso de GitHub para gestão de OKRs e execução técnica",
+    "section": "3.6 Story",
+    "text": "3.6 Story\nRepresenta uma funcionalidade específica ou requisito técnico.\nExemplo:\nDetectar corrosão em imagens de inspeção submarina",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Uso de GitHub para gestão de OKRs e execução técnica</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#task",
+    "href": "intro.html#task",
+    "title": "1  Uso de GitHub para gestão de OKRs e execução técnica",
+    "section": "3.7 Task",
+    "text": "3.7 Task\nRepresenta uma atividade técnica concreta.\nExemplo:\nImplementar script de extração de frames de vídeo",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Uso de GitHub para gestão de OKRs e execução técnica</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#limitações-do-uso-exclusivo-de-labels",
+    "href": "intro.html#limitações-do-uso-exclusivo-de-labels",
+    "title": "1  Uso de GitHub para gestão de OKRs e execução técnica",
+    "section": "4.1 Limitações do uso exclusivo de labels",
+    "text": "4.1 Limitações do uso exclusivo de labels\n\n4.1.1 Falta de exclusividade semântica\nUma issue pode ter múltiplas labels.\nExemplo:\nokr\nml\npriority-high\nobjective\nkey-result\nNada impede que uma mesma issue tenha labels conflitantes.\nIssue Types evitam isso porque cada issue possui apenas um tipo principal.\n\n\n\n4.1.2 Falta de semântica estrutural\nLabels são apenas etiquetas.\nElas não indicam:\n\npapel da issue\nposição na hierarquia\nrelação com planejamento estratégico\n\nIssue Types definem categorias formais de trabalho.\n\n\n\n4.1.3 Baixa confiabilidade para automação\nLabels podem:\n\nser removidas\nser aplicadas incorretamente\nexistir duplicadas\n\nIsso reduz confiabilidade para automação.\nIssue Types fornecem estrutura confiável para workflows automatizados.\n\n\n\n4.1.4 Falta de padronização\nLabels podem ser criadas livremente, gerando inconsistências como:\nobjective\nobjectives\nokr-objective\ngoal\nIssue Types garantem padronização organizacional.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Uso de GitHub para gestão de OKRs e execução técnica</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#analogia-organizacional",
+    "href": "intro.html#analogia-organizacional",
+    "title": "1  Uso de GitHub para gestão de OKRs e execução técnica",
+    "section": "5.1 Analogia organizacional",
+    "text": "5.1 Analogia organizacional\nIssue Types são comparáveis a tipos de documento:\nContrato\nRelatório\nProposta\nLabels são comparáveis a tags de classificação:\nfinanceiro\nurgente\ncliente-A\nAmbos são úteis, mas cumprem papéis diferentes.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Uso de GitHub para gestão de OKRs e execução técnica</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#visão-estratégica",
+    "href": "intro.html#visão-estratégica",
+    "title": "1  Uso de GitHub para gestão de OKRs e execução técnica",
+    "section": "6.1 Visão estratégica",
+    "text": "6.1 Visão estratégica\nFiltro:\ntype:objective\ntype:key-result\nMostra apenas OKRs.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Uso de GitHub para gestão de OKRs e execução técnica</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#visão-de-execução",
+    "href": "intro.html#visão-de-execução",
+    "title": "1  Uso de GitHub para gestão de OKRs e execução técnica",
+    "section": "6.2 Visão de execução",
+    "text": "6.2 Visão de execução\nFiltro:\ntype:epic\ntype:story\ntype:task\nMostra backlog técnico.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Uso de GitHub para gestão de OKRs e execução técnica</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#visão-completa",
+    "href": "intro.html#visão-completa",
+    "title": "1  Uso de GitHub para gestão de OKRs e execução técnica",
+    "section": "6.3 Visão completa",
+    "text": "6.3 Visão completa\nObjective\n  → Key Result\n     → Epic\n        → Story\n           → Task\nIsso permite navegar do planejamento até a implementação.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Uso de GitHub para gestão de OKRs e execução técnica</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#descrição-2",
+    "href": "intro.html#descrição-2",
+    "title": "1  Uso de GitHub para gestão de OKRs e execução técnica",
+    "section": "8.1 Descrição",
+    "text": "8.1 Descrição\nGitHub Actions permite automatizar processos baseados em eventos do repositório.\nWorkflows podem ser executados quando:\n\nissues são criadas\nissues são editadas\nissues são fechadas\npull requests são abertos",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Uso de GitHub para gestão de OKRs e execução técnica</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#aplicação-no-fluxo-de-okrs",
+    "href": "intro.html#aplicação-no-fluxo-de-okrs",
+    "title": "1  Uso de GitHub para gestão de OKRs e execução técnica",
+    "section": "8.2 Aplicação no fluxo de OKRs",
+    "text": "8.2 Aplicação no fluxo de OKRs\n\n8.2.1 Validação estrutural\nQuando um KR é criado, um workflow pode verificar se ele referencia um Objective válido.\n\n\n\n8.2.2 Atualização automática de progresso\nO progresso de um KR pode ser calculado com base em:\n\ntarefas concluídas\nchecklists\nissues relacionadas\n\n\n\n\n8.2.3 Atualização automática de dashboards\nActions podem atualizar:\n\ncampos no GitHub Projects\nrelatórios de progresso\ncomentários automáticos",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Uso de GitHub para gestão de OKRs e execução técnica</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#justificativa-1",
+    "href": "intro.html#justificativa-1",
+    "title": "1  Uso de GitHub para gestão de OKRs e execução técnica",
+    "section": "8.3 Justificativa",
+    "text": "8.3 Justificativa\n\n8.3.1 Redução de trabalho manual\nSem automação seria necessário:\n\natualizar progresso manualmente\ngerar relatórios\nverificar consistência\n\nActions eliminam essas tarefas repetitivas.\n\n\n\n8.3.2 Confiabilidade dos dados\nA automação garante que métricas derivem diretamente do trabalho realizado.\n\n\n\n8.3.3 Integração com fluxo de engenharia\nComo workflows são acionados por eventos do repositório, o progresso dos OKRs permanece diretamente conectado ao desenvolvimento real.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Uso de GitHub para gestão de OKRs e execução técnica</span>"
+    ]
+  }
+]

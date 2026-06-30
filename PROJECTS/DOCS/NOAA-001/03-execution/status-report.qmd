@@ -1,0 +1,12 @@
+# Status Report
+
+**Reporting Period:** [Date Range]
+
+## Summary
+- **Schedule:** On Track
+- **Budget:** Under Budget
+- **Resources:** Sufficient
+
+## Accomplishments this Period
+- Completed WBS.
+- Finalized Stakeholder list.

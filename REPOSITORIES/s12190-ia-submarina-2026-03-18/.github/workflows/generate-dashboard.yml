@@ -1,0 +1,27 @@
+name: Generate OKR Dashboard
+
+on:
+  workflow_dispatch: # permite disparar manualmente
+  schedule:
+    - cron: '0 8 * * 1' # toda segunda-feira às 08:00 UTC
+
+jobs:
+  fetch-issues:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm install graphql-request fs
+
+      - name: Fetch OKR Issues via GitHub GraphQL
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          node .github/scripts/fetch-okr-issues.js

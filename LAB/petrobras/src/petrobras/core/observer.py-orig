@@ -1,0 +1,171 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+# vim: set tabstop=2 shiftwidth=2 softtabstop=2 expandtab:
+
+from __future__ import annotations
+
+import sys
+import threading
+import atexit
+from types import FrameType
+from typing import Callable, Optional
+
+from .ui import emit, start_ui, shutdown_ui
+from .snippets import get_snippet
+from .detectors import (
+  detect_db,
+  detect_file,
+  detect_s3_download,
+  detect_gcs_download,
+)
+
+
+# ---------------------------------------------------------------------
+# CONFIG
+# ---------------------------------------------------------------------
+
+PACKAGE_ROOT = "petrobras"
+
+IGNORED_MODULE_PREFIXES = (
+  "petrobras.core.ui",
+  "petrobras.core.observer",
+  "petrobras.core.import_guard",
+)
+
+
+# ---------------------------------------------------------------------
+# SAFE REPR
+# ---------------------------------------------------------------------
+
+def _safe_repr(value, maxlen: int = 80) -> str:
+  try:
+    r = repr(value)
+  except Exception:
+    return "<unreprable>"
+
+  if len(r) > maxlen:
+    return r[:maxlen] + "…"
+
+  return r
+
+
+# ---------------------------------------------------------------------
+# ARG EXTRACTION
+# ---------------------------------------------------------------------
+
+def _get_args(frame: FrameType) -> dict[str, str]:
+  args: dict[str, str] = {}
+  for name, value in frame.f_locals.items():
+    args[name] = _safe_repr(value)
+  return args
+
+
+# ---------------------------------------------------------------------
+# TRACE FUNCTION
+# ---------------------------------------------------------------------
+
+def _trace(
+  frame: FrameType,
+  event: str,
+  arg,
+) -> Optional[Callable]:
+
+  # ---- defensive guards ----
+  try:
+    globals_ = frame.f_globals
+    if not globals_:
+      return _trace
+
+    module = globals_.get("__name__")
+    if not isinstance(module, str):
+      return _trace
+
+    # ✅ accept 'petrobras' AND 'petrobras.*'
+    if not (module == PACKAGE_ROOT or module.startswith(PACKAGE_ROOT + ".")):
+      return _trace
+
+    # ❌ ignore observer internals
+    for prefix in IGNORED_MODULE_PREFIXES:
+      if module.startswith(prefix):
+        return _trace
+
+    # ❌ ignore generators
+    if frame.f_code.co_name == "<genexpr>":
+      return _trace
+
+  except Exception:
+    return _trace
+
+  func = f"{module}.{frame.f_code.co_name}"
+
+
+  BUSINESS_PREFIXES = (
+    "petrobras.run",
+    "petrobras.core.petrobras.",
+  )
+
+  if not any(func.startswith(p) for p in BUSINESS_PREFIXES):
+    return _trace
+
+  # ---------------- CALL ----------------
+  if event == "call":
+    emit(f"[CALL] {func} args={_get_args(frame)}")
+
+    bucket = (
+      detect_s3_download(frame)
+      or detect_gcs_download(frame)
+    )
+
+    kind = (
+      detect_db(frame)
+      or detect_file(frame)
+    )
+
+    if bucket:
+      emit(f"[BUCKET] {bucket}\n{get_snippet(frame)}")
+
+    elif kind:
+      emit(f"[{kind.upper()}] {func}\n{get_snippet(frame)}")
+
+  # ---------------- RETURN ----------------
+  elif event == "return":
+    emit(f"[RETURN] {func} -> {_safe_repr(arg)}")
+
+  # ---------------- EXCEPTION ----------------
+  elif event == "exception":
+    exc_type, exc_val, _ = arg
+    emit(
+      f"[EXCEPTION] {func} {exc_type.__name__}: "
+      f"{_safe_repr(exc_val)}"
+    )
+
+  return _trace
+
+
+# ---------------------------------------------------------------------
+# INSTALL
+# ---------------------------------------------------------------------
+
+_installed = False
+
+
+def install_observer() -> None:
+  global _installed
+  if _installed:
+    return
+
+  _installed = True
+
+  # start UI and capture stdout BEFORE tracing
+  start_ui()
+
+  sys.settrace(_trace)
+  threading.settrace(_trace)
+
+  atexit.register(_shutdown)
+
+
+def _shutdown() -> None:
+  sys.settrace(None)
+  threading.settrace(None)
+  shutdown_ui()

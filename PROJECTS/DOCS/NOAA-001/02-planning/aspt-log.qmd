@@ -1,0 +1,9 @@
+# Assumption Log
+
+| ID | Assumption | Impact |
+|----|------------|--------|
+| A1 | Still imagery sufficient for MVP | Faster delivery |
+| A2 | SMEs available for validation | Scientific reliability |
+| A3 | Compute resources available | Scalability |
+| A4 | Binary classification sufficient | Reduced complexity |
+| A5 | Class imbalance manageable | Model viability |

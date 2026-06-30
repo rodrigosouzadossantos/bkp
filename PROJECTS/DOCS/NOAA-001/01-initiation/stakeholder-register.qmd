@@ -1,0 +1,10 @@
+# Stakeholder Register
+
+
+| Stakeholder | Role | Interest | Influence | Strategy |
+|------------|------|----------|------------|----------|
+| NOAA / SUB | Sponsor | High | High |
+| Environmental Specialists | Validation | High | High |
+| Data Science Team | Execution | High | Medium |
+| Data Engineering | Pipeline | Medium | Medium |
+| IT / Infrastructure | Support | Medium | Medium |

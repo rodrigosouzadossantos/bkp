@@ -1,0 +1,54 @@
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Background -->
+  <rect width="800" height="400" fill="#f9f9f9"/>
+
+  <!-- Níveis OKR (esquerda) -->
+  <text x="50" y="50" font-weight="bold" font-size="14">OKR Estratégico</text>
+  <rect x="40" y="60" width="200" height="40" fill="#a6cee3" stroke="#333"/>
+  <text x="55" y="75" font-size="12">O → Aumentar confiabilidade</text>
+  <text x="55" y="90" font-size="12">KR → Reduzir falhas em 30%</text>
+
+  <text x="50" y="130" font-weight="bold" font-size="14">OKR Tático</text>
+  <rect x="40" y="140" width="200" height="40" fill="#1f78b4" stroke="#333"/>
+  <text x="55" y="155" font-size="12">O → Melhorar consistência dataset</text>
+  <text x="55" y="170" font-size="12">KR → 95% imagens anotadas</text>
+
+  <text x="50" y="210" font-weight="bold" font-size="14">OKR Experimental</text>
+  <rect x="40" y="220" width="200" height="40" fill="#b2df8a" stroke="#333"/>
+  <text x="55" y="235" font-size="12">O → Testar filtro espacial</text>
+  <text x="55" y="250" font-size="12">KR → Reduzir falsos positivos</text>
+
+  <text x="50" y="290" font-weight="bold" font-size="14">Execução</text>
+  <rect x="40" y="300" width="200" height="40" fill="#33a02c" stroke="#333"/>
+  <text x="55" y="315" font-size="12">O → Ajustes de código / PRs</text>
+  <text x="55" y="330" font-size="12">KR → Correção de bugs / scripts</text>
+
+  <!-- Conexão Agile (direita) -->
+  <text x="400" y="50" font-weight="bold" font-size="14">Agile</text>
+  <rect x="390" y="60" width="200" height="40" fill="#fb9a99" stroke="#333"/>
+  <text x="400" y="85" font-size="12">Roadmap / Macro-épico</text>
+
+  <rect x="390" y="140" width="200" height="40" fill="#e31a1c" stroke="#333"/>
+  <text x="400" y="165" font-size="12">Épico / Entrega mensal</text>
+
+  <rect x="390" y="220" width="200" height="40" fill="#fdbf6f" stroke="#333"/>
+  <text x="400" y="245" font-size="12">Sprint Goal / Mini-experimento</text>
+
+  <rect x="390" y="300" width="200" height="40" fill="#ff7f00" stroke="#333"/>
+  <text x="400" y="325" font-size="12">Backlog / Task</text>
+
+  <!-- Linhas de conexão -->
+  <line x1="241" y1="80" x2="371" y2="80" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="241" y1="160" x2="371" y2="160" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="241" y1="240" x2="371" y2="240" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="241" y1="320" x2="371" y2="320" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Definir seta -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="0" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#555" />
+    </marker>
+  </defs>
+
+</svg>

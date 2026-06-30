@@ -1,0 +1,38 @@
+---
+---
+
+# Explanation for Stakeholders
+
+> This initiative aims to create a robust, scalable Python package that will
+> serve as a unified interface for all AI/ML and computer vision activities in
+> the Subsea division.
+>
+> The package will abstract the complexity of accessing
+> and managing large volumes of subsea media data (images, videos, reports)
+> across multiple cloud and on-premises platforms.
+> 
+> By enabling distributed
+> processing and standardized workflows, the package will:
+>
+> - **Accelerate project delivery**
+>   by simplifying data access and experiment management.
+>
+> - **Improve efficiency and reproducibility**
+>   in handling massive, continuously growing datasets.
+>
+> - **Foster collaboration**
+>   through shared tools, documentation, and best practices.
+>
+> - **Ensure compliance**
+>   with Petrobras’ security and governance standards.
+>
+> - **Lay the foundation for expansion**
+>   to other divisions, multiplying the impact across the company.
+>
+> The project will be piloted with four current subsea CV projects, with clear
+> metrics for adoption, usability, and technical success.
+
+::: {.callout-note}
+Lessons learned will guide future scaling and adoption.
+:::
+

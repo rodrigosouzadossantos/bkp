@@ -1,0 +1,14 @@
+[workspace]
+resolver = "3"
+
+members = [
+  "nautilus_core",
+  "parallel",
+  "io",
+  "storage",
+  "dataset",
+  "arrow_bridge",
+  "cv",
+  "experiment",
+  "visualization"
+]

@@ -1,0 +1,32 @@
+project:
+  title: "i18n Example"
+  type: book
+
+lang: "pt"
+
+metadata:
+  project-name: "i18n Example"
+  author-name: "Rodrigo Souza dos Santos"
+
+metadata-files:
+  - pt.yml
+
+book:
+  title: "NOAA"
+  author: "Rodrigo Souza dos Santos"
+  date: "2026-03-25"
+  chapters:
+    - index.qmd
+    - part: "{{< meta section_strategy >}}"
+      chapters:
+        - example.qmd
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    number-sections: true
+    bread-crumbs: false
+  pdf:
+    documentclass: report
+

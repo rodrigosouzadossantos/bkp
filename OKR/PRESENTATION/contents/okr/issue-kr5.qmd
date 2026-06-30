@@ -1,0 +1,38 @@
+# KR5 – Implementar template padrão de Issue
+
+## Descrição
+
+Criar template padrão para Issues garantindo consistência
+no registro das demandas e rastreabilidade em relação aos OKRs.
+
+## Entregáveis
+
+- Template padrão de Issue
+- Campos obrigatórios definidos
+- Padronização no registro de demandas
+
+## Checklist de execução
+
+- [ ] Criar diretório `.github/ISSUE_TEMPLATE`
+- [ ] Definir campos obrigatórios
+- [ ] Validar template com o time
+- [ ] Publicar template no repositório
+
+## Critérios de aceite
+
+Template contém campos:
+
+- descrição da demanda
+- OKR relacionado
+- entregáveis
+- critérios de aceite
+- responsável
+
+## Local
+
+.github/ISSUE_TEMPLATE/
+
+## Rastreamento
+
+OKR relacionado: Governança GitHub  
+Responsável: (definir)

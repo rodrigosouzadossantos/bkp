@@ -1,0 +1,35 @@
+{
+  "contents/okr/okr.qmd": {
+    "okr.embed.ipynb": "a5f3eb9f",
+    "okr.out.ipynb": "597ee21c",
+    "okr-preview.html": "5b650e1d",
+    "okr.subarticle.xml": "10dc0ae8"
+  },
+  "contents/okr/measurement.qmd": {
+    "measurement.embed.ipynb": "9d38c632",
+    "measurement.out.ipynb": "c0f22ef6",
+    "measurement-preview.html": "b1ed6797",
+    "measurement.subarticle.xml": "a001a051"
+  },
+  "index.qmd": {
+    "index.html": "b9d9141e",
+    "index.docx": "28aea286",
+    "index.xml": "68088d58",
+    "index.embed.ipynb": "1aa9216b",
+    "index.out.ipynb": "75589ed8",
+    "index-preview.html": "e422c06f"
+  },
+  "contents/presentation-plan.qmd": {
+    "presentation-plan-preview.html": "1730063b"
+  },
+  "contents/package.qmd": {
+    "package-preview.html": "63086b71",
+    "package.embed.ipynb": "7607bb4c",
+    "package.out.ipynb": "ec6fb86c"
+  },
+  "contents/ARCH.qmd": {
+    "ARCH-preview.html": "943dbb02",
+    "ARCH.embed.ipynb": "c9fb08dd",
+    "ARCH.out.ipynb": "0813245e"
+  }
+}

@@ -1,0 +1,28 @@
+project:
+  type: manuscript
+  output-dir: build
+
+resources:
+  - refs/references.bib
+
+manuscript:
+  article: index.qmd
+
+  notebooks:
+
+    - notebook: docs/empty.qmd
+      title: '01 -'
+
+format:
+  html:
+    toc: true
+    theme: cosmo
+    toc-location: left
+    page-layout: full
+
+bibliography: refs/references.bib
+link-citations: true
+
+execute:
+  echo: false
+

@@ -1,0 +1,15 @@
+[package]
+name = "smb"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+anyhow = "1.0.102"
+libc = "0.2.183"
+rayon = "1.11.0"
+smb2 = "0.1.0"
+tokio = { version = "1.50.0", features = ["full"] }
+
+[build-dependencies]
+cc = "1.2.58"
+

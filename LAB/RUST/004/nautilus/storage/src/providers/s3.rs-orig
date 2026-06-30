@@ -1,0 +1,218 @@
+use crate::providers::StorageProvider;
+
+use aws_config::meta::region::RegionProviderChain;
+use aws_sdk_s3::{Client, types::Object};
+
+use std::sync::Arc;
+
+use tokio::runtime::Runtime;
+
+//////////////////////////////////////////////////////
+// S3 PROVIDER
+//////////////////////////////////////////////////////
+
+pub struct S3Provider {
+    client: Arc<Client>,
+    rt: Arc<Runtime>,
+}
+
+impl S3Provider {
+
+  pub fn new() -> Self {
+
+    // Tokio runtime (shared)
+    let rt = Runtime::new().expect("Failed to create Tokio runtime");
+
+    // Load AWS config (env, profile, IAM, etc.)
+    let config = rt.block_on(async {
+      let region_provider = RegionProviderChain::default_provider()
+        .or_else("us-east-1");
+
+      aws_config::defaults(
+        aws_config::BehaviorVersion::latest()
+      )
+        .region(region_provider)
+        .load()
+        .await
+    });
+
+    let client = Client::new(&config);
+
+    Self {
+      client: Arc::new(client),
+      rt: Arc::new(rt),
+    }
+  }
+
+  //////////////////////////////////////////////////////
+  // INTERNAL ASYNC LIST
+  //////////////////////////////////////////////////////
+
+  async fn list_objects_paginated(
+    client: Arc<Client>,
+    bucket: String,
+    prefix: String,
+  ) -> Vec<String> {
+
+    let mut results = Vec::new();
+    let mut continuation_token = None;
+
+    loop {
+
+      let mut request = client
+        .list_objects_v2()
+        .bucket(&bucket.clone())
+        .prefix(&prefix);
+
+      if let Some(token) = continuation_token {
+        request = request.continuation_token(token);
+      }
+
+      let response = request
+        .send()
+        .await
+        .expect("S3 list_objects_v2 failed");
+
+
+      for object in response.contents() {
+        if let Some(key) = object.key() {
+          results.push(format!("s3://{}/{}", bucket, key));
+        }
+      }
+
+      if response.is_truncated().unwrap_or(false) {
+        continuation_token = response.next_continuation_token().map(|s| s.to_string());
+      } else {
+        break;
+      }
+      //if let Some(objects) = response.contents() {
+      //  results.extend(objects.iter().map(object_to_path(&bucket)));
+      //}
+
+      //if response.is_truncated() {
+      //  continuation_token = response
+      //    .next_continuation_token()
+      //    .map(|s| s.to_string());
+      //  } else {
+      //    break;
+      //}
+    }
+
+    results
+  }
+
+  //////////////////////////////////////////////////////
+  // PARALLEL PREFIX SHARDING (VERY IMPORTANT)
+  //////////////////////////////////////////////////////
+
+  fn shard_prefixes(prefix: &str) -> Vec<String> {
+
+    // Simple sharding strategy (can be improved)
+    let shards = vec![
+      "0","1","2","3","4","5","6","7","8","9",
+      "a","b","c","d","e","f"
+    ];
+
+    shards
+      .into_iter()
+      .map(|s| format!("{}/{}", prefix, s))
+      .collect()
+  }
+}
+
+//////////////////////////////////////////////////////
+// TRAIT IMPLEMENTATION
+//////////////////////////////////////////////////////
+
+impl StorageProvider for S3Provider {
+
+  fn name(&self) -> &'static str {
+    "s3"
+  }
+
+  fn roots(&self) -> Vec<String> {
+
+    // In real system → load from config
+    vec![
+      "s3://analise-dados".to_string()
+    ]
+  }
+
+  fn list(&self, path: &str) -> Vec<String> {
+
+    let (bucket, prefix) = parse_s3_path(path);
+
+    let client = self.client.clone();
+    let rt = self.rt.clone();
+
+    // Prefix sharding for parallelism
+    let shards = Self::shard_prefixes(&prefix);
+
+    shards
+      .into_iter()
+      .flat_map(|shard| {
+
+        let client = client.clone();
+        let bucket = bucket.clone();
+
+        rt.block_on(Self::list_objects_paginated(
+          client,
+          bucket,
+          shard,
+        ))
+
+      })
+    .collect()
+  }
+
+  fn read(&self, path: &str) -> Vec<u8> {
+
+    let (bucket, key) = parse_s3_path(path);
+
+    let client = self.client.clone();
+    let rt = self.rt.clone();
+
+    rt.block_on(async {
+
+      let resp = client
+        .get_object()
+        .bucket(bucket)
+        .key(key)
+        .send()
+        .await
+        .expect("S3 get_object failed");
+
+      let data = resp.body.collect().await.expect("read body");
+
+      data.into_bytes().to_vec()
+    })
+  }
+}
+
+//////////////////////////////////////////////////////
+// HELPERS
+//////////////////////////////////////////////////////
+
+fn parse_s3_path(path: &str) -> (String, String) {
+
+    // "s3://bucket/prefix"
+    let stripped = path.strip_prefix("s3://")
+        .expect("Invalid S3 path");
+
+    let mut parts = stripped.splitn(2, '/');
+
+    let bucket = parts.next().unwrap().to_string();
+    let prefix = parts.next().unwrap_or("").to_string();
+
+    (bucket, prefix)
+}
+
+fn object_to_path(bucket: &str) -> impl Fn(&Object) -> String + '_ {
+
+    move |obj: &Object| {
+
+        let key = obj.key().unwrap_or_default();
+
+        format!("s3://{}/{}", bucket, key)
+    }
+}

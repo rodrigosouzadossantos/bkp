@@ -1,0 +1,69 @@
+use aws_config::BehaviorVersion;
+use aws_sdk_s3::Client;
+use indicatif::{ProgressBar, ProgressStyle};
+use std::sync::Arc;
+use tokio::sync::mpsc;
+use futures::StreamExt; // Required for .next() on the paginator
+
+#[tokio::main]
+async fn main() -> Result<(), Box<dyn std::error::Error>> {
+  // 1. Setup AWS Client (Explicitly set behavior version for SDK v1)
+  let config = aws_config::defaults(BehaviorVersion::latest()).load().await;
+  let client = Arc::new(Client::new(&config));
+  let bucket = "analise-dados".to_string();
+
+  // 2. Generate Parallel Prefixes (0-9 and a-z)
+  let mut prefixes: Vec<String> = (0..10).map(|i| i.to_string()).collect();
+  prefixes.extend(('a'..='z').map(|c| c.to_string()));
+  prefixes.push("inventario/".to_string());
+
+  // 3. Channel for streaming keys back
+  let (tx, mut rx) = mpsc::channel::<String>(10_000);
+
+  println!("Starting parallel scan of {} prefixes...", prefixes.len());
+  let pb = ProgressBar::new_spinner();
+  pb.set_style(ProgressStyle::default_spinner()
+    .template("{spinner:.green} [{elapsed_precise}] Keys found: {pos} ({per_sec})")?);
+
+  // 4. Spawn a worker for every prefix
+  for prefix in prefixes {
+    let client_ptr = Arc::clone(&client);
+    let bucket_ptr = bucket.clone();
+    let tx_ptr = tx.clone();
+
+    tokio::spawn(async move {
+      let mut paginator = client_ptr
+        .list_objects_v2()
+        .bucket(bucket_ptr)
+        .prefix(prefix)
+        .into_paginator()
+        .send();
+
+      // Correctly iterate through pages
+      while let Some(Ok(page)) = paginator.next().await {
+        // page.contents() returns &[Object], so we iterate directly
+        for obj in page.contents() {
+          if let Some(key) = obj.key() {
+            let _ = tx_ptr.send(key.to_string()).await;
+          }
+        }
+      }
+    });
+  }
+
+  // Drop original sender so rx closes when workers are done
+  drop(tx);
+
+  // 5. Collect into pre-allocated Vector
+  let mut all_keys = Vec::with_capacity(3_500_000);
+
+  while let Some(key) = rx.recv().await {
+    all_keys.push(key);
+    pb.inc(1);
+  }
+
+  pb.finish_with_message("Done!");
+  println!("\nTotal Objects Indexed: {}", all_keys.len());
+
+  Ok(())
+}

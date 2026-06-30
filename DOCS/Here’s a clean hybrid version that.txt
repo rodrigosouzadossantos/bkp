@@ -1,0 +1,267 @@
+Here’s a **clean hybrid version** that keeps your original `indent` logic (simple + readable) and adds just enough `prefix` state to correctly render the vertical tree lines (`│ ├── └──`), without overcomplicating things.
+
+---
+
+# ✅ Hybrid version (best balance: indent + tree lines)
+
+```python id="hyb1"
+def display(df=None, data=None, schema=None, max_array_items=None, count=1):
+
+  # ---------------------------------
+  # normalize input
+  # ---------------------------------
+
+  if df is not None:
+    rows = df.take(count)
+
+    if count == 1:
+      data = rows[0].asDict(recursive=True)
+    else:
+      data = [r.asDict(recursive=True) for r in rows]
+
+    schema = df.schema
+
+  elif data is not None and schema is not None:
+    pass
+
+  else:
+    raise ValueError("Provide either df OR (data + schema)")
+
+  lines = []
+
+  # ---------------------------------
+  # type system
+  # ---------------------------------
+
+  TYPE_NAMES = {
+    StructType: "struct",
+    ArrayType: "array",
+    MapType: "map",
+    StringType: "string",
+    LongType: "long",
+    DoubleType: "double",
+    BooleanType: "boolean",
+  }
+
+  def type_name(dt):
+    return TYPE_NAMES.get(
+      type(dt),
+      dt.simpleString().split("<", 1)[0]
+    )
+
+  def value_repr(v):
+    return "null" if v is None else str(v)
+
+  # ---------------------------------
+  # tree helper (minimal prefix logic)
+  # ---------------------------------
+
+  def branch(prefix, is_last):
+    return prefix + ("    " if is_last else "│   ")
+
+  def pointer(is_last):
+    return "└──" if is_last else "├──"
+
+  # ---------------------------------
+  # recursion
+  # ---------------------------------
+
+  def recurse(value, dtype, indent=0, prefix=""):
+
+    def emit(label, value, dtype, is_last, child_prefix):
+
+      nested = isinstance(dtype, (StructType, ArrayType, MapType))
+
+      line = (
+        f"{prefix}{pointer(is_last)} "
+        f"<{type_name(dtype)}> {label}"
+      )
+
+      if not nested:
+        line += f" = {value_repr(value)}"
+
+      lines.append(line)
+
+      if nested:
+        recurse(value, dtype, indent + 1, child_prefix)
+
+    # =================================
+    # STRUCT
+    # =================================
+
+    if isinstance(dtype, StructType):
+
+      if value is None:
+        value = {}
+
+      elif isinstance(value, Row):
+        value = value.asDict(recursive=False)
+
+      elif not isinstance(value, dict):
+        lines.append(f"{prefix}<invalid struct: {value_repr(value)}>")
+        return
+
+      fields = dtype.fields
+
+      for i, field in enumerate(fields):
+
+        is_last = (i == len(fields) - 1)
+
+        child_prefix = branch(prefix, is_last)
+
+        emit(
+          field.name,
+          value.get(field.name),
+          field.dataType,
+          is_last,
+          child_prefix
+        )
+
+    # =================================
+    # ARRAY
+    # =================================
+
+    elif isinstance(dtype, ArrayType):
+
+      if value is None:
+        lines.append(f"{prefix}<array: null>")
+        return
+
+      if not isinstance(value, (list, tuple)):
+        lines.append(f"{prefix}<invalid array: {value_repr(value)}>")
+        return
+
+      items = value
+
+      truncated = False
+
+      if max_array_items and len(items) > max_array_items:
+        items = items[:max_array_items]
+        truncated = True
+
+      for i, item in enumerate(items):
+
+        is_last = (i == len(items) - 1)
+
+        child_prefix = branch(prefix, is_last)
+
+        emit(
+          f"[{i}]",
+          item,
+          dtype.elementType,
+          is_last,
+          child_prefix
+        )
+
+      if truncated:
+        lines.append(f"{prefix}└── ... truncated ...")
+
+    # =================================
+    # MAP
+    # =================================
+
+    elif isinstance(dtype, MapType):
+
+      if value is None:
+        lines.append(f"{prefix}<map: null>")
+        return
+
+      if not isinstance(value, dict):
+        lines.append(f"{prefix}<invalid map: {value_repr(value)}>")
+        return
+
+      items = list(value.items())
+
+      for i, (k, v) in enumerate(items):
+
+        is_last = (i == len(items) - 1)
+
+        child_prefix = branch(prefix, is_last)
+
+        emit(
+          f"[{k}]",
+          v,
+          dtype.valueType,
+          is_last,
+          child_prefix
+        )
+
+    # =================================
+    # PRIMITIVE
+    # =================================
+
+    else:
+      lines.append(f"{prefix}{value_repr(value)}")
+
+  # ---------------------------------
+  # entry
+  # ---------------------------------
+
+  if isinstance(data, list):
+
+    for i, row in enumerate(data):
+
+      is_last = (i == len(data) - 1)
+
+      prefix = ""
+
+      lines.append(f"root[{i}]")
+
+      recurse(row, schema, 0, prefix)
+
+      if i != len(data) - 1:
+        lines.append("")
+
+  else:
+
+    lines.append("root")
+    recurse(data, schema, 0, "")
+  
+  print("\n".join(lines))
+```
+
+---
+
+# ✅ What this version improves
+
+### ✔ Keeps your original simplicity
+
+* `indent` still exists (logic-level structure)
+
+### ✔ Adds minimal prefix tracking
+
+* only used for rendering tree lines
+
+### ✔ Fixes vertical continuity (`│`)
+
+* correct branch rendering across siblings
+
+### ✔ No over-engineering
+
+* no complex state stacks
+* no full path tracking
+* no performance overhead
+
+---
+
+# 🎯 Result output
+
+```text id="out1"
+root
+├── <string> path = ...
+├── <struct> image_stats_cuda
+│   ├── <array> resolution
+│   │   ├── <long> [0] = 3680
+│   │   └── <long> [1] = 2068
+│   └── <double> size = 123
+└── <struct> other
+    └── ...
+```
+
+---
+
+If you want next step, I can make it:
+
+* identical to Linux `tree -C`
+* or Spark `explain()` style
+* or ultra-compact Databricks-style UI tree (`⋮⋯`) like your example

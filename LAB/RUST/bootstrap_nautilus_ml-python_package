@@ -1,0 +1,231 @@
+#!/usr/bin/env bash
+set -e
+
+PROJECT=${1:-nautilus-ml}
+PKG_NAME="nautilus_ml"
+echo "Creating Python package $PKG_NAME ..."
+
+# create directories
+mkdir -p $PROJECT/python/$PKG_NAME
+mkdir -p $PROJECT/python/tests
+
+# helper functions
+create_header() {
+  LANG=$1
+  MODULE=$2
+  COMPONENT=$3
+  if [ "$LANG" = "python" ]; then COMMENT="#"; else COMMENT="//"; fi
+  cat <<EOF
+$COMMENT vim: set ts=2 sw=2 et:
+$COMMENT --------------------------------------------------
+$COMMENT Project: Nautilus ML Platform
+$COMMENT Module: $MODULE
+$COMMENT Component: $COMPONENT
+$COMMENT Inspired by Jules Verne's "Twenty Thousand Leagues Under the Sea"
+$COMMENT License: Apache-2.0
+$COMMENT --------------------------------------------------
+EOF
+}
+
+create_file() {
+  FILE=$1
+  LANG=$2
+  MODULE=$3
+  COMPONENT=$4
+  mkdir -p "$(dirname "$FILE")"
+  create_header "$LANG" "$MODULE" "$COMPONENT" > "$FILE"
+}
+
+########################################
+# pyproject.toml
+########################################
+cat > $PROJECT/python/pyproject.toml <<EOF
+[build-system]
+requires = ["setuptools>=61.0", "wheel", "maturin>=1.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "$PKG_NAME"
+version = "0.1.0"
+description = "Deep-sea AI/ML pipeline inspired by Twenty Thousand Leagues Under the Sea"
+authors = [{name = "Nautilus Team"}]
+requires-python = ">=3.10"
+dependencies = [
+    "numpy",
+    "pandas",
+    "pyarrow",
+    "altair",
+    "plotly",
+    "torch",
+    "tensorflow",
+    "scikit-learn",
+    "mlflow",
+    "wandb",
+    "dvc",
+    "lakefs",
+    "boto3",
+    "azure-storage-blob"
+]
+EOF
+
+########################################
+# __init__.py
+########################################
+create_file $PROJECT/python/$PKG_NAME/__init__.py python $PKG_NAME init
+
+cat >> $PROJECT/python/$PKG_NAME/__init__.py <<'EOF'
+from .storage import Storage
+from .dataset import Dataset
+from .cv import CVPipeline
+from .experiment import Experiment
+from .visualization import Visualization
+
+__all__ = ["Storage", "Dataset", "CVPipeline", "Experiment", "Visualization"]
+EOF
+
+########################################
+# storage.py
+########################################
+create_file $PROJECT/python/$PKG_NAME/storage.py python $PKG_NAME storage
+
+cat >> $PROJECT/python/$PKG_NAME/storage.py <<'EOF'
+import asyncio
+from typing import List
+from rust_bindings import storage  # assumes maturin build from rust/storage
+
+class Storage:
+  """Wrap S3 and Azure storage"""
+
+  @staticmethod
+  def list_s3_buckets() -> List[str]:
+    return asyncio.run(storage.list_buckets())
+
+  @staticmethod
+  def list_s3_objects(bucket: str) -> List[str]:
+    return asyncio.run(storage.list_objects(bucket))
+
+  @staticmethod
+  def download_s3_objects(keys: List[str]):
+    storage.parallel_download(keys)
+
+  @staticmethod
+  def list_azure_containers(account: str, key: str) -> List[str]:
+    return asyncio.run(storage.list_containers(account, key))
+
+  @staticmethod
+  def download_azure_blobs(blobs: List[str]):
+    storage.parallel_blob_download(blobs)
+EOF
+
+########################################
+# dataset.py
+########################################
+create_file $PROJECT/python/$PKG_NAME/dataset.py python $PKG_NAME dataset
+
+cat >> $PROJECT/python/$PKG_NAME/dataset.py <<'EOF'
+from rust_bindings import dataset
+import numpy as np
+
+class Dataset:
+  """Ingest images/videos and produce zero-copy NumPy arrays"""
+
+  @staticmethod
+  def ingest_files(paths):
+    return dataset.ingest_files(paths)
+
+  @staticmethod
+  def arrow_to_numpy():
+    import pyarrow as pa
+    return dataset.arrow_to_numpy()  # zero-copy NumPy array
+EOF
+
+########################################
+# cv.py
+########################################
+create_file $PROJECT/python/$PKG_NAME/cv.py python $PKG_NAME cv
+
+cat >> $PROJECT/python/$PKG_NAME/cv.py <<'EOF'
+from rust_bindings import cv
+
+class CVPipeline:
+  """GPU-ready image/video preprocessing"""
+
+  @staticmethod
+  def process_images(paths, width=128, height=128):
+    return cv.batch_processing.process_image_batch(paths, width, height)
+
+  @staticmethod
+  def read_video_frames(path):
+    return cv.video.read_video_frames(path)
+
+  @staticmethod
+  def frames_to_grayscale(frames):
+    return cv.video.frames_to_grayscale(frames)
+EOF
+
+########################################
+# experiment.py
+########################################
+create_file $PROJECT/python/$PKG_NAME/experiment.py python $PKG_NAME experiment
+
+cat >> $PROJECT/python/$PKG_NAME/experiment.py <<'EOF'
+from rust_bindings import experiment
+
+class Experiment:
+  """MLFlow / W&B / DVC / LakeFS wrapper"""
+
+  @staticmethod
+  def log_metric(name, value):
+    experiment.mlflow.log_metric(name, value)
+
+  @staticmethod
+  def log_param(name, value):
+    experiment.mlflow.log_param(name, value)
+
+  @staticmethod
+  def log_wandb(name, value):
+    experiment.wandb.log_metrics(name, value)
+
+  @staticmethod
+  def track_datasets(paths):
+    experiment.dvc.track_datasets_parallel(paths)
+
+  @staticmethod
+  def lakefs_create_branches(names):
+    experiment.lakefs.create_branches_parallel(names)
+EOF
+
+########################################
+# visualization.py
+########################################
+create_file $PROJECT/python/$PKG_NAME/visualization.py python $PKG_NAME visualization
+
+cat >> $PROJECT/python/$PKG_NAME/visualization.py <<'EOF'
+from rust_bindings import visualization
+import numpy as np
+import altair as alt
+import plotly.express as px
+
+class Visualization:
+  """Prepare data for Altair / Plotly"""
+
+  @staticmethod
+  def metrics_to_numpy(metrics):
+    return visualization.arrow_bridge.metrics_to_numpy(metrics)
+
+  @staticmethod
+  def plot_altair(data, x, y):
+    return alt.Chart(data).mark_line().encode(x=x, y=y)
+
+  @staticmethod
+  def plot_plotly(data, x, y):
+    return px.line(data, x=x, y=y)
+EOF
+
+echo "Python package bootstrap complete. Navigate to $PROJECT/python and run:"
+echo "python -m venv venv"
+echo "source venv/bin/activate"
+echo "pip install --upgrade pip"
+echo "pip install maturin numpy pandas pyarrow altair plotly torch tensorflow scikit-learn mlflow wandb dvc lakefs boto3 azure-storage-blob"
+echo "maturin develop --manifest-path ../rust/storage/Cargo.toml" # repeat for other crates
+echo "You can now import $PKG_NAME in Python"

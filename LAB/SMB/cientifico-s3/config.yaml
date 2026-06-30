@@ -1,0 +1,65 @@
+global:
+  workgroup: PETROBRAS
+  realm: PETROBRAS.BIZ
+  default_user: ghva
+  default_password: "As3nhad0pilaco#"
+  upload:
+    max_concurrent_jobs: 100
+    max_smb_workers: 100
+    chunk_size: 8388608 # 8MB chunks para upload multipart
+    skip_existing: true
+
+    # Configurações de timeout (em segundos) e retry
+    timeouts:
+      smb_read_seconds: 30
+      s3_upload_seconds: 60
+      s3_check_seconds: 30
+      worker_idle_seconds: 60
+
+    retry:
+      max_attempts: 3
+      backoff_seconds: 5           # Esperar 5s entre tentativas
+      exponential_backoff: true    # 5s, 10s, 20s...
+
+servers:
+  servico:
+    host: SMB.SRJCIPDVFS10101.PETROBRAS.BIZ
+    share: servico_002$
+    use_kerberos: false
+    description: "Servidor de Serviços"
+
+  cientifico:
+    host: dfs.petrobras.biz
+    share: cientifico
+    use_kerberos: false
+    description: "DFS Científico"
+
+  exp:
+    host: dfs.petrobras.biz
+    share: cientifico/exp
+    use_kerberos: false
+    description: "Exploração"
+
+  noaa:
+    #host: dfs.petrobras.biz
+    #share: cientifico/sub/hidrografia/01_auv/03_projeto_bc_2023/embarcacao_hibrida/02_skandi_commander/01_dados_aprovados/ordens_servico_001/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS
+    host: SMB.SRJCIPDVFS10101.PETROBRAS.BIZ
+    share: servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS
+    directories:
+      - COM20240425/RUN_20240414_0030VB0082
+      - COM20240425/RUN_20240415_0030VB0083
+    use_kerberos: false
+    description: "NOAA"
+    s3:
+      bucket: analise-dados
+      prefix: projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/
+      region: sa-east-1
+
+  test:
+    #host: SMB.SRJCIPDVFS50101.PETROBRAS.BIZ
+    #share: servico_003$
+    host: dfs.petrobras.biz
+    share: cientifico/sub/hidrografia/01_auv/03_projeto_bc_2023/embarcacao_hibrida/02_skandi_commander/01_dados_aprovados/ordens_servico_001
+    use_kerberos: false
+    description: "Servidor de Serviços"
+

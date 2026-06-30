@@ -1,0 +1,7 @@
+# Stakeholder Register
+
+| Name | Role | Influence | Interest |
+| :--- | :--- | :--- | :--- |
+| Tech Lead | Consultant | High | High |
+| DevOps Team | Supporting | Med | High |
+| End Client | Beneficiary | High | High |

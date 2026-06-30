@@ -1,0 +1,309 @@
+# Risk Response Plan  
+
+
+## Purpose of This Document
+
+This Risk Response Plan defines **how identified project risks will be
+handled**, detailing:
+
+- Risk ownership
+- Response strategies (avoid, mitigate, accept, escalate)
+- Trigger conditions
+- Contingency and fallback actions
+- Integration with KPIs and Stage‑Gates
+
+This document operationalizes the **Risk Register** and is a **mandatory PMBOK
+Planning artifact**.
+
+---
+
+## Risk Management Principles
+
+1. **Ecological risks take precedence** over schedule and cost risks  
+2. No efficiency gain justifies increased ecological risk  
+3. Risk responses must be:
+   - Predefined
+   - Actionable
+   - Auditable
+4. KPI‑3 (Ecological Data Protection Index) is the primary risk sentinel
+
+---
+
+## Risk Categorization
+
+Risks are managed in four categories:
+
+- **Environmental / Ecological**
+- **Data & Technical**
+- **Operational**
+- **Governance & Adoption**
+
+Each category has predefined escalation paths.
+
+---
+
+## Detailed Risk Response Table
+
+### R1 — Ecological Data Loss (False Negatives)
+
+| Element | Description |
+|-------|-------------|
+| Risk ID | R1 |
+| Description | Automated screening incorrectly excludes benthic‑relevant imagery |
+| Category | Environmental / Ecological |
+| Probability | Medium |
+| Impact | **Very High** |
+| Primary KPI | KPI‑3 (Ecological Data Protection Index) |
+| Owner | Environmental SME Lead |
+
+**Response Strategy**
+
+- **Mitigate / Avoid**
+
+**Preventive Actions**
+
+- Precision‑first model design
+- Conservative thresholds
+- SME‑approved annotation guidelines
+
+**Trigger**
+
+- KPI‑3 < agreed threshold (85–90%)
+
+**Contingency Actions**
+
+- Immediate halt of automated filtering
+- Re‑screen affected datasets manually
+- Model retraining with SME‑reviewed samples
+
+**Escalation**
+
+- Immediate escalation to Sponsor
+- Stage‑Gate progression blocked
+
+---
+
+### R2 — Annotation Subjectivity
+
+| Element | Description |
+|-------|-------------|
+| Risk ID | R2 |
+| Description | Inconsistent labels due to expert interpretation differences |
+| Category | Data / Ecological |
+| Probability | High |
+| Impact | High |
+| Primary KPI | KPI‑4 (Cross‑Field Ecological Consistency) |
+| Owner | Environmental SME Lead |
+
+**Response Strategy**
+
+- **Mitigate**
+
+**Preventive Actions**
+
+- Formal annotation guidelines
+- Consensus labeling sessions
+- Periodic inter‑annotator agreement checks
+
+**Trigger**
+
+- Significant deviation in validation metrics across annotators or fields
+
+**Contingency Actions**
+
+- Reconciliation workshops
+- Guideline refinement
+- Label correction cycles
+
+---
+
+### R3 — Model Underperformance
+
+| Element | Description |
+|-------|-------------|
+| Risk ID | R3 |
+| Description | Model does not reach minimum performance criteria |
+| Category | Technical |
+| Probability | Medium |
+| Impact | High |
+| Primary KPI | KPI‑3, KPI‑1 |
+| Owner | Data Science Lead |
+
+**Response Strategy**
+
+- **Mitigate / Accept (MVP)**
+
+**Preventive Actions**
+
+- Incremental training
+- Balanced validation sets
+- Conservative success thresholds
+
+**Trigger**
+
+- Repeated failure to meet MVP criteria after retraining
+
+**Contingency Actions**
+
+- Restrict usage to assisted annotation only
+- Extend MVP timeline
+- Escalate decision to Sponsor
+
+---
+
+### R4 — Class Imbalance Bias
+
+| Element | Description |
+|-------|-------------|
+| Risk ID | R4 |
+| Description | Non‑benthic dominance biases model learning |
+| Category | Data |
+| Probability | High |
+| Impact | Medium |
+| Owner | Data Science Lead |
+
+**Response Strategy**
+
+- **Mitigate**
+
+**Preventive Actions**
+
+- Weighted loss functions
+- Controlled sampling
+- Validation on balanced subsets
+
+**Trigger**
+
+- Drop in benthic recall or retention metrics
+
+**Contingency Actions**
+
+- Rebalance training data
+- Adjust loss weighting
+- SME review of failure cases
+
+---
+
+### R5 — Data Quality Degradation
+
+| Element | Description |
+|-------|-------------|
+| Risk ID | R5 |
+| Description | Poor image quality (turbidity, lighting) affects screening |
+| Category | Data / Operational |
+| Probability | High |
+| Impact | Medium |
+| Owner | Data Engineering Lead |
+
+**Response Strategy**
+
+- **Mitigate / Accept**
+
+**Preventive Actions**
+
+- Quality filtering rules
+- Flagging unusable data
+
+**Trigger**
+
+- High proportion of unusable frames
+
+**Contingency Actions**
+
+- Exclude degraded data from automation
+- Manual review fallback
+
+---
+
+### R6 — Stakeholder Misalignment
+
+| Element | Description |
+|-------|-------------|
+| Risk ID | R6 |
+| Description | Divergent expectations between technical and environmental stakeholders |
+| Category | Governance |
+| Probability | Medium |
+| Impact | High |
+| Owner | Project Manager |
+
+**Response Strategy**
+
+- **Mitigate**
+
+**Preventive Actions**
+
+- OKR and KPI transparency
+- Frequent checkpoints
+
+**Trigger**
+
+- Conflicting feedback at validation points
+
+**Contingency Actions**
+
+- Alignment workshop
+- Sponsor arbitration
+
+---
+
+### R7 — Adoption Resistance
+
+| Element | Description |
+|-------|-------------|
+| Risk ID | R7 |
+| Description | Low trust or usage of automated outputs |
+| Category | Operational |
+| Probability | Medium |
+| Impact | Medium |
+| Owner | Product Owner |
+
+**Response Strategy**
+
+- **Mitigate / Accept**
+
+**Preventive Actions**
+
+- SME involvement from start
+- Explainability and transparency
+
+**Trigger**
+
+- Low utilization or negative feedback
+
+**Contingency Actions**
+
+- Restrict usage to advisory mode
+- Additional training and communication
+
+---
+
+## Risk–Stage‑Gate Integration
+
+| Stage‑Gate | Critical Risks Reviewed |
+|----------|------------------------|
+| G1 | R1, R2 |
+| G2 | R1, R2, R3 |
+| G3 | R1, R3, R7 |
+| G4 | R1, R5, R6 |
+
+Failure of **R1 controls** automatically blocks gate progression.
+
+---
+
+## Risk Monitoring and Reporting
+
+- Risk Register reviewed **weekly**
+- High and critical risks reported to Sponsor
+- KPI‑based risk triggers monitored continuously
+- Risk responses logged for auditability
+
+---
+
+## Residual Risk Acceptance
+
+Residual risks may only be accepted when:
+
+- Ecological risk is explicitly acknowledged
+- Acceptance is documented
+- Sponsor approval is obtained
+

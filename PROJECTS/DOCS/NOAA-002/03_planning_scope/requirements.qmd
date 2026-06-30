@@ -1,0 +1,9 @@
+# Requirements Documentation
+
+### Functional Requirements
+1. The system shall support asynchronous inference.
+2. The system shall integrate with Redis Streams for real-time ETL.
+
+### Non-Functional Requirements
+1. Latency must be deterministic.
+2. Model weight loading must happen in < 5 seconds.

@@ -1,0 +1,48 @@
+# Auto-detect text files and normalize line endings to LF in-repo
+* text=auto eol=lf
+
+# Keep Windows scripts usable if you have any .bat/.cmd files
+*.bat  text eol=crlf
+*.cmd  text eol=crlf
+
+# Shell scripts
+*.sh   text eol=lf
+
+# Common config/documentation formats
+*.md   text eol=lf
+*.yml  text eol=lf
+*.yaml text eol=lf
+*.json text eol=lf
+*.toml text eol=lf
+*.ini  text eol=lf
+
+# Python
+*.py   text eol=lf
+
+# HTML / web
+*.html text eol=lf
+*.css  text eol=lf
+*.js   text eol=lf
+
+# Treat images and other binaries as binary (no line-ending changes / no diffs)
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.ico  binary
+*.pdf  binary
+
+# Prevent large notebooks from producing noisy diffs
+*.ipynb -text
+
+# Ignore compiled files
+*.pyc  binary
+*.o    binary
+*.exe  binary
+
+# Ignore IDE/editor config files
+.DS_Store binary
+.vscode/  binary
+.idea/    binary
+.vs/      binary
+

@@ -1,0 +1,30 @@
+name: Render OKR Dashboard
+
+on:
+  push:
+    paths:
+      - 'dashboard/**'
+  workflow_dispatch:
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+
+      - name: Install dependencies
+        run: |
+          Rscript -e 'install.packages(c("jsonlite","dplyr","ggplot2","plotly","reactable","crosstalk","lubridate"))'
+
+      - name: Render dashboard
+        run: quarto render dashboard/
+
+      - name: Upload artifact (build)
+        uses: actions/upload-artifact@v3
+        with:
+          name: dashboard-build
+          path: dashboard/build/

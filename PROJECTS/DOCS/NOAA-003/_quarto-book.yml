@@ -1,0 +1,32 @@
+project:
+  type: book
+
+book:
+  title: "NOAA"
+  author: "Rodrigo Souza dos Santos"
+  date: "2026-03-24"
+  chapters:
+    - index.qmd
+    - part: "{{< meta i18n.section_strategy >}}"
+      chapters:
+        - 01_strategy_okrs/okr_dashboard.qmd
+        - 01_strategy_okrs/value_stream.qmd
+    - part: "{{< meta i18n.section_initiating >}}"
+      chapters:
+        - 02_initiating_pmbok/business_case.qmd
+        - 02_initiating_pmbok/project_charter.qmd
+        - 02_initiating_pmbok/stakeholder_reg.qmd
+    - part: "{{< meta i18n.section_planning >}}"
+      chapters:
+        - 03_planning_scope/requirements.qmd
+        - 03_planning_scope/wbs.qmd
+        - 03_planning_scope/wbs_dictionary.qmd
+    - part: "{{< meta i18n.section_execution >}}"
+      chapters:
+        - 04_agile_execution/product_backlog.qmd
+        - 04_agile_execution/roadmap.qmd
+    - part: "{{< meta i18n.section_control >}}"
+      chapters:
+        - 05_monitoring_control/risk_register.qmd
+        - 05_monitoring_control/change_log.qmd
+

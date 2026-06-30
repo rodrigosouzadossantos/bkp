@@ -1,0 +1,141 @@
+# Schedule Baseline  
+
+
+## Purpose of This Document
+
+This document defines the **Schedule Baseline** for the project, including:
+
+- Planned activities derived from the WBS
+- Logical sequencing and dependencies
+- Milestones and Stage‑Gates
+- A visual Gantt representation
+
+The Schedule Baseline is a **controlled baseline** under PMBOK and is used to:
+
+- Monitor progress
+- Support Stage‑Gate decisions
+- Manage schedule changes
+
+---
+
+## Scheduling Principles
+
+1. Schedule is **WBS-driven**
+2. **Ecological validation activities are non-compressible**
+3. Stage‑Gates are **hard milestones**
+4. MVP focus — no speculative future scope included
+5. Schedule buffers protect ecological review, not speed
+
+---
+
+## High-Level Timeline Assumption
+
+- Project duration (MVP): **12 weeks**
+- Cadence: weekly planning, bi‑weekly validation
+- Initial validation fields: **Viola → Espadarte**
+
+---
+
+## Schedule Breakdown (by WBS)
+
+| ID | Activity | Duration | Dependency |
+|----|----------|----------|------------|
+| A1 | Project Initiation & Strategy | 1 week | — |
+| A2 | Governance & KPI Baseline | 1 week | A1 |
+| A3 | Data & Environmental Preparation | 2 weeks | A2 |
+| A4 | Annotation Guidelines & Pilot Labeling | 2 weeks | A3 |
+| A5 | AI Model Development (MVP) | 3 weeks | A4 |
+| A6 | Ecological Validation (Field 1 – Viola) | 1 week | A5 |
+| G2 | **Stage‑Gate G2 – MVP Ecological Validation** | 0 | A6 |
+| A7 | Generalization & Validation (Field 2 – Espadarte) | 1 week | G2 |
+| A8 | Digital Asset Consolidation | 1 week | A7 |
+| G3 | **Stage‑Gate G3 – Reuse & Operational Value** | 0 | A8 |
+| A9 | Project Closure & Reporting | 1 week | G3 |
+
+---
+
+## Key Milestones
+
+| Milestone | Description |
+|----------|-------------|
+| M1 | Charter, Scope, WBS, Requirements approved |
+| G2 | MVP Ecological Validation Approved |
+| G3 | Reuse & Scalability Approved |
+| M2 | Project Closed |
+
+---
+
+## Gantt Chart — Schedule Baseline (Mermaid)
+
+```{mermaid}
+gantt
+  title Schedule Baseline — Subsea Benthic Analysis AI (MVP)
+  dateFormat  YYYY-MM-DD
+  axisFormat  %d/%m
+
+  section Initiation & Governance
+  Project Initiation & Strategy        :a1, 2026-04-01, 7d
+  Governance & KPI Baseline            :a2, after a1, 7d
+
+  section Data & Environmental Preparation
+  Data & Environmental Preparation    :a3, after a2, 14d
+  Annotation Guidelines & Pilot Labels :a4, after a3, 14d
+
+  section AI Development
+  AI Model Development (MVP)           :a5, after a4, 21d
+
+  section Ecological Validation
+  Validation — Field 1 (Viola)         :a6, after a5, 7d
+  Stage-Gate G2 (Ecological MVP)       :milestone, g2, after a6, 0d
+
+  Validation — Field 2 (Espadarte)     :a7, after g2, 7d
+
+  section Asset & Closure
+  Digital Asset Consolidation          :a8, after a7, 7d
+  Stage-Gate G3 (Reuse Approval)       :milestone, g3, after a8, 0d
+  Project Closure & Reporting          :a9, after g3, 7d
+```
+
+---
+
+## Stage‑Gate Integration
+
+| Gate | Schedule Position | Decision Basis |
+|-----|-------------------|----------------|
+| G2 | After Field 1 validation | KPI‑3 ≥ threshold |
+| G3 | After Field 2 validation | KPI‑3 + KPI‑4 + KPI‑5 |
+
+Failure at any gate **halts progression**, regardless of schedule adherence.
+
+---
+
+## Schedule Control Rules
+
+- Any variance > ±10% requires analysis
+- Schedule compression **cannot reduce ecological validation**
+- Changes require formal Change Request
+- Sponsor approval required for baseline changes
+
+---
+
+## Relationship to Other Plans
+
+- Inputs: WBS, WBS Dictionary, Requirements
+- Feeds: Cost Baseline, Resource Plan, PMP
+- Controlled under: Change Management Plan
+
+---
+
+## Baseline Approval
+
+This Schedule Baseline is approved and frozen upon signature.
+
+---
+
+## Approval Signatures
+
+| Role | Name | Signature | Date |
+|-----|---------|------------------|------|
+| Sponsor (NOAA / SUB) | {{< meta executive-sponsor >}} | | |
+| Environmental SME Lead | {{< meta sme-lead>}} | | |
+| Project Owner | {{< meta project-po >}} | | |

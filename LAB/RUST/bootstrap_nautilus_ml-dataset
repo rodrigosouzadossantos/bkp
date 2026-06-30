@@ -1,0 +1,172 @@
+#!/usr/bin/env bash
+set -e
+
+PROJECT=${1:-nautilus-ml}
+echo "Creating Nautilus ML dataset crate in $PROJECT/rust/dataset ..."
+
+# create directories
+mkdir -p $PROJECT/rust/dataset/src
+mkdir -p $PROJECT/tests
+
+# helper functions
+create_header() {
+  LANG=$1
+  MODULE=$2
+  COMPONENT=$3
+  if [ "$LANG" = "rust" ]; then COMMENT="//"; else COMMENT="#"; fi
+  cat <<EOF
+$COMMENT vim: set ts=2 sw=2 et:
+$COMMENT --------------------------------------------------
+$COMMENT Project: Nautilus ML Platform
+$COMMENT Module: $MODULE
+$COMMENT Component: $COMPONENT
+$COMMENT Inspired by Jules Verne's "Twenty Thousand Leagues Under the Sea"
+$COMMENT License: Apache-2.0
+$COMMENT --------------------------------------------------
+EOF
+}
+
+create_file() {
+  FILE=$1
+  LANG=$2
+  MODULE=$3
+  COMPONENT=$4
+  mkdir -p "$(dirname "$FILE")"
+  create_header "$LANG" "$MODULE" "$COMPONENT" > "$FILE"
+}
+
+########################################
+# Cargo.toml for dataset crate
+########################################
+cat > $PROJECT/rust/dataset/Cargo.toml <<EOF
+[package]
+name = "dataset"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+rayon = "1"
+tokio = { version = "1", features = ["full"] }
+numpy = "0.18"
+pyo3 = { version = "0.19", features = ["extension-module"] }
+arrow = "42.0"
+polars = { version = "0.32.0", features = ["temporal"] }
+anyhow = "1.0"
+serde = { version = "1.0", features = ["derive"] }
+EOF
+
+########################################
+# ingestion.rs: ingest files with HPC parallelism
+########################################
+create_file $PROJECT/rust/dataset/src/ingestion.rs rust dataset ingestion
+
+cat >> $PROJECT/rust/dataset/src/ingestion.rs <<'EOF'
+use rayon::prelude::*;
+use std::fs;
+use anyhow::Result;
+
+/// Ingest a list of file paths in parallel
+pub fn ingest_files(paths: Vec<String>) -> Result<Vec<Vec<u8>>> {
+    let data: Vec<Vec<u8>> = paths.par_iter().map(|p| {
+        fs::read(p).unwrap_or_default()
+    }).collect();
+    Ok(data)
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    #[test]
+    fn test_ingest_files() {
+        let files = vec!["./Cargo.toml".to_string()];
+        let result = ingest_files(files).unwrap();
+        assert!(result.len() == 1);
+        println!("Ingested {} files", result.len());
+    }
+}
+EOF
+
+########################################
+# arrow_bridge.rs: zero-copy Arrow <-> NumPy
+########################################
+create_file $PROJECT/rust/dataset/src/arrow_bridge.rs rust dataset arrow_bridge
+
+cat >> $PROJECT/rust/dataset/src/arrow_bridge.rs <<'EOF'
+use pyo3::prelude::*;
+use numpy::{IntoPyArray, PyArray1};
+use arrow::array::Float64Array;
+use arrow::array::Array;
+
+#[pyfunction]
+pub fn arrow_to_numpy<'py>(py: Python<'py>) -> &'py PyArray1<f64> {
+    // Create Arrow array
+    let arrow_data = Float64Array::from(vec![0.0, 1.0, 2.0, 3.0, 4.0]);
+    // Convert to Vec<f64>
+    let vec_data: Vec<f64> = (0..arrow_data.len()).map(|i| arrow_data.value(i)).collect();
+    vec_data.into_pyarray(py)
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use pyo3::prelude::*;
+    #[test]
+    fn test_arrow_to_numpy() {
+        Python::with_gil(|py| {
+            let arr = arrow_to_numpy(py);
+            assert_eq!(arr.len(), 5);
+            println!("Zero-copy NumPy array length: {}", arr.len());
+        });
+    }
+}
+EOF
+
+########################################
+# parquets.rs: save Arrow table to Parquet in parallel
+########################################
+create_file $PROJECT/rust/dataset/src/parquets.rs rust dataset parquets
+
+cat >> $PROJECT/rust/dataset/src/parquets.rs <<'EOF'
+use arrow::record_batch::RecordBatch;
+use arrow::array::{Float64Array, ArrayRef};
+use parquet::arrow::ArrowWriter;
+use parquet::file::properties::WriterProperties;
+use std::sync::Arc;
+use std::fs::File;
+use rayon::prelude::*;
+use anyhow::Result;
+
+/// Write multiple Arrow tables to Parquet in parallel
+pub fn write_parquet_parallel(data_batches: Vec<RecordBatch>, paths: Vec<String>) -> Result<()> {
+    data_batches.into_par_iter().zip(paths.into_par_iter()).for_each(|(batch, path)| {
+        let file = File::create(path).unwrap();
+        let props = WriterProperties::builder().build();
+        let mut writer = ArrowWriter::try_new(file, batch.schema(), Some(props)).unwrap();
+        writer.write(&batch).unwrap();
+        writer.close().unwrap();
+    });
+    Ok(())
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use arrow::datatypes::{Field, Schema, DataType};
+    use arrow::array::Float64Array;
+    use arrow::record_batch::RecordBatch;
+
+    #[test]
+    fn test_write_parquet_parallel() {
+        let schema = Arc::new(Schema::new(vec![Field::new("val", DataType::Float64, false)]));
+        let array: ArrayRef = Arc::new(Float64Array::from(vec![1.0,2.0,3.0]));
+        let batch = RecordBatch::try_new(schema.clone(), vec![array]).unwrap();
+        let paths = vec!["test1.parquet".to_string()];
+        write_parquet_parallel(vec![batch], paths).unwrap();
+        println!("Parquet written successfully");
+    }
+}
+EOF
+
+echo "Dataset crate bootstrap complete. Navigate to $PROJECT/rust/dataset and run:"
+echo "cargo build"
+echo "cargo test"

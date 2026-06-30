@@ -1,0 +1,201 @@
+# {{< i18n business_case >}} {#sec-business-case}
+
+## Subsea Benthic Analysis AI – Environmental Intelligence Pipeline {.unnumbered}
+
+---
+
+## Executive Summary
+
+This **Business Case** justifies the investment in an AI-based pipeline for
+automated screening of subsea imagery, with the primary goal of **strengthening
+ecological understanding and environmental governance** in Petrobras Subsea
+operations.
+
+The initiative responds to a critical scalability challenge: the exponential
+growth of AUV inspection data has outpaced the capacity for manual ecological
+analysis, increasing the risk of delayed assessments, specialist overload, and
+potential loss of environmentally relevant information.
+
+By introducing AI-assisted screening as an enabling technology, the project
+delivers **environmental value first**, while also generating measurable
+operational and economic benefits.
+
+---
+
+## Strategic Problem Statement
+
+### Current Situation (As-Is)
+
+- AUV inspection campaigns generate **millions of images per field**
+- Ecological and environmental analysis relies heavily on **manual expert screening**
+- Increased data volume leads to:
+  - Longer analysis cycles
+  - Higher specialist workload
+  - Reduced scalability of environmental studies
+- Environmental confidence depends on human capacity, which does not scale linearly
+
+This creates a structural risk for:
+
+- Environmental baseline studies
+- Monitoring and impact assessments
+- Support to licensing and regulatory processes
+
+---
+
+### Strategic Risk of Inaction
+
+If no action is taken:
+
+- Ecologically relevant benthic data may be **delayed, overlooked, or underutilized**
+- Environmental assessments become bottlenecks in subsea operations
+- Specialist overload increases operational and human risk
+- Environmental intelligence remains fragmented and non-reusable
+
+This risk directly impacts Petrobras’ ability to operate responsibly and
+sustainably in complex offshore environments.
+
+---
+
+## Business Opportunity
+
+### Opportunity Description
+
+The proposed solution introduces **AI-based automated screening of subsea
+imagery**, acting as a **scaling mechanism for ecological intelligence**.
+
+The system does **not replace experts**; it filters noise so that experts can
+focus on ecologically relevant content with higher confidence and consistency.
+
+---
+
+### Strategic Alignment (SUB / Petrobras)
+
+The initiative aligns with Petrobras Subsea strategic drivers:
+
+- **Environmental stewardship and ecological responsibility**
+- **Digitalization of subsea inspection and monitoring**
+- **Reduction of human exposure and specialist overload**
+- **Creation of reusable digital environmental assets**
+- **Long-term cost efficiency through scalability**
+
+---
+
+## Value Proposition
+
+### Primary Value — Ecological and Environmental
+
+- Improved identification of benthic-relevant imagery at scale
+- Higher confidence in environmental baseline studies
+- Reduced risk of missing ecologically relevant features
+- More consistent ecological interpretation across campaigns and fields
+
+---
+
+### Secondary Value — Operational and Economic
+
+- Reduction in manual screening effort (≥ 30%)
+- Shorter analysis cycles (≥ 25%)
+- Lower cost per inspection campaign
+- Better allocation of specialist time to high-value analysis
+
+---
+
+### Long-Term Strategic Value
+
+- Creation of a reusable environmental AI capability
+- Accumulation of curated, versioned ecological datasets
+- Foundation for future environmental intelligence initiatives
+- Progressive adoption of MLOps within SUB
+
+---
+
+## Investment Rationale
+
+### Why Now
+
+- Data volume growth is accelerating
+- Manual processes are reaching practical limits
+- AI/CV technologies are sufficiently mature for screening tasks
+- Delaying action increases ecological and operational risk
+
+---
+
+### Why an MVP Approach
+
+- Reduces upfront investment and risk
+- Allows early validation with real operational data
+- Enables iterative improvement with SME oversight
+- Preserves flexibility for future expansion
+
+---
+
+## Cost–Benefit Considerations (Qualitative)
+
+### Cost Elements
+
+- Data science and engineering effort
+- Compute and storage resources
+- SME validation and annotation effort
+- Governance, documentation, and maintenance
+
+---
+
+### Benefit Elements
+
+- Reduced specialist hours per campaign
+- Faster environmental assessments
+- Reuse of models and datasets across fields
+- Avoided cost of delayed or repeated analysis
+
+---
+
+### ROI Logic
+
+ROI is driven not only by cost reduction, but by **risk avoidance and value
+preservation**, particularly:
+
+- Avoidance of ecological oversight
+- Avoidance of rework due to late detection
+- Preservation of environmental credibility
+
+---
+
+## Options Analysis
+
+| Option | Description | Assessment |
+|------|-------------|------------|
+| Do Nothing | Maintain manual screening | Not scalable, high risk |
+| Partial Automation | Rule-based or limited tools | Low robustness |
+| **AI-Based Screening (Proposed)** | Precision-first AI + SME validation | **Best balance of value and risk** |
+
+---
+
+## Risks and Mitigation (Business Perspective)
+
+| Risk | Impact | Mitigation |
+|----|-------|-----------|
+| Model underperformance | Reduced trust | Conservative precision-first strategy |
+| Annotation subjectivity | Inconsistent outputs | Guidelines + consensus |
+| Adoption resistance | Low usage | SME involvement from start |
+| Over-automation | Ecological risk | Human-in-the-loop governance |
+
+---
+
+## Success Indicators (Business-Level)
+
+- ≥ 30% reduction in manual screening effort
+- ≥ 25% reduction in analysis cycle time
+- ≥ 85–90% retention of true benthic data
+- Positive validation by NOAA / SUB environmental specialists
+
+---
+
+## Recommendation
+
+Proceed with the proposed MVP for AI-based automated screening of subsea
+imagery, recognizing it as a **strategic environmental investment**, with
+automation serving as an enabler for ecological excellence, not as an end in
+itself.
+
+Approval of this Business Case authorizes transition to detailed Planning and
+controlled Execution phases.

@@ -1,0 +1,575 @@
+---
+title: "OKRs"
+---
+
+\pagebreak
+
+Com base nos conceitos, especialmente nas práticas difundidas por:
+
+* Measure What Matters – de John Doerr
+* Práticas adotadas por Google
+* Referências de gestão como Andy Grove (origem conceitual dos OKR na Intel)
+
+Uma avaliação da **estrutura, qualidade dos objetivos, qualidade dos key results
+e alinhamento com boas práticas**.
+
+---
+
+# Problema estrutural geral: isso não está formatado como OKR
+
+De forma direta: **a maior parte do material não é OKR — é uma lista de tarefas
+ou backlog técnico.**
+
+Na literatura:
+
+> **Objetivos = qualitativos, inspiradores e direcionais**
+> **Key Results = quantitativos, mensuráveis e verificáveis**
+
+Segundo John Doerr:
+
+> “Objectives describe *what* we want to achieve.
+> Key Results measure *how we know we got there*.”
+
+Nos textos fornecidos:
+
+* **Objetivos frequentemente são atividades**
+* **Key Results frequentemente são tarefas**
+* **Não há métricas claras**
+* **Não há critérios de sucesso**
+
+Isso é um problema clássico chamado:
+
+**OKR virando checklist de tarefas.**
+
+---
+
+# Problemas recorrentes identificados
+
+## Key Results não são mensuráveis
+
+Exemplo:
+
+> “Modelar banco de dados e colher feedbacks”
+
+Isso **não é mensurável**.
+
+Segundo a literatura, um KR deveria permitir responder:
+
+> **"atingimos ou não atingimos?"**
+
+Exemplo correto:
+
+* “Modelagem aprovada por 80% do time técnico”
+* “Banco implementado e indexando 100% das imagens existentes”
+
+---
+
+## Confusão entre tarefa e resultado
+
+Exemplo:
+
+> Treinar novo modelo
+
+Isso é **atividade**, não resultado.
+
+Resultado seria:
+
+* Acurácia ≥ 0.85
+* F1-score ≥ 0.80
+* Redução de falso positivo em 30%
+
+---
+
+## Objetivos pouco inspiradores ou mal formulados
+
+Segundo a prática de Google:
+
+Objetivos devem ser:
+
+* qualitativos
+* curtos
+* memoráveis
+* inspiradores
+
+Exemplo atual:
+
+> Criar documentação clara, limpa
+
+Isso é mais **tarefa operacional**.
+
+---
+
+## Falta de métricas de impacto
+
+Outro ponto central dos OKR:
+
+**medir impacto, não apenas entrega.**
+
+Exemplo:
+
+Entrega:
+
+> criar documentação
+
+Impacto:
+
+* tempo de onboarding reduzido
+* menos dúvidas
+* menos erros de execução
+
+---
+
+## Falta de foco
+
+OKR bons costumam ter:
+
+* 3–5 objetivos
+* 3–4 KRs por objetivo
+
+Aqui alguns possuem **muitos itens misturados**, sem foco claro.
+
+---
+
+# Análise crítica de cada OKR
+
+---
+
+## OKR 1 – Github
+
+### Objetivo atual
+
+> Criar documentação clara, limpa e que facilite gestão e democratização
+
+Problemas:
+
+* muito longo
+* pouco inspirador
+* difícil medir impacto
+
+---
+
+### Key Results atuais
+
+Exemplo:
+
+* Treinar Walace e Francisco
+* Preparar documentação
+
+Problema:
+
+**isso é tarefa.**
+
+---
+
+### Como deveria ser
+
+Objetivo:
+
+> **Tornar o repositório do projeto acessível e reutilizável para outros times
+> da Petrobras**
+
+Key Results:
+
+* 100% dos repositórios com README padronizado
+* 3 notebooks de execução local publicados
+* onboarding técnico possível em <2h para novos membros
+* documentação revisada por ≥3 membros do time
+
+---
+
+## OKR 2 – Descomissionamento
+
+Esse é um **mix de tarefas de engenharia + brainstorm técnico.**
+
+Não está estruturado como OKR.
+
+---
+
+### Objetivo atual
+
+> Integrar produtos gerados por LLM com PDI Digital
+
+Esse é um **bom objetivo em essência**, mas poderia ser mais claro.
+
+---
+
+### Problema nos Key Results
+
+Exemplos:
+
+* verificar OSs
+* processar dados
+* desenvolver algoritmos
+
+Tudo isso são **tarefas de pipeline**, não resultados.
+
+---
+
+### Como ficaria melhor
+
+Objetivo:
+
+> **Integrar pipeline de análise LLM ao sistema PDI Digital para operacionalizar
+> o processamento das OSs**
+
+Key Results:
+
+* 100% das OSs históricas processadas
+* pipeline executando automaticamente com latência < X minutos
+* taxa de erro de extração de coordenadas < 5%
+* dados integrados e consumidos pelo PDI Digital
+
+---
+
+## OKR 3 – Banco de dados dataset
+
+Problema semelhante.
+
+Objetivo atual:
+
+> Propor modelagem de banco de dados
+
+Isso é **atividade**, não objetivo.
+
+---
+
+Melhor formulação:
+
+Objetivo:
+
+> **Criar infraestrutura de dados que permita treinar modelos robustos de visão
+> computacional**
+
+Key Results:
+
+* esquema de banco definido e aprovado pelo time
+* 100% das imagens com metadados indexados
+* unicidade garantida via hash
+* tempo de consulta de dataset < X segundos
+
+---
+
+## OKR 4 – Análise do modelo coral sol
+
+Esse é o **OKR mais próximo do formato correto.**
+
+---
+
+Objetivo:
+
+> Analisar modelo atual
+
+Problema:
+
+pouco inspirador.
+
+---
+
+Melhor versão:
+
+Objetivo:
+
+> **Avaliar criticamente o modelo atual de detecção de coral-sol para orientar
+> melhorias de performance**
+
+Key Results:
+
+* medir precisão, recall e F1-score no dataset da Gabriela
+* identificar taxa de erro >X% em classes críticas
+* selecionar ≥N imagens para reanotação
+* relatório técnico com recomendações
+
+---
+
+## OKR 5 – Curadoria dataset
+
+Objetivo atual:
+
+> selecionar imagens para reanotação
+
+Isso novamente é **tarefa**.
+
+---
+
+Melhor:
+
+Objetivo:
+
+> **Melhorar a qualidade do dataset de treinamento do modelo de coral-sol**
+
+Key Results:
+
+* identificar e corrigir ≥X máscaras incorretas
+* reanotar ≥Y imagens críticas
+* ferramenta de anotação operacional para equipe
+* dataset final validado por especialista
+
+---
+
+## OKR 6 – Novo modelo
+
+Objetivo atual:
+
+> Treinar novo modelo
+
+Isso é tarefa.
+
+---
+
+Melhor:
+
+Objetivo:
+
+> **Desenvolver modelo open-source robusto para detecção de coral-sol integrado
+> ao YouSub**
+
+Key Results:
+
+* modelo treinado sem dependência de licença restritiva
+* F1-score ≥ X no dataset validado
+* integração funcional no YouSub
+* inferência ≤ X ms por imagem
+
+---
+
+# Problema conceitual adicional
+
+Existe mistura entre:
+
+* **OKR**
+* **planejamento técnico**
+* **brainstorm**
+* **backlog de engenharia**
+
+Essas coisas deveriam estar separadas:
+
+| Ferramenta  | Uso                |
+| ----------- | ------------------ |
+| OKR         | metas estratégicas |
+| backlog     | tarefas            |
+| design docs | decisões técnicas  |
+| roadmap     | entregas           |
+
+---
+
+# Avaliação geral (com base em boas práticas)
+
+| Critério                      | Avaliação |
+| ----------------------------- | --------- |
+| Clareza do objetivo           | média     |
+| Mensurabilidade               | baixa     |
+| Foco em impacto               | baixa     |
+| Separação tarefa vs resultado | baixa     |
+| Aderência a OKR               | baixa     |
+
+**Nota geral: 3/10 como OKR**
+
+Mas:
+
+**como planejamento técnico bruto: razoável.**
+
+---
+
+# O problema organizacional provavel
+
+Isso é extremamente comum em times técnicos.
+
+Isso acontece porque engenheiros naturalmente pensam em:
+* atividades
+* pipelines
+* implementações
+
+Não em **indicadores de sucesso**.
+
+---
+
+# Sugestão prática
+
+Separar em dois níveis:
+
+### OKR do projeto
+
+4–5 objetivos estratégicos.
+
+### Backlog técnico
+
+tarefas detalhadas.
+
+---
+
+# Uma observação importante
+
+Apesar da estrutura fraca de OKR, os textos mostram **coisas boas**:
+
+* preocupação com dataset
+* preocupação com reprodutibilidade
+* preocupação com licenciamento de modelos
+* preocupação com integração de sistema
+
+Ou seja:
+
+**o pensamento técnico é bom.**
+
+O problema é **tradução para OKR.**
+
+---
+
+# Sugestão de reescrita dos OKRs
+
+Seguindo as boas práticas descritas em Measure What Matters de John Doerr e nas
+práticas adotadas por Google e originadas por Andy Grove na Intel.
+
+Princípios usados na reescrita:
+
+* **Objetivo (Objective)**: qualitativo, inspirador, direcionador.
+* **Key Results**: quantitativos, verificáveis e focados em resultado.
+* **3–4 KRs por objetivo**.
+* **foco em impacto, não tarefas**.
+
+Preservei **o máximo possível da intenção original do time**, apenas traduzindo
+para o mais próximo possível do formato OKR.
+
+---
+
+## OKR 1 — Padronização e democratização do repositório do projeto
+
+### Objetivo
+
+**Tornar o repositório do projeto no Github organizado, documentado e
+reutilizável por novos membros e outros times da Petrobras.**
+
+### Key Results
+
+1. 100% dos repositórios do projeto contendo README padronizado com instruções
+   de instalação e execução.
+2. Publicar pelo menos **3 notebooks demonstrando execução local completa** dos
+   principais pipelines do projeto.
+3. Criar **templates padronizados de documentação técnica e estrutura de
+   repositório** para novos códigos do projeto.
+4. Garantir que **pelo menos 2 novos membros consigam executar o projeto
+   localmente seguindo apenas a documentação**.
+
+---
+
+## OKR 2 — Integração do pipeline LLM ao sistema de Descomissionamento
+
+### Objetivo
+
+**Integrar os resultados gerados pelos modelos de LLM ao sistema PDI Digital,
+permitindo o processamento estruturado das OSs e seu consumo operacional.**
+
+### Key Results
+
+1. Processar **100% das OSs fornecidas pelo cliente Nicolosi** utilizando o
+   pipeline de análise baseado em LLM.
+2. Entregar **tabela estruturada de resultados validada pelo time do PDI
+   Digital** para integração com o sistema.
+3. Implementar pipeline de filtragem de dados reduzindo **≥50% dos pontos
+   inválidos** (coordenadas incorretas, imagens fora do contexto de mergulho,
+   etc.).
+4. Armazenar **100% dos dados processados em formato bruto e filtrado**,
+   garantindo rastreabilidade do processamento.
+
+---
+
+## OKR 3 — Infraestrutura de dados para datasets de visão computacional
+
+### Objetivo
+
+**Criar uma infraestrutura de dados robusta para organização e gestão dos
+datasets de imagens submarinas utilizados nos modelos de IA.**
+
+### Key Results
+
+1. Definir e apresentar **modelagem de banco de dados para gestão de datasets**
+   contendo imagens, metadados e anotações.
+2. Garantir **unicidade das imagens utilizando mecanismos de hash ou
+   equivalente**, eliminando duplicações no dataset.
+3. Integrar **metadados relevantes (eventos, estruturas, anotações)** permitindo
+   busca estruturada no dataset.
+4. Armazenar **100% das imagens no bucket S3 definido e indexá-las no banco de
+   dados proposto**.
+
+---
+
+## OKR 4 — Avaliação do modelo atual de detecção de coral-sol
+
+### Objetivo
+
+**Avaliar rigorosamente a performance do modelo atual de classificação de
+coral-sol para identificar limitações e orientar melhorias futuras.**
+
+### Key Results
+
+1. Executar inferência do modelo atual em **100% das imagens anotadas pela
+   especialista Gabriela**.
+2. Calcular e reportar **métricas de desempenho (precisão, recall e F1-score)**
+   no dataset avaliado.
+3. Aplicar técnicas de interpretabilidade (ex.: GradCAM) para **avaliar a
+   confiabilidade das regiões utilizadas na predição**.
+4. Identificar e selecionar **conjunto de imagens ambíguas ou inconsistentes
+   para reanotação especializada**.
+
+---
+
+## OKR 5 — Melhoria da qualidade do dataset de treinamento
+
+### Objetivo
+
+**Elevar a qualidade do dataset de treinamento do modelo de coral-sol por meio
+de curadoria e reanotação estruturada.**
+
+### Key Results
+
+1. Implementar pipeline automático para **correção de máscaras afetadas por
+   problemas de overlay**.
+2. Identificar e selecionar **conjunto prioritário de imagens que necessitam de
+   reanotação**.
+3. Disponibilizar **ferramenta de anotação operacional para o time** (ex.: Label
+   Studio ou equivalente).
+4. Garantir que **100% das imagens selecionadas sejam revisadas ou reanotadas
+   pelo especialista responsável**.
+
+---
+
+## OKR 6 — Desenvolvimento de novo modelo de detecção de coral-sol
+
+### Objetivo
+
+**Desenvolver e disponibilizar um novo modelo de detecção de coral-sol sem
+restrições de licenciamento e integrado ao sistema YouSub.**
+
+### Key Results
+
+1. Treinar novo modelo utilizando arquitetura open-source sem dependências de
+   licenças restritivas.
+2. Alcançar **desempenho igual ou superior ao modelo atual nas métricas de
+   avaliação definidas**.
+3. Implementar pipeline de inferência do modelo integrado ao sistema YouSub.
+4. Documentar processo de treinamento e inferência garantindo
+   **reprodutibilidade do modelo**.
+
+---
+
+# Observação importante
+
+Uma pequena melhoria estrutural ainda recomendada:
+
+Na prática de Google, normalmente os OKR são organizados em **3–4 objetivos no
+máximo por ciclo**.
+
+Aqui existem **6 objetivos**, o que pode gerar:
+
+* dispersão de foco
+* dificuldade de priorização
+
+Uma alternativa seria agrupar em **4 OKRs principais**:
+
+1️⃣ Infraestrutura e governança técnica  
+2️⃣ Integração com sistemas operacionais (PDI Digital)  
+3️⃣ Qualidade e gestão de datasets  
+4️⃣ Desenvolvimento e avaliação de modelos  
+
+---
+
+

@@ -1,0 +1,14 @@
+# Risk Register
+
+| ID  | Risk                                                   | Category       | Probability | Impact | Mitigation                            |
+|-----|--------------------------------------------------------|----------------|-------------|--------|---------------------------------------|
+| R1  | No labeled dataset available                           | Data           | High        | High   | AI-assisted annotation                |
+| R2  | Multi-modal inconsistency                              | Technical      | High        | High   | Prioritize still images for MVP       |
+| R3  | Annotation workload excessive                          | Operational    | High        | High   | Filtering-first MVP approach          |
+| R4  | Model underperformance                                 | Technical      | Medium      | High   | Accept reduced accuracy for MVP       |
+| R5  | Licensing conflicts                                    | Compliance     | Medium      | High   | Restrict to approved frameworks       |
+| R6  | Stakeholder misalignment                               | Organizational | Medium      | High   | Early validation of MVP scope         |
+| R7  | Data quality issues <br> (turbidity, lighting, backscatter) | Data           | High        | Medium | Preprocessing pipeline (future phase) |
+| R8  | Overengineering early phases                           | Technical      | Medium      | Medium | Strict MVP enforcement                |
+| R9  | Label subjectivity                                     | Data           | High        | High   | Guidelines + consensus labeling       |
+| R10 | Class imbalance                                        | Data           | High        | High   | Sampling strategy + weighted loss     |

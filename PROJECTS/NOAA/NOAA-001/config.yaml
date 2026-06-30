@@ -1,0 +1,21 @@
+hpc:
+  workers: 16
+  chunksize: 100
+
+sample:
+  enabled: false
+  mod: 100
+  threshold: 5
+
+preprocessing:
+  methods:
+    - raw
+    - clahe
+    - retinex
+
+output:
+  tmp_dir: "outputs/tmp"
+  final_path: "outputs/features.parquet"
+
+batch:
+  size: 2000

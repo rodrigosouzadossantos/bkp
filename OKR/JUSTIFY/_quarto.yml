@@ -1,0 +1,27 @@
+project:
+  type: book
+
+lang: pt
+
+book:
+  title: "Integração do Github Project com OKRs: Personalizações e Justificativas"
+  author: "Rodrigo Souza dos Santos"
+  date: "03/11/2026" # MM/DD/YYYY - US format
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - summary.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme:
+      - cosmo
+      - brand
+  pdf:
+    documentclass: scrreprt
+
+
+

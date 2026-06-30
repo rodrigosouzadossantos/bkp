@@ -1,0 +1,1140 @@
+2026-03-08 23:01:14,234 DEBUG petrobras.observer [seq=3 id=3cc8e42c-0d68-408b-8cd0-f80f13841280] CALL petrobras.<genexpr> args={'.0': <tuple_iterator object at 0x708158b82e60>}
+2026-03-08 23:01:14,235 INFO petrobras.observer [seq=4 id=3cc8e42c-0d68-408b-8cd0-f80f13841280] RETURN petrobras.<genexpr> -> '3' (0.000376s)
+2026-03-08 23:01:14,235 DEBUG petrobras.observer [seq=5 id=a5f22b65-521e-4c57-86aa-da5ba6874653] CALL petrobras.<genexpr> args={'.0': <tuple_iterator object at 0x708158b82e60>, 'part': 3}
+2026-03-08 23:01:14,235 INFO petrobras.observer [seq=6 id=a5f22b65-521e-4c57-86aa-da5ba6874653] RETURN petrobras.<genexpr> -> '13' (0.000062s)
+2026-03-08 23:01:14,235 DEBUG petrobras.observer [seq=7 id=b21938b8-f849-4429-a133-b7620a0d4c6b] CALL petrobras.<genexpr> args={'.0': <tuple_iterator object at 0x708158b82e60>, 'part': 13}
+2026-03-08 23:01:14,235 INFO petrobras.observer [seq=8 id=b21938b8-f849-4429-a133-b7620a0d4c6b] RETURN petrobras.<genexpr> -> '5' (0.000040s)
+2026-03-08 23:01:14,235 DEBUG petrobras.observer [seq=9 id=6cde2f12-5bdc-4861-9a24-d12b811f2a27] CALL petrobras.<genexpr> args={'.0': <tuple_iterator object at 0x708158b82e60>, 'part': 5}
+2026-03-08 23:01:14,235 INFO petrobras.observer [seq=10 id=6cde2f12-5bdc-4861-9a24-d12b811f2a27] RETURN petrobras.<genexpr> -> None (0.000037s)
+2026-03-08 23:01:14,238 DEBUG petrobras.observer [seq=11 id=3e72b9e3-ef0b-4495-879c-3e992947a40f] CALL petrobras.core.import_guard.__init__ args={'self': <petrobras.core.import_guard.ImportGuard object at 0x708158c3ea50>, 'package': 'petrobras', 'allowed': {'run'}}
+2026-03-08 23:01:14,238 INFO petrobras.observer [seq=12 id=3e72b9e3-ef0b-4495-879c-3e992947a40f] RETURN petrobras.core.import_guard.__init__ -> None (0.000247s)
+2026-03-08 23:01:14,239 DEBUG petrobras.observer [seq=13 id=04e6db73-6699-429a-98ef-5413d754863a] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x708158b57250>}
+2026-03-08 23:01:14,239 INFO petrobras.observer [seq=14 id=04e6db73-6699-429a-98ef-5413d754863a] RETURN petrobras.<genexpr> -> False (0.000112s)
+2026-03-08 23:01:14,239 DEBUG petrobras.observer [seq=15 id=c21e723b-3e86-472f-99c6-3a0fe98110ff] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x708158b57250>, 'f': <_distutils_hack.DistutilsMetaFinder object at 0x708159336f90>}
+2026-03-08 23:01:14,239 INFO petrobras.observer [seq=16 id=c21e723b-3e86-472f-99c6-3a0fe98110ff] RETURN petrobras.<genexpr> -> False (0.000079s)
+2026-03-08 23:01:14,239 DEBUG petrobras.observer [seq=17 id=59aa5809-58fd-44f8-9a56-49f75d82f888] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x708158b57250>, 'f': <_virtualenv._Finder object at 0x708159336e40>}
+2026-03-08 23:01:14,239 INFO petrobras.observer [seq=18 id=59aa5809-58fd-44f8-9a56-49f75d82f888] RETURN petrobras.<genexpr> -> False (0.000086s)
+2026-03-08 23:01:14,239 DEBUG petrobras.observer [seq=19 id=7db92c30-44ea-476e-bd2b-133d3bdd6380] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x708158b57250>, 'f': <class '_frozen_importlib.BuiltinImporter'>}
+2026-03-08 23:01:14,239 INFO petrobras.observer [seq=20 id=7db92c30-44ea-476e-bd2b-133d3bdd6380] RETURN petrobras.<genexpr> -> False (0.000048s)
+2026-03-08 23:01:14,240 DEBUG petrobras.observer [seq=21 id=14015938-adbe-48dc-94fc-18a95ef88720] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x708158b57250>, 'f': <class '_frozen_importlib.FrozenImporter'>}
+2026-03-08 23:01:14,240 INFO petrobras.observer [seq=22 id=14015938-adbe-48dc-94fc-18a95ef88720] RETURN petrobras.<genexpr> -> False (0.000213s)
+2026-03-08 23:01:14,240 DEBUG petrobras.observer [seq=23 id=db085351-a5cc-4384-93a8-16bd050690db] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x708158b57250>, 'f': <class '_frozen_importlib_external.PathFinder'>}
+2026-03-08 23:01:14,240 INFO petrobras.observer [seq=24 id=db085351-a5cc-4384-93a8-16bd050690db] RETURN petrobras.<genexpr> -> None (0.000070s)
+2026-03-08 23:01:14,240 DEBUG petrobras.observer [seq=25 id=035de78b-ae89-49e9-973c-882772ae08de] CALL petrobras._seal_namespace args={}
+2026-03-08 23:01:14,240 INFO petrobras.observer [seq=26 id=035de78b-ae89-49e9-973c-882772ae08de] RETURN petrobras._seal_namespace -> None (0.000123s)
+2026-03-08 23:01:14,240 DEBUG petrobras.observer [seq=27 id=bcdfee4c-a8af-4773-8424-617ca2b36139] CALL petrobras.run args={'name': 'Petro #01'}
+2026-03-08 23:01:14,240 INFO petrobras.observer [seq=28 id=bcdfee4c-a8af-4773-8424-617ca2b36139] RETURN petrobras.run -> None (0.000073s)
+2026-03-08 23:01:14,241 DEBUG petrobras.observer [seq=29 id=cbb04355-1719-481d-9b15-30c6c8e5b505] CALL petrobras.run args={'name': 'Petro #02'}
+2026-03-08 23:01:14,241 INFO petrobras.observer [seq=30 id=cbb04355-1719-481d-9b15-30c6c8e5b505] RETURN petrobras.run -> None (0.000084s)
+2026-03-08 23:01:14,241 DEBUG petrobras.observer [seq=31 id=2166af4c-4419-460a-b2d4-261353fbdf39] CALL petrobras.run args={'name': 'Petro #03'}
+2026-03-08 23:01:14,241 INFO petrobras.observer [seq=32 id=2166af4c-4419-460a-b2d4-261353fbdf39] RETURN petrobras.run -> None (0.000046s)
+2026-03-08 23:01:14,241 DEBUG petrobras.observer [seq=33 id=f130bc07-ce12-415e-bdc9-0f66f8a18038] CALL petrobras.run args={'name': 'Petro #04'}
+2026-03-08 23:01:14,241 INFO petrobras.observer [seq=34 id=f130bc07-ce12-415e-bdc9-0f66f8a18038] RETURN petrobras.run -> None (0.000058s)
+2026-03-08 23:01:14,241 DEBUG petrobras.observer [seq=35 id=334bad3d-267d-45b4-8725-f5df949a61d8] CALL petrobras.run args={'name': 'Petro #05'}
+2026-03-08 23:01:14,241 INFO petrobras.observer [seq=36 id=334bad3d-267d-45b4-8725-f5df949a61d8] RETURN petrobras.run -> None (0.000041s)
+2026-03-08 23:01:14,241 DEBUG petrobras.observer [seq=37 id=948150ce-554b-432d-8f34-99a61be7d692] CALL petrobras.run args={'name': 'Petro #06'}
+2026-03-08 23:01:14,241 INFO petrobras.observer [seq=38 id=948150ce-554b-432d-8f34-99a61be7d692] RETURN petrobras.run -> None (0.000076s)
+2026-03-08 23:01:14,241 DEBUG petrobras.observer [seq=39 id=3139d8e9-8b06-46ae-9fe4-523ecc5a459a] CALL petrobras.run args={'name': 'Petro #07'}
+2026-03-08 23:01:14,241 INFO petrobras.observer [seq=40 id=3139d8e9-8b06-46ae-9fe4-523ecc5a459a] RETURN petrobras.run -> None (0.000055s)
+2026-03-08 23:01:14,241 DEBUG petrobras.observer [seq=41 id=e55dd016-8a9c-402d-aaf9-af757fea1810] CALL petrobras.run args={'name': 'Petro #08'}
+2026-03-08 23:01:14,241 INFO petrobras.observer [seq=42 id=e55dd016-8a9c-402d-aaf9-af757fea1810] RETURN petrobras.run -> None (0.000077s)
+2026-03-08 23:01:14,241 DEBUG petrobras.observer [seq=43 id=dc293ee7-1c3a-4a70-89e5-2bb0fb4dffbd] CALL petrobras.run args={'name': 'Petro #09'}
+2026-03-08 23:01:14,242 INFO petrobras.observer [seq=44 id=dc293ee7-1c3a-4a70-89e5-2bb0fb4dffbd] RETURN petrobras.run -> None (0.000052s)
+2026-03-08 23:01:14,242 DEBUG petrobras.observer [seq=45 id=b8eb3173-6637-4f5c-9ae6-1a1d29b17d61] CALL petrobras.run args={'name': 'Petro #10'}
+2026-03-08 23:01:14,242 INFO petrobras.observer [seq=46 id=b8eb3173-6637-4f5c-9ae6-1a1d29b17d61] RETURN petrobras.run -> None (0.000059s)
+2026-03-08 23:01:14,242 DEBUG petrobras.observer [seq=47 id=90c4978f-d29e-4360-b82e-90a11c42e88f] CALL petrobras.run args={'name': 'Petro #11'}
+2026-03-08 23:01:14,242 INFO petrobras.observer [seq=48 id=90c4978f-d29e-4360-b82e-90a11c42e88f] RETURN petrobras.run -> None (0.000037s)
+2026-03-08 23:01:14,242 DEBUG petrobras.observer [seq=49 id=1a8449aa-cbe7-4afe-9a4e-0b963a07538f] CALL petrobras.run args={'name': 'Petro #12'}
+2026-03-08 23:01:14,242 INFO petrobras.observer [seq=50 id=1a8449aa-cbe7-4afe-9a4e-0b963a07538f] RETURN petrobras.run -> None (0.000062s)
+2026-03-08 23:01:14,242 DEBUG petrobras.observer [seq=51 id=e301e3b2-18d3-4d9e-a134-be5ba0b9d19c] CALL petrobras.run args={'name': 'Petro #13'}
+2026-03-08 23:01:14,242 INFO petrobras.observer [seq=52 id=e301e3b2-18d3-4d9e-a134-be5ba0b9d19c] RETURN petrobras.run -> None (0.000068s)
+2026-03-08 23:01:14,242 DEBUG petrobras.observer [seq=53 id=16d609f7-6d87-4b79-b8a8-66df3db8247f] CALL petrobras.run args={'name': 'Petro #14'}
+2026-03-08 23:01:14,242 INFO petrobras.observer [seq=54 id=16d609f7-6d87-4b79-b8a8-66df3db8247f] RETURN petrobras.run -> None (0.000044s)
+2026-03-08 23:01:14,242 DEBUG petrobras.observer [seq=55 id=c9154ddd-8913-4377-9fae-4d2b79c5c1fe] CALL petrobras.run args={'name': 'Petro #15'}
+2026-03-08 23:01:14,242 INFO petrobras.observer [seq=56 id=c9154ddd-8913-4377-9fae-4d2b79c5c1fe] RETURN petrobras.run -> None (0.000068s)
+2026-03-08 23:01:14,242 DEBUG petrobras.observer [seq=57 id=38510d7b-3d89-4aaa-91b8-9ea7a9a3175c] CALL petrobras.run args={'name': 'Petro #16'}
+2026-03-08 23:01:14,242 INFO petrobras.observer [seq=58 id=38510d7b-3d89-4aaa-91b8-9ea7a9a3175c] RETURN petrobras.run -> None (0.000039s)
+2026-03-08 23:01:14,242 DEBUG petrobras.observer [seq=59 id=3fa910f6-7f0b-4594-93a1-3e76ddc2fb60] CALL petrobras.run args={'name': 'Petro #17'}
+2026-03-08 23:01:14,242 INFO petrobras.observer [seq=60 id=3fa910f6-7f0b-4594-93a1-3e76ddc2fb60] RETURN petrobras.run -> None (0.000074s)
+2026-03-08 23:01:14,242 DEBUG petrobras.observer [seq=61 id=7c62616f-5e6b-43b5-970a-1207e85b4768] CALL petrobras.run args={'name': 'Petro #18'}
+2026-03-08 23:01:14,242 INFO petrobras.observer [seq=62 id=7c62616f-5e6b-43b5-970a-1207e85b4768] RETURN petrobras.run -> None (0.000076s)
+2026-03-08 23:01:14,243 DEBUG petrobras.observer [seq=63 id=dca913f2-9b4b-48d7-aa9e-ff60e7209e53] CALL petrobras.run args={'name': 'Petro #19'}
+2026-03-08 23:01:14,243 INFO petrobras.observer [seq=64 id=dca913f2-9b4b-48d7-aa9e-ff60e7209e53] RETURN petrobras.run -> None (0.000080s)
+2026-03-08 23:01:14,243 DEBUG petrobras.observer [seq=65 id=1692e7cd-82a0-46c3-9747-484b22bd59db] CALL petrobras.run args={'name': 'Petro #20'}
+2026-03-08 23:01:14,243 INFO petrobras.observer [seq=66 id=1692e7cd-82a0-46c3-9747-484b22bd59db] RETURN petrobras.run -> None (0.000077s)
+2026-03-08 23:01:14,243 DEBUG petrobras.observer [seq=67 id=b87cd853-2d69-4c2c-b742-e299efac78f4] CALL petrobras.run args={'name': 'Petro #21'}
+2026-03-08 23:01:14,243 INFO petrobras.observer [seq=68 id=b87cd853-2d69-4c2c-b742-e299efac78f4] RETURN petrobras.run -> None (0.000053s)
+2026-03-08 23:01:14,243 DEBUG petrobras.observer [seq=69 id=10a1ce14-89b8-49f9-bb67-c62bc6695f37] CALL petrobras.run args={'name': 'Petro #22'}
+2026-03-08 23:01:14,243 INFO petrobras.observer [seq=70 id=10a1ce14-89b8-49f9-bb67-c62bc6695f37] RETURN petrobras.run -> None (0.000063s)
+2026-03-08 23:01:14,243 DEBUG petrobras.observer [seq=71 id=ac31220c-2710-480f-8918-3214abdcadf8] CALL petrobras.run args={'name': 'Petro #23'}
+2026-03-08 23:01:14,243 INFO petrobras.observer [seq=72 id=ac31220c-2710-480f-8918-3214abdcadf8] RETURN petrobras.run -> None (0.000070s)
+2026-03-08 23:01:14,243 DEBUG petrobras.observer [seq=73 id=77c7cce2-35d6-4ee9-9f21-e5c2e2d4ee31] CALL petrobras.run args={'name': 'Petro #24'}
+2026-03-08 23:01:14,244 INFO petrobras.observer [seq=74 id=77c7cce2-35d6-4ee9-9f21-e5c2e2d4ee31] RETURN petrobras.run -> None (0.000254s)
+2026-03-08 23:01:14,244 DEBUG petrobras.observer [seq=75 id=eb63511e-5fd7-4ac5-8382-c408cae0b85f] CALL petrobras.run args={'name': 'Petro #25'}
+2026-03-08 23:01:14,244 INFO petrobras.observer [seq=76 id=eb63511e-5fd7-4ac5-8382-c408cae0b85f] RETURN petrobras.run -> None (0.000102s)
+2026-03-08 23:01:14,244 DEBUG petrobras.observer [seq=77 id=6249c482-4707-49d3-8b46-e4744c260415] CALL petrobras.run args={'name': 'Petro #26'}
+2026-03-08 23:01:14,244 INFO petrobras.observer [seq=78 id=6249c482-4707-49d3-8b46-e4744c260415] RETURN petrobras.run -> None (0.000059s)
+2026-03-08 23:01:14,244 DEBUG petrobras.observer [seq=79 id=887fd914-f86f-4579-87d8-7478a184b006] CALL petrobras.run args={'name': 'Petro #27'}
+2026-03-08 23:01:14,244 INFO petrobras.observer [seq=80 id=887fd914-f86f-4579-87d8-7478a184b006] RETURN petrobras.run -> None (0.000057s)
+2026-03-08 23:01:14,244 DEBUG petrobras.observer [seq=81 id=db9bbe01-bbc7-4a47-ab2a-cd78670e7002] CALL petrobras.run args={'name': 'Petro #28'}
+2026-03-08 23:01:14,244 INFO petrobras.observer [seq=82 id=db9bbe01-bbc7-4a47-ab2a-cd78670e7002] RETURN petrobras.run -> None (0.000073s)
+2026-03-08 23:01:14,244 DEBUG petrobras.observer [seq=83 id=177dada8-b468-4741-bf94-931ff8952703] CALL petrobras.run args={'name': 'Petro #29'}
+2026-03-08 23:01:14,244 INFO petrobras.observer [seq=84 id=177dada8-b468-4741-bf94-931ff8952703] RETURN petrobras.run -> None (0.000066s)
+2026-03-08 23:01:14,244 DEBUG petrobras.observer [seq=85 id=44ef39b9-0e14-4147-b51c-905df19ae37d] CALL petrobras.run args={'name': 'Petro #30'}
+2026-03-08 23:01:14,245 INFO petrobras.observer [seq=86 id=44ef39b9-0e14-4147-b51c-905df19ae37d] RETURN petrobras.run -> None (0.000088s)
+2026-03-08 23:01:14,245 DEBUG petrobras.observer [seq=87 id=4c69498d-735b-4222-9078-58f355a3b64f] CALL petrobras.run args={'name': 'Petro #31'}
+2026-03-08 23:01:14,245 INFO petrobras.observer [seq=88 id=4c69498d-735b-4222-9078-58f355a3b64f] RETURN petrobras.run -> None (0.000083s)
+2026-03-08 23:01:14,245 DEBUG petrobras.observer [seq=89 id=d7c283fb-6b13-4459-83ef-cfb1ed222f14] CALL petrobras.run args={'name': 'Petro #32'}
+2026-03-08 23:01:14,245 INFO petrobras.observer [seq=90 id=d7c283fb-6b13-4459-83ef-cfb1ed222f14] RETURN petrobras.run -> None (0.000066s)
+2026-03-08 23:01:14,245 DEBUG petrobras.observer [seq=91 id=5a696add-c52b-4e57-8537-520d2272772c] CALL petrobras.run args={'name': 'Petro #33'}
+2026-03-08 23:01:14,245 INFO petrobras.observer [seq=92 id=5a696add-c52b-4e57-8537-520d2272772c] RETURN petrobras.run -> None (0.000044s)
+2026-03-08 23:01:14,245 DEBUG petrobras.observer [seq=93 id=afcaf91b-a914-4fc4-ba58-b94561b8791e] CALL petrobras.run args={'name': 'Petro #34'}
+2026-03-08 23:01:14,245 INFO petrobras.observer [seq=94 id=afcaf91b-a914-4fc4-ba58-b94561b8791e] RETURN petrobras.run -> None (0.000056s)
+2026-03-08 23:01:14,245 DEBUG petrobras.observer [seq=95 id=3663a485-3353-40f4-aac8-1b85ecca11cf] CALL petrobras.run args={'name': 'Petro #35'}
+2026-03-08 23:01:14,245 INFO petrobras.observer [seq=96 id=3663a485-3353-40f4-aac8-1b85ecca11cf] RETURN petrobras.run -> None (0.000080s)
+2026-03-08 23:01:14,245 DEBUG petrobras.observer [seq=97 id=825ed8eb-6073-4899-81f4-ee6e5e7aaa58] CALL petrobras.run args={'name': 'Petro #36'}
+2026-03-08 23:01:14,245 INFO petrobras.observer [seq=98 id=825ed8eb-6073-4899-81f4-ee6e5e7aaa58] RETURN petrobras.run -> None (0.000051s)
+2026-03-08 23:01:14,245 DEBUG petrobras.observer [seq=99 id=9ed922be-33b8-4878-bc19-a3370d71d429] CALL petrobras.run args={'name': 'Petro #37'}
+2026-03-08 23:01:14,245 INFO petrobras.observer [seq=100 id=9ed922be-33b8-4878-bc19-a3370d71d429] RETURN petrobras.run -> None (0.000059s)
+2026-03-08 23:01:14,246 DEBUG petrobras.observer [seq=101 id=70aeed2b-6c56-4cfc-b7ed-cc79339b6319] CALL petrobras.run args={'name': 'Petro #38'}
+2026-03-08 23:01:14,246 INFO petrobras.observer [seq=102 id=70aeed2b-6c56-4cfc-b7ed-cc79339b6319] RETURN petrobras.run -> None (0.000075s)
+2026-03-08 23:01:14,246 DEBUG petrobras.observer [seq=103 id=b35a13ce-db21-412a-a931-4214386a474e] CALL petrobras.run args={'name': 'Petro #39'}
+2026-03-08 23:01:14,246 INFO petrobras.observer [seq=104 id=b35a13ce-db21-412a-a931-4214386a474e] RETURN petrobras.run -> None (0.000050s)
+2026-03-08 23:01:14,246 DEBUG petrobras.observer [seq=105 id=a3cb86ee-8be1-4687-8e74-280f2272ea9f] CALL petrobras.run args={'name': 'Petro #40'}
+2026-03-08 23:01:14,246 INFO petrobras.observer [seq=106 id=a3cb86ee-8be1-4687-8e74-280f2272ea9f] RETURN petrobras.run -> None (0.000044s)
+2026-03-08 23:01:14,246 DEBUG petrobras.observer [seq=107 id=52a5df62-6d8c-4cb9-9143-1422f89a8624] CALL petrobras.run args={'name': 'Petro #41'}
+2026-03-08 23:01:14,246 INFO petrobras.observer [seq=108 id=52a5df62-6d8c-4cb9-9143-1422f89a8624] RETURN petrobras.run -> None (0.000042s)
+2026-03-08 23:01:14,246 DEBUG petrobras.observer [seq=109 id=b94c3328-99d3-4292-85f0-69deae093b3e] CALL petrobras.run args={'name': 'Petro #42'}
+2026-03-08 23:01:14,246 INFO petrobras.observer [seq=110 id=b94c3328-99d3-4292-85f0-69deae093b3e] RETURN petrobras.run -> None (0.000049s)
+2026-03-08 23:01:14,246 DEBUG petrobras.observer [seq=111 id=6b9ddd45-d788-43db-942c-fbb1eaeaa346] CALL petrobras.run args={'name': 'Petro #43'}
+2026-03-08 23:01:14,246 INFO petrobras.observer [seq=112 id=6b9ddd45-d788-43db-942c-fbb1eaeaa346] RETURN petrobras.run -> None (0.000062s)
+2026-03-08 23:01:14,246 DEBUG petrobras.observer [seq=113 id=512275cc-b9e1-4ffd-b9df-49852600af5b] CALL petrobras.run args={'name': 'Petro #44'}
+2026-03-08 23:01:14,246 INFO petrobras.observer [seq=114 id=512275cc-b9e1-4ffd-b9df-49852600af5b] RETURN petrobras.run -> None (0.000065s)
+2026-03-08 23:01:14,246 DEBUG petrobras.observer [seq=115 id=4cb95b60-647a-4bfd-bcab-c21843eb4a0a] CALL petrobras.run args={'name': 'Petro #45'}
+2026-03-08 23:01:14,246 INFO petrobras.observer [seq=116 id=4cb95b60-647a-4bfd-bcab-c21843eb4a0a] RETURN petrobras.run -> None (0.000042s)
+2026-03-08 23:01:14,246 DEBUG petrobras.observer [seq=117 id=9bc42f96-f0ee-475b-b2ae-1b106b410197] CALL petrobras.run args={'name': 'Petro #46'}
+2026-03-08 23:01:14,246 INFO petrobras.observer [seq=118 id=9bc42f96-f0ee-475b-b2ae-1b106b410197] RETURN petrobras.run -> None (0.000052s)
+2026-03-08 23:01:14,247 DEBUG petrobras.observer [seq=119 id=4bb4d519-b363-4653-8fe3-9745d5826f30] CALL petrobras.run args={'name': 'Petro #47'}
+2026-03-08 23:01:14,247 INFO petrobras.observer [seq=120 id=4bb4d519-b363-4653-8fe3-9745d5826f30] RETURN petrobras.run -> None (0.000059s)
+2026-03-08 23:01:14,247 DEBUG petrobras.observer [seq=121 id=b2d5dd2b-3424-4adf-89ee-715a5e8f61a8] CALL petrobras.run args={'name': 'Petro #48'}
+2026-03-08 23:01:14,247 INFO petrobras.observer [seq=122 id=b2d5dd2b-3424-4adf-89ee-715a5e8f61a8] RETURN petrobras.run -> None (0.000031s)
+2026-03-08 23:01:14,247 DEBUG petrobras.observer [seq=123 id=c9516420-adec-42cd-b4f6-2197d893dc31] CALL petrobras.run args={'name': 'Petro #49'}
+2026-03-08 23:01:14,247 INFO petrobras.observer [seq=124 id=c9516420-adec-42cd-b4f6-2197d893dc31] RETURN petrobras.run -> None (0.000051s)
+2026-03-08 23:01:35,932 DEBUG petrobras.observer [seq=3 id=5af8fe29-932a-47d2-bf38-a86691df1264] CALL petrobras.<genexpr> args={'.0': <tuple_iterator object at 0x75adcb094400>}
+2026-03-08 23:01:35,933 INFO petrobras.observer [seq=4 id=5af8fe29-932a-47d2-bf38-a86691df1264] RETURN petrobras.<genexpr> -> '3' (0.000416s)
+2026-03-08 23:01:35,933 DEBUG petrobras.observer [seq=5 id=eb225aba-e7fc-47f4-87a2-939a43a9ad01] CALL petrobras.<genexpr> args={'.0': <tuple_iterator object at 0x75adcb094400>, 'part': 3}
+2026-03-08 23:01:35,933 INFO petrobras.observer [seq=6 id=eb225aba-e7fc-47f4-87a2-939a43a9ad01] RETURN petrobras.<genexpr> -> '13' (0.000175s)
+2026-03-08 23:01:35,933 DEBUG petrobras.observer [seq=7 id=f72919e9-266b-45cd-af14-3eb2b163547a] CALL petrobras.<genexpr> args={'.0': <tuple_iterator object at 0x75adcb094400>, 'part': 13}
+2026-03-08 23:01:35,934 INFO petrobras.observer [seq=8 id=f72919e9-266b-45cd-af14-3eb2b163547a] RETURN petrobras.<genexpr> -> '5' (0.000203s)
+2026-03-08 23:01:35,934 DEBUG petrobras.observer [seq=9 id=be10dec8-b1bf-4caa-95a7-603a008c30ed] CALL petrobras.<genexpr> args={'.0': <tuple_iterator object at 0x75adcb094400>, 'part': 5}
+2026-03-08 23:01:35,934 INFO petrobras.observer [seq=10 id=be10dec8-b1bf-4caa-95a7-603a008c30ed] RETURN petrobras.<genexpr> -> None (0.000141s)
+2026-03-08 23:01:35,938 DEBUG petrobras.observer [seq=11 id=489120dd-5ea4-4682-b9b0-5669c4d0455e] CALL petrobras.core.import_guard.__init__ args={'self': <petrobras.core.import_guard.ImportGuard object at 0x75adcb036a50>, 'package': 'petrobras', 'allowed': {'run'}}
+2026-03-08 23:01:35,938 INFO petrobras.observer [seq=12 id=489120dd-5ea4-4682-b9b0-5669c4d0455e] RETURN petrobras.core.import_guard.__init__ -> None (0.000449s)
+2026-03-08 23:01:35,939 DEBUG petrobras.observer [seq=13 id=bf9604f7-ff02-43f4-8fa0-8727d5a8b5aa] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x75adcaf911e0>}
+2026-03-08 23:01:35,939 INFO petrobras.observer [seq=14 id=bf9604f7-ff02-43f4-8fa0-8727d5a8b5aa] RETURN petrobras.<genexpr> -> False (0.000242s)
+2026-03-08 23:01:35,939 DEBUG petrobras.observer [seq=15 id=afd63b75-7e38-44a3-b5cc-84036020dbb9] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x75adcaf911e0>, 'f': <_distutils_hack.DistutilsMetaFinder object at 0x75adcb736f90>}
+2026-03-08 23:01:35,939 INFO petrobras.observer [seq=16 id=afd63b75-7e38-44a3-b5cc-84036020dbb9] RETURN petrobras.<genexpr> -> False (0.000223s)
+2026-03-08 23:01:35,940 DEBUG petrobras.observer [seq=17 id=c02b8776-2db6-4bfe-af79-5e6abcffac6c] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x75adcaf911e0>, 'f': <_virtualenv._Finder object at 0x75adcb736e40>}
+2026-03-08 23:01:35,940 INFO petrobras.observer [seq=18 id=c02b8776-2db6-4bfe-af79-5e6abcffac6c] RETURN petrobras.<genexpr> -> False (0.000222s)
+2026-03-08 23:01:35,940 DEBUG petrobras.observer [seq=19 id=f718d697-3c01-454b-98fd-bd3deaeadada] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x75adcaf911e0>, 'f': <class '_frozen_importlib.BuiltinImporter'>}
+2026-03-08 23:01:35,940 INFO petrobras.observer [seq=20 id=f718d697-3c01-454b-98fd-bd3deaeadada] RETURN petrobras.<genexpr> -> False (0.000202s)
+2026-03-08 23:01:35,941 DEBUG petrobras.observer [seq=21 id=c7d736c2-fc65-4be4-a3ef-9f6cab7fff71] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x75adcaf911e0>, 'f': <class '_frozen_importlib.FrozenImporter'>}
+2026-03-08 23:01:35,941 INFO petrobras.observer [seq=22 id=c7d736c2-fc65-4be4-a3ef-9f6cab7fff71] RETURN petrobras.<genexpr> -> False (0.000200s)
+2026-03-08 23:01:35,941 DEBUG petrobras.observer [seq=23 id=aea6623d-9f9f-454e-8018-170e4240ca45] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x75adcaf911e0>, 'f': <class '_frozen_importlib_external.PathFinder'>}
+2026-03-08 23:01:35,943 INFO petrobras.observer [seq=24 id=aea6623d-9f9f-454e-8018-170e4240ca45] RETURN petrobras.<genexpr> -> None (0.001843s)
+2026-03-08 23:01:35,944 DEBUG petrobras.observer [seq=25 id=d53ed7fb-de22-4adf-9d9c-485771f031bf] CALL petrobras._seal_namespace args={}
+2026-03-08 23:01:35,944 INFO petrobras.observer [seq=26 id=d53ed7fb-de22-4adf-9d9c-485771f031bf] RETURN petrobras._seal_namespace -> None (0.000187s)
+2026-03-08 23:01:35,944 DEBUG petrobras.observer [seq=27 id=8d073960-1cb9-4de5-98eb-65ee05433441] CALL petrobras.run args={'name': 'Petro #01'}
+2026-03-08 23:01:35,945 INFO petrobras.observer [seq=28 id=8d073960-1cb9-4de5-98eb-65ee05433441] RETURN petrobras.run -> None (0.000342s)
+2026-03-08 23:01:35,945 DEBUG petrobras.observer [seq=29 id=ff373f21-3be1-4c6f-9e44-7c75778aa5af] CALL petrobras.run args={'name': 'Petro #02'}
+2026-03-08 23:01:35,945 INFO petrobras.observer [seq=30 id=ff373f21-3be1-4c6f-9e44-7c75778aa5af] RETURN petrobras.run -> None (0.000335s)
+2026-03-08 23:01:35,946 DEBUG petrobras.observer [seq=31 id=5d69bf62-fe08-4766-b706-55f4f2909e8a] CALL petrobras.run args={'name': 'Petro #03'}
+2026-03-08 23:01:35,946 INFO petrobras.observer [seq=32 id=5d69bf62-fe08-4766-b706-55f4f2909e8a] RETURN petrobras.run -> None (0.000188s)
+2026-03-08 23:01:35,946 DEBUG petrobras.observer [seq=33 id=c9fcc441-b3f4-43fa-b7ba-9389e129c74e] CALL petrobras.run args={'name': 'Petro #04'}
+2026-03-08 23:01:35,946 INFO petrobras.observer [seq=34 id=c9fcc441-b3f4-43fa-b7ba-9389e129c74e] RETURN petrobras.run -> None (0.000224s)
+2026-03-08 23:01:35,947 DEBUG petrobras.observer [seq=35 id=37c8bb91-a5e3-4384-a385-cba346b18273] CALL petrobras.run args={'name': 'Petro #05'}
+2026-03-08 23:01:35,947 INFO petrobras.observer [seq=36 id=37c8bb91-a5e3-4384-a385-cba346b18273] RETURN petrobras.run -> None (0.000369s)
+2026-03-08 23:01:35,947 DEBUG petrobras.observer [seq=37 id=58559cbd-8e91-48f8-89bd-fb49fd575751] CALL petrobras.run args={'name': 'Petro #06'}
+2026-03-08 23:01:35,947 INFO petrobras.observer [seq=38 id=58559cbd-8e91-48f8-89bd-fb49fd575751] RETURN petrobras.run -> None (0.000143s)
+2026-03-08 23:01:35,948 DEBUG petrobras.observer [seq=39 id=ea3bae2e-5c49-4acd-ab57-87873de66a19] CALL petrobras.run args={'name': 'Petro #07'}
+2026-03-08 23:01:35,948 INFO petrobras.observer [seq=40 id=ea3bae2e-5c49-4acd-ab57-87873de66a19] RETURN petrobras.run -> None (0.000172s)
+2026-03-08 23:01:35,948 DEBUG petrobras.observer [seq=41 id=1ee1b4e6-fd77-42c7-8af5-801a5d265c21] CALL petrobras.run args={'name': 'Petro #08'}
+2026-03-08 23:01:35,948 INFO petrobras.observer [seq=42 id=1ee1b4e6-fd77-42c7-8af5-801a5d265c21] RETURN petrobras.run -> None (0.000143s)
+2026-03-08 23:01:35,948 DEBUG petrobras.observer [seq=43 id=8835b0f6-f676-4121-a181-651b77ec83a4] CALL petrobras.run args={'name': 'Petro #09'}
+2026-03-08 23:01:35,949 INFO petrobras.observer [seq=44 id=8835b0f6-f676-4121-a181-651b77ec83a4] RETURN petrobras.run -> None (0.000211s)
+2026-03-08 23:01:35,949 DEBUG petrobras.observer [seq=45 id=ab9df996-f5f5-414b-9dd6-63890a8d144f] CALL petrobras.run args={'name': 'Petro #10'}
+2026-03-08 23:01:35,949 INFO petrobras.observer [seq=46 id=ab9df996-f5f5-414b-9dd6-63890a8d144f] RETURN petrobras.run -> None (0.000362s)
+2026-03-08 23:01:35,950 DEBUG petrobras.observer [seq=47 id=6c40e492-304c-4fa2-9046-6eabac6fe0e4] CALL petrobras.run args={'name': 'Petro #11'}
+2026-03-08 23:01:35,950 INFO petrobras.observer [seq=48 id=6c40e492-304c-4fa2-9046-6eabac6fe0e4] RETURN petrobras.run -> None (0.000200s)
+2026-03-08 23:01:35,950 DEBUG petrobras.observer [seq=49 id=01f9b568-efef-4215-8a0b-207b7abce92f] CALL petrobras.run args={'name': 'Petro #12'}
+2026-03-08 23:01:35,950 INFO petrobras.observer [seq=50 id=01f9b568-efef-4215-8a0b-207b7abce92f] RETURN petrobras.run -> None (0.000268s)
+2026-03-08 23:01:35,950 DEBUG petrobras.observer [seq=51 id=becd4c6e-b130-483a-8730-d020819d651f] CALL petrobras.run args={'name': 'Petro #13'}
+2026-03-08 23:01:35,951 INFO petrobras.observer [seq=52 id=becd4c6e-b130-483a-8730-d020819d651f] RETURN petrobras.run -> None (0.000117s)
+2026-03-08 23:01:35,951 DEBUG petrobras.observer [seq=53 id=80953c7b-96e5-4bfe-aca9-ebe180ae4987] CALL petrobras.run args={'name': 'Petro #14'}
+2026-03-08 23:01:35,951 INFO petrobras.observer [seq=54 id=80953c7b-96e5-4bfe-aca9-ebe180ae4987] RETURN petrobras.run -> None (0.000150s)
+2026-03-08 23:01:35,951 DEBUG petrobras.observer [seq=55 id=8e367494-7dc2-4ac8-be0f-5df7ae3965b1] CALL petrobras.run args={'name': 'Petro #15'}
+2026-03-08 23:01:35,951 INFO petrobras.observer [seq=56 id=8e367494-7dc2-4ac8-be0f-5df7ae3965b1] RETURN petrobras.run -> None (0.000181s)
+2026-03-08 23:01:35,952 DEBUG petrobras.observer [seq=57 id=dc4672ba-8fc1-40bb-8a9b-1c9b3ccb473b] CALL petrobras.run args={'name': 'Petro #16'}
+2026-03-08 23:01:35,952 INFO petrobras.observer [seq=58 id=dc4672ba-8fc1-40bb-8a9b-1c9b3ccb473b] RETURN petrobras.run -> None (0.000229s)
+2026-03-08 23:01:35,952 DEBUG petrobras.observer [seq=59 id=5fd03838-6ad7-40a7-9d86-948755b6a55c] CALL petrobras.run args={'name': 'Petro #17'}
+2026-03-08 23:01:35,952 INFO petrobras.observer [seq=60 id=5fd03838-6ad7-40a7-9d86-948755b6a55c] RETURN petrobras.run -> None (0.000115s)
+2026-03-08 23:01:35,952 DEBUG petrobras.observer [seq=61 id=c31bd89d-9c96-484d-b543-d75d6ae5ed98] CALL petrobras.run args={'name': 'Petro #18'}
+2026-03-08 23:01:35,952 INFO petrobras.observer [seq=62 id=c31bd89d-9c96-484d-b543-d75d6ae5ed98] RETURN petrobras.run -> None (0.000156s)
+2026-03-08 23:01:35,952 DEBUG petrobras.observer [seq=63 id=9365f33d-ae1a-4775-aee8-103f60178588] CALL petrobras.run args={'name': 'Petro #19'}
+2026-03-08 23:01:35,953 INFO petrobras.observer [seq=64 id=9365f33d-ae1a-4775-aee8-103f60178588] RETURN petrobras.run -> None (0.000276s)
+2026-03-08 23:01:35,953 DEBUG petrobras.observer [seq=65 id=1f587dbf-f2a4-45a6-b373-e3a5d1158a2d] CALL petrobras.run args={'name': 'Petro #20'}
+2026-03-08 23:01:35,953 INFO petrobras.observer [seq=66 id=1f587dbf-f2a4-45a6-b373-e3a5d1158a2d] RETURN petrobras.run -> None (0.000177s)
+2026-03-08 23:01:35,953 DEBUG petrobras.observer [seq=67 id=4f66d113-db11-4a06-b953-074b44655e18] CALL petrobras.run args={'name': 'Petro #21'}
+2026-03-08 23:01:35,953 INFO petrobras.observer [seq=68 id=4f66d113-db11-4a06-b953-074b44655e18] RETURN petrobras.run -> None (0.000074s)
+2026-03-08 23:01:35,953 DEBUG petrobras.observer [seq=69 id=ed33a0c3-1ac8-4db6-9eb3-b41726b1573d] CALL petrobras.run args={'name': 'Petro #22'}
+2026-03-08 23:01:35,953 INFO petrobras.observer [seq=70 id=ed33a0c3-1ac8-4db6-9eb3-b41726b1573d] RETURN petrobras.run -> None (0.000066s)
+2026-03-08 23:01:35,953 DEBUG petrobras.observer [seq=71 id=e3720d83-cfbe-4295-a201-403a47227bf6] CALL petrobras.run args={'name': 'Petro #23'}
+2026-03-08 23:01:35,953 INFO petrobras.observer [seq=72 id=e3720d83-cfbe-4295-a201-403a47227bf6] RETURN petrobras.run -> None (0.000051s)
+2026-03-08 23:01:35,953 DEBUG petrobras.observer [seq=73 id=e8e1ed20-a29e-4bca-88b6-286080b9682f] CALL petrobras.run args={'name': 'Petro #24'}
+2026-03-08 23:01:35,954 INFO petrobras.observer [seq=74 id=e8e1ed20-a29e-4bca-88b6-286080b9682f] RETURN petrobras.run -> None (0.000072s)
+2026-03-08 23:01:35,954 DEBUG petrobras.observer [seq=75 id=f25314b2-228c-4e51-ba7f-05554482c1c6] CALL petrobras.run args={'name': 'Petro #25'}
+2026-03-08 23:01:35,954 INFO petrobras.observer [seq=76 id=f25314b2-228c-4e51-ba7f-05554482c1c6] RETURN petrobras.run -> None (0.000077s)
+2026-03-08 23:01:35,954 DEBUG petrobras.observer [seq=77 id=f9299b57-26f2-4f7f-813e-c4ec23ede51b] CALL petrobras.run args={'name': 'Petro #26'}
+2026-03-08 23:01:35,954 INFO petrobras.observer [seq=78 id=f9299b57-26f2-4f7f-813e-c4ec23ede51b] RETURN petrobras.run -> None (0.000049s)
+2026-03-08 23:01:35,954 DEBUG petrobras.observer [seq=79 id=9be3f55a-7bda-4dda-9f2a-eb1fadf7d6ee] CALL petrobras.run args={'name': 'Petro #27'}
+2026-03-08 23:01:35,954 INFO petrobras.observer [seq=80 id=9be3f55a-7bda-4dda-9f2a-eb1fadf7d6ee] RETURN petrobras.run -> None (0.000051s)
+2026-03-08 23:01:35,954 DEBUG petrobras.observer [seq=81 id=8d84d753-0296-4280-b0ca-5df62a073640] CALL petrobras.run args={'name': 'Petro #28'}
+2026-03-08 23:01:35,954 INFO petrobras.observer [seq=82 id=8d84d753-0296-4280-b0ca-5df62a073640] RETURN petrobras.run -> None (0.000072s)
+2026-03-08 23:01:35,954 DEBUG petrobras.observer [seq=83 id=616b13b0-f83c-4084-b006-30bbe680f844] CALL petrobras.run args={'name': 'Petro #29'}
+2026-03-08 23:01:35,954 INFO petrobras.observer [seq=84 id=616b13b0-f83c-4084-b006-30bbe680f844] RETURN petrobras.run -> None (0.000069s)
+2026-03-08 23:01:35,954 DEBUG petrobras.observer [seq=85 id=591ad523-bcfd-4f82-b14d-1624aef59da4] CALL petrobras.run args={'name': 'Petro #30'}
+2026-03-08 23:01:35,954 INFO petrobras.observer [seq=86 id=591ad523-bcfd-4f82-b14d-1624aef59da4] RETURN petrobras.run -> None (0.000038s)
+2026-03-08 23:01:35,954 DEBUG petrobras.observer [seq=87 id=a70f6c37-292e-4183-9dd3-75a2d0879c71] CALL petrobras.run args={'name': 'Petro #31'}
+2026-03-08 23:01:35,954 INFO petrobras.observer [seq=88 id=a70f6c37-292e-4183-9dd3-75a2d0879c71] RETURN petrobras.run -> None (0.000030s)
+2026-03-08 23:01:35,954 DEBUG petrobras.observer [seq=89 id=ed4356a0-74a1-45c6-8f64-55a6427c2c90] CALL petrobras.run args={'name': 'Petro #32'}
+2026-03-08 23:01:35,954 INFO petrobras.observer [seq=90 id=ed4356a0-74a1-45c6-8f64-55a6427c2c90] RETURN petrobras.run -> None (0.000031s)
+2026-03-08 23:01:35,954 DEBUG petrobras.observer [seq=91 id=d6e990c4-0718-4f2e-98c4-17cd791c524f] CALL petrobras.run args={'name': 'Petro #33'}
+2026-03-08 23:01:35,954 INFO petrobras.observer [seq=92 id=d6e990c4-0718-4f2e-98c4-17cd791c524f] RETURN petrobras.run -> None (0.000051s)
+2026-03-08 23:01:35,955 DEBUG petrobras.observer [seq=93 id=7e081f92-4343-4df4-a987-ca12b90eceed] CALL petrobras.run args={'name': 'Petro #34'}
+2026-03-08 23:01:35,955 INFO petrobras.observer [seq=94 id=7e081f92-4343-4df4-a987-ca12b90eceed] RETURN petrobras.run -> None (0.000091s)
+2026-03-08 23:01:35,955 DEBUG petrobras.observer [seq=95 id=ed702755-871f-4585-b68a-e7631b18b4e3] CALL petrobras.run args={'name': 'Petro #35'}
+2026-03-08 23:01:35,955 INFO petrobras.observer [seq=96 id=ed702755-871f-4585-b68a-e7631b18b4e3] RETURN petrobras.run -> None (0.000046s)
+2026-03-08 23:01:35,955 DEBUG petrobras.observer [seq=97 id=c90d7892-f8f7-4bbb-9cf9-2a980e13918c] CALL petrobras.run args={'name': 'Petro #36'}
+2026-03-08 23:01:35,955 INFO petrobras.observer [seq=98 id=c90d7892-f8f7-4bbb-9cf9-2a980e13918c] RETURN petrobras.run -> None (0.000089s)
+2026-03-08 23:01:35,955 DEBUG petrobras.observer [seq=99 id=c06ae4a1-12c4-46e9-a03e-31e1a297c433] CALL petrobras.run args={'name': 'Petro #37'}
+2026-03-08 23:01:35,955 INFO petrobras.observer [seq=100 id=c06ae4a1-12c4-46e9-a03e-31e1a297c433] RETURN petrobras.run -> None (0.000044s)
+2026-03-08 23:01:35,955 DEBUG petrobras.observer [seq=101 id=d97a9644-2a52-4fc5-a6be-7e5e92ef577b] CALL petrobras.run args={'name': 'Petro #38'}
+2026-03-08 23:01:35,955 INFO petrobras.observer [seq=102 id=d97a9644-2a52-4fc5-a6be-7e5e92ef577b] RETURN petrobras.run -> None (0.000058s)
+2026-03-08 23:01:35,955 DEBUG petrobras.observer [seq=103 id=33e313aa-a3a0-48a0-a47e-69ab46213623] CALL petrobras.run args={'name': 'Petro #39'}
+2026-03-08 23:01:35,955 INFO petrobras.observer [seq=104 id=33e313aa-a3a0-48a0-a47e-69ab46213623] RETURN petrobras.run -> None (0.000063s)
+2026-03-08 23:01:35,955 DEBUG petrobras.observer [seq=105 id=17605d66-205e-4e59-bd6f-e85f5db8c857] CALL petrobras.run args={'name': 'Petro #40'}
+2026-03-08 23:01:35,955 INFO petrobras.observer [seq=106 id=17605d66-205e-4e59-bd6f-e85f5db8c857] RETURN petrobras.run -> None (0.000101s)
+2026-03-08 23:01:35,956 DEBUG petrobras.observer [seq=107 id=bf3a52d8-708e-4a1f-b296-2e887321092d] CALL petrobras.run args={'name': 'Petro #41'}
+2026-03-08 23:01:35,956 INFO petrobras.observer [seq=108 id=bf3a52d8-708e-4a1f-b296-2e887321092d] RETURN petrobras.run -> None (0.000075s)
+2026-03-08 23:01:35,956 DEBUG petrobras.observer [seq=109 id=153ad907-9fca-4dcf-b5ca-2a66cd02d188] CALL petrobras.run args={'name': 'Petro #42'}
+2026-03-08 23:01:35,956 INFO petrobras.observer [seq=110 id=153ad907-9fca-4dcf-b5ca-2a66cd02d188] RETURN petrobras.run -> None (0.000045s)
+2026-03-08 23:01:35,956 DEBUG petrobras.observer [seq=111 id=a2d3df48-16cf-472c-93a6-ccfeaa2aba19] CALL petrobras.run args={'name': 'Petro #43'}
+2026-03-08 23:01:35,956 INFO petrobras.observer [seq=112 id=a2d3df48-16cf-472c-93a6-ccfeaa2aba19] RETURN petrobras.run -> None (0.000044s)
+2026-03-08 23:01:35,956 DEBUG petrobras.observer [seq=113 id=98f73d32-95b0-4e83-bef6-a9028fa538b2] CALL petrobras.run args={'name': 'Petro #44'}
+2026-03-08 23:01:35,956 INFO petrobras.observer [seq=114 id=98f73d32-95b0-4e83-bef6-a9028fa538b2] RETURN petrobras.run -> None (0.000060s)
+2026-03-08 23:01:35,956 DEBUG petrobras.observer [seq=115 id=44ea3954-c65c-4c17-a6a7-c760e45a7e52] CALL petrobras.run args={'name': 'Petro #45'}
+2026-03-08 23:01:35,956 INFO petrobras.observer [seq=116 id=44ea3954-c65c-4c17-a6a7-c760e45a7e52] RETURN petrobras.run -> None (0.000055s)
+2026-03-08 23:01:35,956 DEBUG petrobras.observer [seq=117 id=7a739f7b-fe4d-48a9-9f2b-3613abd7f51f] CALL petrobras.run args={'name': 'Petro #46'}
+2026-03-08 23:01:35,956 INFO petrobras.observer [seq=118 id=7a739f7b-fe4d-48a9-9f2b-3613abd7f51f] RETURN petrobras.run -> None (0.000068s)
+2026-03-08 23:01:35,956 DEBUG petrobras.observer [seq=119 id=b44feef8-68f8-42a3-b54d-1dbfb4e41dfb] CALL petrobras.run args={'name': 'Petro #47'}
+2026-03-08 23:01:35,956 INFO petrobras.observer [seq=120 id=b44feef8-68f8-42a3-b54d-1dbfb4e41dfb] RETURN petrobras.run -> None (0.000043s)
+2026-03-08 23:01:35,956 DEBUG petrobras.observer [seq=121 id=ddca5992-9b90-4b3c-a966-115024012bc0] CALL petrobras.run args={'name': 'Petro #48'}
+2026-03-08 23:01:35,956 INFO petrobras.observer [seq=122 id=ddca5992-9b90-4b3c-a966-115024012bc0] RETURN petrobras.run -> None (0.000085s)
+2026-03-08 23:01:35,956 DEBUG petrobras.observer [seq=123 id=eb2268e7-162b-47f9-9066-fa119567af5c] CALL petrobras.run args={'name': 'Petro #49'}
+2026-03-08 23:01:35,956 INFO petrobras.observer [seq=124 id=eb2268e7-162b-47f9-9066-fa119567af5c] RETURN petrobras.run -> None (0.000047s)
+2026-03-08 23:04:42,532 DEBUG petrobras.observer [seq=3 id=7c24b3d7-4296-4b6e-b959-923a13a4bcdf] CALL petrobras.<genexpr> args={'.0': <tuple_iterator object at 0x7b8906c4e380>}
+2026-03-08 23:04:42,533 INFO petrobras.observer [seq=4 id=7c24b3d7-4296-4b6e-b959-923a13a4bcdf] RETURN petrobras.<genexpr> -> '3' (0.000252s)
+2026-03-08 23:04:42,533 DEBUG petrobras.observer [seq=5 id=46429065-8e78-4028-bc66-7175529967a4] CALL petrobras.<genexpr> args={'.0': <tuple_iterator object at 0x7b8906c4e380>, 'part': 3}
+2026-03-08 23:04:42,533 INFO petrobras.observer [seq=6 id=46429065-8e78-4028-bc66-7175529967a4] RETURN petrobras.<genexpr> -> '13' (0.000043s)
+2026-03-08 23:04:42,533 DEBUG petrobras.observer [seq=7 id=0e7698dc-6aef-47bf-84cd-e42e5880de4e] CALL petrobras.<genexpr> args={'.0': <tuple_iterator object at 0x7b8906c4e380>, 'part': 13}
+2026-03-08 23:04:42,533 INFO petrobras.observer [seq=8 id=0e7698dc-6aef-47bf-84cd-e42e5880de4e] RETURN petrobras.<genexpr> -> '5' (0.000041s)
+2026-03-08 23:04:42,533 DEBUG petrobras.observer [seq=9 id=af906cfc-a872-464f-ae04-9f4b8d126d60] CALL petrobras.<genexpr> args={'.0': <tuple_iterator object at 0x7b8906c4e380>, 'part': 5}
+2026-03-08 23:04:42,533 INFO petrobras.observer [seq=10 id=af906cfc-a872-464f-ae04-9f4b8d126d60] RETURN petrobras.<genexpr> -> None (0.000021s)
+2026-03-08 23:04:42,534 DEBUG petrobras.observer [seq=11 id=2bb8fcfd-bfea-45bb-a60e-fc1b5311ef9b] CALL petrobras.core.import_guard.__init__ args={'self': <petrobras.core.import_guard.ImportGuard object at 0x7b8906ba2a50>, 'package': 'petrobras', 'allowed': {'run'}}
+2026-03-08 23:04:42,534 INFO petrobras.observer [seq=12 id=2bb8fcfd-bfea-45bb-a60e-fc1b5311ef9b] RETURN petrobras.core.import_guard.__init__ -> None (0.000111s)
+2026-03-08 23:04:42,534 DEBUG petrobras.observer [seq=13 id=45f8d25f-0d33-4cc2-9ac2-178184bd68ae] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x7b8906b01150>}
+2026-03-08 23:04:42,534 INFO petrobras.observer [seq=14 id=45f8d25f-0d33-4cc2-9ac2-178184bd68ae] RETURN petrobras.<genexpr> -> False (0.000029s)
+2026-03-08 23:04:42,534 DEBUG petrobras.observer [seq=15 id=a1221a1c-81ff-4af2-bf66-cd4a1ac97ec1] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x7b8906b01150>, 'f': <_distutils_hack.DistutilsMetaFinder object at 0x7b89075fef90>}
+2026-03-08 23:04:42,534 INFO petrobras.observer [seq=16 id=a1221a1c-81ff-4af2-bf66-cd4a1ac97ec1] RETURN petrobras.<genexpr> -> False (0.000028s)
+2026-03-08 23:04:42,534 DEBUG petrobras.observer [seq=17 id=9850fe71-6da5-401c-9418-f15e7f30ac42] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x7b8906b01150>, 'f': <_virtualenv._Finder object at 0x7b89075fee40>}
+2026-03-08 23:04:42,534 INFO petrobras.observer [seq=18 id=9850fe71-6da5-401c-9418-f15e7f30ac42] RETURN petrobras.<genexpr> -> False (0.000023s)
+2026-03-08 23:04:42,534 DEBUG petrobras.observer [seq=19 id=24495403-473d-41dd-a6e7-27baff764a1b] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x7b8906b01150>, 'f': <class '_frozen_importlib.BuiltinImporter'>}
+2026-03-08 23:04:42,534 INFO petrobras.observer [seq=20 id=24495403-473d-41dd-a6e7-27baff764a1b] RETURN petrobras.<genexpr> -> False (0.000020s)
+2026-03-08 23:04:42,534 DEBUG petrobras.observer [seq=21 id=42030e0d-e5d6-43ea-95a7-00d4a0da87d6] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x7b8906b01150>, 'f': <class '_frozen_importlib.FrozenImporter'>}
+2026-03-08 23:04:42,534 INFO petrobras.observer [seq=22 id=42030e0d-e5d6-43ea-95a7-00d4a0da87d6] RETURN petrobras.<genexpr> -> False (0.000044s)
+2026-03-08 23:04:42,534 DEBUG petrobras.observer [seq=23 id=e78a4470-74fe-4b5f-9ad6-505201d67fc6] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x7b8906b01150>, 'f': <class '_frozen_importlib_external.PathFinder'>}
+2026-03-08 23:04:42,534 INFO petrobras.observer [seq=24 id=e78a4470-74fe-4b5f-9ad6-505201d67fc6] RETURN petrobras.<genexpr> -> None (0.000024s)
+2026-03-08 23:04:42,534 DEBUG petrobras.observer [seq=25 id=a9674ba7-f45c-4973-a967-1078fb318bce] CALL petrobras._seal_namespace args={}
+2026-03-08 23:04:42,534 INFO petrobras.observer [seq=26 id=a9674ba7-f45c-4973-a967-1078fb318bce] RETURN petrobras._seal_namespace -> None (0.000049s)
+2026-03-08 23:04:42,535 DEBUG petrobras.observer [seq=27 id=a3e41ea8-d098-4f68-9bbb-b80981e7694c] CALL petrobras.run args={'name': 'Petro #01'}
+2026-03-08 23:04:42,535 INFO petrobras.observer [seq=28 id=a3e41ea8-d098-4f68-9bbb-b80981e7694c] RETURN petrobras.run -> None (0.000070s)
+2026-03-08 23:04:42,535 DEBUG petrobras.observer [seq=29 id=b74bde02-0241-4db3-9429-c420376821ba] CALL petrobras.run args={'name': 'Petro #02'}
+2026-03-08 23:04:42,535 INFO petrobras.observer [seq=30 id=b74bde02-0241-4db3-9429-c420376821ba] RETURN petrobras.run -> None (0.000235s)
+2026-03-08 23:04:42,535 DEBUG petrobras.observer [seq=31 id=c45b2578-49e2-4b93-b292-1898a7f3fec9] CALL petrobras.run args={'name': 'Petro #03'}
+2026-03-08 23:04:42,535 INFO petrobras.observer [seq=32 id=c45b2578-49e2-4b93-b292-1898a7f3fec9] RETURN petrobras.run -> None (0.000323s)
+2026-03-08 23:04:42,536 DEBUG petrobras.observer [seq=33 id=cd6a6ca4-b37a-47f5-b33c-7151954a5b28] CALL petrobras.run args={'name': 'Petro #04'}
+2026-03-08 23:04:42,536 INFO petrobras.observer [seq=34 id=cd6a6ca4-b37a-47f5-b33c-7151954a5b28] RETURN petrobras.run -> None (0.000259s)
+2026-03-08 23:04:42,536 DEBUG petrobras.observer [seq=35 id=960bb452-196f-47aa-914a-3481fc6ba262] CALL petrobras.run args={'name': 'Petro #05'}
+2026-03-08 23:04:42,536 INFO petrobras.observer [seq=36 id=960bb452-196f-47aa-914a-3481fc6ba262] RETURN petrobras.run -> None (0.000245s)
+2026-03-08 23:04:42,536 DEBUG petrobras.observer [seq=37 id=d2ccda3b-1927-4300-a4ec-bbd1915ac702] CALL petrobras.run args={'name': 'Petro #06'}
+2026-03-08 23:04:42,536 INFO petrobras.observer [seq=38 id=d2ccda3b-1927-4300-a4ec-bbd1915ac702] RETURN petrobras.run -> None (0.000027s)
+2026-03-08 23:04:42,536 DEBUG petrobras.observer [seq=39 id=cd2938f9-ac99-46a9-83e4-482e7490ca23] CALL petrobras.run args={'name': 'Petro #07'}
+2026-03-08 23:04:42,536 INFO petrobras.observer [seq=40 id=cd2938f9-ac99-46a9-83e4-482e7490ca23] RETURN petrobras.run -> None (0.000029s)
+2026-03-08 23:04:42,536 DEBUG petrobras.observer [seq=41 id=40ec8cbc-6b7c-4b99-ba15-73765a6f05f1] CALL petrobras.run args={'name': 'Petro #08'}
+2026-03-08 23:04:42,536 INFO petrobras.observer [seq=42 id=40ec8cbc-6b7c-4b99-ba15-73765a6f05f1] RETURN petrobras.run -> None (0.000039s)
+2026-03-08 23:04:42,536 DEBUG petrobras.observer [seq=43 id=5b43f8d6-6a41-4f57-b69b-24245d2b0e9f] CALL petrobras.run args={'name': 'Petro #09'}
+2026-03-08 23:04:42,536 INFO petrobras.observer [seq=44 id=5b43f8d6-6a41-4f57-b69b-24245d2b0e9f] RETURN petrobras.run -> None (0.000024s)
+2026-03-08 23:04:42,536 DEBUG petrobras.observer [seq=45 id=08b1fa56-d58e-4f48-ab9d-811b81c47375] CALL petrobras.run args={'name': 'Petro #10'}
+2026-03-08 23:04:42,536 INFO petrobras.observer [seq=46 id=08b1fa56-d58e-4f48-ab9d-811b81c47375] RETURN petrobras.run -> None (0.000034s)
+2026-03-08 23:04:42,536 DEBUG petrobras.observer [seq=47 id=1a28b11f-acb4-4651-8624-0a72ee3176e3] CALL petrobras.run args={'name': 'Petro #11'}
+2026-03-08 23:04:42,536 INFO petrobras.observer [seq=48 id=1a28b11f-acb4-4651-8624-0a72ee3176e3] RETURN petrobras.run -> None (0.000023s)
+2026-03-08 23:04:42,536 DEBUG petrobras.observer [seq=49 id=7c7bf6d2-3a7c-48fe-8503-ad7f651b8611] CALL petrobras.run args={'name': 'Petro #12'}
+2026-03-08 23:04:42,536 INFO petrobras.observer [seq=50 id=7c7bf6d2-3a7c-48fe-8503-ad7f651b8611] RETURN petrobras.run -> None (0.000024s)
+2026-03-08 23:04:42,536 DEBUG petrobras.observer [seq=51 id=be9a250d-2719-41c3-ae77-1a21d5487759] CALL petrobras.run args={'name': 'Petro #13'}
+2026-03-08 23:04:42,536 INFO petrobras.observer [seq=52 id=be9a250d-2719-41c3-ae77-1a21d5487759] RETURN petrobras.run -> None (0.000041s)
+2026-03-08 23:04:42,536 DEBUG petrobras.observer [seq=53 id=0cde0cbc-80d6-4399-9a5f-8f80b96ee683] CALL petrobras.run args={'name': 'Petro #14'}
+2026-03-08 23:04:42,537 INFO petrobras.observer [seq=54 id=0cde0cbc-80d6-4399-9a5f-8f80b96ee683] RETURN petrobras.run -> None (0.000033s)
+2026-03-08 23:04:42,537 DEBUG petrobras.observer [seq=55 id=39ed0642-e3a4-419d-ba71-008e3cbb5f54] CALL petrobras.run args={'name': 'Petro #15'}
+2026-03-08 23:04:42,537 INFO petrobras.observer [seq=56 id=39ed0642-e3a4-419d-ba71-008e3cbb5f54] RETURN petrobras.run -> None (0.000029s)
+2026-03-08 23:04:42,537 DEBUG petrobras.observer [seq=57 id=5874edde-793d-4cb1-9f84-1feda1c5011f] CALL petrobras.run args={'name': 'Petro #16'}
+2026-03-08 23:04:42,537 INFO petrobras.observer [seq=58 id=5874edde-793d-4cb1-9f84-1feda1c5011f] RETURN petrobras.run -> None (0.000031s)
+2026-03-08 23:04:42,537 DEBUG petrobras.observer [seq=59 id=46834ab5-158c-4a1e-a24c-c3df578f7d7d] CALL petrobras.run args={'name': 'Petro #17'}
+2026-03-08 23:04:42,537 INFO petrobras.observer [seq=60 id=46834ab5-158c-4a1e-a24c-c3df578f7d7d] RETURN petrobras.run -> None (0.000032s)
+2026-03-08 23:04:42,537 DEBUG petrobras.observer [seq=61 id=ae56e629-12b0-423f-b428-c152cb791002] CALL petrobras.run args={'name': 'Petro #18'}
+2026-03-08 23:04:42,537 INFO petrobras.observer [seq=62 id=ae56e629-12b0-423f-b428-c152cb791002] RETURN petrobras.run -> None (0.000034s)
+2026-03-08 23:04:42,537 DEBUG petrobras.observer [seq=63 id=dca5f240-13b5-4cd8-9dd8-22aa1a904cdf] CALL petrobras.run args={'name': 'Petro #19'}
+2026-03-08 23:04:42,537 INFO petrobras.observer [seq=64 id=dca5f240-13b5-4cd8-9dd8-22aa1a904cdf] RETURN petrobras.run -> None (0.000030s)
+2026-03-08 23:04:42,537 DEBUG petrobras.observer [seq=65 id=b494398e-d7f7-4a44-b2ff-f09f256aed56] CALL petrobras.run args={'name': 'Petro #20'}
+2026-03-08 23:04:42,537 INFO petrobras.observer [seq=66 id=b494398e-d7f7-4a44-b2ff-f09f256aed56] RETURN petrobras.run -> None (0.000041s)
+2026-03-08 23:04:42,537 DEBUG petrobras.observer [seq=67 id=5977a93a-67e0-4337-b2ed-f64801222b8c] CALL petrobras.run args={'name': 'Petro #21'}
+2026-03-08 23:04:42,537 INFO petrobras.observer [seq=68 id=5977a93a-67e0-4337-b2ed-f64801222b8c] RETURN petrobras.run -> None (0.000024s)
+2026-03-08 23:04:42,537 DEBUG petrobras.observer [seq=69 id=1205e621-6779-40cf-85b5-992172fde7c3] CALL petrobras.run args={'name': 'Petro #22'}
+2026-03-08 23:04:42,537 INFO petrobras.observer [seq=70 id=1205e621-6779-40cf-85b5-992172fde7c3] RETURN petrobras.run -> None (0.000017s)
+2026-03-08 23:04:42,537 DEBUG petrobras.observer [seq=71 id=ac61e5fb-959b-444c-8b96-6030390ca900] CALL petrobras.run args={'name': 'Petro #23'}
+2026-03-08 23:04:42,537 INFO petrobras.observer [seq=72 id=ac61e5fb-959b-444c-8b96-6030390ca900] RETURN petrobras.run -> None (0.000030s)
+2026-03-08 23:04:42,537 DEBUG petrobras.observer [seq=73 id=0b662081-2a94-486e-a2fe-dc0966d0305e] CALL petrobras.run args={'name': 'Petro #24'}
+2026-03-08 23:04:42,537 INFO petrobras.observer [seq=74 id=0b662081-2a94-486e-a2fe-dc0966d0305e] RETURN petrobras.run -> None (0.000028s)
+2026-03-08 23:04:42,537 DEBUG petrobras.observer [seq=75 id=836bf621-efe6-4475-bb29-b3b6fe9843d1] CALL petrobras.run args={'name': 'Petro #25'}
+2026-03-08 23:04:42,537 INFO petrobras.observer [seq=76 id=836bf621-efe6-4475-bb29-b3b6fe9843d1] RETURN petrobras.run -> None (0.000022s)
+2026-03-08 23:04:42,537 DEBUG petrobras.observer [seq=77 id=fe7e070a-3d24-4099-9ee6-adbc4f753279] CALL petrobras.run args={'name': 'Petro #26'}
+2026-03-08 23:04:42,537 INFO petrobras.observer [seq=78 id=fe7e070a-3d24-4099-9ee6-adbc4f753279] RETURN petrobras.run -> None (0.000044s)
+2026-03-08 23:04:42,537 DEBUG petrobras.observer [seq=79 id=6ca50427-0d28-4a2f-9999-c122a96b588e] CALL petrobras.run args={'name': 'Petro #27'}
+2026-03-08 23:04:42,537 INFO petrobras.observer [seq=80 id=6ca50427-0d28-4a2f-9999-c122a96b588e] RETURN petrobras.run -> None (0.000020s)
+2026-03-08 23:04:42,537 DEBUG petrobras.observer [seq=81 id=b35f6ae8-cf7b-4e03-acd9-5ce3fba39720] CALL petrobras.run args={'name': 'Petro #28'}
+2026-03-08 23:04:42,537 INFO petrobras.observer [seq=82 id=b35f6ae8-cf7b-4e03-acd9-5ce3fba39720] RETURN petrobras.run -> None (0.000027s)
+2026-03-08 23:04:42,537 DEBUG petrobras.observer [seq=83 id=21ede32a-dff9-4e93-872f-fd52edad9ac2] CALL petrobras.run args={'name': 'Petro #29'}
+2026-03-08 23:04:42,537 INFO petrobras.observer [seq=84 id=21ede32a-dff9-4e93-872f-fd52edad9ac2] RETURN petrobras.run -> None (0.000034s)
+2026-03-08 23:04:42,537 DEBUG petrobras.observer [seq=85 id=738f2e31-b37b-4526-8544-1434d645db05] CALL petrobras.run args={'name': 'Petro #30'}
+2026-03-08 23:04:42,537 INFO petrobras.observer [seq=86 id=738f2e31-b37b-4526-8544-1434d645db05] RETURN petrobras.run -> None (0.000047s)
+2026-03-08 23:04:42,537 DEBUG petrobras.observer [seq=87 id=a8abc62e-919d-45ba-994b-f99341ad8150] CALL petrobras.run args={'name': 'Petro #31'}
+2026-03-08 23:04:42,537 INFO petrobras.observer [seq=88 id=a8abc62e-919d-45ba-994b-f99341ad8150] RETURN petrobras.run -> None (0.000039s)
+2026-03-08 23:04:42,537 DEBUG petrobras.observer [seq=89 id=71247705-a205-401e-aa04-ee8f4e240408] CALL petrobras.run args={'name': 'Petro #32'}
+2026-03-08 23:04:42,537 INFO petrobras.observer [seq=90 id=71247705-a205-401e-aa04-ee8f4e240408] RETURN petrobras.run -> None (0.000034s)
+2026-03-08 23:04:42,538 DEBUG petrobras.observer [seq=91 id=7d67e63d-bcfe-4b66-95d9-fca3b6b1eec8] CALL petrobras.run args={'name': 'Petro #33'}
+2026-03-08 23:04:42,538 INFO petrobras.observer [seq=92 id=7d67e63d-bcfe-4b66-95d9-fca3b6b1eec8] RETURN petrobras.run -> None (0.000033s)
+2026-03-08 23:04:42,538 DEBUG petrobras.observer [seq=93 id=3b83033c-ff95-4fa6-9292-9c304619af45] CALL petrobras.run args={'name': 'Petro #34'}
+2026-03-08 23:04:42,538 INFO petrobras.observer [seq=94 id=3b83033c-ff95-4fa6-9292-9c304619af45] RETURN petrobras.run -> None (0.000024s)
+2026-03-08 23:04:42,538 DEBUG petrobras.observer [seq=95 id=b06946e4-0db4-49a0-b058-28642878f4f3] CALL petrobras.run args={'name': 'Petro #35'}
+2026-03-08 23:04:42,538 INFO petrobras.observer [seq=96 id=b06946e4-0db4-49a0-b058-28642878f4f3] RETURN petrobras.run -> None (0.000072s)
+2026-03-08 23:04:42,538 DEBUG petrobras.observer [seq=97 id=8b30c217-206a-4574-9cb2-939165bec374] CALL petrobras.run args={'name': 'Petro #36'}
+2026-03-08 23:04:42,538 INFO petrobras.observer [seq=98 id=8b30c217-206a-4574-9cb2-939165bec374] RETURN petrobras.run -> None (0.000039s)
+2026-03-08 23:04:42,538 DEBUG petrobras.observer [seq=99 id=7d8dc34d-27a0-440e-adb6-8e5bb856a14d] CALL petrobras.run args={'name': 'Petro #37'}
+2026-03-08 23:04:42,538 INFO petrobras.observer [seq=100 id=7d8dc34d-27a0-440e-adb6-8e5bb856a14d] RETURN petrobras.run -> None (0.000031s)
+2026-03-08 23:04:42,538 DEBUG petrobras.observer [seq=101 id=61a493b7-e36c-4599-a7db-e5668d05500a] CALL petrobras.run args={'name': 'Petro #38'}
+2026-03-08 23:04:42,538 INFO petrobras.observer [seq=102 id=61a493b7-e36c-4599-a7db-e5668d05500a] RETURN petrobras.run -> None (0.000030s)
+2026-03-08 23:04:42,538 DEBUG petrobras.observer [seq=103 id=f30d4bea-18fe-4762-89ef-34a489f2e1a2] CALL petrobras.run args={'name': 'Petro #39'}
+2026-03-08 23:04:42,538 INFO petrobras.observer [seq=104 id=f30d4bea-18fe-4762-89ef-34a489f2e1a2] RETURN petrobras.run -> None (0.000027s)
+2026-03-08 23:04:42,538 DEBUG petrobras.observer [seq=105 id=158dc30f-9d4a-43be-b6c0-a013ed7a9059] CALL petrobras.run args={'name': 'Petro #40'}
+2026-03-08 23:04:42,538 INFO petrobras.observer [seq=106 id=158dc30f-9d4a-43be-b6c0-a013ed7a9059] RETURN petrobras.run -> None (0.000043s)
+2026-03-08 23:04:42,538 DEBUG petrobras.observer [seq=107 id=d739ace0-dc54-42f9-b5b0-deaca5ebfd7f] CALL petrobras.run args={'name': 'Petro #41'}
+2026-03-08 23:04:42,538 INFO petrobras.observer [seq=108 id=d739ace0-dc54-42f9-b5b0-deaca5ebfd7f] RETURN petrobras.run -> None (0.000051s)
+2026-03-08 23:04:42,538 DEBUG petrobras.observer [seq=109 id=7f4ce2b1-d05b-4b29-999b-3a97e2c4418a] CALL petrobras.run args={'name': 'Petro #42'}
+2026-03-08 23:04:42,538 INFO petrobras.observer [seq=110 id=7f4ce2b1-d05b-4b29-999b-3a97e2c4418a] RETURN petrobras.run -> None (0.000028s)
+2026-03-08 23:04:42,538 DEBUG petrobras.observer [seq=111 id=3677a28a-2efe-4012-803d-038fa260e9d9] CALL petrobras.run args={'name': 'Petro #43'}
+2026-03-08 23:04:42,538 INFO petrobras.observer [seq=112 id=3677a28a-2efe-4012-803d-038fa260e9d9] RETURN petrobras.run -> None (0.000048s)
+2026-03-08 23:04:42,538 DEBUG petrobras.observer [seq=113 id=6acbc641-cdda-478c-9cf6-a532d786a7ac] CALL petrobras.run args={'name': 'Petro #44'}
+2026-03-08 23:04:42,538 INFO petrobras.observer [seq=114 id=6acbc641-cdda-478c-9cf6-a532d786a7ac] RETURN petrobras.run -> None (0.000037s)
+2026-03-08 23:04:42,538 DEBUG petrobras.observer [seq=115 id=8b027766-bf14-423b-a362-90c646c61340] CALL petrobras.run args={'name': 'Petro #45'}
+2026-03-08 23:04:42,538 INFO petrobras.observer [seq=116 id=8b027766-bf14-423b-a362-90c646c61340] RETURN petrobras.run -> None (0.000024s)
+2026-03-08 23:04:42,538 DEBUG petrobras.observer [seq=117 id=09a286e7-be6c-4799-81ca-9492398ec71b] CALL petrobras.run args={'name': 'Petro #46'}
+2026-03-08 23:04:42,538 INFO petrobras.observer [seq=118 id=09a286e7-be6c-4799-81ca-9492398ec71b] RETURN petrobras.run -> None (0.000037s)
+2026-03-08 23:04:42,538 DEBUG petrobras.observer [seq=119 id=34871776-6eb9-427b-a808-ce0f6cad446b] CALL petrobras.run args={'name': 'Petro #47'}
+2026-03-08 23:04:42,539 INFO petrobras.observer [seq=120 id=34871776-6eb9-427b-a808-ce0f6cad446b] RETURN petrobras.run -> None (0.000027s)
+2026-03-08 23:04:42,539 DEBUG petrobras.observer [seq=121 id=747cd30f-21dd-4ac0-a9c3-542a38cfd28f] CALL petrobras.run args={'name': 'Petro #48'}
+2026-03-08 23:04:42,539 INFO petrobras.observer [seq=122 id=747cd30f-21dd-4ac0-a9c3-542a38cfd28f] RETURN petrobras.run -> None (0.000036s)
+2026-03-08 23:04:42,539 DEBUG petrobras.observer [seq=123 id=ed174d8a-004d-439f-ab96-49a84de8a4c4] CALL petrobras.run args={'name': 'Petro #49'}
+2026-03-08 23:04:42,539 INFO petrobras.observer [seq=124 id=ed174d8a-004d-439f-ab96-49a84de8a4c4] RETURN petrobras.run -> None (0.000041s)
+2026-03-08 23:04:52,841 DEBUG petrobras.observer [seq=3 id=e04781fc-e471-4219-837a-69ed186897d9] CALL petrobras.<genexpr> args={'.0': <tuple_iterator object at 0x7797b819cac0>}
+2026-03-08 23:04:52,841 INFO petrobras.observer [seq=4 id=e04781fc-e471-4219-837a-69ed186897d9] RETURN petrobras.<genexpr> -> '3' (0.000242s)
+2026-03-08 23:04:52,841 DEBUG petrobras.observer [seq=5 id=8f6a2c01-7a46-4842-baab-f5f02ea8e176] CALL petrobras.<genexpr> args={'.0': <tuple_iterator object at 0x7797b819cac0>, 'part': 3}
+2026-03-08 23:04:52,841 INFO petrobras.observer [seq=6 id=8f6a2c01-7a46-4842-baab-f5f02ea8e176] RETURN petrobras.<genexpr> -> '13' (0.000045s)
+2026-03-08 23:04:52,841 DEBUG petrobras.observer [seq=7 id=52171a69-5952-4853-b936-d4f598528245] CALL petrobras.<genexpr> args={'.0': <tuple_iterator object at 0x7797b819cac0>, 'part': 13}
+2026-03-08 23:04:52,841 INFO petrobras.observer [seq=8 id=52171a69-5952-4853-b936-d4f598528245] RETURN petrobras.<genexpr> -> '5' (0.000034s)
+2026-03-08 23:04:52,842 DEBUG petrobras.observer [seq=9 id=46d7c7c8-9db1-4810-843d-69cc79d69c47] CALL petrobras.<genexpr> args={'.0': <tuple_iterator object at 0x7797b819cac0>, 'part': 5}
+2026-03-08 23:04:52,842 INFO petrobras.observer [seq=10 id=46d7c7c8-9db1-4810-843d-69cc79d69c47] RETURN petrobras.<genexpr> -> None (0.000035s)
+2026-03-08 23:04:52,843 DEBUG petrobras.observer [seq=11 id=ed65c181-4ed4-4556-8cc3-8ebde133b3d2] CALL petrobras.core.import_guard.__init__ args={'self': <petrobras.core.import_guard.ImportGuard object at 0x7797b813ea50>, 'package': 'petrobras', 'allowed': {'run'}}
+2026-03-08 23:04:52,843 INFO petrobras.observer [seq=12 id=ed65c181-4ed4-4556-8cc3-8ebde133b3d2] RETURN petrobras.core.import_guard.__init__ -> None (0.000154s)
+2026-03-08 23:04:52,843 DEBUG petrobras.observer [seq=13 id=b20bda2c-124c-4a48-a526-a6d23b16f40a] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x7797b80a1060>}
+2026-03-08 23:04:52,843 INFO petrobras.observer [seq=14 id=b20bda2c-124c-4a48-a526-a6d23b16f40a] RETURN petrobras.<genexpr> -> False (0.000041s)
+2026-03-08 23:04:52,843 DEBUG petrobras.observer [seq=15 id=e9bce227-db3a-4b21-8ede-c4911a3881ce] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x7797b80a1060>, 'f': <_distutils_hack.DistutilsMetaFinder object at 0x7797b8b8ef90>}
+2026-03-08 23:04:52,843 INFO petrobras.observer [seq=16 id=e9bce227-db3a-4b21-8ede-c4911a3881ce] RETURN petrobras.<genexpr> -> False (0.000027s)
+2026-03-08 23:04:52,843 DEBUG petrobras.observer [seq=17 id=7abd8f78-46da-4d55-8502-f399953a4e17] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x7797b80a1060>, 'f': <_virtualenv._Finder object at 0x7797b8b8ee40>}
+2026-03-08 23:04:52,843 INFO petrobras.observer [seq=18 id=7abd8f78-46da-4d55-8502-f399953a4e17] RETURN petrobras.<genexpr> -> False (0.000024s)
+2026-03-08 23:04:52,843 DEBUG petrobras.observer [seq=19 id=e8f689ed-d949-46d6-9a09-4e699a68a1d1] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x7797b80a1060>, 'f': <class '_frozen_importlib.BuiltinImporter'>}
+2026-03-08 23:04:52,843 INFO petrobras.observer [seq=20 id=e8f689ed-d949-46d6-9a09-4e699a68a1d1] RETURN petrobras.<genexpr> -> False (0.000020s)
+2026-03-08 23:04:52,843 DEBUG petrobras.observer [seq=21 id=7e695518-daa6-4b98-8417-554d5082eb2b] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x7797b80a1060>, 'f': <class '_frozen_importlib.FrozenImporter'>}
+2026-03-08 23:04:52,843 INFO petrobras.observer [seq=22 id=7e695518-daa6-4b98-8417-554d5082eb2b] RETURN petrobras.<genexpr> -> False (0.000034s)
+2026-03-08 23:04:52,843 DEBUG petrobras.observer [seq=23 id=30e67f4d-6c84-48eb-af0e-3ee16b12d084] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x7797b80a1060>, 'f': <class '_frozen_importlib_external.PathFinder'>}
+2026-03-08 23:04:52,843 INFO petrobras.observer [seq=24 id=30e67f4d-6c84-48eb-af0e-3ee16b12d084] RETURN petrobras.<genexpr> -> None (0.000019s)
+2026-03-08 23:04:52,843 DEBUG petrobras.observer [seq=25 id=b3b49f49-a3b6-4ae6-8c51-057cbe810e2f] CALL petrobras._seal_namespace args={}
+2026-03-08 23:04:52,843 INFO petrobras.observer [seq=26 id=b3b49f49-a3b6-4ae6-8c51-057cbe810e2f] RETURN petrobras._seal_namespace -> None (0.000077s)
+2026-03-08 23:04:52,843 DEBUG petrobras.observer [seq=27 id=b9190459-fd09-437c-b558-e6e46e4337f0] CALL petrobras.run args={'name': 'Petro #01'}
+2026-03-08 23:04:52,844 INFO petrobras.observer [seq=28 id=b9190459-fd09-437c-b558-e6e46e4337f0] RETURN petrobras.run -> None (0.000076s)
+2026-03-08 23:04:52,844 DEBUG petrobras.observer [seq=29 id=e5c1e61c-52d5-4a81-91de-c89e359c95f8] CALL petrobras.run args={'name': 'Petro #02'}
+2026-03-08 23:04:52,844 INFO petrobras.observer [seq=30 id=e5c1e61c-52d5-4a81-91de-c89e359c95f8] RETURN petrobras.run -> None (0.000046s)
+2026-03-08 23:04:52,844 DEBUG petrobras.observer [seq=31 id=14628b60-c4ad-465f-8873-ced0f2770dd1] CALL petrobras.run args={'name': 'Petro #03'}
+2026-03-08 23:04:52,844 INFO petrobras.observer [seq=32 id=14628b60-c4ad-465f-8873-ced0f2770dd1] RETURN petrobras.run -> None (0.000047s)
+2026-03-08 23:04:52,844 DEBUG petrobras.observer [seq=33 id=be65ecad-0f5f-4456-b824-9ed125a6ccc0] CALL petrobras.run args={'name': 'Petro #04'}
+2026-03-08 23:04:52,844 INFO petrobras.observer [seq=34 id=be65ecad-0f5f-4456-b824-9ed125a6ccc0] RETURN petrobras.run -> None (0.000044s)
+2026-03-08 23:04:52,844 DEBUG petrobras.observer [seq=35 id=35bf8bad-65c8-415b-8c0e-3e8e6e7b1e5e] CALL petrobras.run args={'name': 'Petro #05'}
+2026-03-08 23:04:52,844 INFO petrobras.observer [seq=36 id=35bf8bad-65c8-415b-8c0e-3e8e6e7b1e5e] RETURN petrobras.run -> None (0.000034s)
+2026-03-08 23:04:52,844 DEBUG petrobras.observer [seq=37 id=d25b33db-1801-45c9-8b42-57f68ae114e5] CALL petrobras.run args={'name': 'Petro #06'}
+2026-03-08 23:04:52,844 INFO petrobras.observer [seq=38 id=d25b33db-1801-45c9-8b42-57f68ae114e5] RETURN petrobras.run -> None (0.000048s)
+2026-03-08 23:04:52,844 DEBUG petrobras.observer [seq=39 id=77c2d7d3-52ba-465d-aa5a-2e954108dd40] CALL petrobras.run args={'name': 'Petro #07'}
+2026-03-08 23:04:52,844 INFO petrobras.observer [seq=40 id=77c2d7d3-52ba-465d-aa5a-2e954108dd40] RETURN petrobras.run -> None (0.000046s)
+2026-03-08 23:04:52,844 DEBUG petrobras.observer [seq=41 id=eeb7d9da-67db-4f62-a8b2-7b29b5cfd98b] CALL petrobras.run args={'name': 'Petro #08'}
+2026-03-08 23:04:52,844 INFO petrobras.observer [seq=42 id=eeb7d9da-67db-4f62-a8b2-7b29b5cfd98b] RETURN petrobras.run -> None (0.000024s)
+2026-03-08 23:04:52,844 DEBUG petrobras.observer [seq=43 id=b51a65df-b2b1-4e64-bf15-d924131fe7a2] CALL petrobras.run args={'name': 'Petro #09'}
+2026-03-08 23:04:52,844 INFO petrobras.observer [seq=44 id=b51a65df-b2b1-4e64-bf15-d924131fe7a2] RETURN petrobras.run -> None (0.000038s)
+2026-03-08 23:04:52,844 DEBUG petrobras.observer [seq=45 id=590c2ce2-ee80-49c6-abdf-dba0d6bc1b88] CALL petrobras.run args={'name': 'Petro #10'}
+2026-03-08 23:04:52,844 INFO petrobras.observer [seq=46 id=590c2ce2-ee80-49c6-abdf-dba0d6bc1b88] RETURN petrobras.run -> None (0.000058s)
+2026-03-08 23:04:52,844 DEBUG petrobras.observer [seq=47 id=0b8c37c8-287d-4262-bffc-6982408b59da] CALL petrobras.run args={'name': 'Petro #11'}
+2026-03-08 23:04:52,844 INFO petrobras.observer [seq=48 id=0b8c37c8-287d-4262-bffc-6982408b59da] RETURN petrobras.run -> None (0.000026s)
+2026-03-08 23:04:52,844 DEBUG petrobras.observer [seq=49 id=06d30ba7-d49b-4389-82e4-09e01d2c48c4] CALL petrobras.run args={'name': 'Petro #12'}
+2026-03-08 23:04:52,844 INFO petrobras.observer [seq=50 id=06d30ba7-d49b-4389-82e4-09e01d2c48c4] RETURN petrobras.run -> None (0.000047s)
+2026-03-08 23:04:52,844 DEBUG petrobras.observer [seq=51 id=b0d9ba68-91dc-4bda-b276-ac9ef6298aca] CALL petrobras.run args={'name': 'Petro #13'}
+2026-03-08 23:04:52,844 INFO petrobras.observer [seq=52 id=b0d9ba68-91dc-4bda-b276-ac9ef6298aca] RETURN petrobras.run -> None (0.000059s)
+2026-03-08 23:04:52,844 DEBUG petrobras.observer [seq=53 id=1c26a98b-c9f3-4a84-a123-d38fb3e1f834] CALL petrobras.run args={'name': 'Petro #14'}
+2026-03-08 23:04:52,844 INFO petrobras.observer [seq=54 id=1c26a98b-c9f3-4a84-a123-d38fb3e1f834] RETURN petrobras.run -> None (0.000037s)
+2026-03-08 23:04:52,844 DEBUG petrobras.observer [seq=55 id=cc0f0629-965b-45a1-a395-00136c130fd7] CALL petrobras.run args={'name': 'Petro #15'}
+2026-03-08 23:04:52,844 INFO petrobras.observer [seq=56 id=cc0f0629-965b-45a1-a395-00136c130fd7] RETURN petrobras.run -> None (0.000025s)
+2026-03-08 23:04:52,844 DEBUG petrobras.observer [seq=57 id=2fc3833e-ac31-4733-af93-7692159089b7] CALL petrobras.run args={'name': 'Petro #16'}
+2026-03-08 23:04:52,845 INFO petrobras.observer [seq=58 id=2fc3833e-ac31-4733-af93-7692159089b7] RETURN petrobras.run -> None (0.000046s)
+2026-03-08 23:04:52,845 DEBUG petrobras.observer [seq=59 id=378a2d4e-3cbe-4a7d-a370-e403df84369c] CALL petrobras.run args={'name': 'Petro #17'}
+2026-03-08 23:04:52,845 INFO petrobras.observer [seq=60 id=378a2d4e-3cbe-4a7d-a370-e403df84369c] RETURN petrobras.run -> None (0.000022s)
+2026-03-08 23:04:52,845 DEBUG petrobras.observer [seq=61 id=b8ebe932-7c58-4228-bbdc-31f590a63393] CALL petrobras.run args={'name': 'Petro #18'}
+2026-03-08 23:04:52,845 INFO petrobras.observer [seq=62 id=b8ebe932-7c58-4228-bbdc-31f590a63393] RETURN petrobras.run -> None (0.000034s)
+2026-03-08 23:04:52,845 DEBUG petrobras.observer [seq=63 id=d21c6cb1-1cdc-499d-8cdb-9f93faca8ec1] CALL petrobras.run args={'name': 'Petro #19'}
+2026-03-08 23:04:52,845 INFO petrobras.observer [seq=64 id=d21c6cb1-1cdc-499d-8cdb-9f93faca8ec1] RETURN petrobras.run -> None (0.000062s)
+2026-03-08 23:04:52,845 DEBUG petrobras.observer [seq=65 id=55727ccf-e483-4f89-a70f-279c9f9ecdb9] CALL petrobras.run args={'name': 'Petro #20'}
+2026-03-08 23:04:52,845 INFO petrobras.observer [seq=66 id=55727ccf-e483-4f89-a70f-279c9f9ecdb9] RETURN petrobras.run -> None (0.000024s)
+2026-03-08 23:04:52,845 DEBUG petrobras.observer [seq=67 id=d080f85c-05ba-4027-9244-990f6bc14ea8] CALL petrobras.run args={'name': 'Petro #21'}
+2026-03-08 23:04:52,845 INFO petrobras.observer [seq=68 id=d080f85c-05ba-4027-9244-990f6bc14ea8] RETURN petrobras.run -> None (0.000023s)
+2026-03-08 23:04:52,845 DEBUG petrobras.observer [seq=69 id=b3aa9688-15d4-4f01-880e-454bc7931c22] CALL petrobras.run args={'name': 'Petro #22'}
+2026-03-08 23:04:52,845 INFO petrobras.observer [seq=70 id=b3aa9688-15d4-4f01-880e-454bc7931c22] RETURN petrobras.run -> None (0.000065s)
+2026-03-08 23:04:52,845 DEBUG petrobras.observer [seq=71 id=136f35ec-87a3-4dcd-b3f7-3b3d57b6fa5c] CALL petrobras.run args={'name': 'Petro #23'}
+2026-03-08 23:04:52,845 INFO petrobras.observer [seq=72 id=136f35ec-87a3-4dcd-b3f7-3b3d57b6fa5c] RETURN petrobras.run -> None (0.000043s)
+2026-03-08 23:04:52,845 DEBUG petrobras.observer [seq=73 id=0c4f4682-f8a8-4f52-b3c5-85b33e1934b6] CALL petrobras.run args={'name': 'Petro #24'}
+2026-03-08 23:04:52,845 INFO petrobras.observer [seq=74 id=0c4f4682-f8a8-4f52-b3c5-85b33e1934b6] RETURN petrobras.run -> None (0.000043s)
+2026-03-08 23:04:52,845 DEBUG petrobras.observer [seq=75 id=823b7ecc-d452-450c-95d4-2518a99941f4] CALL petrobras.run args={'name': 'Petro #25'}
+2026-03-08 23:04:52,845 INFO petrobras.observer [seq=76 id=823b7ecc-d452-450c-95d4-2518a99941f4] RETURN petrobras.run -> None (0.000047s)
+2026-03-08 23:04:52,845 DEBUG petrobras.observer [seq=77 id=3731ff60-ac5e-4048-a774-7b91c9db448b] CALL petrobras.run args={'name': 'Petro #26'}
+2026-03-08 23:04:52,845 INFO petrobras.observer [seq=78 id=3731ff60-ac5e-4048-a774-7b91c9db448b] RETURN petrobras.run -> None (0.000051s)
+2026-03-08 23:04:52,845 DEBUG petrobras.observer [seq=79 id=85144253-9b10-40b4-bd04-efc32de6bdf7] CALL petrobras.run args={'name': 'Petro #27'}
+2026-03-08 23:04:52,845 INFO petrobras.observer [seq=80 id=85144253-9b10-40b4-bd04-efc32de6bdf7] RETURN petrobras.run -> None (0.000052s)
+2026-03-08 23:04:52,845 DEBUG petrobras.observer [seq=81 id=6e12310a-c223-4a16-8be5-63901ef3268c] CALL petrobras.run args={'name': 'Petro #28'}
+2026-03-08 23:04:52,845 INFO petrobras.observer [seq=82 id=6e12310a-c223-4a16-8be5-63901ef3268c] RETURN petrobras.run -> None (0.000036s)
+2026-03-08 23:04:52,845 DEBUG petrobras.observer [seq=83 id=9be269b3-537d-46fe-a0f5-f23ab396c3b8] CALL petrobras.run args={'name': 'Petro #29'}
+2026-03-08 23:04:52,845 INFO petrobras.observer [seq=84 id=9be269b3-537d-46fe-a0f5-f23ab396c3b8] RETURN petrobras.run -> None (0.000038s)
+2026-03-08 23:04:52,845 DEBUG petrobras.observer [seq=85 id=8df02eec-883d-47e1-921a-f67bdb9bd8ff] CALL petrobras.run args={'name': 'Petro #30'}
+2026-03-08 23:04:52,845 INFO petrobras.observer [seq=86 id=8df02eec-883d-47e1-921a-f67bdb9bd8ff] RETURN petrobras.run -> None (0.000042s)
+2026-03-08 23:04:52,845 DEBUG petrobras.observer [seq=87 id=26d59cbb-37eb-40ab-a0c3-daeba575b58e] CALL petrobras.run args={'name': 'Petro #31'}
+2026-03-08 23:04:52,846 INFO petrobras.observer [seq=88 id=26d59cbb-37eb-40ab-a0c3-daeba575b58e] RETURN petrobras.run -> None (0.000038s)
+2026-03-08 23:04:52,846 DEBUG petrobras.observer [seq=89 id=35033a72-eda5-4a95-a73d-5e0bcbe82072] CALL petrobras.run args={'name': 'Petro #32'}
+2026-03-08 23:04:52,846 INFO petrobras.observer [seq=90 id=35033a72-eda5-4a95-a73d-5e0bcbe82072] RETURN petrobras.run -> None (0.000037s)
+2026-03-08 23:04:52,846 DEBUG petrobras.observer [seq=91 id=2d7aaa8f-1e32-48d7-a39d-92eae2daecbe] CALL petrobras.run args={'name': 'Petro #33'}
+2026-03-08 23:04:52,846 INFO petrobras.observer [seq=92 id=2d7aaa8f-1e32-48d7-a39d-92eae2daecbe] RETURN petrobras.run -> None (0.000041s)
+2026-03-08 23:04:52,846 DEBUG petrobras.observer [seq=93 id=772951fa-6ac9-41a9-8f10-59ee941e06ce] CALL petrobras.run args={'name': 'Petro #34'}
+2026-03-08 23:04:52,846 INFO petrobras.observer [seq=94 id=772951fa-6ac9-41a9-8f10-59ee941e06ce] RETURN petrobras.run -> None (0.000044s)
+2026-03-08 23:04:52,846 DEBUG petrobras.observer [seq=95 id=16c662f1-bef3-41f7-bc07-9f88bfb1ba66] CALL petrobras.run args={'name': 'Petro #35'}
+2026-03-08 23:04:52,846 INFO petrobras.observer [seq=96 id=16c662f1-bef3-41f7-bc07-9f88bfb1ba66] RETURN petrobras.run -> None (0.000039s)
+2026-03-08 23:04:52,846 DEBUG petrobras.observer [seq=97 id=265cba1c-cc88-4dc7-a105-45df3c21517e] CALL petrobras.run args={'name': 'Petro #36'}
+2026-03-08 23:04:52,846 INFO petrobras.observer [seq=98 id=265cba1c-cc88-4dc7-a105-45df3c21517e] RETURN petrobras.run -> None (0.000030s)
+2026-03-08 23:04:52,846 DEBUG petrobras.observer [seq=99 id=7b0b6db2-9700-42a5-9f48-c5e64ed558ce] CALL petrobras.run args={'name': 'Petro #37'}
+2026-03-08 23:04:52,846 INFO petrobras.observer [seq=100 id=7b0b6db2-9700-42a5-9f48-c5e64ed558ce] RETURN petrobras.run -> None (0.000039s)
+2026-03-08 23:04:52,846 DEBUG petrobras.observer [seq=101 id=604941c0-7c9e-47fd-87cf-33ae718690ae] CALL petrobras.run args={'name': 'Petro #38'}
+2026-03-08 23:04:52,846 INFO petrobras.observer [seq=102 id=604941c0-7c9e-47fd-87cf-33ae718690ae] RETURN petrobras.run -> None (0.000029s)
+2026-03-08 23:04:52,846 DEBUG petrobras.observer [seq=103 id=c83d0c49-7b94-44a4-b7d1-e5f918719a2a] CALL petrobras.run args={'name': 'Petro #39'}
+2026-03-08 23:04:52,846 INFO petrobras.observer [seq=104 id=c83d0c49-7b94-44a4-b7d1-e5f918719a2a] RETURN petrobras.run -> None (0.000065s)
+2026-03-08 23:04:52,846 DEBUG petrobras.observer [seq=105 id=b9d60c65-c710-4a2e-adc9-423c36280925] CALL petrobras.run args={'name': 'Petro #40'}
+2026-03-08 23:04:52,846 INFO petrobras.observer [seq=106 id=b9d60c65-c710-4a2e-adc9-423c36280925] RETURN petrobras.run -> None (0.000038s)
+2026-03-08 23:04:52,846 DEBUG petrobras.observer [seq=107 id=c8693adb-8b30-41c2-b299-ebf8b8cc8c72] CALL petrobras.run args={'name': 'Petro #41'}
+2026-03-08 23:04:52,846 INFO petrobras.observer [seq=108 id=c8693adb-8b30-41c2-b299-ebf8b8cc8c72] RETURN petrobras.run -> None (0.000055s)
+2026-03-08 23:04:52,846 DEBUG petrobras.observer [seq=109 id=07c62316-420a-429c-8874-384c34ec4770] CALL petrobras.run args={'name': 'Petro #42'}
+2026-03-08 23:04:52,846 INFO petrobras.observer [seq=110 id=07c62316-420a-429c-8874-384c34ec4770] RETURN petrobras.run -> None (0.000064s)
+2026-03-08 23:04:52,846 DEBUG petrobras.observer [seq=111 id=72d3bee1-7ecb-4336-a248-60360e160cfd] CALL petrobras.run args={'name': 'Petro #43'}
+2026-03-08 23:04:52,846 INFO petrobras.observer [seq=112 id=72d3bee1-7ecb-4336-a248-60360e160cfd] RETURN petrobras.run -> None (0.000022s)
+2026-03-08 23:04:52,846 DEBUG petrobras.observer [seq=113 id=168356ab-e4ff-485e-91f4-d28c8193c808] CALL petrobras.run args={'name': 'Petro #44'}
+2026-03-08 23:04:52,846 INFO petrobras.observer [seq=114 id=168356ab-e4ff-485e-91f4-d28c8193c808] RETURN petrobras.run -> None (0.000035s)
+2026-03-08 23:04:52,846 DEBUG petrobras.observer [seq=115 id=6a93da91-03bb-4fe0-9606-6ef45ab1b086] CALL petrobras.run args={'name': 'Petro #45'}
+2026-03-08 23:04:52,846 INFO petrobras.observer [seq=116 id=6a93da91-03bb-4fe0-9606-6ef45ab1b086] RETURN petrobras.run -> None (0.000027s)
+2026-03-08 23:04:52,846 DEBUG petrobras.observer [seq=117 id=a703bc3f-b0f8-4efe-8297-6f5931e7f70e] CALL petrobras.run args={'name': 'Petro #46'}
+2026-03-08 23:04:52,846 INFO petrobras.observer [seq=118 id=a703bc3f-b0f8-4efe-8297-6f5931e7f70e] RETURN petrobras.run -> None (0.000031s)
+2026-03-08 23:04:52,847 DEBUG petrobras.observer [seq=119 id=a90836a0-2893-498a-a69c-b08a881b96fe] CALL petrobras.run args={'name': 'Petro #47'}
+2026-03-08 23:04:52,847 INFO petrobras.observer [seq=120 id=a90836a0-2893-498a-a69c-b08a881b96fe] RETURN petrobras.run -> None (0.000036s)
+2026-03-08 23:04:52,847 DEBUG petrobras.observer [seq=121 id=2a8a5a79-ca8d-445b-9782-cde11184d890] CALL petrobras.run args={'name': 'Petro #48'}
+2026-03-08 23:04:52,847 INFO petrobras.observer [seq=122 id=2a8a5a79-ca8d-445b-9782-cde11184d890] RETURN petrobras.run -> None (0.000048s)
+2026-03-08 23:04:52,847 DEBUG petrobras.observer [seq=123 id=9ea2e997-4fbe-4e1e-a7ec-c21e84560d5a] CALL petrobras.run args={'name': 'Petro #49'}
+2026-03-08 23:04:52,847 INFO petrobras.observer [seq=124 id=9ea2e997-4fbe-4e1e-a7ec-c21e84560d5a] RETURN petrobras.run -> None (0.000050s)
+2026-03-08 23:12:45,729 DEBUG petrobras.observer [seq=3 id=727d7653-9938-4c88-832a-525518a9b963] CALL petrobras.<genexpr> args={'.0': <tuple_iterator object at 0x779effa2e020>}
+2026-03-08 23:12:45,730 INFO petrobras.observer [seq=4 id=727d7653-9938-4c88-832a-525518a9b963] RETURN petrobras.<genexpr> -> '3' (0.001292s)
+2026-03-08 23:12:45,731 DEBUG petrobras.observer [seq=5 id=ea2c9937-63b5-430f-81a1-5a49520020cf] CALL petrobras.<genexpr> args={'.0': <tuple_iterator object at 0x779effa2e020>, 'part': 3}
+2026-03-08 23:12:45,732 INFO petrobras.observer [seq=6 id=ea2c9937-63b5-430f-81a1-5a49520020cf] RETURN petrobras.<genexpr> -> '13' (0.000979s)
+2026-03-08 23:12:45,734 DEBUG petrobras.observer [seq=7 id=1e227ca0-a78b-4a97-9812-7078d6431c82] CALL petrobras.<genexpr> args={'.0': <tuple_iterator object at 0x779effa2e020>, 'part': 13}
+2026-03-08 23:12:45,735 INFO petrobras.observer [seq=8 id=1e227ca0-a78b-4a97-9812-7078d6431c82] RETURN petrobras.<genexpr> -> '5' (0.002401s)
+2026-03-08 23:12:45,736 DEBUG petrobras.observer [seq=9 id=4f2f91f5-1551-42df-b227-a7c130800c6a] CALL petrobras.<genexpr> args={'.0': <tuple_iterator object at 0x779effa2e020>, 'part': 5}
+2026-03-08 23:12:45,737 INFO petrobras.observer [seq=10 id=4f2f91f5-1551-42df-b227-a7c130800c6a] RETURN petrobras.<genexpr> -> None (0.000628s)
+2026-03-08 23:12:45,741 DEBUG petrobras.observer [seq=11 id=89bdb553-28c7-461d-bb52-fa4c77b6bc87] CALL petrobras.core.import_guard.__init__ args={'self': <petrobras.core.import_guard.ImportGuard object at 0x779effa46270>, 'package': 'petrobras', 'allowed': {'run'}}
+2026-03-08 23:12:45,744 INFO petrobras.observer [seq=12 id=89bdb553-28c7-461d-bb52-fa4c77b6bc87] RETURN petrobras.core.import_guard.__init__ -> None (0.002416s)
+2026-03-08 23:12:45,744 DEBUG petrobras.observer [seq=13 id=7e3e1175-738d-4e34-8d36-0e0d94745513] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x779eff964400>}
+2026-03-08 23:12:45,745 INFO petrobras.observer [seq=14 id=7e3e1175-738d-4e34-8d36-0e0d94745513] RETURN petrobras.<genexpr> -> False (0.000745s)
+2026-03-08 23:12:45,746 DEBUG petrobras.observer [seq=15 id=4ad70da8-a75a-4008-8423-446e70f9611d] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x779eff964400>, 'f': <_distutils_hack.DistutilsMetaFinder object at 0x779f007b2f90>}
+2026-03-08 23:12:45,747 INFO petrobras.observer [seq=16 id=4ad70da8-a75a-4008-8423-446e70f9611d] RETURN petrobras.<genexpr> -> False (0.000811s)
+2026-03-08 23:12:45,748 DEBUG petrobras.observer [seq=17 id=a649ba21-64e6-4960-a527-289ba702ab8d] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x779eff964400>, 'f': <_virtualenv._Finder object at 0x779f007b2e40>}
+2026-03-08 23:12:45,749 INFO petrobras.observer [seq=18 id=a649ba21-64e6-4960-a527-289ba702ab8d] RETURN petrobras.<genexpr> -> False (0.001532s)
+2026-03-08 23:12:45,749 DEBUG petrobras.observer [seq=19 id=e875bbcf-43fc-46f2-a67c-5b3190f233e1] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x779eff964400>, 'f': <class '_frozen_importlib.BuiltinImporter'>}
+2026-03-08 23:12:45,750 INFO petrobras.observer [seq=20 id=e875bbcf-43fc-46f2-a67c-5b3190f233e1] RETURN petrobras.<genexpr> -> False (0.000616s)
+2026-03-08 23:12:45,753 DEBUG petrobras.observer [seq=21 id=b10223d1-70a2-404c-b33a-44e50869ba0d] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x779eff964400>, 'f': <class '_frozen_importlib.FrozenImporter'>}
+2026-03-08 23:12:45,754 INFO petrobras.observer [seq=22 id=b10223d1-70a2-404c-b33a-44e50869ba0d] RETURN petrobras.<genexpr> -> False (0.003071s)
+2026-03-08 23:12:45,754 DEBUG petrobras.observer [seq=23 id=4cff7f49-5db7-4e16-88eb-53388fb10c47] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x779eff964400>, 'f': <class '_frozen_importlib_external.PathFinder'>}
+2026-03-08 23:12:45,755 INFO petrobras.observer [seq=24 id=4cff7f49-5db7-4e16-88eb-53388fb10c47] RETURN petrobras.<genexpr> -> None (0.000703s)
+2026-03-08 23:12:45,756 DEBUG petrobras.observer [seq=25 id=7046c968-4a27-407e-bc6b-55a6d5582749] CALL petrobras._seal_namespace args={}
+2026-03-08 23:12:45,757 INFO petrobras.observer [seq=26 id=7046c968-4a27-407e-bc6b-55a6d5582749] RETURN petrobras._seal_namespace -> None (0.000787s)
+2026-03-08 23:12:45,757 DEBUG petrobras.observer [seq=27 id=c02b0361-0f52-4882-b396-f9f2a4ae7e54] CALL petrobras.run args={'name': 'Petro #01'}
+2026-03-08 23:12:45,758 INFO petrobras.observer [seq=28 id=c02b0361-0f52-4882-b396-f9f2a4ae7e54] RETURN petrobras.run -> None (0.000802s)
+2026-03-08 23:12:45,759 DEBUG petrobras.observer [seq=29 id=8ff986a6-a8ce-4c25-a9cf-b4152ce2c10e] CALL petrobras.run args={'name': 'Petro #02'}
+2026-03-08 23:12:45,760 INFO petrobras.observer [seq=30 id=8ff986a6-a8ce-4c25-a9cf-b4152ce2c10e] RETURN petrobras.run -> None (0.001078s)
+2026-03-08 23:12:45,761 DEBUG petrobras.observer [seq=31 id=55909e22-9c08-4339-a3c1-35a7c630a004] CALL petrobras.run args={'name': 'Petro #03'}
+2026-03-08 23:12:45,761 INFO petrobras.observer [seq=32 id=55909e22-9c08-4339-a3c1-35a7c630a004] RETURN petrobras.run -> None (0.000659s)
+2026-03-08 23:12:45,762 DEBUG petrobras.observer [seq=33 id=067df9f7-a228-4de8-a4b0-7d4ce5ff0a63] CALL petrobras.run args={'name': 'Petro #04'}
+2026-03-08 23:12:45,762 INFO petrobras.observer [seq=34 id=067df9f7-a228-4de8-a4b0-7d4ce5ff0a63] RETURN petrobras.run -> None (0.000558s)
+2026-03-08 23:12:45,763 DEBUG petrobras.observer [seq=35 id=43fad849-ba4e-4902-85f2-446c5f99a98c] CALL petrobras.run args={'name': 'Petro #05'}
+2026-03-08 23:12:45,764 INFO petrobras.observer [seq=36 id=43fad849-ba4e-4902-85f2-446c5f99a98c] RETURN petrobras.run -> None (0.000620s)
+2026-03-08 23:12:45,764 DEBUG petrobras.observer [seq=37 id=7e8b8b96-0217-462e-921d-bb7d55da45a1] CALL petrobras.run args={'name': 'Petro #06'}
+2026-03-08 23:12:45,765 INFO petrobras.observer [seq=38 id=7e8b8b96-0217-462e-921d-bb7d55da45a1] RETURN petrobras.run -> None (0.000574s)
+2026-03-08 23:12:45,766 DEBUG petrobras.observer [seq=39 id=ed041059-294c-4fbf-aba2-352218d96206] CALL petrobras.run args={'name': 'Petro #07'}
+2026-03-08 23:12:45,766 INFO petrobras.observer [seq=40 id=ed041059-294c-4fbf-aba2-352218d96206] RETURN petrobras.run -> None (0.000559s)
+2026-03-08 23:12:45,770 DEBUG petrobras.observer [seq=41 id=106793ac-999f-4421-8e5b-f1eeccb036a3] CALL petrobras.run args={'name': 'Petro #08'}
+2026-03-08 23:12:45,771 INFO petrobras.observer [seq=42 id=106793ac-999f-4421-8e5b-f1eeccb036a3] RETURN petrobras.run -> None (0.004252s)
+2026-03-08 23:12:45,772 DEBUG petrobras.observer [seq=43 id=b5479418-12a1-4dd8-9ff8-a4aa4c3eed45] CALL petrobras.run args={'name': 'Petro #09'}
+2026-03-08 23:12:45,772 INFO petrobras.observer [seq=44 id=b5479418-12a1-4dd8-9ff8-a4aa4c3eed45] RETURN petrobras.run -> None (0.000782s)
+2026-03-08 23:12:45,773 DEBUG petrobras.observer [seq=45 id=da3ab93a-3e4d-4553-9c4b-6268547d2214] CALL petrobras.run args={'name': 'Petro #10'}
+2026-03-08 23:12:45,774 INFO petrobras.observer [seq=46 id=da3ab93a-3e4d-4553-9c4b-6268547d2214] RETURN petrobras.run -> None (0.000656s)
+2026-03-08 23:12:45,775 DEBUG petrobras.observer [seq=47 id=ab18c350-5151-40e2-b27e-272efd4319a4] CALL petrobras.run args={'name': 'Petro #11'}
+2026-03-08 23:12:45,775 INFO petrobras.observer [seq=48 id=ab18c350-5151-40e2-b27e-272efd4319a4] RETURN petrobras.run -> None (0.000771s)
+2026-03-08 23:12:45,779 DEBUG petrobras.observer [seq=49 id=f0295829-b5e7-4e15-b639-18e3e047c755] CALL petrobras.run args={'name': 'Petro #12'}
+2026-03-08 23:12:45,780 INFO petrobras.observer [seq=50 id=f0295829-b5e7-4e15-b639-18e3e047c755] RETURN petrobras.run -> None (0.003472s)
+2026-03-08 23:12:45,780 DEBUG petrobras.observer [seq=51 id=d14eb472-3787-44af-848f-a987274e27b6] CALL petrobras.run args={'name': 'Petro #13'}
+2026-03-08 23:12:45,781 INFO petrobras.observer [seq=52 id=d14eb472-3787-44af-848f-a987274e27b6] RETURN petrobras.run -> None (0.000659s)
+2026-03-08 23:12:45,782 DEBUG petrobras.observer [seq=53 id=5976ca55-aeff-4091-af0a-247c52ae003e] CALL petrobras.run args={'name': 'Petro #14'}
+2026-03-08 23:12:45,787 INFO petrobras.observer [seq=54 id=5976ca55-aeff-4091-af0a-247c52ae003e] RETURN petrobras.run -> None (0.000620s)
+2026-03-08 23:12:45,788 DEBUG petrobras.observer [seq=55 id=31f9ab51-bc22-40a7-8f78-f693c3daecfc] CALL petrobras.run args={'name': 'Petro #15'}
+2026-03-08 23:12:45,789 INFO petrobras.observer [seq=56 id=31f9ab51-bc22-40a7-8f78-f693c3daecfc] RETURN petrobras.run -> None (0.001113s)
+2026-03-08 23:12:45,790 DEBUG petrobras.observer [seq=57 id=8c7fb3ea-2f6e-45ac-aedc-f1bbba957d98] CALL petrobras.run args={'name': 'Petro #16'}
+2026-03-08 23:12:45,791 INFO petrobras.observer [seq=58 id=8c7fb3ea-2f6e-45ac-aedc-f1bbba957d98] RETURN petrobras.run -> None (0.000743s)
+2026-03-08 23:12:45,792 DEBUG petrobras.observer [seq=59 id=37913e1e-c533-4ba2-ae5a-f152b68e5a53] CALL petrobras.run args={'name': 'Petro #17'}
+2026-03-08 23:12:45,792 INFO petrobras.observer [seq=60 id=37913e1e-c533-4ba2-ae5a-f152b68e5a53] RETURN petrobras.run -> None (0.000906s)
+2026-03-08 23:12:45,799 DEBUG petrobras.observer [seq=61 id=c318c788-35b8-4b01-85b9-fee4377eaa51] CALL petrobras.run args={'name': 'Petro #18'}
+2026-03-08 23:12:45,800 INFO petrobras.observer [seq=62 id=c318c788-35b8-4b01-85b9-fee4377eaa51] RETURN petrobras.run -> None (0.001101s)
+2026-03-08 23:12:45,803 DEBUG petrobras.observer [seq=63 id=346b0d09-14e6-4631-82c7-d035c8a75625] CALL petrobras.run args={'name': 'Petro #19'}
+2026-03-08 23:12:45,805 INFO petrobras.observer [seq=64 id=346b0d09-14e6-4631-82c7-d035c8a75625] RETURN petrobras.run -> None (0.004561s)
+2026-03-08 23:12:45,806 DEBUG petrobras.observer [seq=65 id=c23ad8c1-06db-4269-b962-02b8dccab909] CALL petrobras.run args={'name': 'Petro #20'}
+2026-03-08 23:12:45,807 INFO petrobras.observer [seq=66 id=c23ad8c1-06db-4269-b962-02b8dccab909] RETURN petrobras.run -> None (0.000742s)
+2026-03-08 23:12:45,807 DEBUG petrobras.observer [seq=67 id=74b6b2b8-2d7e-49a8-aa24-9d4ddacd8397] CALL petrobras.run args={'name': 'Petro #21'}
+2026-03-08 23:12:45,808 INFO petrobras.observer [seq=68 id=74b6b2b8-2d7e-49a8-aa24-9d4ddacd8397] RETURN petrobras.run -> None (0.000756s)
+2026-03-08 23:12:45,809 DEBUG petrobras.observer [seq=69 id=50b3b94a-c821-42dc-b1ce-beb71cb254ae] CALL petrobras.run args={'name': 'Petro #22'}
+2026-03-08 23:12:45,809 INFO petrobras.observer [seq=70 id=50b3b94a-c821-42dc-b1ce-beb71cb254ae] RETURN petrobras.run -> None (0.000746s)
+2026-03-08 23:12:45,822 DEBUG petrobras.observer [seq=71 id=7bc571e2-569e-4340-93c4-d409344d7bb9] CALL petrobras.run args={'name': 'Petro #23'}
+2026-03-08 23:12:45,823 INFO petrobras.observer [seq=72 id=7bc571e2-569e-4340-93c4-d409344d7bb9] RETURN petrobras.run -> None (0.005955s)
+2026-03-08 23:12:45,824 DEBUG petrobras.observer [seq=73 id=9f39b274-8f6c-40b8-8631-e50b4d3ee424] CALL petrobras.run args={'name': 'Petro #24'}
+2026-03-08 23:12:45,824 INFO petrobras.observer [seq=74 id=9f39b274-8f6c-40b8-8631-e50b4d3ee424] RETURN petrobras.run -> None (0.000724s)
+2026-03-08 23:12:45,825 DEBUG petrobras.observer [seq=75 id=0e6ca0a1-9d29-4196-a7ca-6c7c0959da4d] CALL petrobras.run args={'name': 'Petro #25'}
+2026-03-08 23:12:45,826 INFO petrobras.observer [seq=76 id=0e6ca0a1-9d29-4196-a7ca-6c7c0959da4d] RETURN petrobras.run -> None (0.000736s)
+2026-03-08 23:12:45,826 DEBUG petrobras.observer [seq=77 id=36d22552-571c-419b-b9ec-9824ba0468a5] CALL petrobras.run args={'name': 'Petro #26'}
+2026-03-08 23:12:45,827 INFO petrobras.observer [seq=78 id=36d22552-571c-419b-b9ec-9824ba0468a5] RETURN petrobras.run -> None (0.000623s)
+2026-03-08 23:12:45,839 DEBUG petrobras.observer [seq=79 id=491d8c93-9e3d-406e-bb37-f18cd18fa8b7] CALL petrobras.run args={'name': 'Petro #27'}
+2026-03-08 23:12:45,840 INFO petrobras.observer [seq=80 id=491d8c93-9e3d-406e-bb37-f18cd18fa8b7] RETURN petrobras.run -> None (0.011874s)
+2026-03-08 23:12:45,840 DEBUG petrobras.observer [seq=81 id=9113412f-e726-4128-90a4-de8a8cd3bdbf] CALL petrobras.run args={'name': 'Petro #28'}
+2026-03-08 23:12:45,841 INFO petrobras.observer [seq=82 id=9113412f-e726-4128-90a4-de8a8cd3bdbf] RETURN petrobras.run -> None (0.000538s)
+2026-03-08 23:12:45,842 DEBUG petrobras.observer [seq=83 id=4ef639f5-7da4-4f90-82df-475b390b922d] CALL petrobras.run args={'name': 'Petro #29'}
+2026-03-08 23:12:45,842 INFO petrobras.observer [seq=84 id=4ef639f5-7da4-4f90-82df-475b390b922d] RETURN petrobras.run -> None (0.000930s)
+2026-03-08 23:12:45,843 DEBUG petrobras.observer [seq=85 id=771a01cf-a842-4cbb-b28e-4b31d893eff6] CALL petrobras.run args={'name': 'Petro #30'}
+2026-03-08 23:12:45,844 INFO petrobras.observer [seq=86 id=771a01cf-a842-4cbb-b28e-4b31d893eff6] RETURN petrobras.run -> None (0.000590s)
+2026-03-08 23:12:45,844 DEBUG petrobras.observer [seq=87 id=44a674b8-3b5b-4be2-9eee-d768913e7c3a] CALL petrobras.run args={'name': 'Petro #31'}
+2026-03-08 23:12:45,845 INFO petrobras.observer [seq=88 id=44a674b8-3b5b-4be2-9eee-d768913e7c3a] RETURN petrobras.run -> None (0.000778s)
+2026-03-08 23:12:45,846 DEBUG petrobras.observer [seq=89 id=f9fc28e0-9757-493b-8384-df66d33d7f23] CALL petrobras.run args={'name': 'Petro #32'}
+2026-03-08 23:12:45,847 INFO petrobras.observer [seq=90 id=f9fc28e0-9757-493b-8384-df66d33d7f23] RETURN petrobras.run -> None (0.000825s)
+2026-03-08 23:12:45,848 DEBUG petrobras.observer [seq=91 id=6572e19f-7093-4781-bff2-5d5a540f0c70] CALL petrobras.run args={'name': 'Petro #33'}
+2026-03-08 23:12:45,849 INFO petrobras.observer [seq=92 id=6572e19f-7093-4781-bff2-5d5a540f0c70] RETURN petrobras.run -> None (0.001483s)
+2026-03-08 23:12:45,850 DEBUG petrobras.observer [seq=93 id=2f627386-2136-4338-859a-af96e314de5f] CALL petrobras.run args={'name': 'Petro #34'}
+2026-03-08 23:12:45,854 INFO petrobras.observer [seq=94 id=2f627386-2136-4338-859a-af96e314de5f] RETURN petrobras.run -> None (0.001062s)
+2026-03-08 23:12:45,855 DEBUG petrobras.observer [seq=95 id=d4e409ce-d0a1-4029-8062-b5ab51ad9db8] CALL petrobras.run args={'name': 'Petro #35'}
+2026-03-08 23:12:45,856 INFO petrobras.observer [seq=96 id=d4e409ce-d0a1-4029-8062-b5ab51ad9db8] RETURN petrobras.run -> None (0.001003s)
+2026-03-08 23:12:45,857 DEBUG petrobras.observer [seq=97 id=ebcf1f5c-2146-49c2-9bb4-b717a2cbddf9] CALL petrobras.run args={'name': 'Petro #36'}
+2026-03-08 23:12:45,857 INFO petrobras.observer [seq=98 id=ebcf1f5c-2146-49c2-9bb4-b717a2cbddf9] RETURN petrobras.run -> None (0.000528s)
+2026-03-08 23:12:45,858 DEBUG petrobras.observer [seq=99 id=6374515b-8235-4730-a130-f74af67d43ce] CALL petrobras.run args={'name': 'Petro #37'}
+2026-03-08 23:12:45,858 INFO petrobras.observer [seq=100 id=6374515b-8235-4730-a130-f74af67d43ce] RETURN petrobras.run -> None (0.000458s)
+2026-03-08 23:12:45,859 DEBUG petrobras.observer [seq=101 id=868aab70-2cd5-42dd-b132-a154f2fbe090] CALL petrobras.run args={'name': 'Petro #38'}
+2026-03-08 23:12:45,859 INFO petrobras.observer [seq=102 id=868aab70-2cd5-42dd-b132-a154f2fbe090] RETURN petrobras.run -> None (0.000446s)
+2026-03-08 23:12:45,860 DEBUG petrobras.observer [seq=103 id=41a0ecdf-47b4-49d0-88f4-73121f5ddf3b] CALL petrobras.run args={'name': 'Petro #39'}
+2026-03-08 23:12:45,860 INFO petrobras.observer [seq=104 id=41a0ecdf-47b4-49d0-88f4-73121f5ddf3b] RETURN petrobras.run -> None (0.000532s)
+2026-03-08 23:12:45,861 DEBUG petrobras.observer [seq=105 id=d9ad75bd-2b77-4529-bea4-7eff8e3b97c0] CALL petrobras.run args={'name': 'Petro #40'}
+2026-03-08 23:12:45,861 INFO petrobras.observer [seq=106 id=d9ad75bd-2b77-4529-bea4-7eff8e3b97c0] RETURN petrobras.run -> None (0.000453s)
+2026-03-08 23:12:45,862 DEBUG petrobras.observer [seq=107 id=82064b5a-6087-4858-b786-2387542680ea] CALL petrobras.run args={'name': 'Petro #41'}
+2026-03-08 23:12:45,862 INFO petrobras.observer [seq=108 id=82064b5a-6087-4858-b786-2387542680ea] RETURN petrobras.run -> None (0.000604s)
+2026-03-08 23:12:45,863 DEBUG petrobras.observer [seq=109 id=adb379dc-7b47-4732-a26d-bb7ebb12651d] CALL petrobras.run args={'name': 'Petro #42'}
+2026-03-08 23:12:45,863 INFO petrobras.observer [seq=110 id=adb379dc-7b47-4732-a26d-bb7ebb12651d] RETURN petrobras.run -> None (0.000489s)
+2026-03-08 23:12:45,864 DEBUG petrobras.observer [seq=111 id=16dc249a-f732-42d6-8ede-a268a77cd3f4] CALL petrobras.run args={'name': 'Petro #43'}
+2026-03-08 23:12:45,864 INFO petrobras.observer [seq=112 id=16dc249a-f732-42d6-8ede-a268a77cd3f4] RETURN petrobras.run -> None (0.000644s)
+2026-03-08 23:12:45,865 DEBUG petrobras.observer [seq=113 id=67a85dfc-f80f-4b67-b23f-fb2395edab85] CALL petrobras.run args={'name': 'Petro #44'}
+2026-03-08 23:12:45,865 INFO petrobras.observer [seq=114 id=67a85dfc-f80f-4b67-b23f-fb2395edab85] RETURN petrobras.run -> None (0.000446s)
+2026-03-08 23:12:45,866 DEBUG petrobras.observer [seq=115 id=a0dc04c5-71b9-460c-9f9d-f5ef1fbc5d3b] CALL petrobras.run args={'name': 'Petro #45'}
+2026-03-08 23:12:45,866 INFO petrobras.observer [seq=116 id=a0dc04c5-71b9-460c-9f9d-f5ef1fbc5d3b] RETURN petrobras.run -> None (0.000455s)
+2026-03-08 23:12:45,867 DEBUG petrobras.observer [seq=117 id=b7b21154-aa5f-495d-9138-f834cf7086d3] CALL petrobras.run args={'name': 'Petro #46'}
+2026-03-08 23:12:45,868 INFO petrobras.observer [seq=118 id=b7b21154-aa5f-495d-9138-f834cf7086d3] RETURN petrobras.run -> None (0.000915s)
+2026-03-08 23:12:45,868 DEBUG petrobras.observer [seq=119 id=e75a9f17-b72d-4706-abdf-4cbd7bfbd5b1] CALL petrobras.run args={'name': 'Petro #47'}
+2026-03-08 23:12:45,869 INFO petrobras.observer [seq=120 id=e75a9f17-b72d-4706-abdf-4cbd7bfbd5b1] RETURN petrobras.run -> None (0.000630s)
+2026-03-08 23:12:45,870 DEBUG petrobras.observer [seq=121 id=81160f92-5aa0-4090-aa5c-684420e2adf1] CALL petrobras.run args={'name': 'Petro #48'}
+2026-03-08 23:12:45,870 INFO petrobras.observer [seq=122 id=81160f92-5aa0-4090-aa5c-684420e2adf1] RETURN petrobras.run -> None (0.000843s)
+2026-03-08 23:12:45,871 DEBUG petrobras.observer [seq=123 id=abbca9a2-4506-406d-a608-4b23efbb9dbf] CALL petrobras.run args={'name': 'Petro #49'}
+2026-03-08 23:12:45,872 INFO petrobras.observer [seq=124 id=abbca9a2-4506-406d-a608-4b23efbb9dbf] RETURN petrobras.run -> None (0.000507s)
+2026-03-08 23:13:51,188 DEBUG petrobras.observer [seq=3 id=b84eb490-bf6a-4040-a0f9-6ed8dfdc1dd1] CALL petrobras.<genexpr> args={'.0': <tuple_iterator object at 0x767b093377f0>}
+2026-03-08 23:13:51,188 INFO petrobras.observer [seq=4 id=b84eb490-bf6a-4040-a0f9-6ed8dfdc1dd1] RETURN petrobras.<genexpr> -> '3' (0.000493s)
+2026-03-08 23:13:51,188 DEBUG petrobras.observer [seq=5 id=9c0164a6-1314-4f72-a4db-24326fb61b78] CALL petrobras.<genexpr> args={'.0': <tuple_iterator object at 0x767b093377f0>, 'part': 3}
+2026-03-08 23:13:51,188 INFO petrobras.observer [seq=6 id=9c0164a6-1314-4f72-a4db-24326fb61b78] RETURN petrobras.<genexpr> -> '13' (0.000202s)
+2026-03-08 23:13:51,188 DEBUG petrobras.observer [seq=7 id=3d5392ee-5759-494d-be82-cf88b8d70c74] CALL petrobras.<genexpr> args={'.0': <tuple_iterator object at 0x767b093377f0>, 'part': 13}
+2026-03-08 23:13:51,189 INFO petrobras.observer [seq=8 id=3d5392ee-5759-494d-be82-cf88b8d70c74] RETURN petrobras.<genexpr> -> '5' (0.000174s)
+2026-03-08 23:13:51,189 DEBUG petrobras.observer [seq=9 id=855c9a89-ab49-475f-b23d-2871615d0900] CALL petrobras.<genexpr> args={'.0': <tuple_iterator object at 0x767b093377f0>, 'part': 5}
+2026-03-08 23:13:51,189 INFO petrobras.observer [seq=10 id=855c9a89-ab49-475f-b23d-2871615d0900] RETURN petrobras.<genexpr> -> None (0.000145s)
+2026-03-08 23:13:51,190 DEBUG petrobras.observer [seq=11 id=78ff4d72-8ce5-4c73-b1bd-bedb76bc9c30] CALL petrobras.core.import_guard.__init__ args={'self': <petrobras.core.import_guard.ImportGuard object at 0x767b09554ad0>, 'package': 'petrobras', 'allowed': {'run'}}
+2026-03-08 23:13:51,191 INFO petrobras.observer [seq=12 id=78ff4d72-8ce5-4c73-b1bd-bedb76bc9c30] RETURN petrobras.core.import_guard.__init__ -> None (0.000475s)
+2026-03-08 23:13:51,191 DEBUG petrobras.observer [seq=13 id=cf36e84d-394d-420e-9f96-2eb29bd8d702] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x767b09358fa0>}
+2026-03-08 23:13:51,191 INFO petrobras.observer [seq=14 id=cf36e84d-394d-420e-9f96-2eb29bd8d702] RETURN petrobras.<genexpr> -> False (0.000180s)
+2026-03-08 23:13:51,191 DEBUG petrobras.observer [seq=15 id=31c363dd-f463-48d4-aa84-ceb4b97bda23] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x767b09358fa0>, 'f': <_distutils_hack.DistutilsMetaFinder object at 0x767b0a136f90>}
+2026-03-08 23:13:51,191 INFO petrobras.observer [seq=16 id=31c363dd-f463-48d4-aa84-ceb4b97bda23] RETURN petrobras.<genexpr> -> False (0.000192s)
+2026-03-08 23:13:51,192 DEBUG petrobras.observer [seq=17 id=addcfc90-247b-4e11-af87-98138d1954ff] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x767b09358fa0>, 'f': <_virtualenv._Finder object at 0x767b0a136e40>}
+2026-03-08 23:13:51,192 INFO petrobras.observer [seq=18 id=addcfc90-247b-4e11-af87-98138d1954ff] RETURN petrobras.<genexpr> -> False (0.000166s)
+2026-03-08 23:13:51,192 DEBUG petrobras.observer [seq=19 id=0ec85fd9-1ffa-4208-ad71-b3aaa4f7d92d] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x767b09358fa0>, 'f': <class '_frozen_importlib.BuiltinImporter'>}
+2026-03-08 23:13:51,192 INFO petrobras.observer [seq=20 id=0ec85fd9-1ffa-4208-ad71-b3aaa4f7d92d] RETURN petrobras.<genexpr> -> False (0.000155s)
+2026-03-08 23:13:51,192 DEBUG petrobras.observer [seq=21 id=49a86553-9faa-46d7-9090-c0c5154cec18] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x767b09358fa0>, 'f': <class '_frozen_importlib.FrozenImporter'>}
+2026-03-08 23:13:51,192 INFO petrobras.observer [seq=22 id=49a86553-9faa-46d7-9090-c0c5154cec18] RETURN petrobras.<genexpr> -> False (0.000143s)
+2026-03-08 23:13:51,192 DEBUG petrobras.observer [seq=23 id=feffab5e-0aee-4d88-91d7-0ff28130494d] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x767b09358fa0>, 'f': <class '_frozen_importlib_external.PathFinder'>}
+2026-03-08 23:13:51,193 INFO petrobras.observer [seq=24 id=feffab5e-0aee-4d88-91d7-0ff28130494d] RETURN petrobras.<genexpr> -> None (0.000156s)
+2026-03-08 23:13:51,193 DEBUG petrobras.observer [seq=25 id=b1e51ca7-79e4-4fc7-b905-1a150e46ac68] CALL petrobras._seal_namespace args={}
+2026-03-08 23:13:51,193 INFO petrobras.observer [seq=26 id=b1e51ca7-79e4-4fc7-b905-1a150e46ac68] RETURN petrobras._seal_namespace -> None (0.000171s)
+2026-03-08 23:13:51,195 DEBUG petrobras.observer [seq=27 id=c6bfe546-5afb-4bac-a68d-3e609d556744] CALL petrobras.core.import_guard.find_spec args={'self': <petrobras.core.import_guard.ImportGuard object at 0x767b09554ad0>, 'fullname': '_pyrepl._threading_handler', 'path': ['/usr/lib/python3.13/_pyrepl'], 'target': None}
+2026-03-08 23:13:51,195 INFO petrobras.observer [seq=28 id=c6bfe546-5afb-4bac-a68d-3e609d556744] RETURN petrobras.core.import_guard.find_spec -> None (0.000660s)
+2026-03-08 23:14:01,509 DEBUG petrobras.observer [seq=29 id=621744c7-c484-4fdc-a2e1-832319e4ca18] CALL petrobras.run args={'name': 'Petro #01'}
+2026-03-08 23:14:01,509 INFO petrobras.observer [seq=30 id=621744c7-c484-4fdc-a2e1-832319e4ca18] RETURN petrobras.run -> None (0.001019s)
+2026-03-08 23:14:01,510 DEBUG petrobras.observer [seq=31 id=7935b502-9c68-404e-b00f-afe451b1419c] CALL petrobras.run args={'name': 'Petro #02'}
+2026-03-08 23:14:01,510 INFO petrobras.observer [seq=32 id=7935b502-9c68-404e-b00f-afe451b1419c] RETURN petrobras.run -> None (0.000513s)
+2026-03-08 23:14:01,511 DEBUG petrobras.observer [seq=33 id=86c45944-0c4c-4e04-bea1-b20adae3973e] CALL petrobras.run args={'name': 'Petro #03'}
+2026-03-08 23:14:01,511 INFO petrobras.observer [seq=34 id=86c45944-0c4c-4e04-bea1-b20adae3973e] RETURN petrobras.run -> None (0.000402s)
+2026-03-08 23:14:01,512 DEBUG petrobras.observer [seq=35 id=a36cbbbb-11de-4fa1-bfb0-9377ffd87024] CALL petrobras.run args={'name': 'Petro #04'}
+2026-03-08 23:14:01,512 INFO petrobras.observer [seq=36 id=a36cbbbb-11de-4fa1-bfb0-9377ffd87024] RETURN petrobras.run -> None (0.000529s)
+2026-03-08 23:14:01,513 DEBUG petrobras.observer [seq=37 id=4da1cb4d-8dcb-47d8-b140-b54d75dfa61d] CALL petrobras.run args={'name': 'Petro #05'}
+2026-03-08 23:14:01,513 INFO petrobras.observer [seq=38 id=4da1cb4d-8dcb-47d8-b140-b54d75dfa61d] RETURN petrobras.run -> None (0.000377s)
+2026-03-08 23:14:01,513 DEBUG petrobras.observer [seq=39 id=9dd74bf8-304d-424d-b912-7d14ef567452] CALL petrobras.run args={'name': 'Petro #06'}
+2026-03-08 23:14:01,514 INFO petrobras.observer [seq=40 id=9dd74bf8-304d-424d-b912-7d14ef567452] RETURN petrobras.run -> None (0.000432s)
+2026-03-08 23:14:01,514 DEBUG petrobras.observer [seq=41 id=119a78a7-f862-4d80-9a41-7d3619659756] CALL petrobras.run args={'name': 'Petro #07'}
+2026-03-08 23:14:01,515 INFO petrobras.observer [seq=42 id=119a78a7-f862-4d80-9a41-7d3619659756] RETURN petrobras.run -> None (0.000407s)
+2026-03-08 23:14:01,515 DEBUG petrobras.observer [seq=43 id=f4e15b0a-52b5-49f3-b86e-99cc21d20ccd] CALL petrobras.run args={'name': 'Petro #08'}
+2026-03-08 23:14:01,515 INFO petrobras.observer [seq=44 id=f4e15b0a-52b5-49f3-b86e-99cc21d20ccd] RETURN petrobras.run -> None (0.000378s)
+2026-03-08 23:14:01,516 DEBUG petrobras.observer [seq=45 id=a6b3e42d-0153-4290-8c29-df87ffbf1afe] CALL petrobras.run args={'name': 'Petro #09'}
+2026-03-08 23:14:01,516 INFO petrobras.observer [seq=46 id=a6b3e42d-0153-4290-8c29-df87ffbf1afe] RETURN petrobras.run -> None (0.000436s)
+2026-03-08 23:14:01,517 DEBUG petrobras.observer [seq=47 id=355b0df6-993c-490c-b2c8-ce84ab691f7d] CALL petrobras.run args={'name': 'Petro #10'}
+2026-03-08 23:14:01,517 INFO petrobras.observer [seq=48 id=355b0df6-993c-490c-b2c8-ce84ab691f7d] RETURN petrobras.run -> None (0.000382s)
+2026-03-08 23:14:01,518 DEBUG petrobras.observer [seq=49 id=d17e48f2-7e1f-4c17-901e-278afc2f6ce8] CALL petrobras.run args={'name': 'Petro #11'}
+2026-03-08 23:14:01,518 INFO petrobras.observer [seq=50 id=d17e48f2-7e1f-4c17-901e-278afc2f6ce8] RETURN petrobras.run -> None (0.000469s)
+2026-03-08 23:14:01,518 DEBUG petrobras.observer [seq=51 id=20afcec8-7150-4c08-933b-6158616ed9b2] CALL petrobras.run args={'name': 'Petro #12'}
+2026-03-08 23:14:01,519 INFO petrobras.observer [seq=52 id=20afcec8-7150-4c08-933b-6158616ed9b2] RETURN petrobras.run -> None (0.000531s)
+2026-03-08 23:14:01,519 DEBUG petrobras.observer [seq=53 id=b8a639a2-3c10-4e27-8ed6-687d34a7c926] CALL petrobras.run args={'name': 'Petro #13'}
+2026-03-08 23:14:01,520 INFO petrobras.observer [seq=54 id=b8a639a2-3c10-4e27-8ed6-687d34a7c926] RETURN petrobras.run -> None (0.000415s)
+2026-03-08 23:14:01,520 DEBUG petrobras.observer [seq=55 id=aa115dfd-50fe-4547-901f-871e5c5d70a7] CALL petrobras.run args={'name': 'Petro #14'}
+2026-03-08 23:14:01,520 INFO petrobras.observer [seq=56 id=aa115dfd-50fe-4547-901f-871e5c5d70a7] RETURN petrobras.run -> None (0.000407s)
+2026-03-08 23:14:01,521 DEBUG petrobras.observer [seq=57 id=3c2a8d42-0b9a-4c3d-a055-e773b917b107] CALL petrobras.run args={'name': 'Petro #15'}
+2026-03-08 23:14:01,522 INFO petrobras.observer [seq=58 id=3c2a8d42-0b9a-4c3d-a055-e773b917b107] RETURN petrobras.run -> None (0.000839s)
+2026-03-08 23:14:01,524 DEBUG petrobras.observer [seq=59 id=5ca34665-137b-49f7-899f-5c2a0294b094] CALL petrobras.run args={'name': 'Petro #16'}
+2026-03-08 23:14:01,525 INFO petrobras.observer [seq=60 id=5ca34665-137b-49f7-899f-5c2a0294b094] RETURN petrobras.run -> None (0.001295s)
+2026-03-08 23:14:01,526 DEBUG petrobras.observer [seq=61 id=0a80be51-d74b-4d86-b0ec-55bddf7d5dc1] CALL petrobras.run args={'name': 'Petro #17'}
+2026-03-08 23:14:01,526 INFO petrobras.observer [seq=62 id=0a80be51-d74b-4d86-b0ec-55bddf7d5dc1] RETURN petrobras.run -> None (0.000758s)
+2026-03-08 23:14:01,527 DEBUG petrobras.observer [seq=63 id=038743fd-60bd-46c1-b3bb-dacdcc3a4527] CALL petrobras.run args={'name': 'Petro #18'}
+2026-03-08 23:14:01,527 INFO petrobras.observer [seq=64 id=038743fd-60bd-46c1-b3bb-dacdcc3a4527] RETURN petrobras.run -> None (0.000575s)
+2026-03-08 23:14:01,528 DEBUG petrobras.observer [seq=65 id=a5c1d515-e514-448c-a7ac-080bfefe29cd] CALL petrobras.run args={'name': 'Petro #19'}
+2026-03-08 23:14:01,529 INFO petrobras.observer [seq=66 id=a5c1d515-e514-448c-a7ac-080bfefe29cd] RETURN petrobras.run -> None (0.000563s)
+2026-03-08 23:14:01,529 DEBUG petrobras.observer [seq=67 id=147ba6c2-6054-40a1-9f0f-bbcacc71bf96] CALL petrobras.run args={'name': 'Petro #20'}
+2026-03-08 23:14:01,529 INFO petrobras.observer [seq=68 id=147ba6c2-6054-40a1-9f0f-bbcacc71bf96] RETURN petrobras.run -> None (0.000428s)
+2026-03-08 23:14:01,530 DEBUG petrobras.observer [seq=69 id=37cd5181-f379-41d3-8978-b5f9c4ed527d] CALL petrobras.run args={'name': 'Petro #21'}
+2026-03-08 23:14:01,530 INFO petrobras.observer [seq=70 id=37cd5181-f379-41d3-8978-b5f9c4ed527d] RETURN petrobras.run -> None (0.000382s)
+2026-03-08 23:14:01,531 DEBUG petrobras.observer [seq=71 id=06ce596c-8751-46c4-9b35-8db72afc35cd] CALL petrobras.run args={'name': 'Petro #22'}
+2026-03-08 23:14:01,531 INFO petrobras.observer [seq=72 id=06ce596c-8751-46c4-9b35-8db72afc35cd] RETURN petrobras.run -> None (0.000439s)
+2026-03-08 23:14:01,531 DEBUG petrobras.observer [seq=73 id=b7f7023a-2fa2-42a3-89fb-4db924247c73] CALL petrobras.run args={'name': 'Petro #23'}
+2026-03-08 23:14:01,532 INFO petrobras.observer [seq=74 id=b7f7023a-2fa2-42a3-89fb-4db924247c73] RETURN petrobras.run -> None (0.000479s)
+2026-03-08 23:14:01,532 DEBUG petrobras.observer [seq=75 id=db3d7f27-9174-437c-b824-a4e226e7d859] CALL petrobras.run args={'name': 'Petro #24'}
+2026-03-08 23:14:01,533 INFO petrobras.observer [seq=76 id=db3d7f27-9174-437c-b824-a4e226e7d859] RETURN petrobras.run -> None (0.000453s)
+2026-03-08 23:14:01,533 DEBUG petrobras.observer [seq=77 id=71690aae-3b7c-443b-81b7-64d5ef6a00ca] CALL petrobras.run args={'name': 'Petro #25'}
+2026-03-08 23:14:01,534 INFO petrobras.observer [seq=78 id=71690aae-3b7c-443b-81b7-64d5ef6a00ca] RETURN petrobras.run -> None (0.000466s)
+2026-03-08 23:14:01,534 DEBUG petrobras.observer [seq=79 id=9bbca579-01d8-41dd-8a44-0697eef459ac] CALL petrobras.run args={'name': 'Petro #26'}
+2026-03-08 23:14:01,534 INFO petrobras.observer [seq=80 id=9bbca579-01d8-41dd-8a44-0697eef459ac] RETURN petrobras.run -> None (0.000359s)
+2026-03-08 23:14:01,535 DEBUG petrobras.observer [seq=81 id=8e6d3b7c-b0cd-4862-800b-abd25d4298f9] CALL petrobras.run args={'name': 'Petro #27'}
+2026-03-08 23:14:01,535 INFO petrobras.observer [seq=82 id=8e6d3b7c-b0cd-4862-800b-abd25d4298f9] RETURN petrobras.run -> None (0.000400s)
+2026-03-08 23:14:01,536 DEBUG petrobras.observer [seq=83 id=7b3e477d-e7da-4c21-805c-dc7f5ae380c4] CALL petrobras.run args={'name': 'Petro #28'}
+2026-03-08 23:14:01,536 INFO petrobras.observer [seq=84 id=7b3e477d-e7da-4c21-805c-dc7f5ae380c4] RETURN petrobras.run -> None (0.000410s)
+2026-03-08 23:14:01,536 DEBUG petrobras.observer [seq=85 id=21f239fb-67b9-4d71-bba7-ad53a73cfc1e] CALL petrobras.run args={'name': 'Petro #29'}
+2026-03-08 23:14:01,537 INFO petrobras.observer [seq=86 id=21f239fb-67b9-4d71-bba7-ad53a73cfc1e] RETURN petrobras.run -> None (0.000393s)
+2026-03-08 23:14:01,539 DEBUG petrobras.observer [seq=87 id=00f81c53-3365-4335-8b35-b14b53da2976] CALL petrobras.run args={'name': 'Petro #30'}
+2026-03-08 23:14:01,541 INFO petrobras.observer [seq=88 id=00f81c53-3365-4335-8b35-b14b53da2976] RETURN petrobras.run -> None (0.001780s)
+2026-03-08 23:14:01,543 DEBUG petrobras.observer [seq=89 id=b6b18720-775c-43dc-b855-b672fa536508] CALL petrobras.run args={'name': 'Petro #31'}
+2026-03-08 23:14:01,544 INFO petrobras.observer [seq=90 id=b6b18720-775c-43dc-b855-b672fa536508] RETURN petrobras.run -> None (0.001795s)
+2026-03-08 23:14:01,545 DEBUG petrobras.observer [seq=91 id=e38a4f77-314e-43aa-9ead-8639cb369680] CALL petrobras.run args={'name': 'Petro #32'}
+2026-03-08 23:14:01,545 INFO petrobras.observer [seq=92 id=e38a4f77-314e-43aa-9ead-8639cb369680] RETURN petrobras.run -> None (0.000890s)
+2026-03-08 23:14:01,546 DEBUG petrobras.observer [seq=93 id=224994ea-09bc-4189-8be6-af784939b8f3] CALL petrobras.run args={'name': 'Petro #33'}
+2026-03-08 23:14:01,547 INFO petrobras.observer [seq=94 id=224994ea-09bc-4189-8be6-af784939b8f3] RETURN petrobras.run -> None (0.000841s)
+2026-03-08 23:14:01,548 DEBUG petrobras.observer [seq=95 id=f144a239-458d-4374-8e13-307d1e49f726] CALL petrobras.run args={'name': 'Petro #34'}
+2026-03-08 23:14:01,549 INFO petrobras.observer [seq=96 id=f144a239-458d-4374-8e13-307d1e49f726] RETURN petrobras.run -> None (0.000920s)
+2026-03-08 23:14:01,549 DEBUG petrobras.observer [seq=97 id=7076ff6a-65cc-4cce-8574-e1a77d310f8e] CALL petrobras.run args={'name': 'Petro #35'}
+2026-03-08 23:14:01,550 INFO petrobras.observer [seq=98 id=7076ff6a-65cc-4cce-8574-e1a77d310f8e] RETURN petrobras.run -> None (0.000584s)
+2026-03-08 23:14:01,550 DEBUG petrobras.observer [seq=99 id=335f19c6-b4ea-44fa-8680-d7380f085150] CALL petrobras.run args={'name': 'Petro #36'}
+2026-03-08 23:14:01,551 INFO petrobras.observer [seq=100 id=335f19c6-b4ea-44fa-8680-d7380f085150] RETURN petrobras.run -> None (0.000547s)
+2026-03-08 23:14:01,552 DEBUG petrobras.observer [seq=101 id=b22084b3-0d7e-41e5-9d24-50f65e7a3c95] CALL petrobras.run args={'name': 'Petro #37'}
+2026-03-08 23:14:01,552 INFO petrobras.observer [seq=102 id=b22084b3-0d7e-41e5-9d24-50f65e7a3c95] RETURN petrobras.run -> None (0.000658s)
+2026-03-08 23:14:01,553 DEBUG petrobras.observer [seq=103 id=3210ddb4-b6b0-4c50-83fa-21fe2f7a5450] CALL petrobras.run args={'name': 'Petro #38'}
+2026-03-08 23:14:01,553 INFO petrobras.observer [seq=104 id=3210ddb4-b6b0-4c50-83fa-21fe2f7a5450] RETURN petrobras.run -> None (0.000473s)
+2026-03-08 23:14:01,554 DEBUG petrobras.observer [seq=105 id=ee176472-1a07-49a4-8d53-53af74bf9a05] CALL petrobras.run args={'name': 'Petro #39'}
+2026-03-08 23:14:01,554 INFO petrobras.observer [seq=106 id=ee176472-1a07-49a4-8d53-53af74bf9a05] RETURN petrobras.run -> None (0.000573s)
+2026-03-08 23:14:01,556 DEBUG petrobras.observer [seq=107 id=7a3a579b-e580-42a3-92ee-4c692ff93807] CALL petrobras.run args={'name': 'Petro #40'}
+2026-03-08 23:14:01,558 INFO petrobras.observer [seq=108 id=7a3a579b-e580-42a3-92ee-4c692ff93807] RETURN petrobras.run -> None (0.001838s)
+2026-03-08 23:14:01,560 DEBUG petrobras.observer [seq=109 id=710d0307-d687-4b78-ba9f-fe90bbe749d3] CALL petrobras.run args={'name': 'Petro #41'}
+2026-03-08 23:14:01,561 INFO petrobras.observer [seq=110 id=710d0307-d687-4b78-ba9f-fe90bbe749d3] RETURN petrobras.run -> None (0.001435s)
+2026-03-08 23:14:01,562 DEBUG petrobras.observer [seq=111 id=79396c6d-65b6-49ca-b4a5-92b23839bf31] CALL petrobras.run args={'name': 'Petro #42'}
+2026-03-08 23:14:01,563 INFO petrobras.observer [seq=112 id=79396c6d-65b6-49ca-b4a5-92b23839bf31] RETURN petrobras.run -> None (0.001027s)
+2026-03-08 23:14:01,564 DEBUG petrobras.observer [seq=113 id=550e809f-5652-4b2f-b1d9-d12b22ae0512] CALL petrobras.run args={'name': 'Petro #43'}
+2026-03-08 23:14:01,565 INFO petrobras.observer [seq=114 id=550e809f-5652-4b2f-b1d9-d12b22ae0512] RETURN petrobras.run -> None (0.000923s)
+2026-03-08 23:14:01,565 DEBUG petrobras.observer [seq=115 id=71fbd7c3-f434-4c82-8c5f-a123cf646b61] CALL petrobras.run args={'name': 'Petro #44'}
+2026-03-08 23:14:01,566 INFO petrobras.observer [seq=116 id=71fbd7c3-f434-4c82-8c5f-a123cf646b61] RETURN petrobras.run -> None (0.000655s)
+2026-03-08 23:14:01,566 DEBUG petrobras.observer [seq=117 id=7666bf83-ac64-45fc-9bae-c6d78e45cdf8] CALL petrobras.run args={'name': 'Petro #45'}
+2026-03-08 23:14:01,567 INFO petrobras.observer [seq=118 id=7666bf83-ac64-45fc-9bae-c6d78e45cdf8] RETURN petrobras.run -> None (0.000709s)
+2026-03-08 23:14:01,568 DEBUG petrobras.observer [seq=119 id=dcaf98f3-d539-42b0-baff-6bad0ce1de82] CALL petrobras.run args={'name': 'Petro #46'}
+2026-03-08 23:14:01,568 INFO petrobras.observer [seq=120 id=dcaf98f3-d539-42b0-baff-6bad0ce1de82] RETURN petrobras.run -> None (0.000658s)
+2026-03-08 23:14:01,569 DEBUG petrobras.observer [seq=121 id=f4c7295e-402e-400c-9520-33f9bea8071c] CALL petrobras.run args={'name': 'Petro #47'}
+2026-03-08 23:14:01,569 INFO petrobras.observer [seq=122 id=f4c7295e-402e-400c-9520-33f9bea8071c] RETURN petrobras.run -> None (0.000520s)
+2026-03-08 23:14:01,570 DEBUG petrobras.observer [seq=123 id=bc935b32-34df-4baf-af0c-8192ef3054f8] CALL petrobras.run args={'name': 'Petro #48'}
+2026-03-08 23:14:01,570 INFO petrobras.observer [seq=124 id=bc935b32-34df-4baf-af0c-8192ef3054f8] RETURN petrobras.run -> None (0.000484s)
+2026-03-08 23:14:01,571 DEBUG petrobras.observer [seq=125 id=36d5a40e-bcf6-4d74-9ab3-d30de157c6f0] CALL petrobras.run args={'name': 'Petro #49'}
+2026-03-08 23:14:01,572 INFO petrobras.observer [seq=126 id=36d5a40e-bcf6-4d74-9ab3-d30de157c6f0] RETURN petrobras.run -> None (0.001102s)
+2026-03-08 23:16:24,775 DEBUG petrobras.observer [seq=3 id=dedbfd82-ece3-4af1-b413-15fc3a953e9a] CALL petrobras.<genexpr> args={'.0': <tuple_iterator object at 0x748d8815a2f0>}
+2026-03-08 23:16:24,776 INFO petrobras.observer [seq=4 id=dedbfd82-ece3-4af1-b413-15fc3a953e9a] RETURN petrobras.<genexpr> -> '3' (0.001134s)
+2026-03-08 23:16:24,780 DEBUG petrobras.observer [seq=5 id=c0075eed-b448-4c5d-9d03-bb8ca21cab00] CALL petrobras.<genexpr> args={'.0': <tuple_iterator object at 0x748d8815a2f0>, 'part': 3}
+2026-03-08 23:16:24,782 INFO petrobras.observer [seq=6 id=c0075eed-b448-4c5d-9d03-bb8ca21cab00] RETURN petrobras.<genexpr> -> '13' (0.002695s)
+2026-03-08 23:16:24,785 DEBUG petrobras.observer [seq=7 id=d88e55db-7d57-48ee-a33c-0edf6906805a] CALL petrobras.<genexpr> args={'.0': <tuple_iterator object at 0x748d8815a2f0>, 'part': 13}
+2026-03-08 23:16:24,788 INFO petrobras.observer [seq=8 id=d88e55db-7d57-48ee-a33c-0edf6906805a] RETURN petrobras.<genexpr> -> '5' (0.002585s)
+2026-03-08 23:16:24,790 DEBUG petrobras.observer [seq=9 id=10021211-3944-4f11-b3b2-21900a6f420c] CALL petrobras.<genexpr> args={'.0': <tuple_iterator object at 0x748d8815a2f0>, 'part': 5}
+2026-03-08 23:16:24,792 INFO petrobras.observer [seq=10 id=10021211-3944-4f11-b3b2-21900a6f420c] RETURN petrobras.<genexpr> -> None (0.002600s)
+2026-03-08 23:16:24,796 DEBUG petrobras.observer [seq=11 id=6ede536d-ff18-4325-ac0a-74110bcd0638] CALL petrobras.core.import_guard.__init__ args={'self': <petrobras.core.import_guard.ImportGuard object at 0x748d87a163c0>, 'package': 'petrobras', 'allowed': {'run'}}
+2026-03-08 23:16:24,797 INFO petrobras.observer [seq=12 id=6ede536d-ff18-4325-ac0a-74110bcd0638] RETURN petrobras.core.import_guard.__init__ -> None (0.002424s)
+2026-03-08 23:16:24,799 DEBUG petrobras.observer [seq=13 id=f96df94b-e434-407e-8c29-d29ce4fe1cdc] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x748d87aeb250>}
+2026-03-08 23:16:24,802 INFO petrobras.observer [seq=14 id=f96df94b-e434-407e-8c29-d29ce4fe1cdc] RETURN petrobras.<genexpr> -> False (0.002097s)
+2026-03-08 23:16:24,805 DEBUG petrobras.observer [seq=15 id=b296b54e-a94a-4ec6-bf70-41723d20b9a3] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x748d87aeb250>, 'f': <_distutils_hack.DistutilsMetaFinder object at 0x748d8879af90>}
+2026-03-08 23:16:24,807 INFO petrobras.observer [seq=16 id=b296b54e-a94a-4ec6-bf70-41723d20b9a3] RETURN petrobras.<genexpr> -> False (0.003186s)
+2026-03-08 23:16:24,809 DEBUG petrobras.observer [seq=17 id=15375e37-f2b3-475b-bad3-6f76059651e3] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x748d87aeb250>, 'f': <_virtualenv._Finder object at 0x748d8879ae40>}
+2026-03-08 23:16:24,810 INFO petrobras.observer [seq=18 id=15375e37-f2b3-475b-bad3-6f76059651e3] RETURN petrobras.<genexpr> -> False (0.001775s)
+2026-03-08 23:16:24,812 DEBUG petrobras.observer [seq=19 id=cd8b376c-fec9-4162-b01a-8461a8054b9e] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x748d87aeb250>, 'f': <class '_frozen_importlib.BuiltinImporter'>}
+2026-03-08 23:16:24,813 INFO petrobras.observer [seq=20 id=cd8b376c-fec9-4162-b01a-8461a8054b9e] RETURN petrobras.<genexpr> -> False (0.001535s)
+2026-03-08 23:16:24,815 DEBUG petrobras.observer [seq=21 id=0bf3bb68-561d-4ca9-8471-e1654cdad8e3] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x748d87aeb250>, 'f': <class '_frozen_importlib.FrozenImporter'>}
+2026-03-08 23:16:24,817 INFO petrobras.observer [seq=22 id=0bf3bb68-561d-4ca9-8471-e1654cdad8e3] RETURN petrobras.<genexpr> -> False (0.001558s)
+2026-03-08 23:16:24,821 DEBUG petrobras.observer [seq=23 id=b1a3ec16-272b-4278-b589-32efc158fdb5] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x748d87aeb250>, 'f': <class '_frozen_importlib_external.PathFinder'>}
+2026-03-08 23:16:24,825 INFO petrobras.observer [seq=24 id=b1a3ec16-272b-4278-b589-32efc158fdb5] RETURN petrobras.<genexpr> -> None (0.003481s)
+2026-03-08 23:16:24,828 DEBUG petrobras.observer [seq=25 id=b335c4e0-3b50-4fea-b46a-c0742b91e5f6] CALL petrobras._seal_namespace args={}
+2026-03-08 23:16:24,831 INFO petrobras.observer [seq=26 id=b335c4e0-3b50-4fea-b46a-c0742b91e5f6] RETURN petrobras._seal_namespace -> None (0.002768s)
+2026-03-08 23:16:24,833 DEBUG petrobras.observer [seq=27 id=a25c7101-7ce8-42a3-b638-1e5b6397d86e] CALL petrobras.run args={'name': 'Petro #01'}
+2026-03-08 23:16:24,835 INFO petrobras.observer [seq=28 id=a25c7101-7ce8-42a3-b638-1e5b6397d86e] RETURN petrobras.run -> None (0.002052s)
+2026-03-08 23:16:24,837 DEBUG petrobras.observer [seq=29 id=8a0bc80e-e48c-4650-9261-625e322c79df] CALL petrobras.run args={'name': 'Petro #02'}
+2026-03-08 23:16:24,841 INFO petrobras.observer [seq=30 id=8a0bc80e-e48c-4650-9261-625e322c79df] RETURN petrobras.run -> None (0.002710s)
+2026-03-08 23:16:24,845 DEBUG petrobras.observer [seq=31 id=d5d8d6d9-dc76-4c11-a38c-e82384395528] CALL petrobras.run args={'name': 'Petro #03'}
+2026-03-08 23:16:24,848 INFO petrobras.observer [seq=32 id=d5d8d6d9-dc76-4c11-a38c-e82384395528] RETURN petrobras.run -> None (0.003805s)
+2026-03-08 23:16:24,850 DEBUG petrobras.observer [seq=33 id=714cc25f-900c-4a45-85e7-b569e44cf5ba] CALL petrobras.run args={'name': 'Petro #04'}
+2026-03-08 23:16:24,853 INFO petrobras.observer [seq=34 id=714cc25f-900c-4a45-85e7-b569e44cf5ba] RETURN petrobras.run -> None (0.001844s)
+2026-03-08 23:16:24,858 DEBUG petrobras.observer [seq=35 id=959bbc8e-0fb3-4067-8eab-fca20b0a6b85] CALL petrobras.run args={'name': 'Petro #05'}
+2026-03-08 23:16:24,861 INFO petrobras.observer [seq=36 id=959bbc8e-0fb3-4067-8eab-fca20b0a6b85] RETURN petrobras.run -> None (0.004270s)
+2026-03-08 23:16:24,865 DEBUG petrobras.observer [seq=37 id=923ed163-205c-4900-8c4d-a372ffdff19c] CALL petrobras.run args={'name': 'Petro #06'}
+2026-03-08 23:16:24,868 INFO petrobras.observer [seq=38 id=923ed163-205c-4900-8c4d-a372ffdff19c] RETURN petrobras.run -> None (0.003962s)
+2026-03-08 23:16:24,874 DEBUG petrobras.observer [seq=39 id=22113a9a-501e-4df3-a13b-b8030e71d7e6] CALL petrobras.run args={'name': 'Petro #07'}
+2026-03-08 23:16:24,877 INFO petrobras.observer [seq=40 id=22113a9a-501e-4df3-a13b-b8030e71d7e6] RETURN petrobras.run -> None (0.005392s)
+2026-03-08 23:16:24,880 DEBUG petrobras.observer [seq=41 id=69f15787-f71d-496f-a9da-c8b3b8f08f1e] CALL petrobras.run args={'name': 'Petro #08'}
+2026-03-08 23:16:24,882 INFO petrobras.observer [seq=42 id=69f15787-f71d-496f-a9da-c8b3b8f08f1e] RETURN petrobras.run -> None (0.003013s)
+2026-03-08 23:16:24,885 DEBUG petrobras.observer [seq=43 id=2e1feea2-0890-49b8-a5cf-bf3ff709c6db] CALL petrobras.run args={'name': 'Petro #09'}
+2026-03-08 23:16:24,889 INFO petrobras.observer [seq=44 id=2e1feea2-0890-49b8-a5cf-bf3ff709c6db] RETURN petrobras.run -> None (0.002253s)
+2026-03-08 23:16:24,892 DEBUG petrobras.observer [seq=45 id=8ca514bc-405d-48fa-b497-f366aa973ae3] CALL petrobras.run args={'name': 'Petro #10'}
+2026-03-08 23:16:24,894 INFO petrobras.observer [seq=46 id=8ca514bc-405d-48fa-b497-f366aa973ae3] RETURN petrobras.run -> None (0.002425s)
+2026-03-08 23:16:24,898 DEBUG petrobras.observer [seq=47 id=352f1dce-0081-43e0-84bc-97e9fbd5bd29] CALL petrobras.run args={'name': 'Petro #11'}
+2026-03-08 23:16:24,900 INFO petrobras.observer [seq=48 id=352f1dce-0081-43e0-84bc-97e9fbd5bd29] RETURN petrobras.run -> None (0.003615s)
+2026-03-08 23:16:24,904 DEBUG petrobras.observer [seq=49 id=e3eeb760-2cbf-4d23-b83c-331f68156f45] CALL petrobras.run args={'name': 'Petro #12'}
+2026-03-08 23:16:24,907 INFO petrobras.observer [seq=50 id=e3eeb760-2cbf-4d23-b83c-331f68156f45] RETURN petrobras.run -> None (0.003154s)
+2026-03-08 23:16:24,910 DEBUG petrobras.observer [seq=51 id=bad8deb3-b488-47fb-9254-e7fea9a358ee] CALL petrobras.run args={'name': 'Petro #13'}
+2026-03-08 23:16:24,912 INFO petrobras.observer [seq=52 id=bad8deb3-b488-47fb-9254-e7fea9a358ee] RETURN petrobras.run -> None (0.002928s)
+2026-03-08 23:16:24,913 DEBUG petrobras.observer [seq=53 id=cea542fd-ff3f-4bfb-99a8-7b9ab7698e60] CALL petrobras.run args={'name': 'Petro #14'}
+2026-03-08 23:16:24,918 INFO petrobras.observer [seq=54 id=cea542fd-ff3f-4bfb-99a8-7b9ab7698e60] RETURN petrobras.run -> None (0.001647s)
+2026-03-08 23:16:24,921 DEBUG petrobras.observer [seq=55 id=5fbbcef3-f7e5-487f-bc8d-b0610556c10f] CALL petrobras.run args={'name': 'Petro #15'}
+2026-03-08 23:16:24,924 INFO petrobras.observer [seq=56 id=5fbbcef3-f7e5-487f-bc8d-b0610556c10f] RETURN petrobras.run -> None (0.002908s)
+2026-03-08 23:16:24,926 DEBUG petrobras.observer [seq=57 id=329e6e59-0c83-4705-88b3-b6c92738738c] CALL petrobras.run args={'name': 'Petro #16'}
+2026-03-08 23:16:24,928 INFO petrobras.observer [seq=58 id=329e6e59-0c83-4705-88b3-b6c92738738c] RETURN petrobras.run -> None (0.001890s)
+2026-03-08 23:16:24,930 DEBUG petrobras.observer [seq=59 id=7a9b36ff-c20c-4914-9a5f-340378680c38] CALL petrobras.run args={'name': 'Petro #17'}
+2026-03-08 23:16:24,932 INFO petrobras.observer [seq=60 id=7a9b36ff-c20c-4914-9a5f-340378680c38] RETURN petrobras.run -> None (0.001821s)
+2026-03-08 23:16:24,935 DEBUG petrobras.observer [seq=61 id=0bf61c96-a0a1-4702-b2ec-f26f1dba0e3a] CALL petrobras.run args={'name': 'Petro #18'}
+2026-03-08 23:16:24,938 INFO petrobras.observer [seq=62 id=0bf61c96-a0a1-4702-b2ec-f26f1dba0e3a] RETURN petrobras.run -> None (0.003410s)
+2026-03-08 23:16:24,942 DEBUG petrobras.observer [seq=63 id=e84e164b-345c-489a-8edd-25a55c78adfe] CALL petrobras.run args={'name': 'Petro #19'}
+2026-03-08 23:16:24,945 INFO petrobras.observer [seq=64 id=e84e164b-345c-489a-8edd-25a55c78adfe] RETURN petrobras.run -> None (0.003616s)
+2026-03-08 23:16:24,947 DEBUG petrobras.observer [seq=65 id=02a20528-5913-4fe4-8813-13c34cd33a29] CALL petrobras.run args={'name': 'Petro #20'}
+2026-03-08 23:16:24,949 INFO petrobras.observer [seq=66 id=02a20528-5913-4fe4-8813-13c34cd33a29] RETURN petrobras.run -> None (0.001853s)
+2026-03-08 23:16:24,951 DEBUG petrobras.observer [seq=67 id=f191fc63-c000-42a6-a4ef-3dac9a3dd12e] CALL petrobras.run args={'name': 'Petro #21'}
+2026-03-08 23:16:24,955 INFO petrobras.observer [seq=68 id=f191fc63-c000-42a6-a4ef-3dac9a3dd12e] RETURN petrobras.run -> None (0.001757s)
+2026-03-08 23:16:24,957 DEBUG petrobras.observer [seq=69 id=3a12c6ce-4893-475b-a09b-6845c931b39a] CALL petrobras.run args={'name': 'Petro #22'}
+2026-03-08 23:16:24,960 INFO petrobras.observer [seq=70 id=3a12c6ce-4893-475b-a09b-6845c931b39a] RETURN petrobras.run -> None (0.002173s)
+2026-03-08 23:16:24,962 DEBUG petrobras.observer [seq=71 id=7a326bd4-e2f0-4984-a344-958381cc8afa] CALL petrobras.run args={'name': 'Petro #23'}
+2026-03-08 23:16:24,964 INFO petrobras.observer [seq=72 id=7a326bd4-e2f0-4984-a344-958381cc8afa] RETURN petrobras.run -> None (0.002060s)
+2026-03-08 23:16:24,965 DEBUG petrobras.observer [seq=73 id=0bcb7d94-18cc-4cac-9b93-691477f51bb0] CALL petrobras.run args={'name': 'Petro #24'}
+2026-03-08 23:16:24,967 INFO petrobras.observer [seq=74 id=0bcb7d94-18cc-4cac-9b93-691477f51bb0] RETURN petrobras.run -> None (0.001674s)
+2026-03-08 23:16:24,969 DEBUG petrobras.observer [seq=75 id=5ae866fe-9dcd-4f67-b4fc-478b60c6986a] CALL petrobras.run args={'name': 'Petro #25'}
+2026-03-08 23:16:24,973 INFO petrobras.observer [seq=76 id=5ae866fe-9dcd-4f67-b4fc-478b60c6986a] RETURN petrobras.run -> None (0.002433s)
+2026-03-08 23:16:24,975 DEBUG petrobras.observer [seq=77 id=cd8786b9-2aed-4da2-a6b4-d0021eb5fe82] CALL petrobras.run args={'name': 'Petro #26'}
+2026-03-08 23:16:24,977 INFO petrobras.observer [seq=78 id=cd8786b9-2aed-4da2-a6b4-d0021eb5fe82] RETURN petrobras.run -> None (0.001866s)
+2026-03-08 23:16:24,979 DEBUG petrobras.observer [seq=79 id=36565870-f9b6-496d-9f18-311d19ca61d2] CALL petrobras.run args={'name': 'Petro #27'}
+2026-03-08 23:16:24,980 INFO petrobras.observer [seq=80 id=36565870-f9b6-496d-9f18-311d19ca61d2] RETURN petrobras.run -> None (0.001660s)
+2026-03-08 23:16:24,982 DEBUG petrobras.observer [seq=81 id=8f9c21f3-a539-4c25-a72c-27dde28c6254] CALL petrobras.run args={'name': 'Petro #28'}
+2026-03-08 23:16:24,984 INFO petrobras.observer [seq=82 id=8f9c21f3-a539-4c25-a72c-27dde28c6254] RETURN petrobras.run -> None (0.001705s)
+2026-03-08 23:16:24,985 DEBUG petrobras.observer [seq=83 id=e4ec8b94-6bf6-439c-9951-78a12702e62f] CALL petrobras.run args={'name': 'Petro #29'}
+2026-03-08 23:16:24,989 INFO petrobras.observer [seq=84 id=e4ec8b94-6bf6-439c-9951-78a12702e62f] RETURN petrobras.run -> None (0.001660s)
+2026-03-08 23:16:24,992 DEBUG petrobras.observer [seq=85 id=b8a66788-9413-46ed-a37e-d742a8245fd2] CALL petrobras.run args={'name': 'Petro #30'}
+2026-03-08 23:16:24,994 INFO petrobras.observer [seq=86 id=b8a66788-9413-46ed-a37e-d742a8245fd2] RETURN petrobras.run -> None (0.002708s)
+2026-03-08 23:16:24,996 DEBUG petrobras.observer [seq=87 id=c0e55c11-1b05-43be-bb24-0f0ff18bb496] CALL petrobras.run args={'name': 'Petro #31'}
+2026-03-08 23:16:24,998 INFO petrobras.observer [seq=88 id=c0e55c11-1b05-43be-bb24-0f0ff18bb496] RETURN petrobras.run -> None (0.001823s)
+2026-03-08 23:16:25,000 DEBUG petrobras.observer [seq=89 id=04bd92ce-343c-4faf-93e5-d1f734a05b95] CALL petrobras.run args={'name': 'Petro #32'}
+2026-03-08 23:16:25,001 INFO petrobras.observer [seq=90 id=04bd92ce-343c-4faf-93e5-d1f734a05b95] RETURN petrobras.run -> None (0.001786s)
+2026-03-08 23:16:25,005 DEBUG petrobras.observer [seq=91 id=367c40ed-a9e2-475d-a79f-e3c1f0d0ada4] CALL petrobras.run args={'name': 'Petro #33'}
+2026-03-08 23:16:25,009 INFO petrobras.observer [seq=92 id=367c40ed-a9e2-475d-a79f-e3c1f0d0ada4] RETURN petrobras.run -> None (0.004054s)
+2026-03-08 23:16:25,012 DEBUG petrobras.observer [seq=93 id=86e0750f-d7a4-41d5-90bd-c2fc023a568a] CALL petrobras.run args={'name': 'Petro #34'}
+2026-03-08 23:16:25,015 INFO petrobras.observer [seq=94 id=86e0750f-d7a4-41d5-90bd-c2fc023a568a] RETURN petrobras.run -> None (0.003151s)
+2026-03-08 23:16:25,018 DEBUG petrobras.observer [seq=95 id=a53bbf02-e826-4bcb-b991-958f98bb88c6] CALL petrobras.run args={'name': 'Petro #35'}
+2026-03-08 23:16:25,022 INFO petrobras.observer [seq=96 id=a53bbf02-e826-4bcb-b991-958f98bb88c6] RETURN petrobras.run -> None (0.002855s)
+2026-03-08 23:16:25,025 DEBUG petrobras.observer [seq=97 id=5018012c-beb7-4e6a-8c28-63d49f7bb90b] CALL petrobras.run args={'name': 'Petro #36'}
+2026-03-08 23:16:25,028 INFO petrobras.observer [seq=98 id=5018012c-beb7-4e6a-8c28-63d49f7bb90b] RETURN petrobras.run -> None (0.003448s)
+2026-03-08 23:16:25,032 DEBUG petrobras.observer [seq=99 id=0a5d11a8-a965-44f7-9ad7-6ca2b97cea91] CALL petrobras.run args={'name': 'Petro #37'}
+2026-03-08 23:16:25,035 INFO petrobras.observer [seq=100 id=0a5d11a8-a965-44f7-9ad7-6ca2b97cea91] RETURN petrobras.run -> None (0.003368s)
+2026-03-08 23:16:25,039 DEBUG petrobras.observer [seq=101 id=85c2481b-05e4-4ffa-ba4d-206fc29d2329] CALL petrobras.run args={'name': 'Petro #38'}
+2026-03-08 23:16:25,042 INFO petrobras.observer [seq=102 id=85c2481b-05e4-4ffa-ba4d-206fc29d2329] RETURN petrobras.run -> None (0.004393s)
+2026-03-08 23:16:25,045 DEBUG petrobras.observer [seq=103 id=991d36c1-4992-4551-bf21-1653db17bf7d] CALL petrobras.run args={'name': 'Petro #39'}
+2026-03-08 23:16:25,048 INFO petrobras.observer [seq=104 id=991d36c1-4992-4551-bf21-1653db17bf7d] RETURN petrobras.run -> None (0.002807s)
+2026-03-08 23:16:25,051 DEBUG petrobras.observer [seq=105 id=e0effafe-bac7-46ee-86e7-92cb1fda081e] CALL petrobras.run args={'name': 'Petro #40'}
+2026-03-08 23:16:25,054 INFO petrobras.observer [seq=106 id=e0effafe-bac7-46ee-86e7-92cb1fda081e] RETURN petrobras.run -> None (0.002812s)
+2026-03-08 23:16:25,058 DEBUG petrobras.observer [seq=107 id=5806c0bc-4bd1-44b3-820c-311969860c22] CALL petrobras.run args={'name': 'Petro #41'}
+2026-03-08 23:16:25,063 INFO petrobras.observer [seq=108 id=5806c0bc-4bd1-44b3-820c-311969860c22] RETURN petrobras.run -> None (0.004570s)
+2026-03-08 23:16:25,067 DEBUG petrobras.observer [seq=109 id=7bab3f90-4ef5-4c30-9d32-8dcf7192111d] CALL petrobras.run args={'name': 'Petro #42'}
+2026-03-08 23:16:25,071 INFO petrobras.observer [seq=110 id=7bab3f90-4ef5-4c30-9d32-8dcf7192111d] RETURN petrobras.run -> None (0.003738s)
+2026-03-08 23:16:25,074 DEBUG petrobras.observer [seq=111 id=f526ff99-eeb9-427c-8c05-835e792ad5c5] CALL petrobras.run args={'name': 'Petro #43'}
+2026-03-08 23:16:25,076 INFO petrobras.observer [seq=112 id=f526ff99-eeb9-427c-8c05-835e792ad5c5] RETURN petrobras.run -> None (0.003158s)
+2026-03-08 23:16:25,078 DEBUG petrobras.observer [seq=113 id=87321616-52b2-440b-bdce-fb49550f6884] CALL petrobras.run args={'name': 'Petro #44'}
+2026-03-08 23:16:25,080 INFO petrobras.observer [seq=114 id=87321616-52b2-440b-bdce-fb49550f6884] RETURN petrobras.run -> None (0.002002s)
+2026-03-08 23:16:25,081 DEBUG petrobras.observer [seq=115 id=341bdb4f-1c8e-4159-9337-d0dc73fb7d3f] CALL petrobras.run args={'name': 'Petro #45'}
+2026-03-08 23:16:25,083 INFO petrobras.observer [seq=116 id=341bdb4f-1c8e-4159-9337-d0dc73fb7d3f] RETURN petrobras.run -> None (0.001763s)
+2026-03-08 23:16:25,085 DEBUG petrobras.observer [seq=117 id=71945afc-1751-48c1-8172-e562bf1c23ae] CALL petrobras.run args={'name': 'Petro #46'}
+2026-03-08 23:16:25,087 INFO petrobras.observer [seq=118 id=71945afc-1751-48c1-8172-e562bf1c23ae] RETURN petrobras.run -> None (0.001714s)
+2026-03-08 23:16:25,091 DEBUG petrobras.observer [seq=119 id=8d51bf14-12fa-4734-b5f9-f8ff5e2e4857] CALL petrobras.run args={'name': 'Petro #47'}
+2026-03-08 23:16:25,094 INFO petrobras.observer [seq=120 id=8d51bf14-12fa-4734-b5f9-f8ff5e2e4857] RETURN petrobras.run -> None (0.003469s)
+2026-03-08 23:16:25,105 DEBUG petrobras.observer [seq=121 id=e8f5aa82-4cdc-4759-b84f-49e66863da85] CALL petrobras.run args={'name': 'Petro #48'}
+2026-03-08 23:16:25,109 INFO petrobras.observer [seq=122 id=e8f5aa82-4cdc-4759-b84f-49e66863da85] RETURN petrobras.run -> None (0.010939s)
+2026-03-08 23:16:25,113 DEBUG petrobras.observer [seq=123 id=589932b1-591a-4dc8-a64e-a87158aac3af] CALL petrobras.run args={'name': 'Petro #49'}
+2026-03-08 23:16:25,117 INFO petrobras.observer [seq=124 id=589932b1-591a-4dc8-a64e-a87158aac3af] RETURN petrobras.run -> None (0.003763s)
+2026-03-08 23:19:00,660 DEBUG petrobras.observer [seq=3 id=7486cc2d-bfeb-4784-a73b-597a62b17989] CALL petrobras.<genexpr> args={'.0': <tuple_iterator object at 0x7fb1166d8580>}
+2026-03-08 23:19:00,660 INFO petrobras.observer [seq=4 id=7486cc2d-bfeb-4784-a73b-597a62b17989] RETURN petrobras.<genexpr> -> '3' (0.000164s)
+2026-03-08 23:19:00,660 DEBUG petrobras.observer [seq=5 id=fd88fcee-1d7b-4e78-bda0-0602d3b73286] CALL petrobras.<genexpr> args={'.0': <tuple_iterator object at 0x7fb1166d8580>, 'part': 3}
+2026-03-08 23:19:00,661 INFO petrobras.observer [seq=6 id=fd88fcee-1d7b-4e78-bda0-0602d3b73286] RETURN petrobras.<genexpr> -> '13' (0.000044s)
+2026-03-08 23:19:00,661 DEBUG petrobras.observer [seq=7 id=e918654a-688c-431b-a8c4-868d7f989a1f] CALL petrobras.<genexpr> args={'.0': <tuple_iterator object at 0x7fb1166d8580>, 'part': 13}
+2026-03-08 23:19:00,661 INFO petrobras.observer [seq=8 id=e918654a-688c-431b-a8c4-868d7f989a1f] RETURN petrobras.<genexpr> -> '5' (0.000043s)
+2026-03-08 23:19:00,661 DEBUG petrobras.observer [seq=9 id=fb08d984-ce05-4a49-89cd-25018b2cd441] CALL petrobras.<genexpr> args={'.0': <tuple_iterator object at 0x7fb1166d8580>, 'part': 5}
+2026-03-08 23:19:00,662 INFO petrobras.observer [seq=10 id=fb08d984-ce05-4a49-89cd-25018b2cd441] RETURN petrobras.<genexpr> -> None (0.000033s)
+2026-03-08 23:19:00,663 DEBUG petrobras.observer [seq=11 id=7944af1d-b058-408a-b1be-82fe7100a11d] CALL petrobras.core.import_guard.__init__ args={'self': <petrobras.core.import_guard.ImportGuard object at 0x7fb116802270>, 'package': 'petrobras', 'allowed': {'run'}}
+2026-03-08 23:19:00,663 INFO petrobras.observer [seq=12 id=7944af1d-b058-408a-b1be-82fe7100a11d] RETURN petrobras.core.import_guard.__init__ -> None (0.000074s)
+2026-03-08 23:19:00,663 DEBUG petrobras.observer [seq=13 id=cfc1098f-3e20-46e7-8891-9719ed1eb623] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x7fb1166e2950>}
+2026-03-08 23:19:00,664 INFO petrobras.observer [seq=14 id=cfc1098f-3e20-46e7-8891-9719ed1eb623] RETURN petrobras.<genexpr> -> False (0.000041s)
+2026-03-08 23:19:00,664 DEBUG petrobras.observer [seq=15 id=83aab6f9-bc55-4954-b31d-06cd7b4c543e] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x7fb1166e2950>, 'f': <_distutils_hack.DistutilsMetaFinder object at 0x7fb11756ef90>}
+2026-03-08 23:19:00,664 INFO petrobras.observer [seq=16 id=83aab6f9-bc55-4954-b31d-06cd7b4c543e] RETURN petrobras.<genexpr> -> False (0.000048s)
+2026-03-08 23:19:00,664 DEBUG petrobras.observer [seq=17 id=548b731b-5b13-4b2a-9f4f-408dcaa03c4c] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x7fb1166e2950>, 'f': <_virtualenv._Finder object at 0x7fb11756ee40>}
+2026-03-08 23:19:00,665 INFO petrobras.observer [seq=18 id=548b731b-5b13-4b2a-9f4f-408dcaa03c4c] RETURN petrobras.<genexpr> -> False (0.000036s)
+2026-03-08 23:19:00,665 DEBUG petrobras.observer [seq=19 id=ebc30ae1-fcec-4927-a27e-8a38ecd25401] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x7fb1166e2950>, 'f': <class '_frozen_importlib.BuiltinImporter'>}
+2026-03-08 23:19:00,666 INFO petrobras.observer [seq=20 id=ebc30ae1-fcec-4927-a27e-8a38ecd25401] RETURN petrobras.<genexpr> -> False (0.000150s)
+2026-03-08 23:19:00,666 DEBUG petrobras.observer [seq=21 id=141fbc1e-1329-4f57-bda0-454bb390a1ba] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x7fb1166e2950>, 'f': <class '_frozen_importlib.FrozenImporter'>}
+2026-03-08 23:19:00,666 INFO petrobras.observer [seq=22 id=141fbc1e-1329-4f57-bda0-454bb390a1ba] RETURN petrobras.<genexpr> -> False (0.000041s)
+2026-03-08 23:19:00,666 DEBUG petrobras.observer [seq=23 id=bcb64a3d-48e2-41ea-b13c-028e63e2c9cf] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x7fb1166e2950>, 'f': <class '_frozen_importlib_external.PathFinder'>}
+2026-03-08 23:19:00,667 INFO petrobras.observer [seq=24 id=bcb64a3d-48e2-41ea-b13c-028e63e2c9cf] RETURN petrobras.<genexpr> -> None (0.000046s)
+2026-03-08 23:19:00,667 DEBUG petrobras.observer [seq=25 id=e6e708f3-d5fc-436e-b1fb-30dc2f064511] CALL petrobras._seal_namespace args={}
+2026-03-08 23:19:00,668 INFO petrobras.observer [seq=26 id=e6e708f3-d5fc-436e-b1fb-30dc2f064511] RETURN petrobras._seal_namespace -> None (0.000076s)
+2026-03-08 23:19:00,668 DEBUG petrobras.observer [seq=27 id=292bcc0a-8fed-4450-ae09-b8ea0fa5081a] CALL petrobras.run args={'name': 'Petro #01'}
+2026-03-08 23:19:00,668 INFO petrobras.observer [seq=28 id=292bcc0a-8fed-4450-ae09-b8ea0fa5081a] RETURN petrobras.run -> None (0.000056s)
+2026-03-08 23:19:00,669 DEBUG petrobras.observer [seq=29 id=f2946e86-51d7-4dca-9c43-c55db15b561a] CALL petrobras.run args={'name': 'Petro #02'}
+2026-03-08 23:19:00,669 INFO petrobras.observer [seq=30 id=f2946e86-51d7-4dca-9c43-c55db15b561a] RETURN petrobras.run -> None (0.000056s)
+2026-03-08 23:19:00,669 DEBUG petrobras.observer [seq=31 id=47187f0b-48a6-403d-bb92-b421c701366e] CALL petrobras.run args={'name': 'Petro #03'}
+2026-03-08 23:19:00,670 INFO petrobras.observer [seq=32 id=47187f0b-48a6-403d-bb92-b421c701366e] RETURN petrobras.run -> None (0.000052s)
+2026-03-08 23:19:00,670 DEBUG petrobras.observer [seq=33 id=e0083f72-0f26-435f-ad8d-2c37e84287d4] CALL petrobras.run args={'name': 'Petro #04'}
+2026-03-08 23:19:00,670 INFO petrobras.observer [seq=34 id=e0083f72-0f26-435f-ad8d-2c37e84287d4] RETURN petrobras.run -> None (0.000044s)
+2026-03-08 23:19:00,671 DEBUG petrobras.observer [seq=35 id=d29075ba-735d-4ae1-9804-7c0ceca97f87] CALL petrobras.run args={'name': 'Petro #05'}
+2026-03-08 23:19:00,671 INFO petrobras.observer [seq=36 id=d29075ba-735d-4ae1-9804-7c0ceca97f87] RETURN petrobras.run -> None (0.000039s)
+2026-03-08 23:19:00,671 DEBUG petrobras.observer [seq=37 id=584c11f3-a57b-46d2-a44b-66927424e8a1] CALL petrobras.run args={'name': 'Petro #06'}
+2026-03-08 23:19:00,672 INFO petrobras.observer [seq=38 id=584c11f3-a57b-46d2-a44b-66927424e8a1] RETURN petrobras.run -> None (0.000040s)
+2026-03-08 23:19:00,672 DEBUG petrobras.observer [seq=39 id=e85a8a7a-9f47-49ba-b172-80dab5c8726b] CALL petrobras.run args={'name': 'Petro #07'}
+2026-03-08 23:19:00,672 INFO petrobras.observer [seq=40 id=e85a8a7a-9f47-49ba-b172-80dab5c8726b] RETURN petrobras.run -> None (0.000051s)
+2026-03-08 23:19:00,672 DEBUG petrobras.observer [seq=41 id=8c6cb4b3-ffe1-447b-84bb-c7494871754a] CALL petrobras.run args={'name': 'Petro #08'}
+2026-03-08 23:19:00,673 INFO petrobras.observer [seq=42 id=8c6cb4b3-ffe1-447b-84bb-c7494871754a] RETURN petrobras.run -> None (0.000038s)
+2026-03-08 23:19:00,673 DEBUG petrobras.observer [seq=43 id=5e07503e-126f-4bd0-82b1-942028f5e5d1] CALL petrobras.run args={'name': 'Petro #09'}
+2026-03-08 23:19:00,674 INFO petrobras.observer [seq=44 id=5e07503e-126f-4bd0-82b1-942028f5e5d1] RETURN petrobras.run -> None (0.000047s)
+2026-03-08 23:20:05,242 DEBUG petrobras.observer [seq=3 id=3024af94-d44a-4a3d-b731-d3ad99717b88] CALL petrobras.<genexpr> args={'.0': <tuple_iterator object at 0x7afdf1df0070>}
+2026-03-08 23:20:05,244 INFO petrobras.observer [seq=4 id=3024af94-d44a-4a3d-b731-d3ad99717b88] RETURN petrobras.<genexpr> -> '3' (0.000354s)
+2026-03-08 23:20:05,244 DEBUG petrobras.observer [seq=5 id=2271a2a8-9311-4781-96a9-7cd1b0b53cbb] CALL petrobras.<genexpr> args={'.0': <tuple_iterator object at 0x7afdf1df0070>, 'part': 3}
+2026-03-08 23:20:05,245 INFO petrobras.observer [seq=6 id=2271a2a8-9311-4781-96a9-7cd1b0b53cbb] RETURN petrobras.<genexpr> -> '13' (0.000119s)
+2026-03-08 23:20:05,245 DEBUG petrobras.observer [seq=7 id=5c8a9048-4729-4cc4-a5ab-82a10cd19a4d] CALL petrobras.<genexpr> args={'.0': <tuple_iterator object at 0x7afdf1df0070>, 'part': 13}
+2026-03-08 23:20:05,246 INFO petrobras.observer [seq=8 id=5c8a9048-4729-4cc4-a5ab-82a10cd19a4d] RETURN petrobras.<genexpr> -> '5' (0.000079s)
+2026-03-08 23:20:05,246 DEBUG petrobras.observer [seq=9 id=43860ad2-457e-43c6-90fd-be2fd16c8b1c] CALL petrobras.<genexpr> args={'.0': <tuple_iterator object at 0x7afdf1df0070>, 'part': 5}
+2026-03-08 23:20:05,247 INFO petrobras.observer [seq=10 id=43860ad2-457e-43c6-90fd-be2fd16c8b1c] RETURN petrobras.<genexpr> -> None (0.000090s)
+2026-03-08 23:20:05,249 DEBUG petrobras.observer [seq=11 id=2745e83d-a1a8-4504-be40-0d5a9be0625f] CALL petrobras.core.import_guard.__init__ args={'self': <petrobras.core.import_guard.ImportGuard object at 0x7afdf1cca270>, 'package': 'petrobras', 'allowed': {'run'}}
+2026-03-08 23:20:05,250 INFO petrobras.observer [seq=12 id=2745e83d-a1a8-4504-be40-0d5a9be0625f] RETURN petrobras.core.import_guard.__init__ -> None (0.000317s)
+2026-03-08 23:20:05,250 DEBUG petrobras.observer [seq=13 id=e05ca9ae-00ab-479a-8241-9ff2ecb0d64f] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x7afdf1bafeb0>}
+2026-03-08 23:20:05,251 INFO petrobras.observer [seq=14 id=e05ca9ae-00ab-479a-8241-9ff2ecb0d64f] RETURN petrobras.<genexpr> -> False (0.000147s)
+2026-03-08 23:20:05,252 DEBUG petrobras.observer [seq=15 id=7785d312-7449-4da3-8bd7-8c1198f22348] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x7afdf1bafeb0>, 'f': <_distutils_hack.DistutilsMetaFinder object at 0x7afdf2736f90>}
+2026-03-08 23:20:05,253 INFO petrobras.observer [seq=16 id=7785d312-7449-4da3-8bd7-8c1198f22348] RETURN petrobras.<genexpr> -> False (0.000112s)
+2026-03-08 23:20:05,253 DEBUG petrobras.observer [seq=17 id=16e2f547-5e7f-4dc0-8d53-27f3e3eea330] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x7afdf1bafeb0>, 'f': <_virtualenv._Finder object at 0x7afdf2736e40>}
+2026-03-08 23:20:05,254 INFO petrobras.observer [seq=18 id=16e2f547-5e7f-4dc0-8d53-27f3e3eea330] RETURN petrobras.<genexpr> -> False (0.000084s)
+2026-03-08 23:20:05,254 DEBUG petrobras.observer [seq=19 id=624dfacc-876c-4412-8f8c-76f05b08b021] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x7afdf1bafeb0>, 'f': <class '_frozen_importlib.BuiltinImporter'>}
+2026-03-08 23:20:05,255 INFO petrobras.observer [seq=20 id=624dfacc-876c-4412-8f8c-76f05b08b021] RETURN petrobras.<genexpr> -> False (0.000099s)
+2026-03-08 23:20:05,255 DEBUG petrobras.observer [seq=21 id=2143fe39-bc4f-42aa-a87d-2d454190f9cb] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x7afdf1bafeb0>, 'f': <class '_frozen_importlib.FrozenImporter'>}
+2026-03-08 23:20:05,257 INFO petrobras.observer [seq=22 id=2143fe39-bc4f-42aa-a87d-2d454190f9cb] RETURN petrobras.<genexpr> -> False (0.000207s)
+2026-03-08 23:20:05,257 DEBUG petrobras.observer [seq=23 id=1fb6d38d-9412-4253-ba79-2c21d0910c2d] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x7afdf1bafeb0>, 'f': <class '_frozen_importlib_external.PathFinder'>}
+2026-03-08 23:20:05,314 INFO petrobras.observer [seq=24 id=1fb6d38d-9412-4253-ba79-2c21d0910c2d] RETURN petrobras.<genexpr> -> None (0.000124s)
+2026-03-08 23:20:05,320 DEBUG petrobras.observer [seq=25 id=c33af0a6-9ae7-400d-8636-722f9b06f08a] CALL petrobras._seal_namespace args={}
+2026-03-08 23:20:05,321 INFO petrobras.observer [seq=26 id=c33af0a6-9ae7-400d-8636-722f9b06f08a] RETURN petrobras._seal_namespace -> None (0.000342s)
+2026-03-08 23:20:05,322 DEBUG petrobras.observer [seq=27 id=a5006192-b0ae-46c9-a50c-8e09caf5811b] CALL petrobras.run args={'name': 'Petro #01'}
+2026-03-08 23:20:05,323 INFO petrobras.observer [seq=28 id=a5006192-b0ae-46c9-a50c-8e09caf5811b] RETURN petrobras.run -> None (0.000126s)
+2026-03-08 23:20:05,323 DEBUG petrobras.observer [seq=29 id=c089e284-985b-47a2-b749-03f6ab0f23ee] CALL petrobras.run args={'name': 'Petro #02'}
+2026-03-08 23:20:05,325 INFO petrobras.observer [seq=30 id=c089e284-985b-47a2-b749-03f6ab0f23ee] RETURN petrobras.run -> None (0.000071s)
+2026-03-08 23:20:05,325 DEBUG petrobras.observer [seq=31 id=eb2275a3-5ca0-423d-97b3-82fa08a7f62a] CALL petrobras.run args={'name': 'Petro #03'}
+2026-03-08 23:20:05,336 INFO petrobras.observer [seq=32 id=eb2275a3-5ca0-423d-97b3-82fa08a7f62a] RETURN petrobras.run -> None (0.000129s)
+2026-03-08 23:20:05,340 DEBUG petrobras.observer [seq=33 id=ae88a982-261a-4f35-ab08-6dbf398398b5] CALL petrobras.run args={'name': 'Petro #04'}
+2026-03-08 23:20:05,342 INFO petrobras.observer [seq=34 id=ae88a982-261a-4f35-ab08-6dbf398398b5] RETURN petrobras.run -> None (0.000257s)
+2026-03-08 23:21:25,753 DEBUG petrobras.observer [seq=3 id=670ce0c0-e6a0-4f82-af88-fe17e40baf67] CALL petrobras.<genexpr> args={'.0': <tuple_iterator object at 0x73352e1c0220>}
+2026-03-08 23:21:25,753 INFO petrobras.observer [seq=4 id=670ce0c0-e6a0-4f82-af88-fe17e40baf67] RETURN petrobras.<genexpr> -> '3' (0.000265s)
+2026-03-08 23:21:25,753 DEBUG petrobras.observer [seq=5 id=44d72c59-2776-4845-9b43-24a11a5831ca] CALL petrobras.<genexpr> args={'.0': <tuple_iterator object at 0x73352e1c0220>, 'part': 3}
+2026-03-08 23:21:25,754 INFO petrobras.observer [seq=6 id=44d72c59-2776-4845-9b43-24a11a5831ca] RETURN petrobras.<genexpr> -> '13' (0.000063s)
+2026-03-08 23:21:25,754 DEBUG petrobras.observer [seq=7 id=c87c3bac-3a77-4227-8352-24715400ce9f] CALL petrobras.<genexpr> args={'.0': <tuple_iterator object at 0x73352e1c0220>, 'part': 13}
+2026-03-08 23:21:25,754 INFO petrobras.observer [seq=8 id=c87c3bac-3a77-4227-8352-24715400ce9f] RETURN petrobras.<genexpr> -> '5' (0.000036s)
+2026-03-08 23:21:25,754 DEBUG petrobras.observer [seq=9 id=f207ec45-42b4-4f8d-8e90-264c5befce85] CALL petrobras.<genexpr> args={'.0': <tuple_iterator object at 0x73352e1c0220>, 'part': 5}
+2026-03-08 23:21:25,754 INFO petrobras.observer [seq=10 id=f207ec45-42b4-4f8d-8e90-264c5befce85] RETURN petrobras.<genexpr> -> None (0.000033s)
+2026-03-08 23:21:25,756 DEBUG petrobras.observer [seq=11 id=4080d5ac-0eb2-4b30-89c7-07e9e75da020] CALL petrobras.core.import_guard.__init__ args={'self': <petrobras.core.import_guard.ImportGuard object at 0x73352defe270>, 'package': 'petrobras', 'allowed': {'run'}}
+2026-03-08 23:21:25,757 INFO petrobras.observer [seq=12 id=4080d5ac-0eb2-4b30-89c7-07e9e75da020] RETURN petrobras.core.import_guard.__init__ -> None (0.000285s)
+2026-03-08 23:21:25,757 DEBUG petrobras.observer [seq=13 id=7c472260-1dcd-48b1-968d-a8af74d3cbc8] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x73352dddf5b0>}
+2026-03-08 23:21:25,757 INFO petrobras.observer [seq=14 id=7c472260-1dcd-48b1-968d-a8af74d3cbc8] RETURN petrobras.<genexpr> -> False (0.000226s)
+2026-03-08 23:21:25,757 DEBUG petrobras.observer [seq=15 id=7468ae8a-f1ee-49f7-8009-c965de637c6b] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x73352dddf5b0>, 'f': <_distutils_hack.DistutilsMetaFinder object at 0x73352e936f90>}
+2026-03-08 23:21:25,758 INFO petrobras.observer [seq=16 id=7468ae8a-f1ee-49f7-8009-c965de637c6b] RETURN petrobras.<genexpr> -> False (0.000302s)
+2026-03-08 23:21:25,758 DEBUG petrobras.observer [seq=17 id=0a50c682-f139-410a-89aa-60108ac25af0] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x73352dddf5b0>, 'f': <_virtualenv._Finder object at 0x73352e936e40>}
+2026-03-08 23:21:25,758 INFO petrobras.observer [seq=18 id=0a50c682-f139-410a-89aa-60108ac25af0] RETURN petrobras.<genexpr> -> False (0.000099s)
+2026-03-08 23:21:25,758 DEBUG petrobras.observer [seq=19 id=7b26b446-4f28-41b1-8b3c-0a373264847a] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x73352dddf5b0>, 'f': <class '_frozen_importlib.BuiltinImporter'>}
+2026-03-08 23:21:25,761 INFO petrobras.observer [seq=20 id=7b26b446-4f28-41b1-8b3c-0a373264847a] RETURN petrobras.<genexpr> -> False (0.000082s)
+2026-03-08 23:21:25,761 DEBUG petrobras.observer [seq=21 id=727269b7-7ab4-43a3-b44a-368237f15dba] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x73352dddf5b0>, 'f': <class '_frozen_importlib.FrozenImporter'>}
+2026-03-08 23:21:25,761 INFO petrobras.observer [seq=22 id=727269b7-7ab4-43a3-b44a-368237f15dba] RETURN petrobras.<genexpr> -> False (0.000217s)
+2026-03-08 23:21:25,761 DEBUG petrobras.observer [seq=23 id=d60c7af9-2c86-4c23-9824-26687c02f99d] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x73352dddf5b0>, 'f': <class '_frozen_importlib_external.PathFinder'>}
+2026-03-08 23:21:25,761 INFO petrobras.observer [seq=24 id=d60c7af9-2c86-4c23-9824-26687c02f99d] RETURN petrobras.<genexpr> -> None (0.000082s)
+2026-03-08 23:21:25,761 DEBUG petrobras.observer [seq=25 id=6f82b741-9443-4141-a0e5-00f9506bc03b] CALL petrobras._seal_namespace args={}
+2026-03-08 23:21:25,762 INFO petrobras.observer [seq=26 id=6f82b741-9443-4141-a0e5-00f9506bc03b] RETURN petrobras._seal_namespace -> None (0.000176s)
+2026-03-08 23:21:25,762 DEBUG petrobras.observer [seq=27 id=447b02a8-2820-450d-ad3c-e406bb22495c] CALL petrobras.run args={'name': 'Petro #01'}
+2026-03-08 23:21:25,762 INFO petrobras.observer [seq=28 id=447b02a8-2820-450d-ad3c-e406bb22495c] RETURN petrobras.run -> None (0.000332s)
+2026-03-08 23:21:25,762 DEBUG petrobras.observer [seq=29 id=073ab653-db51-4ece-ace9-63d0d74d2950] CALL petrobras.run args={'name': 'Petro #02'}
+2026-03-08 23:21:25,762 INFO petrobras.observer [seq=30 id=073ab653-db51-4ece-ace9-63d0d74d2950] RETURN petrobras.run -> None (0.000074s)
+2026-03-08 23:21:25,763 DEBUG petrobras.observer [seq=31 id=67fea3fd-9a68-4e7b-a5f6-01669ce51a60] CALL petrobras.run args={'name': 'Petro #03'}
+2026-03-08 23:21:25,763 INFO petrobras.observer [seq=32 id=67fea3fd-9a68-4e7b-a5f6-01669ce51a60] RETURN petrobras.run -> None (0.000168s)
+2026-03-08 23:21:46,262 DEBUG petrobras.observer [seq=3 id=a5087d68-713e-44aa-b4bc-13a9a85dda78] CALL petrobras.<genexpr> args={'.0': <tuple_iterator object at 0x7a88da30c460>}
+2026-03-08 23:21:46,262 INFO petrobras.observer [seq=4 id=a5087d68-713e-44aa-b4bc-13a9a85dda78] RETURN petrobras.<genexpr> -> '3' (0.000179s)
+2026-03-08 23:21:46,262 DEBUG petrobras.observer [seq=5 id=0f69da76-e663-47ee-b5ad-a0829223a60b] CALL petrobras.<genexpr> args={'.0': <tuple_iterator object at 0x7a88da30c460>, 'part': 3}
+2026-03-08 23:21:46,262 INFO petrobras.observer [seq=6 id=0f69da76-e663-47ee-b5ad-a0829223a60b] RETURN petrobras.<genexpr> -> '13' (0.000033s)
+2026-03-08 23:21:46,263 DEBUG petrobras.observer [seq=7 id=d0a7a4e2-bc35-487c-aee2-2dccbd7e4f68] CALL petrobras.<genexpr> args={'.0': <tuple_iterator object at 0x7a88da30c460>, 'part': 13}
+2026-03-08 23:21:46,263 INFO petrobras.observer [seq=8 id=d0a7a4e2-bc35-487c-aee2-2dccbd7e4f68] RETURN petrobras.<genexpr> -> '5' (0.000030s)
+2026-03-08 23:21:46,263 DEBUG petrobras.observer [seq=9 id=ebfdfba8-560b-41f9-88d5-7cc83b0dabf3] CALL petrobras.<genexpr> args={'.0': <tuple_iterator object at 0x7a88da30c460>, 'part': 5}
+2026-03-08 23:21:46,263 INFO petrobras.observer [seq=10 id=ebfdfba8-560b-41f9-88d5-7cc83b0dabf3] RETURN petrobras.<genexpr> -> None (0.000019s)
+2026-03-08 23:21:46,264 DEBUG petrobras.observer [seq=11 id=0798a3ac-d532-41c6-be39-cf13c09b4076] CALL petrobras.core.import_guard.__init__ args={'self': <petrobras.core.import_guard.ImportGuard object at 0x7a88da326270>, 'package': 'petrobras', 'allowed': {'run'}}
+2026-03-08 23:21:46,264 INFO petrobras.observer [seq=12 id=0798a3ac-d532-41c6-be39-cf13c09b4076] RETURN petrobras.core.import_guard.__init__ -> None (0.000099s)
+2026-03-08 23:21:46,264 DEBUG petrobras.observer [seq=13 id=0e64bbb0-e8be-4a4d-908e-6f7a44227d23] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x7a88da203670>}
+2026-03-08 23:21:46,264 INFO petrobras.observer [seq=14 id=0e64bbb0-e8be-4a4d-908e-6f7a44227d23] RETURN petrobras.<genexpr> -> False (0.000027s)
+2026-03-08 23:21:46,264 DEBUG petrobras.observer [seq=15 id=fe8bec05-356d-4fb1-b926-a1622ef78405] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x7a88da203670>, 'f': <_distutils_hack.DistutilsMetaFinder object at 0x7a88dad36f90>}
+2026-03-08 23:21:46,264 INFO petrobras.observer [seq=16 id=fe8bec05-356d-4fb1-b926-a1622ef78405] RETURN petrobras.<genexpr> -> False (0.000024s)
+2026-03-08 23:21:46,264 DEBUG petrobras.observer [seq=17 id=f5eaecb7-408e-4de8-b6a3-a0844566a88c] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x7a88da203670>, 'f': <_virtualenv._Finder object at 0x7a88dad36e40>}
+2026-03-08 23:21:46,264 INFO petrobras.observer [seq=18 id=f5eaecb7-408e-4de8-b6a3-a0844566a88c] RETURN petrobras.<genexpr> -> False (0.000019s)
+2026-03-08 23:21:46,264 DEBUG petrobras.observer [seq=19 id=a1d60d0a-3ef8-4c10-b1e9-d31f65eaa779] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x7a88da203670>, 'f': <class '_frozen_importlib.BuiltinImporter'>}
+2026-03-08 23:21:46,265 INFO petrobras.observer [seq=20 id=a1d60d0a-3ef8-4c10-b1e9-d31f65eaa779] RETURN petrobras.<genexpr> -> False (0.000033s)
+2026-03-08 23:21:46,265 DEBUG petrobras.observer [seq=21 id=9cc6fac5-caf4-4cf1-8425-dd0452db4d28] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x7a88da203670>, 'f': <class '_frozen_importlib.FrozenImporter'>}
+2026-03-08 23:21:46,265 INFO petrobras.observer [seq=22 id=9cc6fac5-caf4-4cf1-8425-dd0452db4d28] RETURN petrobras.<genexpr> -> False (0.000086s)
+2026-03-08 23:21:46,265 DEBUG petrobras.observer [seq=23 id=6be01c68-05f1-4fa0-b7b6-324406559683] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x7a88da203670>, 'f': <class '_frozen_importlib_external.PathFinder'>}
+2026-03-08 23:21:46,265 INFO petrobras.observer [seq=24 id=6be01c68-05f1-4fa0-b7b6-324406559683] RETURN petrobras.<genexpr> -> None (0.000025s)
+2026-03-08 23:21:46,265 DEBUG petrobras.observer [seq=25 id=f72af44d-e83d-4f29-a0a2-6ce8e491afbe] CALL petrobras._seal_namespace args={}
+2026-03-08 23:21:46,265 INFO petrobras.observer [seq=26 id=f72af44d-e83d-4f29-a0a2-6ce8e491afbe] RETURN petrobras._seal_namespace -> None (0.000041s)
+2026-03-08 23:21:46,265 DEBUG petrobras.observer [seq=27 id=6cb186d1-d1fc-4c70-a3a3-fa3e54736cfb] CALL petrobras.run args={'name': 'Petro #01'}
+2026-03-08 23:21:46,265 INFO petrobras.observer [seq=28 id=6cb186d1-d1fc-4c70-a3a3-fa3e54736cfb] RETURN petrobras.run -> None (0.000042s)
+2026-03-08 23:21:46,265 DEBUG petrobras.observer [seq=29 id=0b7bccc7-efb1-4514-a8f5-e8c4e2f56a65] CALL petrobras.run args={'name': 'Petro #02'}
+2026-03-08 23:21:46,265 INFO petrobras.observer [seq=30 id=0b7bccc7-efb1-4514-a8f5-e8c4e2f56a65] RETURN petrobras.run -> None (0.000028s)
+2026-03-08 23:21:46,265 DEBUG petrobras.observer [seq=31 id=e5d8b3e4-58ec-4fd8-a2ac-613d6aecf39b] CALL petrobras.run args={'name': 'Petro #03'}
+2026-03-08 23:21:46,265 INFO petrobras.observer [seq=32 id=e5d8b3e4-58ec-4fd8-a2ac-613d6aecf39b] RETURN petrobras.run -> None (0.000025s)
+2026-03-08 23:21:46,265 DEBUG petrobras.observer [seq=33 id=3eac9cb2-fe12-458d-8ec0-85d9d34e79fe] CALL petrobras.run args={'name': 'Petro #04'}
+2026-03-08 23:21:46,265 INFO petrobras.observer [seq=34 id=3eac9cb2-fe12-458d-8ec0-85d9d34e79fe] RETURN petrobras.run -> None (0.000024s)
+2026-03-08 23:21:46,265 DEBUG petrobras.observer [seq=35 id=f6f596de-c4c6-49ac-afae-ce0b7e109a5d] CALL petrobras.run args={'name': 'Petro #05'}
+2026-03-08 23:21:46,265 INFO petrobras.observer [seq=36 id=f6f596de-c4c6-49ac-afae-ce0b7e109a5d] RETURN petrobras.run -> None (0.000033s)
+2026-03-08 23:21:46,265 DEBUG petrobras.observer [seq=37 id=83c06e48-7274-465d-b134-f489062ac13d] CALL petrobras.run args={'name': 'Petro #06'}
+2026-03-08 23:21:46,266 INFO petrobras.observer [seq=38 id=83c06e48-7274-465d-b134-f489062ac13d] RETURN petrobras.run -> None (0.000136s)
+2026-03-08 23:21:46,266 DEBUG petrobras.observer [seq=39 id=0c19ed90-a68f-47ed-b5a0-edec65a8be74] CALL petrobras.run args={'name': 'Petro #07'}
+2026-03-08 23:21:46,266 INFO petrobras.observer [seq=40 id=0c19ed90-a68f-47ed-b5a0-edec65a8be74] RETURN petrobras.run -> None (0.000049s)
+2026-03-08 23:21:46,266 DEBUG petrobras.observer [seq=41 id=c39237a4-7c97-45dc-a3cd-dfb5c9671b81] CALL petrobras.run args={'name': 'Petro #08'}
+2026-03-08 23:21:46,267 INFO petrobras.observer [seq=42 id=c39237a4-7c97-45dc-a3cd-dfb5c9671b81] RETURN petrobras.run -> None (0.000043s)
+2026-03-08 23:26:02,121 DEBUG petrobras.observer [seq=3 id=f43e0eea-b5fe-485b-82e2-db3052a50368] CALL petrobras.<genexpr> args={'.0': <tuple_iterator object at 0x71db97552fb0>}
+2026-03-08 23:26:02,121 INFO petrobras.observer [seq=4 id=f43e0eea-b5fe-485b-82e2-db3052a50368] RETURN petrobras.<genexpr> -> '3' (0.000260s)
+2026-03-08 23:26:02,121 DEBUG petrobras.observer [seq=5 id=9995729e-e1af-4703-80c4-9c475d9013cf] CALL petrobras.<genexpr> args={'.0': <tuple_iterator object at 0x71db97552fb0>, 'part': 3}
+2026-03-08 23:26:02,121 INFO petrobras.observer [seq=6 id=9995729e-e1af-4703-80c4-9c475d9013cf] RETURN petrobras.<genexpr> -> '13' (0.000055s)
+2026-03-08 23:26:02,121 DEBUG petrobras.observer [seq=7 id=01a7bd37-33eb-4a40-8959-dc110d69dc89] CALL petrobras.<genexpr> args={'.0': <tuple_iterator object at 0x71db97552fb0>, 'part': 13}
+2026-03-08 23:26:02,121 INFO petrobras.observer [seq=8 id=01a7bd37-33eb-4a40-8959-dc110d69dc89] RETURN petrobras.<genexpr> -> '5' (0.000056s)
+2026-03-08 23:26:02,121 DEBUG petrobras.observer [seq=9 id=798dbe2c-a2f4-4979-aa11-b4f3d128b424] CALL petrobras.<genexpr> args={'.0': <tuple_iterator object at 0x71db97552fb0>, 'part': 5}
+2026-03-08 23:26:02,121 INFO petrobras.observer [seq=10 id=798dbe2c-a2f4-4979-aa11-b4f3d128b424] RETURN petrobras.<genexpr> -> None (0.000030s)
+2026-03-08 23:26:02,123 DEBUG petrobras.observer [seq=11 id=6a30d307-a018-45b1-a0b3-8ffa8cdabd94] CALL petrobras.core.import_guard.__init__ args={'self': <petrobras.core.import_guard.ImportGuard object at 0x71db96fc2a50>, 'package': 'petrobras', 'allowed': {'run'}}
+2026-03-08 23:26:02,123 INFO petrobras.observer [seq=12 id=6a30d307-a018-45b1-a0b3-8ffa8cdabd94] RETURN petrobras.core.import_guard.__init__ -> None (0.000138s)
+2026-03-08 23:26:02,123 DEBUG petrobras.observer [seq=13 id=78214e89-cb7e-4e07-8053-03b6eb672263] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x71db966d9090>}
+2026-03-08 23:26:02,123 INFO petrobras.observer [seq=14 id=78214e89-cb7e-4e07-8053-03b6eb672263] RETURN petrobras.<genexpr> -> False (0.000047s)
+2026-03-08 23:26:02,123 DEBUG petrobras.observer [seq=15 id=02c4de69-c6ac-4a8d-9d4d-7dd7700e6cc9] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x71db966d9090>, 'f': <_distutils_hack.DistutilsMetaFinder object at 0x71db97d2af90>}
+2026-03-08 23:26:02,124 INFO petrobras.observer [seq=16 id=02c4de69-c6ac-4a8d-9d4d-7dd7700e6cc9] RETURN petrobras.<genexpr> -> False (0.000184s)
+2026-03-08 23:26:02,124 DEBUG petrobras.observer [seq=17 id=f2f1a01d-59ef-4a02-9abb-0b787110b8a0] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x71db966d9090>, 'f': <_virtualenv._Finder object at 0x71db97d2ae40>}
+2026-03-08 23:26:02,124 INFO petrobras.observer [seq=18 id=f2f1a01d-59ef-4a02-9abb-0b787110b8a0] RETURN petrobras.<genexpr> -> False (0.000132s)
+2026-03-08 23:26:02,124 DEBUG petrobras.observer [seq=19 id=40aff80d-c07b-4f96-a69b-5c44f9d22741] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x71db966d9090>, 'f': <class '_frozen_importlib.BuiltinImporter'>}
+2026-03-08 23:26:02,124 INFO petrobras.observer [seq=20 id=40aff80d-c07b-4f96-a69b-5c44f9d22741] RETURN petrobras.<genexpr> -> False (0.000107s)
+2026-03-08 23:26:02,125 DEBUG petrobras.observer [seq=21 id=5b9b90ea-1fce-4539-9ab9-b87b2118cf96] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x71db966d9090>, 'f': <class '_frozen_importlib.FrozenImporter'>}
+2026-03-08 23:26:02,125 INFO petrobras.observer [seq=22 id=5b9b90ea-1fce-4539-9ab9-b87b2118cf96] RETURN petrobras.<genexpr> -> False (0.000112s)
+2026-03-08 23:26:02,125 DEBUG petrobras.observer [seq=23 id=1b69f796-cd7e-4519-b55a-1af597e02588] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x71db966d9090>, 'f': <class '_frozen_importlib_external.PathFinder'>}
+2026-03-08 23:26:02,125 INFO petrobras.observer [seq=24 id=1b69f796-cd7e-4519-b55a-1af597e02588] RETURN petrobras.<genexpr> -> None (0.000100s)
+2026-03-08 23:26:02,126 DEBUG petrobras.observer [seq=25 id=77f72c3c-10f2-4944-b93f-1a9aff36fe0a] CALL petrobras._seal_namespace args={}
+2026-03-08 23:26:02,126 INFO petrobras.observer [seq=26 id=77f72c3c-10f2-4944-b93f-1a9aff36fe0a] RETURN petrobras._seal_namespace -> None (0.000152s)
+2026-03-08 23:26:02,126 DEBUG petrobras.observer [seq=27 id=6d36b979-ae2d-4d81-af81-931f6d373756] CALL petrobras.run args={'name': 'Petro #01'}
+2026-03-08 23:26:02,131 INFO petrobras.observer [seq=28 id=6d36b979-ae2d-4d81-af81-931f6d373756] RETURN petrobras.run -> None (0.004871s)
+2026-03-08 23:26:02,131 DEBUG petrobras.observer [seq=29 id=68834b5b-112d-4e26-9bcb-4182388c9019] CALL petrobras.run args={'name': 'Petro #02'}
+2026-03-08 23:26:02,133 INFO petrobras.observer [seq=30 id=68834b5b-112d-4e26-9bcb-4182388c9019] RETURN petrobras.run -> None (0.002259s)
+2026-03-08 23:26:02,134 DEBUG petrobras.observer [seq=31 id=7830ea07-91f3-48fa-8f73-2767d5764058] CALL petrobras.run args={'name': 'Petro #03'}
+2026-03-08 23:26:02,136 INFO petrobras.observer [seq=32 id=7830ea07-91f3-48fa-8f73-2767d5764058] RETURN petrobras.run -> None (0.002279s)
+2026-03-08 23:26:02,136 DEBUG petrobras.observer [seq=33 id=31f78ddd-c311-4407-af42-c55827db661b] CALL petrobras.run args={'name': 'Petro #04'}
+2026-03-08 23:26:02,138 INFO petrobras.observer [seq=34 id=31f78ddd-c311-4407-af42-c55827db661b] RETURN petrobras.run -> None (0.002183s)
+2026-03-08 23:26:02,139 DEBUG petrobras.observer [seq=35 id=d99c3751-8d5f-4769-9d22-2dfd5d586a55] CALL petrobras.run args={'name': 'Petro #05'}
+2026-03-08 23:26:02,141 INFO petrobras.observer [seq=36 id=d99c3751-8d5f-4769-9d22-2dfd5d586a55] RETURN petrobras.run -> None (0.002231s)
+2026-03-08 23:26:02,141 DEBUG petrobras.observer [seq=37 id=4d3a2dc1-fa81-414b-b97d-ec34fddb886e] CALL petrobras.run args={'name': 'Petro #06'}
+2026-03-08 23:26:02,148 INFO petrobras.observer [seq=38 id=4d3a2dc1-fa81-414b-b97d-ec34fddb886e] RETURN petrobras.run -> None (0.006801s)
+2026-03-08 23:26:02,148 DEBUG petrobras.observer [seq=39 id=37b96280-5bba-45c4-8a2b-018eb529e292] CALL petrobras.run args={'name': 'Petro #07'}
+2026-03-08 23:26:02,154 INFO petrobras.observer [seq=40 id=37b96280-5bba-45c4-8a2b-018eb529e292] RETURN petrobras.run -> None (0.005647s)
+2026-03-08 23:26:02,154 DEBUG petrobras.observer [seq=41 id=bfa52808-0846-45d3-b867-394266faded2] CALL petrobras.run args={'name': 'Petro #08'}
+2026-03-08 23:26:02,160 INFO petrobras.observer [seq=42 id=bfa52808-0846-45d3-b867-394266faded2] RETURN petrobras.run -> None (0.004819s)
+2026-03-08 23:26:07,329 DEBUG petrobras.observer [seq=3 id=6aa95101-07c1-4cf8-bc25-807fc1d094d3] CALL petrobras.<genexpr> args={'.0': <tuple_iterator object at 0x7c44653c2620>}
+2026-03-08 23:26:07,329 INFO petrobras.observer [seq=4 id=6aa95101-07c1-4cf8-bc25-807fc1d094d3] RETURN petrobras.<genexpr> -> '3' (0.000216s)
+2026-03-08 23:26:07,329 DEBUG petrobras.observer [seq=5 id=a8005ceb-c6c5-4709-beba-da361c80bf2d] CALL petrobras.<genexpr> args={'.0': <tuple_iterator object at 0x7c44653c2620>, 'part': 3}
+2026-03-08 23:26:07,329 INFO petrobras.observer [seq=6 id=a8005ceb-c6c5-4709-beba-da361c80bf2d] RETURN petrobras.<genexpr> -> '13' (0.000047s)
+2026-03-08 23:26:07,329 DEBUG petrobras.observer [seq=7 id=19222b43-e748-4c63-970d-8011648c033a] CALL petrobras.<genexpr> args={'.0': <tuple_iterator object at 0x7c44653c2620>, 'part': 13}
+2026-03-08 23:26:07,329 INFO petrobras.observer [seq=8 id=19222b43-e748-4c63-970d-8011648c033a] RETURN petrobras.<genexpr> -> '5' (0.000041s)
+2026-03-08 23:26:07,329 DEBUG petrobras.observer [seq=9 id=434e6450-c1e0-493e-abef-714d5d1ffc31] CALL petrobras.<genexpr> args={'.0': <tuple_iterator object at 0x7c44653c2620>, 'part': 5}
+2026-03-08 23:26:07,329 INFO petrobras.observer [seq=10 id=434e6450-c1e0-493e-abef-714d5d1ffc31] RETURN petrobras.<genexpr> -> None (0.000029s)
+2026-03-08 23:26:07,331 DEBUG petrobras.observer [seq=11 id=5cfc7ed0-48a2-4e57-84a9-a53010e0cfc8] CALL petrobras.core.import_guard.__init__ args={'self': <petrobras.core.import_guard.ImportGuard object at 0x7c446501aa50>, 'package': 'petrobras', 'allowed': {'run'}}
+2026-03-08 23:26:07,331 INFO petrobras.observer [seq=12 id=5cfc7ed0-48a2-4e57-84a9-a53010e0cfc8] RETURN petrobras.core.import_guard.__init__ -> None (0.000095s)
+2026-03-08 23:26:07,331 DEBUG petrobras.observer [seq=13 id=1cf9368c-7a6f-4a70-ae64-7bcd56a09e27] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x7c4464735330>}
+2026-03-08 23:26:07,331 INFO petrobras.observer [seq=14 id=1cf9368c-7a6f-4a70-ae64-7bcd56a09e27] RETURN petrobras.<genexpr> -> False (0.000041s)
+2026-03-08 23:26:07,331 DEBUG petrobras.observer [seq=15 id=71ee4903-c61b-432a-9c38-3c88fd3f0df7] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x7c4464735330>, 'f': <_distutils_hack.DistutilsMetaFinder object at 0x7c4465da2f90>}
+2026-03-08 23:26:07,331 INFO petrobras.observer [seq=16 id=71ee4903-c61b-432a-9c38-3c88fd3f0df7] RETURN petrobras.<genexpr> -> False (0.000051s)
+2026-03-08 23:26:07,331 DEBUG petrobras.observer [seq=17 id=ca356e89-e0bd-473b-bfbd-2773d199855d] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x7c4464735330>, 'f': <_virtualenv._Finder object at 0x7c4465da2e40>}
+2026-03-08 23:26:07,331 INFO petrobras.observer [seq=18 id=ca356e89-e0bd-473b-bfbd-2773d199855d] RETURN petrobras.<genexpr> -> False (0.000044s)
+2026-03-08 23:26:07,331 DEBUG petrobras.observer [seq=19 id=54666540-fd91-4065-a29e-ee3d809418b5] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x7c4464735330>, 'f': <class '_frozen_importlib.BuiltinImporter'>}
+2026-03-08 23:26:07,331 INFO petrobras.observer [seq=20 id=54666540-fd91-4065-a29e-ee3d809418b5] RETURN petrobras.<genexpr> -> False (0.000036s)
+2026-03-08 23:26:07,331 DEBUG petrobras.observer [seq=21 id=5bf460d2-9979-4548-9868-bc0e32bee2d5] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x7c4464735330>, 'f': <class '_frozen_importlib.FrozenImporter'>}
+2026-03-08 23:26:07,331 INFO petrobras.observer [seq=22 id=5bf460d2-9979-4548-9868-bc0e32bee2d5] RETURN petrobras.<genexpr> -> False (0.000035s)
+2026-03-08 23:26:07,331 DEBUG petrobras.observer [seq=23 id=5ea4ddeb-7a6f-4b6d-8c1f-eb483ecf3a40] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x7c4464735330>, 'f': <class '_frozen_importlib_external.PathFinder'>}
+2026-03-08 23:26:07,331 INFO petrobras.observer [seq=24 id=5ea4ddeb-7a6f-4b6d-8c1f-eb483ecf3a40] RETURN petrobras.<genexpr> -> None (0.000036s)
+2026-03-08 23:26:07,332 DEBUG petrobras.observer [seq=25 id=2d569e15-30e6-41db-9ca6-30ce7cc863d6] CALL petrobras._seal_namespace args={}
+2026-03-08 23:26:07,332 INFO petrobras.observer [seq=26 id=2d569e15-30e6-41db-9ca6-30ce7cc863d6] RETURN petrobras._seal_namespace -> None (0.000066s)
+2026-03-08 23:26:07,332 DEBUG petrobras.observer [seq=27 id=15463841-8d86-4c4d-8e6a-ab67b75c25a6] CALL petrobras.run args={'name': 'Petro #01'}
+2026-03-08 23:26:07,336 INFO petrobras.observer [seq=28 id=15463841-8d86-4c4d-8e6a-ab67b75c25a6] RETURN petrobras.run -> None (0.003684s)
+2026-03-08 23:26:07,336 DEBUG petrobras.observer [seq=29 id=df78f598-64da-4404-b7d2-0d90f62e4482] CALL petrobras.run args={'name': 'Petro #02'}
+2026-03-08 23:26:07,338 INFO petrobras.observer [seq=30 id=df78f598-64da-4404-b7d2-0d90f62e4482] RETURN petrobras.run -> None (0.001929s)
+2026-03-08 23:26:07,338 DEBUG petrobras.observer [seq=31 id=8d4790b3-fab3-4016-942e-16ab86d7bdc0] CALL petrobras.run args={'name': 'Petro #03'}
+2026-03-08 23:26:07,341 INFO petrobras.observer [seq=32 id=8d4790b3-fab3-4016-942e-16ab86d7bdc0] RETURN petrobras.run -> None (0.002736s)
+2026-03-08 23:26:07,341 DEBUG petrobras.observer [seq=33 id=a579740c-5cd4-4b76-86fa-5e503ef94d11] CALL petrobras.run args={'name': 'Petro #04'}
+2026-03-08 23:26:07,345 INFO petrobras.observer [seq=34 id=a579740c-5cd4-4b76-86fa-5e503ef94d11] RETURN petrobras.run -> None (0.003993s)
+2026-03-08 23:26:07,345 DEBUG petrobras.observer [seq=35 id=e574aec7-9691-4f5b-9daa-c542d98c93f3] CALL petrobras.run args={'name': 'Petro #05'}
+2026-03-08 23:26:07,349 INFO petrobras.observer [seq=36 id=e574aec7-9691-4f5b-9daa-c542d98c93f3] RETURN petrobras.run -> None (0.003743s)
+2026-03-08 23:26:07,350 DEBUG petrobras.observer [seq=37 id=abc88c64-2088-42da-a7a7-d96a8db18325] CALL petrobras.run args={'name': 'Petro #06'}
+2026-03-08 23:26:07,354 INFO petrobras.observer [seq=38 id=abc88c64-2088-42da-a7a7-d96a8db18325] RETURN petrobras.run -> None (0.003984s)
+2026-03-08 23:26:07,354 DEBUG petrobras.observer [seq=39 id=82e2a722-94dd-4f8c-8c53-17db2161a32e] CALL petrobras.run args={'name': 'Petro #07'}
+2026-03-08 23:26:07,359 INFO petrobras.observer [seq=40 id=82e2a722-94dd-4f8c-8c53-17db2161a32e] RETURN petrobras.run -> None (0.004459s)
+2026-03-08 23:26:07,359 DEBUG petrobras.observer [seq=41 id=d802e1dd-8379-4d2e-95e9-38aa803c9eb9] CALL petrobras.run args={'name': 'Petro #08'}
+2026-03-08 23:26:07,363 INFO petrobras.observer [seq=42 id=d802e1dd-8379-4d2e-95e9-38aa803c9eb9] RETURN petrobras.run -> None (0.004004s)
+2026-03-08 23:26:17,574 DEBUG petrobras.observer [seq=3 id=e73d9eb6-abaf-42d2-abe8-4d8b817a89de] CALL petrobras.<genexpr> args={'.0': <tuple_iterator object at 0x76d9c6a47fa0>}
+2026-03-08 23:26:17,574 INFO petrobras.observer [seq=4 id=e73d9eb6-abaf-42d2-abe8-4d8b817a89de] RETURN petrobras.<genexpr> -> '3' (0.000168s)
+2026-03-08 23:26:17,574 DEBUG petrobras.observer [seq=5 id=dadabcd1-34df-4ed1-82dc-abe4568e04be] CALL petrobras.<genexpr> args={'.0': <tuple_iterator object at 0x76d9c6a47fa0>, 'part': 3}
+2026-03-08 23:26:17,574 INFO petrobras.observer [seq=6 id=dadabcd1-34df-4ed1-82dc-abe4568e04be] RETURN petrobras.<genexpr> -> '13' (0.000034s)
+2026-03-08 23:26:17,574 DEBUG petrobras.observer [seq=7 id=f7b1db12-034f-4dc3-b8db-b0c346a3e423] CALL petrobras.<genexpr> args={'.0': <tuple_iterator object at 0x76d9c6a47fa0>, 'part': 13}
+2026-03-08 23:26:17,574 INFO petrobras.observer [seq=8 id=f7b1db12-034f-4dc3-b8db-b0c346a3e423] RETURN petrobras.<genexpr> -> '5' (0.000043s)
+2026-03-08 23:26:17,574 DEBUG petrobras.observer [seq=9 id=9f43a9d3-b812-439f-91a0-edfdbf6e33d6] CALL petrobras.<genexpr> args={'.0': <tuple_iterator object at 0x76d9c6a47fa0>, 'part': 5}
+2026-03-08 23:26:17,574 INFO petrobras.observer [seq=10 id=9f43a9d3-b812-439f-91a0-edfdbf6e33d6] RETURN petrobras.<genexpr> -> None (0.000027s)
+2026-03-08 23:26:17,575 DEBUG petrobras.observer [seq=11 id=d80fab4b-0d94-4562-9f76-1218a6c92a9e] CALL petrobras.core.import_guard.__init__ args={'self': <petrobras.core.import_guard.ImportGuard object at 0x76d9c6776a50>, 'package': 'petrobras', 'allowed': {'run'}}
+2026-03-08 23:26:17,576 INFO petrobras.observer [seq=12 id=d80fab4b-0d94-4562-9f76-1218a6c92a9e] RETURN petrobras.core.import_guard.__init__ -> None (0.000064s)
+2026-03-08 23:26:17,576 DEBUG petrobras.observer [seq=13 id=efd2bcc8-4b03-4a81-8b85-f6d2aca221b2] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x76d9c5e911b0>}
+2026-03-08 23:26:17,576 INFO petrobras.observer [seq=14 id=efd2bcc8-4b03-4a81-8b85-f6d2aca221b2] RETURN petrobras.<genexpr> -> False (0.000028s)
+2026-03-08 23:26:17,576 DEBUG petrobras.observer [seq=15 id=79c103dc-e44b-4e11-b13b-c76c9c77f2fb] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x76d9c5e911b0>, 'f': <_distutils_hack.DistutilsMetaFinder object at 0x76d9c7136f90>}
+2026-03-08 23:26:17,576 INFO petrobras.observer [seq=16 id=79c103dc-e44b-4e11-b13b-c76c9c77f2fb] RETURN petrobras.<genexpr> -> False (0.000030s)
+2026-03-08 23:26:17,576 DEBUG petrobras.observer [seq=17 id=44878e70-2dbf-4c3a-b814-3222109c9457] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x76d9c5e911b0>, 'f': <_virtualenv._Finder object at 0x76d9c7136e40>}
+2026-03-08 23:26:17,576 INFO petrobras.observer [seq=18 id=44878e70-2dbf-4c3a-b814-3222109c9457] RETURN petrobras.<genexpr> -> False (0.000021s)
+2026-03-08 23:26:17,576 DEBUG petrobras.observer [seq=19 id=492f13c2-893a-43d2-a73b-415cbdafa04c] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x76d9c5e911b0>, 'f': <class '_frozen_importlib.BuiltinImporter'>}
+2026-03-08 23:26:17,576 INFO petrobras.observer [seq=20 id=492f13c2-893a-43d2-a73b-415cbdafa04c] RETURN petrobras.<genexpr> -> False (0.000024s)
+2026-03-08 23:26:17,576 DEBUG petrobras.observer [seq=21 id=e1fea8fd-e686-4089-b003-eeb0ed6cbe1d] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x76d9c5e911b0>, 'f': <class '_frozen_importlib.FrozenImporter'>}
+2026-03-08 23:26:17,576 INFO petrobras.observer [seq=22 id=e1fea8fd-e686-4089-b003-eeb0ed6cbe1d] RETURN petrobras.<genexpr> -> False (0.000019s)
+2026-03-08 23:26:17,576 DEBUG petrobras.observer [seq=23 id=9879470a-381d-4589-a057-286fa055817f] CALL petrobras.<genexpr> args={'.0': <list_iterator object at 0x76d9c5e911b0>, 'f': <class '_frozen_importlib_external.PathFinder'>}
+2026-03-08 23:26:17,576 INFO petrobras.observer [seq=24 id=9879470a-381d-4589-a057-286fa055817f] RETURN petrobras.<genexpr> -> None (0.000028s)
+2026-03-08 23:26:17,576 DEBUG petrobras.observer [seq=25 id=4efee34f-0143-4e5c-8ebf-fad3c353c719] CALL petrobras._seal_namespace args={}
+2026-03-08 23:26:17,576 INFO petrobras.observer [seq=26 id=4efee34f-0143-4e5c-8ebf-fad3c353c719] RETURN petrobras._seal_namespace -> None (0.000052s)
+2026-03-08 23:26:17,576 DEBUG petrobras.observer [seq=27 id=1675c99d-9f5a-4bf9-8e56-26678e1c009f] CALL petrobras.run args={'name': 'Petro #01'}
+2026-03-08 23:26:17,578 INFO petrobras.observer [seq=28 id=1675c99d-9f5a-4bf9-8e56-26678e1c009f] RETURN petrobras.run -> None (0.002227s)
+2026-03-08 23:26:17,578 DEBUG petrobras.observer [seq=29 id=cbc68ecc-cc94-4867-abd0-912ca1097367] CALL petrobras.run args={'name': 'Petro #02'}
+2026-03-08 23:26:17,580 INFO petrobras.observer [seq=30 id=cbc68ecc-cc94-4867-abd0-912ca1097367] RETURN petrobras.run -> None (0.001432s)
+2026-03-08 23:26:17,580 DEBUG petrobras.observer [seq=31 id=2a091b2d-f90a-4108-9219-8d7d389a018b] CALL petrobras.run args={'name': 'Petro #03'}
+2026-03-08 23:26:17,582 INFO petrobras.observer [seq=32 id=2a091b2d-f90a-4108-9219-8d7d389a018b] RETURN petrobras.run -> None (0.001960s)
+2026-03-08 23:26:17,582 DEBUG petrobras.observer [seq=33 id=30ae4539-d113-4abf-8f70-1d65b4d3aa57] CALL petrobras.run args={'name': 'Petro #04'}
+2026-03-08 23:26:17,584 INFO petrobras.observer [seq=34 id=30ae4539-d113-4abf-8f70-1d65b4d3aa57] RETURN petrobras.run -> None (0.001329s)
+2026-03-08 23:26:17,584 DEBUG petrobras.observer [seq=35 id=1422741d-cc58-4a93-85cd-e5e339894f1e] CALL petrobras.run args={'name': 'Petro #05'}
+2026-03-08 23:26:17,585 INFO petrobras.observer [seq=36 id=1422741d-cc58-4a93-85cd-e5e339894f1e] RETURN petrobras.run -> None (0.001209s)
+2026-03-08 23:26:17,585 DEBUG petrobras.observer [seq=37 id=4fb2ad7e-c016-440e-a9c9-5574afc067bb] CALL petrobras.run args={'name': 'Petro #06'}
+2026-03-08 23:26:17,586 INFO petrobras.observer [seq=38 id=4fb2ad7e-c016-440e-a9c9-5574afc067bb] RETURN petrobras.run -> None (0.001209s)
+2026-03-08 23:26:17,586 DEBUG petrobras.observer [seq=39 id=c727d496-404e-451d-8b78-8cb69ada0511] CALL petrobras.run args={'name': 'Petro #07'}
+2026-03-08 23:26:17,588 INFO petrobras.observer [seq=40 id=c727d496-404e-451d-8b78-8cb69ada0511] RETURN petrobras.run -> None (0.001176s)
+2026-03-08 23:26:17,588 DEBUG petrobras.observer [seq=41 id=5861f46a-73be-4a04-92f6-5fa83ceaa2fc] CALL petrobras.run args={'name': 'Petro #08'}
+2026-03-08 23:26:17,589 INFO petrobras.observer [seq=42 id=5861f46a-73be-4a04-92f6-5fa83ceaa2fc] RETURN petrobras.run -> None (0.001143s)
+2026-03-08 23:26:17,589 DEBUG petrobras.observer [seq=43 id=677efa4a-90f9-4969-a7f3-7f5d7446755d] CALL petrobras.run args={'name': 'Petro #09'}
+2026-03-08 23:26:17,590 INFO petrobras.observer [seq=44 id=677efa4a-90f9-4969-a7f3-7f5d7446755d] RETURN petrobras.run -> None (0.001152s)
+2026-03-08 23:26:17,590 DEBUG petrobras.observer [seq=45 id=4608a124-ad98-4ab0-b5ed-d5a57f814560] CALL petrobras.run args={'name': 'Petro #10'}
+2026-03-08 23:26:17,591 INFO petrobras.observer [seq=46 id=4608a124-ad98-4ab0-b5ed-d5a57f814560] RETURN petrobras.run -> None (0.001135s)
+2026-03-08 23:26:17,591 DEBUG petrobras.observer [seq=47 id=6adf1c73-b620-4f3d-8697-752fbc362047] CALL petrobras.run args={'name': 'Petro #11'}
+2026-03-08 23:26:17,593 INFO petrobras.observer [seq=48 id=6adf1c73-b620-4f3d-8697-752fbc362047] RETURN petrobras.run -> None (0.001170s)
+2026-03-08 23:26:17,593 DEBUG petrobras.observer [seq=49 id=5124d51c-49ee-470f-8701-798ccffc019b] CALL petrobras.run args={'name': 'Petro #12'}
+2026-03-08 23:26:17,594 INFO petrobras.observer [seq=50 id=5124d51c-49ee-470f-8701-798ccffc019b] RETURN petrobras.run -> None (0.001131s)
+2026-03-08 23:26:17,594 DEBUG petrobras.observer [seq=51 id=2f399aee-549d-4d4b-9929-548545476ec7] CALL petrobras.run args={'name': 'Petro #13'}
+2026-03-08 23:26:17,595 INFO petrobras.observer [seq=52 id=2f399aee-549d-4d4b-9929-548545476ec7] RETURN petrobras.run -> None (0.001137s)
+2026-03-08 23:26:17,595 DEBUG petrobras.observer [seq=53 id=40363864-66b4-4796-b11c-27183f5a9e1f] CALL petrobras.run args={'name': 'Petro #14'}
+2026-03-08 23:26:17,596 INFO petrobras.observer [seq=54 id=40363864-66b4-4796-b11c-27183f5a9e1f] RETURN petrobras.run -> None (0.001250s)
+2026-03-08 23:26:17,596 DEBUG petrobras.observer [seq=55 id=9102e3ee-9cef-4c68-8a16-0573d17a24a5] CALL petrobras.run args={'name': 'Petro #15'}
+2026-03-08 23:26:17,599 INFO petrobras.observer [seq=56 id=9102e3ee-9cef-4c68-8a16-0573d17a24a5] RETURN petrobras.run -> None (0.002367s)
+2026-03-08 23:26:17,599 DEBUG petrobras.observer [seq=57 id=4b73db1d-ca36-4209-b6cb-2f11ccf416f7] CALL petrobras.run args={'name': 'Petro #16'}
+2026-03-08 23:26:17,601 INFO petrobras.observer [seq=58 id=4b73db1d-ca36-4209-b6cb-2f11ccf416f7] RETURN petrobras.run -> None (0.001702s)
+2026-03-08 23:26:17,601 DEBUG petrobras.observer [seq=59 id=1d3cf2a9-7503-49e8-b8ad-af0dbce38aa1] CALL petrobras.run args={'name': 'Petro #17'}
+2026-03-08 23:26:17,602 INFO petrobras.observer [seq=60 id=1d3cf2a9-7503-49e8-b8ad-af0dbce38aa1] RETURN petrobras.run -> None (0.001269s)
+2026-03-08 23:26:17,602 DEBUG petrobras.observer [seq=61 id=074bb0ca-eee5-4aa6-a1d0-d636064370cc] CALL petrobras.run args={'name': 'Petro #18'}
+2026-03-08 23:26:17,604 INFO petrobras.observer [seq=62 id=074bb0ca-eee5-4aa6-a1d0-d636064370cc] RETURN petrobras.run -> None (0.001242s)

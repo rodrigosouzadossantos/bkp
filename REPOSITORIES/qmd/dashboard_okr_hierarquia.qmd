@@ -1,0 +1,133 @@
+---
+title: "Dashboard Executivo de OKRs Multi-Repositório"
+author: "Time IA Submarina"
+format:
+  html:
+    toc: true
+    theme: cosmo
+    code-fold: true
+execute:
+  echo: false
+---
+
+```{r}
+library(jsonlite)
+library(dplyr)
+library(plotly)
+library(DT)
+
+# Carrega JSON gerado pelo GitHub Actions
+# Deve conter: repo, issue number, title, labels (okr, tipo, prioridade), state, assignees, body
+okr_data <- fromJSON("okr-dashboard.json")
+
+# Filtra Issues com label "okr"
+okr_data$okr_type <- sapply(okr_data$labels, function(l){
+  if("estratégico" %in% l) return("Estratégico")
+  if("tático" %in% l) return("Tático")
+  if("experimental" %in% l) return("Experimental")
+  return("Outro")
+})
+
+# Extrai entregáveis do corpo da Issue
+okr_data$entregaveis <- sapply(okr_data$body, function(b){
+  lines <- unlist(strsplit(b,"\n"))
+  entreg <- lines[grep("Entregável|Deliverable", lines, ignore.case=TRUE)]
+  if(length(entreg)==0) return("Não especificado") else return(paste(entreg, collapse=", "))
+})
+
+# Progresso por KR
+okr_data$progresso <- ifelse(okr_data$state=="CLOSED",100,0)
+```
+
+---
+
+## 📌 Tabela Interativa: OKRs e Entregáveis
+
+```{r}
+datatable(
+  okr_data %>% select(okr_type, repo, number, title, assignees, entregaveis, state, progresso),
+  filter = "top",
+  options = list(pageLength = 15, autoWidth = TRUE),
+  rownames = FALSE
+)
+```
+
+---
+
+## 📊 Progresso por Tipo de OKR
+
+```{r}
+progress_okr <- okr_data %>%
+  group_by(okr_type) %>%
+  summarise(total=n(),
+            fechadas=sum(state=="CLOSED"),
+            progresso=fechadas/total*100)
+
+plot_ly(progress_okr, x=~okr_type, y=~progresso, type='bar',
+        text=~paste0(round(progresso),"%"), textposition='auto',
+        marker=list(color='rgb(0,128,128)')) %>%
+  layout(title="% de KRs Atingidas por Tipo de OKR",
+         yaxis=list(title="% Concluído"), xaxis=list(title="Tipo de OKR"))
+```
+
+---
+
+## 🚀 Progresso por Repositório e Entregável
+
+```{r}
+# Agrupado por repositório e entregável
+progress_repo_entreg <- okr_data %>%
+  group_by(repo, entregaveis) %>%
+  summarise(total=n(),
+            fechadas=sum(state=="CLOSED"),
+            progresso=fechadas/total*100)
+
+plot_ly(progress_repo_entreg, x=~entregaveis, y=~progresso, type='bar', color=~repo,
+        text=~paste0(round(progresso),"%"), textposition='auto') %>%
+  layout(title="% de KRs Concluídas por Entregável / Repositório",
+         yaxis=list(title="% Concluído"),
+         xaxis=list(title="Entregável"))
+```
+
+---
+
+## 🌐 Hierarquia OKR – Visual Interativa
+
+```{r}
+okr_hierarchy <- okr_data %>%
+  group_by(okr_type, repo) %>%
+  summarise(total=n(),
+            fechadas=sum(state=="CLOSED"),
+            progresso=fechadas/total*100)
+
+plot_ly(okr_hierarchy, x=~repo, y=~progresso, color=~okr_type, type='bar',
+        text=~paste0(round(progresso),"%"), textposition='auto') %>%
+  layout(title="Hierarquia OKR: Estratégico → Tático → Experimental",
+         yaxis=list(title="% Concluído"), xaxis=list(title="Repositório"))
+```
+
+---
+
+### 🔹 Observações Executivas
+
+1. **Visão Hierárquica**
+
+   * OKR Estratégico define o foco trimestral.
+   * OKR Tático converte estratégia em entregas mensais.
+   * OKR Experimental permite testes e ajustes curtos.
+
+2. **Integração com GitHub Project**
+
+   * Cada Issue vinculada a OKR mantém rastreabilidade e mensuração.
+   * Pull Requests referenciam Issues, garantindo evidência de entrega.
+
+3. **Progresso em tempo real**
+
+   * GitHub Actions atualizam `okr-dashboard.json` automaticamente.
+   * Dashboards HTML interativos mostram progresso % e status detalhado.
+
+4. **PO/PM Friendly**
+
+   * Visualiza por repositório, tipo de OKR, entregável e responsável.
+   * Filtragem rápida permite focar no que precisa de atenção imediata.
+

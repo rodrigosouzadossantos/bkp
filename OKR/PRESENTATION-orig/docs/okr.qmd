@@ -1,0 +1,392 @@
+---
+---
+
+# 1. Introdução
+
+O presente documento apresenta os **OKRs (Objectives & Key Results)**
+e suas variantes, com ênfase na conexão com **gestão de projetos**
+e **mentalidade Agile**.  
+
+Não se trata de revisão crítica de práticas anteriores, mas de um
+**alinhamento metodológico baseado em referências consolidadas**.
+
+O objetivo é fornecer **clareza sobre o que OKR é e não é**, como
+pode ser aplicado em projetos de IA/ML no contexto da Submarina,
+e como se integra naturalmente a processos ágeis.
+
+---
+
+# 2. O que é OKR
+
+OKR é um **sistema de gestão por objetivos** que conecta metas
+estratégicas a resultados mensuráveis:
+
+- **Objective (Objetivo):** Descrição qualitativa de uma mudança
+  desejada.  
+- **Key Result (Resultado-chave):** Métrica quantitativa que indica
+  se o objetivo foi atingido.  
+- **Initiatives (Iniciativas):** Ações ou projetos que tentam gerar
+  os KRs.
+
+> Como enfatiza Doerr [@doerr2018, p.35]:  
+> "Key Results devem medir resultado, não esforço."
+>
+> Wodtke [@wodtke2016, p.30] reforça:  
+> "OKRs não são tarefas ou atividades, mas sim metas de impacto que
+> orientam o trabalho da equipe."
+>
+> Wodtke [@wodtke2016, p.40] destaca a importância de um
+> propósito claro:  
+> "OKRs provide focus and milestones. Using OKRs without a mission
+> is like using jet fuel without a jet. You can burn a lot of fuel,
+> but you won't go anywhere. - (SIC)"
+>
+> Grove [@grove1983, p.110] complementa:  
+> "Metas claras e mensuráveis são essenciais para o sucesso de qualquer
+> projeto, pois permitem foco e aprendizado contínuo."
+
+---
+
+# 3. OKR e Gestão de Projetos
+
+Em gestão de projetos, OKRs:
+
+1. Alinham **objetivos estratégicos** a tarefas técnicas  
+2. Criam **prioridade de impacto** sobre esforço  
+3. Permitem **rastreabilidade entre metas e entregas**
+
+No contexto Agile:
+
+- OKRs definem **o que mudar**  
+- Scrum/Kanban definem **como executar**
+
+> Wodtke [@wodtke2016, p.42] afirma:  
+> "OKRs e Agile são complementares: OKRs fornecem foco, Agile 
+> fornece ritmo e adaptabilidade."
+
+---
+
+# 4. Variantes de OKR
+
+OKRs podem ter **diferentes horizontes temporais**, dependendo
+do foco do projeto.
+
+## 4.1 OKR Estratégico (Trimestral)
+
+- Foco: impacto operacional e alinhamento estratégico  
+- Mantém a **visão de longo prazo** do projeto  
+- Exemplo: aumentar confiabilidade de detecção automática em
+  inspeções submarinas
+
+**Conexão com gestão de projeto:** ligado ao **roadmap estratégico**
+ou macro-épicos  
+
+> Doerr [@doerr2018, p.40]:  
+> "Os objetivos estratégicos devem orientar decisões de alto nível
+> e definir prioridades claras."
+
+---
+
+## 4.2 OKR Tático / Mensal
+
+- Foco: melhoria de capacidades e execução intermediária  
+- Alinha iniciativas técnicas a OKRs estratégicos  
+- Exemplo: melhorar cobertura e consistência de dataset
+
+**Conexão com gestão de projeto:** ligado a **épicos ou entregas
+mensais**, priorizando impacto  
+
+> Wodtke [@wodtke2016, p.58]:  
+> "O OKR tático traduz a visão estratégica em resultados concretos
+> mensuráveis no curto prazo."
+
+---
+
+## 4.3 OKR Experimental / Curto (1–2 semanas)
+
+- Foco: aprendizado rápido e testes controlados  
+- Ideal para experimentação em IA/ML (ajustes de modelo,
+  pipelines, filtros)  
+- Exemplo: validar efeito de filtro espacial na redução de
+  falsos positivos
+
+**Conexão com gestão de projeto:** se encaixa em **Sprint Goals**
+ou mini-experimentos ágeis  
+
+> Wodtke [@wodtke2016, p.70]:  
+> "Ciclos experimentais curtos permitem validar hipóteses antes de
+> comprometer grandes recursos."  
+>
+> Grove [@grove1983, p.112]:  
+> "Equipes produtivas medem progresso continuamente para aprender
+> rapidamente e ajustar ações."
+
+---
+
+# 5. OKR e Mentalidade Agile
+
+Para equipes ágeis, é importante manter:
+
+1. **Transparência:** todos entendem objetivo e métrica de sucesso  
+2. **Iteração curta:** ciclos de aprendizado rápidos (1–2 semanas)  
+3. **Adaptabilidade:** ajustar iniciativas conforme resultados
+   intermediários  
+4. **Foco em valor:** priorizando impacto real sobre esforço
+
+> Grove [@grove1983, p.115]:  
+> "Metas claras e mensuráveis reduzem desperdício e aumentam a
+> eficácia da equipe."
+
+---
+
+<!--
+# 6. Resumo de Hierarquia e Ciclos
+
+| Nível        | Horizonte  | Exemplo                              | Ligação Agile |
+|--------------|------------|--------------------------------------|---------------|
+| Estratégico  | Trimestral | Confiabilidade de detecção automática| Roadmap / Macro-épico |
+| Tático       | Mensal     | Cobertura e consistência de dataset  | Épico / Entrega mensal |
+| Experimental | 1–2 semanas| Filtro espacial de pontos            | Sprint Goal / Experimento |
+| Execução     | Dias       | Ajustes de código e PRs              | Backlog / Task |
+-->
+
+# 6. Resumo de Hierarquia, OKR e Ciclos Agile
+
+| Nível        | Horizonte  | Exemplo Objetivo (O)                  | Exemplo Resultado-chave (KR)             | Iniciativa/Experimento (I)               | Correspondência Agile        |
+|--------------|-----------|--------------------------------------|-----------------------------------------|------------------------------------------|------------------------------|
+| Estratégico  | Trimestral| Aumentar confiabilidade de detecção  | Reduzir falhas em 30% em inspeções     | Revisar algoritmos principais de ML      | Roadmap / Macro-épico       |
+| Tático       | Mensal    | Melhorar consistência de dataset      | 95% das imagens anotadas corretamente   | Implementar pipelines de validação       | Épico / Entrega mensal      |
+| Experimental | 1–2 semanas| Testar filtro espacial de pontos     | Reduzir falsos positivos em 10%        | Criar experimento de filtragem rápida    | Sprint Goal / Mini-experimento|
+| Execução     | Dias      | Ajustes de código e PRs              | Correção de bugs ou melhoria de scripts| Refatorar e submeter PRs no Github       | Backlog / Task              |
+
+### OKR → Estratégico → Tático → Experimental → Execução
+> com Objetivo (O), Key Result (KR) e Iniciativa (I).
+
+```{mermaid}
+graph TD
+    O_Estratégico["O: Aumentar confiabilidade de detecção"]
+    KR_Estratégico["KR: Reduzir falhas em 30%"]
+    I_Estratégico["I: Revisar algoritmos principais de ML"]
+
+    O_Tatico["O: Melhorar consistência do dataset"]
+    KR_Tatico["KR: 95% das imagens anotadas corretamente"]
+    I_Tatico["I: Implementar pipelines de validação"]
+
+    O_Experimental["O: Testar filtro espacial de pontos"]
+    KR_Experimental["KR: Reduzir falsos positivos em 10%"]
+    I_Experimental["I: Criar experimento de filtragem rápida"]
+
+    O_Execucao["O: Ajustes de código e PRs"]
+    KR_Execucao["KR: Correção de bugs ou melhoria de scripts"]
+    I_Execucao["I: Refatorar e submeter PRs no Github"]
+
+    O_Estratégico --> KR_Estratégico --> I_Estratégico
+    O_Tatico --> KR_Tatico --> I_Tatico
+    O_Experimental --> KR_Experimental --> I_Experimental
+    O_Execucao --> KR_Execucao --> I_Execucao
+```
+
+
+
+
+
+```{=html}
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Background -->
+  <rect width="800" height="400" fill="#f9f9f9"/>
+
+  <!-- Níveis OKR (esquerda) -->
+  <text x="50" y="50" font-weight="bold" font-size="14">OKR Estratégico</text>
+  <rect x="40" y="60" width="200" height="40" fill="#a6cee3" stroke="#333"/>
+  <text x="55" y="75" font-size="12">O → Aumentar confiabilidade</text>
+  <text x="55" y="90" font-size="12">KR → Reduzir falhas em 30%</text>
+
+  <text x="50" y="130" font-weight="bold" font-size="14">OKR Tático</text>
+  <rect x="40" y="140" width="200" height="40" fill="#1f78b4" stroke="#333"/>
+  <text x="55" y="155" font-size="12">O → Melhorar consistência dataset</text>
+  <text x="55" y="170" font-size="12">KR → 95% imagens anotadas</text>
+
+  <text x="50" y="210" font-weight="bold" font-size="14">OKR Experimental</text>
+  <rect x="40" y="220" width="200" height="40" fill="#b2df8a" stroke="#333"/>
+  <text x="55" y="235" font-size="12">O → Testar filtro espacial</text>
+  <text x="55" y="250" font-size="12">KR → Reduzir falsos positivos</text>
+
+  <text x="50" y="290" font-weight="bold" font-size="14">Execução</text>
+  <rect x="40" y="300" width="200" height="40" fill="#33a02c" stroke="#333"/>
+  <text x="55" y="315" font-size="12">O → Ajustes de código / PRs</text>
+  <text x="55" y="330" font-size="12">KR → Correção de bugs / scripts</text>
+
+  <!-- Conexão Agile (direita) -->
+  <text x="400" y="50" font-weight="bold" font-size="14">Agile</text>
+  <rect x="390" y="60" width="200" height="40" fill="#fb9a99" stroke="#333"/>
+  <text x="400" y="85" font-size="12">Roadmap / Macro-épico</text>
+
+  <rect x="390" y="140" width="200" height="40" fill="#e31a1c" stroke="#333"/>
+  <text x="400" y="165" font-size="12">Épico / Entrega mensal</text>
+
+  <rect x="390" y="220" width="200" height="40" fill="#fdbf6f" stroke="#333"/>
+  <text x="400" y="245" font-size="12">Sprint Goal / Mini-experimento</text>
+
+  <rect x="390" y="300" width="200" height="40" fill="#ff7f00" stroke="#333"/>
+  <text x="400" y="325" font-size="12">Backlog / Task</text>
+
+  <!-- Linhas de conexão -->
+  <line x1="241" y1="80" x2="371" y2="80" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="241" y1="160" x2="371" y2="160" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="241" y1="240" x2="371" y2="240" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="241" y1="320" x2="371" y2="320" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Definir seta -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="0" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#555" />
+    </marker>
+  </defs>
+
+</svg>
+```
+
+---
+
+# 7. Relação entre OKR, Agile e PMI
+
+A adoção de OKR em ambientes técnicos não substitui práticas
+estabelecidas de gestão de projetos.
+
+Pelo contrário, pode funcionar como um mecanismo complementar
+de alinhamento estratégico e medição de resultados.
+
+O OKR define **o que deve ser alcançado e como o progresso será
+medido**, enquanto métodos Agile organizam **como o trabalho será
+executado de forma iterativa**.
+
+Já os referenciais do Project Management Institute (PMI) fornecem
+estruturas consolidadas para governança, planejamento e controle
+de projetos.
+
+Nesse contexto, cada abordagem atua em uma camada distinta:
+
+|   Camada   | Abordagem | Função |
+|:----------:|:---------:|--------|
+| Estratégia | OKR       | Define objetivos e resultados mensuráveis |
+| Governança | PMI       | Estrutura práticas e processos de gestão |
+| Execução   | Agile     | Organiza o trabalho iterativo |
+
+A literatura sobre OKR destaca que os resultados-chave devem medir
+impacto e não apenas esforço. Como afirma John Doerr:
+
+> “Key Results should measure outcomes, not activities.”
+> [@doerr2018]
+
+Essa distinção permite que os objetivos estratégicos permaneçam
+claros enquanto as equipes escolhem as iniciativas necessárias
+para alcançá-los.
+
+Da mesma forma, práticas ágeis enfatizam ciclos curtos de
+aprendizado e adaptação.  
+Conforme descrito no *Agile Practice Guide* do Project
+Management Institute:
+
+> “Agile approaches emphasize delivering value through
+> iterative and incremental delivery with frequent feedback.”
+> [@pmi2017agile]
+
+Já o *PMBOK Guide* destaca que diferentes contextos exigem
+abordagens distintas de gerenciamento de projetos:
+
+> “Projects operate in environments that may require predictive,
+> agile, or hybrid approaches depending on the nature of the work
+> and the level of uncertainty.”
+> [@pmi2021]
+
+Assim, a utilização de OKRs pode fornecer um mecanismo claro
+de alinhamento estratégico, enquanto práticas ágeis suportam
+a execução iterativa e os referenciais do PMI oferecem a
+estrutura de governança necessária para **garantir rastreabilidade
+e consistência na gestão dos projetos**.
+
+---
+
+# 8. Observações Finais
+
+- OKR **não é lista de tarefas**  
+- OKR **não substitui planejamento detalhado**  
+- Serve para **alinhamento estratégico, foco e medição de impacto**  
+- Sempre vincular OKR ao Agile para **ritmo e adaptabilidade**  
+  <br>
+- Key Results medem impacto, não atividade
+- OKR não é avaliação de desempenho
+
+
+> Não se trata de revisão crítica de práticas anteriores, mas de
+> um alinhamento metodológico baseado em referências consolidadas.
+
+---
+
+# Estrutura de Governança: OKR → Agile → Código
+
+```{=html}
+<svg width="900" height="420" xmlns="http://www.w3.org/2000/svg">
+
+  <rect width="900" height="420" fill="#f8f9fa"/>
+
+  <!-- Estratégia -->
+  <rect x="40" y="120" width="220" height="80"
+        fill="#cce5ff" stroke="#1f4e79" stroke-width="2"/>
+  <text x="60" y="145" font-size="14" font-weight="bold">
+    Estratégia
+  </text>
+  <text x="60" y="170" font-size="12">
+    OKR (Wiki / Docs)
+  </text>
+  <text x="60" y="190" font-size="12">
+    Objetivos e KRs
+  </text>
+
+  <!-- Gestão -->
+  <rect x="340" y="120" width="220" height="80"
+        fill="#d4edda" stroke="#1e7e34" stroke-width="2"/>
+  <text x="360" y="145" font-size="14" font-weight="bold">
+    Gestão
+  </text>
+  <text x="360" y="170" font-size="12">
+    GitHub Project
+  </text>
+  <text x="360" y="190" font-size="12">
+    Fluxo + Métricas
+  </text>
+
+  <!-- Execução -->
+  <rect x="640" y="120" width="220" height="80"
+        fill="#f8d7da" stroke="#721c24" stroke-width="2"/>
+  <text x="660" y="145" font-size="14" font-weight="bold">
+    Execução
+  </text>
+  <text x="660" y="170" font-size="12">
+    Issues + PRs
+  </text>
+  <text x="660" y="190" font-size="12">
+    Código e Evidência
+  </text>
+
+  <!-- Setas -->
+  <line x1="260" y1="160" x2="320" y2="160"
+        stroke="#333" stroke-width="2"
+        marker-end="url(#arrow)"/>
+  <line x1="560" y1="160" x2="620" y2="160"
+        stroke="#333" stroke-width="2"
+        marker-end="url(#arrow)"/>
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10"
+            refX="0" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+
+</svg>
+```
+
+# Referências
+```{bibliography}

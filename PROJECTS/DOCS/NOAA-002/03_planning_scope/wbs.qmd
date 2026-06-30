@@ -1,0 +1,16 @@
+# Work Breakdown Structure (WBS)
+
+
+
+```{mermaid}
+graph TD
+    Root[CV Engine] --> Ingest[Data Ingestion]
+    Root --> Core[Model Core]
+    Root --> Ops[Deployment/Mlopps]
+    
+    Ingest --> Kafka[Kafka Connect]
+    Ingest --> Redis[Redis Streams]
+    
+    Core --> Optim[Quantization]
+    Core --> Viz[Grad-CAM Module]
+```

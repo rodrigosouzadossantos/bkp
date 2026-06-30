@@ -1,0 +1,182 @@
+#!/usr/bin/env bash
+set -e
+
+PROJECT=${1:-nautilus-ml}
+echo "Creating Nautilus ML CV crate in $PROJECT/rust/cv ..."
+
+# create directories
+mkdir -p $PROJECT/rust/cv/src
+mkdir -p $PROJECT/tests
+
+# helper functions
+create_header() {
+  LANG=$1
+  MODULE=$2
+  COMPONENT=$3
+  if [ "$LANG" = "rust" ]; then COMMENT="//"; else COMMENT="#"; fi
+  cat <<EOF
+$COMMENT vim: set ts=2 sw=2 et:
+$COMMENT --------------------------------------------------
+$COMMENT Project: Nautilus ML Platform
+$COMMENT Module: $MODULE
+$COMMENT Component: $COMPONENT
+$COMMENT Inspired by Jules Verne's "Twenty Thousand Leagues Under the Sea"
+$COMMENT License: Apache-2.0
+$COMMENT --------------------------------------------------
+EOF
+}
+
+create_file() {
+  FILE=$1
+  LANG=$2
+  MODULE=$3
+  COMPONENT=$4
+  mkdir -p "$(dirname "$FILE")"
+  create_header "$LANG" "$MODULE" "$COMPONENT" > "$FILE"
+}
+
+########################################
+# Cargo.toml for cv crate
+########################################
+cat > $PROJECT/rust/cv/Cargo.toml <<EOF
+[package]
+name = "cv"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+opencv = { version = "0.72", features = ["opencv-4"] }
+rayon = "1"
+tokio = { version = "1", features = ["full"] }
+anyhow = "1.0"
+ndarray = "0.15"
+EOF
+
+########################################
+# image.rs: load and preprocess images
+########################################
+create_file $PROJECT/rust/cv/src/image.rs rust cv image
+
+cat >> $PROJECT/rust/cv/src/image.rs <<'EOF'
+use opencv::imgcodecs;
+use opencv::imgproc;
+use opencv::core::{Mat, Size};
+use opencv::prelude::*;
+use anyhow::Result;
+
+/// Load image in color
+pub fn load_image(path: &str) -> Result<Mat> {
+    let mat = imgcodecs::imread(path, imgcodecs::IMREAD_COLOR)?;
+    Ok(mat)
+}
+
+/// Resize image
+pub fn resize_image(mat: &Mat, width: i32, height: i32) -> Result<Mat> {
+    let mut dst = Mat::default();
+    imgproc::resize(mat, &mut dst, Size::new(width, height), 0.0, 0.0, imgproc::INTER_LINEAR)?;
+    Ok(dst)
+}
+
+/// Convert image to grayscale
+pub fn to_grayscale(mat: &Mat) -> Result<Mat> {
+    let mut gray = Mat::default();
+    imgproc::cvt_color(mat, &mut gray, imgproc::COLOR_BGR2GRAY, 0)?;
+    Ok(gray)
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    #[test]
+    fn test_image_load_resize_gray() {
+        let path = "./Cargo.toml"; // dummy path
+        let mat = load_image(path).unwrap_or(Mat::default());
+        let resized = resize_image(&mat, 128, 128).unwrap();
+        let gray = to_grayscale(&resized).unwrap();
+        println!("Loaded, resized, and converted to grayscale: {:?}", gray.size());
+    }
+}
+EOF
+
+########################################
+# video.rs: load video frames
+########################################
+create_file $PROJECT/rust/cv/src/video.rs rust cv video
+
+cat >> $PROJECT/rust/cv/src/video.rs <<'EOF'
+use opencv::videoio;
+use opencv::prelude::*;
+use anyhow::Result;
+
+/// Read video frames into a Vec<Mat>
+pub fn read_video_frames(path: &str) -> Result<Vec<opencv::core::Mat>> {
+    let mut cap = videoio::VideoCapture::from_file(path, videoio::CAP_ANY)?;
+    let mut frames = vec![];
+    let mut frame = opencv::core::Mat::default();
+    while cap.read(&mut frame)? {
+        frames.push(frame.clone());
+    }
+    Ok(frames)
+}
+
+/// Convert frames to grayscale
+pub fn frames_to_grayscale(frames: &[opencv::core::Mat]) -> Result<Vec<opencv::core::Mat>> {
+    use opencv::imgproc;
+    let mut gray_frames = vec![];
+    for f in frames {
+        let mut gray = opencv::core::Mat::default();
+        imgproc::cvt_color(f, &mut gray, imgproc::COLOR_BGR2GRAY, 0)?;
+        gray_frames.push(gray);
+    }
+    Ok(gray_frames)
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    #[test]
+    fn test_video_read_and_gray() {
+        let frames = read_video_frames("./Cargo.toml").unwrap_or(vec![]);
+        let gray = frames_to_grayscale(&frames).unwrap();
+        println!("Read {} frames, converted to grayscale.", gray.len());
+    }
+}
+EOF
+
+########################################
+# batch_processing.rs: HPC multi-threaded batch
+########################################
+create_file $PROJECT/rust/cv/src/batch_processing.rs rust cv batch
+
+cat >> $PROJECT/rust/cv/src/batch_processing.rs <<'EOF'
+use rayon::prelude::*;
+use opencv::prelude::*;
+use anyhow::Result;
+use crate::image::{resize_image, to_grayscale};
+
+/// Process a batch of images in parallel (resize + grayscale)
+pub fn process_image_batch(paths: Vec<String>, width: i32, height: i32) -> Result<Vec<opencv::core::Mat>> {
+    let processed: Vec<_> = paths.par_iter().map(|p| {
+        let mat = super::image::load_image(p).unwrap_or(opencv::core::Mat::default());
+        let resized = resize_image(&mat, width, height).unwrap_or(mat.clone());
+        let gray = to_grayscale(&resized).unwrap_or(resized);
+        gray
+    }).collect();
+    Ok(processed)
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    #[test]
+    fn test_process_image_batch() {
+        let paths = vec!["./Cargo.toml".to_string()];
+        let results = process_image_batch(paths, 64, 64).unwrap();
+        println!("Processed batch size: {}", results.len());
+    }
+}
+EOF
+
+echo "CV crate bootstrap complete. Navigate to $PROJECT/rust/cv and run:"
+echo "cargo build"
+echo "cargo test"

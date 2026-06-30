@@ -1,0 +1,121 @@
+<PAMDataset>
+  <Metadata>
+    <MDI key="COMMENT">&lt;image time="06:23:03.666755" date="2024.10.16" acq_index="113929"&gt;
+  &lt;Position time="20241016T062303.603" received="2024-Oct-16 06:23:03.665500" extrapolated="false" age="1"&gt;
+    &lt;Coords long="-40.2719428" lat="-22.4172176" /&gt;
+    &lt;Depth altitude="5.96" depth="376.26" /&gt;
+    &lt;Direction pitch="0.70" roll="-0.14" yaw="315.49" /&gt;
+  &lt;/Position&gt;
+  &lt;acquisition&gt;
+    &lt;exposure&gt;1331&lt;/exposure&gt;
+    &lt;aperture&gt;1.4&lt;/aperture&gt;
+    &lt;focus&gt;585&lt;/focus&gt;
+    &lt;digital_gain&gt;1.09&lt;/digital_gain&gt;
+    &lt;analog_gain&gt;6&lt;/analog_gain&gt;
+    &lt;sensor_gain&gt;4&lt;/sensor_gain&gt;
+    &lt;name&gt;ColorCamera&lt;/name&gt;
+    &lt;camera_session_name&gt;wait_0&lt;/camera_session_name&gt;
+    &lt;camera_sub_session_name /&gt;
+    &lt;focus_enc&gt;3953&lt;/focus_enc&gt;
+    &lt;seq_slot&gt;1&lt;/seq_slot&gt;
+  &lt;/acquisition&gt;
+  &lt;errors /&gt;
+  &lt;versions&gt;
+    &lt;software&gt;0.968s9&lt;/software&gt;
+    &lt;fpga&gt;0x02d1&lt;/fpga&gt;
+    &lt;pic&gt;210&lt;/pic&gt;
+    &lt;serial_number&gt;M12-440&lt;/serial_number&gt;
+  &lt;/versions&gt;
+  &lt;clarity-processing Date="2024-10-16T22:40:34" ImageName="image_D2024-10-16T06-23-03-666755Z_1.jpg" Version="3.0.0.0"&gt;
+    &lt;Config&gt;
+      &lt;Camera&gt;
+        &lt;Camera&gt;55c86621-6cd9-4489-a7a6-9e74bd483c94&lt;/Camera&gt;
+        &lt;Name&gt;CameraS&lt;/Name&gt;
+        &lt;Model&gt;A1000&lt;/Model&gt;
+        &lt;SerialNumber&gt;M12-440&lt;/SerialNumber&gt;
+        &lt;Firmware&gt;0.938&lt;/Firmware&gt;
+        &lt;F&gt;23.502136197348928&lt;/F&gt;
+        &lt;K1&gt;0.21723493644971034&lt;/K1&gt;
+        &lt;K2&gt;0.32463235180055539&lt;/K2&gt;
+        &lt;K3&gt;0.55954566498728076&lt;/K3&gt;
+        &lt;P1&gt;-0.00043968150749535616&lt;/P1&gt;
+        &lt;P2&gt;-0.00057222079762070215&lt;/P2&gt;
+        &lt;Width&gt;4096&lt;/Width&gt;
+        &lt;Height&gt;2304&lt;/Height&gt;
+        &lt;OffsetX&gt;-31.371923308855912&lt;/OffsetX&gt;
+        &lt;OffsetY&gt;15.25533726333947&lt;/OffsetY&gt;
+        &lt;CameraMask&gt;
+          &lt;MaskPath&gt;\SKV1_719_153\CameraS\CameraS_Stills\cameraMask.png&lt;/MaskPath&gt;
+        &lt;/CameraMask&gt;
+        &lt;Blursize&gt;0&lt;/Blursize&gt;
+        &lt;LivePort&gt;0&lt;/LivePort&gt;
+        &lt;UDPUpload&gt;false&lt;/UDPUpload&gt;
+        &lt;UploadIP /&gt;
+        &lt;UploadPort&gt;0&lt;/UploadPort&gt;
+      &lt;/Camera&gt;
+      &lt;LeverArms&gt;
+        &lt;SourceCamera&gt;55c86621-6cd9-4489-a7a6-9e74bd483c94&lt;/SourceCamera&gt;
+        &lt;Source&gt;CameraS&lt;/Source&gt;
+        &lt;DestinationCamera&gt;2d448831-5ff3-4390-b114-4db976030f28&lt;/DestinationCamera&gt;
+        &lt;Destination&gt;CRP&lt;/Destination&gt;
+        &lt;RotationOrder&gt;RPY&lt;/RotationOrder&gt;
+        &lt;X&gt;-4&lt;/X&gt;
+        &lt;Y&gt;430&lt;/Y&gt;
+        &lt;Z&gt;306&lt;/Z&gt;
+        &lt;Pitch&gt;0&lt;/Pitch&gt;
+        &lt;Roll&gt;0&lt;/Roll&gt;
+        &lt;Yaw&gt;0&lt;/Yaw&gt;
+      &lt;/LeverArms&gt;
+    &lt;/Config&gt;
+    &lt;Filters&gt;-Undistorted--Ortho--FFC--Sharpened--WorldFileGenerated-&lt;/Filters&gt;
+  &lt;/clarity-processing&gt;
+&lt;/image&gt;</MDI>
+    <MDI key="EXIF_PixelXDimension">3744</MDI>
+    <MDI key="EXIF_PixelYDimension">2104</MDI>
+    <MDI key="EXIF_UserComment"></MDI>
+  </Metadata>
+  <Metadata domain="IMAGE_STRUCTURE">
+    <MDI key="SOURCE_COLOR_SPACE">YCbCr</MDI>
+    <MDI key="INTERLEAVE">PIXEL</MDI>
+    <MDI key="COMPRESSION">JPEG</MDI>
+  </Metadata>
+  <PAMRasterBand band="1">
+    <Metadata>
+      <MDI key="STATISTICS_APPROXIMATE">YES</MDI>
+      <MDI key="STATISTICS_MINIMUM">53</MDI>
+      <MDI key="STATISTICS_MAXIMUM">166</MDI>
+      <MDI key="STATISTICS_MEAN">95.932883234214</MDI>
+      <MDI key="STATISTICS_STDDEV">7.396096289727</MDI>
+      <MDI key="STATISTICS_VALID_PERCENT">100</MDI>
+    </Metadata>
+    <Metadata domain="IMAGE_STRUCTURE">
+      <MDI key="COMPRESSION">JPEG</MDI>
+    </Metadata>
+  </PAMRasterBand>
+  <PAMRasterBand band="2">
+    <Metadata>
+      <MDI key="STATISTICS_APPROXIMATE">YES</MDI>
+      <MDI key="STATISTICS_MINIMUM">53</MDI>
+      <MDI key="STATISTICS_MAXIMUM">167</MDI>
+      <MDI key="STATISTICS_MEAN">95.759708816743</MDI>
+      <MDI key="STATISTICS_STDDEV">6.8749001180191</MDI>
+      <MDI key="STATISTICS_VALID_PERCENT">100</MDI>
+    </Metadata>
+    <Metadata domain="IMAGE_STRUCTURE">
+      <MDI key="COMPRESSION">JPEG</MDI>
+    </Metadata>
+  </PAMRasterBand>
+  <PAMRasterBand band="3">
+    <Metadata>
+      <MDI key="STATISTICS_APPROXIMATE">YES</MDI>
+      <MDI key="STATISTICS_MINIMUM">46</MDI>
+      <MDI key="STATISTICS_MAXIMUM">129</MDI>
+      <MDI key="STATISTICS_MEAN">77.477462545904</MDI>
+      <MDI key="STATISTICS_STDDEV">5.2950915218048</MDI>
+      <MDI key="STATISTICS_VALID_PERCENT">100</MDI>
+    </Metadata>
+    <Metadata domain="IMAGE_STRUCTURE">
+      <MDI key="COMPRESSION">JPEG</MDI>
+    </Metadata>
+  </PAMRasterBand>
+</PAMDataset>

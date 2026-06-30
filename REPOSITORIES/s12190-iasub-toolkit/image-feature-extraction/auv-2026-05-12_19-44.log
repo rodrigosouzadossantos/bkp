@@ -1,0 +1,105 @@
+nohup: ignoring input
+WARNING: Using incubator modules: jdk.incubator.vector
+:: loading settings :: url = jar:file:/projetos/ghva/PROJECTS/NOAA/NOAA-002/PYTHON/image-iceberg-pipeline/.venv/lib/python3.12/site-packages/pyspark/jars/ivy-2.5.3.jar!/org/apache/ivy/core/settings/ivysettings.xml
+Ivy Default Cache set to: /projetos/ghva/PROJECTS/NOAA/NOAA-002/PYTHON/image-iceberg-pipeline/SPARK/ivy/cache
+The jars for the packages stored in: /projetos/ghva/PROJECTS/NOAA/NOAA-002/PYTHON/image-iceberg-pipeline/SPARK/ivy/jars
+org.apache.logging.log4j#log4j-slf4j2-impl added as a dependency
+org.apache.iceberg#iceberg-spark-runtime-4.0_2.13 added as a dependency
+org.apache.hadoop#hadoop-aws added as a dependency
+software.amazon.awssdk#bundle added as a dependency
+com.nvidia#rapids-4-spark_2.13 added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-55c77b6b-0b5e-418e-a977-1a50d594fe05;1.0
+	confs: [default]
+	found org.apache.logging.log4j#log4j-slf4j2-impl;2.25.4 in central
+	found org.apache.logging.log4j#log4j-api;2.25.4 in central
+	found org.slf4j#slf4j-api;2.0.17 in central
+	found org.apache.logging.log4j#log4j-core;2.25.4 in central
+	found org.apache.iceberg#iceberg-spark-runtime-4.0_2.13;1.10.1 in central
+	found org.apache.hadoop#hadoop-aws;3.5.0 in central
+	found software.amazon.s3.analyticsaccelerator#analyticsaccelerator-s3;1.3.1 in central
+	found org.wildfly.openssl#wildfly-openssl;2.2.5.Final in central
+	found software.amazon.awssdk#bundle;2.42.41 in central
+	found com.nvidia#rapids-4-spark_2.13;26.04.0 in central
+:: resolution report :: resolve 252ms :: artifacts dl 15ms
+	:: modules in use:
+	com.nvidia#rapids-4-spark_2.13;26.04.0 from central in [default]
+	org.apache.hadoop#hadoop-aws;3.5.0 from central in [default]
+	org.apache.iceberg#iceberg-spark-runtime-4.0_2.13;1.10.1 from central in [default]
+	org.apache.logging.log4j#log4j-api;2.25.4 from central in [default]
+	org.apache.logging.log4j#log4j-core;2.25.4 from central in [default]
+	org.apache.logging.log4j#log4j-slf4j2-impl;2.25.4 from central in [default]
+	org.slf4j#slf4j-api;2.0.17 from central in [default]
+	org.wildfly.openssl#wildfly-openssl;2.2.5.Final from central in [default]
+	software.amazon.awssdk#bundle;2.42.41 from central in [default]
+	software.amazon.s3.analyticsaccelerator#analyticsaccelerator-s3;1.3.1 from central in [default]
+	:: evicted modules:
+	software.amazon.awssdk#bundle;2.35.4 by [software.amazon.awssdk#bundle;2.42.41] in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   11  |   0   |   0   |   1   ||   10  |   0   |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-55c77b6b-0b5e-418e-a977-1a50d594fe05
+	confs: [default]
+	0 artifacts copied, 10 already retrieved (0kB/9ms)
+22:44:34 WARN  NativeCodeLoader - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+22:44:36 WARN  RapidsPluginUtils - RAPIDS Accelerator 26.04.0 using cudf 26.04.0, private revision 6064cc580b285292361a7f6c052917f888dd5c9c
+22:44:36 WARN  RapidsPluginUtils - RAPIDS Accelerator is enabled, to disable GPU support set `spark.rapids.sql.enabled` to false.
+22:44:53 WARN  GpuDeviceManager - Found 'spark.rapids.memory.gpu.pooling.enabled' is being used, but it will be ignored since it is completely dropped now.
+2026-05-12 19:44:54,796 [stage=-1 partition=-1 attempt=-1] Starting dataset=espadarte attempt=1
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+[Stage 0:>                                                                                                                                                                                                                                                                                       (0 + 1) / 1]                                                                                                                                                                                                                                                                                                             2026-05-12 19:44:59,883 [stage=-1 partition=-1 attempt=-1] [DATASET START] espadarte | cruise=6000702270 dive=COM20240425
+22:45:03 WARN  SharedInMemoryCache - Evicting cached table partition metadata from memory due to size constraints (spark.sql.hive.filesourcePartitionFileCacheSize = 262144000 bytes). This may impact query planning performance.
+2026-05-12 19:45:04,517 [stage=-1 partition=-1 attempt=-1] {'stage': 'load', 'dataset': 'espadarte', 'load_time_sec': 4.633875608444214}
+[Stage 1:>                                                                                                                                                                                                                                                                                       (0 + 1) / 1]                                                                                                                                                                                                                                                                                                             [Stage 2:>                                                                                                                                                                                                                                                                                       (0 + 1) / 1]                                                                                                                                                                                                                                                                                                             2026-05-12 19:45:11,936 [stage=-1 partition=-1 attempt=-1] Dataset failed: espadarte error=[CANNOT_INFER_TYPE_FOR_FIELD] Unable to infer the type of the field `exif`.
+Traceback (most recent call last):
+  File "/projetos/ghva/PROJECTS/NOAA/NOAA-002/PYTHON/image-iceberg-pipeline/.venv/lib64/python3.12/site-packages/pyspark/sql/types.py", line 2837, in _infer_schema
+    _infer_type(
+  File "/projetos/ghva/PROJECTS/NOAA/NOAA-002/PYTHON/image-iceberg-pipeline/.venv/lib64/python3.12/site-packages/pyspark/sql/types.py", line 2731, in _infer_type
+    value_type = _merge_type(
+                 ^^^^^^^^^^^^
+  File "/projetos/ghva/PROJECTS/NOAA/NOAA-002/PYTHON/image-iceberg-pipeline/.venv/lib64/python3.12/site-packages/pyspark/sql/types.py", line 2940, in _merge_type
+    raise PySparkTypeError(
+pyspark.errors.exceptions.base.PySparkTypeError: [CANNOT_MERGE_TYPE] Can not merge type `StringType` and `MapType`.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/projetos/ghva/PROJECTS/NOAA/NOAA-002/PYTHON/image-iceberg-pipeline/src/main.py", line 116, in <module>
+    main()
+  File "/projetos/ghva/PROJECTS/NOAA/NOAA-002/PYTHON/image-iceberg-pipeline/src/main.py", line 90, in main
+    rows = run_with_retry(
+           ^^^^^^^^^^^^^^^
+  File "/projetos/ghva/PROJECTS/NOAA/NOAA-002/PYTHON/image-iceberg-pipeline/src/main.py", line 32, in run_with_retry
+    rows = fn()
+           ^^^^
+  File "/projetos/ghva/PROJECTS/NOAA/NOAA-002/PYTHON/image-iceberg-pipeline/src/main.py", line 82, in job
+    return run_dataset(
+           ^^^^^^^^^^^^
+  File "/projetos/ghva/PROJECTS/NOAA/NOAA-002/PYTHON/image-iceberg-pipeline/src/core/orchestrator.py", line 228, in run_dataset
+    out = spark.createDataFrame( rdd)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/projetos/ghva/PROJECTS/NOAA/NOAA-002/PYTHON/image-iceberg-pipeline/.venv/lib64/python3.12/site-packages/pyspark/sql/session.py", line 1605, in createDataFrame
+    return self._create_dataframe(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/projetos/ghva/PROJECTS/NOAA/NOAA-002/PYTHON/image-iceberg-pipeline/.venv/lib64/python3.12/site-packages/pyspark/sql/session.py", line 1647, in _create_dataframe
+    rdd, struct = self._createFromRDD(data.map(prepare), schema, samplingRatio)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/projetos/ghva/PROJECTS/NOAA/NOAA-002/PYTHON/image-iceberg-pipeline/.venv/lib64/python3.12/site-packages/pyspark/sql/session.py", line 1162, in _createFromRDD
+    struct = self._inferSchema(rdd, samplingRatio, names=schema)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/projetos/ghva/PROJECTS/NOAA/NOAA-002/PYTHON/image-iceberg-pipeline/.venv/lib64/python3.12/site-packages/pyspark/sql/session.py", line 1111, in _inferSchema
+    schema = _infer_schema(
+             ^^^^^^^^^^^^^^
+  File "/projetos/ghva/PROJECTS/NOAA/NOAA-002/PYTHON/image-iceberg-pipeline/.venv/lib64/python3.12/site-packages/pyspark/sql/types.py", line 2848, in _infer_schema
+    raise PySparkTypeError(
+pyspark.errors.exceptions.base.PySparkTypeError: [CANNOT_INFER_TYPE_FOR_FIELD] Unable to infer the type of the field `exif`.
+
+real	0m43.839s
+user	0m3.731s
+sys	0m3.370s

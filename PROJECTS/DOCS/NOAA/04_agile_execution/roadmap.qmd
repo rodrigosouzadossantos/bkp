@@ -1,0 +1,210 @@
+# {{< i18n product_roadmap >}} {}
+
+
+## Purpose of This Document
+
+This Roadmap provides a **strategic, time‑phased view of value delivery**,
+showing how the project evolves from concept to a reusable environmental
+intelligence capability.
+
+It is intended for:
+
+- Executive and sponsor visibility
+- Strategic alignment and expectation management
+- Decision support at Stage‑Gates
+
+The Roadmap complements (but does not replace) the **Schedule Baseline**.
+
+---
+
+## Roadmap Design Principles
+
+1. **Ecological value is delivered first**
+2. Automation is introduced incrementally as an enabler
+3. Each phase ends with a **clear decision point**
+4. No phase advances without ecological validation
+5. MVP is the minimum viable step toward long‑term capability
+
+---
+
+## Roadmap Overview (Phases)
+
+| Phase | Name | Strategic Focus | Primary Outcome |
+|------|------|-----------------|-----------------|
+| Phase 0 | Strategic Foundation | Governance & alignment | Project authorized |
+| Phase 1 | Ecological MVP | Safe automation | Ecologically validated MVP |
+| Phase 2 | Generalization & Reuse | Consistency & scale | Multi‑field capability |
+| Phase 3 | Assetization | Long‑term value | Corporate environmental asset |
+| Phase 4 | Future Evolution | (Out of scope) | Advanced capabilities |
+
+---
+
+## Detailed Roadmap by Phase
+
+### Phase 0 — Strategic Foundation  
+
+**Objective:** Establish governance, scope, and ecological safeguards
+
+**Key Activities**
+
+- Project Charter approval
+- Business Case approval
+- Strategy & Governance (OKRs, Value Stream)
+- Stakeholder Register
+- Scope Baseline (Scope Statement, WBS, WBS Dictionary)
+- Requirements and Risk baselined
+
+**Value Delivered**
+
+- Clear mandate
+- Ecological risk explicitly governed
+- Alignment across SUB and NOAA
+
+**Decision Point**
+
+- **G0 — Strategic Authorization**
+
+---
+
+### Phase 1 — Ecological MVP (Automation with Protection)  
+
+**Objective:** Prove that AI can safely support ecological screening
+
+**Key Activities**
+
+- Data ingestion and preparation
+- Annotation guidelines and pilot labeling
+- AI model development (binary screening)
+- Ecological validation on first field (Viola or Espadarte)
+
+**Primary Value Delivered**
+
+- Protection of benthic‑relevant data
+- Reduction of irrelevant screening workload
+- Faster access to environmental insights
+
+**KPIs Emphasized**
+
+- KPI‑3: Ecological Data Protection Index
+- KPI‑1: Ecologically Relevant Focus Ratio
+- KPI‑2: Environmental Screening Lead Time
+
+**Decision Point**
+
+- **G2 — MVP Ecological Validation**
+
+---
+
+### Phase 2 — Generalization & Reuse  
+
+**Objective:** Demonstrate ecological consistency across contexts
+
+**Key Activities**
+
+- Validation on second field
+- Cross‑field performance analysis
+- Refinement of model and guidelines
+- Reuse readiness assessment
+
+**Primary Value Delivered**
+
+- Consistent ecological interpretation
+- Reduced field‑specific bias
+- Confidence for broader reuse
+
+**KPIs Emphasized**
+
+- KPI‑4: Cross‑Field Ecological Consistency
+- KPI‑3: Sustained ecological protection
+
+**Decision Point**
+
+- **G3 — Reuse & Operational Value Approval**
+
+---
+
+### Phase 3 — Digital Assetization  
+
+**Objective:** Convert project outputs into reusable corporate assets
+
+**Key Activities**
+
+- Dataset and model versioning
+- Traceability and audit consolidation
+- Governance handover to data stewardship
+- Documentation and closure
+
+**Primary Value Delivered**
+
+- Long‑term environmental digital asset
+- Foundation for future AI initiatives
+- Reduced marginal cost for new campaigns
+
+**KPIs Emphasized**
+
+- KPI‑5: Reusable Environmental Asset Coverage
+
+**Decision Point**
+
+- **G4 — Scaling & Assetization Authorization**
+
+---
+
+### Phase 4 — Future Evolution (Out of MVP Scope)
+
+> This phase is **explicitly out of scope** but intentionally enabled by the MVP.
+
+**Potential Directions**
+
+- Advanced anomaly detection
+- Temporal ecological change analysis
+- Integration with sonar and bathymetry
+- Semi‑autonomous inspection workflows
+- Full MLOps for Subsea environmental AI
+
+**Governance Note**
+
+- Requires new Business Case and Charter
+
+---
+
+## 5. Roadmap Visualization
+
+```{mermaid}
+flowchart LR
+    P0["Phase 0<br/>Strategic Foundation"]
+    P1["Phase 1<br/>Ecological MVP"]
+    P2["Phase 2<br/>Generalization & Reuse"]
+    P3["Phase 3<br/>Digital Assetization"]
+    P4["Phase 4<br/>Future Evolution"]
+
+    P0 -->|G0| P1
+    P1 -->|G2| P2
+    P2 -->|G3| P3
+    P3 -->|G4| P4
+```
+
+---
+
+## 6. Relationship to Other Artifacts
+
+| Artifact | Role |
+|-------|------|
+| Project Charter | Authorizes roadmap |
+| Business Case | Justifies roadmap |
+| OKRs & KPIs | Measure roadmap value |
+| Stage‑Gates | Control roadmap progression |
+| Schedule Baseline | Executes roadmap phases |
+
+---
+
+## 7. Executive Summary
+
+This Roadmap ensures that:
+
+- Ecological protection is delivered before automation benefits
+- Each investment step is gated by evidence
+- The project evolves from **capability proof** to **strategic asset**
+- Future expansion is enabled without being pre‑committed
+The Roadmap is the **authoritative strategic view** of the project lifecycle.
+

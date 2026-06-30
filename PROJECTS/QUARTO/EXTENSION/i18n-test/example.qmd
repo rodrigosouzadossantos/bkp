@@ -1,0 +1,24 @@
+---
+lang: "pt"
+title: "{{< i18n dashboard_title >}}"
+---
+
+Lipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit
+amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante
+hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis
+sit amet vitae augue.
+
+## {{< i18n vsm_label >}}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus.
+Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec
+consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero
+egestas
+
+## {{< i18n business_case >}}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus.
+
+
+
+

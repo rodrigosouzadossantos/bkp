@@ -1,0 +1,9 @@
+# Quality Management Plan
+
+## Metrics
+- Precision ≥ 75% (benthic)
+- Retention ≥ 85–90%
+
+## Quality Assurance
+- Annotation audits
+- SME validation loops

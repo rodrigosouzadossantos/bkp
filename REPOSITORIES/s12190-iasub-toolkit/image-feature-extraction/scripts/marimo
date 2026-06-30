@@ -1,0 +1,15 @@
+( echo "http://$(hostname -s):8080/user/$(whoami)/marimo"
+
+read -st 10 -p 'Enter token password (timeout 10s): ' N || {
+  echo "timeout" >&2
+  exit 1
+}
+
+printf "%s" "$N" | nohup uv run marimo edit \
+  --host "$(hostname -s)" \
+  -p 8180 \
+  --base-url "/user/$(whoami)/marimo" \
+  --token-password-file - \
+  > /dev/null 2>&1 &
+
+echo)

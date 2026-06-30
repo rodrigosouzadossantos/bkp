@@ -1,0 +1,13 @@
+## How Each Key Result Will Be Measured
+
+- **Design & Architecture:**  
+  Delivery and approval of architectural blueprint and API documentation, validated by technical leads and sample implementations.
+- **Development & Integration:**  
+  Successful processing and analysis of large, diverse subsea media datasets; automated test reports showing ≥80% code coverage; integration and performance benchmarks.
+- **Usability & Adoption:**  
+  Beta deployed to all 4 projects; user feedback surveys/interviews with ≥8/10 satisfaction; documentation and notebooks published and accessed.
+- **Governance & Sustainability:**  
+  Published governance model and guidelines; security/compliance audit reports; audit logs for traceability.
+- **Impact & Expansion:**  
+  Completion of 2+ end-to-end projects with before/after metrics; onboarding records for 6+ projects; documented lessons learned and success stories.
+

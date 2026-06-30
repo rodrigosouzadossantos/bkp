@@ -1,0 +1,111 @@
+from core.context import build_context                                                                                                                                                                                                                                                                                              
+from core.metrics import Metrics                                                 
+from core.logging import get_logger                                              
+                                                                                 
+import time                                                                      
+                                                                                 
+from itertools import batched, product                                           
+from collections import defaultdict, deque                                       
+                                                                                 
+from pyspark.sql import Row                                                      
+                                                                                 
+logger = get_logger()                                                            
+BATCH_SIZE = 32                                                                  
+                                                                                 
+                                                                                 
+def process_partition(features, max_retries=0):                                  
+  def _inner(iterator):                                                          
+    from core.profiler_instance import PROFILER                                  
+                                                                                 
+    metrics = Metrics()                                                          
+                                                                                 
+    # 1. Separate features instantly using C-level map routine
+    extractors = defaultdict(list)                                               
+    deque(map(                                                                   
+      lambda f: extractors[                                                      
+        "batched" if getattr(f, "batched", False) else "single"                  
+      ].append(f),                                                               
+      features                                                                   
+    ), maxlen=0)                                                                  
+
+    # 2. Assign unique positioning indexes during ingestion to guarantee tracking
+    # We map enumerate over the iterator to secure image-to-embedding index alignment
+    def init_row_state(indexed_row):
+      idx, row = indexed_row
+      try:                                                                       
+        ctx = build_context(row)                                                
+        return {
+          "id": idx,  # Immutable anchor ID for the image row
+          "ctx": ctx,
+          "result": {"path": ctx["path"]},
+          "failed": False
+        }
+      except Exception as e:                                                     
+        metrics.inc("rows_fail")                                                 
+        logger.error(f"Context build failed for row {getattr(row, 'path', 'unknown')}: {e}")            
+        return None                                                              
+
+    batch = list(filter(None, map(init_row_state, enumerate(iterator))))
+    if not batch:
+      return
+
+    # 3. Execution worker for processing pairs
+    def execute(pair):                                                           
+      f, items_chunk = pair                                                             
+      is_batched = getattr(f, "batched", False)
+      
+      items = list(items_chunk) if is_batched else [items_chunk]
+      start_time = time.time()                                                   
+      
+      try:                                                                       
+        # DO NOT drop items here! We must keep the exact chunk length 
+        # so the model's output array aligns 1:1 with the items.
+        ctx = [i["ctx"] for i in items] if is_batched else items[0]["ctx"]
+                                                                                 
+        extracted = f.extract(ctx)                                               
+                                                                                 
+        if is_batched:                                         
+          # Use zip() confidently here because the lengths are guaranteed to match 
+          # since we did not alter the chunk layout prior to execution
+          def update_embedding(zip_pair):
+            item, embedding = zip_pair
+            if item["failed"] or not embedding:
+              item["failed"] = True
+              return
+            item["result"].update(embedding)
+
+          deque(map(update_embedding, zip(items, extracted if extracted else [])), maxlen=0)
+          metrics.inc(f"{f.name}_ok", amount=len(items))
+        else:                                                                    
+          item = items[0]
+          if not item["failed"] and extracted:                                                      
+            item["result"].update(extracted)                                         
+          metrics.inc(f"{f.name}_ok")                                              
+                                                                                 
+      except Exception as e:                                                     
+        # Flag everything in this chunk as failed if the extraction process crashes
+        def flag_failed(i):
+          i["failed"] = True
+        deque(map(flag_failed, items), maxlen=0)
+        metrics.inc(f"{f.name}_fail", amount=len(items))                                            
+        logger.warning(f"{f.name} failed: {e}")                                         
+                                                                                 
+      finally:                                                                   
+        PROFILER.record(f.name, time.time() - start_time)                                         
+                                                                                 
+    # 4. Pipeline execution: Run single extractors row-by-row
+    deque(map(execute, product(extractors["single"], batch)), maxlen=0)
+
+    # 5. Pipeline execution: Run batched extractors in size-32 chunks 
+    # Items inside chunks retain their positions relative to the model's output array
+    chunks = list(batched(batch, BATCH_SIZE))
+    deque(map(execute, product(extractors["batched"], chunks)), maxlen=0)
+
+    # 6. Yield final Rows out to Spark. 
+    # Rows maintain the original image placement order perfectly.
+    def to_spark_row(item):
+      return Row(**item["result"]) if not item["failed"] else Row(path=item["ctx"]["path"], failed=True)
+
+    yield from map(to_spark_row, batch)
+                                                                                 
+  return _inner

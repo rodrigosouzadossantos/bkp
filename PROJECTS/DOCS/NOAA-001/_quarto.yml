@@ -1,0 +1,41 @@
+project:
+  type: book
+
+book:
+  title: "Núcleo Operacional de Análise Ambiental de Imagens Marinhas"
+  author: "Rodrigo Souza dos Santos"
+  date: "2026-03-23"
+  chapters:
+    - index.qmd
+    - part: "Initiation"
+      chapters:
+        - 01-initiation/charter.qmd
+        - 01-initiation/stakeholder-register.qmd
+    - part: "Planning"
+      chapters:
+        - 02-planning/scope-mgmt.qmd
+        - 02-planning/wbs.qmd
+        - 02-planning/rqmt-gathering.qmd
+        - 02-planning/risk-mgmt.qmd
+        - 02-planning/aspt-log.qmd
+        - 02-planning/pmp.qmd
+        - 02-planning/qlty-mgmt.qmd
+        - 02-planning/schedule.qmd
+        - 02-planning/comm-plan.qmd
+    - part: "Execution"
+      chapters:
+        - 03-execution/status-report.qmd
+    - part: "Monitoring & Control"
+      chapters:
+        - 04-monitoring/risk-register.qmd
+        - 04-monitoring/change-log.qmd
+    - part: "Closing"
+      chapters:
+        - 05-closing/lessons-learned.qmd
+
+format:
+  html:
+    theme: cosmo
+  pdf:
+    documentclass: report
+    toc: true

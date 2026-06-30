@@ -1,0 +1,5 @@
+#export AWS_ACCESS_KEY_ID='AKIA5GCWF4XZPDFOUZI3'
+#export AWS_SECRET_ACCESS_KEY='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'
+#export AWS_DEFAULT_REGION=us-east-1
+. .env
+python -m Subsea

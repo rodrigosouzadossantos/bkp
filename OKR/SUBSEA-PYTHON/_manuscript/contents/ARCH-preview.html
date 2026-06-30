@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="generator" content="quarto-1.9.26">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+    <title>arch</title>
+    <style>
+      /* Default styles provided by pandoc.
+      ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+      */
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      div.columns{display: flex; gap: min(4vw, 1.5em);}
+      div.column{flex: auto; overflow-x: auto;}
+      div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+      ul.task-list{list-style: none;}
+      ul.task-list li input[type="checkbox"] {
+        width: 0.8em;
+        margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+        vertical-align: middle;
+      }
+    </style>
+
+    <style>
+      body.hypothesis-enabled #quarto-embed-header {
+        padding-right: 36px;
+      }
+
+      #quarto-embed-header {
+        height: 3em;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: solid 1px;
+      }
+
+      #quarto-embed-header h6 {
+        font-size: 1.1em;
+        padding-top: 0.6em;
+        margin-left: 1em;
+        margin-right: 1em;
+        font-weight: 400;
+      }
+
+      #quarto-embed-header a.quarto-back-link,
+      #quarto-embed-header a.quarto-download-embed {
+        font-size: 0.8em;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        margin-left: 1em;
+        margin-right: 1em;
+      }
+
+      .quarto-back-container {
+        padding-left: 0.5em;
+        display: flex;
+      }
+
+      .headroom {
+          will-change: transform;
+          transition: transform 200ms linear;
+      }
+
+      .headroom--pinned {
+          transform: translateY(0%);
+      }
+
+      .headroom--unpinned {
+          transform: translateY(-100%);
+      }      
+    </style>
+
+    <script>
+    window.document.addEventListener("DOMContentLoaded", function () {
+
+      var header = window.document.querySelector("#quarto-embed-header");
+      const titleBannerEl = window.document.querySelector("body > #title-block-header");
+      if (titleBannerEl) {
+        titleBannerEl.style.paddingTop = header.clientHeight + "px";
+      }
+      const contentEl = window.document.getElementById('quarto-content');
+      for (const child of contentEl.children) {
+        child.style.paddingTop = header.clientHeight + "px";
+        child.style.marginTop = "1em";
+      }
+
+      // Use the article root if the `back` call doesn't work. This isn't perfect
+      // but should typically work
+      window.quartoBackToArticle = () => {
+        var currentUrl = window.location.href;
+        window.history.back();
+        setTimeout(() => {
+            // if location was not changed in 100 ms, then there is no history back
+            if(currentUrl === window.location.href){              
+                // redirect to site root
+                window.location.href = "../index.html";
+            }
+        }, 100);
+      }
+
+      const headroom = new window.Headroom(header, {
+        tolerance: 5,
+        onPin: function () {
+        },
+        onUnpin: function () {
+        },
+      });
+      headroom.init();
+    });
+    </script>
+
+    
+<script src="../site_libs/manuscript-notebook/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-61780a260fdcf47536a34fde95582725.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-68056a18e515a5789c5e26a7aeb7ac61.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-093f73cb46f50c173432e9f8821d1815.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-56a1a10371911b122c39b1a612f08039.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+     <meta name="mermaid-theme" content="dark">
+<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">  
+      </head>
+
+  <body class="quarto-notebook quarto-dark"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = true;
+    const darkModeDefault = authorPrefersDark;
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+    <div id="quarto-embed-header" class="headroom fixed-top bg-primary">
+      
+      <a onclick="window.quartoBackToArticle(); return false;" class="btn btn-primary quarto-back-link" href=""><i class="bi bi-caret-left"></i> Back to Article</a>
+      <h6><i class="bi bi-journal-code"></i> 04 - ARCHITECTURE</h6>
+
+            <a href="../contents/ARCH.qmd" class="btn btn-primary quarto-download-embed" download="ARCH.qmd">Download Source</a>
+          </div>
+
+     <div id="quarto-content" class="page-columns page-rows-contents page-layout-full toc-left">
+<div id="quarto-sidebar-toc-left" class="sidebar toc-left">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#architecture.md" id="toc-architecture.md" class="nav-link active" data-scroll-target="#architecture.md">ARCHITECTURE.md</a></li>
+  <li><a href="#overview" id="toc-overview" class="nav-link" data-scroll-target="#overview">1. Overview</a></li>
+  <li><a href="#high-level-architecture" id="toc-high-level-architecture" class="nav-link" data-scroll-target="#high-level-architecture">2. High-Level Architecture</a>
+  <ul class="collapse">
+  <li><a href="#layered-logical-architecture-mermaid" id="toc-layered-logical-architecture-mermaid" class="nav-link" data-scroll-target="#layered-logical-architecture-mermaid">2.1 Layered Logical Architecture (Mermaid)</a></li>
+  <li><a href="#logical-stack-svg" id="toc-logical-stack-svg" class="nav-link" data-scroll-target="#logical-stack-svg">2.2 Logical Stack (SVG)</a></li>
+  </ul></li>
+  <li><a href="#repository-structure" id="toc-repository-structure" class="nav-link" data-scroll-target="#repository-structure">3. Repository Structure</a></li>
+  <li><a href="#memory-and-cache-architecture" id="toc-memory-and-cache-architecture" class="nav-link" data-scroll-target="#memory-and-cache-architecture">4. Memory and Cache Architecture</a>
+  <ul class="collapse">
+  <li><a href="#data-flow-mermaid" id="toc-data-flow-mermaid" class="nav-link" data-scroll-target="#data-flow-mermaid">4.1 Data Flow (Mermaid)</a></li>
+  <li><a href="#memory-hierarchy-svg" id="toc-memory-hierarchy-svg" class="nav-link" data-scroll-target="#memory-hierarchy-svg">4.2 Memory Hierarchy (SVG)</a></li>
+  </ul></li>
+  <li><a href="#distributed-compute-architecture" id="toc-distributed-compute-architecture" class="nav-link" data-scroll-target="#distributed-compute-architecture">5. Distributed Compute Architecture</a>
+  <ul class="collapse">
+  <li><a href="#ray-spark-integration-mermaid" id="toc-ray-spark-integration-mermaid" class="nav-link" data-scroll-target="#ray-spark-integration-mermaid">5.1 Ray + Spark Integration (Mermaid)</a></li>
+  </ul></li>
+  <li><a href="#multi-gpu-serving" id="toc-multi-gpu-serving" class="nav-link" data-scroll-target="#multi-gpu-serving">6. Multi-GPU Serving</a>
+  <ul class="collapse">
+  <li><a href="#serving-flow-mermaid" id="toc-serving-flow-mermaid" class="nav-link" data-scroll-target="#serving-flow-mermaid">6.1 Serving Flow (Mermaid)</a></li>
+  </ul></li>
+  <li><a href="#agentic-vision-architecture" id="toc-agentic-vision-architecture" class="nav-link" data-scroll-target="#agentic-vision-architecture">7. Agentic Vision Architecture</a>
+  <ul class="collapse">
+  <li><a href="#agent-reasoning-loop-mermaid" id="toc-agent-reasoning-loop-mermaid" class="nav-link" data-scroll-target="#agent-reasoning-loop-mermaid">7.1 Agent Reasoning Loop (Mermaid)</a></li>
+  </ul></li>
+  <li><a href="#streaming-architecture" id="toc-streaming-architecture" class="nav-link" data-scroll-target="#streaming-architecture">8. Streaming Architecture</a></li>
+  <li><a href="#storage-abstraction" id="toc-storage-abstraction" class="nav-link" data-scroll-target="#storage-abstraction">9. Storage Abstraction</a></li>
+  <li><a href="#testing-strategy" id="toc-testing-strategy" class="nav-link" data-scroll-target="#testing-strategy">10. Testing Strategy</a></li>
+  <li><a href="#deployment-topologies" id="toc-deployment-topologies" class="nav-link" data-scroll-target="#deployment-topologies">11. Deployment Topologies</a>
+  <ul class="collapse">
+  <li><a href="#development" id="toc-development" class="nav-link" data-scroll-target="#development">11.1 Development</a></li>
+  <li><a href="#staging" id="toc-staging" class="nav-link" data-scroll-target="#staging">11.2 Staging</a></li>
+  <li><a href="#production" id="toc-production" class="nav-link" data-scroll-target="#production">11.3 Production</a></li>
+  </ul></li>
+  <li><a href="#scalability-model" id="toc-scalability-model" class="nav-link" data-scroll-target="#scalability-model">12. Scalability Model</a></li>
+  <li><a href="#design-guarantees" id="toc-design-guarantees" class="nav-link" data-scroll-target="#design-guarantees">13. Design Guarantees</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">14. Summary</a></li>
+  </ul>
+</nav>
+</div>
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+</div>
+<main class="content quarto-banner-title-block column-page-right" id="quarto-document-content">        <pre><code>ARCHITECTURE.md</code></pre>
+<hr>
+<section id="architecture.md" class="level1">
+<h1>ARCHITECTURE.md</h1>
+<p>CVX — Distributed HPC Vision AI Platform</p>
+<hr>
+</section>
+<section id="overview" class="level1">
+<h1>1. Overview</h1>
+<p>CVX is a distributed, high-performance Vision AI platform designed for:</p>
+<ul>
+<li>Petabyte-scale storage</li>
+<li>Terabyte-scale memory</li>
+<li>Multi-node GPU clusters (H100-class hardware)</li>
+<li>Streaming and batch processing</li>
+<li>Agentic multimodal reasoning</li>
+<li>Distributed training and serving</li>
+</ul>
+<p>The system is modular, memory-aware, storage-agnostic, and designed for large-scale production deployments.</p>
+<hr>
+</section>
+<section id="high-level-architecture" class="level1">
+<h1>2. High-Level Architecture</h1>
+<section id="layered-logical-architecture-mermaid" class="level2">
+<h2 class="anchored" data-anchor-id="layered-logical-architecture-mermaid">2.1 Layered Logical Architecture (Mermaid)</h2>
+<div class="cell-container"><div class="cell-decorator"><pre>In [1]:</pre></div><div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TB
+    A[Application Layer]
+    B[Agentic Reasoning Layer]
+    C[Model Serving Layer]
+    D[Distributed Compute Layer]
+    E[Streaming + Batch Layer]
+    F[Memory + Cache Layer]
+    G[Storage Abstraction Layer]
+
+    A --&gt; B
+    B --&gt; C
+    C --&gt; D
+    D --&gt; E
+    E --&gt; F
+    F --&gt; G
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div></div>
+<hr>
+</section>
+<section id="logical-stack-svg" class="level2">
+<h2 class="anchored" data-anchor-id="logical-stack-svg">2.2 Logical Stack (SVG)</h2>
+<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
+<rect x="50" y="20" width="500" height="40" fill="#e6f2ff" stroke="#000"></rect>
+<text x="300" y="45" text-anchor="middle">Application Layer</text>
+
+<rect x="50" y="70" width="500" height="40" fill="#d9edf7" stroke="#000"></rect>
+<text x="300" y="95" text-anchor="middle">Agentic Reasoning Layer</text>
+
+<rect x="50" y="120" width="500" height="40" fill="#cce5ff" stroke="#000"></rect>
+<text x="300" y="145" text-anchor="middle">Model Serving Layer</text>
+
+<rect x="50" y="170" width="500" height="40" fill="#b3daff" stroke="#000"></rect>
+<text x="300" y="195" text-anchor="middle">Distributed Compute Layer</text>
+
+<rect x="50" y="220" width="500" height="40" fill="#99ccff" stroke="#000"></rect>
+<text x="300" y="245" text-anchor="middle">Streaming + Batch Layer</text>
+
+<rect x="50" y="270" width="500" height="40" fill="#80bfff" stroke="#000"></rect>
+<text x="300" y="295" text-anchor="middle">Memory + Cache Layer</text>
+
+<rect x="50" y="320" width="500" height="40" fill="#66b3ff" stroke="#000"></rect>
+<text x="300" y="345" text-anchor="middle">Storage Abstraction Layer</text>
+</svg>
+<hr>
+</section>
+</section>
+<section id="repository-structure" class="level1">
+<h1>3. Repository Structure</h1>
+<pre><code>cvx/
+├── docker/
+├── k8s/
+├── benchmarks/
+├── tests/
+├── pyproject.toml
+└── cvx/
+    ├── core/
+    ├── memory/
+    ├── cache/
+    ├── storage/
+    ├── models/
+    ├── image/
+    ├── video/
+    ├── multimodal/
+    ├── agent/
+    ├── features/
+    ├── search/
+    ├── anomaly/
+    ├── streaming/
+    ├── distributed/
+    ├── serving/
+    ├── edge/
+    ├── training/
+    ├── experiments/
+    ├── reporting/
+    └── api/</code></pre>
+<p>The outer <code>cvx/</code> is the repository root. The inner <code>cvx/</code> is the Python package.</p>
+<hr>
+</section>
+<section id="memory-and-cache-architecture" class="level1">
+<h1>4. Memory and Cache Architecture</h1>
+<section id="data-flow-mermaid" class="level2">
+<h2 class="anchored" data-anchor-id="data-flow-mermaid">4.1 Data Flow (Mermaid)</h2>
+<div class="cell-container"><div class="cell-decorator"><pre>In [2]:</pre></div><div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Object Storage]
+    B[NVMe Cache]
+    C[Memory-Mapped Dataset]
+    D[Ray Object Store]
+    E[Pinned CPU Memory]
+    F[GPU HBM Memory]
+    G[CUDA Streams]
+
+    A --&gt; B
+    B --&gt; C
+    C --&gt; D
+    D --&gt; E
+    E --&gt; F
+    F --&gt; G
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div></div>
+<hr>
+</section>
+<section id="memory-hierarchy-svg" class="level2">
+<h2 class="anchored" data-anchor-id="memory-hierarchy-svg">4.2 Memory Hierarchy (SVG)</h2>
+<svg width="600" height="300" xmlns="http://www.w3.org/2000/svg">
+  <rect x="50" y="20" width="500" height="40" fill="#f2f2f2" stroke="#000"></rect>
+  <text x="300" y="45" text-anchor="middle">Object Storage (PB)</text>
+
+  <rect x="50" y="70" width="500" height="40" fill="#e6e6e6" stroke="#000"></rect>
+  <text x="300" y="95" text-anchor="middle">NVMe Cache</text>
+
+  <rect x="50" y="120" width="500" height="40" fill="#d9d9d9" stroke="#000"></rect>
+  <text x="300" y="145" text-anchor="middle">RAM (Memory-Mapped)</text>
+
+  <rect x="50" y="170" width="500" height="40" fill="#cccccc" stroke="#000"></rect>
+  <text x="300" y="195" text-anchor="middle">Pinned CPU Memory</text>
+
+  <rect x="50" y="220" width="500" height="40" fill="#bfbfbf" stroke="#000"></rect>
+  <text x="300" y="245" text-anchor="middle">GPU HBM (H100)</text>
+</svg>
+<hr>
+</section>
+</section>
+<section id="distributed-compute-architecture" class="level1">
+<h1>5. Distributed Compute Architecture</h1>
+<section id="ray-spark-integration-mermaid" class="level2">
+<h2 class="anchored" data-anchor-id="ray-spark-integration-mermaid">5.1 Ray + Spark Integration (Mermaid)</h2>
+<div class="cell-container"><div class="cell-decorator"><pre>In [3]:</pre></div><div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Kafka]
+    B[Ray Cluster]
+    C[Spark Cluster]
+    D[GPU Workers]
+    E[Model Serving]
+
+    A --&gt; B
+    B --&gt; D
+    C --&gt; B
+    D --&gt; E
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div></div>
+<p>Responsibilities:</p>
+<ul>
+<li>Ray: training, serving, GPU scheduling</li>
+<li>Spark: feature engineering, ETL</li>
+<li>Kafka: streaming ingestion</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="multi-gpu-serving" class="level1">
+<h1>6. Multi-GPU Serving</h1>
+<section id="serving-flow-mermaid" class="level2">
+<h2 class="anchored" data-anchor-id="serving-flow-mermaid">6.1 Serving Flow (Mermaid)</h2>
+<div class="cell-container"><div class="cell-decorator"><pre>In [4]:</pre></div><div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Client Request]
+    B[Load Balancer]
+    C[Dynamic Batching]
+    D[CUDA Graph Execution]
+    E[Multi-GPU Inference]
+    F[Response]
+
+    A --&gt; B --&gt; C --&gt; D --&gt; E --&gt; F
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div></div>
+<p>Capabilities:</p>
+<ul>
+<li>CUDA Graph capture</li>
+<li>Tensor parallel execution</li>
+<li>FP8/BF16 precision</li>
+<li>NVLink topology awareness</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="agentic-vision-architecture" class="level1">
+<h1>7. Agentic Vision Architecture</h1>
+<section id="agent-reasoning-loop-mermaid" class="level2">
+<h2 class="anchored" data-anchor-id="agent-reasoning-loop-mermaid">7.1 Agent Reasoning Loop (Mermaid)</h2>
+<div class="cell-container"><div class="cell-decorator"><pre>In [5]:</pre></div><div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Input]
+    B[Perception]
+    C[Memory Graph]
+    D[Tool Router]
+    E[Reasoning Loop]
+    F[Action Execution]
+
+    A --&gt; B
+    B --&gt; C
+    C --&gt; D
+    D --&gt; E
+    E --&gt; F
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div></div>
+<p>Capabilities:</p>
+<ul>
+<li>Scene understanding</li>
+<li>Retrieval-augmented reasoning</li>
+<li>Multi-step decision making</li>
+<li>Tool orchestration</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="streaming-architecture" class="level1">
+<h1>8. Streaming Architecture</h1>
+<div class="cell-container"><div class="cell-decorator"><pre>In [6]:</pre></div><div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Kafka Producer]
+    B[Kafka Broker]
+    C[Microbatch Processor]
+    D[Inference Pipeline]
+    E[Feature Store]
+
+    A --&gt; B --&gt; C --&gt; D --&gt; E
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div></div>
+<p>Supports:</p>
+<ul>
+<li>Backpressure handling</li>
+<li>Event-driven inference</li>
+<li>Streaming feature updates</li>
+</ul>
+<hr>
+</section>
+<section id="storage-abstraction" class="level1">
+<h1>9. Storage Abstraction</h1>
+<p>All storage backends implement a common interface:</p>
+<ul>
+<li>Local filesystem</li>
+<li>S3-compatible storage</li>
+<li>GCS</li>
+<li>Azure Blob</li>
+<li>OpenSearch</li>
+<li>Feature stores</li>
+</ul>
+<p>This ensures portability across cloud and on-prem deployments.</p>
+<hr>
+</section>
+<section id="testing-strategy" class="level1">
+<h1>10. Testing Strategy</h1>
+<pre><code>tests/
+├── unit/
+├── integration/
+├── distributed/
+├── memory/
+└── performance/</code></pre>
+<p>Testing domains:</p>
+<ul>
+<li>API validation</li>
+<li>Distributed coordination</li>
+<li>Memory stability</li>
+<li>GPU throughput</li>
+<li>Streaming latency</li>
+</ul>
+<hr>
+</section>
+<section id="deployment-topologies" class="level1">
+<h1>11. Deployment Topologies</h1>
+<section id="development" class="level2">
+<h2 class="anchored" data-anchor-id="development">11.1 Development</h2>
+<ul>
+<li>Single-node</li>
+<li>Docker Compose</li>
+<li>Mock storage</li>
+</ul>
+</section>
+<section id="staging" class="level2">
+<h2 class="anchored" data-anchor-id="staging">11.2 Staging</h2>
+<ul>
+<li>Small Ray cluster</li>
+<li>Kafka single broker</li>
+<li>Multi-GPU node</li>
+</ul>
+</section>
+<section id="production" class="level2">
+<h2 class="anchored" data-anchor-id="production">11.3 Production</h2>
+<ul>
+<li>Multi-node Ray cluster</li>
+<li>Kafka cluster</li>
+<li>Spark cluster</li>
+<li>Distributed object storage</li>
+<li>H100 GPU nodes</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="scalability-model" class="level1">
+<h1>12. Scalability Model</h1>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Dimension</th>
+<th>Capability</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Storage</td>
+<td>Petabyte-scale</td>
+</tr>
+<tr class="even">
+<td>Memory</td>
+<td>TB RAM + GPU HBM</td>
+</tr>
+<tr class="odd">
+<td>Compute</td>
+<td>Horizontal Ray scaling</td>
+</tr>
+<tr class="even">
+<td>Serving</td>
+<td>Multi-GPU dynamic batching</td>
+</tr>
+<tr class="odd">
+<td>Streaming</td>
+<td>Kafka-based real-time</td>
+</tr>
+<tr class="even">
+<td>Training</td>
+<td>Distributed multi-node</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="design-guarantees" class="level1">
+<h1>13. Design Guarantees</h1>
+<ul>
+<li>Modular layer isolation</li>
+<li>Memory-aware data flow</li>
+<li>Storage abstraction</li>
+<li>Distributed-first architecture</li>
+<li>GPU-optimized execution</li>
+<li>Agentic multimodal extensibility</li>
+</ul>
+<hr>
+</section>
+<section id="summary" class="level1">
+<h1>14. Summary</h1>
+<p>CVX is designed as a distributed AI platform capable of handling:</p>
+<ul>
+<li>Large-scale storage</li>
+<li>High-throughput GPU inference</li>
+<li>Continuous training</li>
+<li>Real-time streaming</li>
+<li>Agentic multimodal reasoning</li>
+</ul>
+<p>The architecture ensures extensibility, scalability, and hardware efficiency across cloud, on-prem, and edge environments.</p>
+</section>
+     </main>
+<!-- /main column -->  <script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>  </div> <!-- /content --> 
+  
+</body></html>

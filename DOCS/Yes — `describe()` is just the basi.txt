@@ -1,0 +1,225 @@
+Yes — `describe()` is just the basic summary. In Spark, there are several better ways to understand a dataset depending on what you want.
+
+## 1. `summary()` — richer statistics
+
+`summary()` gives more percentiles and works better than `describe()` for exploration.
+
+```python
+viola.select("saturation").summary().show()
+```
+
+Typical output includes:
+
+* count
+* mean
+* stddev
+* min
+* 25%
+* 50% (median)
+* 75%
+* max
+
+This is usually the first upgrade from `describe()`.
+
+---
+
+## 2. Approximate quantiles
+
+Very useful for distributions and outlier analysis.
+
+```python
+viola.approxQuantile(
+    "saturation",
+    [0.01, 0.05, 0.25, 0.5, 0.75, 0.95, 0.99],
+    0.01
+)
+```
+
+This tells you:
+
+* whether values are skewed
+* where the tails are
+* whether outliers exist
+
+For image metrics, quantiles are often more informative than mean/stddev.
+
+---
+
+## 3. Histograms
+
+Best way to understand distributions visually.
+
+### Spark-side histogram bins
+
+```python
+viola.select("saturation").rdd.flatMap(lambda x: x).histogram(20)
+```
+
+Returns:
+
+* bin edges
+* counts
+
+Or convert to pandas for plotting:
+
+```python
+pdf = viola.select("saturation").toPandas()
+
+pdf["saturation"].hist(bins=50)
+```
+
+---
+
+## 4. Correlation matrix
+
+Useful when you have multiple image metrics.
+
+```python
+from pyspark.ml.stat import Correlation
+from pyspark.ml.feature import VectorAssembler
+
+assembler = VectorAssembler(
+    inputCols=["brightness", "contrast", "saturation"],
+    outputCol="features"
+)
+
+df_vec = assembler.transform(viola)
+
+Correlation.corr(df_vec, "features").show(truncate=False)
+```
+
+Good for discovering:
+
+* blurry images are darker
+* high saturation correlates with contrast
+* etc.
+
+---
+
+## 5. Grouped summaries
+
+Very useful if images have categories.
+
+```python
+viola.groupBy("category").agg(
+    F.mean("saturation"),
+    F.stddev("saturation"),
+    F.min("saturation"),
+    F.max("saturation")
+).show()
+```
+
+This often reveals more than global statistics.
+
+---
+
+## 6. Detect outliers
+
+Using z-score:
+
+```python
+from pyspark.sql import functions as F
+
+stats = viola.select(
+    F.mean("saturation").alias("mean"),
+    F.stddev("saturation").alias("std")
+).collect()[0]
+
+mean = stats["mean"]
+std = stats["std"]
+
+viola.withColumn(
+    "zscore",
+    (F.col("saturation") - mean) / std
+).filter(F.abs(F.col("zscore")) > 3).show()
+```
+
+---
+
+## 7. Data profiling libraries
+
+For full dataset reports:
+
+### Spark + ydata-profiling (after sampling)
+
+```python
+sample = viola.sample(0.01).toPandas()
+```
+
+Then:
+
+```python
+from ydata_profiling import ProfileReport
+
+profile = ProfileReport(sample)
+profile.to_file("report.html")
+```
+
+This gives:
+
+* distributions
+* missing values
+* correlations
+* duplicates
+* skewness
+* alerts
+
+---
+
+## 8. Skewness and kurtosis
+
+Helpful for understanding shape.
+
+```python
+viola.select(
+    F.skewness("saturation"),
+    F.kurtosis("saturation")
+).show()
+```
+
+Interpretation:
+
+* positive skew → long right tail
+* high kurtosis → many outliers
+
+---
+
+For image-quality metrics specifically, the most useful combo is usually:
+
+1. `summary()`
+2. quantiles
+3. histogram
+4. skewness/kurtosis
+5. correlations between metrics
+
+
+
+
+
+In Spark, use dot notation on the struct field:
+
+```python
+viola.select("format_info.resolution")
+```
+
+Or with `col`:
+
+```python
+from pyspark.sql import functions as F
+
+viola.select(F.col("format_info.resolution"))
+```
+
+To extract width and height from the array:
+
+```python
+from pyspark.sql import functions as F
+
+viola.select(
+    F.col("format_info.resolution")[0].alias("width"),
+    F.col("format_info.resolution")[1].alias("height"),
+)
+```
+
+Note: Spark arrays are 0-indexed in the DataFrame API.
+

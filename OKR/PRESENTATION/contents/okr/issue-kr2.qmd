@@ -1,0 +1,36 @@
+# KR2 – Garantir que todas as Issues estejam vinculadas a OKR, responsável e status
+
+## Descrição
+
+Assegurar que todas as Issues possuam rastreabilidade completa,
+incluindo vínculo com OKR, responsável e status definido no fluxo
+do GitHub Project.
+
+## Entregáveis
+
+- Labels padrão para OKR
+- Responsável definido em cada Issue
+- Status configurado no GitHub Project
+
+## Checklist de execução
+
+- [ ] Criar convenção de labels para OKR
+- [ ] Definir campo de responsável
+- [ ] Atualizar Issues existentes
+- [ ] Garantir vínculo com GitHub Project
+
+## Critérios de aceite
+
+- 100% das Issues possuem label de OKR
+- 100% das Issues possuem responsável
+- Todas as Issues possuem status definido no Project
+
+## Métrica do KR
+
+Percentual de Issues com rastreabilidade completa.
+
+## Rastreamento
+
+OKR relacionado: Governança GitHub  
+Project: GitHub Project da área  
+Responsável: (definir)

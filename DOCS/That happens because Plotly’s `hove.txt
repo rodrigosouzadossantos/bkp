@@ -1,0 +1,175 @@
+That happens because Plotly’s `hovertemplate` does **not render arbitrary HTML `<img>` tags** inside hover labels.
+
+So instead of interpreting:
+
+```html
+<img src="...">
+```
+
+it escapes it as text.
+
+---
+
+# 🚀 Correct solution (Plotly-supported)
+
+Use `custom_data` + `hovertemplate` only for text, and display images another way.
+
+The BEST practical solution is:
+
+## ✅ Use image URLs (or base64) in `hover_data`
+
+OR
+
+## ✅ Use Dash for real HTML hover cards
+
+---
+
+# 🥇 EASIEST FIX (works immediately)
+
+Instead of embedding HTML image tags:
+
+```python
+hovertemplate="<img ...>"
+```
+
+Use:
+
+```python
+fig = px.scatter(
+    df,
+    x="x",
+    y="y",
+    color="cluster",
+    hover_name="key",
+    hover_data=["thumbnail"]
+)
+```
+
+Where:
+
+```python
+df["thumbnail"] = (
+    "data:image/png;base64," + df["img_b64"]
+)
+```
+
+But:
+👉 Plotly still won’t render inline HTML images in standard hover.
+
+---
+
+# ✅ REAL WORKING SOLUTION (recommended)
+
+Use `layout.images` to overlay thumbnails.
+
+OR simpler:
+
+## 🔥 Use matplotlib thumbnail scatter (BEST for image maps)
+
+This is the standard solution for embedding visualization.
+
+---
+
+# 🚀 FULL WORKING IMAGE-SCATTER CODE
+
+```python id="mpl_thumb"
+import matplotlib.pyplot as plt
+from matplotlib.offsetbox import OffsetImage, AnnotationBbox
+
+fig, ax = plt.subplots(figsize=(14, 14))
+
+# scatter points
+ax.scatter(
+    X_umap[:, 0],
+    X_umap[:, 1],
+    c=labels,
+    s=20,
+    cmap="tab20"
+)
+
+# ------------------------------------------------------------
+# add thumbnails
+# ------------------------------------------------------------
+for (x, y, img) in zip(X_umap[:, 0], X_umap[:, 1], images):
+
+    thumb = img.copy()
+    thumb.thumbnail((32, 32))
+
+    imagebox = OffsetImage(thumb, zoom=0.5)
+
+    ab = AnnotationBbox(
+        imagebox,
+        (x, y),
+        frameon=False
+    )
+
+    ax.add_artist(ab)
+
+plt.title("UMAP + HDBSCAN Image Clusters")
+plt.show()
+```
+
+---
+
+# 🧠 Why this works better
+
+Unlike Plotly hover:
+
+* real image rendering
+* proper thumbnail overlays
+* true “image manifold map”
+
+This is what people commonly use for:
+
+* CLIP visualization
+* ViT embedding maps
+* UMAP image projections
+
+---
+
+# ⚡ If you still want interactive browser UX
+
+Then the proper stack is:
+
+| Tool      | Capability                  |
+| --------- | --------------------------- |
+| Plotly    | interactive scatter         |
+| Dash      | real HTML/image hover cards |
+| Streamlit | image click panels          |
+| Bokeh     | hover images possible       |
+
+---
+
+# 🥇 BEST recommendation for YOU
+
+Given your pipeline:
+
+```text
+LakeFS → ViT → UMAP → HDBSCAN
+```
+
+Use:
+
+## ✔ matplotlib thumbnail scatter
+
+for:
+
+* visual inspection
+* cluster validation
+* dataset exploration
+
+It’s actually the industry-standard visualization for embedding spaces.
+
+---
+
+# 🚀 If you want next step
+
+I can build:
+
+* 🌐 fully interactive browser version (real thumbnails)
+* 🖼️ zoomable embedding map
+* 🔎 click image → nearest neighbors
+* ⚡ lazy-loaded thumbnails from LakeFS
+* 🧠 auto cluster labeling
+
+Just say 👍

@@ -1,0 +1,1063 @@
+    Finished `release` profile [optimized] target(s) in 0.21s
+     Running `target/release/smb noaa COM20240425/RUN_20240414_0030VB0082 --upload`
+[Pool] Worker 0 spawned with PID 1775881
+[Pool] Worker 1 spawned with PID 1775882
+[Pool] Worker 2 spawned with PID 1775883
+[Pool] Worker 3 spawned with PID 1775884
+[Pool] Worker 4 spawned with PID 1775885
+[Pool] Worker 5 spawned with PID 1775886
+[Pool] Worker 6 spawned with PID 1775887
+[Pool] Worker 7 spawned with PID 1775888
+[Pool] Worker 8 spawned with PID 1775889
+[Pool] Worker 9 spawned with PID 1775890
+[Pool] Worker 10 spawned with PID 1775891
+[Pool] Worker 11 spawned with PID 1775892
+[Pool] Worker 12 spawned with PID 1775893
+[Pool] Worker 13 spawned with PID 1775894
+[Pool] Worker 14 spawned with PID 1775895
+[Pool] Worker 15 spawned with PID 1775896
+[Pool] Worker 16 spawned with PID 1775897
+[Pool] Worker 17 spawned with PID 1775898
+[Pool] Worker 18 spawned with PID 1775899
+[Pool] Worker 19 spawned with PID 1775900
+[Pool] Worker 20 spawned with PID 1775901
+[Pool] Worker 21 spawned with PID 1775902
+[Pool] Worker 22 spawned with PID 1775903
+[Pool] Worker 23 spawned with PID 1775904
+[Pool] Worker 24 spawned with PID 1775905
+[Pool] Worker 25 spawned with PID 1775906
+[Pool] Worker 26 spawned with PID 1775907
+[Pool] Worker 27 spawned with PID 1775908
+[Pool] Worker 28 spawned with PID 1775909
+[Pool] Worker 29 spawned with PID 1775910
+[Pool] Worker 30 spawned with PID 1775911
+[Pool] Worker 31 spawned with PID 1775912
+[Pool] Worker 32 spawned with PID 1775913
+[Pool] Worker 33 spawned with PID 1775914
+[Pool] Worker 34 spawned with PID 1775915
+[Pool] Worker 35 spawned with PID 1775916
+[Pool] Worker 36 spawned with PID 1775917
+[Pool] Worker 37 spawned with PID 1775918
+[Pool] Worker 38 spawned with PID 1775919
+[Pool] Worker 39 spawned with PID 1775920
+[Pool] Worker 40 spawned with PID 1775921
+[Pool] Worker 41 spawned with PID 1775922
+[Pool] Worker 42 spawned with PID 1775923
+[Pool] Worker 43 spawned with PID 1775924
+[Pool] Worker 44 spawned with PID 1775925
+[Pool] Worker 45 spawned with PID 1775926
+[Pool] Worker 46 spawned with PID 1775927
+[Pool] Worker 47 spawned with PID 1775928
+[Pool] Worker 48 spawned with PID 1775929
+[Pool] Worker 49 spawned with PID 1775930
+[Pool] Worker 50 spawned with PID 1775931
+[Pool] Worker 51 spawned with PID 1775932
+[Pool] Worker 52 spawned with PID 1775933
+[Pool] Worker 53 spawned with PID 1775934
+[Pool] Worker 54 spawned with PID 1775935
+[Pool] Worker 55 spawned with PID 1775936
+[Pool] Worker 56 spawned with PID 1775937
+[Pool] Worker 57 spawned with PID 1775938
+[Pool] Worker 58 spawned with PID 1775939
+[Pool] Worker 59 spawned with PID 1775940
+[Pool] Worker 60 spawned with PID 1775941
+[Pool] Worker 61 spawned with PID 1775942
+[Pool] Worker 62 spawned with PID 1775943
+[Pool] Worker 63 spawned with PID 1775944
+[Pool] Worker 64 spawned with PID 1775945
+[Pool] Worker 65 spawned with PID 1775946
+[Pool] Worker 66 spawned with PID 1775947
+[Pool] Worker 67 spawned with PID 1775948
+[Pool] Worker 68 spawned with PID 1775949
+[Pool] Worker 69 spawned with PID 1775950
+[Pool] Worker 70 spawned with PID 1775951
+[Pool] Worker 71 spawned with PID 1775952
+[Pool] Worker 72 spawned with PID 1775953
+[Pool] Worker 73 spawned with PID 1775954
+[Pool] Worker 74 spawned with PID 1775955
+[Pool] Worker 75 spawned with PID 1775956
+[Pool] Worker 76 spawned with PID 1775957
+[Pool] Worker 77 spawned with PID 1775958
+[Pool] Worker 78 spawned with PID 1775959
+[Pool] Worker 79 spawned with PID 1775960
+[Pool] Worker 80 spawned with PID 1775961
+[Pool] Worker 81 spawned with PID 1775962
+[Pool] Worker 82 spawned with PID 1775963
+[Pool] Worker 83 spawned with PID 1775964
+[Pool] Worker 84 spawned with PID 1775965
+[Pool] Worker 85 spawned with PID 1775966
+[Pool] Worker 86 spawned with PID 1775967
+[Pool] Worker 87 spawned with PID 1775968
+[Pool] Worker 88 spawned with PID 1775969
+[Pool] Worker 89 spawned with PID 1775970
+[Pool] Worker 90 spawned with PID 1775971
+[Pool] Worker 91 spawned with PID 1775972
+[Pool] Worker 92 spawned with PID 1775973
+[Pool] Worker 93 spawned with PID 1775974
+[Pool] Worker 94 spawned with PID 1775975
+[Pool] Worker 95 spawned with PID 1775976
+[Pool] Worker 96 spawned with PID 1775977
+[Pool] Worker 97 spawned with PID 1775978
+[Pool] Worker 98 spawned with PID 1775979
+[Pool] Worker 99 spawned with PID 1775980
+[Worker 29] PID: 1775910, Requests: 0, Last: 1775282922s ago, Uptime: 4s
+[Worker 29] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_155314_0_BC0030VB0082.tif
+[Worker 29] Requisição enviada, aguardando resposta...
+[Worker 84] PID: 1775965, Requests: 0, Last: 1775282923s ago, Uptime: 5s
+[Worker 84] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_030353_3_BC0030VB0082.tif
+[Worker 84] Requisição enviada, aguardando resposta...
+[Worker 55] PID: 1775936, Requests: 0, Last: 1775282923s ago, Uptime: 5s
+[Worker 55] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_075804_6_BC0030VB0082.tif
+[Worker 55] Requisição enviada, aguardando resposta...
+[Worker 65] PID: 1775946, Requests: 0, Last: 1775282923s ago, Uptime: 5s
+[Worker 65] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_081200_0_BC0030VB0082.tif
+[Worker 65] Requisição enviada, aguardando resposta...
+[Worker 86] PID: 1775967, Requests: 0, Last: 1775282923s ago, Uptime: 5s
+[Worker 86] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_075634_0_BC0030VB0082.tif
+[Worker 86] Requisição enviada, aguardando resposta...
+[Worker 14] PID: 1775895, Requests: 0, Last: 1775282923s ago, Uptime: 5s
+[Worker 14] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_052854_0_BC0030VB0082.tif
+[Worker 14] Requisição enviada, aguardando resposta...
+[Worker 53] PID: 1775934, Requests: 0, Last: 1775282923s ago, Uptime: 5s
+[Worker 53] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_081239_3_BC0030VB0082.tif
+[Worker 53] Requisição enviada, aguardando resposta...
+[Worker 39] PID: 1775920, Requests: 0, Last: 1775282923s ago, Uptime: 5s
+[Worker 39] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_024856_3_BC0030VB0082.tif
+[Worker 39] Requisição enviada, aguardando resposta...
+[Worker 88] PID: 1775969, Requests: 0, Last: 1775282923s ago, Uptime: 5s
+[Worker 88] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_041143_0_BC0030VB0082.tif
+[Worker 88] Requisição enviada, aguardando resposta...
+[Worker 24] PID: 1775905, Requests: 0, Last: 1775282923s ago, Uptime: 5s
+[Worker 24] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_035421_0_BC0030VB0082.tif
+[Worker 24] Requisição enviada, aguardando resposta...
+[Worker 35] PID: 1775916, Requests: 0, Last: 1775282923s ago, Uptime: 5s
+[Worker 35] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_065058_3_BC0030VB0082.tif
+[Worker 35] Requisição enviada, aguardando resposta...
+[Worker 33] PID: 1775914, Requests: 0, Last: 1775282923s ago, Uptime: 5s
+[Worker 33] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_045751_3_BC0030VB0082.tif
+[Worker 33] Requisição enviada, aguardando resposta...
+[Worker 74] PID: 1775955, Requests: 0, Last: 1775282923s ago, Uptime: 5s
+[Worker 74] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_040940_6_BC0030VB0082.tif
+[Worker 74] Requisição enviada, aguardando resposta...
+[Worker 31] PID: 1775912, Requests: 0, Last: 1775282923s ago, Uptime: 5s
+[Worker 31] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_065201_6_BC0030VB0082.tif
+[Worker 31] Requisição enviada, aguardando resposta...
+[Worker 43] PID: 1775924, Requests: 0, Last: 1775282923s ago, Uptime: 5s
+[Worker 43] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_030613_0_BC0030VB0082.tif
+[Worker 43] Requisição enviada, aguardando resposta...
+[Worker 67] PID: 1775948, Requests: 0, Last: 1775282923s ago, Uptime: 5s
+[Worker 67] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_045618_6_BC0030VB0082.tif
+[Worker 67] Requisição enviada, aguardando resposta...
+[Worker 10] PID: 1775891, Requests: 0, Last: 1775282923s ago, Uptime: 5s
+[Worker 10] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_035104_3_BC0030VB0082.tif
+[Worker 10] Requisição enviada, aguardando resposta...
+[Worker 4] PID: 1775885, Requests: 0, Last: 1775282923s ago, Uptime: 5s
+[Worker 4] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_155316_6_BC0030VB0082.tif
+[Worker 4] Requisição enviada, aguardando resposta...
+[Worker 87] PID: 1775968, Requests: 0, Last: 1775282927s ago, Uptime: 9s
+[Worker 87] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_155320_0_BC0030VB0082.tif
+[Worker 87] Requisição enviada, aguardando resposta...
+[Worker 30] PID: 1775911, Requests: 0, Last: 1775282931s ago, Uptime: 13s
+[Worker 30] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_155311_6_BC0030VB0082.tif
+[Worker 30] Requisição enviada, aguardando resposta...
+[Worker 32] PID: 1775913, Requests: 0, Last: 1775282932s ago, Uptime: 14s
+[Worker 32] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_032150_3_BC0030VB0082.tif
+[Worker 32] Requisição enviada, aguardando resposta...
+[Worker 84] Resposta recebida: 21990289 bytes
+[Worker 53] Resposta recebida: 24223825 bytes
+[Worker 55] Resposta recebida: 21618868 bytes
+[Worker 35] Resposta recebida: 21122773 bytes
+[Worker 86] Resposta recebida: 21257536 bytes
+[Worker 88] Resposta recebida: 22188091 bytes
+[Worker 88] PID: 1775969, Requests: 1, Last: 0s ago, Uptime: 20s
+[Worker 88] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_155318_6_BC0030VB0082.tif
+[Worker 88] Requisição enviada, aguardando resposta...
+[Worker 88] Erro: Failed to read status
+⚠️ Worker 28 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_155318_6_BC0030VB0082.tif falhou (tentativa 1/3): SMB read error: Failed to read status. Aguardando 5s...
+[Worker 43] Resposta recebida: 21755851 bytes
+[Worker 43] PID: 1775924, Requests: 1, Last: 0s ago, Uptime: 22s
+[Worker 43] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_155312_6_BC0030VB0082.tif
+[Worker 43] Requisição enviada, aguardando resposta...
+[Worker 43] Erro: Failed to read status
+⚠️ Worker 13 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_155312_6_BC0030VB0082.tif falhou (tentativa 1/3): SMB read error: Failed to read status. Aguardando 5s...
+[Worker 46] PID: 1775927, Requests: 0, Last: 1775282941s ago, Uptime: 23s
+[Worker 46] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_134211_6_BC0030VB0082.tif
+[Worker 46] Requisição enviada, aguardando resposta...
+[Worker 0] PID: 1775881, Requests: 0, Last: 1775282941s ago, Uptime: 23s
+[Worker 0] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_053612_0_BC0030VB0082.tif
+[Worker 0] Requisição enviada, aguardando resposta...
+[Worker 81] PID: 1775962, Requests: 0, Last: 1775282941s ago, Uptime: 23s
+[Worker 81] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_124314_0_BC0030VB0082.tif
+[Worker 81] Requisição enviada, aguardando resposta...
+[Worker 20] PID: 1775901, Requests: 0, Last: 1775282941s ago, Uptime: 23s
+[Worker 20] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240414_224528_6_BC0030VB0082.tif
+[Worker 20] Requisição enviada, aguardando resposta...
+[Worker 14] Resposta recebida: 24412726 bytes
+[Worker 61] PID: 1775942, Requests: 0, Last: 1775282941s ago, Uptime: 23s
+[Worker 61] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_145307_0_BC0030VB0082.tif
+[Worker 61] Requisição enviada, aguardando resposta...
+[Worker 58] PID: 1775939, Requests: 0, Last: 1775282941s ago, Uptime: 23s
+[Worker 58] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_114202_0_BC0030VB0082.tif
+[Worker 58] Requisição enviada, aguardando resposta...
+[Worker 45] PID: 1775926, Requests: 0, Last: 1775282941s ago, Uptime: 23s
+[Worker 45] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_085722_6_BC0030VB0082.tif
+[Worker 45] Requisição enviada, aguardando resposta...
+[Worker 91] PID: 1775972, Requests: 0, Last: 1775282942s ago, Uptime: 24s
+[Worker 91] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_151528_6_BC0030VB0082.tif
+[Worker 91] Requisição enviada, aguardando resposta...
+[Worker 98] PID: 1775979, Requests: 0, Last: 1775282942s ago, Uptime: 24s
+[Worker 98] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240414_220512_0_BC0030VB0082.tif
+[Worker 98] Requisição enviada, aguardando resposta...
+[Worker 33] Resposta recebida: 24436993 bytes
+[Worker 24] Resposta recebida: 23394661 bytes
+[Worker 68] PID: 1775949, Requests: 0, Last: 1775282942s ago, Uptime: 24s
+[Worker 68] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_052029_3_BC0030VB0082.tif
+[Worker 68] Requisição enviada, aguardando resposta...
+[Worker 1] PID: 1775882, Requests: 0, Last: 1775282942s ago, Uptime: 24s
+[Worker 1] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_124048_0_BC0030VB0082.tif
+[Worker 1] Requisição enviada, aguardando resposta...
+[Worker 54] PID: 1775935, Requests: 0, Last: 1775282942s ago, Uptime: 24s
+[Worker 54] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_020127_6_BC0030VB0082.tif
+[Worker 54] Requisição enviada, aguardando resposta...
+[Worker 95] PID: 1775976, Requests: 0, Last: 1775282942s ago, Uptime: 24s
+[Worker 95] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240414_223741_0_BC0030VB0082.tif
+[Worker 95] Requisição enviada, aguardando resposta...
+[Worker 86] PID: 1775967, Requests: 1, Last: 4s ago, Uptime: 24s
+[Worker 86] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_145142_3_BC0030VB0082.tif
+[Worker 86] Requisição enviada, aguardando resposta...
+[Worker 86] Erro: Failed to read status
+⚠️ Worker 11 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_145142_3_BC0030VB0082.tif falhou (tentativa 1/3): SMB read error: Failed to read status. Aguardando 5s...
+[Worker 31] Resposta recebida: 21481963 bytes
+[Worker 67] Resposta recebida: 25108504 bytes
+⚠️ Worker 10 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_030613_0_BC0030VB0082.tif falhou (tentativa 1/3): S3 upload error: dispatch failure. Aguardando 5s...
+[Worker 74] Resposta recebida: 22256302 bytes
+[Worker 74] PID: 1775955, Requests: 1, Last: 0s ago, Uptime: 25s
+[Worker 74] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_155318_3_BC0030VB0082.tif
+[Worker 74] Requisição enviada, aguardando resposta...
+[Worker 74] Erro: Failed to read status
+⚠️ Worker 0 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_155318_3_BC0030VB0082.tif falhou (tentativa 1/3): SMB read error: Failed to read status. Aguardando 5s...
+⚠️ Worker 41 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_081239_3_BC0030VB0082.tif falhou (tentativa 1/3): S3 upload error: dispatch failure. Aguardando 5s...
+[Worker 39] Resposta recebida: 23830789 bytes
+[Worker 17] PID: 1775898, Requests: 0, Last: 1775282943s ago, Uptime: 25s
+[Worker 17] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_091417_0_BC0030VB0082.tif
+[Worker 17] Requisição enviada, aguardando resposta...
+[Worker 24] PID: 1775905, Requests: 1, Last: 1s ago, Uptime: 25s
+[Worker 24] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_151417_3_BC0030VB0082.tif
+[Worker 24] Requisição enviada, aguardando resposta...
+[Worker 24] Erro: Failed to read status
+⚠️ Worker 71 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_151417_3_BC0030VB0082.tif falhou (tentativa 1/3): SMB read error: Failed to read status. Aguardando 5s...
+[Worker 96] PID: 1775977, Requests: 0, Last: 1775282943s ago, Uptime: 25s
+[Worker 96] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_033028_0_BC0030VB0082.tif
+[Worker 96] Requisição enviada, aguardando resposta...
+[Worker 35] PID: 1775916, Requests: 1, Last: 6s ago, Uptime: 25s
+[Worker 35] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_043516_0_BC0030VB0082.tif
+[Worker 35] Requisição enviada, aguardando resposta...
+[Worker 35] Erro: Failed to read status
+⚠️ Worker 24 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_043516_0_BC0030VB0082.tif falhou (tentativa 1/3): SMB read error: Failed to read status. Aguardando 5s...
+[Worker 43] PID: 1775924, Requests: 2, Last: 3s ago, Uptime: 25s
+[Worker 43] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_131928_6_BC0030VB0082.tif
+[Worker 43] Requisição enviada, aguardando resposta...
+[Worker 43] Erro: Failed to read status
+⚠️ Worker 75 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_131928_6_BC0030VB0082.tif falhou (tentativa 1/3): SMB read error: Failed to read status. Aguardando 5s...
+[Worker 76] PID: 1775957, Requests: 0, Last: 1775282944s ago, Uptime: 26s
+[Worker 76] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_152620_6_BC0030VB0082.tif
+[Worker 76] Requisição enviada, aguardando resposta...
+[Worker 28] PID: 1775909, Requests: 0, Last: 1775282944s ago, Uptime: 26s
+[Worker 28] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240414_215717_0_BC0030VB0082.tif
+[Worker 28] Requisição enviada, aguardando resposta...
+[Worker 8] PID: 1775889, Requests: 0, Last: 1775282944s ago, Uptime: 26s
+[Worker 8] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_023315_3_BC0030VB0082.tif
+[Worker 8] Requisição enviada, aguardando resposta...
+[Worker 44] PID: 1775925, Requests: 0, Last: 1775282944s ago, Uptime: 26s
+[Worker 44] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240414_225908_3_BC0030VB0082.tif
+[Worker 44] Requisição enviada, aguardando resposta...
+[Worker 99] PID: 1775980, Requests: 0, Last: 1775282944s ago, Uptime: 26s
+[Worker 99] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240414_223206_0_BC0030VB0082.tif
+[Worker 99] Requisição enviada, aguardando resposta...
+[Worker 62] PID: 1775943, Requests: 0, Last: 1775282944s ago, Uptime: 26s
+[Worker 62] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_042949_0_BC0030VB0082.tif
+[Worker 62] Requisição enviada, aguardando resposta...
+[Worker 39] PID: 1775920, Requests: 1, Last: 1s ago, Uptime: 26s
+[Worker 39] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_055613_0_BC0030VB0082.tif
+[Worker 39] Requisição enviada, aguardando resposta...
+[Worker 39] Erro: Failed to read status
+⚠️ Worker 92 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_055613_0_BC0030VB0082.tif falhou (tentativa 1/3): SMB read error: Failed to read status. Aguardando 5s...
+[Worker 23] PID: 1775904, Requests: 0, Last: 1775282944s ago, Uptime: 26s
+[Worker 23] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_030152_3_BC0030VB0082.tif
+[Worker 23] Requisição enviada, aguardando resposta...
+[Worker 25] PID: 1775906, Requests: 0, Last: 1775282944s ago, Uptime: 26s
+[Worker 25] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_133523_6_BC0030VB0082.tif
+[Worker 25] Requisição enviada, aguardando resposta...
+[Worker 15] PID: 1775896, Requests: 0, Last: 1775282944s ago, Uptime: 26s
+[Worker 15] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_051753_0_BC0030VB0082.tif
+[Worker 15] Requisição enviada, aguardando resposta...
+[Worker 16] PID: 1775897, Requests: 0, Last: 1775282944s ago, Uptime: 26s
+[Worker 16] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_151420_3_BC0030VB0082.tif
+[Worker 16] Requisição enviada, aguardando resposta...
+[Worker 46] Resposta recebida: 2589583 bytes
+[Worker 46] PID: 1775927, Requests: 1, Last: 0s ago, Uptime: 26s
+[Worker 46] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_100743_3_BC0030VB0082.tif
+[Worker 46] Requisição enviada, aguardando resposta...
+[Worker 46] Erro: Failed to read status
+⚠️ Worker 76 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_100743_3_BC0030VB0082.tif falhou (tentativa 1/3): SMB read error: Failed to read status. Aguardando 5s...
+[Worker 14] PID: 1775895, Requests: 1, Last: 3s ago, Uptime: 26s
+[Worker 14] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_143805_6_BC0030VB0082.tif
+[Worker 14] Requisição enviada, aguardando resposta...
+[Worker 14] Erro: Failed to read status
+⚠️ Worker 49 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_143805_6_BC0030VB0082.tif falhou (tentativa 1/3): SMB read error: Failed to read status. Aguardando 5s...
+[Worker 50] PID: 1775931, Requests: 0, Last: 1775282944s ago, Uptime: 26s
+[Worker 50] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_103753_3_BC0030VB0082.tif
+[Worker 50] Requisição enviada, aguardando resposta...
+⚠️ Worker 55 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_052854_0_BC0030VB0082.tif falhou (tentativa 1/3): S3 upload error: dispatch failure. Aguardando 5s...
+[Worker 66] PID: 1775947, Requests: 0, Last: 1775282944s ago, Uptime: 26s
+[Worker 66] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_035925_0_BC0030VB0082.tif
+[Worker 66] Requisição enviada, aguardando resposta...
+[Worker 19] PID: 1775900, Requests: 0, Last: 1775282944s ago, Uptime: 26s
+[Worker 19] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_035750_3_BC0030VB0082.tif
+[Worker 19] Requisição enviada, aguardando resposta...
+[Worker 94] PID: 1775975, Requests: 0, Last: 1775282944s ago, Uptime: 26s
+[Worker 94] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_024131_3_BC0030VB0082.tif
+[Worker 94] Requisição enviada, aguardando resposta...
+[Worker 12] PID: 1775893, Requests: 0, Last: 1775282944s ago, Uptime: 26s
+[Worker 12] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_033529_0_BC0030VB0082.tif
+[Worker 12] Requisição enviada, aguardando resposta...
+[Worker 51] PID: 1775932, Requests: 0, Last: 1775282944s ago, Uptime: 26s
+[Worker 51] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_084315_0_BC0030VB0082.tif
+[Worker 51] Requisição enviada, aguardando resposta...
+⚠️ Worker 42 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_065058_3_BC0030VB0082.tif falhou (tentativa 1/3): S3 upload error: dispatch failure. Aguardando 5s...
+[Worker 81] Resposta recebida: 2878180 bytes
+[Worker 20] Resposta recebida: 2731303 bytes
+[Worker 20] PID: 1775901, Requests: 1, Last: 0s ago, Uptime: 27s
+[Worker 20] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_000246_6_BC0030VB0082.tif
+[Worker 20] Requisição enviada, aguardando resposta...
+[Worker 20] Erro: Failed to read status
+⚠️ Worker 32 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_000246_6_BC0030VB0082.tif falhou (tentativa 1/3): SMB read error: Failed to read status. Aguardando 5s...
+[Worker 88] PID: 1775969, Requests: 2, Last: 7s ago, Uptime: 27s
+[Worker 88] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_155318_6_BC0030VB0082.tif
+[Worker 88] Requisição enviada, aguardando resposta...
+[Worker 88] Erro: Failed to read status
+⚠️ Worker 28 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_155318_6_BC0030VB0082.tif falhou (tentativa 2/3): SMB read error: Failed to read status. Aguardando 10s...
+[Worker 43] PID: 1775924, Requests: 3, Last: 2s ago, Uptime: 27s
+[Worker 43] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_155312_6_BC0030VB0082.tif
+[Worker 43] Requisição enviada, aguardando resposta...
+[Worker 43] Erro: Failed to read status
+⚠️ Worker 13 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_155312_6_BC0030VB0082.tif falhou (tentativa 2/3): SMB read error: Failed to read status. Aguardando 10s...
+[Worker 45] Resposta recebida: 2634487 bytes
+[Worker 45] PID: 1775926, Requests: 1, Last: 0s ago, Uptime: 27s
+[Worker 45] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_101520_3_BC0030VB0082.tif
+[Worker 45] Requisição enviada, aguardando resposta...
+[Worker 45] Erro: Failed to read status
+⚠️ Worker 4 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_101520_3_BC0030VB0082.tif falhou (tentativa 1/3): SMB read error: Failed to read status. Aguardando 5s...
+[Worker 98] Resposta recebida: 3076237 bytes
+[Worker 98] PID: 1775979, Requests: 1, Last: 0s ago, Uptime: 27s
+[Worker 98] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_130917_6_BC0030VB0082.tif
+[Worker 98] Requisição enviada, aguardando resposta...
+[Worker 98] Erro: Failed to read status
+⚠️ Worker 15 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_130917_6_BC0030VB0082.tif falhou (tentativa 1/3): SMB read error: Failed to read status. Aguardando 5s...
+[Worker 0] Resposta recebida: 2726722 bytes
+[Worker 0] PID: 1775881, Requests: 1, Last: 0s ago, Uptime: 27s
+[Worker 0] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_145634_3_BC0030VB0082.tif
+[Worker 0] Requisição enviada, aguardando resposta...
+[Worker 0] Erro: Failed to read status
+⚠️ Worker 78 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_145634_3_BC0030VB0082.tif falhou (tentativa 1/3): SMB read error: Failed to read status. Aguardando 5s...
+[Worker 1] Resposta recebida: 2552713 bytes
+[Worker 4] Erro: Worker reported failure
+⚠️ Worker 59 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_155316_6_BC0030VB0082.tif falhou (tentativa 1/3): SMB read error: Worker reported failure. Aguardando 5s...
+[Worker 61] Resposta recebida: 3056071 bytes
+[Worker 58] Resposta recebida: 4877464 bytes
+[Worker 95] Resposta recebida: 2901325 bytes
+[Worker 91] Resposta recebida: 2807809 bytes
+[Worker 91] PID: 1775972, Requests: 1, Last: 0s ago, Uptime: 29s
+[Worker 91] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_121913_3_BC0030VB0082.tif
+[Worker 91] Requisição enviada, aguardando resposta...
+[Worker 91] Erro: Failed to read status
+[Worker 91] PID: 1775972, Requests: 2, Last: 0s ago, Uptime: 29s
+[Worker 91] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_133937_3_BC0030VB0082.tif
+[Worker 91] Requisição enviada, aguardando resposta...
+⚠️ Worker 14 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_121913_3_BC0030VB0082.tif falhou (tentativa 1/3): SMB read error: Failed to read status. Aguardando 5s...
+[Worker 91] Erro: Failed to read status
+⚠️ Worker 96 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_133937_3_BC0030VB0082.tif falhou (tentativa 1/3): SMB read error: Failed to read status. Aguardando 5s...
+[Worker 17] Resposta recebida: 2471917 bytes
+[Worker 68] Resposta recebida: 2976193 bytes
+[Worker 68] PID: 1775949, Requests: 1, Last: 0s ago, Uptime: 29s
+[Worker 68] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_005045_6_BC0030VB0082.tif
+[Worker 68] Requisição enviada, aguardando resposta...
+[Worker 68] Erro: Failed to read status
+[Worker 68] PID: 1775949, Requests: 2, Last: 0s ago, Uptime: 29s
+[Worker 68] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_154608_6_BC0030VB0082.tif
+[Worker 68] Requisição enviada, aguardando resposta...
+⚠️ Worker 50 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_005045_6_BC0030VB0082.tif falhou (tentativa 1/3): SMB read error: Failed to read status. Aguardando 5s...
+[Worker 68] Erro: Failed to read status
+⚠️ Worker 8 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_154608_6_BC0030VB0082.tif falhou (tentativa 1/3): SMB read error: Failed to read status. Aguardando 5s...
+[Worker 43] PID: 1775924, Requests: 4, Last: 3s ago, Uptime: 30s
+[Worker 43] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_030613_0_BC0030VB0082.tif
+[Worker 43] Requisição enviada, aguardando resposta...
+[Worker 43] Erro: Failed to read status
+⚠️ Worker 10 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_030613_0_BC0030VB0082.tif falhou (tentativa 2/3): SMB read error: Failed to read status. Aguardando 10s...
+[Worker 74] PID: 1775955, Requests: 2, Last: 5s ago, Uptime: 30s
+[Worker 74] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_155318_3_BC0030VB0082.tif
+[Worker 74] Requisição enviada, aguardando resposta...
+[Worker 74] Erro: Failed to read status
+⚠️ Worker 0 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_155318_3_BC0030VB0082.tif falhou (tentativa 2/3): SMB read error: Failed to read status. Aguardando 10s...
+[Worker 53] PID: 1775934, Requests: 1, Last: 12s ago, Uptime: 30s
+[Worker 53] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_081239_3_BC0030VB0082.tif
+[Worker 53] Requisição enviada, aguardando resposta...
+[Worker 53] Erro: Failed to read status
+⚠️ Worker 41 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_081239_3_BC0030VB0082.tif falhou (tentativa 2/3): SMB read error: Failed to read status. Aguardando 10s...
+[Worker 14] PID: 1775895, Requests: 2, Last: 5s ago, Uptime: 31s
+[Worker 14] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_052854_0_BC0030VB0082.tif
+[Worker 14] Requisição enviada, aguardando resposta...
+[Worker 14] Erro: Failed to read status
+⚠️ Worker 55 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_052854_0_BC0030VB0082.tif falhou (tentativa 2/3): SMB read error: Failed to read status. Aguardando 10s...
+[Worker 99] Resposta recebida: 3008632 bytes
+[Worker 99] PID: 1775980, Requests: 1, Last: 0s ago, Uptime: 31s
+[Worker 99] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240414_223252_3_BC0030VB0082.tif
+[Worker 99] Requisição enviada, aguardando resposta...
+[Worker 99] Erro: Failed to read status
+[Worker 99] PID: 1775980, Requests: 2, Last: 0s ago, Uptime: 31s
+[Worker 99] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_151812_6_BC0030VB0082.tif
+[Worker 99] Requisição enviada, aguardando resposta...
+⚠️ Worker 9 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240414_223252_3_BC0030VB0082.tif falhou (tentativa 1/3): SMB read error: Failed to read status. Aguardando 5s...
+[Worker 99] Erro: Failed to read status
+⚠️ Worker 60 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_151812_6_BC0030VB0082.tif falhou (tentativa 1/3): SMB read error: Failed to read status. Aguardando 5s...
+[Worker 35] PID: 1775916, Requests: 2, Last: 7s ago, Uptime: 32s
+[Worker 35] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_065058_3_BC0030VB0082.tif
+[Worker 35] Requisição enviada, aguardando resposta...
+[Worker 35] Erro: Failed to read status
+⚠️ Worker 42 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_065058_3_BC0030VB0082.tif falhou (tentativa 2/3): SMB read error: Failed to read status. Aguardando 10s...
+[Worker 29] Erro: Worker reported failure
+[Worker 29] PID: 1775910, Requests: 1, Last: 0s ago, Uptime: 32s
+[Worker 29] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_044311_3_BC0030VB0082.tif
+[Worker 29] Requisição enviada, aguardando resposta...
+[Worker 29] Erro: Failed to read status
+⚠️ Worker 52 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_044311_3_BC0030VB0082.tif falhou (tentativa 1/3): SMB read error: Failed to read status. Aguardando 5s...
+⚠️ Worker 45 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_155314_0_BC0030VB0082.tif falhou (tentativa 1/3): SMB read error: Worker reported failure. Aguardando 5s...
+[Worker 29] PID: 1775910, Requests: 2, Last: 0s ago, Uptime: 32s
+[Worker 29] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240414_231535_6_BC0030VB0082.tif
+[Worker 29] Requisição enviada, aguardando resposta...
+[Worker 29] Erro: Failed to read status
+[Worker 29] PID: 1775910, Requests: 3, Last: 0s ago, Uptime: 32s
+[Worker 29] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_023722_0_BC0030VB0082.tif
+[Worker 29] Requisição enviada, aguardando resposta...
+⚠️ Worker 85 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240414_231535_6_BC0030VB0082.tif falhou (tentativa 1/3): SMB read error: Failed to read status. Aguardando 5s...
+[Worker 29] Erro: Failed to read status
+⚠️ Worker 66 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_023722_0_BC0030VB0082.tif falhou (tentativa 1/3): SMB read error: Failed to read status. Aguardando 5s...
+[Worker 44] Resposta recebida: 2889187 bytes
+[Worker 66] Resposta recebida: 2579101 bytes
+[Worker 62] Resposta recebida: 2689759 bytes
+[Worker 15] Resposta recebida: 3207244 bytes
+[Worker 96] Resposta recebida: 2719264 bytes
+[Worker 96] PID: 1775977, Requests: 1, Last: 0s ago, Uptime: 33s
+[Worker 96] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_030752_6_BC0030VB0082.tif
+[Worker 96] Requisição enviada, aguardando resposta...
+[Worker 96] Erro: Failed to read status
+⚠️ Worker 27 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_030752_6_BC0030VB0082.tif falhou (tentativa 1/3): SMB read error: Failed to read status. Aguardando 5s...
+[Worker 4] PID: 1775885, Requests: 1, Last: 5s ago, Uptime: 33s
+[Worker 4] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_155316_6_BC0030VB0082.tif
+[Worker 4] Requisição enviada, aguardando resposta...
+[Worker 4] Erro: Failed to read status
+⚠️ Worker 59 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_155316_6_BC0030VB0082.tif falhou (tentativa 2/3): SMB read error: Failed to read status. Aguardando 10s...
+[Worker 76] Resposta recebida: 2973097 bytes
+[Worker 16] Resposta recebida: 2849797 bytes
+[Worker 87] Erro: Worker reported failure
+⚠️ Worker 30 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_155320_0_BC0030VB0082.tif falhou (tentativa 1/3): SMB read error: Worker reported failure. Aguardando 5s...
+[Worker 50] Resposta recebida: 2771173 bytes
+[Worker 75] PID: 1775956, Requests: 0, Last: 1775282951s ago, Uptime: 33s
+[Worker 75] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_155308_6_BC0030VB0082.tif
+[Worker 75] Requisição enviada, aguardando resposta...
+[Worker 51] Resposta recebida: 2710255 bytes
+[Worker 23] Resposta recebida: 2806249 bytes
+[Worker 19] Resposta recebida: 2562823 bytes
+[Worker 25] Resposta recebida: 2904643 bytes
+[Worker 86] PID: 1775967, Requests: 2, Last: 10s ago, Uptime: 34s
+Worker 86 (PID 1775967) Detectado morto (status: exit status: 101), recriando...
+[Worker 86] STDERR:
+[Worker] Starting PID: 1775967
+[Worker] Using NTLM auth: user=ghva
+[Worker] Ready to process requests
+[Worker] Request #1: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_075634_0_BC0030VB0082.tif
+[Worker] Successfully read 21257536 bytes from smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_075634_0_BC0030VB0082.tif
+[Worker] Request #2: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_145142_3_BC0030VB0082.tif
+[Worker] Successfully read 2945971 bytes from smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_145142_3_BC0030VB0082.tif
+
+thread 'main' (1775967) panicked at src/smb_worker.rs:142:33:
+called `Result::unwrap()` on an `Err` value: Os { code: 32, kind: BrokenPipe, message: "Broken pipe" }
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+[Worker 86] Recriando worker agora...
+[Pool] Recriando worker 86...
+[Pool] Worker 86 recriado com PID 1778854
+[Worker 86] Recriado com PID 1778854
+[Worker 86] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_051457_3_BC0030VB0082.tif
+[Worker 86] Requisição enviada, aguardando resposta...
+[Worker 28] Resposta recebida: 2892634 bytes
+[Worker 38] PID: 1775919, Requests: 0, Last: 1775282952s ago, Uptime: 34s
+[Worker 38] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_033900_3_BC0030VB0082.tif
+[Worker 38] Requisição enviada, aguardando resposta...
+[Worker 18] PID: 1775899, Requests: 0, Last: 1775282952s ago, Uptime: 34s
+[Worker 18] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_030308_6_BC0030VB0082.tif
+[Worker 18] Requisição enviada, aguardando resposta...
+[Worker 91] PID: 1775972, Requests: 3, Last: 5s ago, Uptime: 34s
+[Worker 91] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_023512_0_BC0030VB0082.tif
+[Worker 91] Requisição enviada, aguardando resposta...
+[Worker 91] Erro: Failed to read status
+⚠️ Worker 67 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_023512_0_BC0030VB0082.tif falhou (tentativa 1/3): SMB read error: Failed to read status. Aguardando 5s...
+[Worker 39] PID: 1775920, Requests: 2, Last: 8s ago, Uptime: 34s
+Worker 39 (PID 1775920) Detectado morto (status: exit status: 101), recriando...
+[Worker 39] STDERR:
+[Worker] Starting PID: 1775920
+[Worker] Using NTLM auth: user=ghva
+[Worker] Ready to process requests
+[Worker] Request #1: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_024856_3_BC0030VB0082.tif
+[Worker] Successfully read 23830789 bytes from smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_024856_3_BC0030VB0082.tif
+[Worker] Request #2: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_055613_0_BC0030VB0082.tif
+[Worker] Successfully read 2638303 bytes from smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_055613_0_BC0030VB0082.tif
+
+thread 'main' (1775920) panicked at src/smb_worker.rs:142:33:
+called `Result::unwrap()` on an `Err` value: Os { code: 32, kind: BrokenPipe, message: "Broken pipe" }
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+[Worker 39] Recriando worker agora...
+[Pool] Recriando worker 39...
+[Pool] Worker 39 recriado com PID 1778859
+[Worker 39] Recriado com PID 1778859
+[Worker 39] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_042710_6_BC0030VB0082.tif
+[Worker 39] Requisição enviada, aguardando resposta...
+[Worker 33] PID: 1775914, Requests: 1, Last: 10s ago, Uptime: 34s
+[Worker 33] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_054753_3_BC0030VB0082.tif
+[Worker 33] Requisição enviada, aguardando resposta...
+[Worker 33] Erro: Failed to read status
+⚠️ Worker 89 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_054753_3_BC0030VB0082.tif falhou (tentativa 1/3): SMB read error: Failed to read status. Aguardando 5s...
+[Worker 0] PID: 1775881, Requests: 2, Last: 7s ago, Uptime: 34s
+Worker 0 (PID 1775881) Detectado morto (status: exit status: 101), recriando...
+[Worker 0] STDERR:
+[Worker] Starting PID: 1775881
+[Worker] Using NTLM auth: user=ghva
+[Worker] Ready to process requests
+[Worker] Request #1: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_053612_0_BC0030VB0082.tif
+[Worker] Successfully read 2726722 bytes from smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_053612_0_BC0030VB0082.tif
+[Worker] Request #2: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_145634_3_BC0030VB0082.tif
+[Worker] Successfully read 3035845 bytes from smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_145634_3_BC0030VB0082.tif
+
+thread 'main' (1775881) panicked at src/smb_worker.rs:142:33:
+called `Result::unwrap()` on an `Err` value: Os { code: 32, kind: BrokenPipe, message: "Broken pipe" }
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+[Worker 0] Recriando worker agora...
+[Pool] Recriando worker 0...
+[Pool] Worker 0 recriado com PID 1778864
+[Worker 0] Recriado com PID 1778864
+[Worker 0] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_031900_3_BC0030VB0082.tif
+[Worker 0] Requisição enviada, aguardando resposta...
+[Worker 95] PID: 1775976, Requests: 1, Last: 5s ago, Uptime: 34s
+[Worker 95] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_014213_0_BC0030VB0082.tif
+[Worker 95] Requisição enviada, aguardando resposta...
+[Worker 95] Erro: Failed to read status
+[Worker 63] PID: 1775944, Requests: 0, Last: 1775282952s ago, Uptime: 34s
+[Worker 63] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_041226_0_BC0030VB0082.tif
+[Worker 28] PID: 1775909, Requests: 1, Last: 0s ago, Uptime: 34s
+[Worker 44] PID: 1775925, Requests: 1, Last: 2s ago, Uptime: 34s
+[Worker 44] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_024756_0_BC0030VB0082.tif
+[Worker 63] Requisição enviada, aguardando resposta...
+[Worker 44] Requisição enviada, aguardando resposta...
+[Worker 28] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_014305_3_BC0030VB0082.tif
+[Worker 28] Requisição enviada, aguardando resposta...
+[Worker 44] Erro: Failed to read status
+⚠️ Worker 17 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_014213_0_BC0030VB0082.tif falhou (tentativa 1/3): SMB read error: Failed to read status. Aguardando 5s...
+⚠️ Worker 15 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_024756_0_BC0030VB0082.tif falhou (tentativa 1/3): SMB read error: Failed to read status. Aguardando 5s...
+[Worker 41] PID: 1775922, Requests: 0, Last: 1775282952s ago, Uptime: 34s
+[Worker 41] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_061739_6_BC0030VB0082.tif
+[Worker 41] Requisição enviada, aguardando resposta...
+[Worker 83] PID: 1775964, Requests: 0, Last: 1775282952s ago, Uptime: 34s
+[Worker 83] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_042406_3_BC0030VB0082.tif
+[Worker 83] Requisição enviada, aguardando resposta...
+[Worker 88] PID: 1775969, Requests: 3, Last: 7s ago, Uptime: 34s
+[Worker 88] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_021358_0_BC0030VB0082.tif
+[Worker 88] Requisição enviada, aguardando resposta...
+[Worker 88] Erro: Failed to read status
+⚠️ Worker 87 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_021358_0_BC0030VB0082.tif falhou (tentativa 1/3): SMB read error: Failed to read status. Aguardando 5s...
+[Worker 96] PID: 1775977, Requests: 2, Last: 2s ago, Uptime: 35s
+[Worker 96] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_073840_0_BC0030VB0082.tif
+[Worker 96] Requisição enviada, aguardando resposta...
+[Worker 20] PID: 1775901, Requests: 2, Last: 8s ago, Uptime: 35s
+[Worker 20] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_075609_3_BC0030VB0082.tif
+[Worker 20] Requisição enviada, aguardando resposta...
+[Worker 96] Erro: Failed to read status
+⚠️ Worker 68 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_073840_0_BC0030VB0082.tif falhou (tentativa 1/3): SMB read error: Failed to read status. Aguardando 5s...
+[Worker 37] PID: 1775918, Requests: 0, Last: 1775282953s ago, Uptime: 35s
+[Worker 37] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_133737_6_BC0030VB0082.tif
+[Worker 37] Requisição enviada, aguardando resposta...
+[Worker 43] PID: 1775924, Requests: 5, Last: 5s ago, Uptime: 35s
+[Worker 43] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_040907_3_BC0030VB0082.tif
+[Worker 43] Requisição enviada, aguardando resposta...
+[Worker 43] Erro: Failed to read status
+⚠️ Worker 84 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_040907_3_BC0030VB0082.tif falhou (tentativa 1/3): SMB read error: Failed to read status. Aguardando 5s...
+[Worker 23] PID: 1775904, Requests: 1, Last: 1s ago, Uptime: 35s
+[Worker 50] PID: 1775931, Requests: 1, Last: 2s ago, Uptime: 35s
+[Worker 50] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_054759_0_BC0030VB0082.tif
+[Worker 23] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_023236_3_BC0030VB0082.tif
+[Worker 23] Requisição enviada, aguardando resposta...
+[Worker 50] Requisição enviada, aguardando resposta...
+[Worker 23] Erro: Failed to read status
+[Worker 50] Erro: Failed to read status
+⚠️ Worker 74 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_023236_3_BC0030VB0082.tif falhou (tentativa 1/3): SMB read error: Failed to read status. Aguardando 5s...
+⚠️ Worker 75 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_054759_0_BC0030VB0082.tif falhou (tentativa 1/3): SMB read error: Failed to read status. Aguardando 5s...
+[Worker 14] PID: 1775895, Requests: 3, Last: 4s ago, Uptime: 35s
+Worker 14 (PID 1775895) Detectado morto (status: exit status: 101), recriando...
+[Worker 14] STDERR:
+[Worker] Starting PID: 1775895
+[Worker] Using NTLM auth: user=ghva
+[Worker] Ready to process requests
+[Worker] Request #1: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_052854_0_BC0030VB0082.tif
+[Worker] Successfully read 24412726 bytes from smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_052854_0_BC0030VB0082.tif
+[Worker] Request #2: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_143805_6_BC0030VB0082.tif
+[Worker] Successfully read 2794891 bytes from smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_143805_6_BC0030VB0082.tif
+
+thread 'main' (1775895) panicked at src/smb_worker.rs:142:33:
+called `Result::unwrap()` on an `Err` value: Os { code: 32, kind: BrokenPipe, message: "Broken pipe" }
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+[Worker 14] Recriando worker agora...
+[Pool] Recriando worker 14...
+[Pool] Worker 14 recriado com PID 1778886
+[Worker 14] Recriado com PID 1778886
+[Worker 14] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_024542_3_BC0030VB0082.tif
+[Worker 14] Requisição enviada, aguardando resposta...
+[Worker 88] PID: 1775969, Requests: 4, Last: 1s ago, Uptime: 35s
+[Worker 88] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_045923_6_BC0030VB0082.tif
+[Worker 88] Requisição enviada, aguardando resposta...
+[Worker 88] Erro: Failed to read status
+⚠️ Worker 22 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_045923_6_BC0030VB0082.tif falhou (tentativa 1/3): SMB read error: Failed to read status. Aguardando 5s...
+[Worker 77] PID: 1775958, Requests: 0, Last: 1775282953s ago, Uptime: 35s
+[Worker 77] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_053025_6_BC0030VB0082.tif
+[Worker 77] Requisição enviada, aguardando resposta...
+[Worker 78] PID: 1775959, Requests: 0, Last: 1775282953s ago, Uptime: 35s
+[Worker 78] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_034956_3_BC0030VB0082.tif
+[Worker 78] Requisição enviada, aguardando resposta...
+[Worker 71] PID: 1775952, Requests: 0, Last: 1775282953s ago, Uptime: 35s
+[Worker 71] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_070852_3_BC0030VB0082.tif
+[Worker 71] Requisição enviada, aguardando resposta...
+[Worker 99] PID: 1775980, Requests: 3, Last: 4s ago, Uptime: 35s
+[Worker 99] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_040849_3_BC0030VB0082.tif
+[Worker 99] Requisição enviada, aguardando resposta...
+[Worker 99] Erro: Failed to read status
+⚠️ Worker 5 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_040849_3_BC0030VB0082.tif falhou (tentativa 1/3): SMB read error: Failed to read status. Aguardando 5s...
+[Worker 25] PID: 1775906, Requests: 1, Last: 1s ago, Uptime: 35s
+[Worker 25] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_032148_3_BC0030VB0082.tif
+[Worker 25] Requisição enviada, aguardando resposta...
+[Worker 25] Erro: File too large: 2332145961967710039 bytes
+⚠️ Worker 4 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_032148_3_BC0030VB0082.tif falhou (tentativa 1/3): SMB read error: File too large: 2332145961967710039 bytes. Aguardando 5s...
+[Worker 87] PID: 1775968, Requests: 1, Last: 2s ago, Uptime: 35s
+[Worker 87] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_054839_6_BC0030VB0082.tif
+[Worker 87] Requisição enviada, aguardando resposta...
+[Worker 87] Erro: Failed to read status
+⚠️ Worker 3 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_054839_6_BC0030VB0082.tif falhou (tentativa 1/3): SMB read error: Failed to read status. Aguardando 5s...
+[Worker 88] PID: 1775969, Requests: 5, Last: 0s ago, Uptime: 35s
+[Worker 88] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_015840_6_BC0030VB0082.tif
+[Worker 88] Requisição enviada, aguardando resposta...
+[Worker 88] Erro: Failed to read status
+⚠️ Worker 14 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_015840_6_BC0030VB0082.tif falhou (tentativa 1/3): SMB read error: Failed to read status. Aguardando 5s...
+[Worker 48] PID: 1775929, Requests: 0, Last: 1775282953s ago, Uptime: 35s
+[Worker 48] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_033555_6_BC0030VB0082.tif
+[Worker 48] Requisição enviada, aguardando resposta...
+[Worker 25] PID: 1775906, Requests: 2, Last: 0s ago, Uptime: 35s
+[Worker 25] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_064953_6_BC0030VB0082.tif
+[Worker 25] Requisição enviada, aguardando resposta...
+[Worker 25] Erro: Failed to read status
+⚠️ Worker 6 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_064953_6_BC0030VB0082.tif falhou (tentativa 1/3): SMB read error: Failed to read status. Aguardando 5s...
+[Worker 66] PID: 1775947, Requests: 1, Last: 2s ago, Uptime: 35s
+[Worker 66] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_060100_3_BC0030VB0082.tif
+[Worker 66] Requisição enviada, aguardando resposta...
+[Worker 66] Erro: Failed to read status
+⚠️ Worker 11 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_060100_3_BC0030VB0082.tif falhou (tentativa 1/3): SMB read error: Failed to read status. Aguardando 5s...
+[Worker 15] PID: 1775896, Requests: 1, Last: 2s ago, Uptime: 35s
+[Worker 15] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_014155_6_BC0030VB0082.tif
+[Worker 15] Requisição enviada, aguardando resposta...
+[Worker 95] PID: 1775976, Requests: 2, Last: 1s ago, Uptime: 35s
+[Worker 95] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_051501_6_BC0030VB0082.tif
+[Worker 95] Requisição enviada, aguardando resposta...
+[Worker 95] Erro: Failed to read status
+⚠️ Worker 76 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_051501_6_BC0030VB0082.tif falhou (tentativa 1/3): SMB read error: Failed to read status. Aguardando 5s...
+[Worker 50] PID: 1775931, Requests: 2, Last: 0s ago, Uptime: 35s
+[Worker 50] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_153050_6_BC0030VB0082.tif
+[Worker 50] Requisição enviada, aguardando resposta...
+[Worker 61] PID: 1775942, Requests: 1, Last: 7s ago, Uptime: 35s
+[Worker 61] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_014336_3_BC0030VB0082.tif
+[Worker 49] PID: 1775930, Requests: 0, Last: 1775282953s ago, Uptime: 35s
+[Worker 49] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_074038_6_BC0030VB0082.tif
+[Worker 49] Requisição enviada, aguardando resposta...
+[Worker 50] Erro: Failed to read status
+[Worker 61] Requisição enviada, aguardando resposta...
+⚠️ Worker 79 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_153050_6_BC0030VB0082.tif falhou (tentativa 1/3): SMB read error: Failed to read status. Aguardando 5s...
+[Worker 61] Erro: Failed to read status
+⚠️ Worker 25 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_014336_3_BC0030VB0082.tif falhou (tentativa 1/3): SMB read error: Failed to read status. Aguardando 5s...
+[Worker 43] PID: 1775924, Requests: 6, Last: 0s ago, Uptime: 35s
+[Worker 43] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_051529_3_BC0030VB0082.tif
+[Worker 43] Requisição enviada, aguardando resposta...
+[Worker 43] Erro: Failed to read status
+⚠️ Worker 33 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_051529_3_BC0030VB0082.tif falhou (tentativa 1/3): SMB read error: Failed to read status. Aguardando 5s...
+[Worker 97] PID: 1775978, Requests: 0, Last: 1775282953s ago, Uptime: 35s
+[Worker 97] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_075512_0_BC0030VB0082.tif
+[Worker 97] Requisição enviada, aguardando resposta...
+[Worker 94] Resposta recebida: 2698177 bytes
+[Worker 94] PID: 1775975, Requests: 1, Last: 0s ago, Uptime: 35s
+[Worker 94] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_070739_6_BC0030VB0082.tif
+[Worker 94] Requisição enviada, aguardando resposta...
+[Worker 94] Erro: Failed to read status
+⚠️ Worker 50 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_070739_6_BC0030VB0082.tif falhou (tentativa 1/3): SMB read error: Failed to read status. Aguardando 5s...
+[Worker 89] PID: 1775970, Requests: 0, Last: 1775282953s ago, Uptime: 35s
+[Worker 89] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_075855_3_BC0030VB0082.tif
+[Worker 89] Requisição enviada, aguardando resposta...
+[Worker 67] PID: 1775948, Requests: 1, Last: 10s ago, Uptime: 35s
+[Worker 67] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_015852_0_BC0030VB0082.tif
+[Worker 67] Requisição enviada, aguardando resposta...
+[Worker 67] Erro: Failed to read status
+⚠️ Worker 34 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_015852_0_BC0030VB0082.tif falhou (tentativa 1/3): SMB read error: Failed to read status. Aguardando 5s...
+[Worker 45] PID: 1775926, Requests: 2, Last: 8s ago, Uptime: 35s
+Worker 45 (PID 1775926) Detectado morto (status: exit status: 101), recriando...
+[Worker 45] STDERR:
+[Worker] Starting PID: 1775926
+[Worker] Using NTLM auth: user=ghva
+[Worker] Ready to process requests
+[Worker] Request #1: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_085722_6_BC0030VB0082.tif
+[Worker] Successfully read 2634487 bytes from smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_085722_6_BC0030VB0082.tif
+[Worker] Request #2: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_101520_3_BC0030VB0082.tif
+[Worker] Successfully read 2762767 bytes from smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_101520_3_BC0030VB0082.tif
+
+thread 'main' (1775926) panicked at src/smb_worker.rs:142:33:
+called `Result::unwrap()` on an `Err` value: Os { code: 32, kind: BrokenPipe, message: "Broken pipe" }
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+[Worker 45] Recriando worker agora...
+[Pool] Recriando worker 45...
+[Pool] Worker 45 recriado com PID 1778917
+[Worker 45] Recriado com PID 1778917
+[Worker 45] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_044138_6_BC0030VB0082.tif
+[Worker 45] Requisição enviada, aguardando resposta...
+[Worker 84] PID: 1775965, Requests: 1, Last: 18s ago, Uptime: 35s
+[Worker 84] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_154534_6_BC0030VB0082.tif
+[Worker 84] Requisição enviada, aguardando resposta...
+[Worker 84] Erro: Failed to read status
+⚠️ Worker 54 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_154534_6_BC0030VB0082.tif falhou (tentativa 1/3): SMB read error: Failed to read status. Aguardando 5s...
+[Worker 33] PID: 1775914, Requests: 2, Last: 1s ago, Uptime: 35s
+[Worker 33] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_061944_6_BC0030VB0082.tif
+[Worker 33] Requisição enviada, aguardando resposta...
+[Worker 33] Erro: File too large: 2332145961967710039 bytes
+⚠️ Worker 37 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_061944_6_BC0030VB0082.tif falhou (tentativa 1/3): SMB read error: File too large: 2332145961967710039 bytes. Aguardando 5s...
+[Worker 29] PID: 1775910, Requests: 4, Last: 5s ago, Uptime: 37s
+[Worker 29] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_155314_0_BC0030VB0082.tif
+[Worker 29] Requisição enviada, aguardando resposta...
+[Worker 29] Erro: Failed to read status
+⚠️ Worker 45 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_155314_0_BC0030VB0082.tif falhou (tentativa 2/3): SMB read error: Failed to read status. Aguardando 10s...
+[Worker 29] PID: 1775910, Requests: 5, Last: 0s ago, Uptime: 37s
+[Worker 29] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_044311_3_BC0030VB0082.tif
+[Worker 29] Requisição enviada, aguardando resposta...
+[Worker 29] Erro: Failed to read status
+⚠️ Worker 52 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_044311_3_BC0030VB0082.tif falhou (tentativa 2/3): SMB read error: Failed to read status. Aguardando 10s...
+[Worker 88] PID: 1775969, Requests: 6, Last: 2s ago, Uptime: 37s
+[Worker 88] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_155318_6_BC0030VB0082.tif
+[Worker 88] Requisição enviada, aguardando resposta...
+[Worker 88] Erro: Failed to read status
+❌ Worker 28 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_155318_6_BC0030VB0082.tif falhou após 3 tentativas: SMB read error: Failed to read status
+❌ SMB read error: Failed to read status: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_155318_6_BC0030VB0082.tif -> s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_155318_6_BC0030VB0082.tif
+[Worker 43] PID: 1775924, Requests: 7, Last: 2s ago, Uptime: 37s
+[Worker 43] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_155312_6_BC0030VB0082.tif
+[Worker 43] Requisição enviada, aguardando resposta...
+[Worker 43] Erro: Failed to read status
+❌ Worker 13 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_155312_6_BC0030VB0082.tif falhou após 3 tentativas: SMB read error: Failed to read status
+❌ SMB read error: Failed to read status: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_155312_6_BC0030VB0082.tif -> s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_155312_6_BC0030VB0082.tif
+[Worker 30] Erro: Worker reported failure
+[Worker 30] PID: 1775911, Requests: 1, Last: 0s ago, Uptime: 38s
+[Worker 30] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_051328_6_BC0030VB0082.tif
+⚠️ Worker 51 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_155311_6_BC0030VB0082.tif falhou (tentativa 1/3): SMB read error: Worker reported failure. Aguardando 5s...
+[Worker 30] Requisição enviada, aguardando resposta...
+[Worker 30] Erro: Failed to read status
+⚠️ Worker 21 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_051328_6_BC0030VB0082.tif falhou (tentativa 1/3): SMB read error: Failed to read status. Aguardando 5s...
+[Worker 32] Erro: Worker reported failure
+⚠️ Worker 62 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_032150_3_BC0030VB0082.tif falhou (tentativa 1/3): SMB read error: Worker reported failure. Aguardando 5s...
+[Worker 87] PID: 1775968, Requests: 2, Last: 3s ago, Uptime: 38s
+[Worker 87] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_155320_0_BC0030VB0082.tif
+[Worker 87] Requisição enviada, aguardando resposta...
+[Worker 87] Erro: Failed to read status
+⚠️ Worker 30 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_155320_0_BC0030VB0082.tif falhou (tentativa 2/3): SMB read error: Failed to read status. Aguardando 10s...
+[Worker 91] PID: 1775972, Requests: 4, Last: 5s ago, Uptime: 39s
+Worker 91 (PID 1775972) Detectado morto (status: exit status: 101), recriando...
+[Worker 91] STDERR:
+[Worker] Starting PID: 1775972
+[Worker] Using NTLM auth: user=ghva
+[Worker] Ready to process requests
+[Worker] Request #1: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_151528_6_BC0030VB0082.tif
+[Worker] Successfully read 2807809 bytes from smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_151528_6_BC0030VB0082.tif
+[Worker] Request #2: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_121913_3_BC0030VB0082.tif
+[Worker] Successfully read 2916214 bytes from smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_121913_3_BC0030VB0082.tif
+
+thread 'main' (1775972) panicked at src/smb_worker.rs:142:33:
+called `Result::unwrap()` on an `Err` value: Os { code: 32, kind: BrokenPipe, message: "Broken pipe" }
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+[Worker 91] Recriando worker agora...
+[Pool] Recriando worker 91...
+[Pool] Worker 91 recriado com PID 1778943
+[Worker 91] Recriado com PID 1778943
+[Worker 91] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_023512_0_BC0030VB0082.tif
+[Worker 91] Requisição enviada, aguardando resposta...
+[Worker 33] PID: 1775914, Requests: 3, Last: 4s ago, Uptime: 39s
+[Worker 33] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_054753_3_BC0030VB0082.tif
+[Worker 33] Requisição enviada, aguardando resposta...
+[Worker 33] Erro: Failed to read status
+⚠️ Worker 89 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_054753_3_BC0030VB0082.tif falhou (tentativa 2/3): SMB read error: Failed to read status. Aguardando 10s...
+[Worker 44] PID: 1775925, Requests: 2, Last: 5s ago, Uptime: 39s
+[Worker 44] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_024756_0_BC0030VB0082.tif
+[Worker 44] Requisição enviada, aguardando resposta...
+[Worker 95] PID: 1775976, Requests: 3, Last: 4s ago, Uptime: 39s
+[Worker 95] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_014213_0_BC0030VB0082.tif
+[Worker 95] Requisição enviada, aguardando resposta...
+[Worker 44] Erro: Failed to read status
+⚠️ Worker 15 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_024756_0_BC0030VB0082.tif falhou (tentativa 2/3): SMB read error: Failed to read status. Aguardando 10s...
+[Worker 95] Erro: Failed to read status
+⚠️ Worker 17 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_014213_0_BC0030VB0082.tif falhou (tentativa 2/3): SMB read error: Failed to read status. Aguardando 10s...
+[Worker 88] PID: 1775969, Requests: 7, Last: 2s ago, Uptime: 39s
+[Worker 88] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_021358_0_BC0030VB0082.tif
+[Worker 88] Requisição enviada, aguardando resposta...
+[Worker 88] Erro: Failed to read status
+⚠️ Worker 87 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_021358_0_BC0030VB0082.tif falhou (tentativa 2/3): SMB read error: Failed to read status. Aguardando 10s...
+[Worker 96] PID: 1775977, Requests: 3, Last: 5s ago, Uptime: 40s
+Worker 96 (PID 1775977) Detectado morto (status: exit status: 101), recriando...
+[Worker 96] STDERR:
+[Worker] Starting PID: 1775977
+[Worker] Using NTLM auth: user=ghva
+[Worker] Ready to process requests
+[Worker] Request #1: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_033028_0_BC0030VB0082.tif
+[Worker] Successfully read 2719264 bytes from smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_033028_0_BC0030VB0082.tif
+[Worker] Request #2: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_030752_6_BC0030VB0082.tif
+[Worker] Successfully read 4780558 bytes from smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_030752_6_BC0030VB0082.tif
+
+thread 'main' (1775977) panicked at src/smb_worker.rs:142:33:
+called `Result::unwrap()` on an `Err` value: Os { code: 32, kind: BrokenPipe, message: "Broken pipe" }
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+[Worker 96] Recriando worker agora...
+[Pool] Recriando worker 96...
+[Pool] Worker 96 recriado com PID 1779008
+[Worker 96] Recriado com PID 1779008
+[Worker 96] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_073840_0_BC0030VB0082.tif
+[Worker 96] Requisição enviada, aguardando resposta...
+[Worker 43] PID: 1775924, Requests: 8, Last: 3s ago, Uptime: 40s
+[Worker 43] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_040907_3_BC0030VB0082.tif
+[Worker 43] Requisição enviada, aguardando resposta...
+[Worker 43] Erro: Failed to read status
+⚠️ Worker 84 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_040907_3_BC0030VB0082.tif falhou (tentativa 2/3): SMB read error: Failed to read status. Aguardando 10s...
+[Worker 23] PID: 1775904, Requests: 2, Last: 5s ago, Uptime: 40s
+[Worker 23] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_023236_3_BC0030VB0082.tif
+[Worker 23] Requisição enviada, aguardando resposta...
+[Worker 23] Erro: File too large: 2332145961967710039 bytes
+⚠️ Worker 74 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_023236_3_BC0030VB0082.tif falhou (tentativa 2/3): SMB read error: File too large: 2332145961967710039 bytes. Aguardando 10s...
+[Worker 50] PID: 1775931, Requests: 3, Last: 5s ago, Uptime: 40s
+[Worker 50] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_054759_0_BC0030VB0082.tif
+[Worker 50] Requisição enviada, aguardando resposta...
+[Worker 50] Erro: Failed to read status
+⚠️ Worker 75 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_054759_0_BC0030VB0082.tif falhou (tentativa 2/3): SMB read error: Failed to read status. Aguardando 10s...
+[Worker 88] PID: 1775969, Requests: 8, Last: 1s ago, Uptime: 40s
+[Worker 88] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_045923_6_BC0030VB0082.tif
+[Worker 88] Requisição enviada, aguardando resposta...
+[Worker 88] Erro: Failed to read status
+⚠️ Worker 22 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_045923_6_BC0030VB0082.tif falhou (tentativa 2/3): SMB read error: Failed to read status. Aguardando 10s...
+[Worker 99] PID: 1775980, Requests: 4, Last: 5s ago, Uptime: 40s
+Worker 99 (PID 1775980) Detectado morto (status: exit status: 101), recriando...
+[Worker 99] STDERR:
+[Worker] Starting PID: 1775980
+[Worker] Using NTLM auth: user=ghva
+[Worker] Ready to process requests
+[Worker] Request #1: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240414_223206_0_BC0030VB0082.tif
+[Worker] Successfully read 3008632 bytes from smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240414_223206_0_BC0030VB0082.tif
+[Worker] Request #2: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240414_223252_3_BC0030VB0082.tif
+[Worker] Successfully read 2915203 bytes from smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240414_223252_3_BC0030VB0082.tif
+
+thread 'main' (1775980) panicked at src/smb_worker.rs:142:33:
+called `Result::unwrap()` on an `Err` value: Os { code: 32, kind: BrokenPipe, message: "Broken pipe" }
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+[Worker 99] Recriando worker agora...
+[Pool] Recriando worker 99...
+[Worker 25] PID: 1775906, Requests: 3, Last: 5s ago, Uptime: 40s
+[Pool] Worker 99 recriado com PID 1779081
+[Worker 99] Recriado com PID 1779081
+[Worker 99] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_040849_3_BC0030VB0082.tif
+[Worker 99] Requisição enviada, aguardando resposta...
+[Worker 25] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_032148_3_BC0030VB0082.tif
+[Worker 25] Requisição enviada, aguardando resposta...
+[Worker 25] Erro: Failed to read status
+⚠️ Worker 4 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_032148_3_BC0030VB0082.tif falhou (tentativa 2/3): SMB read error: Failed to read status. Aguardando 10s...
+[Worker 88] PID: 1775969, Requests: 9, Last: 0s ago, Uptime: 40s
+[Worker 88] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_015840_6_BC0030VB0082.tif
+[Worker 88] Requisição enviada, aguardando resposta...
+[Worker 88] Erro: Failed to read status
+⚠️ Worker 14 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_015840_6_BC0030VB0082.tif falhou (tentativa 2/3): SMB read error: Failed to read status. Aguardando 10s...
+[Worker 66] PID: 1775947, Requests: 2, Last: 5s ago, Uptime: 40s
+[Worker 95] PID: 1775976, Requests: 4, Last: 1s ago, Uptime: 40s
+[Worker 95] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_051501_6_BC0030VB0082.tif
+[Worker 95] Requisição enviada, aguardando resposta...
+[Worker 66] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_060100_3_BC0030VB0082.tif
+[Worker 66] Requisição enviada, aguardando resposta...
+[Worker 66] Erro: Failed to read status
+⚠️ Worker 11 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_060100_3_BC0030VB0082.tif falhou (tentativa 2/3): SMB read error: Failed to read status. Aguardando 10s...
+[Worker 95] Erro: Failed to read status
+⚠️ Worker 76 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_051501_6_BC0030VB0082.tif falhou (tentativa 2/3): SMB read error: Failed to read status. Aguardando 10s...
+[Worker 50] PID: 1775931, Requests: 4, Last: 0s ago, Uptime: 40s
+[Worker 50] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_153050_6_BC0030VB0082.tif
+[Worker 50] Requisição enviada, aguardando resposta...
+[Worker 61] PID: 1775942, Requests: 2, Last: 5s ago, Uptime: 40s
+[Worker 61] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_014336_3_BC0030VB0082.tif
+[Worker 61] Requisição enviada, aguardando resposta...
+[Worker 74] PID: 1775955, Requests: 3, Last: 10s ago, Uptime: 40s
+[Worker 74] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_155318_3_BC0030VB0082.tif
+[Worker 74] Requisição enviada, aguardando resposta...
+[Worker 50] Erro: Failed to read status
+⚠️ Worker 79 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_153050_6_BC0030VB0082.tif falhou (tentativa 2/3): SMB read error: Failed to read status. Aguardando 10s...
+[Worker 61] Erro: Failed to read status
+⚠️ Worker 25 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_014336_3_BC0030VB0082.tif falhou (tentativa 2/3): SMB read error: Failed to read status. Aguardando 10s...
+[Worker 43] PID: 1775924, Requests: 9, Last: 0s ago, Uptime: 40s
+[Worker 43] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_051529_3_BC0030VB0082.tif
+[Worker 43] Requisição enviada, aguardando resposta...
+[Worker 74] Erro: Failed to read status
+❌ Worker 0 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_155318_3_BC0030VB0082.tif falhou após 3 tentativas: SMB read error: Failed to read status
+❌ SMB read error: Failed to read status: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_155318_3_BC0030VB0082.tif -> s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_155318_3_BC0030VB0082.tif
+[Worker 43] Erro: Failed to read status
+[Worker 43] PID: 1775924, Requests: 10, Last: 0s ago, Uptime: 40s
+[Worker 43] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_030613_0_BC0030VB0082.tif
+[Worker 43] Requisição enviada, aguardando resposta...
+[Worker 43] Erro: Failed to read status
+❌ Worker 10 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_030613_0_BC0030VB0082.tif falhou após 3 tentativas: SMB read error: Failed to read status
+⚠️ Worker 33 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_051529_3_BC0030VB0082.tif falhou (tentativa 2/3): SMB read error: Failed to read status. Aguardando 10s...
+❌ SMB read error: Failed to read status: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_030613_0_BC0030VB0082.tif -> s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_030613_0_BC0030VB0082.tif
+[Worker 94] PID: 1775975, Requests: 2, Last: 5s ago, Uptime: 40s
+[Worker 94] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_070739_6_BC0030VB0082.tif
+[Worker 94] Requisição enviada, aguardando resposta...
+[Worker 94] Erro: Failed to read status
+⚠️ Worker 50 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_070739_6_BC0030VB0082.tif falhou (tentativa 2/3): SMB read error: Failed to read status. Aguardando 10s...
+[Worker 11] PID: 1775892, Requests: 0, Last: 1775282958s ago, Uptime: 40s
+[Worker 11] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240414_230854_6_BC0030VB0082.tif
+[Worker 11] Requisição enviada, aguardando resposta...
+[Worker 53] PID: 1775934, Requests: 2, Last: 10s ago, Uptime: 40s
+[Worker 53] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_081239_3_BC0030VB0082.tif
+[Worker 53] Requisição enviada, aguardando resposta...
+[Worker 53] Erro: Failed to read status
+❌ Worker 41 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_081239_3_BC0030VB0082.tif falhou após 3 tentativas: SMB read error: Failed to read status
+[Worker 43] PID: 1775924, Requests: 11, Last: 0s ago, Uptime: 40s
+❌ SMB read error: Failed to read status: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_081239_3_BC0030VB0082.tif -> s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_081239_3_BC0030VB0082.tif
+[Worker 67] PID: 1775948, Requests: 2, Last: 5s ago, Uptime: 40s
+[Worker 25] PID: 1775906, Requests: 4, Last: 0s ago, Uptime: 40s
+[Worker 25] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_064953_6_BC0030VB0082.tif
+[Worker 25] Requisição enviada, aguardando resposta...
+[Worker 25] Erro: Failed to read status
+⚠️ Worker 6 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_064953_6_BC0030VB0082.tif falhou (tentativa 2/3): SMB read error: Failed to read status. Aguardando 10s...
+[Worker 43] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_052512_6_BC0030VB0082.tif
+[Worker 43] Requisição enviada, aguardando resposta...
+[Worker 43] Erro: Failed to read status
+⚠️ Worker 35 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_052512_6_BC0030VB0082.tif falhou (tentativa 1/3): SMB read error: Failed to read status. Aguardando 5s...
+[Worker 67] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_015852_0_BC0030VB0082.tif
+[Worker 67] Requisição enviada, aguardando resposta...
+[Worker 67] Erro: Failed to read status
+⚠️ Worker 34 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_015852_0_BC0030VB0082.tif falhou (tentativa 2/3): SMB read error: Failed to read status. Aguardando 10s...
+[Worker 16] PID: 1775897, Requests: 1, Last: 7s ago, Uptime: 40s
+[Worker 16] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_102323_0_BC0030VB0082.tif
+[Worker 16] Requisição enviada, aguardando resposta...
+[Worker 16] Erro: Failed to read status
+⚠️ Worker 78 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_102323_0_BC0030VB0082.tif falhou (tentativa 1/3): SMB read error: Failed to read status. Aguardando 5s...
+[Worker 62] PID: 1775943, Requests: 1, Last: 7s ago, Uptime: 40s
+[Worker 62] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240414_223156_3_BC0030VB0082.tif
+[Worker 62] Requisição enviada, aguardando resposta...
+[Worker 62] Erro: Failed to read status
+⚠️ Worker 90 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240414_223156_3_BC0030VB0082.tif falhou (tentativa 1/3): SMB read error: Failed to read status. Aguardando 5s...
+[Worker 58] PID: 1775939, Requests: 1, Last: 11s ago, Uptime: 40s
+[Worker 58] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_113654_3_BC0030VB0082.tif
+[Worker 58] Requisição enviada, aguardando resposta...
+[Worker 58] Erro: Failed to read status
+⚠️ Worker 0 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_113654_3_BC0030VB0082.tif falhou (tentativa 1/3): SMB read error: Failed to read status. Aguardando 5s...
+[Worker 84] PID: 1775965, Requests: 2, Last: 5s ago, Uptime: 40s
+[Worker 84] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_154534_6_BC0030VB0082.tif
+[Worker 84] Requisição enviada, aguardando resposta...
+[Worker 84] Erro: Failed to read status
+⚠️ Worker 54 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_154534_6_BC0030VB0082.tif falhou (tentativa 2/3): SMB read error: Failed to read status. Aguardando 10s...
+[Worker 88] PID: 1775969, Requests: 10, Last: 0s ago, Uptime: 40s
+[Worker 88] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_152507_0_BC0030VB0082.tif
+[Worker 88] Requisição enviada, aguardando resposta...
+[Worker 3] PID: 1775884, Requests: 0, Last: 1775282958s ago, Uptime: 40s
+[Worker 3] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_082529_3_BC0030VB0082.tif
+[Worker 3] Requisição enviada, aguardando resposta...
+[Worker 40] PID: 1775921, Requests: 0, Last: 1775282958s ago, Uptime: 40s
+[Worker 40] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_113123_3_BC0030VB0082.tif
+[Worker 40] Requisição enviada, aguardando resposta...
+[Worker 94] PID: 1775975, Requests: 3, Last: 0s ago, Uptime: 40s
+[Worker 94] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_001932_3_BC0030VB0082.tif
+[Worker 94] Requisição enviada, aguardando resposta...
+[Worker 88] Erro: Failed to read status
+[Worker 94] Erro: Failed to read status
+⚠️ Worker 9 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_152507_0_BC0030VB0082.tif falhou (tentativa 1/3): SMB read error: Failed to read status. Aguardando 5s...
+⚠️ Worker 60 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_001932_3_BC0030VB0082.tif falhou (tentativa 1/3): SMB read error: Failed to read status. Aguardando 5s...
+[Worker 87] PID: 1775968, Requests: 3, Last: 2s ago, Uptime: 40s
+[Worker 87] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_054839_6_BC0030VB0082.tif
+[Worker 87] Requisição enviada, aguardando resposta...
+[Worker 87] Erro: Failed to read status
+⚠️ Worker 3 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_054839_6_BC0030VB0082.tif falhou (tentativa 2/3): SMB read error: Failed to read status. Aguardando 10s...
+[Worker 94] PID: 1775975, Requests: 4, Last: 0s ago, Uptime: 40s
+[Worker 94] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_145639_3_BC0030VB0082.tif
+[Worker 94] Requisição enviada, aguardando resposta...
+[Worker 94] Erro: Failed to read status
+⚠️ Worker 28 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_145639_3_BC0030VB0082.tif falhou (tentativa 1/3): SMB read error: Failed to read status. Aguardando 5s...
+[Worker 33] PID: 1775914, Requests: 4, Last: 1s ago, Uptime: 40s
+[Worker 33] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_061944_6_BC0030VB0082.tif
+[Worker 33] Requisição enviada, aguardando resposta...
+[Worker 33] Erro: Failed to read status
+⚠️ Worker 37 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_061944_6_BC0030VB0082.tif falhou (tentativa 2/3): SMB read error: Failed to read status. Aguardando 10s...
+[Worker 68] PID: 1775949, Requests: 3, Last: 11s ago, Uptime: 40s
+Worker 68 (PID 1775949) Detectado morto (status: exit status: 101), recriando...
+[Worker 68] STDERR:
+[Worker] Starting PID: 1775949
+[Worker] Using NTLM auth: user=ghva
+[Worker] Ready to process requests
+[Worker] Request #1: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_052029_3_BC0030VB0082.tif
+[Worker] Successfully read 2976193 bytes from smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_052029_3_BC0030VB0082.tif
+[Worker] Request #2: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_005045_6_BC0030VB0082.tif
+[Worker] Successfully read 2575939 bytes from smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_005045_6_BC0030VB0082.tif
+
+thread 'main' (1775949) panicked at src/smb_worker.rs:142:33:
+called `Result::unwrap()` on an `Err` value: Os { code: 32, kind: BrokenPipe, message: "Broken pipe" }
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+[Worker 68] Recriando worker agora...
+[Pool] Recriando worker 68...
+[Pool] Worker 68 recriado com PID 1779282
+[Worker 68] Recriado com PID 1779282
+[Worker 68] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240414_233630_6_BC0030VB0082.tif
+[Worker 68] Requisição enviada, aguardando resposta...
+[Worker 72] PID: 1775953, Requests: 0, Last: 1775282958s ago, Uptime: 40s
+[Worker 72] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_010756_0_BC0030VB0082.tif
+[Worker 72] Requisição enviada, aguardando resposta...
+[Worker 37] Resposta recebida: 4713751 bytes
+[Worker 37] PID: 1775918, Requests: 1, Last: 0s ago, Uptime: 41s
+[Worker 37] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_033801_6_BC0030VB0082.tif
+[Worker 37] Requisição enviada, aguardando resposta...
+[Worker 37] Erro: Failed to read status
+⚠️ Worker 58 - s3://analise-dados/projeto-ia-submarina/ia-frente-ambiental/NOAA-AUV/ESPADARTE/6000702270/COM20240425/RUN_20240414_0030VB0082/FT_20240415_033801_6_BC0030VB0082.tif falhou (tentativa 1/3): SMB read error: Failed to read status. Aguardando 5s...
+[Worker 35] PID: 1775916, Requests: 3, Last: 10s ago, Uptime: 42s
+Worker 35 (PID 1775916) Detectado morto (status: exit status: 101), recriando...
+[Worker 35] STDERR:
+[Worker] Starting PID: 1775916
+[Worker] Using NTLM auth: user=ghva
+[Worker] Ready to process requests
+[Worker] Request #1: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_065058_3_BC0030VB0082.tif
+[Worker] Successfully read 21122773 bytes from smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_065058_3_BC0030VB0082.tif
+[Worker] Request #2: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_043516_0_BC0030VB0082.tif
+[Worker] Successfully read 2788627 bytes from smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_043516_0_BC0030VB0082.tif
+
+thread 'main' (1775916) panicked at src/smb_worker.rs:142:33:
+called `Result::unwrap()` on an `Err` value: Os { code: 32, kind: BrokenPipe, message: "Broken pipe" }
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+[Worker 35] Recriando worker agora...
+[Pool] Recriando worker 35...
+[Pool] Worker 35 recriado com PID 1779291
+[Worker 35] Recriado com PID 1779291
+[Worker 35] Enviando requisição para: smb://SMB.SRJCIPDVFS10101.PETROBRAS.BIZ/servico_001$/6000702270/02_AREAS/BC/03_FOTO/01_QUINZENAS/COM20240425/RUN_20240414_0030VB0082/FT_20240415_065058_3_BC0030VB0082.tif
+[Worker 35] Requisição enviada, aguardando resposta...

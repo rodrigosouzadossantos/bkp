@@ -1,0 +1,5 @@
+i18n:
+  igreeting: "Hello"
+  welcome: "Hello, {name}!"
+  home:
+    title: "Home page"

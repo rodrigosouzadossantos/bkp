@@ -1,0 +1,41 @@
+# General Headers
+#
+nav_dashboard: "Dashboard"
+
+section_strategy: "Strategy & Governance"
+section_initiating: "Initiating (PMBOK)"
+section_planning: "Planning & Scope"
+section_execution: "Execution"
+section_control: "Control"
+
+i18n:
+
+  okr_dashboard: "OKR (Monitoring, Control and Value Tracking)"
+  dashboard_title: "Project Master Dashboard"
+  charter_title: "Project Charter"
+  wbs_title: "Work Breakdown Structure (WBS)"
+  risk_label: "Risk Level"
+  author_label: "Lead Specialist"
+
+  # Strategy & Governance
+  okr_label: "OKR"
+  vsm_label: "Value Stream Mapping"
+
+  # Initiating
+  business_case: "Business Case"
+  project_charter: "Project Charter"
+  stakeholder_register: "Stakeholder Register"
+
+  # Planning & Scope
+  requirements_doc: "Requirements Documentation"
+  wbs_label: "Work Breakdown Structure (WBS)"
+  wbs_dictionary: "WBS Dictionary"
+
+  # Execution
+  product_backlog: "Product Backlog"
+  product_roadmap: "Product Roadmap"
+
+  # Control
+  risk_register: "Risk Register"
+  change_log: "Change Log"
+

@@ -1,0 +1,1 @@
+bad = rdd.filter(lambda x: compare(schema, x.asDict(recursive=True)))

@@ -1,0 +1,164 @@
+<!-- Slide -->
+
+#
+
+::: {.standard-slide}
+::: {.left-bar}
+:::
+::: {.content-area}
+
+<h2><i class="fa-brands fa-github"></i> GitHub Projects</h2>
+
+O GitHub Projects oferece uma estrutura leve de gestão Ágil integrada ao desenvolvimento de código.
+
+::::: {.r-stack}
+
+::: {.fragment .fade-in-then-out}
+* **[Backlog:]{style="color:#008542"}** [_Issues_ representam histórias de usuário e tarefas]{style="color:#fdb913"}
+:::
+
+::: {.fragment .fade-in-then-out}
+* **[Planejamento de Sprint:]{style="color:#008542"}** [Marcos e iterações estruturam o trabalho]{style="color:#fdb913"}
+:::
+
+::: {.fragment .fade-in-then-out style="margin-left: 0px;"}
+* **[Fluxo de Trabalho:]{style="color:#008542"}** [Quadro Kanban]{style="color:#fdb913"}
+  <br>[Proposto
+    <br>
+    → Rejeitado
+    <br>
+    → Backlog
+    → Em Progresso
+    → Revisão
+    → Concluído
+    (&#x2718;Cancelado)
+    ]{style="font-size:0.7em !important;"}
+:::
+
+::: {.fragment .fade-in-then-out}
+* **[Colaboração:]{style="color:#008542"}** [Pull requests, revisões e automações conectam código às tarefas]{style="color:#fdb913"}
+:::
+
+:::::
+
+> [&#10004;]{style="color:#008542"} Transparência e rastreabilidade <br>
+> [&#10004;]{style="color:#fdb913"} Alinhamento estratégico do planejamento à entrega.
+
+
+:::
+:::
+
+---
+
+##
+
+::: {.standard-slide}
+::: {.left-bar}
+:::
+<h2 style="
+    color: #008542;
+    position: absolute;
+    left: 50px;
+"><i class="fa-brands fa-github "></i></h2>
+::: {.content-area}
+
+![](images/github-projects.png){fig-align="center"}
+
+:::
+:::
+
+---
+
+##
+
+::: {.standard-slide}
+::: {.left-bar}
+:::
+<h2 style="
+    color: #008542;
+    position: absolute;
+    left: 50px;
+"><i class="fa-brands fa-github "></i></h2>
+::: {.content-area}
+
+![](images/github-projects-roadmap.png){fig-align="center"}
+
+:::
+:::
+
+---
+
+##
+
+::: {.standard-slide}
+::: {.left-bar}
+:::
+<h2 style="
+    color: #008542;
+    position: absolute;
+    left: 50px;
+"><i class="fa-brands fa-github "></i></h2>
+::: {.content-area}
+
+![](images/github-projects-backlog.png){fig-align="center"}
+
+:::
+:::
+
+---
+
+##
+
+::: {.standard-slide}
+::: {.left-bar}
+:::
+<h2 style="
+    color: #008542;
+    position: absolute;
+    left: 50px;
+"><i class="fa-brands fa-github "></i></h2>
+::: {.content-area}
+
+![](images/github-repository.png){fig-align="center"}
+
+:::
+:::
+
+---
+
+##
+
+::: {.standard-slide}
+::: {.left-bar}
+:::
+<h2 style="
+    color: #008542;
+    position: absolute;
+    left: 50px;
+"><i class="fa-brands fa-github "></i></h2>
+::: {.content-area}
+
+![](images/github-repository-issues.png){fig-align="center"}
+
+:::
+:::
+
+---
+
+##
+
+::: {.standard-slide}
+::: {.left-bar}
+:::
+<h2 style="
+    color: #008542;
+    position: absolute;
+    left: 50px;
+"><i class="fa-brands fa-github "></i></h2>
+::: {.content-area}
+
+![](images/github-projects-issues.png){fig-align="center"}
+
+:::
+:::
+

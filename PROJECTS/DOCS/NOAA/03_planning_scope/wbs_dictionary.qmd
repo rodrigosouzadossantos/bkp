@@ -1,0 +1,321 @@
+# {{< i18n wbs_dictionary >}} {}
+
+## Purpose of This Document
+
+This WBS Dictionary provides a **detailed description of each WBS work
+package**, defining:
+
+- Scope and boundaries
+- Key activities
+- Deliverables
+- Acceptance criteria
+- Responsible roles
+- Explicit exclusions
+
+This document, together with the **WBS**, constitutes the **Scope Baseline** of
+the project and must be approved **before finalization of the Project Management
+Plan (PMP)**.
+
+---
+
+## WBS Dictionary Structure
+
+Each entry includes:
+
+- WBS ID
+- Work Package Name
+- Description
+- Key Activities
+- Deliverables
+- Acceptance Criteria
+- Responsible Role(s)
+- Explicit Exclusions
+
+---
+
+## WBS Dictionary Entries
+
+### WBS ID: 1.1  
+
+**Work Package:** Initiation & Strategy  
+
+**Description**  
+
+Defines the strategic, environmental, and governance foundation of the project.
+
+**Key Activities**
+
+- Develop and approve Project Charter
+- Develop Business Case
+- Define Strategy & Governance (Value Stream, OKRs)
+- Identify and register stakeholders
+
+**Deliverables**
+
+- Approved Project Charter
+- Approved Business Case
+- Strategy & Governance documents
+- Stakeholder Register
+
+**Acceptance Criteria**
+
+- Formal sponsor approval
+- Alignment with SUB environmental strategy
+
+**Responsible Roles**
+
+- Project Sponsor (NOAA / SUB)
+- Project Manager
+
+**Explicit Exclusions**
+
+- Technical solution design
+- Model development
+
+---
+
+### WBS ID: 1.2  
+
+**Work Package:** Governance & Value Management  
+
+**Description**  
+
+Establishes value measurement, KPI baselines, and decision governance.
+
+**Key Activities**
+
+- Define OKRs and KRs
+- Define executive KPIs
+- Establish KPI baselines and measurement methods
+- Define Stage‑Gate framework
+
+**Deliverables**
+
+- OKR documentation
+- KPI framework
+- Stage‑Gate governance model
+
+**Acceptance Criteria**
+
+- KPIs measurable and auditable
+- Ecological KPIs prioritized
+
+**Responsible Roles**
+
+- Product Owner
+- Project Sponsor
+- Environmental SME Lead
+
+**Explicit Exclusions**
+
+- Day‑to‑day project execution
+- Technical metric dashboards
+
+---
+
+### WBS ID: 1.3  
+
+**Work Package:** Data & Environmental Preparation  
+
+**Description**  
+
+Prepares subsea data and environmental context for safe AI usage.
+
+**Key Activities**
+
+- AUV image ingestion
+- Metadata and spatial data preparation
+- Image quality assessment
+- Definition of environmental annotation guidelines
+
+**Deliverables**
+
+- Ingested and cataloged datasets
+- Quality assessment reports
+- Environmental annotation guidelines
+
+**Acceptance Criteria**
+
+- Data completeness verified
+- SME approval of annotation guidelines
+
+**Responsible Roles**
+
+- Data Engineering Lead
+- Environmental SME Lead
+
+**Explicit Exclusions**
+
+- Model training
+- Automated decision-making
+
+---
+
+### WBS ID: 1.4  
+
+**Work Package:** AI Model Development  
+
+**Description**  
+
+Develops the AI/CV capability for automated screening, under ecological
+constraints.
+
+**Key Activities**
+
+- AI-assisted annotation (HITL)
+- Model training (binary classification)
+- Precision-oriented inference pipeline
+- Explainability mechanisms
+
+**Deliverables**
+
+- Trained screening model
+- Inference pipeline
+- Model documentation
+
+**Acceptance Criteria**
+
+- Meets minimum performance criteria
+- False-negative risk controlled
+
+**Responsible Roles**
+
+- Data Science Lead
+- Environmental SME Lead (validation)
+
+**Explicit Exclusions**
+
+- Full taxonomic classification
+- Autonomous decisions without validation
+
+---
+
+### WBS ID: 1.5  
+
+**Work Package:** Validation & Ecological Assurance  
+
+**Description**  
+
+Ensures ecological validity and risk control of automated screening.
+
+**Key Activities**
+
+- Model performance evaluation
+- Ecological validation by SMEs
+- Error analysis and mitigation
+- MVP ecological acceptance
+
+**Deliverables**
+
+- Validation reports
+- Ecological acceptance decision
+- Risk mitigation actions
+
+**Acceptance Criteria**
+
+- KPI‑3 (Ecological Data Protection Index) ≥ threshold
+- SME sign‑off
+
+**Responsible Roles**
+
+- Environmental SME Lead
+- Project Sponsor (acceptance)
+
+**Explicit Exclusions**
+
+- Scaling decisions
+- Operational deployment
+
+---
+
+### WBS ID: 1.6  
+
+**Work Package:** Digital Asset Consolidation  
+
+**Description**  
+
+Transforms project outputs into reusable corporate environmental assets.
+
+**Key Activities**
+
+- Dataset versioning
+- Model artifact management
+- Traceability and audit support
+- Reuse readiness assessment
+
+**Deliverables**
+
+- Versioned datasets
+- Versioned model artifacts
+- Traceability documentation
+
+**Acceptance Criteria**
+
+- ≥ 90% assets versioned and auditable
+- Governance approval for reuse
+
+**Responsible Roles**
+
+- Data Engineering Lead
+- SUB Data Governance
+
+**Explicit Exclusions**
+
+- Enterprise-wide rollout
+- External data sharing
+
+---
+
+### WBS ID: 1.7  
+
+**Work Package:** Project Management & Control  
+
+**Description**  
+
+Provides planning, monitoring, control, and closure of the project.
+
+**Key Activities**
+
+- Planning and monitoring
+- Risk and issue management
+- Communication and reporting
+- Project closure and lessons learned
+
+**Deliverables**
+
+- Status reports
+- Risk register updates
+- Closure report
+
+**Acceptance Criteria**
+
+- PMBOK compliance
+- Sponsor approval at closure
+
+**Responsible Roles**
+
+- Project Manager
+
+**Explicit Exclusions**
+
+- Technical execution
+- Environmental validation
+
+---
+
+## WBS Dictionary Governance Rules
+
+- Each work package has **one accountable owner**
+- Changes require formal change control
+- No work package may proceed past validation gates without ecological approval
+
+---
+
+## Scope Baseline Confirmation
+
+Together, the following documents constitute the **Scope Baseline**:
+
+- Project Scope Statement
+- Work Breakdown Structure (WBS)
+- WBS Dictionary
+

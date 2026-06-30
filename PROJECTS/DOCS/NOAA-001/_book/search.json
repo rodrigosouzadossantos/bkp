@@ -1,0 +1,659 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Núcleo Operacional de Análise Ambiental de Imagens Marinhas",
+    "section": "",
+    "text": "Executive Summary\nThis document contains the complete management lifecycle for NOAA.",
+    "crumbs": [
+      "Executive Summary"
+    ]
+  },
+  {
+    "objectID": "index.html#project-metadata",
+    "href": "index.html#project-metadata",
+    "title": "Núcleo Operacional de Análise Ambiental de Imagens Marinhas",
+    "section": "Project Metadata",
+    "text": "Project Metadata\n\n\n\nItem\nDescription\n\n\n\n\nSponsor\n[Name]\n\n\nPM\n[Name]\n\n\nStatus\nIn Planning",
+    "crumbs": [
+      "Executive Summary"
+    ]
+  },
+  {
+    "objectID": "index.html#quick-navigation",
+    "href": "index.html#quick-navigation",
+    "title": "Núcleo Operacional de Análise Ambiental de Imagens Marinhas",
+    "section": "Quick Navigation",
+    "text": "Quick Navigation\nUse the sidebar to navigate between Initiation, Planning, and Monitoring artifacts.\n\n\n\n\n\ngraph TD\n    P[Project] --&gt; I[Initiation]\n    P --&gt; PL[Planning]\n    P --&gt; E[Execution]\n    \n    I --&gt; I1[Charter]\n    I --&gt; I2[Stakeholders]\n    \n    PL --&gt; PL1[Scope]\n    PL --&gt; PL2[Schedule]\n    \n    E --&gt; E1[Development]\n    E --&gt; E2[Testing]",
+    "crumbs": [
+      "Executive Summary"
+    ]
+  },
+  {
+    "objectID": "01-initiation/charter.html",
+    "href": "01-initiation/charter.html",
+    "title": "1  Project Charter",
+    "section": "",
+    "text": "1.1 Project Title\nSubsea Benthic Analysis AI – Multi-Modal Environmental Intelligence Pipeline",
+    "crumbs": [
+      "Initiation",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Project Charter</span>"
+    ]
+  },
+  {
+    "objectID": "01-initiation/charter.html#high-level-objectives",
+    "href": "01-initiation/charter.html#high-level-objectives",
+    "title": "1  Project Charter",
+    "section": "1.2 High-Level Objectives",
+    "text": "1.2 High-Level Objectives\n\nObjective 1 (SMART)\nObjective 2 (SMART)",
+    "crumbs": [
+      "Initiation",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Project Charter</span>"
+    ]
+  },
+  {
+    "objectID": "01-initiation/charter.html#high-level-risks",
+    "href": "01-initiation/charter.html#high-level-risks",
+    "title": "1  Project Charter",
+    "section": "1.8 High-Level Risks",
+    "text": "1.8 High-Level Risks\n\nNo labeled dataset\nAnnotation subjectivity\nClass imbalance\nModel underperformance",
+    "crumbs": [
+      "Initiation",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Project Charter</span>"
+    ]
+  },
+  {
+    "objectID": "01-initiation/charter.html#approval",
+    "href": "01-initiation/charter.html#approval",
+    "title": "1  Project Charter",
+    "section": "1.10 Approval",
+    "text": "1.10 Approval\nThis Charter authorizes the project to proceed to Planning.",
+    "crumbs": [
+      "Initiation",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Project Charter</span>"
+    ]
+  },
+  {
+    "objectID": "01-initiation/stakeholder-register.html",
+    "href": "01-initiation/stakeholder-register.html",
+    "title": "2  Stakeholder Register",
+    "section": "",
+    "text": "Stakeholder\nRole\nInterest\nInfluence\nStrategy\n\n\n\n\nNOAA / SUB\nSponsor\nHigh\nHigh\n\n\n\nEnvironmental Specialists\nValidation\nHigh\nHigh\n\n\n\nData Science Team\nExecution\nHigh\nMedium\n\n\n\nData Engineering\nPipeline\nMedium\nMedium\n\n\n\nIT / Infrastructure\nSupport\nMedium\nMedium",
+    "crumbs": [
+      "Initiation",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Stakeholder Register</span>"
+    ]
+  },
+  {
+    "objectID": "02-planning/scope-mgmt.html",
+    "href": "02-planning/scope-mgmt.html",
+    "title": "3  Scope Management Plan",
+    "section": "",
+    "text": "3.1 Product Scope Description\nAn AI pipeline that classifies subsea imagery based on benthic relevance, prioritizing precision and environmental confidence.",
+    "crumbs": [
+      "Planning",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Scope Management Plan</span>"
+    ]
+  },
+  {
+    "objectID": "02-planning/scope-mgmt.html#project-scope-statement",
+    "href": "02-planning/scope-mgmt.html#project-scope-statement",
+    "title": "3  Scope Management Plan",
+    "section": "",
+    "text": "3.1.1 In Scope\n\nDeliverable A\nDeliverable B\n\n\n\n3.1.2 Out of Scope\n\nMaintenance after handover.\nThird-party licensing.",
+    "crumbs": [
+      "Planning",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Scope Management Plan</span>"
+    ]
+  },
+  {
+    "objectID": "02-planning/wbs.html",
+    "href": "02-planning/wbs.html",
+    "title": "4  Work Breakdown Structure (WBS)",
+    "section": "",
+    "text": "4.1 Initiation",
+    "crumbs": [
+      "Planning",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Work Breakdown Structure (WBS)</span>"
+    ]
+  },
+  {
+    "objectID": "02-planning/schedule.html",
+    "href": "02-planning/schedule.html",
+    "title": "10  Schedule Baseline",
+    "section": "",
+    "text": "Milestone\nDescription\n\n\n\n\nM1\nCharter Approved\n\n\nM2\nPMP Approved\n\n\nM3\nMVP Model Ready\n\n\nM4\nEnvironmental Validation\n\n\nM5\nPlanning Close",
+    "crumbs": [
+      "Planning",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Schedule Baseline</span>"
+    ]
+  },
+  {
+    "objectID": "02-planning/schedule.html#milestones",
+    "href": "02-planning/schedule.html#milestones",
+    "title": "5  Project Schedule",
+    "section": "",
+    "text": "Milestone\nTarget Date\n\n\n\n\nPlanning Approval\n2024-05-01\n\n\nBeta Release\n2024-08-15\n\n\nFinal Handover\n2024-12-01",
+    "crumbs": [
+      "Planning",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Project Schedule</span>"
+    ]
+  },
+  {
+    "objectID": "02-planning/comm-plan.html",
+    "href": "02-planning/comm-plan.html",
+    "title": "11  Communication Management Plan",
+    "section": "",
+    "text": "Stakeholder\nMethod\nFrequency\nOwner\n\n\n\n\nTeam\nSlack/Daily Standup\nDaily\nPM\n\n\nSponsor\nEmail/Meeting\nBi-weekly\nPM\n\n\nUsers\nNewsletter\nMonthly\nMarketing",
+    "crumbs": [
+      "Planning",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Communication Management Plan</span>"
+    ]
+  },
+  {
+    "objectID": "03-execution/status-report.html",
+    "href": "03-execution/status-report.html",
+    "title": "7  Status Report",
+    "section": "",
+    "text": "7.1 Summary\nReporting Period: [Date Range]",
+    "crumbs": [
+      "Execution",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Status Report</span>"
+    ]
+  },
+  {
+    "objectID": "03-execution/status-report.html#summary",
+    "href": "03-execution/status-report.html#summary",
+    "title": "7  Status Report",
+    "section": "",
+    "text": "Schedule: On Track\nBudget: Under Budget\nResources: Sufficient",
+    "crumbs": [
+      "Execution",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Status Report</span>"
+    ]
+  },
+  {
+    "objectID": "03-execution/status-report.html#accomplishments-this-period",
+    "href": "03-execution/status-report.html#accomplishments-this-period",
+    "title": "7  Status Report",
+    "section": "7.2 Accomplishments this Period",
+    "text": "7.2 Accomplishments this Period\n\nCompleted WBS.\nFinalized Stakeholder list.",
+    "crumbs": [
+      "Execution",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Status Report</span>"
+    ]
+  },
+  {
+    "objectID": "04-monitoring/risk-register.html",
+    "href": "04-monitoring/risk-register.html",
+    "title": "8  Risk Register",
+    "section": "",
+    "text": "ID\nRisk Description\nProbability\nImpact\nMitigation Strategy\n\n\n\n\nR1\nResource turnover\nMedium\nHigh\nCross-train team members\n\n\nR2\nScope creep\nHigh\nMedium\nStrict change control",
+    "crumbs": [
+      "Monitoring & Control",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Risk Register</span>"
+    ]
+  },
+  {
+    "objectID": "04-monitoring/change-log.html",
+    "href": "04-monitoring/change-log.html",
+    "title": "9  Change Log",
+    "section": "",
+    "text": "ID\nDate\nDescription\nStatus\nImpact\n\n\n\n\nC1\n2024-04-10\nAdd new feature\nPending\n+2 weeks",
+    "crumbs": [
+      "Monitoring & Control",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Change Log</span>"
+    ]
+  },
+  {
+    "objectID": "05-closing/lessons-learned.html",
+    "href": "05-closing/lessons-learned.html",
+    "title": "10  Lessons Learned",
+    "section": "",
+    "text": "10.1 What Went Well",
+    "crumbs": [
+      "Closing",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Lessons Learned</span>"
+    ]
+  },
+  {
+    "objectID": "05-closing/lessons-learned.html#what-went-well",
+    "href": "05-closing/lessons-learned.html#what-went-well",
+    "title": "10  Lessons Learned",
+    "section": "",
+    "text": "Use of Quarto for documentation.\nEarly stakeholder engagement.",
+    "crumbs": [
+      "Closing",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Lessons Learned</span>"
+    ]
+  },
+  {
+    "objectID": "05-closing/lessons-learned.html#areas-for-improvement",
+    "href": "05-closing/lessons-learned.html#areas-for-improvement",
+    "title": "10  Lessons Learned",
+    "section": "10.2 Areas for Improvement",
+    "text": "10.2 Areas for Improvement\n\nInitial budget estimation was too optimistic.",
+    "crumbs": [
+      "Closing",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Lessons Learned</span>"
+    ]
+  },
+  {
+    "objectID": "01-initiation/charter.html#sponsor",
+    "href": "01-initiation/charter.html#sponsor",
+    "title": "1  Project Charter",
+    "section": "1.2 Sponsor",
+    "text": "1.2 Sponsor\nNOAA / SUB / Petrobras",
+    "crumbs": [
+      "Initiation",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Project Charter</span>"
+    ]
+  },
+  {
+    "objectID": "01-initiation/charter.html#project-purpose",
+    "href": "01-initiation/charter.html#project-purpose",
+    "title": "1  Project Charter",
+    "section": "1.3 Project Purpose",
+    "text": "1.3 Project Purpose\nDevelop an Artificial Intelligence pipeline to automatically identify and filter benthic-relevant subsea data, supporting environmental baseline studies, monitoring activities, and regulatory compliance within Petrobras offshore operations.",
+    "crumbs": [
+      "Initiation",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Project Charter</span>"
+    ]
+  },
+  {
+    "objectID": "01-initiation/charter.html#business-need",
+    "href": "01-initiation/charter.html#business-need",
+    "title": "1  Project Charter",
+    "section": "1.4 Business Need",
+    "text": "1.4 Business Need\nSubsea environmental datasets require extensive manual review. Automation is required to reduce workload, increase consistency, and accelerate environmental assessments.",
+    "crumbs": [
+      "Initiation",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Project Charter</span>"
+    ]
+  },
+  {
+    "objectID": "01-initiation/charter.html#objectives",
+    "href": "01-initiation/charter.html#objectives",
+    "title": "1  Project Charter",
+    "section": "1.5 Objectives",
+    "text": "1.5 Objectives\n\n1.5.1 Primary Objective (MVP)\nDevelop a binary classification system to distinguish benthic-relevant from non-benthic data.\n\n\n1.5.2 Secondary Objectives\n\nScalable multi-modal pipeline\nAI-assisted annotation\nFoundation for future detection, segmentation, and taxonomy",
+    "crumbs": [
+      "Initiation",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Project Charter</span>"
+    ]
+  },
+  {
+    "objectID": "01-initiation/charter.html#mvp-strategy",
+    "href": "01-initiation/charter.html#mvp-strategy",
+    "title": "1  Project Charter",
+    "section": "1.6 MVP Strategy",
+    "text": "1.6 MVP Strategy\n“Filter Noise, Preserve Confidence”\n\nPrecision-first approach\nFalse positives acceptable\nFalse negatives monitored as a critical environmental risk",
+    "crumbs": [
+      "Initiation",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Project Charter</span>"
+    ]
+  },
+  {
+    "objectID": "01-initiation/charter.html#definition-of-benthic-relevant-data-mvp",
+    "href": "01-initiation/charter.html#definition-of-benthic-relevant-data-mvp",
+    "title": "1  Project Charter",
+    "section": "1.7 Definition of Benthic-Relevant Data (MVP)",
+    "text": "1.7 Definition of Benthic-Relevant Data (MVP)\nIncludes: - Visible seabed substrate - Benthic organisms - Ecological structures (reefs, sediment patterns, bioturbation)\nExcludes: - Open water column - Purely anthropogenic structures without biological presence - Unusable data (severe turbidity, blur, extreme lighting)",
+    "crumbs": [
+      "Initiation",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Project Charter</span>"
+    ]
+  },
+  {
+    "objectID": "01-initiation/charter.html#success-criteria",
+    "href": "01-initiation/charter.html#success-criteria",
+    "title": "1  Project Charter",
+    "section": "1.8 Success Criteria",
+    "text": "1.8 Success Criteria\n\n1.8.1 Technical\n\nAccuracy ≥ 60% (interpreted with class-level metrics)\nPrecision ≥ 75% for benthic-relevant class (primary KPI)\n\n\n\n1.8.2 Operational\n\nDataset reduction ≥ 40–60%\nRetention of ≥ 85–90% of true benthic data\nAnnotation time reduction ≥ 40%\n\n\n\n1.8.3 Validation\n\nOutputs validated by NOAA/SUB environmental specialists",
+    "crumbs": [
+      "Initiation",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Project Charter</span>"
+    ]
+  },
+  {
+    "objectID": "01-initiation/charter.html#high-level-scope",
+    "href": "01-initiation/charter.html#high-level-scope",
+    "title": "1  Project Charter",
+    "section": "1.6 High-Level Scope",
+    "text": "1.6 High-Level Scope\n\n1.6.1 In Scope\n\nStill image classification (MVP)\nBatch, offline processing\nAI-assisted annotation\nHuman-in-the-loop validation\n\n\n\n1.6.2 Out of Scope\n\nReal-time deployment\nFull taxonomic classification\nAdvanced multimodal fusion",
+    "crumbs": [
+      "Initiation",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Project Charter</span>"
+    ]
+  },
+  {
+    "objectID": "01-initiation/charter.html#governance",
+    "href": "01-initiation/charter.html#governance",
+    "title": "1  Project Charter",
+    "section": "1.9 Governance",
+    "text": "1.9 Governance\nSponsor: NOAA / SUB\nProject Manager: Assigned by SUB\nTechnical Authority: Data Science Lead\nScientific Authority: Marine/Environmental Lead",
+    "crumbs": [
+      "Initiation",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Project Charter</span>"
+    ]
+  },
+  {
+    "objectID": "02-planning/wbs.html#planning-phase",
+    "href": "02-planning/wbs.html#planning-phase",
+    "title": "4  Work Breakdown Structure (WBS)",
+    "section": "4.2 2. Planning Phase",
+    "text": "4.2 2. Planning Phase\n2.1 Project Management Plan\n2.2 Scope Baseline\n2.3 Schedule Baseline\n2.4 Cost Baseline\n2.5 Quality Management Plan\n2.6 Resource Management Plan\n2.7 Communication Plan\n2.8 Risk Response Planning\n2.9 Change Control Definition",
+    "crumbs": [
+      "Planning",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Work Breakdown Structure (WBS)</span>"
+    ]
+  },
+  {
+    "objectID": "01-initiation/charter.html#purpose",
+    "href": "01-initiation/charter.html#purpose",
+    "title": "1  Project Charter",
+    "section": "1.3 Purpose",
+    "text": "1.3 Purpose\nDevelop an Artificial Intelligence pipeline for automated identification and filtering of benthic-relevant subsea data to support environmental baseline studies under SUB responsibility.",
+    "crumbs": [
+      "Initiation",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Project Charter</span>"
+    ]
+  },
+  {
+    "objectID": "01-initiation/charter.html#high-level-success-criteria",
+    "href": "01-initiation/charter.html#high-level-success-criteria",
+    "title": "1  Project Charter",
+    "section": "1.7 High-Level Success Criteria",
+    "text": "1.7 High-Level Success Criteria\n\nPrecision ≥ 75% (benthic class)\nDataset reduction ≥ 40–60%\nRetention ≥ 85–90% of true benthic data",
+    "crumbs": [
+      "Initiation",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Project Charter</span>"
+    ]
+  },
+  {
+    "objectID": "02-planning/scope-mgmt.html#definition-of-benthic-relevant-data",
+    "href": "02-planning/scope-mgmt.html#definition-of-benthic-relevant-data",
+    "title": "3  Scope Management Plan",
+    "section": "3.2 Definition of Benthic-Relevant Data",
+    "text": "3.2 Definition of Benthic-Relevant Data\nIncludes visible seabed, benthic organisms, and ecological structures (reefs, sediment patterns, bioturbation).",
+    "crumbs": [
+      "Planning",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Scope Management Plan</span>"
+    ]
+  },
+  {
+    "objectID": "02-planning/scope-mgmt.html#explicit-exclusions",
+    "href": "02-planning/scope-mgmt.html#explicit-exclusions",
+    "title": "3  Scope Management Plan",
+    "section": "3.3 Explicit Exclusions",
+    "text": "3.3 Explicit Exclusions\n\nOpen water column\nPurely anthropogenic structures without biology\nUnusable data (severe turbidity, blur, extreme lighting)",
+    "crumbs": [
+      "Planning",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Scope Management Plan</span>"
+    ]
+  },
+  {
+    "objectID": "02-planning/scope-mgmt.html#mvp-strategy",
+    "href": "02-planning/scope-mgmt.html#mvp-strategy",
+    "title": "3  Scope Management Plan",
+    "section": "3.4 MVP Strategy",
+    "text": "3.4 MVP Strategy\nFilter Noise, Preserve Confidence. Precision prioritized over recall; false negatives monitored as environmental risk.",
+    "crumbs": [
+      "Planning",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Scope Management Plan</span>"
+    ]
+  },
+  {
+    "objectID": "02-planning/scope-mgmt.html#deliverables",
+    "href": "02-planning/scope-mgmt.html#deliverables",
+    "title": "3  Scope Management Plan",
+    "section": "3.5 Deliverables",
+    "text": "3.5 Deliverables\n\nBinary classification model\nPreprocessing pipeline\nAnnotation workflow\nValidation reports\nVersioned datasets",
+    "crumbs": [
+      "Planning",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Scope Management Plan</span>"
+    ]
+  },
+  {
+    "objectID": "02-planning/scope-mgmt.html#constraints",
+    "href": "02-planning/scope-mgmt.html#constraints",
+    "title": "3  Scope Management Plan",
+    "section": "3.6 Constraints",
+    "text": "3.6 Constraints\n\nNo labeled dataset\nClass imbalance\nEnvironmental variability\nOffline-first requirement",
+    "crumbs": [
+      "Planning",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Scope Management Plan</span>"
+    ]
+  },
+  {
+    "objectID": "02-planning/scope-mgmt.html#assumptions",
+    "href": "02-planning/scope-mgmt.html#assumptions",
+    "title": "3  Scope Management Plan",
+    "section": "3.7 Assumptions",
+    "text": "3.7 Assumptions\nSee Assumption Log.",
+    "crumbs": [
+      "Planning",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Scope Management Plan</span>"
+    ]
+  },
+  {
+    "objectID": "02-planning/wbs.html#planning",
+    "href": "02-planning/wbs.html#planning",
+    "title": "4  Work Breakdown Structure (WBS)",
+    "section": "4.2 Planning",
+    "text": "4.2 Planning\n\nPMP Development\n\nScope Baseline\n\nSchedule Baseline\n\nCost Baseline\n\nQuality Plan\n\nResource Plan\n\nRisk Response Plan\n\nCommunication Plan",
+    "crumbs": [
+      "Planning",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Work Breakdown Structure (WBS)</span>"
+    ]
+  },
+  {
+    "objectID": "02-planning/wbs.html#execution-mvp",
+    "href": "02-planning/wbs.html#execution-mvp",
+    "title": "4  Work Breakdown Structure (WBS)",
+    "section": "4.3 Execution (MVP)",
+    "text": "4.3 Execution (MVP)\n\nData Ingestion\n\nAnnotation Setup\n\nModel Training\n\nValidation\n\nDataset Filtering",
+    "crumbs": [
+      "Planning",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Work Breakdown Structure (WBS)</span>"
+    ]
+  },
+  {
+    "objectID": "02-planning/wbs.html#closing",
+    "href": "02-planning/wbs.html#closing",
+    "title": "4  Work Breakdown Structure (WBS)",
+    "section": "4.4 Closing",
+    "text": "4.4 Closing\n\nDocumentation\n\nKnowledge Transfer\n\nFormal Closure",
+    "crumbs": [
+      "Planning",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Work Breakdown Structure (WBS)</span>"
+    ]
+  },
+  {
+    "objectID": "02-planning/risk-mgmt.html",
+    "href": "02-planning/risk-mgmt.html",
+    "title": "6  Risk Register",
+    "section": "",
+    "text": "ID\nRisk\nCategory\nProbability\nImpact\nMitigation\n\n\n\n\nR1\nNo labeled dataset available\nData\nHigh\nHigh\nAI-assisted annotation\n\n\nR2\nMulti-modal inconsistency\nTechnical\nHigh\nHigh\nPrioritize still images for MVP\n\n\nR3\nAnnotation workload excessive\nOperational\nHigh\nHigh\nFiltering-first MVP approach\n\n\nR4\nModel underperformance\nTechnical\nMedium\nHigh\nAccept reduced accuracy for MVP\n\n\nR5\nLicensing conflicts\nCompliance\nMedium\nHigh\nRestrict to approved frameworks\n\n\nR6\nStakeholder misalignment\nOrganizational\nMedium\nHigh\nEarly validation of MVP scope\n\n\nR7\nData quality issues  (turbidity, lighting, backscatter)\nData\nHigh\nMedium\nPreprocessing pipeline (future phase)\n\n\nR8\nOverengineering early phases\nTechnical\nMedium\nMedium\nStrict MVP enforcement\n\n\nR9\nLabel subjectivity\nData\nHigh\nHigh\nGuidelines + consensus labeling\n\n\nR10\nClass imbalance\nData\nHigh\nHigh\nSampling strategy + weighted loss",
+    "crumbs": [
+      "Planning",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Risk Register</span>"
+    ]
+  },
+  {
+    "objectID": "02-planning/aspt-log.html",
+    "href": "02-planning/aspt-log.html",
+    "title": "7  Assumption Log",
+    "section": "",
+    "text": "ID\nAssumption\nImpact\n\n\n\n\nA1\nStill imagery sufficient for MVP\nFaster delivery\n\n\nA2\nSMEs available for validation\nScientific reliability\n\n\nA3\nCompute resources available\nScalability\n\n\nA4\nBinary classification sufficient\nReduced complexity\n\n\nA5\nClass imbalance manageable\nModel viability",
+    "crumbs": [
+      "Planning",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Assumption Log</span>"
+    ]
+  },
+  {
+    "objectID": "02-planning/rqmt-gathering.html",
+    "href": "02-planning/rqmt-gathering.html",
+    "title": "5  Requirements Management Plan",
+    "section": "",
+    "text": "5.1 Functional Requirements",
+    "crumbs": [
+      "Planning",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Requirements Management Plan</span>"
+    ]
+  },
+  {
+    "objectID": "02-planning/rqmt-gathering.html#functional-requirements",
+    "href": "02-planning/rqmt-gathering.html#functional-requirements",
+    "title": "5  Requirements Management Plan",
+    "section": "",
+    "text": "Binary benthic relevance classification\nBatch processing\nAnnotation support\nHuman validation interface",
+    "crumbs": [
+      "Planning",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Requirements Management Plan</span>"
+    ]
+  },
+  {
+    "objectID": "02-planning/rqmt-gathering.html#non-functional-requirements",
+    "href": "02-planning/rqmt-gathering.html#non-functional-requirements",
+    "title": "5  Requirements Management Plan",
+    "section": "5.2 Non-Functional Requirements",
+    "text": "5.2 Non-Functional Requirements\n\nTB-scale scalability\nOffline-first operation",
+    "crumbs": [
+      "Planning",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Requirements Management Plan</span>"
+    ]
+  },
+  {
+    "objectID": "02-planning/pmp.html",
+    "href": "02-planning/pmp.html",
+    "title": "8  Project Management Plan (PMP)",
+    "section": "",
+    "text": "8.1 Scope Management\nScope controlled via formal Change Requests approved by Sponsor.",
+    "crumbs": [
+      "Planning",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Project Management Plan (PMP)</span>"
+    ]
+  },
+  {
+    "objectID": "02-planning/pmp.html#schedule-management",
+    "href": "02-planning/pmp.html#schedule-management",
+    "title": "8  Project Management Plan (PMP)",
+    "section": "8.2 Schedule Management",
+    "text": "8.2 Schedule Management\nMilestone-based planning with SME buffers.",
+    "crumbs": [
+      "Planning",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Project Management Plan (PMP)</span>"
+    ]
+  },
+  {
+    "objectID": "02-planning/pmp.html#cost-management",
+    "href": "02-planning/pmp.html#cost-management",
+    "title": "8  Project Management Plan (PMP)",
+    "section": "8.3 Cost Management",
+    "text": "8.3 Cost Management\nPersonnel, compute, and contingency tracked monthly.",
+    "crumbs": [
+      "Planning",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Project Management Plan (PMP)</span>"
+    ]
+  },
+  {
+    "objectID": "02-planning/pmp.html#quality-management",
+    "href": "02-planning/pmp.html#quality-management",
+    "title": "8  Project Management Plan (PMP)",
+    "section": "8.4 Quality Management",
+    "text": "8.4 Quality Management\nPrecision-first metrics validated by SMEs.",
+    "crumbs": [
+      "Planning",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Project Management Plan (PMP)</span>"
+    ]
+  },
+  {
+    "objectID": "02-planning/pmp.html#resource-management",
+    "href": "02-planning/pmp.html#resource-management",
+    "title": "8  Project Management Plan (PMP)",
+    "section": "8.5 Resource Management",
+    "text": "8.5 Resource Management\nDefined RACI under SUB governance.",
+    "crumbs": [
+      "Planning",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Project Management Plan (PMP)</span>"
+    ]
+  },
+  {
+    "objectID": "02-planning/pmp.html#communication-management",
+    "href": "02-planning/pmp.html#communication-management",
+    "title": "8  Project Management Plan (PMP)",
+    "section": "8.6 Communication Management",
+    "text": "8.6 Communication Management\nWeekly status, milestone reviews.",
+    "crumbs": [
+      "Planning",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Project Management Plan (PMP)</span>"
+    ]
+  },
+  {
+    "objectID": "02-planning/pmp.html#risk-management",
+    "href": "02-planning/pmp.html#risk-management",
+    "title": "8  Project Management Plan (PMP)",
+    "section": "8.7 Risk Management",
+    "text": "8.7 Risk Management\nContinuous monitoring of environmental and data risks.",
+    "crumbs": [
+      "Planning",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Project Management Plan (PMP)</span>"
+    ]
+  },
+  {
+    "objectID": "02-planning/pmp.html#change-management",
+    "href": "02-planning/pmp.html#change-management",
+    "title": "8  Project Management Plan (PMP)",
+    "section": "8.8 Change Management",
+    "text": "8.8 Change Management\nFormal Change Control Log maintained.",
+    "crumbs": [
+      "Planning",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Project Management Plan (PMP)</span>"
+    ]
+  },
+  {
+    "objectID": "02-planning/qlty-mgmt.html",
+    "href": "02-planning/qlty-mgmt.html",
+    "title": "9  Quality Management Plan",
+    "section": "",
+    "text": "9.1 Metrics",
+    "crumbs": [
+      "Planning",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Quality Management Plan</span>"
+    ]
+  },
+  {
+    "objectID": "02-planning/qlty-mgmt.html#metrics",
+    "href": "02-planning/qlty-mgmt.html#metrics",
+    "title": "9  Quality Management Plan",
+    "section": "",
+    "text": "Precision ≥ 75% (benthic)\nRetention ≥ 85–90%",
+    "crumbs": [
+      "Planning",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Quality Management Plan</span>"
+    ]
+  },
+  {
+    "objectID": "02-planning/qlty-mgmt.html#quality-assurance",
+    "href": "02-planning/qlty-mgmt.html#quality-assurance",
+    "title": "9  Quality Management Plan",
+    "section": "9.2 Quality Assurance",
+    "text": "9.2 Quality Assurance\n\nAnnotation audits\nSME validation loops",
+    "crumbs": [
+      "Planning",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Quality Management Plan</span>"
+    ]
+  },
+  {
+    "objectID": "02-planning/wbs.html#initiation",
+    "href": "02-planning/wbs.html#initiation",
+    "title": "4  Work Breakdown Structure (WBS)",
+    "section": "",
+    "text": "Project Charter\n\nStakeholder Identification\n\nHigh-Level Scope\n\nRisk Identification\n\nApproval",
+    "crumbs": [
+      "Planning",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Work Breakdown Structure (WBS)</span>"
+    ]
+  }
+]

@@ -1,0 +1,207 @@
+---
+title: "Governança de OKR + Agile + GitHub para IA Subsea"
+author: "Time de IA Submarina"
+format:
+  html:
+    theme: cosmo
+    toc: true
+    toc-depth: 3
+bibliography: references.bib
+link-citations: true
+execute:
+  echo: true
+---
+
+# 1. Propósito
+
+Este documento propõe uma **estrutura integrada de OKR + Agile + GitHub** para IA/ML aplicada à inspeção submarina.  
+O objetivo é:
+
+- Garantir clareza estratégica
+- Separar impacto de execução
+- Manter rastreabilidade total dentro do GitHub
+- Alinhar ciclos estratégicos, táticos e experimentais
+
+A abordagem é **diplomática**: não substitui práticas existentes, apenas organiza segundo boas práticas reconhecidas na literatura.
+
+---
+
+# 2. OKR: Conceito e Variantes
+
+## 2.1 O que é OKR
+
+Segundo :contentReference[oaicite:0]{index=0} [@doerr2018]:
+
+> OKR (Objectives & Key Results) é um sistema para medir mudanças de estado, conectar impacto estratégico à execução e criar foco mensurável.
+
+Segundo :contentReference[oaicite:1]{index=1} [@wodtke2016], **Key Results devem medir resultado, não esforço**.  
+
+**Não é OKR:** lista de tarefas, cronograma ou backlog técnico.  
+**É OKR:** alinhamento estratégico, medição objetiva, impacto real.
+
+---
+
+## 2.2 Variantes de OKR
+
+### 2.2.1 OKR Estratégico (trimestral)
+- Define impacto operacional
+- Ciclo recomendado por Doerr
+- Exemplo: aumentar confiabilidade da detecção automática
+
+### 2.2.2 OKR Tático/Mensal
+- Conecta estratégias a iniciativas técnicas
+- Mantém alinhamento com OKR trimestral
+- Exemplo: melhorar cobertura de dataset ou consistência de anotações
+
+### 2.2.3 OKR Experimental / Curto (1–2 semanas)
+- Para ciclos de aprendizado rápido
+- Avalia impacto de ajustes ou filtros experimentais
+- Deve se vincular sempre a OKRs maiores
+- Compatível com Agile/Sprint
+
+---
+
+# 3. Integração com Agile
+
+OKR define **o que queremos mudar**, Agile define **como executar**.
+
+| Nível | OKR | Agile |
+|-------|------|--------|
+| Estratégico | Trimestral | Roadmap |
+| Tático | Mensal | Epic |
+| Curto/Aprendizado | 1–2 semanas | Sprint Goal |
+| Execução | Não é OKR | Backlog de tarefas |
+
+```{mermaid}
+flowchart TD
+    OKR_E[OKR Estratégico trimestral]
+    OKR_T[OKR Tático/Mensal]
+    OKR_C[OKR Curto / Aprendizado]
+    Sprint[Sprint / Execução]
+    
+    OKR_E --> OKR_T
+    OKR_T --> OKR_C
+    OKR_C --> Sprint
+```
+
+---
+
+# 4. GitHub como Núcleo de Governança
+
+## 4.1 Estrutura Recomendada
+
+| Elemento      | GitHub                                            |
+| ------------- | ------------------------------------------------- |
+| Objective     | Item no Project                                   |
+| Key Result    | Issue vinculada ao Objective (label `KR`)         |
+| Initiative    | Issue vinculada a Key Result (label `Initiative`) |
+| Tarefas       | Issue técnica vinculada a Initiative              |
+| Implementação | Pull Request fechando Issue                       |
+
+---
+
+## 4.2 Estrutura de Project
+
+Colunas sugeridas:
+
+* 🎯 Objectives
+* 📊 Key Results
+* 🚀 Initiatives
+* 🔄 Em Sprint
+* ✅ Done
+
+Campos customizados:
+
+* Tipo (Objective / KR / Initiative / Task)
+* Métrica alvo
+* Status
+* Responsável
+* Link para dashboard
+
+---
+
+# 5. Visualização da Hierarquia
+
+```{mermaid}
+graph TD
+    O[Objective - Impacto Estratégico]
+    KR[Key Results - Métricas]
+    I[Initiatives - Ações Técnicas]
+    T[Tarefas - Execução]
+    PR[Pull Requests - Implementação]
+
+    O --> KR
+    KR --> I
+    I --> T
+    T --> PR
+```
+
+---
+
+# 6. Exemplo de OKR Completo
+
+## Objective Estratégico
+
+Aumentar confiabilidade da detecção automática em inspeções submarinas.
+
+### Key Results
+
+* F1-score: 0.72 → 0.85
+* Redução de falso negativo crítico em 50%
+* Redução de revisão manual em 30%
+* 100% das inferências rastreáveis
+
+### Initiatives
+
+* Implementar filtro espacial
+* Balanceamento de dataset para classes raras
+* Avaliação com GradCAM
+
+---
+
+# 7. Estrutura de Repositório
+
+```
+ai-subsea-okr/
+│
+├── README.md
+├── docs/
+│   ├── index.qmd
+│   ├── okr-q1.qmd
+│   ├── metodologia.qmd
+│   └── premissas.qmd
+├── .github/
+│   ├── ISSUE_TEMPLATE/
+│   └── workflows/
+└── dashboards/
+```
+
+---
+
+# 8. Benefícios da Estrutura
+
+* Clareza estratégica e técnica
+* Redução de ambiguidade e conflito de interpretação
+* Governança robusta de IA/ML aplicada
+* Total rastreabilidade entre PR → Task → KR → Objective
+
+> A separação entre impacto e execução é baseada em literatura consolidada [@doerr2018; @wodtke2016; @grove1983].
+
+---
+
+# 9. Conclusão Diplomática
+
+Esta proposta:
+
+* Não invalida práticas anteriores
+* Não substitui backlog técnico ou planejamento detalhado
+* Organiza OKRs, Agile e GitHub de forma coerente
+* Garante rastreabilidade, foco e alinhamento em IA submarina
+
+---
+
+# 10. Referências
+
+```{bibliography}
+```
+

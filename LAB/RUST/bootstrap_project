@@ -1,0 +1,410 @@
+#!/usr/bin/env bash
+set -e
+
+PROJECT=${1:-deepsea_ml}
+
+echo "Creating project $PROJECT"
+
+mkdir -p $PROJECT
+cd $PROJECT
+
+############################################
+# directories
+############################################
+
+mkdir -p rust-core/src/{io,dataset,cv,experiment,parallel,gpu}
+mkdir -p rust-core/tests
+mkdir -p python/deepsea_ml/{storage,experiments,cv,dataset}
+mkdir -p tests/python
+mkdir -p scripts
+mkdir -p configs
+mkdir -p .github/workflows
+
+############################################
+# Rust Cargo
+############################################
+
+cat > rust-core/Cargo.toml <<'EOF'
+[package]
+name = "deepsea_core"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "deepsea_core"
+crate-type = ["cdylib"]
+
+[dependencies]
+pyo3 = { version="0.20", features=["extension-module"] }
+maturin = "1"
+
+tokio = { version="1", features=["full"] }
+rayon = "1.8"
+num_cpus = "1"
+
+serde = { version="1", features=["derive"] }
+serde_json = "1"
+
+aws-config = "1"
+aws-sdk-s3 = "1"
+
+azure_storage = "0.18"
+azure_storage_blobs = "0.18"
+
+polars = { version="0.38", features=["lazy","parquet"] }
+arrow = "50"
+
+opencv = "0.88"
+
+anyhow = "1"
+thiserror = "1"
+
+log = "0.4"
+env_logger = "0.11"
+
+[dev-dependencies]
+cargo-nextest = "0.9"
+EOF
+
+############################################
+# Rust lib
+############################################
+
+cat > rust-core/src/lib.rs <<'EOF'
+// vim: set ts=2 sw=2 et:
+
+use pyo3::prelude::*;
+
+mod config;
+mod runtime;
+mod io;
+mod dataset;
+mod cv;
+mod experiment;
+mod parallel;
+mod gpu;
+
+#[pymodule]
+fn deepsea_core(_py: Python, m: &PyModule) -> PyResult<()> {
+  m.add_function(wrap_pyfunction!(runtime::system_info, m)?)?;
+  Ok(())
+}
+EOF
+
+############################################
+# runtime
+############################################
+
+cat > rust-core/src/runtime.rs <<'EOF'
+// vim: set ts=2 sw=2 et:
+
+use pyo3::prelude::*;
+use num_cpus;
+
+#[pyfunction]
+pub fn system_info() -> String {
+  format!(
+    "CPUs: {}, Max parallelism enabled",
+    num_cpus::get()
+  )
+}
+EOF
+
+############################################
+# config
+############################################
+
+cat > rust-core/src/config.rs <<'EOF'
+// vim: set ts=2 sw=2 et:
+
+use serde::{Deserialize, Serialize};
+
+#[derive(Debug, Serialize, Deserialize)]
+pub struct SystemConfig {
+  pub workers: usize,
+  pub gpu_enabled: bool,
+}
+
+impl Default for SystemConfig {
+  fn default() -> Self {
+    Self {
+      workers: num_cpus::get(),
+      gpu_enabled: true,
+    }
+  }
+}
+EOF
+
+############################################
+# parallel scheduler
+############################################
+
+cat > rust-core/src/parallel/scheduler.rs <<'EOF'
+// vim: set ts=2 sw=2 et:
+
+use rayon::prelude::*;
+
+pub fn parallel_map<T: Send, R: Send, F>(data: Vec<T>, f: F) -> Vec<R>
+where
+  F: Fn(T) -> R + Send + Sync,
+{
+  data.into_par_iter().map(f).collect()
+}
+EOF
+
+cat > rust-core/src/parallel/mod.rs <<'EOF'
+// vim: set ts=2 sw=2 et:
+pub mod scheduler;
+EOF
+
+############################################
+# IO
+############################################
+
+cat > rust-core/src/io/mod.rs <<'EOF'
+// vim: set ts=2 sw=2 et:
+pub mod s3;
+pub mod azure_blob;
+EOF
+
+cat > rust-core/src/io/s3.rs <<'EOF'
+// vim: set ts=2 sw=2 et:
+
+use aws_sdk_s3::Client;
+
+pub async fn connect() -> Client {
+  let config = aws_config::load_from_env().await;
+  Client::new(&config)
+}
+EOF
+
+cat > rust-core/src/io/azure_blob.rs <<'EOF'
+// vim: set ts=2 sw=2 et:
+
+pub fn connect() {
+  println!("Azure Blob connection initialized");
+}
+EOF
+
+############################################
+# dataset ingestion
+############################################
+
+cat > rust-core/src/dataset/mod.rs <<'EOF'
+// vim: set ts=2 sw=2 et:
+pub mod ingestion;
+EOF
+
+cat > rust-core/src/dataset/ingestion.rs <<'EOF'
+// vim: set ts=2 sw=2 et:
+
+use rayon::prelude::*;
+
+pub fn ingest(files: Vec<String>) {
+  files.par_iter().for_each(|f| {
+    println!("Processing {}", f);
+  });
+}
+EOF
+
+############################################
+# CV
+############################################
+
+cat > rust-core/src/cv/mod.rs <<'EOF'
+// vim: set ts=2 sw=2 et:
+pub mod image;
+pub mod video;
+EOF
+
+cat > rust-core/src/cv/image.rs <<'EOF'
+// vim: set ts=2 sw=2 et:
+
+pub fn preprocess() {
+  println!("Image preprocessing pipeline");
+}
+EOF
+
+cat > rust-core/src/cv/video.rs <<'EOF'
+// vim: set ts=2 sw=2 et:
+
+pub fn decode_frames() {
+  println!("Video decoding pipeline");
+}
+EOF
+
+############################################
+# experiments
+############################################
+
+cat > rust-core/src/experiment/mod.rs <<'EOF'
+// vim: set ts=2 sw=2 et:
+pub mod mlflow;
+pub mod wandb;
+pub mod dvc;
+pub mod lakefs;
+EOF
+
+cat > rust-core/src/experiment/mlflow.rs <<'EOF'
+// vim: set ts=2 sw=2 et:
+
+pub fn log_run() {
+  println!("Logging run to MLFlow");
+}
+EOF
+
+cat > rust-core/src/experiment/wandb.rs <<'EOF'
+// vim: set ts=2 sw=2 et:
+
+pub fn log_run() {
+  println!("Logging run to W&B");
+}
+EOF
+
+cat > rust-core/src/experiment/dvc.rs <<'EOF'
+// vim: set ts=2 sw=2 et:
+
+pub fn track_dataset() {
+  println!("Tracking dataset via DVC");
+}
+EOF
+
+cat > rust-core/src/experiment/lakefs.rs <<'EOF'
+// vim: set ts=2 sw=2 et:
+
+pub fn version_dataset() {
+  println!("Version dataset with LakeFS");
+}
+EOF
+
+############################################
+# GPU placeholder
+############################################
+
+cat > rust-core/src/gpu/mod.rs <<'EOF'
+// vim: set ts=2 sw=2 et:
+pub mod cuda;
+EOF
+
+cat > rust-core/src/gpu/cuda.rs <<'EOF'
+// vim: set ts=2 sw=2 et:
+
+pub fn init_gpu() {
+  println!("CUDA pipeline initialized");
+}
+EOF
+
+############################################
+# Python package
+############################################
+
+cat > python/deepsea_ml/__init__.py <<'EOF'
+# vim: set ts=2 sw=2 et:
+
+from .core import system_info
+EOF
+
+############################################
+# Python bindings
+############################################
+
+cat > python/deepsea_ml/core.py <<'EOF'
+# vim: set ts=2 sw=2 et:
+
+from deepsea_core import system_info
+EOF
+
+############################################
+# Pyproject
+############################################
+
+cat > pyproject.toml <<'EOF'
+[build-system]
+requires = ["maturin>=1"]
+build-backend = "maturin"
+
+[project]
+name = "deepsea-ml"
+version = "0.1.0"
+
+dependencies = [
+"torch",
+"tensorflow",
+"keras",
+"scikit-learn",
+"opencv-python",
+"numpy",
+"pandas",
+"mlflow",
+"wandb",
+"dvc[s3]",
+"dvc[azure]",
+"lakefs-client",
+"boto3",
+"azure-storage-blob",
+"pytest",
+"ruff",
+"mypy"
+]
+
+[tool.maturin]
+bindings = "pyo3"
+python-source = "python"
+EOF
+
+############################################
+# GitHub CI
+############################################
+
+cat > .github/workflows/ci.yml <<'EOF'
+name: CI
+
+on: [push]
+
+jobs:
+ build:
+
+  runs-on: ubuntu-latest
+
+  steps:
+
+  - uses: actions/checkout@v4
+
+  - uses: actions/setup-python@v5
+    with:
+      python-version: 3.11
+
+  - uses: dtolnay/rust-toolchain@stable
+
+  - run: pip install maturin pytest
+
+  - run: maturin develop
+
+  - run: pytest
+EOF
+
+############################################
+# Python test
+############################################
+
+cat > tests/python/test_basic.py <<'EOF'
+# vim: set ts=2 sw=2 et:
+
+from deepsea_ml import system_info
+
+def test_system():
+  assert "CPUs" in system_info()
+EOF
+
+############################################
+# gitignore
+############################################
+
+cat > .gitignore <<'EOF'
+target/
+__pycache__/
+*.pyc
+.venv
+EOF
+
+echo "Project created."

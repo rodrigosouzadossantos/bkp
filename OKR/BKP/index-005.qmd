@@ -1,0 +1,166 @@
+---
+title: "Governança de OKR + Agile + GitHub para IA Subsea"
+author: "Time de IA Submarina"
+bibliography: references.bib
+link-citations: true
+execute:
+  echo: true
+---
+
+# 1. Propósito
+
+- Organizar **OKR + Agile + GitHub** para IA submarina  
+- Garantir clareza estratégica e técnica  
+- Separar impacto de execução  
+- Rastreabilidade total dentro do GitHub  
+
+> Esta abordagem é diplomática: não substitui práticas existentes.
+
+---
+
+# 2. OKR: Conceito
+
+**OKR (Objectives & Key Results)** define:
+
+- **Objective:** O que queremos mudar no mundo real  
+- **Key Result:** Como medimos a mudança  
+- **Initiatives:** Ações para gerar impacto
+
+> Baseado em Doerr [@doerr2018], Wodtke [@wodtke2016], Grove [@grove1983]
+
+---
+
+# 3. Variantes de OKR
+
+### Estratégico (Trimestral)
+- Impacto operacional  
+- Ex.: aumentar confiabilidade de detecção automática  
+
+### Tático (Mensal)
+- Conecta estratégia à execução técnica  
+- Ex.: melhorar cobertura e qualidade do dataset  
+
+### Experimental / Curto (1–2 semanas)
+- Ciclos rápidos de aprendizado  
+- Sempre vinculado a KRs maiores  
+- Ex.: testar filtros experimentais
+
+---
+
+# 4. Fluxo de OKR
+
+```{=html}
+<svg width="600" height="250" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="0" width="180" height="50" rx="10" ry="10" fill="#4CAF50"/>
+  <text x="90" y="30" font-size="14" text-anchor="middle" fill="white">OKR Estratégico</text>
+  <rect x="210" y="0" width="180" height="50" rx="10" ry="10" fill="#2196F3"/>
+  <text x="300" y="30" font-size="14" text-anchor="middle" fill="white">OKR Tático</text>
+  <rect x="420" y="0" width="180" height="50" rx="10" ry="10" fill="#FF9800"/>
+  <text x="510" y="30" font-size="14" text-anchor="middle" fill="white">OKR Experimental</text>
+  <line x1="180" y1="25" x2="210" y2="25" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="390" y1="25" x2="420" y2="25" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" 
+        refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="black"/>
+    </marker>
+  </defs>
+</svg>
+```
+
+> Visualiza claramente o desdobramento estratégico → tático → curto
+
+---
+
+# 5. Integração com Agile
+
+* OKR define **o que mudar**
+* Agile define **como executar**
+
+| Nível       | OKR         | Agile       |
+| ----------- | ----------- | ----------- |
+| Estratégico | Trimestral  | Roadmap     |
+| Tático      | Mensal      | Epic        |
+| Curto       | 1–2 semanas | Sprint Goal |
+| Execução    | Não é OKR   | Backlog     |
+
+```{=html}
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="0" width="180" height="50" rx="10" ry="10" fill="#4CAF50"/>
+  <text x="90" y="30" font-size="14" text-anchor="middle" fill="white">OKR Estratégico</text>
+  <rect x="210" y="0" width="180" height="50" rx="10" ry="10" fill="#2196F3"/>
+  <text x="300" y="30" font-size="14" text-anchor="middle" fill="white">Roadmap</text>
+  <line x1="180" y1="25" x2="210" y2="25" stroke="black" stroke-width="2" marker-end="url(#arrowhead2)"/>
+  <defs>
+    <marker id="arrowhead2" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="black"/>
+    </marker>
+  </defs>
+</svg>
+```
+
+---
+
+# 6. GitHub como Núcleo de Governança
+
+* **Project:** painel estratégico
+* **Issues:** KRs e Initiatives
+* **Pull Requests:** implementação técnica
+* **Labels / Milestones:** conexão com OKRs
+
+---
+
+# 7. Hierarquia Visual GitHub
+
+```{=html}
+<svg width="600" height="300" xmlns="http://www.w3.org/2000/svg">
+  <rect x="200" y="0" width="200" height="50" rx="10" ry="10" fill="#4CAF50"/>
+  <text x="300" y="30" font-size="14" text-anchor="middle" fill="white">Objective</text>
+
+  <rect x="50" y="80" width="150" height="50" rx="10" ry="10" fill="#2196F3"/>
+  <text x="125" y="110" font-size="12" text-anchor="middle" fill="white">Key Result 1</text>
+
+  <rect x="250" y="80" width="150" height="50" rx="10" ry="10" fill="#2196F3"/>
+  <text x="325" y="110" font-size="12" text-anchor="middle" fill="white">Key Result 2</text>
+
+  <rect x="450" y="80" width="150" height="50" rx="10" ry="10" fill="#2196F3"/>
+  <text x="525" y="110" font-size="12" text-anchor="middle" fill="white">Key Result 3</text>
+
+  <line x1="200" y1="50" x2="125" y2="80" stroke="black" stroke-width="2" marker-end="url(#arrowhead3)"/>
+  <line x1="300" y1="50" x2="325" y2="80" stroke="black" stroke-width="2" marker-end="url(#arrowhead3)"/>
+  <line x1="400" y1="50" x2="525" y2="80" stroke="black" stroke-width="2" marker-end="url(#arrowhead3)"/>
+
+  <defs>
+    <marker id="arrowhead3" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="black"/>
+    </marker>
+  </defs>
+</svg>
+```
+
+---
+
+# 8. Benefícios
+
+* Clareza estratégica e técnica
+* Redução de ambiguidade
+* Governança robusta para IA/ML submarina
+* Rastreabilidade PR → Task → KR → Objective
+
+> Baseado em literatura consolidada [@doerr2018; @wodtke2016; @grove1983]
+
+---
+
+# 9. Conclusão Diplomática
+
+* Não substitui práticas existentes
+* Não substitui backlog técnico
+* Organiza OKRs, Agile e GitHub coerentemente
+* Garante foco, rastreabilidade e alinhamento
+
+---
+
+# 10. Referências
+
+```{bibliography}
+```

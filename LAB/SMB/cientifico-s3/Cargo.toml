@@ -1,0 +1,30 @@
+[package]
+name = "SMB"
+version = "0.1.0"
+edition = "2024"
+default-run = "smb"
+
+[[bin]]
+name = "smb"
+path = "src/main.rs"
+
+[[bin]]
+name = "smb-worker"
+path = "src/smb_worker.rs"
+
+[dependencies]
+aws-config = { version = "1.8.15", features = ["behavior-version-latest"] }
+aws-sdk-s3 = "1.128.0"
+chrono = "0.4.44"
+futures = "0.3.32"
+indicatif = "0.18.4"
+lazy_static = "1.5.0"
+rpassword = "7.4.0"
+serde = { version = "1.0.228", features = ["derive"] }
+serde_json = "1.0.149"
+serde_yaml = "0.9.34"
+tokio = { version = "1.50.0", features = ["full"] }
+tokio-util = { version = "0.7.18", features = ["compat"] }
+
+[build-dependencies]
+cc = "1.2.58"

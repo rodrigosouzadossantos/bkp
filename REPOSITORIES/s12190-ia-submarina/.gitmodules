@@ -1,0 +1,16 @@
+[submodule "ambiental"]
+	path = ambiental
+	url = https://github.com/petrobrasbr/s12190-ambiental.git
+	branch = main
+[submodule "descomissionamento"]
+	path = descomissionamento
+	url = https://github.com/petrobrasbr/s12190-descomissionamento.git
+	branch = main
+[submodule "integridade"]
+	path = integridade
+	url = https://github.com/petrobrasbr/s12190-integridade.git
+	branch = main
+[submodule "limpeza-hub"]
+	path = limpeza-hub
+	url = https://github.com/petrobrasbr/s12190-limpeza-hub.git
+	branch = main

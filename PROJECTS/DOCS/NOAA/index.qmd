@@ -1,0 +1,48 @@
+# {{< i18n dashboard_title >}} {.unnumbered}
+
+This document contains the complete management lifecycle for **NOAA**.
+
+## Project Metadata
+
+| Item | Description |
+|---------------------|-------------|
+| **Project Name**    | {{< meta project-name >}} |
+| **Current Phase**   | [Planning]{.status-badge} |
+| **Last Audit**      |  |
+| **Lead Specialist** | {{< meta author-name >}} |
+| **Sponsor**         | {{< meta project-sponsor>}} <br> {{< meta executive-sponsor >}} |
+| **PO**              | {{< meta project-po >}} |
+| **PM**              | [Name] |
+| **Status**          | In Planning |
+
+## Quick Navigation
+Use the sidebar to navigate between Initiation, Planning, and Monitoring artifacts.
+
+```{mermaid}
+graph TD
+    P[Project] --> I[Initiation]
+    P --> PL[Planning]
+    P --> E[Execution]
+    
+    I --> I1[Charter]
+    I --> I2[Stakeholders]
+    
+    PL --> PL1[Scope]
+    PL --> PL2[Schedule]
+    
+    E --> E1[Development]
+    E --> E2[Testing]
+```
+
+---
+
+### Artifact Status
+Navigate through the sidebar to access the required PMBOK and Agile documents.
+
+::: {.ProjectBox title="Latest Milestone"}
+The **Project Charter** has been formally authorized. We are currently
+decomposing the **WBS** into the **Product Backlog** for Sprint planning. The
+next milestone is the completion of the **Sprint 1 Backlog** by [Date].
+:::
+
+

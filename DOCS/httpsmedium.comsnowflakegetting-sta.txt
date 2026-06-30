@@ -1,0 +1,9 @@
+https://medium.com/snowflake/getting-started-with-apache-iceberg-80f338921a31
+https://iceberg.apache.org/docs/nightly/aws/#s3-retries
+https://docs.lakefs.io/v1.73/integrations/spark/
+https://soumilshah1995.blogspot.com/2025/05/getting-started-with-lakefs-and-apache.html
+https://github.com/treeverse/lakefs-iceberg
+https://www.dremio.com/blog/using-dremio-lakefs-python-for-multimodal-data-management/
+https://docs.lakefs.io/latest/integrations/iceberg/
+https://www.dremio.com/blog/deep-dive-into-configuring-your-apache-iceberg-catalog-with-apache-spark/
+https://iceberg.apache.org/docs/latest/configuration/

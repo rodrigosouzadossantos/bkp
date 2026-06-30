@@ -1,0 +1,252 @@
+---
+title: "OKRs → KPIs Mapping"
+---
+
+## Executive Tracking Framework (Strategy & Governance) {.unnumbered}
+
+## Purpose of This Document
+
+This document maps **[OKR (Automated Screening of AUV Images Using AI/CV)
+at section @sec-okr]** to a concise set of **executive-level KPIs**, enabling:
+
+- Strategic monitoring of value delivery
+- Clear visibility of ecological and business outcomes
+- Fact-based decision-making at governance and sponsor level
+
+This artifact complements the **Strategy & Governance – Value Stream & OKRs**
+document and is used for **executive reporting and steering**, not for
+operational control.
+
+---
+
+## Guiding Principle for KPI Design
+
+> **KPIs must reflect ecological value first, with efficiency and cost benefits
+> as secondary, enabling outcomes.**
+
+All KPIs are:
+
+- Outcome-oriented (not task-based)
+- Measurable with available data
+- Interpretable by non-technical stakeholders
+
+---
+
+## OKR 2.1 — Automated Screening of AUV Images Using AI/CV
+
+### Strategic Objective (Reminder)
+
+Enable automated screening of AUV imagery through Computer Vision to reduce
+human effort, analysis time, and operational cost, while **protecting ecological
+relevance and environmental confidence**, with validation by NOAA and reuse
+potential across SUB.
+
+---
+
+## KPI Mapping Overview
+
+| OKR Component | Executive KPI | Description | Ecological / Business Focus |
+|--------------|---------------|-------------|-----------------------------|
+| KR1 | KPI-1: Ecologically Relevant Focus Ratio | Measures how much expert effort is concentrated on ecologically relevant data | **Ecological (Primary)** |
+| KR2 | KPI-2: Environmental Screening Lead Time | Measures speed of access to ecological insights | **Ecological (Primary)** |
+| KR3 | KPI-3: Ecological Data Protection Index | Measures protection of benthic-relevant data | **Ecological (Primary)** |
+| KR4 | KPI-4: Cross-Field Ecological Consistency | Measures consistency across fields | **Ecological (Primary)** |
+| KR5 | KPI-5: Reusable Environmental Asset Coverage | Measures long-term asset creation | **Strategic / Long-Term** |
+| — | KPI-6: Expert Effort Reduction | Measures efficiency gain | Secondary (Enabler) |
+| — | KPI-7: Analysis Cost per Campaign | Measures economic impact | Secondary (Enabler) |
+
+---
+
+## Detailed KPI Definitions
+
+---
+
+### KPI-1 — Ecologically Relevant Focus Ratio  
+
+*(Primary ecological KPI)*
+
+**Definition**  
+Percentage of expert-reviewed images that are classified as benthic-relevant
+after AI screening.
+
+**Formula**  
+```
+(Number of benthic-relevant images reviewed by experts)
+-------------------------------------------------------
+(Total number of images reviewed by experts)
+```
+
+**Target (MVP)**  
+≥ 70%
+
+**Why Executives Care**
+
+- Indicates whether expert time is being spent where ecological value exists
+- Direct proxy for KR1 ecological intent
+
+---
+
+### KPI-2 — Environmental Screening Lead Time  
+
+*(Primary ecological KPI)*
+
+**Definition**  
+Elapsed time between AUV image acquisition and availability of ecologically
+relevant screening results to NOAA.
+
+**Target (MVP)**  
+≥ 25% reduction compared to manual baseline
+
+**Why Executives Care**
+
+- Faster environmental insight
+- Improved responsiveness for monitoring, licensing, and assessments
+
+---
+
+### KPI-3 — Ecological Data Protection Index  
+
+*(Primary ecological risk-control KPI)*
+
+**Definition**  
+Retention rate of true benthic-relevant images after automated screening.
+
+**Formula**  
+```
+(True benthic-relevant images retained)
+--------------------------------------
+(Total true benthic-relevant images)
+```
+
+**Target (MVP)**  
+≥ 85–90%
+
+**Why Executives Care**
+
+- Directly controls ecological risk
+- Protects credibility of environmental studies
+
+---
+
+### KPI-4 — Cross-Field Ecological Consistency  
+
+*(Primary ecological scalability KPI)*
+
+**Definition**  
+Degree to which screening performance (precision/retention) remains stable
+across different fields (e.g., Viola vs Espadarte).
+
+**Target (MVP)**  
+Variation ≤ agreed tolerance threshold between fields
+
+**Why Executives Care**
+
+- Ensures environmental consistency
+- Reduces field-specific bias and rework
+
+---
+
+### KPI-5 — Reusable Environmental Asset Coverage  
+
+*(Strategic, long-term KPI)*
+
+**Definition**  
+Percentage of screened images and associated metadata consolidated into
+versioned, auditable corporate repositories.
+
+**Target (MVP)**  
+≥ 90% of processed data assets versioned and reusable
+
+**Why Executives Care**
+
+- Confirms creation of long-term environmental digital assets
+- Enables reuse beyond the initial project
+
+---
+
+### KPI-6 — Expert Effort Reduction  
+
+*(Secondary, enabling KPI)*
+
+**Definition**  
+Reduction in total specialist hours required for initial screening compared to
+manual baseline.
+
+**Target (MVP)**  
+≥ 30% reduction
+
+**Why Executives Care**
+
+- Confirms operational efficiency
+- Supports sustainability of expert workforce
+
+---
+
+### KPI-7 — Analysis Cost per Campaign  
+
+*(Secondary, enabling KPI)*
+
+**Definition**  
+Average cost of image screening per AUV campaign.
+
+**Target (MVP)**  
+Downward trend demonstrated (absolute value contextual)
+
+**Why Executives Care**
+
+- Demonstrates economic sustainability
+- Supports scaling decisions
+
+---
+
+## Executive Dashboard Recommendation
+
+For executive steering, KPIs should be grouped as:
+
+### Environmental Confidence Panel (Primary)
+
+- KPI-1: Ecologically Relevant Focus Ratio
+- KPI-2: Environmental Screening Lead Time
+- KPI-3: Ecological Data Protection Index
+- KPI-4: Cross-Field Ecological Consistency
+
+### Sustainability & Efficiency Panel (Secondary)
+
+- KPI-6: Expert Effort Reduction
+- KPI-7: Analysis Cost per Campaign
+
+### Strategic Asset Panel
+
+- KPI-5: Reusable Environmental Asset Coverage
+
+---
+
+## Governance Usage
+
+- Reviewed at **executive checkpoints**
+- Used for **Go / No-Go decisions**
+- Forms the basis for scaling beyond MVP
+- KPIs are reported without exposing low-level technical metrics
+
+---
+
+## Binding Rule
+
+> **No decision to scale, reuse, or operationalize the solution may be taken
+> without KPI-3 (Ecological Data Protection Index) meeting its minimum
+> threshold.**
+
+---
+
+## Summary for Executives
+
+This KPI framework ensures that:
+
+- Ecological value is always visible and prioritized
+- Automation is measured by outcomes, not activity
+- Scaling decisions are evidence-based and risk-aware
+
+This document is the authoritative reference for executive tracking of [OKR at
+section @sec-okr] and should be used for all strategic reporting and governance
+discussions related to this initiative.
+

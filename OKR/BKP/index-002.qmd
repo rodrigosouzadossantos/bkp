@@ -1,0 +1,304 @@
+---
+title: "Governança de OKR + Agile + GitHub para IA Subsea"
+subtitle: "Proposta Metodológica com Premissas e Limitações"
+author: "Time de IA Submarina"
+format:
+  html:
+    theme: cosmo
+    toc: true
+    toc-depth: 3
+    number-sections: true
+execute:
+  echo: true
+---
+
+# Propósito deste Documento
+
+Este material tem como objetivo propor uma estrutura integrada de:
+
+- OKR
+- Agile
+- GitHub Projects
+
+aplicada ao contexto de IA/ML com visão computacional submarina.
+
+A proposta busca:
+
+- Aumentar clareza estratégica  
+- Melhorar rastreabilidade técnica  
+- Reduzir ambiguidade entre impacto e execução  
+- Manter toda a governança dentro do GitHub  
+
+Não se trata de revisão crítica de práticas anteriores, mas de um alinhamento metodológico baseado em referências consolidadas.
+
+---
+
+# Referências Conceituais
+
+A estrutura aqui apresentada se baseia principalmente em:
+
+- :contentReference[oaicite:0]{index=0} — :contentReference[oaicite:1]{index=1}  
+- :contentReference[oaicite:2]{index=2} — :contentReference[oaicite:3]{index=3}  
+- Princípios de gestão por objetivos desenvolvidos por :contentReference[oaicite:4]{index=4} na :contentReference[oaicite:5]{index=5}  
+
+Essas referências distinguem claramente:
+
+- Objetivos (direção qualitativa)
+- Resultados-chave (métricas mensuráveis)
+- Iniciativas (ações para tentar gerar impacto)
+
+---
+
+# Premissas
+
+Esta proposta assume que:
+
+1. O projeto de IA submarina possui impacto operacional real.
+2. Métricas técnicas (ex.: F1-score, falso negativo) influenciam decisões operacionais.
+3. Rastreabilidade é requisito crítico (industrial e ambiental).
+4. GitHub será a ferramenta central e única de governança.
+
+---
+
+# Limitações
+
+É importante reconhecer limites metodológicos:
+
+- OKR não substitui gestão de projeto detalhada.
+- OKR não elimina necessidade de backlog estruturado.
+- Em IA/ML, nem todo resultado é previsível.
+- Métricas isoladas não capturam toda a complexidade do ambiente submarino.
+
+Portanto, OKR deve ser usado como sistema de foco, não como mecanismo de controle rígido.
+
+---
+
+# O que OKR É (e Não É)
+
+## OKR NÃO É
+
+- Lista de tarefas
+- Backlog técnico
+- Plano detalhado de implementação
+- Cronograma operacional
+
+Segundo Doerr, Key Results devem medir resultado, não esforço.
+
+## OKR É
+
+- Um sistema para medir mudança de estado
+- Um mecanismo de alinhamento estratégico
+- Uma forma de conectar impacto operacional à execução técnica
+
+---
+
+# Estrutura em Camadas
+
+## 6.1 OKR Estratégico (Trimestral)
+
+Define impacto operacional.
+
+### Exemplo
+
+**Objective**
+
+Aumentar a confiabilidade da detecção automática em inspeções submarinas.
+
+**Key Results**
+
+- F1-score: 0.72 → 0.85  
+- Redução de falso negativo classe crítica em 50%  
+- Redução do tempo de revisão manual em 30%  
+- 100% das inferências rastreáveis ao dado bruto  
+
+---
+
+## 6.2 OKR Tático (Mensal)
+
+Foco em melhoria de capacidade.
+
+**Objective**
+
+Melhorar qualidade e robustez do dataset.
+
+**Key Results**
+
+- 95% das imagens com hash único validado  
+- Inconsistência de anotação <10%  
+- Aumento de 40% na cobertura de classe rara  
+
+---
+
+## 6.3 OKR de Aprendizado (1–2 semanas)
+
+Usado para experimentação controlada.
+
+**Objective**
+
+Validar impacto de filtro espacial na redução de falso positivo.
+
+**Key Results**
+
+- Falso positivo: 28% → <18%  
+- Impacto na latência <10%  
+- Documentação formal de cenários de falha  
+
+---
+
+# Integração com Agile
+
+OKR define **o que mudar**.  
+Agile organiza **como executar**.
+
+| Nível | OKR | Agile |
+|-------|------|--------|
+| Estratégico | Trimestral | Roadmap |
+| Tático | Mensal | Epic |
+| Aprendizado | 1–2 semanas | Sprint Goal |
+| Execução | Não é OKR | Backlog |
+
+---
+
+```{mermaid}
+graph TD
+    O[Objective]
+    KR[Key Results]
+    I[Initiatives]
+    T[Tarefas]
+    PR[Pull Request]
+
+    O --> KR
+    KR --> I
+    I --> T
+    T --> PR
+```
+
+---
+
+# GitHub como Núcleo de Governança
+
+A literatura de OKR não impõe ferramenta específica.
+Logo, centralizar tudo no GitHub é viável e consistente.
+
+## 8.1 GitHub Project
+
+Um Project por trimestre.
+
+Campos customizados:
+
+* Tipo (Objective / KR / Initiative / Task)
+* Métrica alvo
+* Valor atual
+* Responsável
+* Status
+
+O Project é o painel estratégico.
+
+---
+
+## 8.2 Key Results
+
+Criados como Issues com label `KR`.
+
+Devem conter:
+
+* Métrica base
+* Meta
+* Método de medição
+* Dataset
+* Frequência de atualização
+
+---
+
+## 8.3 Initiatives
+
+Issues com label `Initiative`.
+
+Representam meios para alcançar KRs.
+
+---
+
+## 8.4 Tarefas Técnicas
+
+Issues operacionais fechadas por Pull Requests.
+
+Fluxo:
+
+Issue → Branch → PR → Review → Merge
+
+---
+
+```{mermaid}
+flowchart LR
+    OKR[OKR Trimestral]
+    KR[Key Result]
+    SG[Sprint Goal]
+    Sprint[Sprint]
+    Metric[Atualização Métrica]
+
+    OKR --> KR
+    KR --> SG
+    SG --> Sprint
+    Sprint --> Metric
+    Metric --> KR
+```
+
+---
+
+# Estrutura de Repositório Recomendada
+
+```
+ai-subsea-okr/
+│
+├── README.md
+├── docs/
+│   ├── index.qmd
+│   ├── okr-q1.qmd
+│   ├── metodologia.qmd
+│   └── premissas.qmd
+│
+├── .github/
+│   ├── ISSUE_TEMPLATE/
+│   └── workflows/
+│
+└── dashboards/
+```
+
+---
+
+# Benefícios Esperados
+
+## Clareza Estratégica
+
+Separação entre impacto e execução.
+
+## Redução de Ambiguidade
+
+Diminui risco de conflito conceitual.
+
+## Governança de IA
+
+Importante para:
+
+* Segurança operacional
+* Compliance ambiental
+* Auditoria de modelo
+
+## Rastreabilidade Completa
+
+Cada PR contribui para um KR mensurável.
+
+---
+
+# Consideração Final
+
+Esta proposta:
+
+* Não invalida práticas anteriores.
+* Não substitui gestão técnica detalhada.
+* Não impõe burocracia adicional.
+
+Ela organiza o trabalho segundo referências consolidadas, adaptadas ao contexto de IA submarina.
+
+O objetivo central é aumentar clareza, alinhamento e previsibilidade — preservando autonomia técnica e respeito à experiência da equipe.
+

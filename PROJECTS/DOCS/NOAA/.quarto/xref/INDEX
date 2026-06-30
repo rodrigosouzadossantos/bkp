@@ -1,0 +1,62 @@
+{
+  "index.qmd": {
+    "index.html": "4e788884"
+  },
+  "01_strategy_okrs/okr_dashboard.qmd": {
+    "okr_dashboard.html": "93523bf8"
+  },
+  "01_strategy_okrs/value_stream.qmd": {
+    "value_stream.html": "4bf7c50e"
+  },
+  "01_strategy_okrs/okr_kpi.qmd": {
+    "okr_kpi.html": "3987d72f"
+  },
+  "01_strategy_okrs/stage_gate.qmd": {
+    "stage_gate.html": "509abf67"
+  },
+  "02_initiating_pmbok/business_case.qmd": {
+    "business_case.html": "4cf701c4"
+  },
+  "02_initiating_pmbok/project_charter.qmd": {
+    "project_charter.html": "1f652da5"
+  },
+  "02_initiating_pmbok/stakeholder_reg.qmd": {
+    "stakeholder_reg.html": "5c6ccd26"
+  },
+  "03_planning_scope/scope_stmt.qmd": {
+    "scope_stmt.html": "b638703d"
+  },
+  "03_planning_scope/requirements.qmd": {
+    "requirements.html": "e5bac9c3"
+  },
+  "03_planning_scope/wbs.qmd": {
+    "wbs.html": "a81d62ef"
+  },
+  "03_planning_scope/wbs_dictionary.qmd": {
+    "wbs_dictionary.html": "a12bc2cb"
+  },
+  "03_planning_scope/pmp.qmd": {
+    "pmp.html": "212cca03"
+  },
+  "03_planning_scope/rtm.qmd": {
+    "rtm.html": "3b904344"
+  },
+  "03_planning_scope/risk_plan.qmd": {
+    "risk_plan.html": "8d53f450"
+  },
+  "04_agile_execution/schedule_mgmt.qmd": {
+    "schedule_mgmt.html": "9dd56649"
+  },
+  "04_agile_execution/roadmap.qmd": {
+    "roadmap.html": "c86b99a6"
+  },
+  "04_agile_execution/product_backlog.qmd": {
+    "product_backlog.html": "241cad68"
+  },
+  "05_monitoring_control/risk_register.qmd": {
+    "risk_register.html": "336560ae"
+  },
+  "05_monitoring_control/change_log.qmd": {
+    "change_log.html": "70f42c0c"
+  }
+}

@@ -1,0 +1,124 @@
+from re import I
+from ingestion.spark_session import create_spark
+#from ingestion.ingest import run_ingestion
+
+from pyspark.sql.window import Window
+from pyspark.sql import functions as F
+
+import math
+from PIL import Image, ImageOps
+from io import BytesIO
+
+import cv2
+import numpy as np
+
+
+PATH = 's3a://noaa-auv/main/NOAA-AUV/VIOLA/6000713538/'
+
+N = 50
+N_COLS = 5
+THUMB_SIZE = (200, 200)  # size of each tile
+BORDER_SIZE = 0          # thickness of border
+SPACING = 3              # gap between images
+BORDER_COLOR = (0, 0, 0) # black border
+
+
+import nvidia.dali.fn as fn
+import nvidia.dali.types as types
+from nvidia.dali.pipeline import Pipeline
+
+import cupy as cp
+import numpy as np
+
+class ImagePipeline(Pipeline):
+    def __init__(self, batch_size, num_threads, device_id):
+        super().__init__(batch_size, num_threads, device_id)
+        self.input = fn.external_source(name="images", device="cpu")
+        self.decode = fn.decoders.image(self.input, device="mixed")  # nvJPEG
+
+    def define_graph(self):
+        images = self.input()
+        decoded = self.decode(images)
+        return decoded
+
+def main():
+  spark = create_spark()
+
+  df = (
+    spark.read
+    .format("binaryFile")
+    .load(PATH)
+    .filter("path LIKE '%.jpg'")
+  )
+
+  df = df.repartition(1024)
+
+  #df = df.withColumn("id", F.monotonically_increasing_id())
+  #df.select("path", "length", "id").show( )
+  #df.select("path", "length").show( N )
+
+  def process_partition_gpu(iterator):
+
+    pipe = ImagePipeline(batch_size=64, num_threads=4, device_id=0)
+    pipe.build()
+
+    batch = []
+    paths = []
+
+    def process_batch(batch, paths):
+        pipe.feed_input("images", batch)
+        output = pipe.run()[0].as_cpu().as_array()
+
+        for img, path in zip(output, paths):
+            img = cp.asarray(img)
+
+            h, w = img.shape[:2]
+
+            # brightness (HSV V channel approx)
+            brightness = float(cp.mean(cp.max(img, axis=2)))
+
+            contrast = float(cp.std(img))
+
+            # Laplacian blur
+            gray = cp.mean(img, axis=2)
+            lap = cp.var(cp.gradient(gray)[0])
+            blur = float(lap)
+
+            mean_vals = cp.mean(img, axis=(0, 1))
+            mean_r, mean_g, mean_b = [float(x) for x in mean_vals]
+
+            yield {
+                "path": path,
+                "width": int(w),
+                "height": int(h),
+                "brightness": brightness,
+                "contrast": contrast,
+                "blur": blur,
+                "mean_r": mean_r,
+                "mean_g": mean_g,
+                "mean_b": mean_b,
+            }
+
+    for row in iterator:
+        batch.append(row.content)
+        paths.append(row.path)
+
+        if len(batch) == 64:
+            yield from process_batch(batch, paths)
+            batch, paths = [], []
+
+    if batch:
+        yield from process_batch(batch, paths)
+
+
+
+  result_df = (
+    df.select("path", "content")
+      .rdd
+      .mapPartitions(process_partition_gpu)
+      .toDF()
+  )
+
+
+if __name__ == "__main__":
+  main()

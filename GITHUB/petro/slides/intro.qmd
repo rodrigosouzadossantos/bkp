@@ -1,0 +1,101 @@
+<!-- Slide -->
+
+#
+
+::: {.standard-slide}
+::: {.left-bar}
+:::
+
+::: {.content-area}
+
+<h2>Gestão Ágil de Projetos</h2>
+
+O Ágil enfatiza desenvolvimento iterativo, entrega contínua e adaptabilidade.
+
+<br>
+[Princípios-chave:]{style="color:#008542"}
+
+* Entregar valor de forma incremental
+* Colaborar estreitamente com stakeholders
+* Responder a mudanças em vez de seguir um plano fixo
+
+:::
+
+:::
+
+::: {.notes}
+Speaker notes go here.
+:::
+
+
+<!-- Slide -->
+
+#
+
+::: {.standard-slide}
+::: {.left-bar}
+:::
+::: {.content-area}
+
+<h2>Alinhamento Estratégico</h2>
+<svg viewBox="0 0 600 150" width="85%" style="margin-top:30px;">
+  <!-- Linha animada -->
+  <line x1="140" y1="75" x2="460" y2="75"
+        stroke="#008542"
+        stroke-width="14"
+        stroke-linecap="round"
+        stroke-dasharray="320"
+        stroke-dashoffset="320">
+    <animate attributeName="stroke-dashoffset"
+             from="320"
+             to="0"
+             dur="1.2s"
+             begin="0.5s"
+             fill="freeze" />
+  </line>
+  <!-- Círculo SW (já visível) -->
+  <circle cx="100" cy="75" r="40" fill="#FDB913"/>
+  <text x="100" y="82" text-anchor="middle" font-size="18" fill="#fff">SW</text>
+  <!-- Círculo OKR com fade -->
+  <circle cx="500" cy="75" r="40"
+          fill="#006837"
+          opacity="0">
+    <animate attributeName="opacity"
+             from="0"
+             to="1"
+             dur="0.6s"
+             begin="1.7s"
+             fill="freeze" />
+  </circle>
+  <text x="500" y="82"
+        text-anchor="middle"
+        font-size="18"
+        fill="#fff"
+        opacity="0">
+    <animate attributeName="opacity"
+             from="0"
+             to="1"
+             dur="0.6s"
+             begin="1.7s"
+             fill="freeze" />
+    OKR
+  </text>
+</svg>
+
+:::{.fragment .fade-in data-fragment-delay="3000"}
+<p style="font-size:1.1em;">
+  Projetos de software → Objetivos estratégicos 🎯
+</p>
+:::
+<br />
+
+
+:::{.fragment .fade-in}
+Abordagem viabiliza que os projetos de software permaneçam alinhados aos objetivos estratégicos.
+:::
+
+:::
+
+:::
+
+

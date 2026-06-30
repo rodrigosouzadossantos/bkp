@@ -1,0 +1,53 @@
+# KR3 – Configurar painel do GitHub Project com fluxo e campos customizados
+
+## Descrição
+
+Estruturar o GitHub Project como ferramenta central de gestão
+das demandas da área, permitindo acompanhamento do fluxo de trabalho
+e geração de métricas operacionais.
+
+## Entregáveis
+
+- Painel do GitHub Project configurado
+- Colunas de fluxo definidas
+- Campos customizados implementados
+- Tipos de demanda padronizados
+
+## Checklist de execução
+
+- [ ] Criar GitHub Project
+- [ ] Definir colunas do fluxo
+- [ ] Criar campos customizados
+- [ ] Configurar tipos de demanda
+
+## Critérios de aceite
+
+Colunas do fluxo criadas:
+
+- Backlog
+- Ready
+- In Progress
+- Review
+- Done
+
+Campos criados:
+
+- OKR
+- Tipo de demanda
+
+Tipos de demanda:
+
+- Bug
+- Feature
+- Experimento
+- Infra
+
+## Métrica do KR
+
+Project configurado e operacional para gestão das demandas.
+
+## Rastreamento
+
+OKR relacionado: Governança GitHub  
+Project: GitHub Project da área  
+Responsável: (definir)

@@ -1,0 +1,53 @@
+import pandas as pd
+import numpy as np
+import cv2
+from pyspark.sql.types import StructType
+
+
+def pandas_partition(features):
+    """
+    Vectorized batch processing using mapInPandas.
+    """
+
+    def _inner(iterator):
+
+        from core.context import build_context
+        from core.metrics import Metrics
+        from core.logging import get_logger
+        import time
+
+        logger = get_logger()
+        metrics = Metrics()
+
+        for pdf in iterator:
+
+            results = []
+
+            for _, row in pdf.iterrows():
+
+                try:
+                    ctx = build_context(row)
+                    result = {"path": ctx["path"]}
+
+                    for f in features:
+                        start = time.time()
+                        try:
+                            result.update(f["extract"](ctx))
+                            metrics.inc(f"{f['name']}_ok")
+                        except Exception as e:
+                            metrics.inc(f"{f['name']}_fail")
+                            logger.warning(f"{f['name']} failed: {e}")
+
+                    results.append(result)
+                    metrics.inc("rows_ok")
+
+                except Exception as e:
+                    metrics.inc("rows_fail")
+                    logger.error(f"Row failed: {e}")
+                    results.append({"path": row["path"]})
+
+            yield pd.DataFrame(results)
+
+        logger.info(f"Partition metrics: {metrics.report()}")
+
+    return _inner

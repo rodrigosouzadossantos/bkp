@@ -1,0 +1,1297 @@
+#1769174138
+exit
+#1769174171
+cat OLD/config_cdi.sh 
+#1769174201
+MF_HOME="/projetos/$(whoami)" && export PATH="$MF_HOME/.miniforge3/bin:$PATH"
+#1769174239
+conda activate OnBoarding
+#1769174257
+conda init
+#1769174283
+exit
+#1769174289
+conda activate OnBoarding
+#1769174293
+clra
+#1769174295
+clear
+#1769174320
+exit
+#1769174365
+rm Miniforge3-Linux-x86_64.sh 
+#1769174369
+ls
+#1769174406
+mkdir IA-Submarina-OnBoarding
+#1769175225
+mkdir data src notebook 
+#1769175226
+ls
+#1769175240
+rm -rf data src notebook 
+#1769175242
+cd IA-Submarina-OnBoarding/
+#1769175246
+mkdir data src notebook 
+#1769175269
+cd ../
+#1769175293
+cp OLD/dados-submarinos.xlsx IA-Submarina-OnBoarding/data/
+#1769175317
+cd IA-Submarina-OnBoarding/data/
+#1769175323
+mkdir raw
+#1769175334
+mv dados-submarinos.xlsx raw/
+#1769175336
+ls
+#1769175338
+cd ../
+#1769175342
+ls -l
+#1769175345
+ls -lr
+#1769175349
+ls -lR
+#1769175510
+nvidia-smi 
+#1769175532
+clear
+#1769175581
+cd src/
+#1769175608
+vim data_cleaner.py
+#1769175861
+python data_cleaner.py 
+#1769175877
+conda activate OnBoarding
+#1769175881
+python data_cleaner.py 
+#1769175912
+fg
+#1769176007
+python data_cleaner.py 
+#1769176022
+fg
+#1769176644
+python data_cleaner.py 
+#1769176673
+gh
+#1769176675
+fg
+#1769176769
+python data_cleaner.py 
+#1769176779
+fg
+#1769176806
+python data_cleaner.py 
+#1769176812
+cd ../
+#1769176818
+python src/data_cleaner.py 
+#1769176840
+fg
+#1769176890
+python src/data_cleaner.py 
+#1769176903
+fg
+#1769176944
+python src/data_cleaner.py 
+#1769176960
+fg
+#1769177049
+python src/data_cleaner.py 
+#1769177060
+fg
+#1769177167
+python src/data_cleaner.py 
+#1769177307
+fg
+#1769177323
+python src/data_cleaner.py 
+#1769177549
+fg
+#1769177803
+python src/data_cleaner.py 
+#1769177849
+fg
+#1769177867
+clear
+#1769179496
+fg
+#1769179500
+cd src/
+#1769179502
+ls
+#1769179533
+mv demo_module subsea
+#1769181486
+cd subsea/
+#1769181529
+vim easy_search.py
+#1769181676
+python easy_search.py
+#1769181685
+vim easy_search.py
+#1769181696
+vim ../data_cleaner.py 
+#1769181712
+vim easy_search.py 
+#1769183640
+cd ../
+#1769183645
+ls
+#1769183651
+vim data_cleaner.py 
+#1769183736
+python data_cleaner.py 
+#1769184946
+vim subsea/sankey.py
+#1769185017
+vim subsea/easy_search.py 
+#1769185034
+vim subsea/sankey.py
+#1769193978
+conda activate OnBoarding
+#1769194000
+cd ../
+#1769194001
+ls
+#1769194007
+cd src/
+#1769194008
+ls
+#1769194013
+cd subsea/
+#1769194014
+ls
+#1769194021
+vim easy_search.py 
+#1769191708
+conda activate OnBoarding
+#1769191718
+pwd
+#1769191768
+cd IA-Submarina-OnBoarding/
+#1769191770
+ls
+#1769191808
+vim src/subsea/sankey.py 
+#1769192994
+vim src/subsea/easy_search.py 
+#1769516692
+conda activate OnBoarding
+#1769521889
+pip install anywidget
+#1769521902
+conda install anywidget
+#1769521953
+jupyter labextension install anywidget
+#1769522013
+conda uninstall anywidget
+#1769522122
+conda install anywidget
+#1769524609
+jupyter labextension install @anywidget/jupyterlab
+#1769524993
+jupyter nbextension install --py anywidget
+#1769524994
+jupyter nbextension enable --py anywidget
+#1769527667
+conda install qgrid
+#1769528218
+conda uninstall qgrid
+#1769528285
+conda install ipydatagrid
+#1769528342
+conda update ipywidgets
+#1769528658
+jupyter lab build
+#1769528714
+jupyter lab build --dev-build=False --minimize=False
+#1769528758
+conda install ipywidgets jupyterlab 
+#1769528871
+jupyter nbextension enable --py widgetsnbextension
+#1769528952
+jupyter labextension install ipydatagrid
+#1769580264
+conda activate OnBoarding
+#1769580277
+pwd
+#1769580281
+cd ../../
+#1769580284
+cd notebook/
+#1769580295
+jupyter nbconvert --to html  dashboard.ipynb 
+#1769580361
+jupyter nbconvert --to html  --execute dashboard.ipynb 
+#1769607825
+pwd
+#1769607830
+cd ../
+#1769607880
+tar -c ia-submarina-onboarding.tar.gz IA-Submarina-OnBoarding init.sh OLD requirements.txt 
+#1769607895
+tar -cvvzf ia-submarina-onboarding.tar.gz IA-Submarina-OnBoarding init.sh OLD requirements.txt 
+#1769607921
+date
+#1769607937
+date -F '%%'
+#1769607941
+date '%%'
+#1769607944
+date '%F'
+#1769607951
+date '-f %F'
+#1769607959
+date -fv'%F'
+#1769607963
+date -f '%F'
+#1769607969
+man date
+#1769607981
+date --help
+#1769608014
+date +'%F'
+#1769608037
+tar -cvvzf ia-submarina-onboarding-$(date +'%F').tar.gz IA-Submarina-OnBoarding init.sh OLD requirements.txt 
+#1769621151
+pwd
+#1769621162
+python custom_formatter.py 
+#1769621181
+cp subsea/dashboard.py .
+#1769621193
+python custom_formatter.py dashboard.py 
+#1769621203
+vim dashboard.py
+#1769621247
+vim -d dashboard.py dashboard.py.bak 
+#1769621302
+mv dashboard-autoformmatted.py 
+#1769621419
+cp subsea/dashboard.py .
+#1769621432
+python custom_formatter.py --check dashboard.py 
+#1769621555
+mv dashboard.py.bak 01-dashboard.py.bak 
+#1769621559
+python custom_formatter.py --check dashboard.py 
+#1769621567
+python custom_formatter.py dashboard.py 
+#1769621576
+mv dashboard.py.bak 02-dashboard.py.bak 
+#1769621589
+vim dashboard.py 
+#1769621795
+conda activate OnBoarding
+#1769621804
+pip install ruff
+#1769621908
+conda install ruff
+#1769621931
+conda install ruff yapf
+#1769621995
+ls
+#1769622007
+rm 0*bak
+#1769622022
+rm dashboard-autoformmatted.py 
+#1769622028
+vim dashboard.py 
+#1769622047
+rm dashboard.py 
+#1769622057
+cd ..
+#1769622059
+ps
+#1769622062
+ls
+#1769622064
+pwd
+#1769622070
+cat > .ruff.toml << 'EOF'
+[format]
+indent-style = "space"
+indent-width = 2
+quote-style = "single"
+line-ending = "auto"
+[lint]
+select = []
+ignore = []
+EOF
+
+#1769622078
+vim .ruff.toml 
+#1769622103
+cat > .style.yapf << 'EOF'
+[style]
+based_on_style = pep8
+indent_width = 2
+column_limit = 120
+spaces_around_power_operator = true
+spaces_before_comment = 2
+split_before_logical_operator = true
+EOF
+
+#1769622109
+vim .style.yapf 
+#1769622186
+ruff check .
+#1769622216
+ruff --help
+#1769622359
+vim pyproject.toml
+#1769622436
+ruff check --config "indent-width=2" .
+#1769622447
+vim .ruff.toml 
+#1769622631
+vim pyproject.toml 
+#1769622650
+tm .ruff.toml 
+#1769622654
+rm .ruff.toml 
+#1769622662
+ruff check --config .
+#1769622669
+ruff check .
+#1769622681
+ruff -V
+#1769622799
+vim pyproject.toml 
+#1769622882
+ruff check .
+#1769622915
+ruff check src/data_cleaner.py 
+#1769622958
+vim pyproject.toml 
+#1769623044
+ruff format src/data_cleaner.py 
+#1769623053
+vim src/data_cleaner.py 
+#1769623084
+ls -la src/
+#1769623135
+ruff check src/data_cleaner.py 
+#1769623140
+ruff check src/data_cleaner.py --fix
+#1769623155
+ruff check src/data_cleaner.py
+#1769623160
+ruff check --fix src/data_cleaner.py
+#1769623181
+vim src/data_cleaner.py 
+#1769623206
+ruff check src/data_cleaner.py
+#1769623261
+yapf src/data_cleaner.py 
+#1769623281
+vim .style.yapf 
+#1769623298
+yapf src/data_cleaner.py 
+#1769623313
+vim .style.yapf 
+#1769623319
+yapf src/data_cleaner.py 
+#1769623339
+yapf -d src/data_cleaner.py 
+#1769623610
+yapf --style=google src/data_cleaner.py 
+#1769624514
+SPACE_INSIDE_BRACKETS=True yapf --style=google src/data_cleaner.py 
+#1769624523
+yapf --style=google src/data_cleaner.py 
+#1769624530
+vim .style.yapf 
+#1769624548
+yapf --style=google src/data_cleaner.py 
+#1769624554
+vim .style.yapf 
+#1769624568
+yapf --style=google src/data_cleaner.py 
+#1769624596
+vim .style.yapf 
+#1769624614
+yapf --style=google src/data_cleaner.py 
+#1769624626
+vim src/data_cleaner.py 
+#1769624644
+yapf --style=google src/data_cleaner.py 
+#1769624670
+vim src/data_cleaner.py 
+#1769624705
+yapf --style=google src/data_cleaner.py 
+#1769624730
+yapf --style=google --config "SPACE_INSIDE_BRACKETS=True" src/data_cleaner.py 
+#1769624744
+yapf --style=google --style "SPACE_INSIDE_BRACKETS=True" src/data_cleaner.py 
+#1769624758
+yapf --style-help
+#1769624797
+vim .style.yapf 
+#1769624807
+yapf --style-help
+#1769624868
+yapf --style-help > .style.yapf 
+#1769624875
+vim .style.yapf 
+#1769624885
+yapf --style-help
+#1769624914
+vim .style.yapf 
+#1769624924
+yapf --style-help
+#1769624937
+yapf src/data_cleaner.py 
+#1769624962
+vim .style.yapf 
+#1769625001
+yapf src/data_cleaner.py 
+#1769625013
+vim .style.yapf 
+#1769625062
+yapf src/data_cleaner.py 
+#1769625079
+vim .style.yapf 
+#1769625291
+yapf src/data_cleaner.py 
+#1769625330
+vim src/data_cleaner.py 
+#1769625338
+vim .style.yapf 
+#1769625496
+yapf src/data_cleaner.py 
+#1769625543
+vim src/data_cleaner.py 
+#1769625581
+vim src/subsea/dashboard.py 
+#1769625591
+yapf src/subsea/dashboard.py 
+#1769625626
+yapf src/subsea/dashboard.py > dashboard-f.py
+#1769625640
+mv dashboard-f.py src/subsea/
+#1769625648
+cd src/subsea/
+#1769625657
+vim -d dashboard.py dashboard-f.py 
+#1769625856
+mv dashboard.py bkp-dashboard.py 
+#1769625864
+mv dashboard_f.py dashboard.py 
+#1769625889
+vim dashboard.py 
+#1769625923
+cd ../../
+#1769625923
+ls
+#1769625926
+ls -la
+#1769625940
+vim pyproject.toml 
+#1769687741
+pwd
+#1769687744
+cd ../../
+#1769687748
+ls
+#1769687752
+vim pyproject.toml 
+#1769687781
+pip -e .[lint]
+#1769687814
+pip install -e .[lint]
+#1769687832
+conda activate OnBoarding
+#1769687836
+pip install -e .[lint]
+#1769687994
+export PIP_REQUIRE_VIRTUALENV=false
+#1769687996
+pip install -e .[lint]
+#1769688036
+conda install setuptools
+#1769688110
+pip install -e .[lint]
+#1769688162
+pip install --upgrade setuptools pip
+#1769688225
+pip install -e .[lint]
+#1769688240
+vim pyproject.toml 
+#1769688990
+cd ..
+#1769689029
+mv Untitled\ Folder TNZ5-ONBOARD
+#1769689033
+cd TNZ5-ONBOARD/
+#1769689199
+cd ../
+#1769689207
+git clone https://github.com/petrobrasbr/tnz5-onboard.git
+#1769689820
+ls
+#1769689843
+ls -la tnz5-onboard/
+#1769689858
+ls -la TNZ5-ONBOARD/
+#1769689870
+mv tnz5-onboard/* TNZ5-ONBOARD/
+#1769689873
+cd TNZ5-ONBOARD/
+#1769689942
+git brach -a
+#1769689952
+git branch -a
+#1769689982
+ls -al
+#1769689988
+git status
+#1769690002
+ls -la
+#1769690014
+mv ../tnz5-onboard/.git .
+#1769690021
+git branch -a
+#1769690054
+git checkout -b rodrigo-souza origin/rodrigo-souza
+#1769690074
+git checkout rodrigo-souza
+#1769690094
+git branch -a
+#1769690110
+git checkout -b rodrigo-souza origin/rodrigo-souza
+#1769690142
+git status
+#1769690159
+git fetch --all
+#1769690199
+git branch -a
+#1769690218
+git checkout -b rodrigo-souza origin/rodrigo-souza
+#1769690231
+git ls-remote --heads origin
+#1769690313
+git checkout -b rodrigo-souza origin/rodrigo-souza
+#1769690331
+git checkout rodrigo-souza
+#1769690438
+git config --global credential.helper manager
+#1769690443
+git ls-remote --heads origin
+#1769690522
+cat /etc/issue
+#1769690537
+cat /etc/os-release 
+#1769690580
+cd ../
+#1769690584
+wget https://github.com/git-ecosystem/git-credential-manager/releases/latest/download/gcm-linux_amd64.rpm
+#1769690661
+curl -L https://aka.ms/gcm/linux-install-source.sh | sh
+#1769690759
+wget https://github.com/git-ecosystem/git-credential-manager/releases/download/v2.7.0/gcm-linux-x64-2.7.0.tar.gz
+#1769690804
+tar -xvf gcm-linux-x64-2.7.0.tar.gz -C /usr/local/bin
+#1769690822
+tar -tvf gcm-linux-x64-2.7.0.tar.gz
+#1769690834
+echo $PATH
+#1769690892
+tar -xvf gcm-linux-x64-2.7.0.tar.gz -C /projetos/ghva/bin
+#1769690898
+mkdir bin
+#1769690901
+tar -xvf gcm-linux-x64-2.7.0.tar.gz -C /projetos/ghva/bin
+#1769690919
+git-credential-manager configure
+#1769690943
+git ls-remote --heads origin
+#1769690950
+cd TNZ5-ONBOARD/
+#1769690952
+git ls-remote --heads origin
+#1769691097
+git config --global credential.credentialStore gpg
+#1769691099
+git ls-remote --heads origin
+#1769691144
+git config --global credential.credentialStore cache
+#1769691148
+git ls-remote --heads origin
+#1769691338
+git config --global credential.helper
+#1769691352
+git-credential-manager configure
+#1769691357
+git config --global credential.helper
+#1769691417
+git config --global credential.credentialStore gpg
+#1769691423
+git ls-remote --heads origin
+#1769691505
+tty 
+#1769691508
+export GPG_TTY=$(tty)
+#1769691511
+git ls-remote --heads origin
+#1769691542
+pass init
+#1769691607
+git-credential-manager version
+#1769691638
+git-credential-manager --version
+#1769691655
+git-credential-manager -h
+#1769691663
+git-credential-manager get
+#1769691691
+git-credential-manager diagnose
+#1769691780
+dnf install -y git-credential-manager gnome-keyring
+#1769691790
+sudo dnf install -y git-credential-manager gnome-keyring
+#1769691825
+ dnf install -y pass gnupg2
+#1769691939
+cd ..
+#1769691941
+pwd
+#1769691944
+git clone https://git.zx2c4.com/password-store
+#1769692233
+git -c http.sslVerify=fals clone https://git.zx2c4.com/password-store
+#1769692240
+git -c http.sslVerify=false clone https://git.zx2c4.com/password-store
+#1769692271
+cd password-store/
+#1769692273
+ls -l
+#1769692277
+ls -la
+#1769692283
+git branch -a
+#1769692321
+rm -rf .git/
+#1769692326
+wget https://git.zx2c4.com/password-store/snapshot/password-store-1.7.4.tar.xz
+#1769692364
+wget --no-check-certificate https://git.zx2c4.com/password-store/snapshot/password-store-1.7.4.tar.xz
+#1769692377
+tar -tvf password-store-1.7.4.tar.xz 
+#1769692477
+wget --no-check-certificate https://git.zx2c4.com/password-store/snapshot/password-store-1.7.4.zip
+#1769692485
+unzip password-store-1.7.4.zip 
+#1769692493
+ls
+#1769692553
+git config --global credential.credentialStore plaintext
+#1769692558
+git ls-remote --heads origin
+#1769692570
+cd ../
+#1769692574
+rm -rf password-store/
+#1769692580
+cd TNZ5-ONBOARD/
+#1769692584
+git ls-remote --heads origin
+#1769692740
+git-credential-manager diagnose
+#1769692783
+git pull
+#1769692922
+git credential-manager erase
+#1769692962
+git credential-manager --help
+#1769692965
+git credential-manager 
+#1769692988
+git credential-manager github
+#1769692998
+git credential-manager github login
+#1769693010
+git pull
+#1769693137
+export GCM_TRACE=1
+#1769693137
+export GIT_TRACE=1
+#1769693140
+git pull
+#1769693211
+cd ../
+#1769693316
+git clone https://rodrigo-santos35-prestserv_petro@github.com/petrobrasbr/tnz5-onboard.git
+#1769693328
+ls -l
+#1769693333
+cd tnz5-onboard/
+#1769693334
+ls
+#1769693349
+cd ../
+#1769693362
+cd TNZ5-ONBOARD/
+#1769693363
+ls
+#1769693370
+cd ../
+#1769693375
+rm -rf TNZ5-ONBOARD/
+#1769693386
+mv tnz5-onboard TNZ5-ONBOARD
+#1769693389
+cd TNZ5-ONBOARD/
+#1769693396
+git branch -a
+#1769693415
+git checkout rodrigo-souza
+#1769693428
+git checkout -b rodrigo-souza origin/rodrigo-souza
+#1769693441
+git branch -a
+#1769693472
+cd ../
+#1769693500
+git clone -b rodrigo-souza https://rodrigo-santos35-prestserv_petro@github.com/petrobrasbr/tnz5-onboard.git
+#1769693507
+ls -lrt
+#1769693825
+git remote -v
+#1769693838
+git remote -V
+#1769693845
+cd TNZ5-ONBOARD/
+#1769693848
+git remote -v
+#1769693866
+git branch -a
+#1769693922
+cd ../
+#1769693943
+git clone -b rodrigo-souza --single-branch https://rodrigo-santos35-prestserv_petro@github.com/petrobrasbr/tnz5-onboard.git
+#1769693963
+git branch -a
+#1769693967
+cd TNZ5-ONBOARD/
+#1769693968
+git branch -a
+#1769693980
+cd ../
+#1769693995
+git clone -b origin/rodrigo-souza --single-branch https://rodrigo-santos35-prestserv_petro@github.com/petrobrasbr/tnz5-onboard.git
+#1769694300
+history
+#1769694319
+cd TNZ5-ONBOARD/
+#1769694322
+git pull
+#1769694330
+git branch -a
+#1769694334
+cd ../
+#1769694346
+git clone https://rodrigo-santos35-prestserv_petro@github.com/petrobrasbr/tnz5-onboard.git
+#1769694356
+cd tnz5-onboard/
+#1769694358
+git branch -a
+#1769694393
+git checkout -b rodrigo-souza
+#1769694397
+git branch -a
+#1769694428
+cd ../
+#1769694432
+rm -rf TNZ5-ONBOARD/
+#1769694435
+mv tnz5-onboard TNZ5-ONBOARD
+#1769694438
+cd TNZ5-ONBOARD/
+#1769694441
+git branch -a
+#1769694448
+git status
+#1769694451
+ls
+#1769695221
+git status
+#1769695231
+cd ../IA-Submarina-OnBoarding/
+#1769695233
+ls
+#1769695318
+cd ../
+#1769695395
+git --git-dir=TNZ5-ONBOARD/.git --work-tree=IA-Submarina-OnBoarding add pyproject.toml
+#1769695460
+git --git-dir=TNZ5-ONBOARD/.git --work-tree=IA-Submarina-OnBoarding commit -m "pyprojet"
+#1769695477
+git --git-dir=TNZ5-ONBOARD/.git --work-tree=IA-Submarina-OnBoarding status
+#1769695495
+cd TNZ5-ONBOARD/
+#1769695497
+git stat
+#1769695500
+git status
+#1769695563
+git log
+#1769695572
+cd ../
+#1769695576
+cd TNZ5-ONBOARD/
+#1769695609
+git status
+#1769695649
+git --git-dir=../TNZ5-ONBOARD/.git --work-tree=../IA-Submarina-OnBoarding status
+#1769695682
+git --git-dir=../TNZ5-ONBOARD/.git --work-tree=../IA-Submarina-OnBoarding push
+#1769695814
+#git --git-dir=../TNZ5-ONBOARD/.git --work-tree=../IA-Submarina-OnBoarding push -u origin 
+#1769695819
+git --git-dir=../TNZ5-ONBOARD/.git --work-tree=../IA-Submarina-OnBoarding status
+#1769695825
+git --git-dir=../TNZ5-ONBOARD/.git --work-tree=../IA-Submarina-OnBoarding banch -a
+#1769695830
+git --git-dir=../TNZ5-ONBOARD/.git --work-tree=../IA-Submarina-OnBoarding branch -a
+#1769695873
+git --git-dir=../TNZ5-ONBOARD/.git --work-tree=../IA-Submarina-OnBoarding push -u origin rodrigo-souza
+#1769695881
+git --git-dir=../TNZ5-ONBOARD/.git --work-tree=../IA-Submarina-OnBoarding branch -a
+#1769695892
+git --git-dir=../TNZ5-ONBOARD/.git --work-tree=../IA-Submarina-OnBoarding status
+#1769695953
+cd ../IA-Submarina-OnBoarding/
+#1769695954
+ls
+#1769695979
+vim src/data_cleaner.py 
+#1769696051
+git --git-dir=../TNZ5-ONBOARD/.git --work-tree=. add src/data_cleaner.py 
+#1769696089
+vim src/subsea/dashboard.py 
+#1769696105
+vim src/subsea/__init__.py 
+#1769696122
+vim src/subsea/dashboard.py 
+#1769696128
+vim src/data_cleaner.py 
+#1769696142
+vim src/subsea/dashboard.py 
+#1769696153
+vim src/subsea/__init__.py 
+#1769696186
+git --git-dir=../TNZ5-ONBOARD/.git --work-tree=. add src/subsea/__init__.py 
+#1769696377
+ruff check src/subsea/dashboard.py 
+#1769696403
+yapf src/subsea/dashboard.py 
+#1769696423
+vim .style.yapf 
+#1769696453
+yapf src/subsea/dashboard.py 
+#1769696490
+yapf --style-help
+#1769696499
+grep DISABLE_SPLIT_LIST_WITH_COMMENT .
+#1769696505
+grep -r DISABLE_SPLIT_LIST_WITH_COMMENT .
+#1769696550
+pip install --upgrade yapf
+#1769696558
+export PIP_REQUIRE_VIRTUALENV=false
+#1769696561
+pip install --upgrade yapf
+#1769696574
+grep -ir DISABLE_SPLIT_LIST_WITH_COMMENT .
+#1769696582
+vim .style.yapf 
+#1769696630
+yapf src/subsea/dashboard.py 
+#1769696668
+git --git-dir=../TNZ5-ONBOARD/.git --work-tree=. add .style.yapf 
+#1769696682
+git --git-dir=../TNZ5-ONBOARD/.git --work-tree=. log
+#1769696704
+git --git-dir=../TNZ5-ONBOARD/.git --work-tree=. status
+#1769696899
+vim src/subsea/dashboard.py 
+#1769697465
+git --git-dir=../TNZ5-ONBOARD/.git --work-tree=. add notebook/dashboard.ipynb 
+#1769697481
+git --git-dir=../TNZ5-ONBOARD/.git --work-tree=. add src/subsea/dashboard.py 
+#1769697505
+yapf src/subsea/data_size.py 
+#1769697514
+yapf src/subsea/data_size.py > ds.py
+#1769697526
+vim -d ds.py src/subsea/data_size.py 
+#1769697551
+vim .style.yapf 
+#1769697579
+yapf src/subsea/data_size.py > ds.py
+#1769697584
+vim -d ds.py src/subsea/data_size.py 
+#1769697627
+vim .style.yapf 
+#1769697644
+yapf src/subsea/data_size.py > ds.py
+#1769697648
+vim -d ds.py src/subsea/data_size.py 
+#1769697794
+cp -r src/subsea src/subsea-bkp
+#1769697802
+ls src/subsea-bkp/
+#1769697817
+diff src/subsea src/subsea-bkp/
+#1769697820
+diff src/subsea src/subsea-bkp
+#1769697848
+mv ds.py src/subsea/data_size.py 
+#1769697869
+yapf src/subsea/easy_search.py 
+#1769697879
+yapf src/subsea/easy_search.py >es.py
+#1769697894
+vim -d es.py src/subsea/easy_search.py 
+#1769698031
+git --git-dir=../TNZ5-ONBOARD/.git --work-tree=. add src/subsea/{data_size,easy_search,sankey,service_class}.py 
+#1769698037
+git --git-dir=../TNZ5-ONBOARD/.git --work-tree=. status
+#1769698050
+rm es.py 
+#1769698052
+git --git-dir=../TNZ5-ONBOARD/.git --work-tree=. status
+#1769698278
+git --git-dir=TNZ5-ONBOARD/.git --work-tree=IA-Submarina-OnBoarding commit -m "chore: initial project setup"
+#1769698296
+git --git-dir=../TNZ5-ONBOARD/.git --work-tree=. commit -m "chore: initial project setup"
+#1769698304
+git --git-dir=../TNZ5-ONBOARD/.git --work-tree=. push
+#1769699495
+cd ../
+#1769699499
+cd TNZ5-ONBOARD/
+#1769699591
+cd ../IA-Submarina-OnBoarding/
+#1769699592
+cd ../
+#1769699603
+pip install pre-commit
+#1769699629
+pre-commit 
+#1769699661
+pre-commit -h
+#1769699696
+ls TNZ5-ONBOARD/
+#1769699709
+vim .pre-commit-config.yaml
+#1769699899
+cd IA-Submarina-OnBoarding/
+#1769699915
+pre-commit install --git-dir ../TNZ5-ONBOARD/.git
+#1769699939
+pre-commit -h install
+#1769699984
+pre-commit install --help
+#1769700021
+cd ../TNZ5-ONBOARD/
+#1769700054
+pre-commit install -c ../.pre-commit-config.yaml 
+#1769700078
+pre-commit autoupdate
+#1769700092
+pre-commit autoupdate -c ../.pre-commit-config.yaml 
+#1769700110
+cd ../IA-Submarina-OnBoarding/
+#1769700279
+PRE_COMMIT_HOME=../TNZ5-ONBOARD/.git/hooks pre-commit run
+#1769700308
+cd ../TNZ5-ONBOARD/
+#1769700312
+PRE_COMMIT_HOME=../TNZ5-ONBOARD/.git/hooks pre-commit run
+#1769700336
+PRE_COMMIT_HOME=../TNZ5-ONBOARD/.git/hooks pre-commit -c ../.pre-commit-config.yaml run
+#1769700376
+PRE_COMMIT_HOME=../TNZ5-ONBOARD/.git/hooks pre-commit run -c ../.pre-commit-config.yaml 
+#1769700461
+PRE_COMMIT_HOME=../TNZ5-ONBOARD/.git/hooks pre-commit run -c ../.pre-commit-config.yaml --all-files
+#1769700474
+git --git-dir=../TNZ5-ONBOARD/.git --work-tree=. status
+#1769700496
+git --git-dir=/pro/TNZ5-ONBOARD/.git --work-tree=. status
+#1769700536
+git --git-dir=/projetos/ghva/TNZ5-ONBOARD/.git --work-tree=/projetos/ghva/IA-Submarina-OnBoarding status
+#1769705126
+history 
+#1769705234
+cd ..
+#1769705256
+date +'%F'
+#1769705297
+cp ~/.bash_history bash_history-$(date +'%F')
+#1769705359
+ls
+#1769705721
+git clone -b origin/rodrigo-souza --single-branch https://rodrigo-santos35-prestserv_petro@github.com/petrobrasbr/tnz5-onboard.git
+#1769705754
+git clone -b rodrigo-souza --single-branch https://rodrigo-santos35-prestserv_petro@github.com/petrobrasbr/tnz5-onboard.git
+#1769705767
+cd tnz5-onboard/
+#1769705771
+ls
+#1769705776
+git status
+#1769705784
+git branch -a
+#1769705878
+cd ../
+#1769705887
+rm -rf tnz5-onboard
+#1769706459
+echo "# IA-Submarina-OnBoarding" >> README.md
+#1769706470
+rm README.md 
+#1769706473
+ls
+#1769706517
+git init
+#1769706608
+git add IA-Submarina-OnBoarding ia-submarina-onboarding* init.sh OLD requirements.txt .pre-commit-config.yaml 
+#1769706677
+git status
+#1769706752
+git add OLD/IA-Submarina-OnBoarding/*
+#1769706795
+cd OLD/IA-Submarina-OnBoarding/
+#1769706806
+mv .git .git-bkp
+#1769706809
+cd ../../
+#1769706810
+pwd
+#1769706814
+git add OLD/IA-Submarina-OnBoarding/*
+#1769706825
+cd OLD/IA-Submarina-OnBoarding/
+#1769706841
+mv .git-bkp git-bkp/
+#1769706848
+cd git-bkp/
+#1769706850
+ls
+#1769706856
+du -hs .
+#1769706864
+cd ../../../
+#1769706867
+git add OLD/IA-Submarina-OnBoarding/*
+#1769706894
+rm -rf .git
+#1769706900
+git init
+#1769706917
+git add IA-Submarina-OnBoarding ia-submarina-onboarding* init.sh OLD requirements.txt .pre-commit-config.yaml 
+#1769706971
+git commit -m "first commit"
+#1769707003
+git config --global user.name "Rodrigo Souza dos Santos"
+#1769707024
+git branch -a
+#1769707032
+git remote add origin https://github.com/rodrigo-santos35-prestserv_petro/IA-Submarina-OnBoarding.git
+#1769707053
+git push -u origin 
+#1769707060
+git push -u origin master
+#1769707162
+git remote -v
+#1769707168
+git remote rm origin
+#1769707170
+git remote -v
+#1769707252
+git remote add origin https://rodrigo-santos35-prestserv_petro@github.com/rodrigo-santos35-prestserv_petro/IA-Submarina-OnBoarding.git
+#1769707262
+git push -u origin master
+#1769707474
+git push -u origin 
+#1769707481
+git push -u origin master
+#1769707514
+git remote add origin https://github.com/rodrigo-santos35-prestserv_petro/IA-Submarina-OnBoarding.git
+#1769707535
+git config --global credential.credentialStore plaintext
+#1769707539
+git push -u origin master
+#1769707665
+rm -rf .git
+#1769707677
+git init
+#1769707680
+git remote add origin https://github.com/rodrigo-santos35-prestserv_petro/IA-Submarina-OnBoarding.git
+#1769707699
+rm -rf .git
+#1769707702
+git init
+#1769707711
+git add IA-Submarina-OnBoarding ia-submarina-onboarding* init.sh OLD requirements.txt .pre-commit-config.yaml 
+#1769707775
+git remote add origin https://rodrigo-santos35-prestserv_petro@github.com/rodrigo-santos35-prestserv_petro/IA-Submarina-OnBoarding.git
+#1769707784
+git push -u origin master
+#1769707822
+git commit -m "first commit"
+#1769707841
+rm -rf .git
+#1769707876
+git init
+#1769707881
+git add IA-Submarina-OnBoarding ia-submarina-onboarding* init.sh OLD requirements.txt .pre-commit-config.yaml 
+#1769707912
+git commit -m "first commit"
+#1769707923
+git remote add origin https://rodrigo-santos35-prestserv_petro@github.com/rodrigo-santos35-prestserv_petro/IA-Submarina-OnBoarding.git
+#1769707927
+git push -u origin master
+#1769707942
+git remote rm origin
+#1769707949
+git remote add origin https://github.com/rodrigo-santos35-prestserv_petro/IA-Submarina-OnBoarding.git
+#1769707953
+git push -u origin master
+#1769708024
+git push 
+#1769708028
+git push -u origin master
+#1769708099
+rm OLD/Miniforge3-Linux-x86_64.sh 
+#1769708107
+git status
+#1769708121
+rm -rf .git
+#1769708132
+pwd
+#1769708140
+git init
+#1769708151
+git add IA-Submarina-OnBoarding ia-submarina-onboarding* init.sh OLD requirements.txt .pre-commit-config.yaml 
+#1769708183
+git status
+#1769708221
+git add bash_history-2026-01-29 
+#1769708227
+ls bin/
+#1769708245
+git remote add origin https://github.com/rodrigo-santos35-prestserv_petro/IA-Submarina-OnBoarding.git
+#1769708252
+git push -u origin master
+#1769708267
+git commit -m "first commit"
+#1769708272
+git push -u origin master
+#1769708400
+rm -rf .git
+#1769708405
+git init
+#1769708438
+git add IA-Submarina-OnBoarding init.sh OLD requirements.txt .pre-commit-config.yaml bash_history-2026-01-29 
+#1769708457
+git commit -m "first commit"
+#1769708466
+git remote add origin https://github.com/rodrigo-santos35-prestserv_petro/IA-Submarina-OnBoarding.git
+#1769708471
+git push -u origin master
+#1769708503
+git status
+#1769708509
+git pull
+#1769708526
+cd TNZ5-ONBOARD/
+#1769708532
+git remote -v
+#1769708538
+cd ../
+#1769708540
+git remote -v
+#1769708568
+git remote add origin https://rodrigo-santos35-prestserv_petro@github.com/rodrigo-santos35-prestserv_petro/IA-Submarina-OnBoarding.git
+#1769708587
+history | grep prestserv
+#1769708676
+pwd
+#1769708683
+git remote rm origin
+#1769708687
+git remote add origin https://rodrigo-santos35-prestserv_petro@github.com/rodrigo-santos35-prestserv_petro/IA-Submarina-OnBoarding.git
+#1769708697
+git pull
+#1769708737
+git branch -a
+#1769708745
+git pull master master
+#1769708757
+git pull
+#1769708832
+git branch -u origin/master master
+#1769708837
+git branch -a
+#1769708840
+git pull
+#1769737145
+ls
+#1769774816
+python
+#1769774927
+conda activate test
+#1769774932
+python
+#1769774953
+conda deactivate test
+#1769774960
+conda deactivate
+#1769774969
+conda activate OnBoarding
+#1769774975
+python
+#1769775069
+conda deactivate
+#1769779760
+cd ..
+#1769779996
+git status
+#1769741303
+conda activate OnBoarding
+#1769741396
+conda install sentence-transformers
+#1769742313
+conda install keybert
+#1769742614
+conda install pytorch=2.1
+#1769742627
+conda install pytorch
+#1769742701
+pip install transformers
+#1769742709
+export PIP_REQUIRE_VIRTUALENV=false
+#1769742711
+pip install transformers
+#1769742751
+pip install sentence-transformers
+#1769742809
+pip install keybert
+#1769742833
+python
+#1769743078
+pip install --upgrade datasets
+#1769743097
+pip install pyarrow
+#1769743119
+pip install --upgrade datasets
+#1769743139
+python

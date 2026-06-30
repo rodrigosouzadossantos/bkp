@@ -1,0 +1,61 @@
+[package]
+name = "dataset"
+version = "0.1.0"
+edition = "2021"
+description = "Nautilus ML dataset ingestion and Arrow pipeline"
+license = "MIT"
+
+[lib]
+name = "dataset"
+crate-type = ["cdylib", "rlib"]
+
+########################################
+# CORE DEPENDENCIES
+########################################
+
+[dependencies]
+
+# Internal crates
+storage = { path = "../storage" }
+
+# Arrow ecosystem (zero-copy backbone)
+arrow.workspace = true
+arrow-schema.workspace = true
+arrow-array.workspace = true
+
+# DataFrame engine
+polars.workspace = true
+
+# Python bindings
+pyo3.workspace = true
+numpy.workspace = true
+
+# Parallelism
+rayon.workspace = true
+
+# Serialization / config
+serde.workspace = true
+
+# Error handling
+anyhow.workspace = true
+thiserror.workspace = true
+
+#########################################
+## DEV + BENCH
+#########################################
+#
+#[dev-dependencies]
+#criterion = "0.5"
+#
+#[[bench]]
+#name = "performance"
+#harness = false
+#
+#########################################
+## RELEASE OPTIMIZATION
+#########################################
+#
+#[profile.release]
+#lto = true
+#codegen-units = 1
+#opt-level = 3

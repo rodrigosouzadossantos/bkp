@@ -1,0 +1,32 @@
+# Executive Summary {.unnumbered}
+
+This document contains the complete management lifecycle for **NOAA**.
+
+## Project Metadata
+
+| Item | Description |
+|------|-------------|
+| **Sponsor** | [Name] |
+| **PM** | [Name] |
+| **Status** | In Planning |
+
+## Quick Navigation
+Use the sidebar to navigate between Initiation, Planning, and Monitoring artifacts.
+
+
+
+```{mermaid}
+graph TD
+    P[Project] --> I[Initiation]
+    P --> PL[Planning]
+    P --> E[Execution]
+    
+    I --> I1[Charter]
+    I --> I2[Stakeholders]
+    
+    PL --> PL1[Scope]
+    PL --> PL2[Schedule]
+    
+    E --> E1[Development]
+    E --> E2[Testing]
+```

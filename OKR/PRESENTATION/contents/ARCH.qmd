@@ -1,0 +1,366 @@
+---
+---
+
+```
+ARCHITECTURE.md
+```
+
+---
+
+# ARCHITECTURE.md
+
+CVX — Distributed HPC Vision AI Platform
+
+---
+
+# 1. Overview
+
+CVX is a distributed, high-performance Vision AI platform designed for:
+
+* Petabyte-scale storage
+* Terabyte-scale memory
+* Multi-node GPU clusters (H100-class hardware)
+* Streaming and batch processing
+* Agentic multimodal reasoning
+* Distributed training and serving
+
+The system is modular, memory-aware, storage-agnostic, and designed for
+large-scale production deployments.
+
+---
+
+# 2. High-Level Architecture
+
+## 2.1 Layered Logical Architecture (Mermaid)
+
+```{mermaid}
+flowchart TB
+    A[Application Layer]
+    B[Agentic Reasoning Layer]
+    C[Model Serving Layer]
+    D[Distributed Compute Layer]
+    E[Streaming + Batch Layer]
+    F[Memory + Cache Layer]
+    G[Storage Abstraction Layer]
+
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+    E --> F
+    F --> G
+```
+
+---
+
+## 2.2 Logical Stack (SVG)
+
+```{=html}
+<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
+<rect x="50" y="20" width="500" height="40" fill="#e6f2ff" stroke="#000"/>
+<text x="300" y="45" text-anchor="middle">Application Layer</text>
+
+<rect x="50" y="70" width="500" height="40" fill="#d9edf7" stroke="#000"/>
+<text x="300" y="95" text-anchor="middle">Agentic Reasoning Layer</text>
+
+<rect x="50" y="120" width="500" height="40" fill="#cce5ff" stroke="#000"/>
+<text x="300" y="145" text-anchor="middle">Model Serving Layer</text>
+
+<rect x="50" y="170" width="500" height="40" fill="#b3daff" stroke="#000"/>
+<text x="300" y="195" text-anchor="middle">Distributed Compute Layer</text>
+
+<rect x="50" y="220" width="500" height="40" fill="#99ccff" stroke="#000"/>
+<text x="300" y="245" text-anchor="middle">Streaming + Batch Layer</text>
+
+<rect x="50" y="270" width="500" height="40" fill="#80bfff" stroke="#000"/>
+<text x="300" y="295" text-anchor="middle">Memory + Cache Layer</text>
+
+<rect x="50" y="320" width="500" height="40" fill="#66b3ff" stroke="#000"/>
+<text x="300" y="345" text-anchor="middle">Storage Abstraction Layer</text>
+</svg>
+```
+
+---
+
+# 3. Repository Structure
+
+```
+cvx/
+├── docker/
+├── k8s/
+├── benchmarks/
+├── tests/
+├── pyproject.toml
+└── cvx/
+    ├── core/
+    ├── memory/
+    ├── cache/
+    ├── storage/
+    ├── models/
+    ├── image/
+    ├── video/
+    ├── multimodal/
+    ├── agent/
+    ├── features/
+    ├── search/
+    ├── anomaly/
+    ├── streaming/
+    ├── distributed/
+    ├── serving/
+    ├── edge/
+    ├── training/
+    ├── experiments/
+    ├── reporting/
+    └── api/
+```
+
+The outer `cvx/` is the repository root.
+The inner `cvx/` is the Python package.
+
+---
+
+# 4. Memory and Cache Architecture
+
+## 4.1 Data Flow (Mermaid)
+
+```{mermaid}
+flowchart TD
+    A[Object Storage]
+    B[NVMe Cache]
+    C[Memory-Mapped Dataset]
+    D[Ray Object Store]
+    E[Pinned CPU Memory]
+    F[GPU HBM Memory]
+    G[CUDA Streams]
+
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+    E --> F
+    F --> G
+```
+
+---
+
+## 4.2 Memory Hierarchy (SVG)
+
+```{=html}
+<svg width="600" height="300" xmlns="http://www.w3.org/2000/svg">
+  <rect x="50" y="20" width="500" height="40" fill="#f2f2f2" stroke="#000"/>
+  <text x="300" y="45" text-anchor="middle">Object Storage (PB)</text>
+
+  <rect x="50" y="70" width="500" height="40" fill="#e6e6e6" stroke="#000"/>
+  <text x="300" y="95" text-anchor="middle">NVMe Cache</text>
+
+  <rect x="50" y="120" width="500" height="40" fill="#d9d9d9" stroke="#000"/>
+  <text x="300" y="145" text-anchor="middle">RAM (Memory-Mapped)</text>
+
+  <rect x="50" y="170" width="500" height="40" fill="#cccccc" stroke="#000"/>
+  <text x="300" y="195" text-anchor="middle">Pinned CPU Memory</text>
+
+  <rect x="50" y="220" width="500" height="40" fill="#bfbfbf" stroke="#000"/>
+  <text x="300" y="245" text-anchor="middle">GPU HBM (H100)</text>
+</svg>
+```
+
+---
+
+# 5. Distributed Compute Architecture
+
+## 5.1 Ray + Spark Integration (Mermaid)
+
+```{mermaid}
+flowchart LR
+    A[Kafka]
+    B[Ray Cluster]
+    C[Spark Cluster]
+    D[GPU Workers]
+    E[Model Serving]
+
+    A --> B
+    B --> D
+    C --> B
+    D --> E
+```
+
+Responsibilities:
+
+* Ray: training, serving, GPU scheduling
+* Spark: feature engineering, ETL
+* Kafka: streaming ingestion
+
+---
+
+# 6. Multi-GPU Serving
+
+## 6.1 Serving Flow (Mermaid)
+
+```{mermaid}
+flowchart LR
+    A[Client Request]
+    B[Load Balancer]
+    C[Dynamic Batching]
+    D[CUDA Graph Execution]
+    E[Multi-GPU Inference]
+    F[Response]
+
+    A --> B --> C --> D --> E --> F
+```
+
+Capabilities:
+
+* CUDA Graph capture
+* Tensor parallel execution
+* FP8/BF16 precision
+* NVLink topology awareness
+
+---
+
+# 7. Agentic Vision Architecture
+
+## 7.1 Agent Reasoning Loop (Mermaid)
+
+```{mermaid}
+flowchart TD
+    A[Input]
+    B[Perception]
+    C[Memory Graph]
+    D[Tool Router]
+    E[Reasoning Loop]
+    F[Action Execution]
+
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+    E --> F
+```
+
+Capabilities:
+
+* Scene understanding
+* Retrieval-augmented reasoning
+* Multi-step decision making
+* Tool orchestration
+
+---
+
+# 8. Streaming Architecture
+
+```{mermaid}
+flowchart LR
+    A[Kafka Producer]
+    B[Kafka Broker]
+    C[Microbatch Processor]
+    D[Inference Pipeline]
+    E[Feature Store]
+
+    A --> B --> C --> D --> E
+```
+
+Supports:
+
+* Backpressure handling
+* Event-driven inference
+* Streaming feature updates
+
+---
+
+# 9. Storage Abstraction
+
+All storage backends implement a common interface:
+
+* Local filesystem
+* S3-compatible storage
+* GCS
+* Azure Blob
+* OpenSearch
+* Feature stores
+
+This ensures portability across cloud and on-prem deployments.
+
+---
+
+# 10. Testing Strategy
+
+```
+tests/
+├── unit/
+├── integration/
+├── distributed/
+├── memory/
+└── performance/
+```
+
+Testing domains:
+
+* API validation
+* Distributed coordination
+* Memory stability
+* GPU throughput
+* Streaming latency
+
+---
+
+# 11. Deployment Topologies
+
+## 11.1 Development
+
+* Single-node
+* Docker Compose
+* Mock storage
+
+## 11.2 Staging
+
+* Small Ray cluster
+* Kafka single broker
+* Multi-GPU node
+
+## 11.3 Production
+
+* Multi-node Ray cluster
+* Kafka cluster
+* Spark cluster
+* Distributed object storage
+* H100 GPU nodes
+
+---
+
+# 12. Scalability Model
+
+| Dimension | Capability                 |
+| --------- | -------------------------- |
+| Storage   | Petabyte-scale             |
+| Memory    | TB RAM + GPU HBM           |
+| Compute   | Horizontal Ray scaling     |
+| Serving   | Multi-GPU dynamic batching |
+| Streaming | Kafka-based real-time      |
+| Training  | Distributed multi-node     |
+
+---
+
+# 13. Design Guarantees
+
+* Modular layer isolation
+* Memory-aware data flow
+* Storage abstraction
+* Distributed-first architecture
+* GPU-optimized execution
+* Agentic multimodal extensibility
+
+---
+
+# 14. Summary
+
+CVX is designed as a distributed AI platform capable of handling:
+
+* Large-scale storage
+* High-throughput GPU inference
+* Continuous training
+* Real-time streaming
+* Agentic multimodal reasoning
+
+The architecture ensures extensibility, scalability, and hardware efficiency
+across cloud, on-prem, and edge environments.
+

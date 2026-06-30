@@ -1,0 +1,110 @@
+---
+title: "Dashboard Interativo de OKRs Multi-Repositório"
+author: "Time IA Submarina"
+format:
+  html:
+    toc: true
+    theme: cosmo
+    code-fold: true
+execute:
+  echo: false
+---
+
+```{r}
+library(jsonlite)
+library(dplyr)
+library(plotly)
+library(DT)
+
+# Carrega JSON gerado pelo GitHub Actions
+okr_data <- fromJSON("okr-dashboard.json")
+
+# Filtra KRs
+krs <- okr_data %>%
+  filter(sapply(labels, function(x) "okr" %in% x))
+
+# Extrai entregáveis do body
+krs$entregaveis <- sapply(krs$body, function(b){
+  lines <- unlist(strsplit(b, "\n"))
+  entreg <- lines[grep("Entregável|Deliverable", lines, ignore.case = TRUE)]
+  if(length(entreg)==0) return("Não especificado") else return(paste(entreg, collapse=", "))
+})
+
+# Adiciona progresso
+krs$progresso <- ifelse(krs$state=="CLOSED",100,0)
+```
+
+## ✅ Tabela Interativa de KRs e Entregáveis
+
+```{r}
+datatable(
+  krs %>% select(repo, number, title, assignees, entregaveis, state, progresso),
+  filter = "top",
+  options = list(pageLength = 10, autoWidth = TRUE),
+  rownames = FALSE
+)
+```
+
+---
+
+## 📊 Progresso Interativo por Repositório
+
+```{r}
+progress_repo <- krs %>%
+  group_by(repo) %>%
+  summarise(total=n(),
+            fechadas=sum(state=="CLOSED"),
+            progresso=fechadas/total*100)
+
+plot_ly(progress_repo, x=~repo, y=~progresso, type='bar',
+        text=~paste0(round(progresso),"%"), textposition='auto',
+        marker=list(color='rgb(0,128,0)')) %>%
+  layout(title="% de KRs Atingidas por Repositório",
+         yaxis=list(title="% Concluído"), xaxis=list(title="Repositório"))
+```
+
+---
+
+## 🚀 Progresso Interativo por Entregável
+
+```{r}
+entreg_table <- krs %>%
+  group_by(entregaveis) %>%
+  summarise(total=n(),
+            fechadas=sum(state=="CLOSED"),
+            progresso=fechadas/total*100)
+
+plot_ly(entreg_table, x=~entregaveis, y=~progresso, type='bar',
+        text=~paste0(round(progresso),"%"), textposition='auto',
+        marker=list(color='rgb(0,102,204)')) %>%
+  layout(title="% de KRs Concluídas por Entregável",
+         yaxis=list(title="% Concluído"), xaxis=list(title="Entregável"))
+```
+
+---
+
+### 🔹 Observações
+
+1. **Interatividade:**
+
+   * Pode filtrar, ordenar e buscar na tabela de KRs.
+   * Barras mostram progresso % real, interativas ao passar mouse.
+
+2. **Multi-repositório:**
+
+   * Coleta Issues de todos os repositórios configurados no `fetch-okr.js`.
+
+3. **Entregáveis:**
+
+   * Extraídos do corpo da Issue, permitem rastrear o que realmente foi entregue.
+
+4. **Uso com GitHub Actions:**
+
+   * Automatizar a geração do `okr-dashboard.json` semanalmente.
+   * Atualiza o dashboard automaticamente.
+
+5. **PO/PM Friendly:**
+
+   * Visão clara de progresso por repositório e entregável.
+   * Tabela interativa permite detalhar qualquer KR ou responsável.
+

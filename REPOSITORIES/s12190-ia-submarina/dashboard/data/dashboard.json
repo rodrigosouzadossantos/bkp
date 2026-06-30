@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "total_issues": 5,
+    "closed_issues": 2,
+    "pct_completed": 40,
+    "avg_cycle_time_days": 3
+  },
+  "issues": [
+    {
+      "repo": "minha-org/subsea-ia",
+      "number": 1,
+      "title": "100% das novas demandas registradas via Issue",
+      "labels": ["tático","okr"],
+      "state": "OPEN",
+      "assignees": ["walace"],
+      "body": "Entregável: Template de Issue criado e validado\nEntregável: Workflow de vinculação a OKR documentado",
+      "url": "https://github.com/minha-org/subsea-ia/issues/1",
+      "progresso": 0,
+      "cycle_time": 2
+    },
+    {
+      "repo": "minha-org/subsea-ia",
+      "number": 2,
+      "title": "Issues vinculadas a OKR e responsáveis",
+      "labels": ["tático","okr"],
+      "state": "CLOSED",
+      "assignees": ["francisco"],
+      "body": "Entregável: Campo OKR no GitHub Project configurado\nEntregável: Responsáveis atribuídos a todas as Issues",
+      "url": "https://github.com/minha-org/subsea-ia/issues/2",
+      "progresso": 100,
+      "cycle_time": 4
+    },
+    {
+      "repo": "minha-org/subsea-ml",
+      "number": 3,
+      "title": "Painel do GitHub Project configurado",
+      "labels": ["tático","okr"],
+      "state": "OPEN",
+      "assignees": ["walace","francisco"],
+      "body": "Entregável: Colunas Backlog, Ready, In Progress, Review, Done\nEntregável: Campos customizados (OKR, Tipo, Prioridade)",
+      "url": "https://github.com/minha-org/subsea-ml/issues/3",
+      "progresso": 0,
+      "cycle_time": 1
+    },
+    {
+      "repo": "minha-org/subsea-ml",
+      "number": 4,
+      "title": "Relatório mensal extraído do GitHub",
+      "labels": ["tático","okr"],
+      "state": "CLOSED",
+      "assignees": ["francisco"],
+      "body": "Entregável: Relatório de % KRs atingidos\nEntregável: Tempo médio de ciclo por tipo de demanda\nEntregável: Volume de demandas por tipo",
+      "url": "https://github.com/minha-org/subsea-ml/issues/4",
+      "progresso": 100,
+      "cycle_time": 5
+    },
+    {
+      "repo": "minha-org/subsea-ia",
+      "number": 5,
+      "title": "Consolidar convenção de labels e templates",
+      "labels": ["tático","okr"],
+      "state": "OPEN",
+      "assignees": ["walace"],
+      "body": "Entregável: Labels padronizados (okr, tipo, prioridade)\nEntregável: Templates de Issue revisados",
+      "url": "https://github.com/minha-org/subsea-ia/issues/5",
+      "progresso": 0,
+      "cycle_time": 3
+    }
+  ]
+}

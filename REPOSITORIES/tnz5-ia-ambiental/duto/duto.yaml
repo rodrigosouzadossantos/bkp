@@ -1,0 +1,23 @@
+# Train/val/test sets as 1) dir: path/to/imgs, 2) file: path/to/imgs.txt, or 3) list: [path/to/imgs1, path/to/imgs2, ..]
+path: Segmentadas-Duto-Dificil-V2  # dataset root dir
+train: images/train  # train images (relative to 'path') 128 images
+val: images/test  # val images (relative to 'path') 128 images
+test:  # test images (optional)
+
+# Classes
+names:
+  0: duto
+  
+#translate: 0.2  # image translation (+/- fraction)
+#flipud: 0.5  # image flip up-down (probability)
+#fliplr: 0.5  # image flip left-right (probability)
+
+
+#translate: 0.1  # image translation (+/- fraction)
+#scale: 0.2  # image scale (+/- gain)
+#shear: 0.2  # image shear (+/- deg) from -0.5 to 0.5
+#perspective: 0.1  # image perspective (+/- fraction), range 0-0.001
+#flipud: 0.5  # image flip up-down (probability)
+#fliplr: 0.5  # image flip left-right (probability)
+#mosaic: 0.3  # image mosaic (probability)
+#mixup: 0.1  # image mixup (probability)

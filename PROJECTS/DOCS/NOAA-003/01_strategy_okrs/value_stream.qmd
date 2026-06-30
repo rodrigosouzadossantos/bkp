@@ -1,0 +1,7 @@
+# Value Stream Mapping
+
+This document maps our technical tasks to business value.
+
+1. **Ingestion (Kafka/Redis):** Enables real-time responsiveness.
+2. **Preprocessing:** Reduces noise, increasing safety accuracy.
+3. **Inference (PyTorch/TF):** The core value-add.

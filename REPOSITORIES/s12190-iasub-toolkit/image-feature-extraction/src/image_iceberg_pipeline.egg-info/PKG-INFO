@@ -1,0 +1,54 @@
+Metadata-Version: 2.4
+Name: image-iceberg-pipeline
+Version: 0.1.0
+Summary: Add your description here
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: boto3>=1.42.97
+Requires-Dist: bottleneck>=1.6.0
+Requires-Dist: cupy-cuda12x[ctk]>=14.0.1
+Requires-Dist: faiss-cpu>=1.13.2
+Requires-Dist: gdal>=3.12.4
+Requires-Dist: geopandas>=1.1.3
+Requires-Dist: h3>=4.4.2
+Requires-Dist: imagehash>=4.3.2
+Requires-Dist: lakefs>=0.16.0
+Requires-Dist: lakefs-sdk>=1.80.0
+Requires-Dist: lakefs-spec>=0.14.0
+Requires-Dist: marimo>=0.23.4
+Requires-Dist: ml-dtypes>=0.5.4
+Requires-Dist: numba>=0.65.1
+Requires-Dist: numexpr>=2.14.1
+Requires-Dist: numpy>=2.4.4
+Requires-Dist: nvidia-dali-cuda120>=2.1.0
+Requires-Dist: nvidia-ml-py>=13.595.45
+Requires-Dist: nvidia-nvimgcodec-cu12[all]>=0.7.0.11
+Requires-Dist: nvidia-nvimgcodec-cu13>=0.7.0.11
+Requires-Dist: nvidia-nvjpeg>=13.1.0.48
+Requires-Dist: opencv-python>=4.13.0.92
+Requires-Dist: pillow>=12.2.0
+Requires-Dist: pyarrow>=24.0.0
+Requires-Dist: pyexiftool>=0.5.6
+Requires-Dist: pyiceberg>=0.11.1
+Requires-Dist: pyspark>=4.1.1
+Requires-Dist: rasterio>=1.5.0
+Requires-Dist: scikit-image>=0.26.0
+Requires-Dist: scipy>=1.17.1
+Requires-Dist: shapely>=2.1.2
+Requires-Dist: tqdm>=4.67.3
+
+# Image Iceberg Pipeline (UV-based)
+
+## Stack
+- UV (package manager)
+- Spark + Iceberg
+- S3 storage
+- CV feature extraction
+- CLIP embeddings
+
+## Models
+- CAMERA (AUV/UAV)
+- RASTER (GeoTIFF)
+
+## Goal
+PB-scale geospatial + vision analytics lakehouse

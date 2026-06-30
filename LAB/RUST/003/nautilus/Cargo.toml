@@ -1,0 +1,14 @@
+[workspace]
+# List every folder that contains a Rust crate
+members = [
+  "core",          # This will be your nautilus._core bridge
+  "storage",       # Logic for your storage plugin
+  #"experiments",   # Logic for your experiments plugin
+]
+
+# Recommended: Use the modern feature resolver
+resolver = "2"
+
+[workspace.dependencies]
+# You can define shared versions here to keep them consistent
+pyo3 = { version = "0.28.2", features = ["extension-module"]  }

@@ -1,0 +1,35 @@
+# KR1 – Registrar 100% das novas demandas via Issue vinculada ao GitHub Project
+
+## Descrição
+Garantir que todas as novas demandas da área sejam registradas por meio
+de Issues no repositório e vinculadas ao GitHub Project, permitindo
+rastreabilidade e acompanhamento do fluxo de trabalho.
+
+## Entregáveis
+
+- Lista de novas Issues padronizadas
+- Todas as demandas registradas via Issue
+- Issues vinculadas ao GitHub Project
+
+## Checklist de execução
+
+- [ ] Criar Issue Template padrão
+- [ ] Validar processo de criação de Issues com o time
+- [ ] Garantir que novas demandas sejam registradas como Issues
+- [ ] Vincular todas as Issues ao GitHub Project
+
+## Critérios de aceite
+
+- 100% das novas demandas registradas como Issue
+- Todas as Issues vinculadas ao Project
+- Responsável atribuído em cada Issue
+
+## Métrica do KR
+
+Percentual de demandas registradas como Issue no Project.
+
+## Rastreamento
+
+OKR relacionado: Governança GitHub  
+Project: GitHub Project da área  
+Responsável: (definir)

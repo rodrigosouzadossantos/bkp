@@ -1,0 +1,87 @@
+---
+title: "Roadmap Interativo de OKRs e Entregáveis"
+author: "Time IA Submarina"
+format:
+  html:
+    toc: true
+    theme: cosmo
+    code-fold: true
+execute:
+  echo: false
+---
+
+```{r}
+library(jsonlite)
+library(dplyr)
+library(DiagrammeR)
+library(plotly)
+
+# Carrega JSON gerado pelo GitHub Actions
+json_path <- normalizePath("../data/okr-dashboard.json", mustWork = TRUE)
+okr_data <- fromJSON(json_path)
+
+# Extração de informações básicas
+okr_data$okr_type <- sapply(okr_data$labels, function(l){
+  if("estratégico" %in% l) return("Estratégico")
+  if("tático" %in% l) return("Tático")
+  if("experimental" %in% l) return("Experimental")
+  return("Outro")
+})
+
+okr_data$progresso <- ifelse(okr_data$state=="CLOSED",100,0)
+okr_data$entregaveis <- sapply(okr_data$body, function(b){
+  lines <- unlist(strsplit(b,"\n"))
+  entreg <- lines[grep("Entregável|Deliverable", lines, ignore.case=TRUE)]
+  if(length(entreg)==0) return("Não especificado") else return(paste(entreg, collapse=", "))
+})
+```
+
+---
+
+## 🔹 Mini Roadmap Interativo – Fluxo Completo
+
+```{r} id="okrroadmap"
+# Criação do gráfico de fluxo
+graph <- create_graph() %>%
+  add_node(label="OKR Estratégico", type="okr", style="filled", color="lightblue") %>%
+  add_node(label="OKR Tático", type="okr", style="filled", color="lightgreen") %>%
+  add_node(label="KR", type="kr", style="filled", color="orange") %>%
+  add_node(label="Issue", type="issue", style="filled", color="pink") %>%
+  add_node(label="Pull Request", type="pr", style="filled", color="yellow") %>%
+  add_edge(from="OKR Estratégico", to="OKR Tático") %>%
+  add_edge(from="OKR Tático", to="KR") %>%
+  add_edge(from="KR", to="Issue") %>%
+  add_edge(from="Issue", to="Pull Request") %>%
+  add_global_graph_attrs(attr="layout", value="dot", attr_type="graph") %>%
+  add_global_graph_attrs(attr="rankdir", value="LR", attr_type="graph")
+
+render_graph(graph)
+```
+
+---
+
+### 🔹 Observações do Roadmap
+
+1. **Cores e níveis**:
+
+   * Azul: OKR Estratégico
+   * Verde: OKR Tático
+   * Laranja: KR
+   * Rosa: Issue
+   * Amarelo: Pull Request
+
+2. **Fluxo contínuo**:
+
+   * Cada nível representa a **progressão da estratégia até a execução**.
+   * Pull Requests fechando Issues sinalizam entrega real.
+
+3. **Rastreabilidade**:
+
+   * Cada nó pode ser clicável (via HTML/JS custom) para abrir Issue ou PR no GitHub.
+   * Possível conectar com GitHub Actions para atualizar o progresso automaticamente.
+
+4. **PO/PM Friendly**:
+
+   * Visualiza **hierarquia e status** em um único diagrama.
+   * Facilita acompanhamento sem entrar em cada repositório.
+

@@ -1,0 +1,51 @@
+---
+title: "OKR: Scalable Unified Python Package for Subsea CV at Petrobras"
+---
+
+## Objective
+
+Develop and launch a scalable, unified Python package that abstracts access to AI/ML resources and tools for computer vision projects in the Subsea division, enabling efficient, distributed processing, experimentation, and management of large and continuously growing subsea media datasets (images, videos, reports). Success in these projects will serve as a model for broader adoption across Petrobras.
+
+---
+
+## Key Results
+
+### 1. Design & Architecture
+
+- Deliver an architectural blueprint detailing integration points for AWS, Azure, GCP, Databricks, and Petrobras-specific tools, optimized for distributed CV workflows and large-scale data.
+- Define and document standard APIs for:
+    - Secure, scalable data ingestion and access (video, image, report formats)
+    - Experiment management (classification, segmentation, multi-task workflows)
+    - Feature engineering and storage, designed for high-volume, high-throughput operations
+
+### 2. Development & Integration
+
+- Implement core modules and processing pipelines capable of distributed, parallel processing, demonstrated by successful handling of large, diverse subsea media datasets.
+- Achieve at least 80% code coverage in unit tests for all modules.
+- Integrate experiment tracking and comparison functionalities for CV models, supporting:
+    - Versioning of datasets, models, and results
+    - Automated logging of metrics and artifacts
+- Develop feature engineering and storage modules with:
+    - Efficient storage, retrieval, and indexing of large-scale media and metadata
+    - Metadata management for traceability, searchability, and auditability
+
+### 3. Usability & Adoption
+
+- Release a beta version to all 4 current subsea CV projects for pilot testing and feedback.
+- Achieve a minimum satisfaction score of 8/10 from pilot users regarding usability, integration, and performance in large-scale subsea workflows.
+- Publish comprehensive documentation and example notebooks covering:
+    - End-to-end subsea CV workflows (from data ingestion to model deployment)
+    - Best practices for handling massive media datasets and experiment management
+
+### 4. Governance & Sustainability
+
+- Establish a governance model for package maintenance, including:
+    - Contribution guidelines and code review process
+    - Release management and versioning strategy
+- Ensure compliance with Petrobras’ security, privacy, and data governance standards for all integrated resources and media.
+
+### 5. Impact & Expansion
+
+- Demonstrate at least 2 successful end-to-end subsea CV projects using the package, showcasing improved efficiency, scalability, and project outcomes with large-scale data.
+- Plan and initiate onboarding for additional subsea projects, aiming for at least 6 projects using the package within 6 months of launch.
+- Document lessons learned, technical challenges, and success stories to support expansion to other Petrobras divisions.

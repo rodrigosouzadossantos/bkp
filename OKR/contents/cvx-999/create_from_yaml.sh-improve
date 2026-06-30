@@ -1,0 +1,91 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+########################################
+# File content generators
+########################################
+
+create_py() {
+    local file="$1"
+    cat > "$file" <<EOF
+# -*- coding: utf-8 -*-
+\"\"\"
+Auto-generated Python module: $(basename "$file")
+\"\"\"
+
+__all__ = []
+EOF
+}
+
+create_file_by_type() {
+    local file="$1"
+    if [[ "$file" != *.* ]]; then
+        touch "$file"
+        return
+    fi
+    local ext="${file##*.}"
+    ext="${ext,,}"
+    local fn="create_${ext}"
+    if declare -f "$fn" > /dev/null 2>&1; then
+        "$fn" "$file"
+    else
+        touch "$file"
+    fi
+}
+
+########################################
+# YAML parser + directory creator
+########################################
+
+create_from_yaml() {
+    local root="${1:-.}"
+    mkdir -p "$root"
+
+    local -a stack=("$root")   # path stack
+    local -a indent_stack=(0)  # indentation stack
+
+    while IFS= read -r line || [[ -n "$line" ]]; do
+        [[ -z "$line" || "$line" =~ ^# ]] && continue
+
+        # Compute indentation level (2 spaces)
+        local indent="${line%%[^ ]*}"
+        local level=$(( ${#indent} / 2 ))
+        local trimmed="${line#"${indent}"}"
+
+        # Pop stack if indentation decreased
+        while (( level < ${#stack[@]} - 1 )); do
+            unset 'stack[-1]'
+            unset 'indent_stack[-1]'
+        done
+
+        if [[ "$trimmed" =~ ^- ]]; then
+            # File entry
+            local fname="${trimmed#- }"
+            local dir_path="${stack[-1]}"
+            mkdir -p "$dir_path"
+            create_file_by_type "$dir_path/$fname"
+        elif [[ "$trimmed" =~ :[[:space:]]*null$ ]]; then
+            # Empty directory
+            local dname="${trimmed%%:*}"
+            local dir_path="${stack[-1]}/$dname"
+            mkdir -p "$dir_path"
+            # push to stack
+            stack+=("$dir_path")
+            indent_stack+=("$level")
+        elif [[ "$trimmed" =~ :$ ]]; then
+            # Directory with children
+            local dname="${trimmed%%:*}"
+            local dir_path="${stack[-1]}/$dname"
+            mkdir -p "$dir_path"
+            stack+=("$dir_path")
+            indent_stack+=("$level")
+        fi
+    done
+}
+
+########################################
+# Run script
+########################################
+if [[ "${BASH_SOURCE[0]}" == "$0" ]]; then
+    create_from_yaml "${1:-.}"
+fi

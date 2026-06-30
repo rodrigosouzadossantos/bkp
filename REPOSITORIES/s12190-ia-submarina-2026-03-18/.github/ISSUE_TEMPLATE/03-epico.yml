@@ -1,0 +1,41 @@
+name: "Épico"
+description: "Grande iniciativa que contribui para um KR"
+title: "[EPIC] "
+labels:
+  - type:epic
+
+body:
+  - type: input
+    id: kr
+    attributes:
+      label: Resultado-Chave Relacionado
+      placeholder: "#456"
+    validations:
+      required: true
+
+  - type: textarea
+    id: descricao
+    attributes:
+      label: Descrição do Épico
+      placeholder: |
+        Desenvolver pipeline de visão computacional para análise automática
+        de vídeos capturados por ROVs durante inspeções de dutos submarinos.
+
+  - type: textarea
+    id: escopo
+    attributes:
+      label: Escopo
+      placeholder: |
+        - Processamento de vídeo submarino
+        - Detecção de corrosão e fissuras
+        - Classificação de bioincrustação
+        - Integração com sistema de inspeção
+
+  - type: textarea
+    id: criterios
+    attributes:
+      label: Critérios de Aceitação
+      placeholder: |
+        - Pipeline capaz de processar vídeos de inspeção em lote
+        - Detecção automática de anomalias estruturais
+        - Geração de relatórios de inspeção

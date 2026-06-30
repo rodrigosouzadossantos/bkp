@@ -1,0 +1,59 @@
+project:
+  type: manuscript
+
+toc: true
+
+resources:
+  - contents/okr/okr.qmd
+  - contents/okr/measurement.qmd
+  - contents/explanation.qmd
+  - contents/presentation-plan.qmd
+  - contents/package.qmd
+  - contents/ARCH.qmd
+
+manuscript:
+  article: index.qmd
+
+  notebooks:
+
+    - notebook: contents/okr/okr.qmd
+      title: '01 - OKR'
+
+    - notebook: contents/okr/measurement.qmd
+      title: '02 - Measurement'
+
+    - notebook: contents/presentation-plan.qmd
+      title: '03 - Presentation Plan'
+
+    - notebook: contents/package.qmd
+      title: '04 - Package'
+
+    - notebook: contents/ARCH.qmd
+      title: '04 - ARCHITECTURE'
+
+#notebook-links: false
+
+#title-block-banner: false
+
+format:
+  html:
+    comments:
+      hypothesis: false
+    theme:
+      dark: darkly
+      light: flatly
+    mermaid:
+      theme: dark
+    toc: true
+    toc-location: left
+    page-layout: full
+  
+  docx: default
+  jats: default
+  #pdf: default
+
+execute:
+  freeze: true
+
+
+

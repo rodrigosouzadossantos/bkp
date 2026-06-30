@@ -1,0 +1,20 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: s12190-ambiental
+  description: (Alterar) Descrição do módulo ambiental da aplicação S12190
+  annotations:
+    github.com/project-slug: petrobrasbr/s12190-ambiental
+    petrobras.com.br/vertical: aid
+#    backstage.io/techdocs-ref: dir:.
+#  tags:
+#    - exemplo
+#  links:
+#    - url: https://exemplo.petrobras.petrobras.com.br
+#      title: Exemplo
+spec:
+  type: website
+  owner: default/s12190_maintain_team
+  lifecycle: Em produção
+  system: s12190
+

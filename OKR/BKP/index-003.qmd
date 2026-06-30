@@ -1,0 +1,172 @@
+---
+title: "Governança de OKR + Agile + GitHub para IA Subsea"
+author: "Time de IA Submarina"
+format:
+  html:
+    theme: cosmo
+    toc: true
+    toc-depth: 3
+bibliography: references.bib
+link-citations: true
+execute:
+  echo: true
+---
+
+# 1. Propósito deste Documento
+
+Este material propõe uma estrutura integrada de OKR + Agile + GitHub para IA/ML aplicada a inspeção submarina.  
+O foco é: clareza estratégica, rastreabilidade técnica e governança centralizada no GitHub.
+
+---
+
+# 2. Referências Conceituais
+
+As bases metodológicas deste documento estão em fontes consolidadas:
+
+- OKR clássico: :contentReference[oaicite:0]{index=0} [@doerr2018]  
+- OKR ágil e de foco: :contentReference[oaicite:1]{index=1} [@wodtke2016]  
+- Princípios originais de gestão por objetivos: :contentReference[oaicite:2]{index=2} [@grove1983]  
+
+---
+
+# 3. Premissas
+
+1. IA submarina tem impacto operacional mensurável.  
+2. Métricas técnicas (F1-score, falso negativo) influenciam decisões reais [@doerr2018].  
+3. Rastreabilidade e auditoria são obrigatórias em contextos industriais e ecológicos.  
+4. GitHub será a ferramenta central de governança.
+
+---
+
+# 4. Limitações
+
+- OKR não substitui planejamento detalhado de projeto [@wodtke2016].  
+- Nem toda métrica captura a complexidade do ambiente submarino.  
+- Ciclos curtos não devem comprometer coerência estratégica [@doerr2018].
+
+---
+
+# 5. O que OKR É (e Não É)
+
+## Não É
+
+- Lista de tarefas
+- Backlog técnico
+- Cronograma operacional
+
+## É
+
+- Sistema para medir mudança de estado  
+- Alinhamento estratégico  
+- Conexão entre impacto e execução [@doerr2018; @wodtke2016]
+
+---
+
+# 6. Estrutura em Camadas
+
+## Estratégico (Trimestral)
+
+Objetivo: impacto operacional.
+
+### Exemplo
+
+**Objective**  
+Aumentar confiabilidade da detecção automática em inspeções submarinas.
+
+**Key Results**
+
+- F1-score: 0.72 → 0.85  
+- Redução de falso negativo classe crítica em 50%  
+- Redução do tempo de revisão manual em 30%  
+- 100% das inferências rastreáveis ao dado bruto  
+
+## Tático (Mensal)
+
+Objetivo: melhoria de capacidade técnica.
+
+**Key Results**
+
+- 95% das imagens com hash único  
+- Inconsistência de anotação <10%  
+- Aumento de cobertura de classe rara em 40%  
+
+## Aprendizado (1–2 semanas)
+
+Objetivo: experimentação controlada.
+
+**Key Results**
+
+- Redução de falso positivo 28% → <18%  
+- Impacto na latência <10%  
+- Documentação formal de cenários de falha
+
+---
+
+# 7. Integração com Agile
+
+| Nível | OKR | Agile |
+|-------|------|--------|
+| Estratégico | Trimestral | Roadmap |
+| Tático | Mensal | Epic |
+| Aprendizado | 1–2 semanas | Sprint Goal |
+| Execução | Não é OKR | Backlog |
+
+```{mermaid}
+graph TD
+    O[Objective]
+    KR[Key Results]
+    I[Initiatives]
+    T[Tarefas]
+    PR[Pull Request]
+
+    O --> KR
+    KR --> I
+    I --> T
+    T --> PR
+```
+
+---
+
+# 8. GitHub como Núcleo
+
+* Project = painel estratégico
+* Issues = Key Results e Iniciatives
+* PRs = implementação técnica
+* Labels e Milestones = conexão com OKRs
+
+---
+
+# 9. Estrutura de Repositório
+
+```
+ai-subsea-okr/
+│
+├── README.md
+├── docs/
+│   ├── index.qmd
+│   ├── okr-q1.qmd
+│   ├── metodologia.qmd
+│   └── premissas.qmd
+├── .github/
+│   ├── ISSUE_TEMPLATE/
+│   └── workflows/
+└── dashboards/
+```
+
+---
+
+# 10. Benefícios
+
+* Clareza estratégica
+* Redução de ambiguidade
+* Governança técnica e ambiental
+* Rastreabilidade completa
+
+---
+
+# 11. Referências
+
+```{bibliography}
+```
+
+

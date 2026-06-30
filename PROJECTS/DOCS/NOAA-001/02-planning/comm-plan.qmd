@@ -1,0 +1,8 @@
+# Communication Management Plan
+
+
+| Stakeholder | Method | Frequency | Owner |
+|-------------|--------|-----------|-------|
+| Team | Slack/Daily Standup | Daily | PM |
+| Sponsor | Email/Meeting | Bi-weekly | PM |
+| Users | Newsletter | Monthly | Marketing |

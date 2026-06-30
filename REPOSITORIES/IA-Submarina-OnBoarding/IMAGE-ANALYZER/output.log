@@ -1,0 +1,26 @@
+  0%|                                                                                                                                                                | 0/15 [00:00<?, ?it/s]  7%|██████████▏                                                                                                                                             | 1/15 [00:09<02:15,  9.67s/it] 13%|████████████████████▎                                                                                                                                   | 2/15 [00:14<01:27,  6.71s/it] 20%|██████████████████████████████▍                                                                                                                         | 3/15 [00:15<00:50,  4.21s/it] 47%|██████████████████████████████████████████████████████████████████████▉                                                                                 | 7/15 [00:19<00:14,  1.83s/it] 60%|███████████████████████████████████████████████████████████████████████████████████████████▏                                                            | 9/15 [00:20<00:08,  1.40s/it]100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 15/15 [00:20<00:00,  1.36s/it]
+0it [00:00, ?it/s]0it [00:00, ?it/s]
+Traceback (most recent call last):
+  File "/projetos/ghva/IMAGE-ANALYZER/image-analyzer.py", line 213, in <module>
+    df = df_cpu.merge( df_blur, on = 's3_key', how = 'left' )
+  File "/projetos/ghva/.miniforge3/envs/OnBoarding/lib/python3.13/site-packages/pandas/core/frame.py", line 10859, in merge
+    return merge(
+        self,
+    ...<11 lines>...
+        validate=validate,
+    )
+  File "/projetos/ghva/.miniforge3/envs/OnBoarding/lib/python3.13/site-packages/pandas/core/reshape/merge.py", line 170, in merge
+    op = _MergeOperation(
+        left_df,
+    ...<10 lines>...
+        validate=validate,
+    )
+  File "/projetos/ghva/.miniforge3/envs/OnBoarding/lib/python3.13/site-packages/pandas/core/reshape/merge.py", line 794, in __init__
+    ) = self._get_merge_keys()
+        ~~~~~~~~~~~~~~~~~~~~^^
+  File "/projetos/ghva/.miniforge3/envs/OnBoarding/lib/python3.13/site-packages/pandas/core/reshape/merge.py", line 1298, in _get_merge_keys
+    right_keys.append(right._get_label_or_level_values(rk))
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^
+  File "/projetos/ghva/.miniforge3/envs/OnBoarding/lib/python3.13/site-packages/pandas/core/generic.py", line 1914, in _get_label_or_level_values
+    raise KeyError(key)
+KeyError: 's3_key'

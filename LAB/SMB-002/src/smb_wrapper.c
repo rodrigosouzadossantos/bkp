@@ -1,0 +1,175 @@
+#include <libsmbclient.h>
+#include <stdio.h>
+#include <string.h>
+#include <errno.h>
+#include <stdlib.h>
+
+static struct {
+    char username[256];
+    char password[256];
+    char workgroup[256];
+    int use_kerberos;
+} g_auth = {{0}, {0}, "PETROBRAS", 1};
+
+static void auth_callback(SMBCCTX *ctx, const char *srv, const char *shr,
+                         char *wg, int wglen, char *un, int unlen,
+                         char *pw, int pwlen) {
+    (void)ctx; (void)srv; (void)shr;
+    
+    if (g_auth.use_kerberos) {
+        if (un && unlen > 0) un[0] = '\0';
+        if (pw && pwlen > 0) pw[0] = '\0';
+        if (wg && wglen > 0) strncpy(wg, g_auth.workgroup, wglen - 1);
+    } else {
+        if (un && unlen > 0) strncpy(un, g_auth.username, unlen - 1);
+        if (pw && pwlen > 0) strncpy(pw, g_auth.password, pwlen - 1);
+        if (wg && wglen > 0) strncpy(wg, g_auth.workgroup, wglen - 1);
+    }
+}
+
+void smb_set_credentials(const char* username, const char* password) {
+    if (username && password) {
+        strncpy(g_auth.username, username, sizeof(g_auth.username) - 1);
+        strncpy(g_auth.password, password, sizeof(g_auth.password) - 1);
+        g_auth.use_kerberos = 0;
+    } else {
+        g_auth.username[0] = '\0';
+        g_auth.password[0] = '\0';
+        g_auth.use_kerberos = 1;
+    }
+}
+
+static SMBCCTX* create_smb_context() {
+    const char *ccname = getenv("KRB5CCNAME");
+    if (!ccname) {
+        setenv("KRB5CCNAME", "FILE:/tmp/krb5cc_0", 1);
+    }
+    
+    SMBCCTX *ctx = smbc_new_context();
+    if (!ctx) {
+        return NULL;
+    }
+  if (!g_auth.use_kerberos) {
+        smbc_setFunctionAuthDataWithContext(ctx, auth_callback);
+    }
+    
+    if (g_auth.use_kerberos) {
+        smbc_setOptionUseKerberos(ctx, 1);
+        smbc_setOptionFallbackAfterKerberos(ctx, 0);
+        smbc_setOptionUseCCache(ctx, 1);
+    }
+    
+    smbc_setWorkgroup(ctx, g_auth.workgroup);
+    
+    if (!smbc_init_context(ctx)) {
+        smbc_free_context(ctx, 0);
+        return NULL;
+    }
+  smbc_set_context(ctx);
+    return ctx;
+}
+
+typedef struct {
+    char name[512];
+    unsigned int type;
+} SmbEntry;
+
+int smb_count_entries(const char* url) {
+    SMBCCTX *ctx = create_smb_context();
+    if (!ctx) {
+        return -1;
+    }
+  int dirh = smbc_opendir(url);
+    if (dirh < 0) {
+        smbc_free_context(ctx, 0);
+        return -1;
+    }
+  int count = 0;
+    struct smbc_dirent *entry;
+    while ((entry = smbc_readdir(dirh)) != NULL) {
+        if (strcmp(entry->name, ".") != 0 && strcmp(entry->name, "..") != 0) {
+            count++;
+            if (count % 10000 == 0) {
+                printf("   ... %d itens contados\n", count);
+            }
+        }
+    }
+  smbc_closedir(dirh);
+    smbc_free_context(ctx, 0);
+    
+    return count;
+}
+
+int smb_list_directory(const char* url, SmbEntry* entries, int max_entries) {
+    SMBCCTX *ctx = create_smb_context();
+    if (!ctx) {
+        fprintf(stderr, "Erro: falha ao criar contexto SMB\n");
+        return -1;
+    }
+  int dirh = smbc_opendir(url);
+    if (dirh < 0) {
+        fprintf(stderr, "Erro ao abrir '%s': %s\n", url, strerror(errno));
+        smbc_free_context(ctx, 0);
+        return -1;
+    }
+  int count = 0;
+    struct smbc_dirent *entry;
+    while ((entry = smbc_readdir(dirh)) != NULL && count < max_entries) {
+        if (strcmp(entry->name, ".") != 0 && strcmp(entry->name, "..") != 0) {
+            strncpy(entries[count].name, entry->name, 511);
+            entries[count].name[511] = '\0';
+            entries[count].type = entry->smbc_type;
+            count++;
+            
+            if (count % 10000 == 0) {
+                printf("   ... %d itens lidos\n", count);
+            }
+        }
+    }
+  smbc_closedir(dirh);
+    smbc_free_context(ctx, 0);
+    
+    return count;
+}
+
+// Nova função: ler arquivo criando contexto próprio (thread-safe)
+long smb_read_file_isolated(const char* url, unsigned char* buffer, long buffer_size) {
+    SMBCCTX *ctx = create_smb_context();
+    if (!ctx) {
+        return -1;
+    }
+  int fh = smbc_open(url, O_RDONLY, 0);
+    if (fh < 0) {
+        smbc_free_context(ctx, 0);
+        return -1;
+    }
+  long bytes_read = smbc_read(fh, buffer, buffer_size);
+    
+    smbc_close(fh);
+    smbc_free_context(ctx, 0);
+    
+    return bytes_read;
+}
+
+long smb_get_file_size_isolated(const char* url) {
+    SMBCCTX *ctx = create_smb_context();
+    if (!ctx) {
+        return -1;
+    }
+  struct stat st;
+    if (smbc_stat(url, &st) < 0) {
+        smbc_free_context(ctx, 0);
+        return -1;
+    }
+  smbc_free_context(ctx, 0);
+    return st.st_size;
+}
+
+// Manter funções antigas para compatibilidade (deprecated)
+long smb_read_file(const char* url, unsigned char* buffer, long buffer_size) {
+    return smb_read_file_isolated(url, buffer, buffer_size);
+}
+
+long smb_get_file_size(const char* url) {
+    return smb_get_file_size_isolated(url);
+}

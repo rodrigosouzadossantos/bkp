@@ -1,0 +1,68 @@
+# Project Charter
+
+## Project Title
+Subsea Benthic Analysis AI – Multi-Modal Environmental Intelligence Pipeline
+
+## Sponsor
+NOAA / SUB / Petrobras
+
+## Purpose
+Develop an Artificial Intelligence pipeline for automated identification and
+filtering of benthic-relevant subsea data to support environmental baseline
+studies under SUB responsibility.
+
+## Business Need
+Subsea environmental datasets require extensive manual review. Automation is
+required to reduce workload, increase consistency, and accelerate environmental
+assessments.
+
+## Objectives
+
+### Primary Objective (MVP)
+Develop a binary classification system to distinguish benthic-relevant from
+non-benthic data.
+
+### Secondary Objectives
+- Scalable multi-modal pipeline
+- AI-assisted annotation
+- Foundation for future detection, segmentation, and taxonomy
+
+## High-Level Scope
+
+### In Scope
+- Still image classification (MVP)
+- Batch, offline processing
+- AI-assisted annotation
+- Human-in-the-loop validation
+
+### Out of Scope
+- Real-time deployment
+- Full taxonomic classification
+- Advanced multimodal fusion
+
+## High-Level Success Criteria
+- Precision ≥ 75% (benthic class)
+- Dataset reduction ≥ 40–60%
+- Retention ≥ 85–90% of true benthic data
+
+## High-Level Risks
+- No labeled dataset
+- Annotation subjectivity
+- Class imbalance
+- Model underperformance
+
+## Governance
+Sponsor: NOAA / SUB  
+Project Manager: Assigned by SUB  
+Technical Authority: Data Science Lead  
+Scientific Authority: Marine/Environmental Lead
+
+## Approval
+This Charter authorizes the project to proceed to Planning.
+
+
+<!--
+<br>
+
+**Sponsor Signature:** ____________________
+-->

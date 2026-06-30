@@ -1,0 +1,9 @@
+---
+title: "Short Example"
+---
+
+## Heading
+
+{{< short >}}
+
+

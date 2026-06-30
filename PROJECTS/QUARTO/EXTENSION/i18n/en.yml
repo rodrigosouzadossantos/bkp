@@ -1,0 +1,6 @@
+i18n:
+  en:
+    greeting: "Hello"
+    welcome: "Hello, {name}!"
+    home:
+      title: "Home page"

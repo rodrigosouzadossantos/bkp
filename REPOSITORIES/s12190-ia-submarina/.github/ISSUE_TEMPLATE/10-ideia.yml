@@ -1,0 +1,21 @@
+name: "Ideia"
+description: "Registrar uma Ideia"
+title: "[I] "
+
+body:
+  - type: textarea
+    id: ideia
+    attributes:
+      label: Ideia
+      description: Ideia que .
+      placeholder: |
+        Melhorar a eficiência das inspeções submarinas usando visão
+        computacional.
+    validations:
+      required: true
+
+  - type: textarea
+    id: contexto
+    attributes:
+      label: Contexto
+      description: Como essa ideia surgiu?

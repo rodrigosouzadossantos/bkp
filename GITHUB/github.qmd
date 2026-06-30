@@ -1,0 +1,205 @@
+---
+title: "GitHub"
+format:
+  revealjs: 
+    theme: dark
+---
+
+## 1. Abertura e Contexto
+**Objetivo do slide**
+- Alinhar expectativas e explicar por que o GitHub está sendo usado.
+
+**Pontos-chave**
+- O que é o GitHub (visão geral, não técnica)
+- Por que ele é relevante para a gestão de projetos
+- Benefícios para stakeholders:
+  - Transparência
+  - Rastreabilidade
+  - Visão de prioridades
+  - Acompanhamento de entregas
+
+---
+
+## 2. GitHub como Ferramenta de Gestão (não só código)
+**Objetivo do slide**
+- Quebrar a percepção de que GitHub é apenas para desenvolvedores.
+
+**Pontos-chave**
+- GitHub como plataforma de colaboração
+- Integração entre:
+  - Planejamento
+  - Execução
+  - Acompanhamento
+- Comparação rápida com ferramentas tradicionais (ex: planilhas, e-mails)
+
+---
+
+## 3. Conceito de Issues
+**Objetivo do slide**
+- Explicar o que são issues de forma simples.
+
+**Pontos-chave**
+- O que é uma issue:
+  - Demanda
+  - Problema
+  - Melhoria
+  - Atividade
+- Exemplos práticos:
+  - “Implementar funcionalidade X”
+  - “Corrigir erro no processo Y”
+- Issue como unidade básica de trabalho
+
+---
+
+## 4. Estrutura de uma Issue
+**Objetivo do slide**
+- Mostrar como a informação fica organizada.
+
+**Pontos-chave**
+- Título claro e objetivo
+- Descrição detalhada
+- Responsável (assignee)
+- Status
+- Datas e histórico
+- Comentários como registro de decisões
+
+---
+
+## 5. Labels e Padronização
+**Objetivo do slide**
+- Mostrar como as issues ficam organizadas e fáceis de filtrar.
+
+**Pontos-chave**
+- Uso de labels para:
+  - Tipo (bug, melhoria, tarefa)
+  - Prioridade
+  - Área impactada
+- Benefícios:
+  - Visão rápida do cenário
+  - Apoio à tomada de decisão
+  - Padronização entre times
+
+---
+
+## 6. Ciclo de Vida de uma Issue
+**Objetivo do slide**
+- Demonstrar fluxo de trabalho.
+
+**Pontos-chave**
+- Criação
+- Priorização
+- Em andamento
+- Revisão
+- Concluída
+- Registro histórico (auditoria e lições aprendidas)
+
+---
+
+## 7. GitHub Projects (Gerenciamento Visual)
+**Objetivo do slide**
+- Mostrar como o projeto é acompanhado.
+
+**Pontos-chave**
+- Boards (Kanban)
+- Colunas típicas:
+  - Backlog
+  - A fazer
+  - Em andamento
+  - Concluído
+- Visão consolidada do projeto
+
+---
+
+## 8. Planejamento e Priorização
+**Objetivo do slide**
+- Mostrar apoio à gestão e governança.
+
+**Pontos-chave**
+- Organização do backlog
+- Priorização baseada em valor e urgência
+- Visão de curto, médio e longo prazo
+- Apoio a reuniões de acompanhamento
+
+---
+
+## 9. Acompanhamento para Stakeholders
+**Objetivo do slide**
+- Focar no que importa para quem decide.
+
+**Pontos-chave**
+- O que o stakeholder consegue ver:
+  - Progresso geral
+  - Itens críticos
+  - Gargalos
+- Redução de status reports manuais
+- Informação sempre atualizada
+
+---
+
+## 10. Transparência e Rastreabilidade
+**Objetivo do slide**
+- Destacar ganhos institucionais.
+
+**Pontos-chave**
+- Histórico completo de decisões
+- Quem fez o quê e quando
+- Redução de dependência de e-mails e mensagens
+- Apoio a auditorias e governança
+
+---
+
+## 11. Papéis e Responsabilidades
+**Objetivo do slide**
+- Evitar confusão de uso.
+
+**Pontos-chave**
+- Quem cria issues
+- Quem prioriza
+- Quem executa
+- Papel do stakeholder (acompanhamento e direcionamento)
+
+---
+
+## 12. Boas Práticas para Stakeholders
+**Objetivo do slide**
+- Orientar o uso esperado.
+
+**Pontos-chave**
+- Como acompanhar sem interferir no fluxo
+- Como registrar demandas corretamente
+- Como usar comentários para decisões
+- Importância da padronização
+
+---
+
+## 13. Exemplo Prático (Demo ou Print)
+**Objetivo do slide**
+- Tornar concreto.
+
+**Pontos-chave**
+- Exemplo de:
+  - Issue bem escrita
+  - Board de projeto
+- Antes e depois da organização
+
+---
+
+## 14. Benefícios Resumidos
+**Objetivo do slide**
+- Reforçar o valor.
+**Pontos-chave**
+- Mais visibilidade
+- Melhor priorização
+- Menos retrabalho
+- Comunicação centralizada
+- Apoio à tomada de decisão
+
+---
+
+## 15. Encerramento e Próximos Passos
+**Objetivo do slide**
+- Direcionar a continuidade.
+**Pontos-chave**
+- Próximas evoluções do uso do GitHub
+- Expansão para outros projetos
+- Padronização corporativa (se aplicável)

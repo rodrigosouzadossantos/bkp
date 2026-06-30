@@ -1,0 +1,159 @@
+# {{< i18n requirements_doc >}} {}
+
+## Purpose of This Document
+
+This document defines the **project requirements baseline**, capturing:
+
+- Business requirements
+- Environmental and ecological requirements
+- Functional requirements
+- Non-functional requirements
+- Governance and compliance requirements
+
+It is a **mandatory PMBOK Planning artifact** and must be approved **before
+finalization of the Project Management Plan (PMP)**.
+
+---
+
+## Requirements Guiding Principles
+
+1. **Ecological protection is the primary requirement**
+2. Automation must not compromise environmental confidence
+3. Human-in-the-loop validation is mandatory
+4. Requirements must be:
+   - Verifiable
+   - Traceable
+   - Testable
+5. No requirement is valid unless it supports **[OKR at section @sec-okr]**
+
+---
+
+## Business Requirements (BR)
+
+| ID | Requirement | Rationale | Acceptance Criteria |
+|-----|---------------|------------|-----------------|
+| BR-01 | Reduce manual screening effort for AUV imagery | Scale ecological analysis | ≥ 30% reduction in manual screening volume |
+| BR-02 | Reduce time to environmental insight | Faster ecological decision-making | ≥ 25% reduction vs baseline |
+| BR-03 | Preserve ecological confidence | Avoid loss of benthic data | ≥ 85–90% retention of true benthic imagery |
+| BR-04 | Enable reuse across fields | Dilute cost and effort | Demonstrated reuse in ≥ 2 fields |
+| BR-05 | Create reusable digital environmental assets | Long-term value creation | Assets versioned and auditable |
+
+---
+
+## Environmental & Ecological Requirements (ER)
+
+| ID | Requirement | Description | Acceptance Criteria |
+|-----|-------------|--------------------|----------------|
+| ER-01 | Benthic relevance protection | Screening must prioritize retention of benthic-relevant imagery | KPI-3 ≥ threshold |
+| ER-02 | Human ecological authority | Final validation performed by environmental SMEs | SME sign-off |
+| ER-03 | Transparency of limitations | Model assumptions and limits documented | Validation report approved |
+| ER-04 | Consistency across fields | Ecological interpretation must be stable | KPI-4 within tolerance |
+| ER-05 | Auditability | Ecological decisions traceable | Full data lineage |
+
+---
+
+## Functional Requirements (FR)
+
+### Data Ingestion
+
+| ID | Requirement | Description |
+|----|---------|-------------------|
+| FR-01 | AUV image ingestion | Ingest still images from AUV campaigns |
+| FR-02 | Metadata ingestion | Capture temporal, spatial, and campaign metadata |
+| FR-03 | Batch processing | Support offline, batch-oriented workflows |
+
+---
+
+### Preprocessing
+
+| ID | Requirement | Description |
+|----|---------|------------------|
+| FR-04 | Image normalization | Normalize resolution and basic visual properties |
+| FR-05 | Quality filtering | Identify unusable frames (blur, severe turbidity) |
+
+---
+
+### Annotation & Validation
+
+| ID | Requirement | Description |
+|----|---------|------------------|
+| FR-06 | AI-assisted annotation | Support assisted labeling workflows |
+| FR-07 | Human-in-the-loop | Enable SME validation and override |
+| FR-08 | Iterative refinement | Support retraining based on SME feedback |
+
+---
+
+### Model Training & Inference
+
+| ID | Requirement | Description |
+|----|-----------|------------------|
+| FR-09 | Binary classification | Classify images as benthic-relevant or not |
+| FR-10 | Precision-oriented inference | Prioritize false-negative control |
+| FR-11 | Explainability support | Provide traceable outputs |
+
+---
+
+### Output & Asset Management
+
+| ID | Requirement | Description |
+|----|-----------|------------------|
+| FR-12 | Filtered dataset output | Produce curated datasets |
+| FR-13 | Versioning | Version datasets and models |
+| FR-14 | Traceability | Maintain lineage and audit trails |
+
+---
+
+## Non-Functional Requirements (NFR)
+
+| ID | Requirement | Description | Acceptance Criteria |
+|-----|----------|----------------|---------------------|
+| NFR-01 | Scalability | Handle TB-scale datasets | Successful batch processing |
+| NFR-02 | Offline-first | No dependency on real-time systems | Offline execution validated |
+| NFR-03 | Performance | Process within acceptable time | Meets KPI-2 |
+| NFR-04 | Reliability | Stable repeated runs | Consistent outputs |
+| NFR-05 | Security | Access-controlled data | Petrobras IT compliance |
+| NFR-06 | Maintainability | Modular pipeline | Code review approval |
+
+---
+
+## Compliance & Governance Requirements (CR)
+
+| ID | Requirement | Description |
+|----|---------|------------------|
+| CR-01 | Licensing compliance | Use only license-compliant AI frameworks |
+| CR-02 | Data governance | Align with Petrobras data governance |
+| CR-03 | Auditability | Full traceability for audits |
+| CR-04 | Environmental governance | Alignment with SUB environmental policies |
+| CR-05 | Stage-Gate adherence | Subject to KPI-based gates |
+
+---
+
+## Requirements Traceability (High-Level)
+
+Each requirement must be traceable to:
+
+- [OKR at section @sec-okr]
+- At least one executive KPI
+- One or more WBS elements (defined later)
+
+A formal **Requirements Traceability Matrix (RTM)** will be created during PMP
+development.
+
+---
+
+## Assumptions and Constraints (Reference)
+
+- No pre-labeled dataset initially available
+- Natural class imbalance exists
+- Offline-first constraint applies
+- Environmental SMEs availability assumed
+
+*See Assumption Log and Risk Register (@sec-risk-register) for details.*
+
+---
+
+## Approval and Baseline
+
+This Requirements Specification becomes **baselined** upon approval.  
+Changes require formal change control.
+

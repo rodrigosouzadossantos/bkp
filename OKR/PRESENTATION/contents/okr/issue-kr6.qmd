@@ -1,0 +1,38 @@
+# KR6 – Criar documentação do fluxo de trabalho e governança
+
+## Descrição
+
+Documentar o fluxo completo de trabalho da área,
+incluindo OKRs, uso do GitHub Project, convenções de Issues
+e processo de Pull Requests.
+
+## Entregáveis
+
+- Documento de fluxo de trabalho
+- Guia de boas práticas
+- Registro de convenções
+
+## Checklist de execução
+
+- [ ] Criar estrutura de documentação
+- [ ] Documentar fluxo de Issues
+- [ ] Documentar fluxo de Pull Requests
+- [ ] Documentar relação com OKRs
+
+## Critérios de aceite
+
+Documentação disponível contendo:
+
+- fluxo de trabalho
+- uso do GitHub Project
+- convenções de labels
+- exemplos de Issues
+
+## Local
+
+GitHub Wiki ou pasta `/docs`
+
+## Rastreamento
+
+OKR relacionado: Governança GitHub  
+Responsável: (definir)

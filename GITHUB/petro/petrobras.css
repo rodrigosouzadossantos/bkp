@@ -1,0 +1,161 @@
+/* Global Layout */
+.reveal {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #ffffff;
+  color: #222;
+}
+ 
+/* Remove default margins */
+.reveal section {
+  padding: 0;
+}
+ 
+/* ------------------ */
+/* COVER SLIDE        */
+/* ------------------ */
+ 
+.cover {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+ 
+/* Top Petrobras band */
+.top-band {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 90px;
+  width: 100%;
+  background: #008542;
+}
+ 
+/* Yellow stripe */
+.top-band::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 18px;
+  width: 100%;
+  background: #FDB913;
+}
+ 
+/* Cover Content */
+.cover-content {
+  padding-left: 120px;
+  padding-right: 120px;
+}
+ 
+.cover h1 {
+  font-size: 2.8em;
+  font-weight: 600;
+  color: #006837;
+  margin-bottom: 20px;
+}
+ 
+.cover h2 {
+  font-size: 1.6em;
+  font-weight: 400;
+  color: #444;
+  margin-bottom: 40px;
+}
+ 
+.divider {
+  width: 120px;
+  height: 4px;
+  background: #FDB913;
+  margin-bottom: 40px;
+}
+ 
+.meta {
+  font-size: 0.95em;
+  color: #006837;
+}
+ 
+/* ------------------ */
+/* STANDARD SLIDE     */
+/* ------------------ */
+ 
+.standard-slide {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+ 
+/* Left vertical Petrobras bar */
+.left-bar {
+  width: 18px;
+  background: linear-gradient(
+    to bottom,
+    #008542 0%,
+    #008542 70%,
+    #FDB913 70%,
+    #FDB913 100%
+  );
+}
+ 
+/* Main content area */
+.content-area {
+  flex: 1;
+  padding: 10px 120px;
+}
+ 
+.content-area h2 {
+  font-size: 2em;
+  color: #006837;
+  margin-bottom: 30px;
+}
+
+
+
+#mermaid-1 #Proposed rect {
+  fill: #1f6feb !important; 
+}
+
+#mermaid-1 #Backlog rect {
+  fill: #238636 !important; 
+}
+
+#mermaid-1 #InProgress rect {
+  fill: #9e6a03 !important; 
+}
+
+#mermaid-1 #InReview rect {
+  fill: #bf4b8a !important; 
+}
+
+#mermaid-1 #Done rect {
+  fill: #8957e5 !important; 
+}
+
+#mermaid-1 #Cancelled rect {
+  fill: #da3633 !important; 
+}
+
+#mermaid-1 #WontDo rect {
+  fill: #9198a1 !important; 
+}
+
+
+.reveal .fragment.highlight-current-blue.current-fragment {
+    color: #FDB913;
+}
+
+.reveal .fragment.highlight-current-green.current-fragment {
+    color: #008542;
+}
+svg .first-path {
+  fill: var(--color-secondary-solid-to-bright-200, #FDC82F);
+}
+
+svg .second-path {
+  fill: var(--color-primary-solid-to-bright-200, #008542);
+}
+
+svg .third-path {
+  fill: var(--color-background-default-level-01, #FFF); 
+}
+

@@ -1,0 +1,16 @@
+s3:
+  bucket: noaa-auv 
+  profile: lakefs
+
+lakefs:
+  repo: noaa-auv
+  branch: main
+
+iceberg:
+  catalog: lakefs
+  namespace: noaa.auv.image
+  table: metadata
+
+embedding:
+  model: clip
+  dim: 512

@@ -1,0 +1,24 @@
+project:
+  title: "NOAA"
+  languages:
+    - en
+    - pt
+
+metadata:
+  project-name: "NOAA"
+  author-name: "Rodrigo Souza dos Santos"
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    code-fold: true
+    css: styles.css
+    html-math-method: mathjax
+  pdf:
+    documentclass: report
+    #keep-tex: true
+    include-in-header:
+      - templates/header.tex
+    template-partials:
+      - templates/before-body.tex

@@ -1,0 +1,182 @@
+---
+title: "{{< i18n okr_dashboard >}}"
+---
+## Automated Screening of AUV Images Using AI/CV {#sec-okr}
+
+### Strategic Objective
+
+Enable automated screening of AUV imagery through Computer Vision to measurably
+reduce human effort, analysis time, and operational cost in subsea inspection
+activities, with initial validation in partnership with NOAA and clear potential
+for reuse across Petrobras Subsea operations.
+
+---
+
+### Business Context and Strategic Alignment
+
+The exponential growth of AUV inspection campaigns has resulted in a
+proportional increase in:
+
+- Manual image analysis effort
+- Specialist workload and exposure
+- Inspection cycle time
+- Operational cost per campaign
+
+Without automation, this model does not scale.
+
+This OKR introduces **AI-based automated screening of AUV imagery** as a
+foundational digital capability to support Subsea environmental and inspection
+activities. Also, aligns with Petrobras Subsea strategic goals of:
+
+- Operational efficiency
+- Digitalization of subsea inspections
+- Reduction of human exposure and specialist overload
+- Creation of reusable digital assets with long-term value
+
+---
+
+### Key Results (Value-Driven and ROI-Oriented)
+
+**KR1 – Reduction of Manual Analysis Effort**  
+Achieve at least **30% reduction in the volume of non-ecologically relevant AUV
+images** requiring manual expert analysis for at least one validated field
+(Viola or Espadarte), **allowing specialists to concentrate their effort on
+benthic-relevant and environmentally significant content**.
+
+**Explicit Ecological Value**
+
+- Greater specialist focus on benthic habitats, organisms, and ecological structures
+- Reduced cognitive overload caused by large volumes of irrelevant imagery
+
+*Value and ROI:*
+
+- Direct reduction in specialist hours
+- Lower inspection analysis cost per campaign
+
+---
+
+**KR2 – Reduction of Analysis Cycle Time**  
+Reduce by at least **25% the elapsed time between AUV image acquisition and
+availability of ecologically relevant screening results**, enabling **earlier
+environmental interpretation and decision-making** by NOAA.
+
+**Explicit Ecological Value**
+
+- Earlier access to environmental insights
+- Improved support for monitoring, impact assessment, and environmental decision processes
+
+*Value and ROI:*
+
+- Faster decision-making
+- Improved responsiveness for scientific and operational stakeholders
+
+---
+
+**KR3 – Baseline Model Quality and Reliability**  
+Deliver a baseline Computer Vision screening model meeting **agreed minimum
+performance criteria explicitly defined to protect ecologically relevant data**,
+with clearly documented limitations and assumptions.
+
+**Explicit Ecological Value**
+
+- Reduced risk of incorrect exclusion of benthic-relevant imagery
+- Transparency regarding environmental limitations of the model
+
+*Value and ROI:*
+
+- Increased confidence in automated screening  
+- Reduced rework and operational risk
+
+---
+
+**KR4 – Reusability and Scalability**  
+Demonstrate applicability of the screening pipeline across different operational
+contexts by evidencing **consistent identification of benthic-relevant imagery
+across at least two fields** (Viola and Espadarte).
+
+**Explicit Ecological Value**
+
+- Consistent ecological interpretation across geographic areas
+- Reduced environmental bias between inspection campaigns
+
+*Value and ROI:*
+
+- Dilution of development cost across future campaigns
+- Accelerated deployment in new inspections
+
+---
+
+**KR5 – Creation of a Reusable Digital Asset**  
+Consolidate images, metadata, spatial information (shapes), and model artifacts
+into a **single, auditable corporate environmental data asset**, enabling
+long-term reuse in ecological studies and future AI-driven subsea initiatives.
+
+**Explicit Ecological Value**
+
+- Preservation of environmental knowledge over time
+- Foundation for comparative ecological studies and long-term monitoring
+
+*Value and ROI:*
+
+- Long-term digital asset creation
+- Foundation for scalable AI and MLOps in Subsea operations
+
+---
+
+### Governance and Stakeholder Engagement
+
+- Continuous interaction with the **Product Owner (PO)**
+  - Minimum cadence: **two checkpoints per week**
+- Alignment with **NOAA stakeholders** for:
+  - Validation of results
+  - Agreement on success criteria
+- Systematic documentation of:
+  - Technical decisions
+  - Model assumptions
+  - Limitations and risks to ensure **transparency and auditability**
+
+---
+
+### Strategic Outlook
+
+This OKR establishes a **foundational ecological intelligence capability** for
+Subsea operations, with automated screening acting as a strategic enabler to
+strengthen environmental stewardship at scale.
+
+As a primary objective, the initiative supports:
+
+- **Improved ecological understanding of benthic environments**, through
+  consistent and scalable identification of benthic-relevant imagery
+- **Higher confidence in environmental baseline studies**, reducing the risk of
+  overlooking ecologically relevant features
+- **Enhanced support to environmental monitoring, licensing, and impact
+  assessment activities**, under NOAA / SUB responsibility
+
+Building on this ecological foundation, the automated capability further
+enables, as secondary and progressive outcomes:
+
+- Advanced anomaly detection (e.g., changes in benthic patterns, disturbances,
+  or atypical features)
+- Autonomous and semi-autonomous inspection workflows, reducing manual burden
+  without compromising environmental rigor
+- Integration with broader digital subsea ecosystems, combining inspection,
+  environmental, and operational data
+- Progressive adoption of MLOps practices within SUB, ensuring long-term
+  sustainability, traceability, and reuse of environmental AI assets
+
+---
+
+### Key Results Tracking
+
+| # | KR |    | Target | Current | Status |
+|---|----|-----------------|-----------|---------|--------|
+| 1 | **KR1** | **Reduction of manual image analysis volume** | ≥ 30% reduction | 0% (baseline only) | 🔴 |
+| 2 | **KR2** | **Reduction in analysis cycle time (AUV → screening delivery)** | ≥ 25% reduction | Baseline being measured | 🟡 |
+| 3 | **KR3** | **Screening model recall on relevant images** | ≥ 90% recall | EDA phase | 🟡 |
+| 4 | **KR4** | **Cross-field generalization (Viola ↔ Espadarte)** | Validated on ≥ 2 fields | 1 field prepared | 🟡 |
+| 5 | **KR5** | **Reusable digital asset (data + model + pipeline)** | Centralized, auditable repository available | Infrastructure setup in progress | 🟡 |
+
+**Status legend:**  
+🟢 On track / achieved    🟡 In progress / at risk    🔴 Not started / blocked  
+
+**Last updated:** `$(date +%Y-%m-%d)`

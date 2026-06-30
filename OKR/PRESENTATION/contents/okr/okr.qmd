@@ -1,0 +1,160 @@
+# OKR TÁTICO – Estruturação de Governança no GitHub
+
+Horizonte: 1 mês
+
+## 🎯 Objetivo (O)
+
+Estruturar o GitHub e o GitHub Project como sistema único de gestão
+das demandas da área, garantindo rastreabilidade, mensuração e
+alinhamento entre estratégia (OKR) e execução (Agile).
+
+---
+
+## 📊 Resultados-chave (KR)
+
+1. 100% das novas demandas registradas via Issue vinculada
+   a um item do GitHub Project.
+
+2. 100% das Issues vinculadas explicitamente a:
+
+   * um OKR (campo ou label padrão)
+   * um responsável
+   * um status definido no fluxo do Project.
+
+3. Painel do GitHub Project configurado com:
+
+   * colunas de fluxo (Backlog, Ready, In Progress, Review, Done)
+   * campo customizado para OKR
+   * campo de tipo (Bug, Feature, Experimento, Infra).
+
+4. Relatório mensal extraído do GitHub demonstrando:
+
+   * % de KRs atingidos
+   * tempo médio de ciclo (cycle time)
+   * volume de demandas por tipo.
+
+---
+
+## 🔧 Iniciativas (não são KR)
+
+* Criar template padrão de Issue
+* Configurar GitHub Project (campos e automações)
+* Criar convenção de labels (okr, tipo, prioridade)
+* Criar documento Wiki explicando o fluxo completo
+* Realizar sessão de alinhamento com o time
+
+---
+
+# 🔎 Estrutura proposta: o que vai onde no GitHub
+
+Agora vem a parte crítica: **definir claramente onde cada coisa vive**.
+
+---
+
+## OKR → GitHub Wiki (ou pasta /docs)
+
+Por quê?
+OKR é direcional e estratégico. Não deve ficar perdido em Issues.
+
+Conteúdo:
+
+* OKR Estratégico (trimestral)
+* OKR Tático (mensal)
+* OKR Experimental (quando existir)
+* Métrica de avaliação
+
+::: {.callout-note}
+## Função
+Define *o que queremos mudar*.
+:::
+
+---
+
+## GitHub Project → Ferramenta Central de Gestão
+
+Deve ser o **hub principal**.
+
+Contém:
+
+* Todas as Issues
+* Status do fluxo
+* Campos customizados (OKR, tipo, prioridade)
+* Métricas operacionais
+
+::: {.callout-note}
+## Função
+Conecta estratégia (OKR) à execução (Agile).
+:::
+
+---
+
+## Issues → Unidade de Trabalho
+
+Cada Issue deve conter:
+
+* Descrição clara do problema
+* Critério de aceite
+* Link para OKR relacionado
+* Tipo (Bug, Feature, Experimento, Infra)
+
+::: {.callout-note}
+## Função
+Materializar uma iniciativa que contribui para um KR.
+:::
+
+---
+
+## Pull Requests → Evidência de Entrega
+
+Todo PR deve:
+
+* Referenciar a Issue
+* Seguir template padrão
+* Passar por revisão
+* Atualizar documentação quando aplicável
+
+::: {.callout-note}
+## Função
+Prova objetiva da execução.
+:::
+
+---
+
+## Métricas → Extraídas do Project
+
+Mensuração possível:
+
+* Cycle time
+* Lead time
+* Throughput
+* % de KRs atingidos
+* Volume por categoria
+
+Isso garante que o sistema seja:
+
+* Rastreável
+* Auditável
+* Mensurável
+
+---
+
+# Como OKR e Agile se conectam aqui
+
+| Camada       | Ferramenta          | Papel               |
+| ------------ | ------------------- | ------------------- |
+| Estratégia   | Wiki (OKR)          | Define direção      |
+| Planejamento | GitHub Project      | Prioriza e organiza |
+| Execução     | Issues + PRs        | Implementa          |
+| Aprendizado  | Métricas do Project | Ajusta e evolui     |
+
+---
+
+# Resultado esperado
+
+Ao final do ciclo:
+
+* Nenhuma demanda fora do GitHub
+* Nenhuma tarefa sem vínculo estratégico
+* Nenhum KR sem evidência mensurável
+* Total rastreabilidade da estratégia até o código
+

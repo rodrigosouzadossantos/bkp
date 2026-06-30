@@ -1,0 +1,40 @@
+name: "Tarefa Técnica"
+description: "Tarefa de implementação"
+title: "[TASK] "
+labels:
+  - type:task
+
+body:
+  - type: input
+    id: historia
+    attributes:
+      label: História Relacionada
+      placeholder: "#321"
+    validations:
+      required: true
+
+  - type: textarea
+    id: descricao
+    attributes:
+      label: Descrição da Tarefa
+      placeholder: |
+        Implementar script para extração de frames de vídeos capturados por ROV
+        durante inspeções de dutos submarinos.
+
+  - type: textarea
+    id: passos
+    attributes:
+      label: Passos
+      placeholder: |
+        - Ler vídeo usando OpenCV
+        - Extrair frames a cada 0.5s
+        - Armazenar em dataset estruturado
+
+  - type: textarea
+    id: definicao
+    attributes:
+      label: Definição de Pronto
+      placeholder: |
+        - Código revisado
+        - Pipeline executando em dataset real
+        - Documentação mínima incluída

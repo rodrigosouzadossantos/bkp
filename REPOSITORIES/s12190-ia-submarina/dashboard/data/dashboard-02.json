@@ -1,0 +1,137 @@
+{
+"issues": [
+{
+"repo": "ml-platform",
+"number": 101,
+"title": "KR1 - Pipeline de treinamento automático de modelos",
+"state": "OPEN",
+"assignees": ["walace"],
+"labels": ["okr", "ml"],
+"created_at": "2026-01-05",
+"closed_at": null,
+"body": "Entregável: pipeline de treinamento\nEntregável: versionamento de modelos"
+},
+{
+"repo": "ml-platform",
+"number": 102,
+"title": "KR2 - Sistema de feature store",
+"state": "CLOSED",
+"assignees": ["francisco"],
+"labels": ["okr","ml"],
+"created_at": "2026-01-10",
+"closed_at": "2026-02-05",
+"body": "Entregável: feature store centralizada\nEntregável: API de features"
+},
+{
+"repo": "ai-research",
+"number": 201,
+"title": "KR3 - Benchmark de modelos LLM",
+"state": "OPEN",
+"assignees": ["breno"],
+"labels": ["okr","research"],
+"created_at": "2026-01-15",
+"closed_at": null,
+"body": "Entregável: relatório de benchmark\nEntregável: dataset de avaliação"
+},
+{
+"repo": "ai-research",
+"number": 202,
+"title": "KR4 - Fine-tuning de modelo de linguagem",
+"state": "CLOSED",
+"assignees": ["matheus"],
+"labels": ["okr","llm"],
+"created_at": "2026-01-20",
+"closed_at": "2026-02-15",
+"body": "Entregável: modelo fine-tuned\nEntregável: avaliação de desempenho"
+},
+{
+"repo": "vision-ai",
+"number": 301,
+"title": "KR5 - Modelo de detecção de objetos",
+"state": "OPEN",
+"assignees": ["suzane"],
+"labels": ["okr","cv"],
+"created_at": "2026-02-01",
+"closed_at": null,
+"body": "Entregável: modelo YOLO treinado\nEntregável: dataset anotado"
+},
+{
+"repo": "vision-ai",
+"number": 302,
+"title": "KR6 - Pipeline de inferência em tempo real",
+"state": "CLOSED",
+"assignees": ["rodrigo"],
+"labels": ["okr","cv"],
+"created_at": "2026-02-05",
+"closed_at": "2026-02-28",
+"body": "Entregável: API de inferência\nEntregável: deploy em GPU"
+},
+{
+"repo": "nlp-engine",
+"number": 401,
+"title": "KR7 - Sistema de embeddings semânticos",
+"state": "OPEN",
+"assignees": ["walace"],
+"labels": ["okr","nlp"],
+"created_at": "2026-02-10",
+"closed_at": null,
+"body": "Entregável: serviço de embeddings\nEntregável: indexação vetorial"
+},
+{
+"repo": "nlp-engine",
+"number": 402,
+"title": "KR8 - Busca semântica com RAG",
+"state": "CLOSED",
+"assignees": ["francisco"],
+"labels": ["okr","nlp"],
+"created_at": "2026-02-12",
+"closed_at": "2026-03-01",
+"body": "Entregável: pipeline RAG\nEntregável: avaliação de relevância"
+},
+{
+"repo": "mlops",
+"number": 501,
+"title": "KR9 - Monitoramento de modelos em produção",
+"state": "OPEN",
+"assignees": ["breno"],
+"labels": ["okr","mlops"],
+"created_at": "2026-02-15",
+"closed_at": null,
+"body": "Entregável: métricas de drift\nEntregável: alertas automáticos"
+},
+{
+"repo": "mlops",
+"number": 502,
+"title": "KR10 - Deploy contínuo de modelos",
+"state": "CLOSED",
+"assignees": ["matheus"],
+"labels": ["okr","mlops"],
+"created_at": "2026-02-18",
+"closed_at": "2026-03-05",
+"body": "Entregável: pipeline CI/CD de modelos\nEntregável: rollback automático"
+},
+{
+"repo": "data-ai",
+"number": 601,
+"title": "KR11 - Data pipeline para treinamento",
+"state": "OPEN",
+"assignees": ["suzane"],
+"labels": ["okr","data"],
+"created_at": "2026-02-20",
+"closed_at": null,
+"body": "Entregável: ingestão automática\nEntregável: validação de dados"
+},
+{
+"repo": "data-ai",
+"number": 602,
+"title": "KR12 - Curadoria de dataset para ML",
+"state": "CLOSED",
+"assignees": ["rodrigo"],
+"labels": ["okr","data"],
+"created_at": "2026-02-22",
+"closed_at": "2026-03-06",
+"body": "Entregável: dataset limpo\nEntregável: documentação"
+}
+]
+}
+

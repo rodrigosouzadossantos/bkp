@@ -1,0 +1,198 @@
+#!/usr/bin/env bash
+set -e
+
+PROJECT=${1:-nautilus-ml}
+echo "Creating Nautilus ML experiment crate in $PROJECT/rust/experiment ..."
+
+# create directories
+mkdir -p $PROJECT/rust/experiment/src
+mkdir -p $PROJECT/tests
+
+# helper functions
+create_header() {
+  LANG=$1
+  MODULE=$2
+  COMPONENT=$3
+  if [ "$LANG" = "rust" ]; then COMMENT="//"; else COMMENT="#"; fi
+  cat <<EOF
+$COMMENT vim: set ts=2 sw=2 et:
+$COMMENT --------------------------------------------------
+$COMMENT Project: Nautilus ML Platform
+$COMMENT Module: $MODULE
+$COMMENT Component: $COMPONENT
+$COMMENT Inspired by Jules Verne's "Twenty Thousand Leagues Under the Sea"
+$COMMENT License: Apache-2.0
+$COMMENT --------------------------------------------------
+EOF
+}
+
+create_file() {
+  FILE=$1
+  LANG=$2
+  MODULE=$3
+  COMPONENT=$4
+  mkdir -p "$(dirname "$FILE")"
+  create_header "$LANG" "$MODULE" "$COMPONENT" > "$FILE"
+}
+
+########################################
+# Cargo.toml for experiment crate
+########################################
+cat > $PROJECT/rust/experiment/Cargo.toml <<EOF
+[package]
+name = "experiment"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+reqwest = { version = "0.11", features = ["json"] }
+tokio = { version = "1", features = ["full"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+rayon = "1"
+anyhow = "1.0"
+EOF
+
+########################################
+# mlflow.rs
+########################################
+create_file $PROJECT/rust/experiment/src/mlflow.rs rust experiment mlflow
+
+cat >> $PROJECT/rust/experiment/src/mlflow.rs <<'EOF'
+use anyhow::Result;
+use std::collections::HashMap;
+
+/// Log metric to MLFlow
+pub fn log_metric(name: &str, value: f64) {
+    println!("MLFlow metric: {} = {}", name, value);
+}
+
+/// Log parameter to MLFlow
+pub fn log_param(name: &str, value: &str) {
+    println!("MLFlow param: {} = {}", name, value);
+}
+
+/// Log a batch of metrics in parallel
+pub fn log_metrics_parallel(metrics: HashMap<String,f64>) {
+    use rayon::prelude::*;
+    metrics.par_iter().for_each(|(k,v)| {
+        log_metric(k,v.clone());
+    });
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    #[test]
+    fn test_mlflow_logging() {
+        log_param("lr", "0.001");
+        log_metric("accuracy", 0.95);
+        let mut metrics = HashMap::new();
+        metrics.insert("loss".to_string(), 0.1);
+        metrics.insert("val_loss".to_string(), 0.08);
+        log_metrics_parallel(metrics);
+    }
+}
+EOF
+
+########################################
+# wandb.rs
+########################################
+create_file $PROJECT/rust/experiment/src/wandb.rs rust experiment wandb
+
+cat >> $PROJECT/rust/experiment/src/wandb.rs <<'EOF'
+use anyhow::Result;
+
+/// Initialize W&B run
+pub fn init_run(name: &str) {
+    println!("W&B run initialized: {}", name);
+}
+
+/// Log metrics
+pub fn log_metrics(name: &str, value: f64) {
+    println!("W&B metric: {} = {}", name, value);
+}
+
+/// Log a batch of metrics in parallel
+pub fn log_metrics_parallel(names: Vec<String>, values: Vec<f64>) {
+    use rayon::prelude::*;
+    names.into_par_iter().zip(values.into_par_iter()).for_each(|(n,v)| {
+        log_metrics(&n,v);
+    });
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    #[test]
+    fn test_wandb_logging() {
+        init_run("experiment1");
+        log_metrics("accuracy", 0.92);
+        log_metrics_parallel(vec!["loss".into(), "val_loss".into()], vec![0.1,0.08]);
+    }
+}
+EOF
+
+########################################
+# dvc.rs
+########################################
+create_file $PROJECT/rust/experiment/src/dvc.rs rust experiment dvc
+
+cat >> $PROJECT/rust/experiment/src/dvc.rs <<'EOF'
+use anyhow::Result;
+
+/// Track dataset with DVC
+pub fn track_dataset(path: &str) {
+    println!("DVC tracking dataset at: {}", path);
+}
+
+/// Track multiple datasets in parallel
+pub fn track_datasets_parallel(paths: Vec<String>) {
+    use rayon::prelude::*;
+    paths.into_par_iter().for_each(|p| track_dataset(&p));
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    #[test]
+    fn test_dvc_tracking() {
+        track_dataset("data/train");
+        track_datasets_parallel(vec!["data/train".into(), "data/val".into()]);
+    }
+}
+EOF
+
+########################################
+# lakefs.rs
+########################################
+create_file $PROJECT/rust/experiment/src/lakefs.rs rust experiment lakefs
+
+cat >> $PROJECT/rust/experiment/src/lakefs.rs <<'EOF'
+use anyhow::Result;
+
+/// Create a branch in LakeFS
+pub fn create_branch(name: &str) {
+    println!("LakeFS create branch: {}", name);
+}
+
+/// Commit multiple branches in parallel (simulate)
+pub fn create_branches_parallel(names: Vec<String>) {
+    use rayon::prelude::*;
+    names.into_par_iter().for_each(|n| create_branch(&n));
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    #[test]
+    fn test_lakefs() {
+        create_branch("dev");
+        create_branches_parallel(vec!["dev".into(), "feature1".into()]);
+    }
+}
+EOF
+
+echo "Experiment crate bootstrap complete. Navigate to $PROJECT/rust/experiment and run:"
+echo "cargo build"
+echo "cargo test"

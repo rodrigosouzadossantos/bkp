@@ -1,0 +1,39 @@
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+
+\usepackage{amsmath}
+\usepackage{bm} % For bold math symbols in CV formulas
+\usepackage{xcolor} % For "Risk" or "Warning" boxes in PMBOK
+\usepackage{tcolorbox} % For styled boxes around requirements or risks
+
+\pagestyle{fancy}
+\fancyhf{}
+
+% This removes the "Chapter #" prefix and just leaves the title, similar to the web version
+\titleformat{\chapter}[hang]{\huge\bfseries}{}{0pt}{}
+
+% Define a custom color for "AI Specialist" brand
+\definecolor{aibrow}{RGB}{0, 102, 204}
+
+% Custom command for a "Project Status" badge
+\newcommand{\statusbadge}[1]{%
+    % \begin{tcolorbox}[colback=aibrow!20,colframe=aibrow!80!black,title=Status]
+    \begin{tcolorbox}[colback=aibrow!5,colframe=aibrow,width=3cm,arc=1mm, auto outer arc]
+      \centering \small \textbf{#1}
+    \end{tcolorbox}
+}
+
+\newenvironment{ProjectBox}[1]
+{\begin{tcolorbox}[colback=gray!5,colframe=blue!50!black,title=#1]}
+{\end{tcolorbox}}
+
+\rhead{\theAuthor}
+\lhead{\theProjectName}
+\chead{\textbf{\thePageTitle}}
+%\chead{\leftmark}
+\cfoot{\thepage}
+
+% Custom styling for requirements
+\newenvironment{requirement}
+{\begin{tcolorbox}[colback=gray!10,colframe=black,title=Requirement]}
+{\end{tcolorbox}}

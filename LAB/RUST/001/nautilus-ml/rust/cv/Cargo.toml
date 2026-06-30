@@ -1,0 +1,8 @@
+[package]
+name = "cv"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+opencv = "0.98.1"
+rayon = "1.11.0"

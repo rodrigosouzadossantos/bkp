@@ -1,0 +1,144 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "NOAA",
+    "section": "",
+    "text": "1 Project Master Dashboard\nWelcome to the governance portal for NOAA. This site serves as the “Single Source of Truth” for PMBOK artifacts and Agile execution.\n\n1.0.1 Project Identity\n\n\n\n\n\n\n\nAttribute\nValue\n\n\n\n\nProject Name\nNOAA\n\n\nLead Specialist\nRodrigo Souza dos Santos\n\n\nCurrent Phase\nPlanning\n\n\nLast Audit\n\n\n\n\n\n\n\n1.0.2 Artifact Status\nNavigate through the sidebar to access the required PMBOK and Agile documents.\n\nThe Project Charter has been formally authorized. We are currently decomposing the WBS into the Product Backlog for Sprint 01.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Project Master Dashboard</span>"
+    ]
+  },
+  {
+    "objectID": "01_strategy_okrs/okr_dashboard.html",
+    "href": "01_strategy_okrs/okr_dashboard.html",
+    "title": "2  OKR",
+    "section": "",
+    "text": "Objective: Establish the industry-leading CV engine for industrial safety.\n\n\n\nKey Result\nTarget\nCurrent\nStatus\n\n\n\n\nKR1: Latency per frame\n&lt; 30ms\n45ms\n🟡\n\n\nKR2: Test Coverage\n&gt; 90%\n82%\n🟢\n\n\nKR3: Model Accuracy (mAP)\n&gt; 0.95\n0.89\n🟡\n\n\n\nLast updated: $(date +%Y-%m-%d)",
+    "crumbs": [
+      "{{< meta i18n.section_strategy >}}",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>OKR</span>"
+    ]
+  },
+  {
+    "objectID": "01_strategy_okrs/value_stream.html",
+    "href": "01_strategy_okrs/value_stream.html",
+    "title": "3  Value Stream Mapping",
+    "section": "",
+    "text": "This document maps our technical tasks to business value.\n\nIngestion (Kafka/Redis): Enables real-time responsiveness.\nPreprocessing: Reduces noise, increasing safety accuracy.\nInference (PyTorch/TF): The core value-add.",
+    "crumbs": [
+      "{{< meta i18n.section_strategy >}}",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Value Stream Mapping</span>"
+    ]
+  },
+  {
+    "objectID": "02_initiating_pmbok/business_case.html",
+    "href": "02_initiating_pmbok/business_case.html",
+    "title": "4  “i18n: business_case”",
+    "section": "",
+    "text": "4.0.1 Strategic Alignment\nCurrent systems suffer from data leakage and high latency. This package utilizes Natural Language Processing for data validation and optimized Computer Vision pipelines to mitigate these risks.\n\n\n4.0.2 ROI Estimate\nExpected 25% reduction in compute costs through optimized ETL pipelines using Redis Streams.",
+    "crumbs": [
+      "{{< meta i18n.section_initiating >}}",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>\"`i18n: business_case`\"</span>"
+    ]
+  },
+  {
+    "objectID": "02_initiating_pmbok/project_charter.html",
+    "href": "02_initiating_pmbok/project_charter.html",
+    "title": "5  High-Level Requirements",
+    "section": "",
+    "text": "Project Name: CV-Engine-Alpha\nProject Manager: Rodrigo Souza dos Santos\nSponsor: Tech Operations Dept.\n\nReal-time processing via Kafka.\nSupport for Grad-CAM visualizations.\nModular architecture (PyTorch and TensorFlow).\n\n\n5.0.1 Authority\nThe PM is authorized to allocate resources from the AI Research squad.",
+    "crumbs": [
+      "{{< meta i18n.section_initiating >}}",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>High-Level Requirements</span>"
+    ]
+  },
+  {
+    "objectID": "02_initiating_pmbok/stakeholder_reg.html",
+    "href": "02_initiating_pmbok/stakeholder_reg.html",
+    "title": "NOAA",
+    "section": "",
+    "text": "Name\nRole\nInfluence\nInterest\n\n\n\n\nTech Lead\nConsultant\nHigh\nHigh\n\n\nDevOps Team\nSupporting\nMed\nHigh\n\n\nEnd Client\nBeneficiary\nHigh\nHigh",
+    "crumbs": [
+      "{{< meta i18n.section_initiating >}}",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>stakeholder_reg.html</span>"
+    ]
+  },
+  {
+    "objectID": "03_planning_scope/requirements.html",
+    "href": "03_planning_scope/requirements.html",
+    "title": "7  Requirements Documentation",
+    "section": "",
+    "text": "7.0.1 Functional Requirements\n\nThe system shall support asynchronous inference.\nThe system shall integrate with Redis Streams for real-time ETL.\n\n\n\n7.0.2 Non-Functional Requirements\n\nLatency must be deterministic.\nModel weight loading must happen in &lt; 5 seconds.",
+    "crumbs": [
+      "{{< meta i18n.section_planning >}}",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Requirements Documentation</span>"
+    ]
+  },
+  {
+    "objectID": "03_planning_scope/wbs.html",
+    "href": "03_planning_scope/wbs.html",
+    "title": "8  Work Breakdown Structure (WBS)",
+    "section": "",
+    "text": "graph TD\n    Root[CV Engine] --&gt; Ingest[Data Ingestion]\n    Root --&gt; Core[Model Core]\n    Root --&gt; Ops[Deployment/Mlopps]\n    \n    Ingest --&gt; Kafka[Kafka Connect]\n    Ingest --&gt; Redis[Redis Streams]\n    \n    Core --&gt; Optim[Quantization]\n    Core --&gt; Viz[Grad-CAM Module]",
+    "crumbs": [
+      "{{< meta i18n.section_planning >}}",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Work Breakdown Structure (WBS)</span>"
+    ]
+  },
+  {
+    "objectID": "03_planning_scope/wbs_dictionary.html",
+    "href": "03_planning_scope/wbs_dictionary.html",
+    "title": "9  WBS Dictionary",
+    "section": "",
+    "text": "9.0.1 WP 1.1: Kafka Connect\n\nOwner: Data Engineer\nDescription: Implement the consumer group logic for raw image ingestion.\nAcceptance Criteria: Successfully consume 500 images/sec.",
+    "crumbs": [
+      "{{< meta i18n.section_planning >}}",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>WBS Dictionary</span>"
+    ]
+  },
+  {
+    "objectID": "04_agile_execution/product_backlog.html",
+    "href": "04_agile_execution/product_backlog.html",
+    "title": "10  Product Backlog",
+    "section": "",
+    "text": "Epic: Real-time Pipeline Stabilization\n\nStory: As a dev, I need a Redis sink for processed metadata.\n\nEpic: Explainability Features\n\nStory: As a user, I want heatmaps on detection failures.",
+    "crumbs": [
+      "{{< meta i18n.section_execution >}}",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Product Backlog</span>"
+    ]
+  },
+  {
+    "objectID": "04_agile_execution/roadmap.html",
+    "href": "04_agile_execution/roadmap.html",
+    "title": "11  Product Roadmap",
+    "section": "",
+    "text": "Q1: Core Engine & Kafka Integration.\nQ2: Optimization for Edge Devices (Quantization).\nQ3: Advanced Visualization and NLP-based filtering.",
+    "crumbs": [
+      "{{< meta i18n.section_execution >}}",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Product Roadmap</span>"
+    ]
+  },
+  {
+    "objectID": "05_monitoring_control/risk_register.html",
+    "href": "05_monitoring_control/risk_register.html",
+    "title": "12  Risk Register",
+    "section": "",
+    "text": "Risk ID\nDescription\nProbability\nImpact\nMitigation\n\n\n\n\nR-001\nData Leakage\nLow\nCritical\nNLP-based PII filtering\n\n\nR-002\nInference Lag\nMed\nHigh\nTensorRT optimization",
+    "crumbs": [
+      "{{< meta i18n.section_control >}}",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Risk Register</span>"
+    ]
+  },
+  {
+    "objectID": "05_monitoring_control/change_log.html",
+    "href": "05_monitoring_control/change_log.html",
+    "title": "13  Change Log",
+    "section": "",
+    "text": "Date\nChange\nApproved By\nStatus\n\n\n\n\n2026-03-23\nInitial Baseline\nRodrigo\nApproved",
+    "crumbs": [
+      "{{< meta i18n.section_control >}}",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Change Log</span>"
+    ]
+  }
+]

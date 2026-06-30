@@ -1,0 +1,123 @@
+use aws_config::BehaviorVersion;
+use aws_sdk_s3::{config::timeout::TimeoutConfig, Client};
+use indicatif::{ProgressBar, ProgressStyle};
+use std::{sync::{Arc, atomic::{AtomicUsize, Ordering}}, time::Duration};
+use tokio::sync::{mpsc, Semaphore};
+
+#[tokio::main]
+async fn main() -> Result<(), Box<dyn std::error::Error>> {
+  let timeout_config = TimeoutConfig::builder()
+    .connect_timeout(Duration::from_secs(10))
+    .read_timeout(Duration::from_secs(10))
+    .build();
+
+  let config = aws_config::defaults(BehaviorVersion::latest())
+    .timeout_config(timeout_config)
+    .load()
+    .await;
+
+  let client = Arc::new(Client::new(&config));
+  let bucket = Arc::new("analise-dados".to_string());
+
+  let (tx_keys, mut rx_keys) = mpsc::channel::<String>(1_000_000);
+  let (tx_tasks, mut rx_tasks) = mpsc::unbounded_channel::<String>();
+  let active_requests = Arc::new(AtomicUsize::new(0));
+
+  let pb = ProgressBar::new_spinner();
+  pb.set_style(ProgressStyle::default_spinner()
+    .template("{spinner:.green} [{elapsed_precise}] {pos} keys ({per_sec}) | {msg}")?);
+
+  let start = std::time::Instant::now();
+
+  // 1. Seed prefixes
+  let seeds: Vec<String> = (0..10).map(|i| i.to_string())
+    .chain(('a'..='z').map(|c| c.to_string()))
+    .chain(('A'..='Z').map(|c| c.to_string()))
+    .collect();
+
+  for p in seeds {
+    let _ = tx_tasks.send(p);
+  }
+
+  // 2. Worker Manager - Clone variables BEFORE moving into the task
+  let manager_client = client.clone();
+  let manager_bucket = bucket.clone();
+  let manager_tx_keys = tx_keys.clone();
+  let manager_tx_tasks = tx_tasks.clone();
+  let manager_active = active_requests.clone();
+  let semaphore = Arc::new(Semaphore::new(256));
+
+  tokio::spawn(async move {
+    while let Some(prefix) = rx_tasks.recv().await {
+      let c = manager_client.clone();
+      let b = manager_bucket.clone();
+      let tk = manager_tx_keys.clone();
+      let tt = manager_tx_tasks.clone();
+      let sem = semaphore.clone();
+      let act = manager_active.clone();
+
+      tokio::spawn(async move {
+        let _permit = sem.acquire().await.unwrap();
+        act.fetch_add(1, Ordering::SeqCst);
+
+        let mut ct: Option<String> = None;
+        loop {
+          let req = c.list_objects_v2()
+            .bucket(b.as_str())
+            .prefix(&prefix)
+            .delimiter("/")
+            .set_continuation_token(ct.take());
+
+          if let Ok(out) = req.send().await {
+            for obj in out.contents() {
+              if let Some(k) = obj.key() { 
+                let _ = tk.send(k.to_string()).await; 
+              }
+            }
+            for cp in out.common_prefixes() {
+              if let Some(sub) = cp.prefix() {
+                let _ = tt.send(sub.to_string());
+              }
+            }
+            if let Some(next) = out.next_continuation_token() {
+              ct = Some(next.to_string());
+            } else { break; }
+          } else { break; }
+        }
+        act.fetch_sub(1, Ordering::SeqCst);
+      });
+    }
+  });
+
+  // 3. Drop original sender so the channel can close when workers finish
+  drop(tx_keys);
+
+  let mut count = 0;
+  loop {
+    // Drain keys buffer
+    let mut found_any = false;
+    while let Ok(_key) = rx_keys.try_recv() {
+      count += 1;
+      found_any = true;
+      if count % 10_000 == 0 { pb.set_position(count); }
+    }
+
+    // Check completion: No active workers AND task channel is likely empty
+    let active = active_requests.load(Ordering::SeqCst);
+    if active == 0 && !found_any {
+      // Final safety check
+      tokio::time::sleep(Duration::from_millis(200)).await;
+      if active_requests.load(Ordering::SeqCst) == 0 { break; }
+    }
+
+    // Prevent CPU spinning
+    tokio::time::sleep(Duration::from_millis(5)).await;
+  }
+
+  pb.finish_with_message("Done!");
+  let duration = start.elapsed();
+  println!("\n🏁 Final: {} keys | Time: {:.2?} | Rate: {:.0} keys/s", 
+    count, duration, count as f64 / duration.as_secs_f64());
+
+  Ok(())
+}

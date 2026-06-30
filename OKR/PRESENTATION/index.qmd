@@ -1,0 +1,11 @@
+---
+title: "OKRs e Gestão Ágil de Projetos para a IA Submarina"
+authors:
+  - name: Rodrigo Souza dos Santos
+    affiliation: AIR / Compass.UOL
+#    roles: writing
+#    corresponding: true
+bibliography: refs/references.bib
+---
+
+{{< include contents/explanation.qmd >}}

@@ -1,0 +1,4 @@
+greeting: "Olá"
+welcome: "Olá, {name}!"
+home:
+  title: "Página inicial"

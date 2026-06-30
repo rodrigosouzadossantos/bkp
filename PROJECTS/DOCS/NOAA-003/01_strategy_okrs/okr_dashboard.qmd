@@ -1,0 +1,11 @@
+# OKR {{< meta i18n.nav_dashboard >}}
+
+**Objective:** Establish the industry-leading CV engine for industrial safety.
+
+| Key Result | Target | Current | Status |
+| :--- | :--- | :--- | :--- |
+| KR1: Latency per frame | < 30ms | 45ms | 🟡 |
+| KR2: Test Coverage | > 90% | 82% | 🟢 |
+| KR3: Model Accuracy (mAP) | > 0.95 | 0.89 | 🟡 |
+
+Last updated: $(date +%Y-%m-%d)

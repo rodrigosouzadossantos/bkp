@@ -1,0 +1,314 @@
+Good—this changes the constraints a lot. If **zero-copy + low latency** is a hard requirement, then the current `read() -> Vec<u8>` and even your `(String, Bytes)` stream are **not good enough**.
+
+You’re still copying here:
+
+```rust
+body.collect().await.into_bytes().to_vec() // ❌ multiple copies
+```
+
+---
+
+# 🚨 Core Problem
+
+S3 SDK gives you:
+
+```rust
+ByteStream
+```
+
+Which is already:
+
+* chunked
+* async
+* **zero-copy capable (`Bytes`)**
+
+👉 The mistake is **collapsing it into a Vec**
+
+---
+
+# ✅ Correct Direction
+
+You want:
+
+```rust
+Stream<Item = (String, ByteStream)>
+```
+
+NOT:
+
+```rust
+Vec<u8> ❌
+Bytes (collected) ❌
+```
+
+---
+
+# 🚀 Final Architecture (what you actually want)
+
+## Storage layer
+
+```rust
+use aws_sdk_s3::primitives::ByteStream;
+use futures::stream::BoxStream;
+
+fn read_dir_stream(
+    &self,
+    path: &str,
+) -> BoxStream<'static, (String, ByteStream)>;
+```
+
+---
+
+## Why this is critical
+
+* `ByteStream` = **zero-copy chunks from AWS**
+* lets you:
+
+  * stream → Arrow
+  * stream → decoder
+  * stream → Python buffer protocol (later)
+
+---
+
+# ✅ Updated S3 implementation (TRUE zero-copy)
+
+```rust
+use aws_sdk_s3::{Client, primitives::ByteStream};
+use futures::{stream, StreamExt};
+use futures::stream::BoxStream;
+
+fn read_dir_stream(
+    &self,
+    path: &str,
+) -> BoxStream<'static, (String, ByteStream)> {
+
+    let (bucket, prefix) = parse_s3_path(path);
+    let client = self.client.clone();
+
+    let key_stream = stream::unfold(
+        (client.clone(), bucket.clone(), prefix.unwrap_or_default(), None),
+        |(client, bucket, prefix, token)| async move {
+            let resp = client
+                .list_objects_v2()
+                .bucket(&bucket)
+                .prefix(&prefix)
+                .set_continuation_token(token)
+                .send()
+                .await
+                .ok()?;
+
+            let next = resp.next_continuation_token.clone();
+
+            let keys: Vec<String> = resp
+                .contents
+                .unwrap_or_default()
+                .into_iter()
+                .filter_map(|o| o.key)
+                .collect();
+
+            Some((stream::iter(keys), (client, bucket, prefix, next)))
+        },
+    )
+    .flatten();
+
+    let object_stream = key_stream
+        .map(move |key| {
+            let client = client.clone();
+            let bucket = bucket.clone();
+
+            async move {
+                let resp = client
+                    .get_object()
+                    .bucket(&bucket)
+                    .key(&key)
+                    .send()
+                    .await
+                    .ok()?;
+
+                // 🔥 ZERO COPY: no collect()
+                Some((key, resp.body))
+            }
+        })
+        .buffer_unordered(32) // tune this
+        .filter_map(|x| async move { x });
+
+    Box::pin(object_stream)
+}
+```
+
+---
+
+# 🧠 What you just unlocked
+
+## Before
+
+```text
+S3 → Vec<u8> → decode → Arrow
+      ❌ copy
+      ❌ latency spike
+      ❌ memory blowup
+```
+
+## Now
+
+```text
+S3 → ByteStream → decode → Arrow
+      ✅ zero-copy chunks
+      ✅ streaming
+      ✅ backpressure
+```
+
+---
+
+# ⚠️ But here’s the real bottleneck (important)
+
+Your dataset layer:
+
+```rust
+let data: Vec<Vec<u8>> = objects
+    .par_iter()
+    .map(|obj| storage_api::read(&obj.path))
+    .collect();
+```
+
+👉 This completely destroys:
+
+* streaming
+* zero-copy
+* latency
+
+---
+
+# 🚀 You need to redesign ingestion
+
+## Target pipeline:
+
+```text
+Storage (ByteStream)
+    ↓
+Decoder (streaming)
+    ↓
+Arrow builder (chunked)
+    ↓
+RecordBatch
+```
+
+---
+
+## Example direction
+
+Instead of:
+
+```rust
+Vec<Vec<u8>>
+```
+
+You want:
+
+```rust
+Stream<Item = ByteStream>
+```
+
+Then:
+
+```rust
+stream
+  → decode_chunks()
+  → append_to_arrow_builder()
+```
+
+---
+
+# 🐍 Python zero-copy (critical insight)
+
+You said:
+
+> "python package was designed for zero-copy"
+
+Right now:
+
+```rust
+let vec: Vec<f32> = float_array.values().to_vec(); // ❌ copy
+```
+
+👉 This breaks your goal.
+
+---
+
+## ✅ Real zero-copy path
+
+You need:
+
+### Arrow C Data Interface
+
+* expose `RecordBatch` via FFI
+* Python (PyArrow / NumPy) consumes **without copy**
+
+---
+
+# ⚠️ Hard truth
+
+To achieve your goal:
+
+### ❌ This must go:
+
+* `Vec<u8>`
+* `collect()`
+* `to_vec()`
+
+### ✅ Replace with:
+
+* `ByteStream`
+* `Bytes`
+* Arrow buffers
+
+---
+
+# 🔥 High-performance blueprint
+
+## Storage
+
+* returns `Stream<Item = ByteStream>`
+
+## Dataset
+
+* consumes stream
+* decodes incrementally
+* builds Arrow arrays in chunks
+
+## Python
+
+* uses Arrow FFI (zero-copy)
+
+---
+
+# 🚀 Next step (I recommend this)
+
+I can help you implement:
+
+### 1. Streaming decoder → Arrow builder
+
+(no intermediate Vec)
+
+### 2. True zero-copy Python bridge
+
+(no `.to_vec()`)
+
+### 3. Backpressure-aware pipeline (your `pipeline.rs` becomes real)
+
+---
+
+# 🧠 Key takeaway
+
+You’re **very close architecturally**, but:
+
+> The moment you call `collect()` or `to_vec()`, you lose zero-copy.
+
+---
+
+If you want, next I can:
+
+* refactor your `dataset::ingest` into a **streaming Arrow pipeline**
+* or wire this into a **Python iterator that yields Arrow batches**
+
+That’s the point where this becomes genuinely high-performance.

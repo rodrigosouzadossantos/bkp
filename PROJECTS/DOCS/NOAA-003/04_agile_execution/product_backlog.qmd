@@ -1,0 +1,6 @@
+# Product Backlog
+
+- [ ] **Epic:** Real-time Pipeline Stabilization
+    - [ ] Story: As a dev, I need a Redis sink for processed metadata.
+- [ ] **Epic:** Explainability Features
+    - [ ] Story: As a user, I want heatmaps on detection failures.

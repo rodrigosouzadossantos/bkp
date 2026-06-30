@@ -1,0 +1,140 @@
+# Scope Statement  
+
+## Purpose of This Document
+
+This Project Scope Statement formally defines the **project scope baseline at a
+narrative level**, specifying:
+
+- What is included in the project
+- What is explicitly excluded
+- The boundaries of the MVP
+- Key deliverables and acceptance criteria
+- Constraints and assumptions that shape execution
+
+This document is a **mandatory PMBOK artifact** and, together with the **WBS and
+WBS Dictionary**, forms the **Scope Baseline** of the project.
+
+---
+
+## Project Scope Description
+
+The project will design, develop, and validate an **AI-enabled environmental
+intelligence pipeline** to support **automated screening of AUV imagery**, with
+the primary objective of **protecting and scaling ecological analysis of benthic
+environments**.
+
+The solution will apply **Computer Vision techniques** to classify still images
+as:
+
+- **Benthic-relevant** (ecologically significant)
+- **Non-benthic / non-ecologically relevant**
+
+Automation is introduced strictly as an **enabler**, with **human-in-the-loop
+validation** maintained as a mandatory control to preserve ecological
+confidence.
+
+---
+
+## Product Scope (What Will Be Delivered)
+
+### Core Product Capabilities (MVP)
+
+- Automated screening of AUV still images using AI/CV
+- Batch, offline-first processing of inspection datasets
+- AI-assisted annotation workflows
+- Precision-oriented binary classification
+- Ecological validation and acceptance by environmental SMEs
+- Versioned datasets and model artifacts
+- Traceability and audit support
+
+---
+
+### Target Operational Context
+
+- Initial validation in at least one field (Viola or Espadarte)
+- Demonstrated generalization across two fields
+- Use in environmental baseline studies and inspection support
+
+---
+
+## Project Deliverables
+
+| Deliverable | Description | Acceptance Authority |
+|--------------|---------------------|-----------------|
+| AI Screening Model | Binary CV model for benthic relevance | Environmental SME Lead |
+| Inference Pipeline | Offline batch screening capability | Data Science Lead |
+| Annotation Guidelines | Ecological labeling rules | Environmental SMEs |
+| Validation Reports | Performance and ecological assurance | Sponsor / NOAA |
+| Versioned Datasets | Curated, auditable datasets | Data Governance |
+| Project Documentation | Governance and technical artifacts | Project Sponsor |
+
+---
+
+## Acceptance Criteria (High-Level)
+
+The project deliverables will be accepted when:
+
+- Ecological Data Protection Index (KPI‑3) meets or exceeds agreed threshold 
+  (≥ 85–90%)
+- Manual screening effort is reduced by ≥ 30% without ecological degradation
+- Environmental screening lead time is reduced by ≥ 25%
+- Environmental SMEs validate usability and confidence
+- Assets are versioned, auditable, and reusable
+
+---
+
+## Project Exclusions (Explicitly Out of Scope)
+
+The following are **explicitly excluded** from this project scope:
+
+- Real-time or near-real-time processing
+- Full taxonomic classification of organisms
+- Autonomous decision-making without human validation
+- Advanced multimodal fusion (sonar, bathymetry) beyond preparatory design
+- AUV operations, mission planning, or data acquisition
+- External data sharing or publication workflows
+
+---
+
+## Constraints
+
+- No pre-labeled dataset available at project start
+- Natural class imbalance in subsea imagery
+- Offline-first processing requirement
+- Environmental variability (turbidity, lighting, backscatter)
+- Use of license-compliant AI frameworks only
+- Availability of environmental SMEs for validation
+
+---
+
+## Assumptions
+
+- Still imagery is sufficient for MVP validation
+- Environmental SMEs will be available for iterative validation
+- Compute resources are available to support batch processing
+- Binary classification provides sufficient early value
+- MVP results will inform future expansion decisions
+
+---
+
+## Scope Control
+
+- Any change to this Scope Statement requires a **formal Change Request**
+- Changes must be evaluated for:
+  - Ecological risk
+  - Impact on OKRs and KPIs
+  - Schedule and cost implications
+- Scope changes are subject to Sponsor approval via Stage‑Gates
+
+---
+
+## Relationship to Other Scope Artifacts
+
+This Project Scope Statement is complemented by:
+
+- Work Breakdown Structure (WBS)
+- WBS Dictionary
+- Requirements Specification
+
+Together, these documents define the **Scope Baseline**.
+

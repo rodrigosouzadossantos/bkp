@@ -1,0 +1,6 @@
+---
+title: "OKR e Suas Variantes no Gerenciamento de Projeto com ferramentas Ágilde IA Submarina"
+author: "Time de IA Submarina"
+---
+
+{{< include docs/okr.qmd >}}

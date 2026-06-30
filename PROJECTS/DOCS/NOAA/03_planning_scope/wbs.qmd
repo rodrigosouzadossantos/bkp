@@ -1,0 +1,238 @@
+# {{< i18n wbs_label >}} {}
+
+
+## Purpose of This Document
+
+This document defines the **Work Breakdown Structure (WBS)** for the project,
+decomposing the authorized scope into manageable work packages.
+
+The WBS:
+
+- Is **deliverable-oriented**
+- Covers **100% of project scope**
+- Is aligned with **ecological value as the primary driver**
+- Serves as the foundation for Schedule, Cost, and Resource planning
+
+This artifact is mandatory **before the Project Management Plan (PMP)**.
+
+---
+
+## WBS – Hierarchical Structure (PMBOK Core)
+
+### Level 1 → Project
+
+**1.0 Subsea Benthic Analysis AI Project**
+
+---
+
+### Level 2 → Phases / Major Deliverables
+
+- **1.1 Initiation & Strategy**
+- **1.2 Governance & Value Management**
+- **1.3 Data & Environmental Preparation**
+- **1.4 AI Model Development**
+- **1.5 Validation & Ecological Assurance**
+- **1.6 Digital Asset Consolidation**
+- **1.7 Project Management & Control**
+
+---
+
+### Level 3 → Work Packages
+
+#### 1.1 Initiation & Strategy
+
+- 1.1.1 Project Charter
+- 1.1.2 Business Case
+- 1.1.3 Strategy & Governance (Value Stream, OKRs)
+- 1.1.4 Stakeholder Identification
+
+#### 1.2 Governance & Value Management
+
+- 1.2.1 OKR Definition & Alignment
+- 1.2.2 KPI Definition & Baseline
+- 1.2.3 Stage‑Gate Framework
+- 1.2.4 Governance Reviews
+
+#### 1.3 Data & Environmental Preparation
+
+- 1.3.1 AUV Image Ingestion
+- 1.3.2 Metadata & Spatial Data Preparation
+- 1.3.3 Image Quality Assessment
+- 1.3.4 Environmental Annotation Guidelines
+
+#### 1.4 AI Model Development
+
+- 1.4.1 Annotation & Labeling (HITL)
+- 1.4.2 Feature Engineering
+- 1.4.3 Model Training (Binary Classification)
+- 1.4.4 Model Inference Pipeline
+
+#### 1.5 Validation & Ecological Assurance
+
+- 1.5.1 Model Performance Evaluation
+- 1.5.2 Ecological Validation by SMEs
+- 1.5.3 Error Analysis & Mitigation
+- 1.5.4 MVP Ecological Acceptance
+
+#### 1.6 Digital Asset Consolidation
+
+- 1.6.1 Dataset Versioning
+- 1.6.2 Model Artifact Management
+- 1.6.3 Traceability & Audit Support
+- 1.6.4 Reuse Readiness Assessment
+
+#### 1.7 Project Management & Control
+
+- 1.7.1 Planning & Monitoring
+- 1.7.2 Risk & Issue Management
+- 1.7.3 Communication & Reporting
+- 1.7.4 Closure & Lessons Learned
+
+---
+
+## Visual Representation 1 — WBS Tree (Conceptual)
+
+```
+1.0 Subsea Benthic Analysis AI
+├── 1.1 Initiation & Strategy
+├── 1.2 Governance & Value
+├── 1.3 Data & Environment
+├── 1.4 AI Development
+├── 1.5 Ecological Validation
+├── 1.6 Digital Assets
+└── 1.7 Project Management
+```
+
+```{mermaid}
+flowchart TB
+  A["1.0 Subsea Benthic Analysis AI Project"]
+
+  A --> B["1.1 Initiation & Strategy"]
+  A --> C["1.2 Governance & Value Management"]
+  A --> D["1.3 Data & Environmental Preparation"]
+  A --> E["1.4 AI Model Development"]
+  A --> F["1.5 Validation & Ecological Assurance"]
+  A --> G["1.6 Digital Asset Consolidation"]
+  A --> H["1.7 Project Management & Control"]
+
+  B --> B1["Charter & Business Case"]
+  B --> B2["Strategy & OKRs"]
+  B --> B3["Stakeholder Register"]
+
+  D --> D1["AUV Image Ingestion"]
+  D --> D2["Metadata & Spatial Data"]
+  D --> D3["Image Quality Assessment"]
+  D --> D4["Environmental Annotation Guidelines"]
+
+  E --> E1["Annotation (HITL)"]
+  E --> E2["Model Training"]
+  E --> E3["Inference Pipeline"]
+
+  F --> F1["Ecological Validation (SME)"]
+  F --> F2["Error Analysis"]
+  F --> F3["MVP Acceptance"]
+
+  G --> G1["Dataset Versioning"]
+  G --> G2["Model Artifacts"]
+  G --> G3["Audit & Traceability"]
+```
+
+
+---
+
+## Visual Representation 2 — Value-Oriented WBS (Ecology-First)
+
+```
+Ecological Confidence
+     │
+     ├── Environmental Data Preparation (1.3)
+     ├── Ecological Validation (1.5)
+     │
+     └── AI as Enabler
+           ├── Annotation & Model (1.4)
+           └── Digital Assets (1.6)
+```
+
+```{mermaid}
+flowchart TB
+  ECO["Ecological Confidence & Environmental Protection"]
+
+  ECO --> P1["Environmental Data Preparation"]
+  ECO --> P2["Ecological Validation & Assurance"]
+
+  P1 --> D1["AUV Image Ingestion"]
+  P1 --> D2["Quality & Noise Reduction"]
+
+  P2 --> V1["SME Validation"]
+  P2 --> V2["False-Negative Control"]
+
+  ECO --> EN["AI as Strategic Enabler"]
+
+  EN --> A1["AI Model Development"]
+  EN --> A2["Automated Screening"]
+  EN --> A3["Digital Asset Creation"]
+
+  A3 --> L1["Reusable Environmental Intelligence"]
+```
+
+**Interpretation:**  
+
+AI exists to scale ecological understanding, not the reverse.
+
+---
+
+## Visual Representation 3 — WBS × OKR/KR Mapping (Excerpt)
+
+| WBS Element | OKR / KR Supported |
+|-----------|--------------------|
+| 1.3 Data Preparation | KR3, KR5 |
+| 1.4 AI Development | KR1, KR2, KR3 |
+| 1.5 Ecological Validation | KR3 (Primary) |
+| 1.6 Digital Assets | KR4, KR5 |
+| 1.7 Project Control | All KRs |
+
+```{mermaid}
+flowchart LR
+  W1["1.3 Data Preparation"]
+  W2["1.4 AI Development"]
+  W3["1.5 Ecological Validation"]
+  W4["1.6 Digital Assets"]
+
+  KR1["KR1<br/>Expert Focus"]
+  KR2["KR2<br/>Faster Environmental Insight"]
+  KR3["KR3<br/>Ecological Data Protection"]
+  KR4["KR4<br/>Cross-Field Consistency"]
+  KR5["KR5<br/>Reusable Environmental Asset"]
+
+  W1 --> KR3
+  W1 --> KR5
+
+  W2 --> KR1
+  W2 --> KR2
+  W2 --> KR3
+
+  W3 --> KR3
+
+  W4 --> KR4
+  W4 --> KR5
+```
+
+---
+
+## WBS Governance Rules
+
+- Every WBS element must support at least one KR
+- No work package may proceed without ecological validation where applicable
+- Changes to WBS require formal change control
+
+---
+
+## WBS Baseline
+
+This WBS becomes the **scope baseline** upon approval and is the authoritative
+reference for:
+
+- Schedule development
+- Cost estimation
+- Resource planning
+

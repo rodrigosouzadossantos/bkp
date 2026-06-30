@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>1&nbsp; Uso de GitHub para gestão de OKRs e execução técnica – Integração do Github Project com OKRs: Personalizações e Justificativas</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./summary.html" rel="next">
+<link href="./index.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-61780a260fdcf47536a34fde95582725.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-a0d86ff555b7c69e18afd46337634e9c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Nenhum resultado",
+    "search-matching-documents-text": "documentos correspondentes",
+    "search-copy-link-title": "Copiar link para a busca",
+    "search-hide-matches-text": "Esconder correspondências adicionais",
+    "search-more-match-text": "mais correspondência neste documento",
+    "search-more-matches-text": "mais correspondências neste documento",
+    "search-clear-button-title": "Limpar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Procurar"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./intro.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Uso de GitHub para gestão de OKRs e execução técnica</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Procurar" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Integração do Github Project com OKRs: Personalizações e Justificativas</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Procurar"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./intro.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Uso de GitHub para gestão de OKRs e execução técnica</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./summary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">summary.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Índice</h2>
+   
+  <ul>
+  <li><a href="#uso-de-github-projects-para-gestão-de-okrs" id="toc-uso-de-github-projects-para-gestão-de-okrs" class="nav-link active" data-scroll-target="#uso-de-github-projects-para-gestão-de-okrs"><span class="header-section-number">2</span> Uso de GitHub Projects para gestão de OKRs</a>
+  <ul class="collapse">
+  <li><a href="#descrição" id="toc-descrição" class="nav-link" data-scroll-target="#descrição"><span class="header-section-number">2.1</span> Descrição</a></li>
+  <li><a href="#como-ele-é-usado-no-modelo-okr" id="toc-como-ele-é-usado-no-modelo-okr" class="nav-link" data-scroll-target="#como-ele-é-usado-no-modelo-okr"><span class="header-section-number">2.2</span> Como ele é usado no modelo OKR</a></li>
+  <li><a href="#justificativa" id="toc-justificativa" class="nav-link" data-scroll-target="#justificativa"><span class="header-section-number">2.3</span> Justificativa</a>
+  <ul class="collapse">
+  <li><a href="#integração-direta-com-desenvolvimento" id="toc-integração-direta-com-desenvolvimento" class="nav-link" data-scroll-target="#integração-direta-com-desenvolvimento"><span class="header-section-number">2.3.1</span> Integração direta com desenvolvimento</a></li>
+  <li><a href="#visibilidade-estratégica" id="toc-visibilidade-estratégica" class="nav-link" data-scroll-target="#visibilidade-estratégica"><span class="header-section-number">2.3.2</span> Visibilidade estratégica</a></li>
+  <li><a href="#transparência-organizacional" id="toc-transparência-organizacional" class="nav-link" data-scroll-target="#transparência-organizacional"><span class="header-section-number">2.3.3</span> Transparência organizacional</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#uso-de-issue-types-para-estruturação-de-okrs" id="toc-uso-de-issue-types-para-estruturação-de-okrs" class="nav-link" data-scroll-target="#uso-de-issue-types-para-estruturação-de-okrs"><span class="header-section-number">3</span> Uso de Issue Types para estruturação de OKRs</a>
+  <ul class="collapse">
+  <li><a href="#descrição-1" id="toc-descrição-1" class="nav-link" data-scroll-target="#descrição-1"><span class="header-section-number">3.1</span> Descrição</a></li>
+  <li><a href="#estrutura-organizacional-dos-okrs" id="toc-estrutura-organizacional-dos-okrs" class="nav-link" data-scroll-target="#estrutura-organizacional-dos-okrs"><span class="header-section-number">3.2</span> Estrutura organizacional dos OKRs</a></li>
+  <li><a href="#objective-o" id="toc-objective-o" class="nav-link" data-scroll-target="#objective-o"><span class="header-section-number">3.3</span> Objective (O)</a></li>
+  <li><a href="#key-result-kr" id="toc-key-result-kr" class="nav-link" data-scroll-target="#key-result-kr"><span class="header-section-number">3.4</span> Key Result (KR)</a></li>
+  <li><a href="#epic" id="toc-epic" class="nav-link" data-scroll-target="#epic"><span class="header-section-number">3.5</span> Epic</a></li>
+  <li><a href="#story" id="toc-story" class="nav-link" data-scroll-target="#story"><span class="header-section-number">3.6</span> Story</a></li>
+  <li><a href="#task" id="toc-task" class="nav-link" data-scroll-target="#task"><span class="header-section-number">3.7</span> Task</a></li>
+  </ul></li>
+  <li><a href="#por-que-labels-não-são-suficientes" id="toc-por-que-labels-não-são-suficientes" class="nav-link" data-scroll-target="#por-que-labels-não-são-suficientes"><span class="header-section-number">4</span> Por que labels não são suficientes</a>
+  <ul class="collapse">
+  <li><a href="#limitações-do-uso-exclusivo-de-labels" id="toc-limitações-do-uso-exclusivo-de-labels" class="nav-link" data-scroll-target="#limitações-do-uso-exclusivo-de-labels"><span class="header-section-number">4.1</span> Limitações do uso exclusivo de labels</a>
+  <ul class="collapse">
+  <li><a href="#falta-de-exclusividade-semântica" id="toc-falta-de-exclusividade-semântica" class="nav-link" data-scroll-target="#falta-de-exclusividade-semântica"><span class="header-section-number">4.1.1</span> Falta de exclusividade semântica</a></li>
+  <li><a href="#falta-de-semântica-estrutural" id="toc-falta-de-semântica-estrutural" class="nav-link" data-scroll-target="#falta-de-semântica-estrutural"><span class="header-section-number">4.1.2</span> Falta de semântica estrutural</a></li>
+  <li><a href="#baixa-confiabilidade-para-automação" id="toc-baixa-confiabilidade-para-automação" class="nav-link" data-scroll-target="#baixa-confiabilidade-para-automação"><span class="header-section-number">4.1.3</span> Baixa confiabilidade para automação</a></li>
+  <li><a href="#falta-de-padronização" id="toc-falta-de-padronização" class="nav-link" data-scroll-target="#falta-de-padronização"><span class="header-section-number">4.1.4</span> Falta de padronização</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#diferença-conceitual-entre-issue-types-e-labels" id="toc-diferença-conceitual-entre-issue-types-e-labels" class="nav-link" data-scroll-target="#diferença-conceitual-entre-issue-types-e-labels"><span class="header-section-number">5</span> Diferença conceitual entre Issue Types e Labels</a>
+  <ul class="collapse">
+  <li><a href="#analogia-organizacional" id="toc-analogia-organizacional" class="nav-link" data-scroll-target="#analogia-organizacional"><span class="header-section-number">5.1</span> Analogia organizacional</a></li>
+  </ul></li>
+  <li><a href="#como-issue-types-serão-usados-no-github-projects" id="toc-como-issue-types-serão-usados-no-github-projects" class="nav-link" data-scroll-target="#como-issue-types-serão-usados-no-github-projects"><span class="header-section-number">6</span> Como Issue Types serão usados no GitHub Projects</a>
+  <ul class="collapse">
+  <li><a href="#visão-estratégica" id="toc-visão-estratégica" class="nav-link" data-scroll-target="#visão-estratégica"><span class="header-section-number">6.1</span> Visão estratégica</a></li>
+  <li><a href="#visão-de-execução" id="toc-visão-de-execução" class="nav-link" data-scroll-target="#visão-de-execução"><span class="header-section-number">6.2</span> Visão de execução</a></li>
+  <li><a href="#visão-completa" id="toc-visão-completa" class="nav-link" data-scroll-target="#visão-completa"><span class="header-section-number">6.3</span> Visão completa</a></li>
+  </ul></li>
+  <li><a href="#papel-complementar-das-labels" id="toc-papel-complementar-das-labels" class="nav-link" data-scroll-target="#papel-complementar-das-labels"><span class="header-section-number">7</span> Papel complementar das labels</a></li>
+  <li><a href="#uso-de-github-actions-para-automação-do-processo" id="toc-uso-de-github-actions-para-automação-do-processo" class="nav-link" data-scroll-target="#uso-de-github-actions-para-automação-do-processo"><span class="header-section-number">8</span> Uso de GitHub Actions para automação do processo</a>
+  <ul class="collapse">
+  <li><a href="#descrição-2" id="toc-descrição-2" class="nav-link" data-scroll-target="#descrição-2"><span class="header-section-number">8.1</span> Descrição</a></li>
+  <li><a href="#aplicação-no-fluxo-de-okrs" id="toc-aplicação-no-fluxo-de-okrs" class="nav-link" data-scroll-target="#aplicação-no-fluxo-de-okrs"><span class="header-section-number">8.2</span> Aplicação no fluxo de OKRs</a>
+  <ul class="collapse">
+  <li><a href="#validação-estrutural" id="toc-validação-estrutural" class="nav-link" data-scroll-target="#validação-estrutural"><span class="header-section-number">8.2.1</span> Validação estrutural</a></li>
+  <li><a href="#atualização-automática-de-progresso" id="toc-atualização-automática-de-progresso" class="nav-link" data-scroll-target="#atualização-automática-de-progresso"><span class="header-section-number">8.2.2</span> Atualização automática de progresso</a></li>
+  <li><a href="#atualização-automática-de-dashboards" id="toc-atualização-automática-de-dashboards" class="nav-link" data-scroll-target="#atualização-automática-de-dashboards"><span class="header-section-number">8.2.3</span> Atualização automática de dashboards</a></li>
+  </ul></li>
+  <li><a href="#justificativa-1" id="toc-justificativa-1" class="nav-link" data-scroll-target="#justificativa-1"><span class="header-section-number">8.3</span> Justificativa</a>
+  <ul class="collapse">
+  <li><a href="#redução-de-trabalho-manual" id="toc-redução-de-trabalho-manual" class="nav-link" data-scroll-target="#redução-de-trabalho-manual"><span class="header-section-number">8.3.1</span> Redução de trabalho manual</a></li>
+  <li><a href="#confiabilidade-dos-dados" id="toc-confiabilidade-dos-dados" class="nav-link" data-scroll-target="#confiabilidade-dos-dados"><span class="header-section-number">8.3.2</span> Confiabilidade dos dados</a></li>
+  <li><a href="#integração-com-fluxo-de-engenharia" id="toc-integração-com-fluxo-de-engenharia" class="nav-link" data-scroll-target="#integração-com-fluxo-de-engenharia"><span class="header-section-number">8.3.3</span> Integração com fluxo de engenharia</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#conclusão" id="toc-conclusão" class="nav-link" data-scroll-target="#conclusão"><span class="header-section-number">9</span> Conclusão</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Uso de GitHub para gestão de OKRs e execução técnica</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Esta seção descreve a abordagem adotada para implementar <strong>OKRs (Objectives and Key Results)</strong> dentro do fluxo de desenvolvimento usando <strong>GitHub</strong>, combinando:</p>
+<ul>
+<li><strong>GitHub Projects</strong></li>
+<li><strong>Issue Types</strong></li>
+<li><strong>Labels</strong></li>
+<li><strong>GitHub Actions</strong></li>
+</ul>
+<p>Essa integração permite conectar <strong>planejamento estratégico, execução técnica e monitoramento de progresso</strong> dentro de uma única plataforma.</p>
+<hr>
+<section id="uso-de-github-projects-para-gestão-de-okrs" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Uso de GitHub Projects para gestão de OKRs</h1>
+<section id="descrição" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="descrição"><span class="header-section-number">2.1</span> Descrição</h2>
+<p><strong>GitHub Projects</strong> é um sistema integrado ao repositório que permite organizar issues em <strong>quadros, tabelas e dashboards</strong>, adicionando campos estruturados como status, responsável, prioridade e progresso.</p>
+<p>No contexto de OKRs, ele funciona como um <strong>painel central de acompanhamento estratégico</strong>, conectando diretamente os objetivos organizacionais às atividades de engenharia.</p>
+<hr>
+</section>
+<section id="como-ele-é-usado-no-modelo-okr" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="como-ele-é-usado-no-modelo-okr"><span class="header-section-number">2.2</span> Como ele é usado no modelo OKR</h2>
+<p>A estrutura implementada é baseada na seguinte hierarquia:</p>
+<pre class="text"><code>Objective (O)
+   ↓
+Key Result (KR)
+   ↓
+Epic
+   ↓
+Story
+   ↓
+Task</code></pre>
+<p>Essa hierarquia conecta <strong>direção estratégica</strong> com <strong>trabalho técnico executável</strong>.</p>
+<p>No <strong>GitHub Projects</strong>, isso permite:</p>
+<ul>
+<li>visualizar progresso dos OKRs</li>
+<li>acompanhar execução técnica</li>
+<li>identificar dependências</li>
+<li>monitorar evolução das iniciativas</li>
+</ul>
+<p>Exemplo de organização:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Tipo</th>
+<th>Item</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Objective</td>
+<td>Automatizar inspeções submarinas</td>
+<td>Em andamento</td>
+</tr>
+<tr class="even">
+<td>Key Result</td>
+<td>Aumentar precisão do modelo para 90%</td>
+<td>Em andamento</td>
+</tr>
+<tr class="odd">
+<td>Epic</td>
+<td>Pipeline de visão computacional</td>
+<td>Planejado</td>
+</tr>
+<tr class="even">
+<td>Story</td>
+<td>Treinar modelo de detecção</td>
+<td>Em andamento</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="justificativa" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="justificativa"><span class="header-section-number">2.3</span> Justificativa</h2>
+<section id="integração-direta-com-desenvolvimento" class="level3" data-number="2.3.1">
+<h3 data-number="2.3.1" class="anchored" data-anchor-id="integração-direta-com-desenvolvimento"><span class="header-section-number">2.3.1</span> Integração direta com desenvolvimento</h3>
+<p>Ao contrário de ferramentas externas de gestão, o Projects está <strong>diretamente integrado ao repositório</strong>, permitindo:</p>
+<ul>
+<li>ligação com código</li>
+<li>ligação com pull requests</li>
+<li>rastreabilidade completa</li>
+</ul>
+<p>Isso reduz desalinhamentos entre <strong>planejamento e execução</strong>.</p>
+<hr>
+</section>
+<section id="visibilidade-estratégica" class="level3" data-number="2.3.2">
+<h3 data-number="2.3.2" class="anchored" data-anchor-id="visibilidade-estratégica"><span class="header-section-number">2.3.2</span> Visibilidade estratégica</h3>
+<p>OKRs são instrumentos de <strong>direcionamento organizacional</strong>.</p>
+<p>GitHub Projects permite visualizar:</p>
+<ul>
+<li>objetivos ativos</li>
+<li>resultados-chave associados</li>
+<li>progresso de iniciativas</li>
+</ul>
+<p>O repositório passa a funcionar como <strong>painel de execução estratégica</strong>.</p>
+<hr>
+</section>
+<section id="transparência-organizacional" class="level3" data-number="2.3.3">
+<h3 data-number="2.3.3" class="anchored" data-anchor-id="transparência-organizacional"><span class="header-section-number">2.3.3</span> Transparência organizacional</h3>
+<p>Como o projeto é visível para toda a equipe:</p>
+<ul>
+<li>melhora comunicação</li>
+<li>reduz dependência de relatórios manuais</li>
+<li>aumenta alinhamento entre áreas técnicas e estratégicas.</li>
+</ul>
+<hr>
+</section>
+</section>
+</section>
+<section id="uso-de-issue-types-para-estruturação-de-okrs" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Uso de Issue Types para estruturação de OKRs</h1>
+<section id="descrição-1" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="descrição-1"><span class="header-section-number">3.1</span> Descrição</h2>
+<p><strong>Issue Types</strong> permitem classificar issues de forma estruturada, definindo <strong>o papel que cada issue desempenha no processo de planejamento e execução</strong>.</p>
+<p>No modelo adotado, os tipos utilizados são:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Tipo</th>
+<th>Função</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Objective</td>
+<td>objetivo estratégico</td>
+</tr>
+<tr class="even">
+<td>Key Result</td>
+<td>métrica mensurável</td>
+</tr>
+<tr class="odd">
+<td>Epic</td>
+<td>grande iniciativa</td>
+</tr>
+<tr class="even">
+<td>Story</td>
+<td>funcionalidade</td>
+</tr>
+<tr class="odd">
+<td>Task</td>
+<td>implementação técnica</td>
+</tr>
+</tbody>
+</table>
+<p>Esses tipos refletem os diferentes níveis da hierarquia de planejamento.</p>
+<hr>
+</section>
+<section id="estrutura-organizacional-dos-okrs" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="estrutura-organizacional-dos-okrs"><span class="header-section-number">3.2</span> Estrutura organizacional dos OKRs</h2>
+<p>A estrutura implementada segue o modelo:</p>
+<pre class="text"><code>Objective
+   ↓
+Key Result
+   ↓
+Epic
+   ↓
+Story
+   ↓
+Task</code></pre>
+<p>Isso permite navegar da estratégia até o trabalho de engenharia.</p>
+<hr>
+</section>
+<section id="objective-o" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="objective-o"><span class="header-section-number">3.3</span> Objective (O)</h2>
+<p>Representa o <strong>resultado estratégico desejado</strong>.</p>
+<p>Características:</p>
+<ul>
+<li>qualitativo</li>
+<li>orientado a impacto</li>
+<li>define direção organizacional</li>
+</ul>
+<p>Exemplo:</p>
+<pre><code>Melhorar eficiência das inspeções submarinas com AUV</code></pre>
+<hr>
+</section>
+<section id="key-result-kr" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="key-result-kr"><span class="header-section-number">3.4</span> Key Result (KR)</h2>
+<p>Representa <strong>uma métrica que mede progresso do Objective</strong>.</p>
+<p>Características:</p>
+<ul>
+<li>quantitativo</li>
+<li>mensurável</li>
+<li>verificável</li>
+</ul>
+<p>Exemplo:</p>
+<pre><code>Aumentar precisão do modelo de detecção de corrosão de 70% para 90%</code></pre>
+<hr>
+</section>
+<section id="epic" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="epic"><span class="header-section-number">3.5</span> Epic</h2>
+<p>Representa uma <strong>iniciativa técnica significativa</strong> necessária para alcançar um KR.</p>
+<p>Exemplo:</p>
+<pre><code>Desenvolver pipeline de processamento de vídeo submarino</code></pre>
+<hr>
+</section>
+<section id="story" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="story"><span class="header-section-number">3.6</span> Story</h2>
+<p>Representa uma <strong>funcionalidade específica ou requisito técnico</strong>.</p>
+<p>Exemplo:</p>
+<pre><code>Detectar corrosão em imagens de inspeção submarina</code></pre>
+<hr>
+</section>
+<section id="task" class="level2" data-number="3.7">
+<h2 data-number="3.7" class="anchored" data-anchor-id="task"><span class="header-section-number">3.7</span> Task</h2>
+<p>Representa <strong>uma atividade técnica concreta</strong>.</p>
+<p>Exemplo:</p>
+<pre><code>Implementar script de extração de frames de vídeo</code></pre>
+<hr>
+</section>
+</section>
+<section id="por-que-labels-não-são-suficientes" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Por que labels não são suficientes</h1>
+<p>Embora labels sejam úteis para classificação, <strong>elas não substituem Issue Types</strong> em uma estrutura de OKRs.</p>
+<hr>
+<section id="limitações-do-uso-exclusivo-de-labels" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="limitações-do-uso-exclusivo-de-labels"><span class="header-section-number">4.1</span> Limitações do uso exclusivo de labels</h2>
+<section id="falta-de-exclusividade-semântica" class="level3" data-number="4.1.1">
+<h3 data-number="4.1.1" class="anchored" data-anchor-id="falta-de-exclusividade-semântica"><span class="header-section-number">4.1.1</span> Falta de exclusividade semântica</h3>
+<p>Uma issue pode ter múltiplas labels.</p>
+<p>Exemplo:</p>
+<pre><code>okr
+ml
+priority-high
+objective
+key-result</code></pre>
+<p>Nada impede que uma mesma issue tenha <strong>labels conflitantes</strong>.</p>
+<p>Issue Types evitam isso porque <strong>cada issue possui apenas um tipo principal</strong>.</p>
+<hr>
+</section>
+<section id="falta-de-semântica-estrutural" class="level3" data-number="4.1.2">
+<h3 data-number="4.1.2" class="anchored" data-anchor-id="falta-de-semântica-estrutural"><span class="header-section-number">4.1.2</span> Falta de semântica estrutural</h3>
+<p>Labels são apenas etiquetas.</p>
+<p>Elas não indicam:</p>
+<ul>
+<li>papel da issue</li>
+<li>posição na hierarquia</li>
+<li>relação com planejamento estratégico</li>
+</ul>
+<p>Issue Types definem <strong>categorias formais de trabalho</strong>.</p>
+<hr>
+</section>
+<section id="baixa-confiabilidade-para-automação" class="level3" data-number="4.1.3">
+<h3 data-number="4.1.3" class="anchored" data-anchor-id="baixa-confiabilidade-para-automação"><span class="header-section-number">4.1.3</span> Baixa confiabilidade para automação</h3>
+<p>Labels podem:</p>
+<ul>
+<li>ser removidas</li>
+<li>ser aplicadas incorretamente</li>
+<li>existir duplicadas</li>
+</ul>
+<p>Isso reduz confiabilidade para automação.</p>
+<p>Issue Types fornecem <strong>estrutura confiável para workflows automatizados</strong>.</p>
+<hr>
+</section>
+<section id="falta-de-padronização" class="level3" data-number="4.1.4">
+<h3 data-number="4.1.4" class="anchored" data-anchor-id="falta-de-padronização"><span class="header-section-number">4.1.4</span> Falta de padronização</h3>
+<p>Labels podem ser criadas livremente, gerando inconsistências como:</p>
+<pre><code>objective
+objectives
+okr-objective
+goal</code></pre>
+<p>Issue Types garantem <strong>padronização organizacional</strong>.</p>
+<hr>
+</section>
+</section>
+</section>
+<section id="diferença-conceitual-entre-issue-types-e-labels" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Diferença conceitual entre Issue Types e Labels</h1>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 35%">
+<col style="width: 35%">
+<col style="width: 29%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Aspecto</th>
+<th>Issue Types</th>
+<th>Labels</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Função</td>
+<td>definir papel estrutural</td>
+<td>categorizar conteúdo</td>
+</tr>
+<tr class="even">
+<td>Quantidade por issue</td>
+<td>1 principal</td>
+<td>múltiplas</td>
+</tr>
+<tr class="odd">
+<td>Estrutura organizacional</td>
+<td>sim</td>
+<td>não</td>
+</tr>
+<tr class="even">
+<td>Semântica</td>
+<td>forte</td>
+<td>fraca</td>
+</tr>
+<tr class="odd">
+<td>Automação</td>
+<td>confiável</td>
+<td>limitada</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<section id="analogia-organizacional" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="analogia-organizacional"><span class="header-section-number">5.1</span> Analogia organizacional</h2>
+<p>Issue Types são comparáveis a <strong>tipos de documento</strong>:</p>
+<pre><code>Contrato
+Relatório
+Proposta</code></pre>
+<p>Labels são comparáveis a <strong>tags de classificação</strong>:</p>
+<pre><code>financeiro
+urgente
+cliente-A</code></pre>
+<p>Ambos são úteis, mas cumprem papéis diferentes.</p>
+<hr>
+</section>
+</section>
+<section id="como-issue-types-serão-usados-no-github-projects" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Como Issue Types serão usados no GitHub Projects</h1>
+<p>No <strong>GitHub Projects</strong>, Issue Types permitem criar diferentes visões do trabalho.</p>
+<hr>
+<section id="visão-estratégica" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="visão-estratégica"><span class="header-section-number">6.1</span> Visão estratégica</h2>
+<p>Filtro:</p>
+<pre><code>type:objective
+type:key-result</code></pre>
+<p>Mostra apenas OKRs.</p>
+<hr>
+</section>
+<section id="visão-de-execução" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="visão-de-execução"><span class="header-section-number">6.2</span> Visão de execução</h2>
+<p>Filtro:</p>
+<pre><code>type:epic
+type:story
+type:task</code></pre>
+<p>Mostra backlog técnico.</p>
+<hr>
+</section>
+<section id="visão-completa" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="visão-completa"><span class="header-section-number">6.3</span> Visão completa</h2>
+<pre><code>Objective
+  → Key Result
+     → Epic
+        → Story
+           → Task</code></pre>
+<p>Isso permite navegar do planejamento até a implementação.</p>
+<hr>
+</section>
+</section>
+<section id="papel-complementar-das-labels" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> Papel complementar das labels</h1>
+<p>Labels continuam sendo úteis para <strong>classificação temática ou operacional</strong>.</p>
+<p>Exemplos:</p>
+<pre><code>ml
+computer-vision
+dataset
+auv
+subsea
+research
+priority-high</code></pre>
+<p>Assim:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Elemento</th>
+<th>Função</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Issue Type</td>
+<td>papel estrutural da issue</td>
+</tr>
+<tr class="even">
+<td>Labels</td>
+<td>categorização temática</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="uso-de-github-actions-para-automação-do-processo" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> Uso de GitHub Actions para automação do processo</h1>
+<section id="descrição-2" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="descrição-2"><span class="header-section-number">8.1</span> Descrição</h2>
+<p><strong>GitHub Actions</strong> permite automatizar processos baseados em eventos do repositório.</p>
+<p>Workflows podem ser executados quando:</p>
+<ul>
+<li>issues são criadas</li>
+<li>issues são editadas</li>
+<li>issues são fechadas</li>
+<li>pull requests são abertos</li>
+</ul>
+<hr>
+</section>
+<section id="aplicação-no-fluxo-de-okrs" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="aplicação-no-fluxo-de-okrs"><span class="header-section-number">8.2</span> Aplicação no fluxo de OKRs</h2>
+<section id="validação-estrutural" class="level3" data-number="8.2.1">
+<h3 data-number="8.2.1" class="anchored" data-anchor-id="validação-estrutural"><span class="header-section-number">8.2.1</span> Validação estrutural</h3>
+<p>Quando um KR é criado, um workflow pode verificar se ele referencia um Objective válido.</p>
+<hr>
+</section>
+<section id="atualização-automática-de-progresso" class="level3" data-number="8.2.2">
+<h3 data-number="8.2.2" class="anchored" data-anchor-id="atualização-automática-de-progresso"><span class="header-section-number">8.2.2</span> Atualização automática de progresso</h3>
+<p>O progresso de um KR pode ser calculado com base em:</p>
+<ul>
+<li>tarefas concluídas</li>
+<li>checklists</li>
+<li>issues relacionadas</li>
+</ul>
+<hr>
+</section>
+<section id="atualização-automática-de-dashboards" class="level3" data-number="8.2.3">
+<h3 data-number="8.2.3" class="anchored" data-anchor-id="atualização-automática-de-dashboards"><span class="header-section-number">8.2.3</span> Atualização automática de dashboards</h3>
+<p>Actions podem atualizar:</p>
+<ul>
+<li>campos no GitHub Projects</li>
+<li>relatórios de progresso</li>
+<li>comentários automáticos</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="justificativa-1" class="level2" data-number="8.3">
+<h2 data-number="8.3" class="anchored" data-anchor-id="justificativa-1"><span class="header-section-number">8.3</span> Justificativa</h2>
+<section id="redução-de-trabalho-manual" class="level3" data-number="8.3.1">
+<h3 data-number="8.3.1" class="anchored" data-anchor-id="redução-de-trabalho-manual"><span class="header-section-number">8.3.1</span> Redução de trabalho manual</h3>
+<p>Sem automação seria necessário:</p>
+<ul>
+<li>atualizar progresso manualmente</li>
+<li>gerar relatórios</li>
+<li>verificar consistência</li>
+</ul>
+<p>Actions eliminam essas tarefas repetitivas.</p>
+<hr>
+</section>
+<section id="confiabilidade-dos-dados" class="level3" data-number="8.3.2">
+<h3 data-number="8.3.2" class="anchored" data-anchor-id="confiabilidade-dos-dados"><span class="header-section-number">8.3.2</span> Confiabilidade dos dados</h3>
+<p>A automação garante que métricas derivem diretamente do trabalho realizado.</p>
+<hr>
+</section>
+<section id="integração-com-fluxo-de-engenharia" class="level3" data-number="8.3.3">
+<h3 data-number="8.3.3" class="anchored" data-anchor-id="integração-com-fluxo-de-engenharia"><span class="header-section-number">8.3.3</span> Integração com fluxo de engenharia</h3>
+<p>Como workflows são acionados por eventos do repositório, o progresso dos OKRs permanece <strong>diretamente conectado ao desenvolvimento real</strong>.</p>
+<hr>
+</section>
+</section>
+</section>
+<section id="conclusão" class="level1" data-number="9">
+<h1 data-number="9"><span class="header-section-number">9</span> Conclusão</h1>
+<p>A combinação de:</p>
+<ul>
+<li><strong>GitHub Projects</strong></li>
+<li><strong>Issue Types</strong></li>
+<li><strong>Labels</strong></li>
+<li><strong>GitHub Actions</strong></li>
+</ul>
+<p>permite criar um sistema em que:</p>
+<ul>
+<li>OKRs definem direção estratégica</li>
+<li>issues estruturam o trabalho</li>
+<li>actions automatizam acompanhamento</li>
+<li>projects fornecem visibilidade</li>
+</ul>
+<p>Essa abordagem conecta <strong>planejamento estratégico, execução técnica e monitoramento de progresso</strong>, garantindo <strong>rastreabilidade, transparência e escalabilidade organizacional</strong>.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiada");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiada");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./index.html" class="pagination-link" aria-label="Preface">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Preface</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./summary.html" class="pagination-link" aria-label="summary.html">
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">summary.html</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

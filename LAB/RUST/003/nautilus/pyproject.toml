@@ -1,0 +1,31 @@
+[project]
+name = "nautilus"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Rodrigo Souza dos Santos", email = "rodrigo.santos35.prestserv@petrobras.com.br" }
+]
+requires-python = ">=3.13"
+dependencies = []
+
+[tool.maturin]
+manifest-path = "core/Cargo.toml"
+
+module-name = "nautilus._core"
+python-packages = ["nautilus"]
+python-source = "python/src"
+
+[tool.uv]
+cache-keys = [
+  { file = "pyproject.toml" },
+  { file = "Cargo.toml" },
+  { file = "Cargo.lock" },
+  { file = "core/src/**/*.rs" },
+  { file = "storage/src/**/*.rs" }
+  #{ file = "experiments/src/**/*.rs"  }
+]
+
+[build-system]
+requires = ["maturin>=1.0,<2.0"]
+build-backend = "maturin"

@@ -1,0 +1,337 @@
+Below is a **complete metadata + EDA extraction pipeline design** tailored for an **unlabeled seabed image dataset** like your example (ImageMagick + embedded XML telemetry + camera acquisition data).
+
+---
+
+# 1. Target Metadata Schema (Normalized for EDA)
+
+We convert heterogeneous metadata into a **single flat schema** suitable for CSV/Parquet:
+
+## 📦 Core Image Fields
+
+* `filename`
+* `filesize_mb`
+* `width`, `height`
+* `aspect_ratio`
+* `format`
+* `colorspace`
+* `bit_depth`
+* `compression_quality`
+
+## 🎛️ Image Statistics (from ImageMagick)
+
+* `mean_r`, `mean_g`, `mean_b`
+* `std_r`, `std_g`, `std_b`
+* `min_r`, `min_g`, `min_b`
+* `max_r`, `max_g`, `max_b`
+* `entropy_r`, `entropy_g`, `entropy_b`
+* `overall_mean`, `overall_std`, `overall_entropy`
+* `brightness_proxy` (computed)
+
+## 🌊 Geospatial / Ocean Context (from embedded XML)
+
+* `latitude`
+* `longitude`
+* `depth_m`
+* `altitude_m`
+
+## 🧭 Vehicle Orientation
+
+* `pitch`
+* `roll`
+* `yaw`
+
+## 📷 Camera Acquisition Parameters
+
+* `exposure`
+* `aperture`
+* `focus`
+* `digital_gain`
+* `analog_gain`
+* `sensor_gain`
+
+## ⚙️ System / Hardware
+
+* `camera_model`
+* `serial_number`
+* `firmware_version`
+
+## 🧪 Processing Metadata
+
+* `software_version`
+* `processing_filters`
+* `timestamp_acquired`
+* `timestamp_received`
+
+---
+
+# 2. Pipeline Overview
+
+We extract metadata in 3 layers:
+
+### Layer 1 — ImageMagick (visual stats)
+
+* geometry
+* color stats
+* entropy
+* compression
+
+### Layer 2 — EXIFTool (structured metadata)
+
+* file info
+* timestamps
+* EXIF fields
+
+### Layer 3 — Embedded XML (custom seabed telemetry)
+
+* GPS
+* depth
+* orientation
+* acquisition settings
+
+---
+
+# 3. Full Bash Pipeline
+
+## 📁 `setup_seabed_metadata_pipeline.sh`
+
+```bash
+#!/bin/bash
+set -e
+
+#############################################
+# 1. Install dependencies
+#############################################
+
+echo "[1/5] Installing dependencies..."
+
+sudo apt-get update
+sudo apt-get install -y \
+    imagemagick \
+    exiftool \
+    jq \
+    parallel \
+    xmlstarlet \
+    python3 \
+    python3-pip
+
+pip3 install pandas numpy lxml tqdm
+
+#############################################
+# 2. Directories
+#############################################
+
+DATA_DIR="./images"
+OUT_DIR="./metadata"
+RAW_DIR="$OUT_DIR/raw"
+PARSED_DIR="$OUT_DIR/parsed"
+
+mkdir -p "$RAW_DIR" "$PARSED_DIR"
+
+#############################################
+# 3. Extract ImageMagick metadata
+#############################################
+
+echo "[2/5] Extracting ImageMagick metadata..."
+
+extract_imagemagick() {
+    img="$1"
+    base=$(basename "$img")
+
+    identify -verbose "$img" > "$RAW_DIR/${base}.im.txt"
+}
+
+export -f extract_imagemagick
+
+find "$DATA_DIR" -type f -name "*.jpg" | parallel extract_imagemagick
+
+#############################################
+# 4. Extract EXIF metadata as JSON
+#############################################
+
+echo "[3/5] Extracting EXIF metadata..."
+
+exiftool -json "$DATA_DIR"/*.jpg > "$RAW_DIR/exif.json"
+
+#############################################
+# 5. Parse embedded XML + build CSV dataset
+#############################################
+
+echo "[4/5] Parsing structured metadata..."
+
+python3 << 'EOF'
+import os, re, json
+import pandas as pd
+from lxml import etree
+from glob import glob
+
+RAW_DIR = "./metadata/raw"
+OUT_CSV = "./metadata/seabed_metadata.csv"
+
+def parse_imagick(path):
+    data = {}
+    with open(path, "r", errors="ignore") as f:
+        txt = f.read()
+
+    def find(pattern):
+        m = re.search(pattern, txt)
+        return float(m.group(1)) if m else None
+
+    data["width"] = find(r"Geometry: (\d+)x")
+    data["height"] = find(r"Geometry: \d+x(\d+)")
+    data["filesize_mb"] = find(r"Filesize: ([0-9.]+)MiB")
+
+    data["mean_r"] = find(r"Red:\s+min:.*mean:\s+([0-9.]+)")
+    data["mean_g"] = find(r"Green:\s+min:.*mean:\s+([0-9.]+)")
+    data["mean_b"] = find(r"Blue:\s+min:.*mean:\s+([0-9.]+)")
+
+    return data
+
+
+def parse_exif_json():
+    with open(f"{RAW_DIR}/exif.json") as f:
+        return json.load(f)
+
+def parse_xml_comment(text):
+    try:
+        root = etree.fromstring(text.encode())
+        pos = root.find(".//Position")
+        coords = pos.find(".//Coords")
+        depth = pos.find(".//Depth")
+        dirn = pos.find(".//Direction")
+        acq = root.find(".//acquisition")
+
+        return {
+            "latitude": float(coords.get("lat")),
+            "longitude": float(coords.get("long")),
+            "depth_m": float(depth.get("depth")),
+            "altitude_m": float(depth.get("altitude")),
+            "pitch": float(dirn.get("pitch")),
+            "roll": float(dirn.get("roll")),
+            "yaw": float(dirn.get("yaw")),
+            "exposure": float(acq.findtext("exposure")),
+            "aperture": float(acq.findtext("aperture")),
+            "focus": float(acq.findtext("focus")),
+            "digital_gain": float(acq.findtext("digital_gain")),
+            "analog_gain": float(acq.findtext("analog_gain")),
+            "sensor_gain": float(acq.findtext("sensor_gain")),
+        }
+    except:
+        return {}
+
+rows = []
+
+for img in glob("./images/*.jpg"):
+    base = os.path.basename(img)
+
+    im = parse_imagick(f"{RAW_DIR}/{base}.im.txt")
+
+    # extract embedded XML from exiftool raw
+    with open(f"{RAW_DIR}/exif.json") as f:
+        exif_all = json.load(f)
+
+    match = next((x for x in exif_all if x["SourceFile"].endswith(base)), None)
+
+    xml_text = match.get("Comment", "") if match else ""
+
+    xml_data = parse_xml_comment(xml_text)
+
+    row = {
+        "filename": base,
+        **im,
+        **xml_data
+    }
+
+    rows.append(row)
+
+df = pd.DataFrame(rows)
+df.to_csv(OUT_CSV, index=False)
+
+print("Saved:", OUT_CSV)
+EOF
+
+#############################################
+# 6. Quick EDA summary
+#############################################
+
+echo "[5/5] Generating quick EDA summary..."
+
+python3 << 'EOF'
+import pandas as pd
+
+df = pd.read_csv("./metadata/seabed_metadata.csv")
+
+print("\n===== DATASET SUMMARY =====")
+print(df.describe(include="all"))
+
+print("\nMissing values per column:")
+print(df.isna().sum().sort_values(ascending=False))
+
+print("\nDepth distribution:")
+print(df["depth_m"].describe())
+
+print("\nGeospatial range:")
+print("Lat:", df["latitude"].min(), "to", df["latitude"].max())
+print("Lon:", df["longitude"].min(), "to", df["longitude"].max())
+EOF
+
+echo "DONE. Metadata + EDA available in ./metadata/"
+```
+
+---
+
+# 4. What This Pipeline Gives You
+
+## 📊 Ready-to-use EDA dataset:
+
+* structured CSV (`seabed_metadata.csv`)
+* per-image raw dumps
+* EXIF JSON archive
+
+## 📈 Immediate analyses enabled:
+
+* seabed depth distribution
+* spatial coverage (lat/lon)
+* camera behavior drift (gain/exposure)
+* image quality variation
+* lighting conditions underwater
+* motion/orientation instability
+* resolution inconsistencies
+* compression artifacts
+
+---
+
+# 5. Optional Upgrades (Highly Recommended)
+
+If you want a **research-grade seabed dataset pipeline**, add:
+
+### 🧠 CV quality metrics
+
+* blur score (variance of Laplacian)
+* contrast index
+* turbidity proxy
+
+### 🌊 Ocean structure modeling
+
+* depth vs brightness regression
+* terrain clustering
+
+### ⚡ Performance upgrade
+
+Replace CSV with:
+
+* Parquet (`pyarrow`)
+* DuckDB for SQL EDA
+* Polars for faster aggregation
+
+---
+
+# If you want next step
+
+I can extend this into:
+
+* 🔬 full seabed **feature engineering pipeline (CV + physics-based underwater optics)**
+* 📊 interactive EDA dashboard (Plotly + Streamlit)
+* 🧠 dataset quality scoring model (to filter bad frames automatically)
+* 🗺️ spatial heatmaps + 3D bathymetry reconstruction inputs
+
+Just tell me.

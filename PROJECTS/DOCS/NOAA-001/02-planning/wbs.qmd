@@ -1,0 +1,30 @@
+# Work Breakdown Structure (WBS)
+
+## Initiation
+- Project Charter  
+- Stakeholder Identification  
+- High-Level Scope  
+- Risk Identification  
+- Approval  
+
+## Planning
+- PMP Development  
+- Scope Baseline  
+- Schedule Baseline  
+- Cost Baseline  
+- Quality Plan  
+- Resource Plan  
+- Risk Response Plan  
+- Communication Plan  
+
+## Execution (MVP)
+- Data Ingestion  
+- Annotation Setup  
+- Model Training  
+- Validation  
+- Dataset Filtering  
+
+## Closing
+- Documentation  
+- Knowledge Transfer  
+- Formal Closure
